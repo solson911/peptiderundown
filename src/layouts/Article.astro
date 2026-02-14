@@ -1,0 +1,69 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    date: string;
+    category?: string;
+    author?: string;
+    tags?: string[];
+  };
+}
+
+const { frontmatter } = Astro.props;
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <!-- Article Header -->
+    <header class="mb-10">
+      {frontmatter.category && (
+        <span class="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">
+          {frontmatter.category}
+        </span>
+      )}
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-text mb-4">
+        {frontmatter.title}
+      </h1>
+      <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+      <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+        <span>By <strong class="text-text">{frontmatter.author || 'PeptideRundown Team'}</strong></span>
+        <span>•</span>
+        <time datetime={frontmatter.date}>{formattedDate}</time>
+      </div>
+    </header>
+
+    <!-- Disclaimer Banner -->
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+      <strong>⚠️ Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+    </div>
+
+    <!-- Article Content -->
+    <div class="prose prose-lg prose-slate max-w-none
+      prose-headings:font-bold prose-headings:text-text
+      prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-2
+      prose-h3:text-xl prose-h3:mt-8
+      prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+      prose-strong:text-text
+      prose-code:text-primary prose-code:bg-primary/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+      prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-blockquote:py-1
+      prose-img:rounded-xl prose-img:shadow-lg">
+      <slot />
+    </div>
+
+    <!-- Tags -->
+    {frontmatter.tags && frontmatter.tags.length > 0 && (
+      <div class="mt-12 pt-6 border-t border-gray-200">
+        <div class="flex flex-wrap gap-2">
+          {frontmatter.tags.map((tag: string) => (
+            <span class="px-3 py-1 text-xs font-medium text-text-muted bg-gray-100 rounded-full hover:bg-primary/10 hover:text-primary transition-colors cursor-default">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+  </article>
+</Base>

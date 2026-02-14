@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Your science-based peptide guide. Independent, evidence-backed peptide education without the sales pitch.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <title>{title} | PeptideRundown</title>
+</head>
+<body class="bg-surface text-text font-sans antialiased">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 group">
+          <span class="text-2xl font-extrabold text-primary group-hover:text-primary-light transition-colors">
+            Peptide<span class="text-accent">Arc</span>
+          </span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/articles" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">Guides</a>
+          <a href="/categories/safety" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">Safety</a>
+          <a href="/categories/how-to" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">How-To</a>
+          <a href="/about" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">About</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface-dark text-gray-400 mt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <span class="text-xl font-bold text-white">Peptide<span class="text-accent">Arc</span></span>
+          <p class="mt-3 text-sm leading-relaxed">Your daily peptide brief. Independent, science-based peptide education. No vendor affiliations. Just evidence.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/articles" class="hover:text-primary-light transition-colors">All Guides</a></li>
+            <li><a href="/about" class="hover:text-primary-light transition-colors">About Us</a></li>
+            <li><a href="/disclaimer" class="hover:text-primary-light transition-colors">Medical Disclaimer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">Disclaimer</h4>
+          <p class="text-xs leading-relaxed">PeptideRundown is for educational purposes only. Content is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-xs">
+        <p>&copy; {new Date().getFullYear()} PeptideRundown. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
