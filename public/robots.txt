@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://peptiderundown.com/sitemap-index.xml
