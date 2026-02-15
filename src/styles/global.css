@@ -5,10 +5,54 @@
   --color-primary-light: #14b8a6;
   --color-primary-dark: #0d5c56;
   --color-accent: #f59e0b;
+  --color-accent-light: #fbbf24;
   --color-surface: #f8fafc;
   --color-surface-dark: #0f172a;
   --color-text: #1e293b;
   --color-text-muted: #64748b;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Subtle background pattern */
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230f766e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Glow effect for cards */
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(15, 118, 110, 0.08), 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* Gradient border on hover */
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #14b8a6, #f59e0b);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* Smooth scroll for TOC */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sidebar TOC active state */
+.toc-link.active {
+  color: var(--color-primary);
+  border-left-color: var(--color-primary);
 }

@@ -7,86 +7,105 @@ const featured = [
     description: "A head-to-head comparison of the two biggest weight loss peptides, with real clinical data.",
     href: "/articles/retatrutide-vs-semaglutide",
     category: "Comparison",
-    date: "2026-02-14",
+    image: "/images/articles/comparison.webp",
   },
   {
     title: "BPC-157: Benefits, Dosage, Side Effects & Research",
     description: "A comprehensive, evidence-based guide to the most popular healing peptide.",
     href: "/articles/bpc-157-complete-guide",
     category: "Peptide Guide",
-    date: "2026-02-13",
+    image: "/images/articles/bpc-157.webp",
   },
   {
     title: "Retatrutide: The Triple-Action GLP-1 That's Changing Weight Loss",
     description: "Everything you need to know about the most promising weight loss peptide in development.",
     href: "/articles/retatrutide-complete-guide",
     category: "Peptide Guide",
-    date: "2026-02-14",
+    image: "/images/articles/retatrutide.webp",
   },
   {
     title: "TB-500: Complete Guide to the Healing Peptide",
     description: "How thymosin beta-4 supports injury recovery, tissue repair, and more.",
     href: "/articles/tb-500-complete-guide",
     category: "Peptide Guide",
-    date: "2026-02-14",
+    image: "/images/articles/tb-500.webp",
   },
 ];
-const articles = [
+
+const guides = [
   {
     title: "What Are Peptides? The Complete Beginner's Guide",
     description: "New to peptides? Start here. Everything explained simply.",
     href: "/articles/what-are-peptides-beginners-guide",
     category: "Beginner",
-    date: "2026-02-13",
+    image: "/images/articles/beginners-guide.webp",
   },
   {
     title: "How to Reconstitute Peptides: Step-by-Step Guide",
     description: "Supplies, steps, dose calculations, and storage tips.",
     href: "/articles/how-to-reconstitute-peptides",
     category: "How-To",
-    date: "2026-02-13",
+    image: "/images/articles/reconstitution.webp",
   },
   {
     title: "Are Peptides Legal? FDA Regulations (2026 Update)",
     description: "What's legal, what's banned, and what's changing.",
     href: "/articles/are-peptides-legal-fda-regulations-2026",
     category: "Safety",
-    date: "2026-02-14",
+    image: "/images/articles/legal-fda.webp",
   },
   {
     title: "Peptide Side Effects: What to Know Before You Start",
     description: "Common side effects, red flags, and how to minimize risks.",
     href: "/articles/peptide-side-effects-what-to-know",
     category: "Safety",
-    date: "2026-02-14",
+    image: "/images/articles/side-effects.webp",
   },
+];
+
+const compounds = [
+  { title: "Semaglutide", href: "/articles/semaglutide-weight-loss-guide", category: "Weight Loss", image: "/images/articles/semaglutide.webp" },
+  { title: "GHK-Cu", href: "/articles/ghk-cu-copper-peptide-guide", category: "Skin & Anti-Aging", image: "/images/articles/ghk-cu.webp" },
+  { title: "Melanotan 2", href: "/articles/melanotan-2-guide", category: "Tanning & Libido", image: "/images/articles/melanotan-2.webp" },
+  { title: "Tesamorelin + Ipamorelin", href: "/articles/tesamorelin-ipamorelin-stack-guide", category: "Growth Hormone", image: "/images/articles/tesamorelin-ipamorelin.webp" },
+  { title: "KPV", href: "/articles/kpv-peptide-guide", category: "Anti-Inflammatory", image: "/images/articles/kpv.webp" },
+  { title: "Selank & Semax", href: "/articles/selank-semax-nootropic-peptides", category: "Nootropic", image: "/images/articles/selank-semax.webp" },
+  { title: "MOTS-c", href: "/articles/mots-c-mitochondrial-peptide", category: "Mitochondrial", image: "/images/articles/mots-c.webp" },
+  { title: "CJC-1295 w/DAC", href: "/articles/cjc-1295-dac-guide", category: "Growth Hormone", image: "/images/articles/cjc-1295.webp" },
+  { title: "Cerebrolysin", href: "/articles/cerebrolysin-neuropeptide-guide", category: "Neuropeptide", image: "/images/articles/cerebrolysin.webp" },
+  { title: "Methylene Blue", href: "/articles/methylene-blue-guide", category: "Mitochondrial", image: "/images/articles/methylene-blue.webp" },
 ];
 ---
 <Base title="Science-Based Peptide Education">
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-surface-dark via-primary-dark to-primary py-24 sm:py-32">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0.15),transparent_50%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(245,158,11,0.1),transparent_50%)]"></div>
+  <section class="relative overflow-hidden bg-gradient-to-br from-surface-dark via-primary-dark to-surface-dark py-24 sm:py-32">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_30%,rgba(20,184,166,0.2),transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_70%,rgba(245,158,11,0.12),transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(20,184,166,0.05),transparent_70%)]"></div>
+    <!-- Floating molecules decoration -->
+    <div class="absolute top-20 left-10 w-3 h-3 bg-primary-light/20 rounded-full animate-pulse"></div>
+    <div class="absolute top-40 right-20 w-2 h-2 bg-accent/20 rounded-full animate-pulse" style="animation-delay: 1s"></div>
+    <div class="absolute bottom-20 left-1/4 w-4 h-4 bg-primary-light/10 rounded-full animate-pulse" style="animation-delay: 2s"></div>
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <span class="inline-block px-4 py-1.5 text-xs font-semibold text-accent bg-accent/10 rounded-full mb-6 tracking-wide uppercase">
+      <span class="inline-block px-4 py-1.5 text-xs font-semibold text-accent bg-accent/10 rounded-full mb-6 tracking-wide uppercase border border-accent/20">
         Independent • Evidence-Based • No Sales Pitch
       </span>
       <h1 class="text-4xl sm:text-6xl font-extrabold text-white leading-tight mb-6">
         Your Science-Based<br />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-light to-accent">Peptide Guide</span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-light via-teal-300 to-accent">Peptide Guide</span>
       </h1>
       <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-10">
         Comprehensive peptide education backed by research, written for real people. No vendor affiliations. No bro-science. Just evidence.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="/articles/what-are-peptides-beginners-guide"
-           class="group px-8 py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary-light transition-all shadow-lg shadow-primary/25 hover:shadow-primary-light/30 hover:-translate-y-0.5">
+           class="group px-8 py-3.5 bg-gradient-to-r from-primary to-primary-light text-white font-semibold rounded-xl hover:from-primary-light hover:to-primary transition-all shadow-lg shadow-primary/30 hover:shadow-primary-light/40 hover:-translate-y-0.5">
           Start Learning
           <span class="inline-block ml-1 group-hover:translate-x-1 transition-transform">→</span>
         </a>
         <a href="/articles"
-           class="px-8 py-3.5 text-gray-300 font-semibold rounded-xl border border-gray-600 hover:border-primary-light hover:text-primary-light transition-all">
-          Browse Guides
+           class="px-8 py-3.5 text-gray-300 font-semibold rounded-xl border border-gray-600 hover:border-primary-light hover:text-primary-light hover:bg-primary-light/5 transition-all">
+          Browse All Guides
         </a>
       </div>
     </div>
@@ -96,88 +115,155 @@ const articles = [
   <section class="bg-white border-b border-gray-100">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="group">
-          <div class="text-2xl mb-1">🔬</div>
-          <div class="text-sm font-semibold text-text group-hover:text-primary transition-colors">Research-Cited</div>
+        <div class="group p-3 rounded-xl hover:bg-primary/5 transition-colors">
+          <div class="text-3xl mb-2">🔬</div>
+          <div class="text-sm font-bold text-text group-hover:text-primary transition-colors">Research-Cited</div>
           <div class="text-xs text-text-muted">PubMed sources</div>
         </div>
-        <div class="group">
-          <div class="text-2xl mb-1">🛡️</div>
-          <div class="text-sm font-semibold text-text group-hover:text-primary transition-colors">Independent</div>
+        <div class="group p-3 rounded-xl hover:bg-primary/5 transition-colors">
+          <div class="text-3xl mb-2">🛡️</div>
+          <div class="text-sm font-bold text-text group-hover:text-primary transition-colors">Independent</div>
           <div class="text-xs text-text-muted">No vendor bias</div>
         </div>
-        <div class="group">
-          <div class="text-2xl mb-1">📋</div>
-          <div class="text-sm font-semibold text-text group-hover:text-primary transition-colors">Evidence-Based</div>
+        <div class="group p-3 rounded-xl hover:bg-primary/5 transition-colors">
+          <div class="text-3xl mb-2">📋</div>
+          <div class="text-sm font-bold text-text group-hover:text-primary transition-colors">Evidence-Based</div>
           <div class="text-xs text-text-muted">Science first</div>
         </div>
-        <div class="group">
-          <div class="text-2xl mb-1">💬</div>
-          <div class="text-sm font-semibold text-text group-hover:text-primary transition-colors">Plain Language</div>
+        <div class="group p-3 rounded-xl hover:bg-primary/5 transition-colors">
+          <div class="text-3xl mb-2">💬</div>
+          <div class="text-sm font-bold text-text group-hover:text-primary transition-colors">Plain Language</div>
           <div class="text-xs text-text-muted">No jargon</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Spotlights -->
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-    <h2 class="text-3xl font-extrabold text-text mb-2">Featured Spotlights</h2>
-    <p class="text-text-muted mb-10">Our most popular compound guides and comparisons.</p>
-    <div class="grid md:grid-cols-2 gap-6">
-      {featured.map((article) => (
-        <a href={article.href}
-           class="group block bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1">
-          <span class="inline-block px-2.5 py-0.5 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-3">
-            {article.category}
-          </span>
-          <h3 class="text-xl font-bold text-text group-hover:text-primary transition-colors mb-2">
-            {article.title}
-          </h3>
-          <p class="text-text-muted text-sm leading-relaxed mb-4">{article.description}</p>
-          <span class="text-sm font-medium text-primary group-hover:underline">
-            Read guide →
-          </span>
-        </a>
-      ))}
+  <!-- Featured Spotlights with Images -->
+  <section class="bg-pattern bg-surface py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="h-1 w-10 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+        <span class="text-sm font-semibold text-primary uppercase tracking-wide">Featured</span>
+      </div>
+      <h2 class="text-3xl font-extrabold text-text mb-2">Spotlight Guides</h2>
+      <p class="text-text-muted mb-10">Our most popular compound guides and comparisons.</p>
+      
+      <!-- Top featured (large card) -->
+      <a href={featured[0].href}
+         class="group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 mb-6 border border-gray-100">
+        <div class="md:flex">
+          <div class="md:w-1/2 h-56 md:h-auto overflow-hidden">
+            <img src={featured[0].image} alt={featured[0].title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="md:w-1/2 p-8 flex flex-col justify-center">
+            <span class="inline-block w-fit px-3 py-1 text-xs font-bold text-accent bg-accent/10 rounded-full mb-3 uppercase tracking-wide">
+              {featured[0].category}
+            </span>
+            <h3 class="text-2xl font-bold text-text group-hover:text-primary transition-colors mb-3">
+              {featured[0].title}
+            </h3>
+            <p class="text-text-muted leading-relaxed mb-4">{featured[0].description}</p>
+            <span class="text-sm font-bold text-primary group-hover:underline">
+              Read the full comparison →
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Other featured (3 cards) -->
+      <div class="grid md:grid-cols-3 gap-6">
+        {featured.slice(1).map((article) => (
+          <a href={article.href}
+             class="group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
+            <div class="h-44 overflow-hidden">
+              <img src={article.image} alt={article.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-5">
+              <span class="inline-block px-2.5 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full mb-2">
+                {article.category}
+              </span>
+              <h3 class="text-lg font-bold text-text group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                {article.title}
+              </h3>
+              <p class="text-text-muted text-sm leading-relaxed line-clamp-2">{article.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
-  <!-- More Guides -->
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 pb-16">
-    <h2 class="text-3xl font-extrabold text-text mb-2">Getting Started</h2>
-    <p class="text-text-muted mb-10">Beginner guides, how-tos, and safety essentials.</p>
-    <div class="grid md:grid-cols-2 gap-6">
-      {articles.map((article) => (
-        <a href={article.href}
-           class="group block bg-white rounded-2xl border border-gray-200 p-6 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all hover:-translate-y-1">
-          <span class="inline-block px-2.5 py-0.5 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-3">
-            {article.category}
-          </span>
-          <h3 class="text-xl font-bold text-text group-hover:text-primary transition-colors mb-2">
-            {article.title}
-          </h3>
-          <p class="text-text-muted text-sm leading-relaxed mb-4">{article.description}</p>
-          <span class="text-sm font-medium text-primary group-hover:underline">
-            Read guide →
-          </span>
-        </a>
-      ))}
+  <!-- Compound Quick Links -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="h-1 w-10 bg-gradient-to-r from-accent to-primary rounded-full"></div>
+        <span class="text-sm font-semibold text-accent uppercase tracking-wide">Compounds</span>
+      </div>
+      <h2 class="text-3xl font-extrabold text-text mb-2">Explore by Compound</h2>
+      <p class="text-text-muted mb-10">Deep-dive guides on individual peptides and compounds.</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        {compounds.map((compound) => (
+          <a href={compound.href}
+             class="group block rounded-xl overflow-hidden card-glow transition-all hover:-translate-y-1 bg-gray-50 border border-gray-100 hover:border-primary/20">
+            <div class="h-28 overflow-hidden">
+              <img src={compound.image} alt={compound.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <div class="p-3 text-center">
+              <span class="text-[10px] font-bold text-primary/70 uppercase tracking-wide">{compound.category}</span>
+              <h3 class="text-sm font-bold text-text group-hover:text-primary transition-colors">{compound.title}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
-    <div class="text-center mt-10">
-      <a href="/articles" class="inline-block px-8 py-3 text-primary font-semibold border-2 border-primary rounded-xl hover:bg-primary hover:text-white transition-all">
-        View All Guides →
-      </a>
+  </section>
+
+  <!-- Getting Started Guides -->
+  <section class="bg-pattern bg-surface py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="h-1 w-10 bg-gradient-to-r from-primary to-primary-light rounded-full"></div>
+        <span class="text-sm font-semibold text-primary uppercase tracking-wide">Essentials</span>
+      </div>
+      <h2 class="text-3xl font-extrabold text-text mb-2">Getting Started</h2>
+      <p class="text-text-muted mb-10">Beginner guides, how-tos, and safety essentials.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        {guides.map((article) => (
+          <a href={article.href}
+             class="group flex bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
+            <div class="w-32 sm:w-40 shrink-0 overflow-hidden">
+              <img src={article.image} alt={article.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-5 flex flex-col justify-center">
+              <span class="inline-block w-fit px-2.5 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full mb-2">
+                {article.category}
+              </span>
+              <h3 class="text-lg font-bold text-text group-hover:text-primary transition-colors mb-1">
+                {article.title}
+              </h3>
+              <p class="text-text-muted text-sm leading-relaxed line-clamp-2">{article.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-10">
+        <a href="/articles" class="inline-block px-8 py-3 text-primary font-bold border-2 border-primary rounded-xl hover:bg-primary hover:text-white transition-all hover:-translate-y-0.5">
+          View All Guides →
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="bg-gradient-to-r from-primary-dark to-primary py-16">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+  <section class="relative overflow-hidden bg-gradient-to-r from-surface-dark via-primary-dark to-surface-dark py-16">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(20,184,166,0.15),transparent_70%)]"></div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
       <h2 class="text-3xl font-extrabold text-white mb-4">New to Peptides?</h2>
       <p class="text-lg text-teal-100 mb-8">Start with our beginner's guide. Everything you need to know, explained simply.</p>
       <a href="/articles/what-are-peptides-beginners-guide"
-         class="inline-block px-8 py-3.5 bg-white text-primary font-semibold rounded-xl hover:bg-gray-50 transition-all shadow-lg hover:-translate-y-0.5">
+         class="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-primary-light text-white font-semibold rounded-xl hover:from-primary-light hover:to-primary transition-all shadow-lg shadow-primary/30 hover:-translate-y-0.5">
         Read the Beginner's Guide →
       </a>
     </div>
