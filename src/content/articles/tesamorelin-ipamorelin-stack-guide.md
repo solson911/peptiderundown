@@ -43,7 +43,9 @@ Ipamorelin is a growth hormone secretagogue (GHS), which means it stimulates GH 
 
 Think of it this way. Tesamorelin pushes the "release" button on GH production from one angle. Ipamorelin pushes a different "release" button from another angle entirely.
 
-What sets ipamorelin apart from other ghrelin mimetics like GHRP-6 or GHRP-2 is its selectivity. Ipamorelin stimulates GH release without significantly affecting cortisol, prolactin, or ACTH levels ([Raun et al., 1998](https://pubmed.ncbi.nlm.nih.gov/9849822/)). This is a big deal. Other GH secretagogues tend to spike cortisol (a stress hormone) and prolactin, which causes unwanted side effects. Ipamorelin keeps things clean.
+What sets ipamorelin apart from other ghrelin mimetics like GHRP-6 or GHRP-2 is its selectivity. Ipamorelin stimulates GH release without significantly affecting cortisol, prolactin, or ACTH levels ([Raun et al., 1998](https://pubmed.ncbi.nlm.nih.gov/9849822/)).
+
+This is a big deal. Other GH secretagogues tend to spike cortisol (a stress hormone) and prolactin, which causes unwanted side effects. Ipamorelin keeps things clean.
 
 It also doesn't dramatically increase appetite the way GHRP-6 does. Some appetite increase is possible, but it's far milder. For people trying to lose fat, that's an important practical advantage.
 

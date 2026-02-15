@@ -77,7 +77,9 @@ Start with clean hands. Wash with soap and water for at least 20 seconds. If you
 
 ### Step 2: Gather and Inspect Your Supplies
 
-Lay everything out on a clean surface. Check your peptide vial. You should see a small disc or puck of powder at the bottom (or sometimes clinging to the sides). This is normal. Also check that your BAC water is clear with no particles floating in it.
+Lay everything out on a clean surface. Check your peptide vial. You should see a small disc or puck of powder at the bottom (or sometimes clinging to the sides). This is normal.
+
+Also check that your BAC water is clear with no particles floating in it.
 
 ### Step 3: Decide How Much Bacteriostatic Water to Add
 
@@ -293,7 +295,9 @@ Reconstituted peptides need to stay refrigerated. For short trips, an insulated 
 
 ### What if I added the wrong amount of water?
 
-Don't panic. Your peptide is fine; you've just changed the concentration. Recalculate using the actual amount of water you added. For example, if you meant to add 2mL but added 3mL to a 5mg vial, your concentration is 5mg ÷ 3mL = 1.67 mg/mL. Adjust your dose volumes accordingly.
+Don't panic. Your peptide is fine; you've just changed the concentration. Recalculate using the actual amount of water you added.
+
+For example, if you meant to add 2mL but added 3mL to a 5mg vial, your concentration is 5mg ÷ 3mL = 1.67 mg/mL. Adjust your dose volumes accordingly.
 
 ### Can I add more water after reconstituting?
 

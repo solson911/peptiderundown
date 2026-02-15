@@ -24,7 +24,9 @@ But there's more to these peptides than internet hype. Let's look at what the re
 
 The development of both Selank and Semax traces back to Soviet-era research programs aimed at enhancing cognitive performance and stress resilience. The work was led by Nikolai Myasoedov and his colleagues at the Russian Academy of Sciences, starting in the 1980s and continuing through the post-Soviet period.
 
-The approach was clever. Rather than designing entirely novel molecules, the researchers took naturally occurring peptides and modified them to improve stability and bioactivity. Selank is based on the immune peptide tuftsin. Semax is derived from ACTH (adrenocorticotropic hormone). Both were engineered with additional amino acids to resist enzymatic breakdown and extend their duration of action.
+The approach was clever. Rather than designing entirely novel molecules, the researchers took naturally occurring peptides and modified them to improve stability and bioactivity.
+
+Selank is based on the immune peptide tuftsin. Semax is derived from ACTH (adrenocorticotropic hormone). Both were engineered with additional amino acids to resist enzymatic breakdown and extend their duration of action.
 
 By the early 2000s, both peptides had completed clinical trials in Russia and received regulatory approval. Selank was approved as an anxiolytic, and Semax as a nootropic and neuroprotective agent. They're prescribed there for conditions ranging from generalized anxiety to stroke recovery.
 
@@ -200,7 +202,9 @@ Both peptides interact with serotonergic systems, so caution is warranted if you
 
 ### How do these compare to pharmaceutical nootropics like modafinil?
 
-Different tools for different situations. Modafinil is a strong wakefulness-promoting agent that works primarily through dopamine reuptake inhibition. Semax is gentler, with broader neurotrophic effects. Selank is more comparable to a mild anxiolytic. The peptides won't hit as hard as modafinil for raw wakefulness, but they offer benefits (like neurotrophic support) that modafinil doesn't.
+Different tools for different situations. Modafinil is a strong wakefulness-promoting agent that works primarily through dopamine reuptake inhibition. Semax is gentler, with broader neurotrophic effects. Selank is more comparable to a mild anxiolytic.
+
+The peptides won't hit as hard as modafinil for raw wakefulness, but they offer benefits (like neurotrophic support) that modafinil doesn't.
 
 ### Do the effects build over time or are they immediate?
 

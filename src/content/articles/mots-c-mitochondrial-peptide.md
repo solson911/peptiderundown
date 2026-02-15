@@ -216,21 +216,29 @@ No formal interaction studies exist for these combinations. As with any stack, i
 
 ### What's the difference between MOTS-c and humanin?
 
-Both are mitochondrial-derived peptides, but they have different primary effects. Humanin is more focused on cytoprotection and anti-apoptotic effects, particularly in the brain. It's been studied mainly in the context of Alzheimer's disease and neuroprotection. MOTS-c is more metabolically oriented, with its primary effects on glucose metabolism, insulin sensitivity, and exercise physiology. They're siblings from the same mitochondrial genome, but with different jobs.
+Both are mitochondrial-derived peptides, but they have different primary effects. Humanin is more focused on cytoprotection and anti-apoptotic effects, particularly in the brain. It's been studied mainly in the context of Alzheimer's disease and neuroprotection.
+
+MOTS-c is more metabolically oriented, with its primary effects on glucose metabolism, insulin sensitivity, and exercise physiology. They're siblings from the same mitochondrial genome, but with different jobs.
 
 ### Will MOTS-c help me lose weight?
 
-The animal data suggests it can reduce fat accumulation and improve metabolic efficiency. But "help me lose weight" is a complex question that depends on your diet, activity level, hormonal status, and dozens of other factors. MOTS-c isn't a weight loss drug. It's a metabolic modulator that improves how your body handles fuel. Whether that translates to meaningful weight loss for any individual depends on context.
+The animal data suggests it can reduce fat accumulation and improve metabolic efficiency. But "help me lose weight" is a complex question that depends on your diet, activity level, hormonal status, and dozens of other factors.
+
+MOTS-c isn't a weight loss drug. It's a metabolic modulator that improves how your body handles fuel. Whether that translates to meaningful weight loss for any individual depends on context.
 
 ### Is MOTS-c the same as the exercise pill I've read about?
 
-MOTS-c is one of several molecules that have been described as potential "exercise in a pill" candidates. Others include AICAR, GW501516, and irisin. None of them truly replicate exercise. The media loves the "exercise pill" narrative, but the reality is more nuanced. MOTS-c activates some exercise-related pathways, and that's genuinely interesting science. But calling it an exercise pill oversells what it does.
+MOTS-c is one of several molecules that have been described as potential "exercise in a pill" candidates. Others include AICAR, GW501516, and irisin. None of them truly replicate exercise.
+
+The media loves the "exercise pill" narrative, but the reality is more nuanced. MOTS-c activates some exercise-related pathways, and that's genuinely interesting science. But calling it an exercise pill oversells what it does.
 
 ## The Bottom Line
 
 MOTS-c is one of the most scientifically interesting peptides to emerge in the past decade. The discovery that mitochondria produce signaling peptides that regulate whole-body metabolism has opened up an entirely new area of biology. And the early data on MOTS-c's effects on metabolism, insulin sensitivity, and physical performance in aging is genuinely compelling.
 
-But we need perspective. Most of the data is from mice. Human clinical trials are in their early stages. We don't have long-term safety data. The dosing protocols currently used are extrapolated from animal studies and clinical intuition, not from controlled dose-finding studies in humans.
+But we need perspective. Most of the data is from mice. Human clinical trials are in their early stages. We don't have long-term safety data.
+
+The dosing protocols currently used are extrapolated from animal studies and clinical intuition, not from controlled dose-finding studies in humans.
 
 If you're interested in MOTS-c, the most rational approach is to view it as a promising but still experimental tool. Use it under medical supervision if possible. Combine it with the fundamentals that we know work: exercise, good nutrition, adequate sleep, and stress management. And keep an eye on the research, because MOTS-c is one of those compounds where the science is moving fast.
 

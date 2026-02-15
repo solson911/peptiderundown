@@ -65,7 +65,9 @@ Recovery is where many users report the most noticeable difference. Faster recov
 
 ### Sleep Quality
 
-GH secretion naturally peaks during deep sleep. There's a bidirectional relationship here: good sleep promotes GH release, and adequate GH promotes deeper sleep. Users of CJC-1295 DAC frequently report improved sleep depth and feeling more rested. This isn't just anecdotal. GH-releasing peptides have been shown to increase slow-wave sleep duration ([Frieboes et al., 1995](https://pubmed.ncbi.nlm.nih.gov/7768645/)).
+GH secretion naturally peaks during deep sleep. There's a bidirectional relationship here: good sleep promotes GH release, and adequate GH promotes deeper sleep.
+
+Users of CJC-1295 DAC frequently report improved sleep depth and feeling more rested. This isn't just anecdotal. GH-releasing peptides have been shown to increase slow-wave sleep duration ([Frieboes et al., 1995](https://pubmed.ncbi.nlm.nih.gov/7768645/)).
 
 ### Skin and Connective Tissue
 
@@ -158,11 +160,15 @@ GH and IGF-1 levels begin rising within hours of the first injection. But the be
 
 ### Can I use CJC-1295 DAC without combining it with anything?
 
-Yes. It works on its own. But most protocols combine it with a GHS like ipamorelin for synergistic effects. Think of GHRH as the gas pedal and GHS as a turbo boost. They work through different receptors, so the combined effect is greater than either alone.
+Yes. It works on its own. But most protocols combine it with a GHS like ipamorelin for synergistic effects.
+
+Think of GHRH as the gas pedal and GHS as a turbo boost. They work through different receptors, so the combined effect is greater than either alone.
 
 ### Does CJC-1295 DAC suppress natural GH production?
 
-Not in the same way that exogenous GH does. CJC-1295 DAC works through the GHRH receptor, meaning it's still using your pituitary to make GH. Somatostatin feedback remains intact. When you stop the peptide, your pituitary continues functioning normally. There's no "shutdown" analogous to what happens with testosterone and anabolic steroids.
+Not in the same way that exogenous GH does. CJC-1295 DAC works through the GHRH receptor, meaning it's still using your pituitary to make GH. Somatostatin feedback remains intact.
+
+When you stop the peptide, your pituitary continues functioning normally. There's no "shutdown" analogous to what happens with testosterone and anabolic steroids.
 
 ### Is CJC-1295 DAC legal?
 

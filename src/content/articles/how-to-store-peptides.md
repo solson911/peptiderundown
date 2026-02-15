@@ -196,7 +196,9 @@ It's not recommended. Some researchers snap-freeze aliquots in liquid nitrogen f
 
 ### My peptide solution looks slightly yellow. Is it still good?
 
-Probably not. Most peptide solutions should be clear and colorless. A yellow tint can indicate oxidative degradation. While mild discoloration in certain peptides might be within normal range, it's generally a red flag. When in doubt, discard it.
+Probably not. Most peptide solutions should be clear and colorless. A yellow tint can indicate oxidative degradation.
+
+While mild discoloration in certain peptides might be within normal range, it's generally a red flag. When in doubt, discard it.
 
 ### What's the difference between bacteriostatic water and sterile water?
 
@@ -204,7 +206,9 @@ Bacteriostatic water contains 0.9% benzyl alcohol as a preservative. Sterile wat
 
 ### I lost power and my fridge was off for six hours. Are my peptides ruined?
 
-Most likely not. A closed refrigerator maintains safe temperatures for about four hours, and reconstituted peptides can handle brief temperature excursions. If the fridge stayed closed and it was less than six hours, your peptides should be fine. If it was longer, or the fridge was open, inspect visually and consider the peptide's age. Fresh reconstitutions have more margin than ones already three weeks old.
+Most likely not. A closed refrigerator maintains safe temperatures for about four hours, and reconstituted peptides can handle brief temperature excursions. If the fridge stayed closed and it was less than six hours, your peptides should be fine.
+
+If it was longer, or the fridge was open, inspect visually and consider the peptide's age. Fresh reconstitutions have more margin than ones already three weeks old.
 
 ### Should I store peptides in a mini-fridge dedicated to just peptides?
 

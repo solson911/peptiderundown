@@ -156,7 +156,9 @@ And be honest with your healthcare provider about what you're using. Many peptid
 
 ### Are peptide side effects permanent?
 
-The vast majority are not. Most side effects resolve within days to weeks of stopping the peptide or reducing the dose. Water retention from GH peptides clears within a week of cessation. GI effects from GLP-1s typically resolve within 1-2 weeks. Long-term or permanent effects are extremely rare at standard doses.
+The vast majority are not. Most side effects resolve within days to weeks of stopping the peptide or reducing the dose.
+
+Water retention from GH peptides clears within a week of cessation. GI effects from GLP-1s typically resolve within 1-2 weeks. Long-term or permanent effects are extremely rare at standard doses.
 
 ### Do oral peptides have fewer side effects than injectables?
 

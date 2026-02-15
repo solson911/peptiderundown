@@ -172,7 +172,11 @@ The regulatory environment is tightening, not loosening. Here's how to protect y
 
 ### Can I legally buy peptides online in 2026?
 
-It depends on the peptide and the seller. FDA-approved peptides through licensed online pharmacies with a valid prescription? Absolutely legal. Research peptides from unregulated vendors? That's a legal gray area that's getting grayer by the month. Supplement-grade peptides from reputable supplement companies? Legal, as long as they're properly marketed.
+It depends on the peptide and the seller.
+
+- **FDA-approved peptides** through licensed online pharmacies with a valid prescription? Absolutely legal.
+- **Research peptides** from unregulated vendors? That's a legal gray area that's getting grayer by the month.
+- **Supplement-grade peptides** from reputable supplement companies? Legal, as long as they're properly marketed.
 
 ### What happens if I get caught with research peptides?
 
@@ -196,11 +200,15 @@ Collagen peptides, bioactive milk peptides, and similar products sold as dietary
 
 ### Will peptide regulations get stricter or more relaxed?
 
-The trend since 2023 has been toward stricter regulation, and there's no strong indication that's going to reverse. The FDA has signaled its intention to continue evaluating peptides on the difficult-to-compound list. However, ongoing lawsuits from compounding pharmacies could result in court decisions that preserve access through compounding. Congressional interest in peptide access has also grown, with several bills introduced (though not yet passed) that would expand compounding rights. The situation remains fluid.
+The trend since 2023 has been toward stricter regulation, and there's no strong indication that's going to reverse. The FDA has signaled its intention to continue evaluating peptides on the difficult-to-compound list.
+
+However, ongoing lawsuits from compounding pharmacies could result in court decisions that preserve access through compounding. Congressional interest in peptide access has also grown, with several bills introduced (though not yet passed) that would expand compounding rights. The situation remains fluid.
 
 ### Can my doctor legally prescribe peptides off-label?
 
-Yes. Once a drug is FDA-approved for any indication, physicians can legally prescribe it off-label for other uses based on their clinical judgment. This applies to approved peptides like semaglutide and tesamorelin. However, a doctor cannot legally prescribe a substance that has never been FDA-approved, as there's no approved product to prescribe off-label. Compounding is the mechanism that has historically filled this gap.
+Yes. Once a drug is FDA-approved for any indication, physicians can legally prescribe it off-label for other uses based on their clinical judgment. This applies to approved peptides like semaglutide and tesamorelin.
+
+However, a doctor cannot legally prescribe a substance that has never been FDA-approved, as there's no approved product to prescribe off-label. Compounding is the mechanism that has historically filled this gap.
 
 ## The Bottom Line
 

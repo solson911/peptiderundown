@@ -228,7 +228,7 @@ Stacking too many peptides or using excessive doses can actually be counterprodu
 | **Amino acid** | The basic building blocks of peptides and proteins. There are 20 standard amino acids in the human body. |
 | **Peptide** | A short chain of 2–50 amino acids linked together. |
 | **Protein** | A longer chain of amino acids (50+), folded into complex structures with diverse biological functions. |
-| **Secretagogue** | A substance that promotes secretion, e.g.,, a growth hormone secretagogue stimulates your body to release growth hormone. |
+| **Secretagogue** | A substance that promotes secretion, e.g., a growth hormone secretagogue stimulates your body to release growth hormone. |
 | **Subcutaneous** | "Under the skin." Refers to injections into the fatty tissue just below the skin surface. |
 | **Compounding pharmacy** | A pharmacy that custom-makes medications (including peptides) tailored to individual prescriptions. |
 | **Receptor** | A protein on a cell's surface that binds to specific molecules (like peptides), triggering a cellular response. |

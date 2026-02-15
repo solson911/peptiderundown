@@ -23,7 +23,9 @@ Here's what you need to know about GHK-Cu, from the basic science to practical u
 
 GHK-Cu (glycyl-L-histidyl-L-lysine copper) is a naturally occurring tripeptide, meaning it's made of just three amino acids: glycine, histidine, and lysine. It was first isolated from human plasma in the 1970s by Dr. Loren Pickart, who noticed that liver cells from older individuals behaved like younger cells when exposed to this peptide ([Pickart, 2008](https://pubmed.ncbi.nlm.nih.gov/18789600/)).
 
-The "Cu" in the name refers to copper. GHK has an extremely high affinity for copper(II) ions, and it's this copper-bound form that's biologically active. Your body naturally produces GHK-Cu, but levels decline with age. Plasma concentrations at age 20 are roughly 200 ng/mL. By age 60, that drops to about 80 ng/mL.
+The "Cu" in the name refers to copper. GHK has an extremely high affinity for copper(II) ions, and it's this copper-bound form that's biologically active.
+
+Your body naturally produces GHK-Cu, but levels decline with age. Plasma concentrations at age 20 are roughly 200 ng/mL. By age 60, that drops to about 80 ng/mL.
 
 That decline correlates with visible aging, slower wound healing, and reduced tissue repair capacity. The logic behind supplementing GHK-Cu is straightforward: restore what your body used to make on its own.
 
@@ -218,7 +220,9 @@ GHK-Cu has an excellent safety profile. It's a naturally occurring human peptide
 
 ### Important Safety Note
 
-Because GHK-Cu promotes angiogenesis and cell growth, there's a theoretical concern about its use in people with active cancers. New blood vessel formation could theoretically support tumor growth. However, the gene expression data actually shows GHK-Cu downregulating many cancer-related genes. The relationship is complex, and more research is needed. But if you have an active malignancy, discuss GHK-Cu use with your oncologist.
+Because GHK-Cu promotes angiogenesis and cell growth, there's a theoretical concern about its use in people with active cancers. New blood vessel formation could theoretically support tumor growth.
+
+However, the gene expression data actually shows GHK-Cu downregulating many cancer-related genes. The relationship is complex, and more research is needed. If you have an active malignancy, discuss GHK-Cu use with your oncologist.
 
 ## Frequently Asked Questions
 

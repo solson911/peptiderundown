@@ -35,7 +35,9 @@ It was first approved by the FDA in 2017 as **Ozempic** (injectable) for type 2 
 | **Rybelsus** | Oral tablet | 7 mg or 14 mg daily | Type 2 diabetes | Sep 2019 |
 | **Wegovy** | Subcutaneous injection | 2.4 mg weekly (after titration) | Chronic weight management | Jun 2021 |
 
-All three contain the same active molecule. The differences are formulation, dose, and approved indication. Ozempic and Wegovy use the same injectable delivery (prefilled pen), but Wegovy's maximum dose is higher (2.4 mg vs. 2 mg). Rybelsus uses salcaprozate sodium (SNAC) to enhance oral absorption in the stomach, but bioavailability is low (~1%), requiring specific fasting instructions.
+All three contain the same active molecule. The differences are formulation, dose, and approved indication.
+
+Ozempic and Wegovy use the same injectable delivery (prefilled pen), but Wegovy's maximum dose is higher (2.4 mg vs. 2 mg). Rybelsus uses salcaprozate sodium (SNAC) to enhance oral absorption in the stomach, but bioavailability is low (~1%), requiring specific fasting instructions.
 
 **Important:** While Ozempic is frequently prescribed off-label for weight loss, it is not FDA-approved for that purpose. Wegovy is the designated weight-management formulation.
 

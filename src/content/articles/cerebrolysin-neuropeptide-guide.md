@@ -9,7 +9,9 @@ tags: ["cerebrolysin", "neuropeptides", "brain recovery", "nootropics", "neurotr
 
 # Cerebrolysin: The Neuropeptide Complex for Brain Recovery
 
-Cerebrolysin is one of those compounds that splits the medical world along geographic lines. In Russia, China, and much of Europe, it's a mainstream treatment for stroke and dementia. In the United States, most neurologists have never heard of it. This disconnect isn't because the research doesn't exist. There are over 200 clinical studies on Cerebrolysin. It's because the regulatory and commercial environment makes it invisible to American medicine.
+Cerebrolysin is one of those compounds that splits the medical world along geographic lines. In Russia, China, and much of Europe, it's a mainstream treatment for stroke and dementia. In the United States, most neurologists have never heard of it.
+
+This disconnect isn't because the research doesn't exist. There are over 200 clinical studies on Cerebrolysin. It's because the regulatory and commercial environment makes it invisible to American medicine.
 
 So what is it, what does the evidence say, and why do so many people in the biohacking community swear by it?
 
@@ -78,7 +80,9 @@ The E-COMPASS trial (2017) combined Cerebrolysin with rehabilitation therapy in 
 
 ### Traumatic Brain Injury
 
-The CAPTAIN trials examined Cerebrolysin in moderate to severe TBI. Results showed improvements in cognitive recovery and neurological outcomes at 90 days post-injury ([Chen et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23390978/)). TBI is notoriously difficult to treat. There are essentially no FDA-approved drugs for it. So even modest improvements are meaningful.
+The CAPTAIN trials examined Cerebrolysin in moderate to severe TBI. Results showed improvements in cognitive recovery and neurological outcomes at 90 days post-injury ([Chen et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23390978/)).
+
+TBI is notoriously difficult to treat. There are essentially no FDA-approved drugs for it. So even modest improvements are meaningful.
 
 Animal studies paint a compelling picture. Rats given Cerebrolysin after experimental TBI showed reduced brain swelling, less cell death, and better performance on cognitive tests compared to controls ([Zhang et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25862481/)).
 

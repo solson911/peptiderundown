@@ -234,7 +234,9 @@ You can, but you really shouldn't. Repeated trauma to the same spot leads to tis
 
 ### Is it normal to feel nervous before my first injection?
 
-Absolutely. Almost everyone feels some anxiety before their first self-injection. The anticipation is genuinely worse than the actual needle. After two or three injections, most people find it's become routine. If needle anxiety is significant, consider asking your doctor about topical numbing creams like lidocaine.
+Absolutely. Almost everyone feels some anxiety before their first self-injection. The anticipation is genuinely worse than the actual needle.
+
+After two or three injections, most people find it's become routine. If needle anxiety is significant, consider asking your doctor about topical numbing creams like lidocaine.
 
 ### How long after reconstitution should I use my peptide?
 

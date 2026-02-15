@@ -9,7 +9,9 @@ tags: [melanotan 2, MT-2, tanning, melanin, MC1R, skin darkening, peptide]
 
 # Melanotan 2: Tanning Peptide Benefits, Risks, and Dosing
 
-Melanotan 2 is one of the most popular and most controversial peptides in the cosmetic space. It'll darken your skin without a tanning bed. It can boost libido. It may suppress appetite. And it carries real risks that anyone considering it needs to understand.
+Melanotan 2 is one of the most popular and most controversial peptides in the cosmetic space. It'll darken your skin without a tanning bed. It can boost libido. It may suppress appetite.
+
+And it carries real risks that anyone considering it needs to understand.
 
 This is a balanced look at what MT-2 is, what it does, and what the actual evidence says about safety.
 
@@ -211,7 +213,9 @@ MT-2 has been used recreationally for about 15-20 years now. Long-term data on c
 
 ### Interactions With UV
 
-MT-2 makes you more responsive to UV. While the eumelanin it produces is protective, users should still be cautious about UV exposure. The fact that you can tan more easily doesn't mean UV is suddenly safe. UV still causes DNA damage regardless of your melanin levels. Use reasonable sun exposure practices.
+MT-2 makes you more responsive to UV. While the eumelanin it produces is protective, users should still be cautious about UV exposure.
+
+The fact that you can tan more easily doesn't mean UV is suddenly safe. UV still causes DNA damage regardless of your melanin levels. Use reasonable sun exposure practices.
 
 ## Legal Status of Melanotan 2
 
@@ -245,7 +249,9 @@ Yes. MT-2 works the same way in women. Women also commonly experience the sexual
 
 ### Is MT-2 the same as PT-141?
 
-No, though they're related. PT-141 (bremelanotide) was derived from MT-2 research. PT-141 is a cyclic peptide fragment designed to target MC4R for sexual effects without the tanning. PT-141 is FDA-approved (as Vyleesi). MT-2 is not approved and has broader receptor activity.
+No, though they're related. PT-141 (bremelanotide) was derived from MT-2 research. PT-141 is a cyclic peptide fragment designed to target MC4R for sexual effects without the tanning.
+
+PT-141 is FDA-approved (as Vyleesi). MT-2 is not approved and has broader receptor activity.
 
 ### Can MT-2 darken already dark skin?
 
@@ -253,7 +259,9 @@ Yes, but the effect is less dramatic. People with naturally darker skin already 
 
 ### Will MT-2 protect me from sunburn?
 
-The eumelanin produced by MT-2 does provide some UV protection. Many users report being able to tolerate more sun without burning. But it's not sunscreen. You can still burn, and UV still causes DNA damage. Don't rely on MT-2 as sun protection.
+The eumelanin produced by MT-2 does provide some UV protection. Many users report being able to tolerate more sun without burning.
+
+But it's not sunscreen. You can still burn, and UV still causes DNA damage. Don't rely on MT-2 as sun protection.
 
 ### Is MT-2 addictive?
 
@@ -265,7 +273,9 @@ The tan itself is temporary. But new moles or darkened existing moles may persis
 
 ### What's the difference between Melanotan 1 and Melanotan 2?
 
-Melanotan 1 (afamelanotide) is a more selective MC1R agonist with fewer off-target effects. It was actually approved in Europe (as Scenesse) for patients with erythropoietic protoporphyria, a genetic condition causing extreme sun sensitivity. MT-1 produces tanning with less nausea and fewer sexual side effects. It's also much harder to obtain and more expensive. MT-2's broader receptor activity gives it more side effects but also the sexual and appetite effects some users want.
+Melanotan 1 (afamelanotide) is a more selective MC1R agonist with fewer off-target effects. It was actually approved in Europe (as Scenesse) for patients with erythropoietic protoporphyria, a genetic condition causing extreme sun sensitivity.
+
+MT-1 produces tanning with less nausea and fewer sexual side effects. It's also much harder to obtain and more expensive. MT-2's broader receptor activity gives it more side effects but also the sexual and appetite effects some users want.
 
 ## The Bottom Line
 

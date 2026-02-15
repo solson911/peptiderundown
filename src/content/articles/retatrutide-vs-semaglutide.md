@@ -192,7 +192,7 @@ This is semaglutide's biggest practical advantage right now. It exists. You can 
 
 ### The Honest Take
 
-If I had to bet on which molecule will be the gold standard for obesity treatment in 5 years, I'd bet on retatrutide or something like it. Triple agonism addresses more of the obesity puzzle than single agonism. The weight loss numbers are substantially better. The metabolic profile is broader. And the early safety data is reassuring.
+If I had to bet on which molecule will be the gold standard for obesity treatment in 5 years, I'd bet on retatrutide or something like it. Triple agonism addresses more of the obesity puzzle than single agonism. The weight loss numbers are substantially better. The metabolic profile is broader.
 
 But semaglutide earned its status for a reason. It works. It's been studied extensively. It has cardiovascular outcomes data. And it's available right now. For most people seeking treatment today, semaglutide (or tirzepatide) remains the practical choice.
 
@@ -210,7 +210,9 @@ Phase 2 data shows a favorable safety profile, but Phase 2 trials are small (338
 
 ### Will I regain weight after stopping either drug?
 
-Probably some, yes. The STEP 1 extension trial showed that participants regained about two-thirds of lost weight within a year of stopping semaglutide ([Wilding et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35441470/)). This is consistent across obesity pharmacotherapy. These drugs manage obesity; they don't cure it. Long-term treatment may be necessary for sustained results.
+Probably some, yes. The STEP 1 extension trial showed that participants regained about two-thirds of lost weight within a year of stopping semaglutide ([Wilding et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35441470/)). This is consistent across obesity pharmacotherapy.
+
+These drugs manage obesity; they don't cure it. Long-term treatment may be necessary for sustained results.
 
 ### Does retatrutide cause more nausea than semaglutide?
 

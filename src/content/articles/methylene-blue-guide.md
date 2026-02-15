@@ -9,7 +9,9 @@ tags: ["methylene blue", "mitochondria", "nootropic", "anti-aging", "biohacking"
 
 # Methylene Blue: The Mitochondrial Enhancer (Not Just a Dye)
 
-Methylene blue might be the most underrated compound in biohacking. It was first synthesized in 1876 as a textile dye. Then it became the first fully synthetic drug used in medicine, treating malaria in the early 1900s. Today, it's used in hospitals for methemoglobinemia and as a surgical dye. And increasingly, it's being studied and used off-label for cognitive enhancement, mitochondrial support, and even anti-aging.
+Methylene blue might be the most underrated compound in biohacking. It was first synthesized in 1876 as a textile dye, then became the first fully synthetic drug used in medicine, treating malaria in the early 1900s. Today, it's used in hospitals for methemoglobinemia and as a surgical dye.
+
+And increasingly, it's being studied and used off-label for cognitive enhancement, mitochondrial support, and even anti-aging.
 
 It's not technically a peptide. But it shows up in peptide and biohacking circles constantly because it targets something fundamental: how your cells produce energy. And that makes it relevant to almost everything else people in this space care about.
 
@@ -77,7 +79,9 @@ TauRx Therapeutics developed a modified form of methylene blue (LMTM, or leucome
 
 ### Focus and Mental Energy
 
-This is the benefit most nootropic users report first. The increase in mitochondrial ATP output translates to a subjective feeling of mental clarity, reduced brain fog, and sustained focus. It's not a stimulant. There's no jitteriness or crash. Users describe it more like their brain is running more efficiently on the same fuel.
+This is the benefit most nootropic users report first. The increase in mitochondrial ATP output translates to a subjective feeling of mental clarity, reduced brain fog, and sustained focus.
+
+It's not a stimulant. There's no jitteriness or crash. Users describe it more like their brain is running more efficiently on the same fuel.
 
 ## Anti-Aging Potential: What the Research Shows
 
@@ -231,7 +235,9 @@ Same compound, very different purity. Aquarium methylene blue contains additives
 
 ### Can I use methylene blue topically for skin benefits?
 
-Some people add pharmaceutical grade methylene blue to skincare formulations based on the anti-aging cell culture studies. Concentrations of 0.005-0.01% have been used. The staining is a practical issue. Blue skin isn't a great look for most people, though it fades within hours. Research on topical application in humans is still early.
+Some people add pharmaceutical grade methylene blue to skincare formulations based on the anti-aging cell culture studies. Concentrations of 0.005-0.01% have been used.
+
+The staining is a practical issue. Blue skin isn't a great look for most people, though it fades within hours. Research on topical application in humans is still early.
 
 ### How long until I notice effects?
 
