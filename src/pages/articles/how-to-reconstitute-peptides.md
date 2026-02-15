@@ -9,6 +9,8 @@ tags: ["reconstitution", "peptides", "bacteriostatic water", "how-to", "beginner
 author: "PeptideRundown Team"
 ---
 
+# How to Reconstitute Peptides: A Complete Step-by-Step Guide
+
 If you've just received your first vial of peptides, you're probably staring at a tiny amount of powder and wondering what to do next. Don't worry. Reconstitution sounds intimidating, but it's actually straightforward once you understand the process.
 
 This guide walks you through everything: what reconstitution is, what you need, how to do it step by step, how to calculate your doses, and how to store your peptides properly. By the end, you'll feel confident handling the process like you've done it a hundred times.
@@ -27,7 +29,9 @@ Reconstitution simply means **adding a liquid (solvent) to a powdered substance 
 
 Peptides are shipped as a freeze-dried (lyophilized) powder because they're far more stable in that form. In powder form, peptides can survive shipping and sit on a shelf without degrading. But you can't inject a powder, so you need it in liquid form first.
 
-Think of it like powdered drink mix. The powder is shelf-stable and easy to transport. But to actually drink it, you need to add water. Same concept, just with more precision and sterility.
+Think of it like powdered drink mix. The powder is shelf-stable and easy to transport.
+
+But to actually drink it, you need to add water. Same concept, just with more precision and sterility.
 
 ### Why not ship them pre-mixed?
 
@@ -43,7 +47,7 @@ Before you start, gather everything so you're not scrambling mid-process. Here's
 | Item | Purpose |
 |------|---------|
 | **Peptide vial** | Your lyophilized (freeze-dried) peptide |
-| **Bacteriostatic water (BAC water)** | The solvent: sterile water containing 0.9% benzyl alcohol as a preservative |
+| **Bacteriostatic water (BAC water)** | The solvent: sterile water containing 0.9%** benzyl alcohol as a preservative |
 | **Insulin syringes (1mL / 100 unit)** | For drawing doses after reconstitution |
 | **Larger syringe (1–3mL) with needle** | For adding BAC water to the vial (a 25–27 gauge needle works well) |
 | **Alcohol swabs** | For sterilizing vial tops before puncturing |
@@ -71,11 +75,17 @@ Alright, let's do this. Take your time; there's no rush.
 
 ### Step 1: Wash Your Hands
 
-Start with clean hands. Wash with soap and water for at least 20 seconds. If you have nitrile gloves, put them on. This isn't surgery, but you are working with something that's going into your body, so basic hygiene matters.
+Start with clean hands. Wash with soap and water for at least 20 seconds.
+
+If you have nitrile gloves, put them on. This isn't surgery, but you are working with something that's going into your body, so basic hygiene matters.
 
 ### Step 2: Gather and Inspect Your Supplies
 
-Lay everything out on a clean surface. Check your peptide vial. You should see a small disc or puck of powder at the bottom (or sometimes clinging to the sides). This is normal. Also check that your BAC water is clear with no particles floating in it.
+Lay everything out on a clean surface. Check your peptide vial.
+
+You should see a small disc or puck of powder at the bottom (or sometimes clinging to the sides). This is normal.
+
+Also check that your BAC water is clear with no particles floating in it.
 
 ### Step 3: Decide How Much Bacteriostatic Water to Add
 
@@ -88,13 +98,17 @@ This is where a little math comes in, but it's simple. The amount of BAC water y
 - **10mg vial + 2mL BAC water** = 5 mg/mL
 - **10mg vial + 5mL BAC water** = 2 mg/mL
 
-There's no single "correct" amount. It depends on your peptide, your dose, and your preference. We'll cover the math in detail in the next section. For now, just know how much you plan to add before you start.
+There's no single "correct" amount. It depends on your peptide, your dose, and your preference.
+
+We'll cover the math in detail in the next section. For now, just know how much you plan to add before you start.
 
 **General rule of thumb:** Add enough water so that your typical dose falls between 5 and 50 units on an insulin syringe. This makes it easy to measure accurately.
 
 ### Step 4: Sterilize the Vial Tops
 
-Take an alcohol swab and wipe the rubber stopper on your peptide vial. Do the same for your BAC water vial. Let them air dry for a few seconds. This removes any surface bacteria or dust.
+Take an alcohol swab and wipe the rubber stopper on your peptide vial. Do the same for your BAC water vial.
+
+Let them air dry for a few seconds. This removes any surface bacteria or dust.
 
 ### Step 5: Draw the Bacteriostatic Water
 
@@ -107,6 +121,8 @@ Using your larger syringe (1–3mL), draw up your predetermined amount of BAC wa
 5. Withdraw the needle from the BAC water vial.
 
 ### Step 6: Add the Water to the Peptide Vial (Slowly!)
+
+> **⚠️ This is the most critical step.** Direct force on the powder can damage the peptide. Aim for the vial wall and go slow.
 
 This is the most important step, and the one most people mess up. **Do not squirt the water directly onto the powder.**
 
@@ -186,6 +202,8 @@ A standard **1mL insulin syringe** has **100 units** total. Each unit = 0.01mL. 
 | 1.00 mL | 100 units |
 
 ### The Quick Dose Formula
+
+> **💡 Pro Tip:** Add a "round" amount of water that makes the concentration a clean number. Adding 2mL to a 5mg vial gives 2.5mg/mL — easy to work with. Adding 1.73mL gives 2.89mg/mL — unnecessarily annoying.
 
 **Units to draw = (Dose in mg ÷ Concentration in mg/mL) × 100**
 
@@ -274,11 +292,15 @@ Generally **21–28 days** when stored properly in the refrigerator with bacteri
 
 ### What if the solution is cloudy after mixing?
 
-A fully reconstituted peptide should be **clear**. Slight cloudiness that resolves with gentle swirling is normal. Persistent cloudiness, visible particles, or discoloration means something is wrong. Do not use it.
+A fully reconstituted peptide should be **clear**. Slight cloudiness that resolves with gentle swirling is normal.
+
+Persistent cloudiness, visible particles, or discoloration means something is wrong. Do not use it.
 
 ### Does it matter how much BAC water I add?
 
-The total amount of peptide stays the same regardless of how much water you add; you're just changing the concentration. More water = lower concentration = more volume per dose. Less water = higher concentration = less volume per dose. Choose a volume that makes your dose easy to measure.
+The total amount of peptide stays the same regardless of how much water you add; you're just changing the concentration. More water = lower concentration = more volume per dose.
+
+Less water = higher concentration = less volume per dose. Choose a volume that makes your dose easy to measure.
 
 ### Can I travel with reconstituted peptides?
 
@@ -291,7 +313,9 @@ Reconstituted peptides need to stay refrigerated. For short trips, an insulated 
 
 ### What if I added the wrong amount of water?
 
-Don't panic. Your peptide is fine; you've just changed the concentration. Recalculate using the actual amount of water you added. For example, if you meant to add 2mL but added 3mL to a 5mg vial, your concentration is 5mg ÷ 3mL = 1.67 mg/mL. Adjust your dose volumes accordingly.
+Don't panic. Your peptide is fine; you've just changed the concentration. Recalculate using the actual amount of water you added.
+
+For example, if you meant to add 2mL but added 3mL to a 5mg vial, your concentration is 5mg ÷ 3mL = 1.67 mg/mL. Adjust your dose volumes accordingly.
 
 ### Can I add more water after reconstituting?
 
