@@ -184,7 +184,9 @@ Reconstituted KPV solution should be refrigerated and used within a few weeks. L
 
 ### Is KPV the same as alpha-MSH?
 
-No. KPV is the last three amino acids of alpha-MSH. It retains the anti-inflammatory properties but lacks some of alpha-MSH's other effects, like strong melanogenesis stimulation. Think of it as a targeted fragment with a more focused action.
+No. KPV is the last three amino acids of alpha-MSH.
+
+It retains the anti-inflammatory properties but lacks some of alpha-MSH's other effects, like strong melanogenesis stimulation. Think of it as a targeted fragment with a more focused action.
 
 ### Can KPV help with food sensitivities?
 

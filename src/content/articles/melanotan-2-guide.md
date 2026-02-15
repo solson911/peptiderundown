@@ -250,7 +250,9 @@ The tan fades gradually over 1-3 months after stopping, as melanin-containing sk
 
 ### Can women use MT-2?
 
-Yes. MT-2 works the same way in women. Women also commonly experience the sexual arousal effects (MC4R activation). The dosing protocols are the same regardless of sex.
+Yes. MT-2 works the same way in women.
+
+Women also commonly experience the sexual arousal effects (MC4R activation). The dosing protocols are the same regardless of sex.
 
 ### Is MT-2 the same as PT-141?
 

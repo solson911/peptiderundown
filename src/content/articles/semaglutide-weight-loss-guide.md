@@ -274,7 +274,9 @@ From a pharmacological standpoint, the difference is modest. From a practical st
 
 ### Does semaglutide work without diet and exercise?
 
-Yes. Participants in the STEP trials received lifestyle counseling but were not placed on highly restrictive diets or intensive exercise programs. The **15%** weight loss occurred largely through pharmacologically mediated appetite reduction. That said, combining semaglutide with structured nutrition and exercise (especially resistance training) improves outcomes, preserves lean mass, and supports long-term health beyond what the scale shows.
+Yes. Participants in the STEP trials received lifestyle counseling but were not placed on highly restrictive diets or intensive exercise programs.
+
+The **15%** weight loss occurred largely through pharmacologically mediated appetite reduction. That said, combining semaglutide with structured nutrition and exercise (especially resistance training) improves outcomes, preserves lean mass, and supports long-term health beyond what the scale shows.
 
 ### What about "Ozempic face" and loose skin?
 
@@ -321,4 +323,6 @@ New to peptides entirely? Check out our [beginner's guide to peptide therapy](/a
 6. Lincoff AM, et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. *NEJM*. 2023;389(24):2221-2232.
 7. Jastreboff AM, et al. Tirzepatide Once Weekly for the Treatment of Obesity. *NEJM*. 2022;387(4):327-340.
 8. Blundell J, et al. Effects of once-weekly semaglutide on appetite, energy intake, control of eating, food preference and body weight in subjects with obesity. *Diabetes Obes Metab*. 2017;19(9):1242-1251.
-9. Friedrichsen MH, et al. The effect of semaglutide 2.4 mg once weekly on energy intake, appetite, control of eating, and gastric emptying in adults with obesity. *Diabetes Obes Metab*. 2021;23(3):754-762.
+9. Friedrichsen MH, et al.
+
+The effect of semaglutide 2.4 mg once weekly on energy intake, appetite, control of eating, and gastric emptying in adults with obesity. *Diabetes Obes Metab*. 2021;23(3):754-762.

@@ -157,7 +157,9 @@ This distinction is critical and potentially life-saving.
 
 **Aquarium-grade methylene blue** is used to treat fish diseases. It often contains zinc and other compounds that are fine for fish tanks but not for human consumption.
 
-Do not take anything other than USP pharmaceutical grade methylene blue. Period. The savings from buying cheaper grades are not worth the risk of heavy metal exposure or contamination. Reputable suppliers provide certificates of analysis (COA) showing purity and contaminant testing.
+Do not take anything other than USP pharmaceutical grade methylene blue. Period.
+
+The savings from buying cheaper grades are not worth the risk of heavy metal exposure or contamination. Reputable suppliers provide certificates of analysis (COA) showing purity and contaminant testing.
 
 ## Side Effects
 
@@ -219,7 +221,9 @@ For broader context on how methylene blue fits into biohacking protocols alongsi
 
 ### Will methylene blue permanently stain my teeth?
 
-No. The blue staining of the mouth and teeth is temporary, usually clearing within a few hours. Using capsules instead of liquid minimizes oral staining. Some people take it in enteric-coated capsules specifically to avoid any mouth contact.
+No. The blue staining of the mouth and teeth is temporary, usually clearing within a few hours.
+
+Using capsules instead of liquid minimizes oral staining. Some people take it in enteric-coated capsules specifically to avoid any mouth contact.
 
 ### Can I take methylene blue every day?
 

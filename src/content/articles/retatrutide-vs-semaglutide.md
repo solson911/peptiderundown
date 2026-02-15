@@ -181,7 +181,9 @@ Both compounds significantly improve glycemic control. In their respective diabe
 - **Expected cost:** Likely similar to or slightly higher than tirzepatide (Mounjaro/Zepbound), which runs $1,000+ per month at list price.
 - **Research chemical market:** Available from peptide suppliers as a research compound, but quality and purity vary. This is not the same as pharmaceutical-grade product.
 
-This is semaglutide's biggest practical advantage right now. It exists. You can get a prescription today. Retatrutide is still in the pipeline.
+This is semaglutide's biggest practical advantage right now. It exists.
+
+You can get a prescription today. Retatrutide is still in the pipeline.
 
 ## Which Is Better For Whom?
 

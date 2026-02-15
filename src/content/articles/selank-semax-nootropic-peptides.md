@@ -212,7 +212,9 @@ The peptides won't hit as hard as modafinil for raw wakefulness, but they offer 
 
 ### Do the effects build over time or are they immediate?
 
-Both. Semax has noticeable acute effects within 30 minutes (improved focus, mental clarity). But the neurotrophic effects (BDNF upregulation, neuroplasticity) build over days to weeks of consistent use. Selank's anxiolytic effects are often noticed within the first few days, with full benefits developing over 1 to 2 weeks.
+Both. Semax has noticeable acute effects within 30 minutes (improved focus, mental clarity).
+
+But the neurotrophic effects (BDNF upregulation, neuroplasticity) build over days to weeks of consistent use. Selank's anxiolytic effects are often noticed within the first few days, with full benefits developing over 1 to 2 weeks.
 
 ### Can I use these peptides long-term?
 

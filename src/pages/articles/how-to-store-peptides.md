@@ -23,11 +23,15 @@ Proper storage is straightforward once you understand the basics. This guide cov
 
 ## Lyophilized vs. Reconstituted: What's the Difference?
 
-**Lyophilized peptides** are freeze-dried powders. When you receive a peptide from a supplier, it almost always arrives in this form: a small cake or loose powder sitting at the bottom of a sealed glass vial. In this state, peptides are remarkably stable. The freeze-drying process removes virtually all water, and without water, most degradation pathways simply can't proceed.
+**Lyophilized peptides** are freeze-dried powders. When you receive a peptide from a supplier, it almost always arrives in this form: a small cake or loose powder sitting at the bottom of a sealed glass vial.
+
+In this state, peptides are remarkably stable. The freeze-drying process removes virtually all water, and without water, most degradation pathways simply can't proceed.
 
 > **Key Rule:** Never freeze reconstituted peptides. Never leave reconstituted peptides at room temperature. Fridge only.
 
-**Reconstituted peptides** are lyophilized peptides that have been mixed with a solvent, usually bacteriostatic water (BAC water) or sterile water, to create an injectable solution. Once you add liquid, you've restarted the clock on degradation. The peptide is now in solution, exposed to potential hydrolysis, oxidation, and microbial contamination.
+**Reconstituted peptides** are lyophilized peptides that have been mixed with a solvent (usually bacteriostatic water or sterile water) to create an injectable solution. Once you add liquid, you've restarted the clock on degradation.
+
+The peptide is now in solution, exposed to potential hydrolysis, oxidation, and microbial contamination.
 
 Think of it like coffee. Whole beans last months in your pantry.
 
@@ -83,9 +87,9 @@ Reconstituted peptides should never be stored at room temperature or frozen. Fre
 
 ### Choice of Solvent Matters
 
-**Bacteriostatic water** contains 0.9% benzyl alcohol, which acts as a preservative and antimicrobial agent. Peptides reconstituted with BAC water generally last 3 to 4 weeks when refrigerated, because the benzyl alcohol keeps microbial growth in check even as you repeatedly puncture the rubber stopper.
+**Bacteriostatic water** contains 0.9% benzyl alcohol, which acts as a preservative and antimicrobial agent. Peptides reconstituted with BAC water generally last **3-4 weeks** when refrigerated, because the benzyl alcohol keeps microbial growth in check even with repeated punctures.
 
-**Sterile water** has no preservative. Once you puncture the vial, every needle insertion introduces a small contamination risk. Peptides mixed with plain sterile water should ideally be used within 48 to 72 hours, and absolutely within one week.
+**Sterile water** has no preservative. Once you puncture the vial, every needle insertion introduces a contamination risk. Use within **48-72 hours**, and absolutely within one week.
 
 A 2012 study in the *American Journal of Health-System Pharmacy* examined microbial contamination rates in multi-dose vials and found that preservative-free formulations showed significantly higher contamination after repeated access ([PubMed: 22610028](https://pubmed.ncbi.nlm.nih.gov/22610028/)).
 
@@ -194,7 +198,7 @@ A few practical tips for setting up your fridge to be peptide-friendly:
 
 ### Can I freeze reconstituted peptides to make them last longer?
 
-No. Freezing reconstituted peptides causes ice crystal formation that physically damages the peptide chains. This leads to aggregation and loss of bioactivity. Only freeze lyophilized (powder) peptides.
+No. Freezing reconstituted peptides causes ice crystal formation that physically damages the peptide chains, leading to aggregation and loss of bioactivity. Only freeze lyophilized (powder) peptides.
 
 ### How long do lyophilized peptides last at room temperature?
 
@@ -204,7 +208,9 @@ If you accidentally left a lyophilized vial out for a day or two, it's almost ce
 
 ### Does the type of peptide affect storage requirements?
 
-Yes. Peptides containing oxidation-sensitive residues like methionine, cysteine, or tryptophan are generally less stable and benefit most from cold, dark storage. Simpler peptides with more stable amino acid sequences tend to be hardier. Check [peptidearc.com](https://peptidearc.com) for compound-specific guidance.
+Yes. Peptides containing oxidation-sensitive residues like methionine, cysteine, or tryptophan are generally less stable and benefit most from cold, dark storage.
+
+Simpler peptides with more stable amino acid sequences tend to be hardier. Check [peptidearc.com](https://peptidearc.com) for compound-specific guidance.
 
 ### Can I reconstitute a peptide, use some, then freeze the rest?
 
@@ -224,9 +230,9 @@ BAC water allows multi-dose use over weeks because it inhibits microbial growth.
 
 ### I lost power and my fridge was off for six hours. Are my peptides ruined?
 
-Most likely not. A closed refrigerator maintains safe temperatures for about four hours, and reconstituted peptides can handle brief temperature excursions. If the fridge stayed closed and it was less than six hours, your peptides should be fine.
+Most likely not. A closed refrigerator maintains safe temperatures for about four hours, and reconstituted peptides can handle brief temperature excursions.
 
-If it was longer, or the fridge was open, inspect visually and consider the peptide's age. Fresh reconstitutions have more margin than ones already three weeks old.
+If the fridge stayed closed for less than six hours, your peptides should be fine. If longer, or the fridge was open, inspect visually and consider the peptide's age.
 
 ### Should I store peptides in a mini-fridge dedicated to just peptides?
 

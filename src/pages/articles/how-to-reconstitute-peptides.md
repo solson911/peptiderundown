@@ -25,22 +25,19 @@ This guide walks you through everything: what reconstitution is, what you need, 
 
 ## What Is Reconstitution (and Why Is It Necessary)?
 
-Reconstitution simply means **adding a liquid (solvent) to a powdered substance to turn it into an injectable solution**. That's it. You're dissolving the powder so it can be measured and administered accurately.
+Reconstitution simply means **adding a liquid (solvent) to a powdered substance to turn it into an injectable solution**. You're dissolving the powder so it can be measured and administered accurately.
 
-Peptides are shipped as a freeze-dried (lyophilized) powder because they're far more stable in that form. In powder form, peptides can survive shipping and sit on a shelf without degrading. But you can't inject a powder, so you need it in liquid form first.
+Peptides are shipped as a freeze-dried (lyophilized) powder because they're far more stable in that form. In powder form, they can survive shipping and sit on a shelf without degrading. But you can't inject a powder, so you need it in liquid form first.
 
-Think of it like powdered drink mix. The powder is shelf-stable and easy to transport.
-
-But to actually drink it, you need to add water. Same concept, just with more precision and sterility.
+Think of it like powdered drink mix. The powder is shelf-stable and easy to transport, but to actually use it, you need to add water.
 
 ### Why not ship them pre-mixed?
 
-Once peptides are in solution, they start a slow countdown. Light, temperature, and even gentle agitation can degrade them over time. Keeping them as powder until you're ready to use them maximizes their potency and shelf life.
-
+Once peptides are in solution, they start a slow countdown. Light, temperature, and even gentle agitation can degrade them over time. Keeping them as powder until you're ready to use them maximizes potency and shelf life.
 
 ## Supplies You'll Need for Peptide Reconstitution
 
-Before you start, gather everything so you're not scrambling mid-process. Here's your supply list:
+Gather everything before you start so you're not scrambling mid-process.
 
 ### Essential Supplies
 
@@ -63,8 +60,8 @@ Before you start, gather everything so you're not scrambling mid-process. Here's
 
 You'll see two options: **bacteriostatic water** and **plain sterile water**. Here's the difference:
 
-- **Bacteriostatic water** contains 0.9% benzyl alcohol, which prevents bacterial growth. This means you can draw from the vial multiple times over days or weeks without contamination. **This is what you want for multi-use vials.**
-- **Sterile water** has no preservative. Once punctured, it should be used within 24 hours. Only use this for single-use applications.
+- **Bacteriostatic water** — contains 0.9% benzyl alcohol, which prevents bacterial growth; you can draw from the vial multiple times over weeks without contamination; **this is what you want for multi-use vials**
+- **Sterile water** — has no preservative; once punctured, use within 24 hours; only for single-use applications
 
 For almost everyone reading this, **bacteriostatic water is the right choice**.
 
@@ -81,15 +78,13 @@ If you have nitrile gloves, put them on. This isn't surgery, but you are working
 
 ### Step 2: Gather and Inspect Your Supplies
 
-Lay everything out on a clean surface. Check your peptide vial.
-
-You should see a small disc or puck of powder at the bottom (or sometimes clinging to the sides). This is normal.
+Lay everything out on a clean surface. Check your peptide vial for a small disc or puck of powder at the bottom (or sometimes clinging to the sides). This is normal.
 
 Also check that your BAC water is clear with no particles floating in it.
 
 ### Step 3: Decide How Much Bacteriostatic Water to Add
 
-This is where a little math comes in, but it's simple. The amount of BAC water you add determines the **concentration** of your solution, which affects how easy it is to measure your doses.
+This is where a little math comes in, but it's simple. The amount of BAC water you add determines the **concentration** of your solution, which affects how easy it is to measure doses.
 
 **Common reconstitution volumes:**
 
@@ -133,11 +128,11 @@ Here's the right way:
 3. **Push the plunger slowly.** Let the water trickle down the glass wall and pool at the bottom. This should take 30–60 seconds for 1–2mL.
 4. Once all the water is in, remove the needle.
 
-**Why so gentle?** Peptides are delicate molecules. Blasting them with a jet of water can damage their structure through shear force. Think of it like slowly pouring water over a sugar cube versus hitting it with a pressure washer. Both dissolve it, but one is much kinder.
+**Why so gentle?** Peptides are delicate molecules. Blasting them with a jet of water can damage their structure through shear force. Think of it like slowly pouring water over a sugar cube versus hitting it with a pressure washer.
 
 ### Step 7: Let It Dissolve (Don't Shake)!
 
-After adding the water, set the vial down and let it sit. Most peptides will dissolve within **2–5 minutes** on their own. You'll see the powder slowly disappear as the solution becomes clear.
+After adding the water, set the vial down and let it sit. Most peptides will dissolve within **2-5 minutes** on their own.
 
 **If it's taking a while:**
 - Gently roll the vial between your palms. Think slow, easy rotations.
@@ -148,7 +143,7 @@ The solution should be **clear** when fully dissolved. If it's cloudy or has vis
 
 ### Step 8: You're Done!
 
-That's it. Your peptide is now reconstituted and ready to use. Label the vial with the date, the peptide name, and the concentration (e.g., "BPC-157, 2.5mg/mL, Feb 13, 2026"), then store it in the refrigerator.
+Your peptide is now reconstituted and ready to use. Label the vial with the date, peptide name, and concentration (e.g., "BPC-157, 2.5mg/mL, Feb 13, 2026"). Store it in the refrigerator.
 
 
 ## Peptide Dosage Math: Calculating Concentration and Dose
@@ -211,7 +206,7 @@ Or if you prefer working in micrograms:
 
 **Units to draw = (Dose in mcg ÷ (Concentration in mg/mL × 1000)) × 100**
 
-**Pro tip:** If the math feels confusing, add a "round" amount of water that makes the concentration a clean number. For example, adding 2mL to a 5mg vial gives you 2.5mg/mL, which is easy to work with. Adding 1.73mL would give you 2.89mg/mL, which is unnecessarily annoying.
+**Pro tip:** Add a "round" amount of water that makes the concentration a clean number. Adding 2mL to a 5mg vial gives you 2.5mg/mL, which is easy to work with. Adding 1.73mL would give you 2.89mg/mL, which is unnecessarily annoying.
 
 
 ## Drawing Your Dose from a Reconstituted Vial
@@ -328,9 +323,11 @@ This can happen during shipping due to temperature changes or pressure. As long 
 
 ## Wrapping Up
 
-Reconstituting peptides is one of those things that seems complicated until you do it once. The process is simple: add water to powder, let it dissolve, do some basic math, and store it properly. The key principles are **be gentle, be clean, and be precise**.
+Reconstituting peptides is one of those things that seems complicated until you do it once. The process is simple: add water to powder, let it dissolve, do some basic math, and store it properly.
 
-Take your time the first couple of times. Write down your concentration and keep notes on your vials. Within a week, this will feel like second nature.
+The key principles are **be gentle, be clean, and be precise**.
+
+Take your time the first couple of times. Within a week, this will feel like second nature.
 
 If you found this guide helpful, bookmark it for reference. And remember, when in doubt about dosing or usage, always consult with a healthcare professional.
 

@@ -228,7 +228,9 @@ It's generally recommended to take periodic breaks (4 to 8 weeks off after every
 
 ### Can women use this stack?
 
-Yes. GH optimization benefits aren't sex-specific. Women may start with slightly lower doses of ipamorelin (150 to 200 mcg) and titrate up based on response. The anti-aging and body composition benefits are equally relevant for women.
+Yes. GH optimization benefits aren't sex-specific.
+
+Women may start with slightly lower doses of ipamorelin (150 to 200 mcg) and titrate up based on response. The anti-aging and body composition benefits are equally relevant for women.
 
 ### How does this compare to taking exogenous HGH?
 

@@ -253,7 +253,9 @@ Individual results vary enormously. Factors like injury severity, age, nutrition
 
 ### Is TB-500 the same as thymosin beta-4?
 
-No. TB-500 is a synthetic fragment that contains the active region of thymosin beta-4. It's a shorter peptide sequence designed to replicate the key biological functions of the full protein. Some products labeled "TB-500" may actually contain full-length Tb4, but traditionally, TB-500 refers to the fragment.
+No. TB-500 is a synthetic fragment that contains the active region of thymosin beta-4.
+
+It's a shorter peptide sequence designed to replicate the key biological functions of the full protein. Some products labeled "TB-500" may actually contain full-length Tb4, but traditionally, TB-500 refers to the fragment.
 
 ### How long should I run TB-500?
 

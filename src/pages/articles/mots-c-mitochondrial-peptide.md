@@ -194,11 +194,15 @@ For sourcing considerations and updated availability information, [PeptideArc](h
 
 ### Is MOTS-c natural or synthetic?
 
-Both. MOTS-c is a naturally occurring peptide produced by your mitochondria. The MOTS-c available for research and therapeutic use is synthetically produced to match the natural sequence. Your body makes it on its own, but supplemental MOTS-c aims to boost levels beyond what your body produces, particularly as levels decline with age.
+Both. MOTS-c is a naturally occurring peptide produced by your mitochondria.
+
+The MOTS-c available for research and therapeutic use is synthetically produced to match the natural sequence. Your body makes it on its own, but supplemental MOTS-c aims to boost levels beyond what your body produces, particularly as levels decline with age.
 
 ### Can MOTS-c replace exercise?
 
-No. MOTS-c activates some of the same metabolic pathways as exercise, but exercise provides a much broader range of benefits including cardiovascular conditioning, bone density maintenance, muscle hypertrophy, neurotransmitter regulation, and psychological well-being. MOTS-c is better thought of as a complement to exercise, not a substitute. The combination may produce better results than either alone.
+No. MOTS-c activates some of the same metabolic pathways as exercise, but exercise provides a much broader range of benefits including cardiovascular conditioning, bone density maintenance, muscle hypertrophy, neurotransmitter regulation, and psychological well-being.
+
+MOTS-c is better thought of as a complement to exercise, not a substitute. The combination may produce better results than either alone.
 
 ### How long does it take to see results?
 
