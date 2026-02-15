@@ -47,7 +47,7 @@ CJC-1295 DAC works through the GHRH receptor (GHRHR) on somatotroph cells in the
 
 A few key points about how this differs from other GH-boosting peptides:
 
-> **💡 Key Distinction:** Unlike exogenous GH injections that flatten natural pulsatility, CJC-1295 DAC works *with* your body's existing GH rhythm.
+> **Key Distinction:** Unlike exogenous GH injections that flatten natural pulsatility, CJC-1295 DAC works *with* your body's existing GH rhythm.
 
 **It amplifies natural pulses.** CJC-1295 DAC doesn't just flood your system with a single GH spike. Research shows it increases both the amplitude and frequency of GH pulses while maintaining the body's natural pulsatile pattern ([Ionescu & Bhatt, 2018](https://pubmed.ncbi.nlm.nih.gov/29713752/)). This is a critical distinction from exogenous GH injections, which can flatten natural pulsatility.
 

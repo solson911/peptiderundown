@@ -122,7 +122,7 @@ Using your larger syringe (1–3mL), draw up your predetermined amount of BAC wa
 
 ### Step 6: Add the Water to the Peptide Vial (Slowly!)
 
-> **⚠️ This is the most critical step.** Direct force on the powder can damage the peptide. Aim for the vial wall and go slow.
+> **This is the most critical step.** Direct force on the powder can damage the peptide. Aim for the vial wall and go slow.
 
 This is the most important step, and the one most people mess up. **Do not squirt the water directly onto the powder.**
 
@@ -203,7 +203,7 @@ A standard **1mL insulin syringe** has **100 units** total. Each unit = 0.01mL. 
 
 ### The Quick Dose Formula
 
-> **💡 Pro Tip:** Add a "round" amount of water that makes the concentration a clean number. Adding 2mL to a 5mg vial gives 2.5mg/mL — easy to work with. Adding 1.73mL gives 2.89mg/mL — unnecessarily annoying.
+> **Pro Tip:** Add a "round" amount of water that makes the concentration a clean number. Adding 2mL to a 5mg vial gives 2.5mg/mL — easy to work with. Adding 1.73mL gives 2.89mg/mL — unnecessarily annoying.
 
 **Units to draw = (Dose in mg ÷ Concentration in mg/mL) × 100**
 

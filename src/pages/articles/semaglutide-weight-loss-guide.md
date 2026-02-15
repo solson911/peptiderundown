@@ -89,7 +89,7 @@ The **Semaglutide Treatment Effect in People with obesity (STEP)** trial program
 - **Results:** Mean weight loss of **16.0%** with semaglutide vs. **5.7%** with placebo, suggesting additive effects of pharmacotherapy and structured behavioral support.
 - **Reference:** [Wadden et al., *JAMA*, 2021](https://doi.org/10.1001/jama.2021.1831)
 
-> **⚠️ Important:** Semaglutide-induced weight loss requires ongoing treatment. Stopping leads to significant weight regain (STEP 4 data below).
+> **Important:** Semaglutide-induced weight loss requires ongoing treatment. Stopping leads to significant weight regain (STEP 4 data below).
 
 ### STEP 4: Withdrawal and Weight Regain
 
@@ -161,7 +161,7 @@ Semaglutide carries a boxed warning based on rodent studies showing dose-depende
 
 ### Muscle Loss Concerns
 
-> **💡 Pro Tip:** Resistance training and high protein intake (**1.2–1.6 g/kg/day**) are critical to preserve muscle while on semaglutide.
+> **Pro Tip:** Resistance training and high protein intake (**1.2–1.6 g/kg/day**) are critical to preserve muscle while on semaglutide.
 
 Weight lost with semaglutide is approximately **60–75%** fat mass and **25–40%** lean mass, broadly consistent with the composition of weight loss seen with caloric restriction. Resistance training and adequate protein intake (≥1.2–1.6 g/kg/day) are strongly recommended to preserve lean mass.
 

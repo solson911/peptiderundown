@@ -29,7 +29,7 @@ Your body naturally produces GHK-Cu, but levels decline with age. Plasma concent
 
 That decline correlates with visible aging, slower wound healing, and reduced tissue repair capacity.
 
-> **💡 The Logic:** Supplementing GHK-Cu restores what your body used to make on its own. The logic behind supplementing GHK-Cu is straightforward: restore what your body used to make on its own.
+> **The Logic:** Supplementing GHK-Cu restores what your body used to make on its own. The logic behind supplementing GHK-Cu is straightforward: restore what your body used to make on its own.
 
 For a full compound profile, see the [GHK-Cu page on PeptideArc](https://peptidearc.com).
 
@@ -46,7 +46,7 @@ The changes weren't random. GHK-Cu consistently shifts gene expression toward yo
 - **Upregulated** — tissue repair, collagen synthesis, antioxidant defense
 - **Downregulated** — inflammation, tissue destruction, fibrosis
 
-> **⚡ Quick Summary:** GHK-Cu acts as a master switch, shifting gene expression toward a younger, more regenerative pattern.
+> **Quick Summary:** GHK-Cu acts as a master switch, shifting gene expression toward a younger, more regenerative pattern.
 
 ### Copper Delivery
 

@@ -69,7 +69,7 @@ These three mechanisms work together in a coordinated healing response:
 - **Angiogenesis** — builds new blood supply to feed the repair process
 - **Actin regulation** — provides structural reorganization for tissue rebuilding
 
-> **⚡ Quick Summary:** TB-500 orchestrates healing by getting the right cells to the right place, with the right blood supply, and the right structural support.
+> **Quick Summary:** TB-500 orchestrates healing by getting the right cells to the right place, with the right blood supply, and the right structural support.
 
 ## TB-500 Research: What the Studies Show
 

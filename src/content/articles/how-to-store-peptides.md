@@ -25,7 +25,7 @@ Proper storage is straightforward once you understand the basics. This guide cov
 
 **Lyophilized peptides** are freeze-dried powders. When you receive a peptide from a supplier, it almost always arrives in this form: a small cake or loose powder sitting at the bottom of a sealed glass vial. In this state, peptides are remarkably stable. The freeze-drying process removes virtually all water, and without water, most degradation pathways simply can't proceed.
 
-> **⚠️ Key Rule:** Never freeze reconstituted peptides. Never leave reconstituted peptides at room temperature. Fridge only.
+> **Key Rule:** Never freeze reconstituted peptides. Never leave reconstituted peptides at room temperature. Fridge only.
 
 **Reconstituted peptides** are lyophilized peptides that have been mixed with a solvent, usually bacteriostatic water (BAC water) or sterile water, to create an injectable solution. Once you add liquid, you've restarted the clock on degradation. The peptide is now in solution, exposed to potential hydrolysis, oxidation, and microbial contamination.
 

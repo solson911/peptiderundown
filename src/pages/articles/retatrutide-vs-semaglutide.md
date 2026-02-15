@@ -19,7 +19,7 @@ We're talking about 24% body weight loss at the highest dose in a Phase 2 trial.
 
 Let's compare these two compounds head-to-head.
 
-> **⚡ Bottom Line:** Retatrutide produces ~**60**% more weight loss than semaglutide in clinical trials. But semaglutide has years of real-world data and proven cardiovascular benefits. I'll be upfront: the data suggests retatrutide is the more promising molecule. But semaglutide has earned its place, and there are situations where it's still the right choice.
+> **Bottom Line:** Retatrutide produces ~**60**% more weight loss than semaglutide in clinical trials. But semaglutide has years of real-world data and proven cardiovascular benefits. I'll be upfront: the data suggests retatrutide is the more promising molecule. But semaglutide has earned its place, and there are situations where it's still the right choice.
 
 ## How They Work: The Mechanism Difference
 

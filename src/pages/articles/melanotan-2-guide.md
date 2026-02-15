@@ -170,7 +170,7 @@ MT-2 has a definite side effect profile. For a broader overview of what peptides
 
 ## The Melanoma Question: Does MT-2 Increase Cancer Risk?
 
-> **⚠️ Important:** The melanoma risk question is unresolved. If you have a personal or family history of melanoma, **do not use MT-2**.
+> **Important:** The melanoma risk question is unresolved. If you have a personal or family history of melanoma, **do not use MT-2**.
 
 Let's address the most serious question directly. Does MT-2 cause melanoma?
 

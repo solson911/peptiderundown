@@ -47,7 +47,7 @@ The centerpiece of MOTS-c's mechanism is activation of AMPK (AMP-activated prote
 
 The original Lee et al. study showed that MOTS-c treatment in mice activated AMPK in skeletal muscle, leading to increased glucose uptake and improved metabolic function. This happened even in mice fed a high-fat diet ([Lee et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25773600/)).
 
-> **💡 Key Insight:** If that sounds like what exercise does to your body, you're not wrong. That's exactly why MOTS-c has been called an "exercise mimetic."
+> **Key Insight:** If that sounds like what exercise does to your body, you're not wrong. That's exactly why MOTS-c has been called an "exercise mimetic."
 
 ### Folate-Methionine Cycle Regulation
 

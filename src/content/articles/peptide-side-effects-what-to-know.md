@@ -101,7 +101,7 @@ This is one reason why sourcing matters enormously. Poorly manufactured peptides
 
 Most peptide side effects are annoying, not dangerous. But some warrant immediate medical attention.
 
-> **🚨 STOP and seek medical help if you experience any of these:**
+> **STOP and seek medical help if you experience any of these:**
 
 - **Severe abdominal pain radiating to your back** — this could indicate pancreatitis, a known rare risk with GLP-1 agonists. A 2018 meta-analysis flagged a small but statistically significant increase in pancreatitis risk ([PubMed: 28975607](https://pubmed.ncbi.nlm.nih.gov/28975607/)).
 - **Lump or swelling in your neck, difficulty swallowing, or hoarseness** - GLP-1 agonists carry a boxed warning for thyroid C-cell tumors based on rodent studies. While human risk appears low, any thyroid changes should be evaluated.

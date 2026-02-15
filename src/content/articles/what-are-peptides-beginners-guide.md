@@ -19,7 +19,7 @@ Think of this as a conversation with a knowledgeable friend, someone who can bre
 
 Let's get into it.
 
-> **⚡ Quick Summary:** Peptides are short chains of amino acids that act as your body's internal messaging system. Peptide therapy uses specific peptides to support healing, weight loss, cognitive function, and more.
+> **Quick Summary:** Peptides are short chains of amino acids that act as your body's internal messaging system. Peptide therapy uses specific peptides to support healing, weight loss, cognitive function, and more.
 
 > **Key Takeaways**
 > - Peptides are short chains of amino acids (2-50) that act as signaling molecules in your body
@@ -161,7 +161,7 @@ Here's what we can say:
 - **Individual responses vary** — pre-existing conditions, medications, and biology all play a role
 - **Long-term data is limited** — short- and medium-term safety looks promising for many, but we're still learning
 
-> **⚠️ Important:** "Generally safe" and "safe for *you* specifically" are different conversations. Always work with a knowledgeable provider.
+> **Important:** "Generally safe" and "safe for *you* specifically" are different conversations. Always work with a knowledgeable provider.
 
 **The bottom line:** Peptides used responsibly, under medical guidance, with pharmaceutical-grade products are generally considered safe for most people. But "generally safe" and "safe for *you* specifically" are different conversations, which is why working with a knowledgeable provider is so important.
 
@@ -202,7 +202,7 @@ Sleep better? Slow aging?
 
 Different goals point to different peptides. Be specific with your provider.
 
-> **💡 Pro Tip:** Write down your specific health goals before your first provider consultation. The more specific you are, the better your peptide protocol will be.
+> **Pro Tip:** Write down your specific health goals before your first provider consultation. The more specific you are, the better your peptide protocol will be.
 
 ### 5. Start Low and Slow
 Most experienced practitioners recommend starting with conservative doses and adjusting based on your response. More is not always better with peptides.

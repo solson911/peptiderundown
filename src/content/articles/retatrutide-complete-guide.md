@@ -7,6 +7,8 @@ date: 2026-02-14
 category: "Peptide Guides"
 tags: ["retatrutide", "GLP-1", "GIP", "glucagon", "weight loss", "obesity", "triple agonist"]
 author: "PeptideRundown Team"
+---
+
 # Retatrutide: The Triple-Action GLP-1 That's Changing Weight Loss
 
 You already know about semaglutide and tirzepatide. They were big.
@@ -81,7 +83,7 @@ Glucagon is traditionally the "opposite of insulin." But it does something criti
 - **Reduces liver fat** — directly targets hepatic fat metabolism
 - **Fights fatty liver disease** — a condition affecting ~25% of the global population
 
-> **💡 Why This Matters:** None of the current GLP-1 drugs directly target liver fat. Glucagon does. That's a first.
+> **Why This Matters:** None of the current GLP-1 drugs directly target liver fat. Glucagon does. That's a first.
 
 ### The Combined Effect
 
@@ -96,7 +98,7 @@ Put all three together:
 | Fat oxidation | Glucagon |
 | Liver fat reduction | Glucagon |
 
-> **⚡ Bottom line:** You eat less, absorb differently, AND burn more. That's the triple agonist advantage.
+> **Bottom line:** You eat less, absorb differently, AND burn more. That's the triple agonist advantage.
 
 ## Clinical Trial Results: The Numbers
 
@@ -129,7 +131,7 @@ Read that 12 mg number again. **24.2% body weight loss in 48 weeks.**
 
 And the curves hadn't plateaued yet, suggesting even greater results with longer treatment.
 
-> **📊 For comparison:**
+> **For comparison:**
 > - **Semaglutide** (Wegovy) — ~15-16% in the STEP trials
 > - **Tirzepatide** (Zepbound) — ~20-22% in SURMOUNT-1
 > - **Retatrutide** — **24.2%** and still climbing
@@ -144,7 +146,7 @@ A parallel trial in people with **type 2 diabetes** ([Rosenstock et al., 2023](h
 
 ### Liver Fat: The Standout Finding
 
-> **⚡ Key Finding:** Retatrutide produced an **82% reduction in liver fat** — the most dramatic result in the entire trial.
+> **Key Finding:** Retatrutide produced an **82% reduction in liver fat** — the most dramatic result in the entire trial.
 
 Using MRI to measure hepatic fat:
 
@@ -166,7 +168,7 @@ Retatrutide is a **once-weekly subcutaneous injection** with a slow dose escalat
 | Escalation | Every 4 weeks | Gradual increases |
 | Maintenance | Ongoing | 1 mg, 4 mg, 8 mg, or 12 mg |
 
-> **💡 Sweet spot:** The **8 mg dose** offered the best balance — **22.8% weight loss** with fewer side effects than 12 mg.
+> **Sweet spot:** The **8 mg dose** offered the best balance — **22.8% weight loss** with fewer side effects than 12 mg.
 
 **Important:** These are clinical trial protocols. Retatrutide is **not yet approved**, so no official prescribing guidelines exist.
 
@@ -214,7 +216,7 @@ The question everyone's asking.
 | **Real-world data** | Years | Growing | Phase 2 only |
 | **GI side effects** | Common | Common | Common |
 
-> **⚠️ Important:** These numbers come from different trials with different patient populations. Direct head-to-head data doesn't exist yet. But the trend is clear: **more targets = more weight loss.**
+> **Important:** These numbers come from different trials with different patient populations. Direct head-to-head data doesn't exist yet. But the trend is clear: **more targets = more weight loss.**
 
 ## Why the Glucagon Receptor Changes Everything
 
@@ -235,7 +237,7 @@ Glucagon breaks this cycle by working on the **"calories out" side:**
 
 The result? Less metabolic slowdown. Less plateauing. More sustained weight loss.
 
-> **💡 Think of it this way:** GLP-1 drugs put your foot on the brake (less food in). Glucagon puts your foot on the gas (more energy out). Retatrutide does both.
+> **Think of it this way:** GLP-1 drugs put your foot on the brake (less food in). Glucagon puts your foot on the gas (more energy out). Retatrutide does both.
 
 ## Can You Get Retatrutide Today?
 
@@ -284,7 +286,7 @@ Based on the data so far, retatrutide could be ideal for:
 - **People with type 2 diabetes + obesity** — dual benefit of weight loss and glucose control
 - **People who've plateaued on semaglutide or tirzepatide** — the glucagon component adds a new mechanism
 
-> **⚠️ Note:** This is speculative until phase 3 data confirms the findings and the drug is approved.
+> **Note:** This is speculative until phase 3 data confirms the findings and the drug is approved.
 
 ## Open Questions and Risks
 

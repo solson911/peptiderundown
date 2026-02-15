@@ -71,7 +71,7 @@ KPV works on gut inflammation through multiple pathways:
 - **Barrier preservation** — helps maintain tight junctions between gut cells
 - **Decreased oxidative stress** — reduced inflammation means less ROS-driven tissue damage
 
-> **💡 Pro Tip:** Oral KPV makes particular sense for gut issues since the peptide acts locally on inflamed tissue as it passes through.
+> **Pro Tip:** Oral KPV makes particular sense for gut issues since the peptide acts locally on inflamed tissue as it passes through.
 
 ### Practical Implications
 

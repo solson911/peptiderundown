@@ -59,7 +59,7 @@ Check out the [ipamorelin profile on PeptideArc](https://peptidearc.com) for add
 
 ## Why This Stack Works: The Science of GH Synergy
 
-> **⚡ Quick Summary:** Tesamorelin pushes the GHRH receptor. Ipamorelin pushes the ghrelin receptor. Together, GH release is greater than the sum of both — that's true synergy.
+> **Quick Summary:** Tesamorelin pushes the GHRH receptor. Ipamorelin pushes the ghrelin receptor. Together, GH release is greater than the sum of both — that's true synergy.
 
 The short answer: synergy. But let's explain what that actually means at the biological level.
 
@@ -92,7 +92,7 @@ This is a genuine advantage for long-term use. Your body's GH axis stays intact.
 
 ## Benefits: What the Tesamorelin-Ipamorelin Stack Actually Does
 
-> **💡 Pro Tip:** Most users notice improved sleep within the first week. Fat loss and body composition changes take **4-8 weeks**. Skin improvements show around **6-12 weeks**.
+> **Pro Tip:** Most users notice improved sleep within the first week. Fat loss and body composition changes take **4-8 weeks**. Skin improvements show around **6-12 weeks**.
 
 ### Fat Loss (Especially Visceral Fat)
 

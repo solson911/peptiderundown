@@ -147,7 +147,7 @@ At doses above 2 mg/kg, methylene blue starts acting as a pro-oxidant rather tha
 
 ## Pharmaceutical Grade vs. Industrial Grade: A Critical Distinction
 
-> **⚠️ This distinction is potentially life-saving.** Industrial and aquarium grades contain toxic contaminants. Only use USP pharmaceutical grade.
+> **This distinction is potentially life-saving.** Industrial and aquarium grades contain toxic contaminants. Only use USP pharmaceutical grade.
 
 This distinction is critical and potentially life-saving.
 
@@ -183,7 +183,7 @@ Do not take anything other than USP pharmaceutical grade methylene blue. Period.
 
 **Serotonin syndrome.** This is the big one.
 
-> **🚨 CRITICAL WARNING:** Methylene blue + serotonergic drugs = potentially fatal serotonin syndrome. **NEVER combine** with SSRIs, SNRIs, MAOIs, or any drug listed below. Methylene blue is a potent monoamine oxidase A (MAO-A) inhibitor. If combined with serotonergic drugs, it can cause serotonin syndrome, a potentially fatal condition characterized by agitation, hyperthermia, rapid heart rate, and muscle rigidity.
+> **CRITICAL WARNING:** Methylene blue + serotonergic drugs = potentially fatal serotonin syndrome. **NEVER combine** with SSRIs, SNRIs, MAOIs, or any drug listed below. Methylene blue is a potent monoamine oxidase A (MAO-A) inhibitor. If combined with serotonergic drugs, it can cause serotonin syndrome, a potentially fatal condition characterized by agitation, hyperthermia, rapid heart rate, and muscle rigidity.
 
 The FDA has issued a specific warning about this interaction. **NEVER combine** methylene blue with:
 

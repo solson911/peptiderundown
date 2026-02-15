@@ -28,8 +28,8 @@ Here's the simplified breakdown:
 | Category | Legal Status | Examples |
 |---|---|---|
 | **FDA-approved** | ✅ Legal with prescription | Semaglutide, tirzepatide, tesamorelin |
-| **Compounded** | ⚠️ Restricted (varies) | BPC-157, CJC-1295, ipamorelin |
-| **Research chemicals** | ⚠️ Gray area | Most non-approved peptides |
+| **Compounded** | Restricted (varies) | BPC-157, CJC-1295, ipamorelin |
+| **Research chemicals** | Gray area | Most non-approved peptides |
 | **Supplements** | ✅ Legal | Collagen peptides, bioactive blends |
 
 **FDA-approved prescription peptides** are fully legal with a valid prescription. These include semaglutide (Ozempic, Wegovy), tirzepatide (Mounjaro, Zepbound), tesamorelin (Egrifta), and others. They're manufactured by pharmaceutical companies, backed by clinical trials, and sold through licensed pharmacies.
@@ -42,7 +42,7 @@ Here's the simplified breakdown:
 
 ## The FDA's "Difficult to Compound" List: The Biggest Shake-Up
 
-> **⚠️ This is the #1 regulatory change affecting the peptide community since 2024.** Many previously accessible compounded peptides are now restricted or unavailable.
+> **This is the #1 regulatory change affecting the peptide community since 2024.** Many previously accessible compounded peptides are now restricted or unavailable.
 
 This is the single most consequential regulatory development for the peptide community in recent years. Under the FDA Safety and Innovation Act, the agency maintains a list of drugs that are "difficult to compound" due to safety or efficacy concerns. Once a substance lands on this list, 503A compounding pharmacies essentially can't make it anymore.
 

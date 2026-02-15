@@ -166,7 +166,7 @@ Neither peptide has shown the kind of serious adverse effects associated with ph
 
 ## The Selank + Semax Stack: Calm Focus in Practice
 
-> **⚡ Quick Summary:** Selank quiets the noise (anxiety). Semax sharpens the signal (focus). Together = calm, productive focus.
+> **Quick Summary:** Selank quiets the noise (anxiety). Semax sharpens the signal (focus). Together = calm, productive focus.
 
 Given their complementary mechanisms, combining Selank and Semax is a popular approach. The logic is straightforward: Selank handles the anxiety and stress side while Semax provides the cognitive boost. Together, you get calm focus.
 

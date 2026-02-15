@@ -169,7 +169,7 @@ A 2012 safety meta-analysis covering over 3,000 patients in clinical trials foun
 
 ## Where to Get Cerebrolysin: Availability and Legal Status
 
-> **⚠️ Important:** Cerebrolysin is approved in **40+ countries** but is NOT available in the US (no FDA submission has been made).
+> **Important:** Cerebrolysin is approved in **40+ countries** but is NOT available in the US (no FDA submission has been made).
 
 This is where things get complicated for people in the US and a few other countries.
 

@@ -84,7 +84,7 @@ There is evidence that BPC-157 interacts with the GABA system, which may contrib
 
 ## What BPC-157 Can Do: Research-Backed Benefits
 
-> **⚠️ Important:** The vast majority of BPC-157 research is preclinical, conducted in rodent models or in vitro (cell cultures). While the body of evidence is substantial and consistent, human clinical data remains very limited. The benefits described below reflect findings from animal studies and should not be assumed to translate directly to humans.
+> **Important:** The vast majority of BPC-157 research is preclinical, conducted in rodent models or in vitro (cell cultures). While the body of evidence is substantial and consistent, human clinical data remains very limited. The benefits described below reflect findings from animal studies and should not be assumed to translate directly to humans.
 
 ### Gastrointestinal Healing
 
@@ -150,7 +150,7 @@ One of BPC-157's most consistently demonstrated effects is protection against th
 
 ## BPC-157 Dosage: How Much to Take
 
-> **⚡ Quick Summary:** Most protocols use **250–500 mcg** once or twice daily via subcutaneous injection, typically for **4–8 weeks**.
+> **Quick Summary:** Most protocols use **250–500 mcg** once or twice daily via subcutaneous injection, typically for **4–8 weeks**.
 
 ### Commonly Referenced Dosage Ranges
 
@@ -237,7 +237,7 @@ Despite the generally favorable safety profile in preclinical work, several impo
 - **Source quality varies** — contamination and mislabeling are real concerns in the unregulated peptide market
 - **Drug interactions possible** — effects on NO, dopaminergic, and other systems suggest potential interactions with medications
 
-> **⚠️ Important:** Anyone with active malignancies or taking prescription medications should consult a physician before considering BPC-157.
+> **Important:** Anyone with active malignancies or taking prescription medications should consult a physician before considering BPC-157.
 
 
 ## Is BPC-157 Legal? Current Regulatory Status
