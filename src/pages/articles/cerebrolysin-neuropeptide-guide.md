@@ -6,6 +6,7 @@ published: 2026-02-14
 category: peptide-guides
 tags: ["cerebrolysin", "neuropeptides", "brain recovery", "nootropics", "neurotrophic"]
 ---
+layout: ../../layouts/Article.astro
 
 # Cerebrolysin: The Neuropeptide Complex for Brain Recovery
 

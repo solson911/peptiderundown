@@ -6,6 +6,7 @@ published: 2026-02-14
 category: cosmetic
 tags: [melanotan 2, MT-2, tanning, melanin, MC1R, skin darkening, peptide]
 ---
+layout: ../../layouts/Article.astro
 
 # Melanotan 2: Tanning Peptide Benefits, Risks, and Dosing
 

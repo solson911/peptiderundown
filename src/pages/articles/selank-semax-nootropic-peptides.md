@@ -3,8 +3,10 @@ title: "Selank and Semax: Russian Nootropic Peptides Explained"
 description: "A complete guide to Selank and Semax, two nootropic peptides developed in Russia for anxiety, cognition, and neuroprotection."
 image: /images/articles/selank-semax.webp
 date: 2026-02-14
+category: "Peptide Guides"
 tags: ["selank", "semax", "nootropics", "peptides", "cognitive-enhancement"]
 ---
+layout: ../../layouts/Article.astro
 
 # Selank and Semax: Russian Nootropic Peptides Explained
 

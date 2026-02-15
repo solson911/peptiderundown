@@ -7,8 +7,6 @@ category: "Safety"
 author: "PeptideRundown Team"
 ---
 
-# Are Peptides Legal? FDA Regulations Explained (2026 Update)
-
 "Are peptides legal?" It's the most common question we get, and the honest answer is: it depends. It depends on the peptide, how it's sold, what it's sold for, where you live, and who's prescribing it. The regulatory picture has shifted dramatically since 2023, and if you're still operating on outdated information, you could be in for an unpleasant surprise.
 
 This guide breaks down the current legal status of peptides in the United States as of early 2026, the FDA actions that reshaped the market, and how to stay on the right side of the law.

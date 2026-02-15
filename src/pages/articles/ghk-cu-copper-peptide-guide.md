@@ -6,6 +6,7 @@ published: 2026-02-14
 category: anti-aging
 tags: [GHK-Cu, copper peptide, skin, hair growth, wound healing, anti-aging, collagen]
 ---
+layout: ../../layouts/Article.astro
 
 # GHK-Cu: The Copper Peptide for Skin, Hair, and Healing
 

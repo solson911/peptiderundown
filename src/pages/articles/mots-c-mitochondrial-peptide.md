@@ -3,8 +3,10 @@ title: "MOTS-c: The Mitochondrial Peptide for Metabolism and Longevity"
 description: "Everything you need to know about MOTS-c, the mitochondrial-derived peptide being studied for metabolism, exercise mimetic effects, and longevity."
 image: /images/articles/mots-c.webp
 date: 2026-02-14
+category: "Peptide Guides"
 tags: ["mots-c", "peptides", "mitochondria", "longevity", "metabolism"]
 ---
+layout: ../../layouts/Article.astro
 
 # MOTS-c: The Mitochondrial Peptide for Metabolism and Longevity
 

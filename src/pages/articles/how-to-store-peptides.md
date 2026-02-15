@@ -7,8 +7,6 @@ category: "How-To"
 author: "PeptideRundown Team"
 ---
 
-# How to Store Peptides: Lyophilized and Reconstituted
-
 Peptides aren't cheap. And nothing's more frustrating than pulling a vial out of the fridge only to realize it's gone cloudy, lost potency, or degraded entirely because of a storage mistake you could have easily avoided.
 
 Proper storage is straightforward once you understand the basics. This guide covers everything you need to know about keeping both lyophilized (freeze-dried) and reconstituted peptides in optimal condition.

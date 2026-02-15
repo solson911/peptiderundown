@@ -6,6 +6,7 @@ published: 2026-02-14
 category: compound-guides
 tags: ["methylene blue", "mitochondria", "nootropic", "anti-aging", "biohacking"]
 ---
+layout: ../../layouts/Article.astro
 
 # Methylene Blue: The Mitochondrial Enhancer (Not Just a Dye)
 

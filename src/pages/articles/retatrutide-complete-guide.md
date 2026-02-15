@@ -9,8 +9,6 @@ tags: ["retatrutide", "GLP-1", "GIP", "glucagon", "weight loss", "obesity", "tri
 author: "PeptideRundown Team"
 ---
 
-# Retatrutide: The Triple-Action GLP-1 That's Changing Weight Loss
-
 If you've been following the weight loss peptide space, you already know about semaglutide and tirzepatide. They were big. But retatrutide might be bigger. It's the first triple agonist to hit clinical trials, targeting not two but three metabolic receptors at once. And the early data? Stunning.
 
 Let's break down what retatrutide actually is, how it works, what the research shows, and where things stand right now.

@@ -7,8 +7,6 @@ category: "How-To"
 author: "PeptideRundown Team"
 ---
 
-# How to Inject Peptides Subcutaneously: A First-Timer's Guide
-
 Your first self-injection can feel intimidating. There's no way around that. But subcutaneous (subQ) injections are one of the simplest medical procedures you can learn, and millions of people do them at home every single day for things like insulin, blood thinners, and yes, peptides.
 
 This guide walks you through everything you need to know, from gathering supplies to disposing of sharps safely. By the end, you'll have a clear, repeatable process you can follow with confidence.

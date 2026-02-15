@@ -6,6 +6,7 @@ published: 2026-02-14
 category: peptide-guides
 tags: ["CJC-1295", "DAC", "growth hormone", "GHRH", "peptides"]
 ---
+layout: ../../layouts/Article.astro
 
 # CJC-1295 with DAC: Long-Acting Growth Hormone Releaser
 

@@ -1,36 +1,43 @@
 ---
+layout: ../../layouts/Article.astro
 title: "Retatrutide vs Semaglutide: Why the Triple Agonist Wins"
 description: "A head-to-head comparison of retatrutide and semaglutide for weight loss, with clinical trial data, side effect profiles, and practical guidance."
 image: /images/articles/comparison.webp
 date: 2026-02-14
-author: "Peptide Rundown"
+category: "Comparisons"
+author: "PeptideRundown Team"
 tags: ["retatrutide", "semaglutide", "weight loss", "GLP-1", "GIP", "glucagon"]
 ---
 
-# Retatrutide vs Semaglutide: Why the Triple Agonist Wins
-
 Semaglutide changed everything. When Wegovy and Ozempic hit the mainstream, they proved that pharmacological weight loss could actually work at scale. Losing 15% of your body weight with a weekly injection? That was unheard of a decade ago.
 
-But semaglutide might already be getting surpassed. Retatrutide, Eli Lilly's triple agonist, has posted weight loss numbers in clinical trials that make semaglutide look modest by comparison. We're talking about 24% body weight loss at the highest dose in a Phase 2 trial. That's approaching bariatric surgery territory without the scalpel.
+But semaglutide might already be getting surpassed. Retatrutide, Eli Lilly's triple agonist, has posted weight loss numbers in clinical trials that make semaglutide look modest by comparison. We're talking about **24% body weight loss** at the highest dose in a Phase 2 trial. That's approaching bariatric surgery territory without the scalpel.
 
-Let's compare these two compounds head-to-head. I'll be upfront: the data suggests retatrutide is the more promising molecule. But semaglutide has earned its place, and there are situations where it's still the right choice.
+> **Key Takeaways**
+> - Retatrutide produces roughly **60% more weight loss** than semaglutide in clinical trials
+> - Semaglutide targets 1 receptor (GLP-1). Retatrutide targets 3 (GLP-1, GIP, and glucagon)
+> - Semaglutide is **FDA-approved and available now**. Retatrutide is still in Phase 3 trials
+> - Side effect profiles are similar between both compounds
+> - Semaglutide has proven cardiovascular benefits. Retatrutide doesn't have that data yet
 
 ## How They Work: The Mechanism Difference
 
-This is where the story really starts. Semaglutide and retatrutide both belong to the incretin-based therapy family, but they activate very different receptor profiles.
+Semaglutide and retatrutide both belong to the incretin-based therapy family, but they activate very different receptor profiles. That difference explains the gap in their results.
 
 ### Semaglutide: The Single Agonist
 
 Semaglutide is a GLP-1 receptor agonist. Full stop. It mimics glucagon-like peptide-1, a gut hormone that:
 
-- Slows gastric emptying (food stays in your stomach longer)
-- Reduces appetite through hypothalamic signaling
-- Enhances insulin secretion in response to food
-- Suppresses glucagon release (lowering blood sugar)
+- **Slows gastric emptying** (food stays in your stomach longer)
+- **Reduces appetite** through hypothalamic signaling
+- **Enhances insulin secretion** in response to food
+- **Suppresses glucagon release** (lowering blood sugar)
 
 GLP-1 is powerful on its own. Semaglutide's long half-life (about 7 days) means once-weekly dosing, and the appetite suppression is profound. Most people on therapeutic doses simply stop thinking about food the way they used to.
 
-The FDA approved semaglutide for type 2 diabetes (Ozempic) in 2017 and for chronic weight management (Wegovy) in 2021. It's backed by extensive clinical data, including the STEP trial program that demonstrated approximately 15 to 17% weight loss over 68 weeks ([Wilding et al., 2021](https://pubmed.ncbi.nlm.nih.gov/33567185/)).
+The FDA approved semaglutide for type 2 diabetes (Ozempic) in 2017 and for chronic weight management (Wegovy) in 2021. It's backed by the STEP trial program, which showed approximately 15 to 17% weight loss over 68 weeks ([Wilding et al., 2021](https://pubmed.ncbi.nlm.nih.gov/33567185/)).
+
+For more on semaglutide, see our [full semaglutide guide](/articles/semaglutide-weight-loss-guide).
 
 ### Retatrutide: The Triple Agonist
 
@@ -40,163 +47,153 @@ Retatrutide hits three receptors: GLP-1, GIP (glucose-dependent insulinotropic p
 
 **GIP component:** GIP is the other major incretin hormone. It enhances insulin secretion, promotes fat storage in appropriate depots (subcutaneous rather than visceral), and appears to amplify the effects of GLP-1 when the two are combined. Tirzepatide (Mounjaro) showed that dual GLP-1/GIP agonism outperforms GLP-1 alone. Retatrutide takes this a step further.
 
-**Glucagon component:** This is the wild card that sets retatrutide apart from everything else. Glucagon does several things that are directly relevant to weight loss:
+**Glucagon component:** This is the wild card. Glucagon does several things that are directly relevant to weight loss:
 
-- Increases energy expenditure (thermogenesis)
-- Promotes hepatic fat oxidation (burns liver fat)
-- Mobilizes fat from adipose tissue
-- Reduces food intake through separate pathways from GLP-1
+- **Increases energy expenditure** (thermogenesis)
+- **Burns liver fat** through hepatic fat oxidation
+- **Mobilizes fat** from adipose tissue
+- **Reduces food intake** through separate pathways from GLP-1
 
-The inclusion of glucagon receptor agonism means retatrutide doesn't just reduce caloric intake. It actively increases caloric expenditure. You're hitting both sides of the energy balance equation simultaneously.
+> **Why This Matters:** Retatrutide doesn't just reduce caloric intake. It actively increases caloric expenditure. You're hitting both sides of the energy balance equation simultaneously.
 
-For detailed profiles of both compounds, check out [PeptideArc](https://peptidearc.com).
+For detailed compound profiles, check out [PeptideArc](https://peptidearc.com). For our full breakdown of retatrutide, see the [retatrutide guide](/articles/retatrutide-complete-guide).
 
-## Clinical Trial Data: Head-to-Head
+## Clinical Trial Data: Head-to-Head Numbers
 
-Let's look at the numbers. This is where retatrutide's advantage becomes concrete.
+This is where retatrutide's advantage becomes concrete. Let's look at both trials side by side.
 
-### Semaglutide (STEP Trials)
+### Semaglutide STEP 1 Results
 
 The STEP 1 trial enrolled 1,961 adults with obesity or overweight. At 68 weeks, the semaglutide group (2.4 mg weekly) achieved ([Wilding et al., 2021](https://pubmed.ncbi.nlm.nih.gov/33567185/)):
 
-- **Mean weight loss:** 14.9% of body weight (vs. 2.4% for placebo)
-- **Percentage losing >10% body weight:** 69.1%
-- **Percentage losing >20% body weight:** 32.0%
+| Outcome | Semaglutide 2.4mg | Placebo |
+|---------|-------------------|---------|
+| Mean weight loss | **14.9%** | 2.4% |
+| Lost >10% body weight | **69.1%** | 12.0% |
+| Lost >20% body weight | **32.0%** | 1.7% |
 
-These results were groundbreaking at the time. A third of participants losing over 20% of their body weight with a medication alone was unprecedented.
+These results were groundbreaking. A third of participants losing over 20% of their body weight with a medication alone was unprecedented.
 
-### Retatrutide (Phase 2 Trial)
+### Retatrutide Phase 2 Results
 
-The Phase 2 trial of retatrutide enrolled 338 adults with obesity. At 48 weeks, the highest dose group (12 mg weekly) showed ([Jastreboff et al., 2023](https://pubmed.ncbi.nlm.nih.gov/37351564/)):
+The Phase 2 trial enrolled 338 adults with obesity. At 48 weeks, the highest dose group (12 mg weekly) showed ([Jastreboff et al., 2023](https://pubmed.ncbi.nlm.nih.gov/37351564/)):
 
-- **Mean weight loss:** 24.2% of body weight (vs. 2.1% for placebo)
-- **Percentage losing >10% body weight:** 93%
-- **Percentage losing >15% body weight:** 83%
-- **Percentage losing >20% body weight:** 63%
+| Outcome | Retatrutide 12mg | Placebo |
+|---------|-----------------|---------|
+| Mean weight loss | **24.2%** | 2.1% |
+| Lost >10% body weight | **93%** | N/A |
+| Lost >15% body weight | **83%** | N/A |
+| Lost >20% body weight | **63%** | N/A |
 
-Read those numbers again. Nearly two-thirds of people on the highest dose lost over 20% of their body weight. And the weight loss curve hadn't plateaued at 48 weeks, meaning the final numbers from longer trials could be even higher.
+Read those numbers again. Nearly two-thirds of people on the highest dose lost over 20% of their body weight. And the weight loss curve **hadn't plateaued** at 48 weeks, meaning longer trials could show even higher numbers.
 
-### The Comparison
+### Side-by-Side Comparison
 
-At comparable timepoints, retatrutide at 12 mg produces roughly 60% more weight loss than semaglutide at 2.4 mg. And while cross-trial comparisons have limitations (different populations, different endpoints, different trial designs), the magnitude of difference is hard to explain away with methodology alone.
+| Factor | Semaglutide | Retatrutide |
+|--------|------------|-------------|
+| **Receptors targeted** | GLP-1 only | GLP-1 + GIP + Glucagon |
+| **Mean weight loss** | ~15% (68 weeks) | ~24% (48 weeks) |
+| **FDA approved?** | Yes (2021) | No (Phase 3 ongoing) |
+| **Available now?** | Yes | Research only |
+| **Dosing** | Weekly injection | Weekly injection |
+| **CV outcomes data?** | Yes (SELECT trial) | Not yet |
+| **Cost** | $900-1,350/month | Not yet priced |
 
-Even retatrutide's lower doses (8 mg) outperformed semaglutide's results. The dose-response curve suggests that the triple mechanism is genuinely superior, not just marginally better.
+Even retatrutide's lower doses (8 mg) outperformed semaglutide's results. The dose-response curve suggests triple agonism is genuinely superior, not just marginally better.
 
-## Side Effect Profiles
+## Side Effect Profiles Compared
 
 More potent weight loss often comes with more side effects. But the picture here is more nuanced than you might expect.
 
-### Semaglutide Side Effects
+### Common Side Effects
 
-The most common issues with semaglutide are gastrointestinal:
+| Side Effect | Semaglutide | Retatrutide (12mg) |
+|------------|------------|-------------------|
+| Nausea | ~44% | ~45% |
+| Diarrhea | ~30% | ~35% |
+| Vomiting | ~24% | ~17% |
+| Constipation | ~24% | Common |
+| Discontinued due to side effects | ~7% | ~6% |
 
-- Nausea (44%)
-- Diarrhea (30%)
-- Vomiting (24%)
-- Constipation (24%)
-- Abdominal pain
+Both compounds cause mostly GI side effects that tend to be **worst during dose escalation** and improve over time. Most people tolerate either drug well once they reach maintenance dose.
 
-These tend to be worst during dose escalation and improve over time. Most people tolerate semaglutide well once they reach their maintenance dose. Serious adverse events are rare but include pancreatitis (uncommon), gallbladder disease, and potential thyroid concerns (a black box warning exists for medullary thyroid carcinoma based on rodent data, though human risk appears very low).
+### Safety Considerations
 
-### Retatrutide Side Effects
+**Semaglutide's known risks:**
+- Pancreatitis (uncommon)
+- Gallbladder disease
+- Black box warning for medullary thyroid carcinoma (based on rodent data; human risk appears very low)
 
-Retatrutide's Phase 2 data showed a similar GI side effect profile:
+**Retatrutide's open questions:**
+- Heart rate increases noted in some participants (needs monitoring in Phase 3)
+- Glucagon component theoretically could raise blood sugar, but GLP-1 and GIP counteract this
+- Phase 2 trial was small (338 participants). Larger trials needed for rare adverse events
 
-- Nausea (varying by dose, up to ~45% at highest dose)
-- Diarrhea (~35%)
-- Vomiting (~17%)
-- Constipation
-- Decreased appetite (this is technically a "side effect" in trial reporting, though it's really the mechanism at work)
+> **Bottom Line on Side Effects:** Roughly comparable GI profiles with neither compound showing a clear safety advantage. Retatrutide's Phase 3 data will be critical for understanding its full safety picture.
 
-The GI side effects were generally mild to moderate and followed the same pattern of improving after the escalation phase. Importantly, the rate of treatment discontinuation due to side effects was low (around 6% at the highest dose).
+For a deeper look at peptide safety, see our [side effects guide](/articles/peptide-side-effects-what-to-know).
 
-The addition of glucagon agonism raises a theoretical concern about blood sugar. Glucagon raises blood sugar, so you might expect problems. But the GLP-1 and GIP components counteract this effect, and the Phase 2 trial showed that retatrutide actually improved glycemic control. In a sub-study of participants with type 2 diabetes, HbA1c dropped by about 2 percentage points, comparable to semaglutide.
+## The Muscle Preservation Question
 
-Heart rate increases were noted in some retatrutide participants, which will be something to watch in Phase 3 trials. Semaglutide has also shown mild heart rate increases.
+When you lose weight rapidly, a significant portion can come from lean tissue (muscle). That's bad for metabolic health, physical function, and long-term weight maintenance.
 
-### The Verdict on Side Effects
+**Semaglutide's muscle problem:** The STEP 1 data showed that about **39% of the weight lost** came from lean mass ([Wilding et al., 2021](https://pubmed.ncbi.nlm.nih.gov/33567185/)). Losing nearly 40% of your weight loss as muscle is a real downside, especially for older adults already losing muscle through sarcopenia.
 
-Roughly comparable GI profiles, with neither compound showing a clear safety advantage. Retatrutide's Phase 3 data will be critical for understanding its full safety picture, but early signals are reassuring.
+**Retatrutide's potential advantage:** Glucagon promotes fat oxidation specifically, and early body composition data from the retatrutide trial suggested that a higher proportion of weight lost was fat mass. The mechanism makes sense: if glucagon is actively mobilizing fat for energy, your body has less need to break down muscle.
 
-## Muscle Preservation
+> **Important:** Detailed body composition data from large Phase 3 trials hasn't been published yet. Regardless of which drug you take, **resistance training and adequate protein intake** are non-negotiable for muscle preservation.
 
-This is an underappreciated factor in the weight loss drug conversation. When you lose weight rapidly, a significant portion of that weight can come from lean tissue (muscle). That's bad for metabolic health, physical function, and long-term weight maintenance.
+## Metabolic Benefits Beyond the Scale
 
-### Semaglutide's Muscle Problem
+Both compounds improve metabolic health beyond just weight loss. But they have different strengths.
 
-The STEP 1 trial data showed that about 39% of the weight lost on semaglutide came from lean mass ([Wilding et al., 2021](https://pubmed.ncbi.nlm.nih.gov/33567185/)). That's a concerning ratio. Losing nearly 40% of your weight loss as muscle is a real downside, especially for older adults who are already losing muscle through sarcopenia.
+### Liver Fat Reduction
 
-### Retatrutide's Potential Advantage
+Retatrutide has a potential edge here. The glucagon receptor is highly expressed in the liver, and glucagon agonism directly promotes hepatic fat oxidation.
 
-This is where the glucagon component gets interesting. Glucagon promotes fat oxidation specifically, and preclinical data suggests that triple agonism may shift the ratio of fat-to-lean mass loss in a more favorable direction. Early body composition data from the retatrutide trial suggested that a higher proportion of weight lost was fat mass compared to what's typically seen with GLP-1 monotherapy.
+- **Retatrutide:** Reduced liver fat by approximately **82%** at 48 weeks at the highest dose ([Jastreboff et al., 2023](https://pubmed.ncbi.nlm.nih.gov/37351564/))
+- **Semaglutide:** Also reduces liver fat and is being studied for NASH, but retatrutide's direct glucagon effect on the liver could make it the stronger candidate for fatty liver disease
 
-The mechanism makes sense. If glucagon is actively mobilizing fat for energy, your body has less need to catabolize muscle. Combined with the GIP receptor's potential role in nutrient partitioning, retatrutide may inherently preserve more muscle.
+### Cardiovascular Protection
 
-But let's be careful here. Detailed body composition data from large Phase 3 trials hasn't been published yet. The early signals are promising, but not conclusive. Regardless of which drug you take, resistance training and adequate protein intake are non-negotiable if you want to keep your muscle.
+This is semaglutide's biggest win. The SELECT trial showed a **20% reduction in major adverse cardiovascular events** in people with obesity and established cardiovascular disease ([Lincoff et al., 2023](https://pubmed.ncbi.nlm.nih.gov/37952131/)).
 
-## Metabolic Benefits Beyond Weight Loss
-
-Weight loss itself improves metabolic markers. But both of these compounds appear to have direct metabolic effects independent of weight loss.
-
-### Liver Fat
-
-Retatrutide has a potential edge here. The glucagon receptor is highly expressed in the liver, and glucagon agonism promotes hepatic fat oxidation. Early data from the Phase 2 trial showed dramatic reductions in liver fat. At the highest dose, retatrutide reduced liver fat by approximately 82% at 48 weeks ([Jastreboff et al., 2023](https://pubmed.ncbi.nlm.nih.gov/37351564/)).
-
-Semaglutide also reduces liver fat, and it's being studied for NASH (non-alcoholic steatohepatitis). But retatrutide's direct glucagon-mediated effect on the liver could make it the stronger candidate for fatty liver disease.
-
-### Cardiovascular Risk
-
-Semaglutide has proven cardiovascular benefits. The SELECT trial showed a 20% reduction in major adverse cardiovascular events in people with obesity and established cardiovascular disease ([Lincoff et al., 2023](https://pubmed.ncbi.nlm.nih.gov/37952131/)). That's a powerful data point.
-
-Retatrutide doesn't have cardiovascular outcomes data yet. It will take years of Phase 3 trials and outcomes studies to match what semaglutide has established. This is one area where semaglutide's head start matters enormously.
+Retatrutide doesn't have cardiovascular outcomes data yet. It will take years of Phase 3 trials and outcomes studies to match what semaglutide has established. If heart disease risk is your primary concern, semaglutide has the stronger evidence base right now.
 
 ### Blood Sugar Control
 
-Both compounds significantly improve glycemic control. In their respective diabetes sub-studies, both reduced HbA1c by approximately 1.5 to 2 percentage points. Retatrutide's triple mechanism may offer slightly better glucose regulation, but the difference isn't dramatic based on available data.
+Both compounds significantly improve glycemic control. In their respective diabetes sub-studies, both reduced HbA1c by approximately **1.5 to 2 percentage points**. Retatrutide's triple mechanism may offer slightly better glucose regulation, but the difference isn't dramatic.
 
-## Cost and Availability
+## Cost and Availability (2026)
 
-### Semaglutide
+| Factor | Semaglutide | Retatrutide |
+|--------|------------|-------------|
+| **Status** | FDA-approved, available | Phase 3 trials ongoing |
+| **Brand names** | Ozempic, Wegovy | None yet |
+| **Monthly cost** | $900-1,350 (list price) | Not yet priced |
+| **Insurance coverage** | Varies widely | N/A |
+| **Generic available?** | No (patent expires ~2032) | N/A |
+| **Expected approval** | Already approved | 2026-2027 earliest |
 
-- **Available now** as Ozempic (diabetes) and Wegovy (weight management)
-- **Cost:** Roughly $900 to $1,350 per month at list price, though insurance coverage varies widely
-- **Generic availability:** Not yet, though semaglutide's composition-of-matter patent doesn't expire until 2032 in the US. Compounded versions have been available but face regulatory scrutiny.
+This is semaglutide's biggest practical advantage. **It exists.** You can get a prescription today. Retatrutide is still in the pipeline. Research-grade retatrutide is available from peptide suppliers, but quality and purity vary, and it's not the same as pharmaceutical-grade product.
 
-### Retatrutide
+## Who Should Choose Which?
 
-- **Not yet approved.** Phase 3 trials are ongoing.
-- **Expected availability:** Earliest approval could come in 2026 or 2027, depending on trial timelines and FDA review.
-- **Expected cost:** Likely similar to or slightly higher than tirzepatide (Mounjaro/Zepbound), which runs $1,000+ per month at list price.
-- **Research chemical market:** Available from peptide suppliers as a research compound, but quality and purity vary. This is not the same as pharmaceutical-grade product.
+### Semaglutide Is Better If You:
 
-This is semaglutide's biggest practical advantage right now. It exists. You can get a prescription today. Retatrutide is still in the pipeline.
+- Need a **proven, FDA-approved** treatment now
+- Want **established long-term safety data**
+- Have cardiovascular risk (SELECT trial data)
+- Are looking for **insurance coverage** or established clinical pathways
+- Have type 2 diabetes and want decades of incretin therapy data behind your treatment
 
-## Which Is Better For Whom?
+### Retatrutide Is Better If You:
 
-### Choose Semaglutide If:
-
-- You need a proven, FDA-approved treatment now
-- You want established long-term safety data
-- Cardiovascular risk reduction is a primary goal (SELECT trial data)
-- You're looking for insurance coverage or established clinical pathways
-- You have type 2 diabetes and want a treatment with decades of incretin therapy data behind it
-
-### Choose Retatrutide If:
-
-- You want maximum weight loss potential
-- Fatty liver disease is a major concern
-- You're willing to use a research compound before FDA approval
-- Muscle preservation during weight loss is a priority (pending more data)
-- You've plateaued on GLP-1 monotherapy and want something stronger
-- You can tolerate the uncertainty of a newer compound
-
-### The Honest Take
-
-If I had to bet on which molecule will be the gold standard for obesity treatment in 5 years, I'd bet on retatrutide or something like it. Triple agonism addresses more of the obesity puzzle than single agonism. The weight loss numbers are substantially better. The metabolic profile is broader. And the early safety data is reassuring.
-
-But semaglutide earned its status for a reason. It works. It's been studied extensively. It has cardiovascular outcomes data. And it's available right now. For most people seeking treatment today, semaglutide (or tirzepatide) remains the practical choice.
-
-Retatrutide represents the next step. And based on what we've seen so far, it's a big step.
+- Want **maximum weight loss** potential
+- Have **fatty liver disease** as a major concern
+- Are willing to use a research compound before FDA approval
+- Have **plateaued on GLP-1 monotherapy** and want something stronger
+- Prioritize muscle preservation during weight loss (pending more data)
 
 ## Frequently Asked Questions
 
@@ -206,36 +203,30 @@ Once retatrutide is approved, switching should be feasible under medical supervi
 
 ### Is retatrutide safe?
 
-Phase 2 data shows a favorable safety profile, but Phase 2 trials are small (338 participants). Phase 3 trials with thousands of participants will provide a much clearer picture. No red flags have emerged so far, but "no red flags in a small trial" is not the same as "proven safe in large populations."
+Phase 2 data shows a favorable safety profile, but the trial only had 338 participants. Phase 3 trials with thousands of participants will provide a much clearer picture. No red flags have emerged so far, but "no red flags in a small trial" is not the same as "proven safe in large populations."
 
 ### Will I regain weight after stopping either drug?
 
-Probably some, yes. The STEP 1 extension trial showed that participants regained about two-thirds of lost weight within a year of stopping semaglutide ([Wilding et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35441470/)). This is consistent across obesity pharmacotherapy. These drugs manage obesity; they don't cure it. Long-term treatment may be necessary for sustained results.
+Probably some, yes. The STEP 1 extension trial showed that participants regained about **two-thirds of lost weight** within a year of stopping semaglutide ([Wilding et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35441470/)). These drugs manage obesity; they don't cure it. Long-term treatment may be necessary for sustained results.
 
 ### Does retatrutide cause more nausea than semaglutide?
 
 The GI side effect rates are roughly comparable at effective doses. Proper dose titration (starting low and increasing gradually) significantly reduces nausea with both compounds.
 
-### Can I take either of these with other peptides?
-
-Many people combine GLP-1 agonists with GH peptides like tesamorelin/ipamorelin. There's no established contraindication, but there's also limited data on interactions. The appetite suppression from semaglutide or retatrutide combined with the metabolic benefits of GH peptides is an appealing concept in theory. Work with a knowledgeable provider if you're considering combinations.
-
 ### What about tirzepatide? Where does it fit?
 
-Tirzepatide (Mounjaro/Zepbound) is the dual GLP-1/GIP agonist that sits between semaglutide and retatrutide in mechanism. Its weight loss results (~21% in the SURMOUNT-1 trial) fall right between semaglutide and retatrutide as well. Think of it as the middle step in the evolution from single to triple agonism. It's approved and available now, making it a strong alternative to semaglutide.
-
-### Is the weight loss from retatrutide sustainable?
-
-We don't know yet. Long-term data (beyond 48 weeks) isn't available. If the pattern follows other incretin therapies, weight regain after cessation is likely. But while on treatment, the weight loss appears to be ongoing at 48 weeks, meaning longer treatment may produce even greater reductions.
+Tirzepatide (Mounjaro/Zepbound) is the dual GLP-1/GIP agonist that sits between semaglutide and retatrutide. Its weight loss results (~21% in the SURMOUNT-1 trial) fall right between the two as well. Think of it as the middle step in the evolution from single to triple agonism. It's approved and available now, making it a strong alternative.
 
 ## The Bottom Line
 
-Semaglutide opened the door. It proved that pharmacological obesity treatment could produce clinically meaningful weight loss with an acceptable safety profile. That door is now wide open.
+Semaglutide opened the door. It proved that pharmacological obesity treatment could produce meaningful weight loss with an acceptable safety profile.
 
 Retatrutide is walking through it with better numbers. Nearly 25% body weight loss, superior liver fat reduction, potentially better muscle preservation, and a mechanism that addresses energy expenditure in addition to appetite suppression. Triple agonism isn't just an incremental improvement. It's a meaningful leap forward.
 
-The caveat is time. Retatrutide needs Phase 3 data, FDA approval, cardiovascular outcomes studies, and years of post-market surveillance before it can match semaglutide's evidence base. If you need treatment now, semaglutide and tirzepatide are excellent options with strong data behind them.
+The caveat is time. Retatrutide needs Phase 3 data, FDA approval, cardiovascular outcomes studies, and years of post-market surveillance before it can match semaglutide's evidence base.
 
-But if you're watching the field and wondering what's next, retatrutide is the answer. The triple agonist wins on the science. Now it just needs to prove it at scale.
+**If you need treatment now:** semaglutide and tirzepatide are excellent options with strong data behind them.
 
-For more information on both compounds and other weight loss peptides, visit [PeptideArc](https://peptidearc.com).
+**If you're watching the field:** retatrutide is the answer. The triple agonist wins on the science. Now it just needs to prove it at scale.
+
+New to peptides? Start with our [beginner's guide](/articles/what-are-peptides-beginners-guide). For more on both compounds, visit [PeptideArc](https://peptidearc.com).
