@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Article.astro
+image: /images/articles/side-effects.webp
 title: "Peptide Side Effects: What to Know Before You Start"
 date: 2026-02-14
 category: "Safety"

@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/Article.astro
+image: /images/articles/legal-fda.webp
 title: "Are Peptides Legal? FDA Regulations Explained (2026 Update)"
 date: 2026-02-14
 category: "Safety"
