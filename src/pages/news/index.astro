@@ -1,0 +1,125 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Get all news articles
+const allNews = await Astro.glob('./**/*.md');
+const news = allNews
+  .filter(post => post.frontmatter?.title)
+  .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+
+const categories = ['All', 'Research', 'Legal', 'Industry', 'Buzz'];
+
+const categoryColors: Record<string, string> = {
+  'Research': 'text-blue-700 bg-blue-50 border-blue-200',
+  'Legal': 'text-red-700 bg-red-50 border-red-200',
+  'Industry': 'text-purple-700 bg-purple-50 border-purple-200',
+  'Buzz': 'text-orange-700 bg-orange-50 border-orange-200',
+};
+
+function getFreshness(dateStr: string) {
+  const now = new Date();
+  const d = new Date(dateStr);
+  const days = Math.floor((now.getTime() - d.getTime()) / (1000 * 60 * 60 * 24));
+  if (days > 90) return { label: 'Archived', class: 'text-gray-500 bg-gray-50' };
+  if (days > 30) return { label: 'Aging', class: 'text-amber-600 bg-amber-50' };
+  return { label: 'Current', class: 'text-green-600 bg-green-50' };
+}
+---
+<Base title="Peptide News" description="Stay up to date with the latest peptide research, FDA regulations, legal developments, and industry trends.">
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-surface-dark via-primary-dark to-surface-dark py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+      <span class="inline-block px-4 py-1.5 text-xs font-bold text-primary-light bg-primary/20 rounded-full mb-4 uppercase tracking-wider">
+        Latest Updates
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Peptide News</h1>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+        Breaking research, regulatory changes, and industry developments in the world of peptides.
+      </p>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="border-b border-gray-200 bg-white sticky top-16 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center gap-2 py-3 overflow-x-auto" id="category-filters">
+        {categories.map(cat => (
+          <button
+            data-category={cat}
+            class={`px-4 py-1.5 text-sm font-medium rounded-full border transition-colors whitespace-nowrap ${cat === 'All' ? 'bg-primary text-white border-primary' : 'bg-white text-text-muted border-gray-200 hover:border-primary hover:text-primary'}`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- News Grid -->
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      {news.length === 0 ? (
+        <div class="text-center py-20">
+          <p class="text-xl text-text-muted">News section launching soon. Check back for the latest peptide developments.</p>
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="news-grid">
+          {news.map(post => {
+            const fresh = getFreshness(post.frontmatter.date);
+            const catColor = categoryColors[post.frontmatter.category] || 'text-primary bg-primary/10 border-primary/20';
+            const date = new Date(post.frontmatter.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            const url = post.url;
+            return (
+              <a href={url} data-cat={post.frontmatter.category} class="news-card group block bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg hover:border-primary/30 transition-all hover:-translate-y-0.5">
+                {post.frontmatter.image && (
+                  <div class="aspect-video overflow-hidden">
+                    <img src={post.frontmatter.image} alt={post.frontmatter.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  </div>
+                )}
+                <div class="p-5">
+                  <div class="flex items-center gap-2 mb-3">
+                    <span class={`px-2 py-0.5 text-xs font-bold rounded-full ${catColor}`}>
+                      {post.frontmatter.category}
+                    </span>
+                    <span class={`px-2 py-0.5 text-xs font-medium rounded-full ${fresh.class}`}>
+                      {fresh.label}
+                    </span>
+                    <span class="text-xs text-text-muted ml-auto">{date}</span>
+                  </div>
+                  <h2 class="text-lg font-bold text-text group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                    {post.frontmatter.title}
+                  </h2>
+                  <p class="text-sm text-text-muted line-clamp-3">
+                    {post.frontmatter.description}
+                  </p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#category-filters button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-category');
+        // Update button styles
+        document.querySelectorAll('#category-filters button').forEach(b => {
+          b.className = 'px-4 py-1.5 text-sm font-medium rounded-full border transition-colors whitespace-nowrap bg-white text-text-muted border-gray-200 hover:border-primary hover:text-primary';
+        });
+        btn.className = 'px-4 py-1.5 text-sm font-medium rounded-full border transition-colors whitespace-nowrap bg-primary text-white border-primary';
+        // Filter cards
+        document.querySelectorAll('.news-card').forEach(card => {
+          if (cat === 'All' || card.getAttribute('data-cat') === cat) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</Base>
