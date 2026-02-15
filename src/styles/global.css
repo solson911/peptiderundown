@@ -56,3 +56,107 @@ html {
   color: var(--color-primary);
   border-left-color: var(--color-primary);
 }
+
+/* ===== Article Table Styling ===== */
+.prose table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.925rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.prose thead {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+}
+
+.prose thead th {
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  border-bottom: none;
+}
+
+.prose tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.prose tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.prose tbody tr:hover {
+  background-color: #f0fdfa;
+}
+
+.prose tbody td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.prose tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== Blockquote / Callout Styling ===== */
+.prose blockquote {
+  background: linear-gradient(135deg, #f0fdfa, #f8fafc);
+  border-left: 4px solid #0f766e;
+  border-radius: 0 12px 12px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: normal;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.prose blockquote p {
+  margin: 0.4rem 0;
+  color: #1e293b;
+}
+
+.prose blockquote p:first-child {
+  margin-top: 0;
+}
+
+.prose blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Heading Styling ===== */
+.prose h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0f766e20;
+  margin-top: 3rem;
+}
+
+.prose h3 {
+  font-size: 1.3rem;
+  color: #0f766e;
+}
+
+/* ===== Bullet List Styling ===== */
+.prose ul > li::marker {
+  color: #0f766e;
+}
+
+.prose ol > li::marker {
+  color: #0f766e;
+  font-weight: 700;
+}
+
+/* ===== HR - Hidden ===== */
+.prose hr {
+  display: none;
+}

@@ -7,8 +7,6 @@ date: 2026-02-14
 category: "Peptide Guides"
 tags: ["retatrutide", "GLP-1", "GIP", "glucagon", "weight loss", "obesity", "triple agonist"]
 author: "PeptideRundown Team"
----
-
 # Retatrutide: The Triple-Action GLP-1 That's Changing Weight Loss
 
 You already know about semaglutide and tirzepatide. They were big.
@@ -25,8 +23,6 @@ It's the first **triple agonist** to hit clinical trials, targeting not two but 
 > - **Outperformed** semaglutide (~16%) and tirzepatide (~22%) in cross-trial comparisons
 > - **Not yet FDA-approved** — phase 3 TRIUMPH trials are underway
 > - **Estimated approval:** 2027-2028
-
----
 
 ## What Is Retatrutide?
 
@@ -45,8 +41,6 @@ Here's how it compares to what's already out there:
 That third target — **glucagon** — is what sets retatrutide apart from everything else in the pipeline.
 
 For a deeper compound profile, check out the [retatrutide overview on PeptideArc](https://peptidearc.com).
-
----
 
 ## How Retatrutide Works: Three Receptors, One Injection
 
@@ -104,8 +98,6 @@ Put all three together:
 
 > **⚡ Bottom line:** You eat less, absorb differently, AND burn more. That's the triple agonist advantage.
 
----
-
 ## Clinical Trial Results: The Numbers
 
 ### Phase 1: Proof of Concept
@@ -162,8 +154,6 @@ Using MRI to measure hepatic fat:
 
 This alone could be a reason for FDA interest, independent of the weight loss data.
 
----
-
 ## Dosing Protocol
 
 Retatrutide is a **once-weekly subcutaneous injection** with a slow dose escalation to minimize GI side effects.
@@ -179,8 +169,6 @@ Retatrutide is a **once-weekly subcutaneous injection** with a slow dose escalat
 > **💡 Sweet spot:** The **8 mg dose** offered the best balance — **22.8% weight loss** with fewer side effects than 12 mg.
 
 **Important:** These are clinical trial protocols. Retatrutide is **not yet approved**, so no official prescribing guidelines exist.
-
----
 
 ## Side Effects
 
@@ -212,8 +200,6 @@ A valid concern — glucagon's primary job is *raising* blood sugar.
 
 In practice? **Not an issue.** The GLP-1 and GIP components counterbalance the glucagon effect. Blood sugar actually **improved** across all dose groups, even in non-diabetic participants.
 
----
-
 ## Retatrutide vs. Semaglutide vs. Tirzepatide
 
 The question everyone's asking.
@@ -229,8 +215,6 @@ The question everyone's asking.
 | **GI side effects** | Common | Common | Common |
 
 > **⚠️ Important:** These numbers come from different trials with different patient populations. Direct head-to-head data doesn't exist yet. But the trend is clear: **more targets = more weight loss.**
-
----
 
 ## Why the Glucagon Receptor Changes Everything
 
@@ -252,8 +236,6 @@ Glucagon breaks this cycle by working on the **"calories out" side:**
 The result? Less metabolic slowdown. Less plateauing. More sustained weight loss.
 
 > **💡 Think of it this way:** GLP-1 drugs put your foot on the brake (less food in). Glucagon puts your foot on the gas (more energy out). Retatrutide does both.
-
----
 
 ## Can You Get Retatrutide Today?
 
@@ -293,8 +275,6 @@ Some research chemical suppliers offer "research" versions. **We don't recommend
 
 Eli Lilly has manufacturing infrastructure from tirzepatide, which should help speed the rollout.
 
----
-
 ## Who Might Benefit Most?
 
 Based on the data so far, retatrutide could be ideal for:
@@ -305,8 +285,6 @@ Based on the data so far, retatrutide could be ideal for:
 - **People who've plateaued on semaglutide or tirzepatide** — the glucagon component adds a new mechanism
 
 > **⚠️ Note:** This is speculative until phase 3 data confirms the findings and the drug is approved.
-
----
 
 ## Open Questions and Risks
 
@@ -319,8 +297,6 @@ No drug is perfect. Here's what we don't know yet:
 | **Cancer risk** | Same theoretical thyroid C-cell concern as all GLP-1 drugs (no human signal so far) |
 | **Rebound weight** | Likely requires lifelong treatment, like all obesity drugs ([Wilding et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35441470/)) |
 | **Cost** | Expect $1,000+/month, similar to tirzepatide; insurance coverage is inconsistent |
-
----
 
 ## Frequently Asked Questions
 
@@ -373,8 +349,6 @@ One word: **glucagon**.
 
 The glucagon component increases calorie expenditure and dramatically reduces liver fat, which tirzepatide does to a lesser extent.
 
----
-
 ## The Bottom Line
 
 Retatrutide is the most promising obesity drug in development right now.
@@ -386,8 +360,6 @@ But it's early. Phase 2 involved a few hundred people over 48 weeks. Phase 3 wil
 If they do, retatrutide could become the **most effective obesity treatment ever approved**.
 
 That's a big "if." But it's one worth watching.
-
----
 
 **Related reading:**
 - [What Are Peptides? Beginner's Guide](/articles/what-are-peptides-beginners-guide)
