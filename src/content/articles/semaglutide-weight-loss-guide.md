@@ -2,6 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "Semaglutide for Weight Loss: A Comprehensive, Evidence-Based Guide"
 description: "Everything you need to know about semaglutide (Ozempic, Wegovy, Rybelsus) for weight loss: mechanisms, clinical trial data, dosing, side effects, costs, and who qualifies."
+image: /images/articles/semaglutide.webp
 date: 2026-02-13
 category: "Peptide Guides"
 tags: ["semaglutide", "weight loss", "GLP-1", "Wegovy", "Ozempic", "obesity", "peptides"]

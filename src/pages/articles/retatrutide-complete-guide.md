@@ -1,6 +1,7 @@
 ---
 title: "Retatrutide: The Triple-Action GLP-1 That's Changing Weight Loss"
 description: "A complete guide to retatrutide, the first triple agonist targeting GLP-1, GIP, and glucagon receptors. Clinical data, dosing, side effects, and how it stacks up against semaglutide and tirzepatide."
+image: /images/articles/retatrutide.webp
 published: 2026-02-14
 category: weight-loss
 tags: [retatrutide, GLP-1, GIP, glucagon, weight loss, obesity, triple agonist]

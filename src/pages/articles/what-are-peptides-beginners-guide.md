@@ -2,6 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "What Are Peptides? A Beginner's Guide to Peptide Therapy"
 description: "New to peptides? This comprehensive beginner's guide explains what peptides are, how they work, the different types, safety considerations, and how to get started with peptide therapy in 2026."
+image: /images/articles/beginners-guide.webp
 date: 2026-02-13
 category: "Beginner's Guide"
 tags: ["peptides", "beginners guide", "peptide therapy", "health optimization", "wellness"]

@@ -9,6 +9,7 @@ interface Props {
     category?: string;
     author?: string;
     tags?: string[];
+    image?: string;
   };
 }
 
@@ -17,6 +18,13 @@ const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { y
 ---
 <Base title={frontmatter.title} description={frontmatter.description}>
   <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <!-- Hero Image -->
+    {frontmatter.image && (
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+    )}
+
     <!-- Article Header -->
     <header class="mb-10">
       {frontmatter.category && (

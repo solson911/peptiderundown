@@ -1,6 +1,7 @@
 ---
 title: "Cerebrolysin: The Neuropeptide Complex for Brain Recovery"
 description: "A comprehensive guide to Cerebrolysin - the porcine brain-derived neuropeptide complex used for stroke, TBI, and Alzheimer's recovery. Covers mechanism, research, dosing, side effects, and availability."
+image: /images/articles/cerebrolysin.webp
 published: 2026-02-14
 category: peptide-guides
 tags: ["cerebrolysin", "neuropeptides", "brain recovery", "nootropics", "neurotrophic"]

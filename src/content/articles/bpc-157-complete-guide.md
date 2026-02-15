@@ -2,6 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "BPC-157: A Complete Evidence-Based Guide"
 description: "A comprehensive, science-backed guide to BPC-157 (Body Protection Compound-157) covering mechanisms of action, research-backed benefits, dosage protocols, reconstitution, side effects, and legal status."
+image: /images/articles/bpc-157.webp
 date: 2026-02-13
 category: "Peptide Guides"
 tags: ["BPC-157", "body protection compound", "peptides", "gut healing", "tendon repair", "neuroprotection", "research peptides"]

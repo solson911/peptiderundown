@@ -2,6 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "How to Reconstitute Peptides: A Complete Step-by-Step Guide"
 description: "Learn exactly how to reconstitute peptides with bacteriostatic water. Covers supplies, step-by-step instructions, dosage calculations, storage, and common mistakes to avoid."
+image: /images/articles/reconstitution.webp
 date: 2026-02-13
 category: "How-To"
 tags: ["reconstitution", "peptides", "bacteriostatic water", "how-to", "beginner guide", "dosage calculation"]
