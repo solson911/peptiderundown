@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Ipamorelin vs Sermorelin — Which GH Secretagogue Is Better?"
 description: "A detailed comparison of ipamorelin and sermorelin, two growth hormone secretagogues. Learn about their mechanisms, side effects, dosing, and which one might be right for your goals."
 image: /images/articles/ipamorelin-vs-sermorelin.webp

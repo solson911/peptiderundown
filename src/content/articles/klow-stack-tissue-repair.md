@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "The KLOW Stack — BPC-157 + TB-500 + GHK-Cu for Comprehensive Tissue Repair"
 description: "A complete guide to the KLOW stack, a synergistic peptide combination for tissue repair. Covers dosing, benefits, and FAQs."
 image: /images/articles/klow-stack.webp

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "BPC-157: A Complete Evidence-Based Guide"
 description: "A science-backed guide to BPC-157 (Body Protection Compound-157) covering mechanisms of action, research-backed benefits, dosage protocols, reconstitution, side effects, and legal status."
 image: /images/articles/bpc-157.webp

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/NewsArticle.astro
 title: "5-Amino-1MQ Shows Promise in New Obesity Research"
 description: "Recent study demonstrates 5-Amino-1MQ's unique mechanism for weight loss through NNMT inhibition, offering potential advantages over GLP-1 agonists."
 date: 2026-02-09

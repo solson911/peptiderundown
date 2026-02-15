@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Thymosin Beta-4 (TB-4): The Complete Guide"
 description: "A detailed guide to Thymosin Beta-4 (TB-4), its mechanisms, benefits for wound healing, cardiac repair, hair growth, dosing, and how it compares to TB-500."
 image: /images/articles/thymosin-beta-4.webp

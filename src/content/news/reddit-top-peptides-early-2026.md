@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/NewsArticle.astro
 title: "Reddit's Most Discussed Peptides of Early 2026: BPC-157 Still Dominates"
 description: "Analysis of r/peptides discussion trends shows BPC-157 maintaining its lead, with semaglutide and TB-500 close behind. We break down the community's evolving interests."
 date: 2026-02-15

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Peptide Cycling Guide: When to Cycle, When to Stay On, and How to Do It Right"
 description: "A practical guide to peptide cycling with recommended on/off schedules by category, sample protocols, and signs you need a break."
 image: /images/articles/peptide-cycling-guide.webp

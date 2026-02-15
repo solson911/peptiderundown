@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Tirzepatide: The Dual-Action GLP-1/GIP Agonist Behind Mounjaro and Zepbound"
 description: "A complete guide to tirzepatide covering mechanism, weight loss data, dosing, side effects, semaglutide comparison, FDA status, and FAQs."
 image: /images/articles/tirzepatide.webp

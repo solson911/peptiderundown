@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "How to Read a Peptide Certificate of Analysis (COA)"
 description: "A complete guide to understanding peptide COAs, including HPLC purity, mass spectrometry, endotoxin levels, and how to spot fake certificates."
 image: /images/articles/peptide-coa-guide.webp

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "IGF-1 LR3: The Engineered Growth Factor for Muscle and Recovery"
 description: "Complete guide to IGF-1 LR3, a synthetic long-acting variant of insulin-like growth factor 1. Covers mechanism, dosing, muscle growth effects, fat loss, recovery benefits, and safety considerations."
 image: /images/articles/igf-1-lr3.webp

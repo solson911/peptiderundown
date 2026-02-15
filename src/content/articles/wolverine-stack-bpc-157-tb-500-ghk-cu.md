@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "The Wolverine Stack — BPC-157 + TB-500 + GHK-Cu for Accelerated Healing and Recovery"
 description: "A complete guide to the Wolverine Stack, a powerful peptide combination for tissue repair, injury recovery, and systemic healing. Learn about dosing, protocols, and expected results."
 image: /images/articles/wolverine-stack.webp

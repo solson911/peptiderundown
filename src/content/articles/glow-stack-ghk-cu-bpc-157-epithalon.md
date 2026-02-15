@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "The Glow Stack — GHK-Cu + BPC-157 + Epithalon for Beauty and Skin Rejuvenation"
 description: "Discover the power of combining GHK-Cu, BPC-157, and Epithalon for skin rejuvenation, collagen production, and anti-aging. Learn about dosing, benefits, and synergy."
 image: /images/articles/glow-stack.webp

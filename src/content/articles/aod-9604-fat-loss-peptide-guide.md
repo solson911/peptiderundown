@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "AOD-9604: The Fat Loss Fragment of Growth Hormone"
 description: "A complete guide to AOD-9604, the modified HGH fragment 176-191 peptide researched for fat loss without growth hormone side effects. Dosing, studies, and legal status."
 image: /images/articles/aod-9604.webp

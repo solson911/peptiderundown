@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Thymosin Alpha-1: The Immune-Boosting Peptide Approved in 35+ Countries"
 description: "A complete guide to thymosin alpha-1 (Zadaxin), the immune-modulating peptide used for hepatitis, cancer support, and infections. Mechanism, dosing, research, and legal status."
 image: /images/articles/thymosin-alpha-1.webp

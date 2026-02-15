@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Best Peptides for Muscle Growth: A Complete Ranking"
 description: "The best peptides for muscle growth ranked and compared. GH secretagogues, myostatin inhibitors, recovery peptides, stacking strategies, and dosing protocols."
 image: /images/articles/best-peptides-for-muscle-growth.webp

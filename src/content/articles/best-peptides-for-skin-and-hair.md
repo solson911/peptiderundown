@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Best Peptides for Skin and Hair: The Complete 2026 Guide"
 description: "A scientific breakdown of the most effective peptides for skin rejuvenation and hair growth, including GHK-Cu, Matrixyl, BPC-157, and Melanotan 2."
 image: /images/articles/peptides-skin-hair.webp

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "BPC-157 vs TB-500: Which Healing Peptide Is Right for You?"
 description: "A side-by-side comparison of BPC-157 and TB-500 covering mechanisms, healing applications, dosing protocols, stacking, side effects, and which peptide fits your injury type."
 image: /images/articles/bpc-157-vs-tb-500.webp

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Semaglutide vs Tirzepatide: The Ultimate Comparison"
 description: "Head-to-head comparison of semaglutide (Ozempic, Wegovy) and tirzepatide (Mounjaro, Zepbound) for weight loss and diabetes. Covers mechanisms, clinical data, side effects, costs, and which to choose."
 image: /images/articles/semaglutide-vs-tirzepatide.webp

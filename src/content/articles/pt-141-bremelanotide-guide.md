@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "PT-141 (Bremelanotide): The Peptide That Treats Sexual Dysfunction Through Your Brain"
 description: "A complete guide to PT-141 bremelanotide, the FDA-approved melanocortin receptor agonist for sexual dysfunction. Mechanism, dosing, side effects, and how it compares to Viagra and Cialis."
 image: /images/articles/pt-141-bremelanotide.webp

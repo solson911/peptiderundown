@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Retatrutide vs Tirzepatide — Next-Gen Weight Loss Comparison"
 description: "Head-to-head comparison of retatrutide (GLP-1/GIP/glucagon triple agonist) vs tirzepatide (GLP-1/GIP dual agonist) for weight loss. Mechanisms, trial data, side effects, dosing, and future outlook."
 image: /images/articles/retatrutide-vs-tirzepatide.webp

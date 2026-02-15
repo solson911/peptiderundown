@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 image: /images/articles/injection-guide.webp
 title: "How to Inject Peptides Subcutaneously: A First-Timer's Guide"
 date: 2026-02-14

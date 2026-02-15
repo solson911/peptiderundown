@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Sermorelin: The GHRH Analog for Anti-Aging and Growth Hormone Support"
 description: "A complete guide to sermorelin, a synthetic GHRH analog used in anti-aging clinics. Covers mechanism, dosing, side effects, comparisons, and legal status."
 image: /images/articles/sermorelin.webp

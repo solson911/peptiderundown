@@ -1,10 +1,9 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Methylene Blue: The Mitochondrial Enhancer (Not Just a Dye)"
 description: "A complete guide to methylene blue - the oldest synthetic drug now used for cognitive enhancement, mitochondrial support, and anti-aging. Covers mechanism, dosing, safety, drug interactions, and FAQs."
 image: /images/articles/methylene-blue.webp
 published: 2026-02-14
-category: compound-guides
+category: "Peptide Guides"
 tags: ["methylene blue", "mitochondria", "nootropic", "anti-aging", "biohacking"]
 ---
 

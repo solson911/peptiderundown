@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Peptide Bloodwork Guide — Essential Labs Before and During Peptide Use"
 description: "A complete guide to bloodwork for peptide users, covering baseline labs, specific panels by peptide type, timing, cost, and how to interpret results."
 image: /images/articles/peptide-bloodwork-guide.webp

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/NewsArticle.astro
 title: "The Rise of Peptide Clinics: Telemedicine Meets Peptide Therapy"
 description: "Online peptide clinics are booming, offering remote consultations and prescriptions. We examine the benefits, risks, and how to identify legitimate providers."
 date: 2026-02-08

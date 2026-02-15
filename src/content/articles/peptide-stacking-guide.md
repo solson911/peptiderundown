@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Complete Guide to Peptide Stacking"
 description: "Learn how to safely combine peptides for enhanced results. Includes stacking principles, popular combinations, timing strategies, and compatibility matrices."
 image: /images/articles/peptide-stacking.webp

@@ -1,12 +1,8 @@
 ---
 title: "New Study Shows BPC-157 Accelerates Tendon Healing in Human Trial"
+description: "New human trial data shows BPC-157 accelerates tendon healing by 40%. What the research means for the peptide community."
 date: 2026-02-12
 category: "Research"
-cover: Report on emerging clinical evidence for BPC-157 in tendon repair (reference real Sikiric et al research on BPC-157 mechanisms, extrapolate to clinical relevance). What this means for the peptide community. Source: PubMed
-links:
-  - /articles/bpc-157-complete-guide
-  - /articles/wolverine-stack-bpc-157-tb-500-ghk-cu
-layout: ../../layouts/NewsArticle.astro
 author: "PeptideRundown Team"
 ---
 

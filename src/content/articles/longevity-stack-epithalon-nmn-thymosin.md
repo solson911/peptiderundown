@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "The Longevity Stack — Epithalon + NMN + Thymosin Alpha-1 for Anti-Aging and Cellular Health"
 description: "A comprehensive guide to the longevity stack combining Epithalon, NMN, and Thymosin Alpha-1 for anti-aging, telomere maintenance, NAD+ boosting, and immune restoration."
 image: /images/articles/longevity-stack.webp

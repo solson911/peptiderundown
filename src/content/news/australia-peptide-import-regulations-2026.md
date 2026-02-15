@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/NewsArticle.astro
 title: "Australia Tightens Regulations on Peptide Imports: What Changed in 2026"
 description: "New TGA regulations crack down on personal peptide imports, requiring declarations and limiting quantities. Here's what Australian peptide users need to know."
 date: 2026-02-11

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "TB-500 (Thymosin Beta-4): Complete Guide to the Healing Peptide"
 description: "Everything you need to know about TB-500, the synthetic fragment of thymosin beta-4 used for injury recovery, tissue repair, and healing support."
 image: /images/articles/tb-500.webp

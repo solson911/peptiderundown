@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "SS-31 (Elamipretide): The Mitochondrial Peptide Targeting Cellular Energy"
 description: "A complete guide to SS-31 (elamipretide), the cardiolipin-targeting peptide being studied for Barth syndrome, heart failure, and mitochondrial aging."
 image: /images/articles/ss-31-elamipretide.webp

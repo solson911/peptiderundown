@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "The Performance Stack — CJC-1295 DAC + Ipamorelin + BPC-157 for Athletic Enhancement"
 description: "A complete guide to the performance stack combining CJC-1295 DAC, Ipamorelin, and BPC-157 for muscle growth, recovery, and athletic performance. Learn about dosing, timing, and benefits."
 image: /images/articles/performance-stack.webp

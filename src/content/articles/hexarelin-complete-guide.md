@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "HEXARELIN — Complete Guide"
 description: "A complete guide to hexarelin, a potent GHRP peptide with unique cardiac benefits. Covers mechanism, dosing, side effects, and comparisons to ipamorelin and GHRP-6."
 image: /images/articles/hexarelin.webp

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Kisspeptin: The Reproductive Peptide Guide"
 description: "A complete guide to kisspeptin, the peptide that regulates GnRH and plays a key role in puberty, fertility, and testosterone production. Covers mechanism, research, dosing, and clinical applications."
 image: /images/articles/kisspeptin.webp

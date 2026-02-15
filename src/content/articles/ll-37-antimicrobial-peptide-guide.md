@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "LL-37: The Antimicrobial Peptide with Broad-Spectrum Defense"
 description: "Complete guide to LL-37 (Cathelicidin), its antimicrobial mechanisms, wound healing properties, vitamin D connection, dosing protocols, and current research status."
 image: /images/articles/ll-37.webp

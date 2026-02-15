@@ -1,10 +1,9 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Melanotan 2: Tanning Peptide Benefits, Risks, and Dosing"
 description: "An honest guide to Melanotan 2 (MT-2), the synthetic tanning peptide. How it works, dosing protocols, side effects, safety concerns including melanoma risk, and legal status."
 image: /images/articles/melanotan-2.webp
 published: 2026-02-14
-category: cosmetic
+category: "Peptide Guides"
 tags: [melanotan 2, MT-2, tanning, melanin, MC1R, skin darkening, peptide]
 ---
 

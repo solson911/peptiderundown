@@ -1,11 +1,8 @@
 ---
 title: "Retatrutide Phase 3 Trial Enrollment Begins: What We Know So Far"
+description: "Eli Lilly begins phase 3 enrollment for retatrutide, the triple agonist that achieved 24% weight loss in phase 2 trials."
 date: 2026-02-10
 category: "Research"
-cover: Eli Lilly's phase 3 clinical trials for retatrutide (the triple agonist), what phase 2 showed (24% body weight loss), timeline expectations, what this means for the GLP-1 market. Source: ClinicalTrials.gov
-links:
-  - /articles/retatrutide-complete-guide
-  - /articles/retatrutide-vs-tirzepatide-comparison
 layout: ../../layouts/NewsArticle.astro
 author: "PeptideRundown Team"
 ---

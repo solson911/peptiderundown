@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "BPC-157 vs GHK-Cu — Which Healing Peptide Is Better?"
 description: "Head-to-head comparison of BPC-157 and GHK-Cu peptides for tissue repair, gut health, skin regeneration, and joint healing. Mechanisms, dosing, safety, and which to choose based on your goals."
 image: /images/articles/bpc-157-vs-ghk-cu.webp

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 image: /images/articles/storage.webp
 title: "How to Store Peptides: Lyophilized and Reconstituted"
 date: 2026-02-14

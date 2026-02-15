@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Epithalon: The Telomerase-Activating Peptide Behind 30 Years of Anti-Aging Research"
 description: "A complete guide to Epithalon (Epitalon), the synthetic tetrapeptide that activates telomerase. Research, dosing protocols, cycling, side effects, and legal status."
 image: /images/articles/epithalon.webp

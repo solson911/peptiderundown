@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Best Peptides for Fat Loss: The 2026 Guide"
 description: "Comprehensive comparison of the most effective fat loss peptides including semaglutide, tirzepatide, retatrutide, AOD-9604, tesamorelin, and CJC-1295/ipamorelin stacks."
 image: /images/articles/fat-loss-peptides.webp

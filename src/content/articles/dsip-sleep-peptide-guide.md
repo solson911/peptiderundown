@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "DSIP: The Sleep-Regulating Peptide You Need to Know"
 description: "Complete guide to delta sleep-inducing peptide (DSIP) - how it improves sleep architecture, reduces stress, and compares to melatonin and other sleep aids."
 image: /images/articles/dsip.webp

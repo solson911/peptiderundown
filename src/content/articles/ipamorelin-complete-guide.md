@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Ipamorelin: The Selective Growth Hormone Secretagogue"
 description: "Complete guide to ipamorelin - a selective ghrelin receptor agonist that boosts growth hormone without unwanted side effects. Covers mechanism, dosing, research, and comparisons."
 image: /images/articles/ipamorelin.webp

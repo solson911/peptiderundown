@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "The Cognition Stack — Semax + Selank + Dihexa for Mental Performance and Focus"
 description: "A complete guide to the cognition stack combining Semax, Selank, and Dihexa for enhanced focus, memory, and cognitive performance. Mechanisms, dosing, side effects, and clinical data."
 image: /images/articles/cognition-stack.webp

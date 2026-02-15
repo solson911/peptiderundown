@@ -1,12 +1,8 @@
 ---
 title: "FDA Cracks Down on Compounding Pharmacies Selling Semaglutide and Tirzepatide"
+description: "The FDA intensifies enforcement against compounding pharmacies selling semaglutide and tirzepatide as drug shortages end."
 date: 2026-02-14
 category: "Legal"
-cover: FDA's ongoing enforcement against compounders selling GLP-1 agonists now that shortages have ended, what this means for patient access, Novo Nordisk and Lilly pushing back, state-by-state variation. Source: FDA.gov
-links:
-  - /articles/semaglutide-weight-loss-guide
-  - /articles/tirzepatide-complete-guide
-layout: ../../layouts/NewsArticle.astro
 author: "PeptideRundown Team"
 ---
 

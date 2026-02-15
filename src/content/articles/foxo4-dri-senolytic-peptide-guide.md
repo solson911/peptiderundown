@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "FOXO4-DRI: The Senolytic Peptide Guide"
 description: "A complete guide to FOXO4-DRI, the peptide targeting senescent cells. Mechanism, research, dosing, and how it compares to other senolytics like dasatinib+quercetin."
 image: /images/articles/foxo4-dri.webp

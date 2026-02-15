@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 const allPosts = await Astro.glob('./*.md');
 const posts = allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 
-const categories = [...new Set(posts.map(p => p.frontmatter.category).filter(Boolean))];
+const categories = [...new Set(posts.map(p => p.frontmatter.category).filter(Boolean))].sort();
 ---
 <Base title="All Guides">
   <!-- Header -->
@@ -16,13 +16,13 @@ const categories = [...new Set(posts.map(p => p.frontmatter.category).filter(Boo
   </section>
 
   <!-- Category Chips -->
-  <section class="bg-white border-b border-gray-100 sticky top-0 z-10">
+  <section class="bg-white border-b border-gray-100 sticky top-16 z-10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3">
-      <div class="flex items-center gap-2 overflow-x-auto pb-1">
+      <div class="flex items-center gap-2 overflow-x-auto pb-1" id="filter-bar">
         <span class="text-xs font-bold text-text-muted uppercase tracking-wide shrink-0 mr-1">Filter:</span>
-        <button class="px-3 py-1 text-xs font-semibold rounded-full bg-primary text-white shrink-0">All</button>
+        <button data-category="All" class="filter-btn px-3 py-1 text-xs font-semibold rounded-full bg-primary text-white shrink-0 cursor-pointer">All</button>
         {categories.map(cat => (
-          <button class="px-3 py-1 text-xs font-semibold rounded-full bg-gray-100 text-text-muted hover:bg-primary/10 hover:text-primary transition-colors shrink-0">
+          <button data-category={cat} class="filter-btn px-3 py-1 text-xs font-semibold rounded-full bg-gray-100 text-text-muted hover:bg-primary/10 hover:text-primary transition-colors shrink-0 cursor-pointer">
             {cat}
           </button>
         ))}
@@ -33,10 +33,11 @@ const categories = [...new Set(posts.map(p => p.frontmatter.category).filter(Boo
   <!-- Articles Grid -->
   <section class="bg-pattern bg-surface py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
         {posts.map((post) => (
           <a href={post.url}
-             class="group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
+             data-cat={post.frontmatter.category}
+             class="article-card group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
             {post.frontmatter.image && (
               <div class="h-44 overflow-hidden">
                 <img src={post.frontmatter.image} alt={post.frontmatter.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
@@ -60,4 +61,25 @@ const categories = [...new Set(posts.map(p => p.frontmatter.category).filter(Boo
       </div>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-category');
+        // Update active button style
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.className = 'filter-btn px-3 py-1 text-xs font-semibold rounded-full bg-gray-100 text-text-muted hover:bg-primary/10 hover:text-primary transition-colors shrink-0 cursor-pointer';
+        });
+        btn.className = 'filter-btn px-3 py-1 text-xs font-semibold rounded-full bg-primary text-white shrink-0 cursor-pointer';
+        // Filter cards
+        document.querySelectorAll('.article-card').forEach(card => {
+          if (cat === 'All' || card.getAttribute('data-cat') === cat) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </Base>

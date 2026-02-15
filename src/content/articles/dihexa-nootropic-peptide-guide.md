@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Dihexa: The Nootropic Peptide 10 Million Times Stronger Than BDNF"
 description: "A complete guide to Dihexa (N-hexanoic-Tyr-Ile-(6) aminohexanoic amide), the angiotensin IV analog studied for cognitive enhancement via the HGF/c-Met pathway."
 image: /images/articles/dihexa.webp

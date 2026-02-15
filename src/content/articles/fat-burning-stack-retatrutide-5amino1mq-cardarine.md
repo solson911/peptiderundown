@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "The Fat Burning Stack — Retatrutide + 5-Amino-1MQ + Cardarine (GW501516) for Advanced Metabolic Research"
 description: "A complete guide to the advanced fat burning stack combining Retatrutide (triple agonist), 5-Amino-1MQ (NNMT inhibitor), and Cardarine (PPAR-delta agonist) for comprehensive metabolic research."
 image: /images/articles/fat-burning-stack.webp
