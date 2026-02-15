@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Article.astro
 title: "BPC-157: A Complete Evidence-Based Guide"
-description: "A comprehensive, science-backed guide to BPC-157 (Body Protection Compound-157) covering mechanisms of action, research-backed benefits, dosage protocols, reconstitution, side effects, and legal status."
+description: "A science-backed guide to BPC-157 (Body Protection Compound-157) covering mechanisms of action, research-backed benefits, dosage protocols, reconstitution, side effects, and legal status."
 image: /images/articles/bpc-157.webp
 date: 2026-02-13
 category: "Peptide Guides"
@@ -11,13 +11,10 @@ author: "PeptideRundown Team"
 
 # BPC-157: A Complete Evidence-Based Guide
 
-> **Disclaimer:** This article is for educational and informational purposes only. It is not medical advice and should not be used to diagnose, treat, or prevent any condition. BPC-157 is not approved by the FDA for human use. Always consult a qualified healthcare provider before using any peptide or supplement.
-
 BPC-157 is one of the most widely discussed peptides in the research and biohacking communities, and for good reason. With over two decades of published preclinical research suggesting benefits ranging from gut healing to tendon repair, it has attracted significant interest from athletes, clinicians, and researchers alike.
 
 But what does the science actually say? In this guide, we break down everything the current evidence tells us about BPC-157: what it is, how it works, what it may do, and what we still don't know.
 
----
 
 ## What Is BPC-157?
 
@@ -40,7 +37,6 @@ The peptide was first characterized by researchers at the University of Zagreb i
 - **Human Trials:** Limited; no completed large-scale randomized controlled trials as of early 2026
 - **FDA Status:** Not approved for human use
 
----
 
 ## Mechanism of Action
 
@@ -78,7 +74,6 @@ BPC-157 appears to interact with the dopaminergic system, showing protective eff
 
 There is evidence that BPC-157 interacts with the GABA system, which may contribute to reported anxiolytic-like effects in animal models [8].
 
----
 
 ## Research-Backed Benefits
 
@@ -146,11 +141,8 @@ BPC-157 has shown hepatoprotective effects in several models of liver damage, in
 
 One of BPC-157's most consistently demonstrated effects is protection against the damaging effects of NSAIDs (non-steroidal anti-inflammatory drugs). This includes protection of the gastric mucosa, intestinal lining, liver, and brain from NSAID-induced damage [1, 9].
 
----
 
 ## Dosage Guidelines
-
-> **Disclaimer:** BPC-157 is not approved for human use, and no official dosing guidelines exist. The following information is compiled from preclinical research, published case reports, and commonly reported protocols in the research community. This is not a recommendation.
 
 ### Commonly Referenced Dosage Ranges
 
@@ -177,7 +169,6 @@ The most commonly discussed human-equivalent dose, extrapolated from the animal 
 
 There is no established evidence-based cycling protocol. Some practitioners in the clinical community have discussed protocols of 4–6 weeks on, followed by a break, but this is based on clinical judgment rather than controlled trial data.
 
----
 
 ## How to Reconstitute BPC-157
 
@@ -205,7 +196,6 @@ BPC-157 is typically supplied as a lyophilized (freeze-dried) powder in a sealed
 - **Reconstituted:** Refrigerate and use within **3–4 weeks** when reconstituted with bacteriostatic water.
 - **Avoid:** Repeated freeze-thaw cycles, direct sunlight, and temperatures above 8°C for extended periods.
 
----
 
 ## Side Effects and Safety Considerations
 
@@ -241,7 +231,6 @@ Despite the generally favorable safety profile in preclinical work, several impo
 
 5. **Drug interactions.** BPC-157's effects on the NO system, dopaminergic system, and other pathways suggest potential interactions with various medications. Anyone taking prescription medications should consult a physician.
 
----
 
 ## Legal Status
 
@@ -268,7 +257,6 @@ BPC-157's legal status in the United States has become more restrictive in recen
 
 > **Note:** Regulatory status can change. Always verify current regulations in your jurisdiction before purchasing or using any peptide.
 
----
 
 ## Frequently Asked Questions
 
@@ -300,7 +288,6 @@ Unknown. The existing safety data is drawn from relatively short-term animal stu
 
 Standard workplace drug panels do not test for BPC-157. However, advanced peptide-specific testing (as may be used by some sports organizations) could potentially detect it. Athletes subject to testing should consult their sport's governing body.
 
----
 
 ## The Evidence Gap: What We Still Don't Know
 
@@ -318,7 +305,6 @@ While BPC-157's preclinical evidence base is substantial, with hundreds of publi
 
 These gaps do not invalidate the existing research. They simply underscore the need for caution and intellectual honesty when discussing BPC-157's potential.
 
----
 
 ## Summary
 
@@ -330,7 +316,6 @@ As of 2025–2026, BPC-157 faces increasing regulatory restrictions in the Unite
 
 For anyone considering BPC-157, consultation with a knowledgeable healthcare provider is strongly recommended.
 
----
 
 ## References
 
@@ -372,7 +357,6 @@ For anyone considering BPC-157, consultation with a knowledgeable healthcare pro
 
 19. Ilic S, Brcic I, Mester M, et al. Over-dose insulin and stable gastric pentadecapeptide BPC 157. Attenuated gastric ulcers, seizures, brain lesions, hepatomegaly, fatty liver, breakdown of liver glycogen, profound hypoglycemia and calcification in rats. *J Physiol Pharmacol.* 2009;60 Suppl 7:107-114. [PubMed](https://pubmed.ncbi.nlm.nih.gov/20388953/)
 
----
 
 *Last updated: February 13, 2026*
 

@@ -234,7 +234,7 @@ For skin-specific goals, topical is probably sufficient and better studied. For 
 
 ### Can GHK-Cu regrow hair?
 
-The evidence is promising but not conclusive. Animal studies show effects comparable to minoxidil. Human studies are limited. It's reasonable to try as part of a comprehensive hair protocol, but don't expect miracles from GHK-Cu alone.
+The evidence is promising but not conclusive. Animal studies show effects comparable to minoxidil. Human studies are limited. It's reasonable to try as part of a hair protocol, but don't expect miracles from GHK-Cu alone.
 
 ### Is GHK-Cu safe for long-term use?
 

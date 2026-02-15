@@ -54,14 +54,17 @@ const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { y
 
       <!-- Article Content -->
       <div class="prose prose-lg prose-slate max-w-none
+        prose-p:leading-relaxed prose-p:mb-5
         prose-headings:font-bold prose-headings:text-text
-        prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-2
-        prose-h3:text-xl prose-h3:mt-8
+        prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6
+        prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4
+        prose-li:mb-2
         prose-a:text-primary prose-a:no-underline hover:prose-a:underline
         prose-strong:text-text
         prose-code:text-primary prose-code:bg-primary/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
-        prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-blockquote:py-1
-        prose-img:rounded-xl prose-img:shadow-lg">
+        prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-5
+        prose-img:rounded-xl prose-img:shadow-lg
+        prose-hr:hidden">
         <slot />
       </div>
 

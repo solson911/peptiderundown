@@ -15,9 +15,6 @@ If you've just received your first vial of peptides, you're probably staring at 
 
 This guide walks you through everything: what reconstitution is, what you need, how to do it step by step, how to calculate your doses, and how to store your peptides properly. By the end, you'll feel confident handling the process like you've done it a hundred times.
 
-> **Disclaimer:** This article is for educational and informational purposes only. It is not medical advice. Peptides should only be used under the supervision of a qualified healthcare provider. Always consult a licensed physician before using any peptide or research compound.
-
----
 
 ## What Is Reconstitution (and Why Is It Necessary)?
 
@@ -31,7 +28,6 @@ Think of it like powdered drink mix. The powder is shelf-stable and easy to tran
 
 Once peptides are in solution, they start a slow countdown. Light, temperature, and even gentle agitation can degrade them over time. Keeping them as powder until you're ready to use them maximizes their potency and shelf life.
 
----
 
 ## What You'll Need
 
@@ -63,7 +59,6 @@ You'll see two options: **bacteriostatic water** and **plain sterile water**. He
 
 For almost everyone reading this, **bacteriostatic water is the right choice**.
 
----
 
 ## Step-by-Step: How to Reconstitute Peptides
 
@@ -134,7 +129,6 @@ The solution should be **clear** when fully dissolved. If it's cloudy or has vis
 
 That's it. Your peptide is now reconstituted and ready to use. Label the vial with the date, the peptide name, and the concentration (e.g., "BPC-157, 2.5mg/mL, Feb 13, 2026"), then store it in the refrigerator.
 
----
 
 ## How to Calculate Your Concentration and Dose
 
@@ -196,7 +190,6 @@ Or if you prefer working in micrograms:
 
 **Pro tip:** If the math feels confusing, add a "round" amount of water that makes the concentration a clean number. For example, adding 2mL to a 5mg vial gives you 2.5mg/mL, which is easy to work with. Adding 1.73mL would give you 2.89mg/mL, which is unnecessarily annoying.
 
----
 
 ## How to Draw Your Dose from a Reconstituted Vial
 
@@ -213,7 +206,6 @@ Once your peptide is mixed, here's how to draw your dose each time:
 
 Your dose is now ready for administration. Use a fresh insulin syringe each time. Never reuse needles.
 
----
 
 ## Storage After Reconstitution
 
@@ -235,7 +227,6 @@ If you haven't mixed your peptide yet:
 - **Refrigerator:** Extends shelf life significantly, lasting months to a year or more.
 - **Freezer:** Best for long-term storage of unreconstituted peptides, and can last a year or more.
 
----
 
 ## Common Mistakes to Avoid
 
@@ -265,7 +256,6 @@ Double-check your concentration calculation and your dose calculation every time
 ### 8. Using Too Little Water
 If you add very little water (e.g., 0.5mL to a 10mg vial), the concentration becomes very high (20mg/mL), and a tiny measurement error translates to a huge dose error. Use enough water that your dose lands in a comfortable, measurable range on the syringe.
 
----
 
 ## Frequently Asked Questions
 
@@ -306,7 +296,6 @@ Yes. If you realize your concentration is too high and you want to dilute it fur
 
 This can happen during shipping due to temperature changes or pressure. As long as the vial's seal is intact and the powder hasn't been exposed to moisture, it should be fine. Reconstitute normally.
 
----
 
 ## Wrapping Up
 
@@ -316,6 +305,5 @@ Take your time the first couple of times. Write down your concentration and keep
 
 If you found this guide helpful, bookmark it for reference. And remember, when in doubt about dosing or usage, always consult with a healthcare professional.
 
----
 
 *This article is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions regarding peptides or any medical condition. Never disregard professional medical advice or delay seeking it because of something you read online.*

@@ -41,7 +41,7 @@ Before your first injection, gather everything in one place. You don't want to b
 - Bandages (rarely needed, but reassuring for first-timers)
 - A notebook or app for tracking injection sites and doses
 
-For detailed profiles on specific peptide compounds and their recommended administration routes, [peptidearc.com](https://peptidearc.com) maintains comprehensive reference pages.
+For detailed profiles on specific peptide compounds and their recommended administration routes, [peptidearc.com](https://peptidearc.com) maintains reference pages.
 
 ## Choosing Your Injection Site
 
@@ -240,6 +240,5 @@ Absolutely. Almost everyone feels some anxiety before their first self-injection
 
 This depends on the specific peptide and whether you used bacteriostatic water or sterile water. Generally, peptides reconstituted with BAC water last 3 to 4 weeks refrigerated, while those mixed with sterile water should be used within a few days. See our [peptide storage guide](/articles/how-to-store-peptides) for specifics.
 
----
 
 *This article is for educational purposes only. It does not constitute medical advice. Always consult with a qualified healthcare provider before beginning any peptide regimen. For detailed information on specific peptide compounds, visit [peptidearc.com](https://peptidearc.com).*

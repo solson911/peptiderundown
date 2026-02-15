@@ -48,7 +48,7 @@ Animal studies have demonstrated anxiolytic effects across multiple behavioral m
 
 The immune angle is interesting too. Some research suggests Selank could be beneficial during periods of high stress or immune challenge, though this application needs more clinical data.
 
-For a comprehensive compound profile on Selank, visit [PeptideArc](https://peptidearc.com).
+For a compound profile on Selank, visit [PeptideArc](https://peptidearc.com).
 
 ## Semax: The Cognitive Enhancer
 

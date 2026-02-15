@@ -1,6 +1,6 @@
 ---
 title: "KPV Peptide: The Anti-Inflammatory Peptide for Gut Health"
-description: "A comprehensive guide to KPV peptide, the alpha-MSH fragment showing promise for gut inflammation, IBD, colitis, and skin health."
+description: "A guide to KPV peptide, the alpha-MSH fragment showing promise for gut inflammation, IBD, colitis, and skin health."
 image: /images/articles/kpv.webp
 date: 2026-02-14
 tags: ["kpv", "peptides", "gut-health", "anti-inflammatory", "ibd"]
@@ -158,7 +158,7 @@ Most people report noticing changes within 2 to 4 weeks of consistent use. Gut-r
 
 ### Can I take KPV with other peptides?
 
-KPV is commonly stacked with other peptides like BPC-157 for gut healing protocols. There are no known contraindications with other peptides, but comprehensive interaction studies haven't been conducted. Start one compound at a time so you can assess individual responses.
+KPV is commonly stacked with other peptides like BPC-157 for gut healing protocols. There are no known contraindications with other peptides, but interaction studies haven't been conducted. Start one compound at a time so you can assess individual responses.
 
 ### Does KPV need to be refrigerated?
 
