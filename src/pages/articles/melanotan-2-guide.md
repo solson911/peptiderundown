@@ -13,6 +13,12 @@ Melanotan 2 is one of the most popular and most controversial peptides in the co
 
 This is a balanced look at what MT-2 is, what it does, and what the actual evidence says about safety.
 
+> **Key Takeaways**
+> - Melanotan 2 produces real eumelanin (dark pigment) by stimulating MC1R receptors on melanocytes
+> - Side effects include nausea, facial flushing, mole darkening, and strong sexual arousal from MC4R activation
+> - The melanoma risk question remains unanswered, so anyone with a personal or family history should avoid MT-2
+> - MT-2 is not FDA-approved and sits in a legal gray area in most countries
+
 ## What Is Melanotan 2?
 
 Melanotan 2 (MT-2) is a synthetic analog of alpha-melanocyte-stimulating hormone (alpha-MSH), a naturally occurring hormone that regulates skin pigmentation. It was originally developed at the University of Arizona in the 1990s as a potential preventive treatment for skin cancer. The idea was simple: if you could darken people's skin without UV exposure, you could protect them from UV damage.
@@ -23,7 +29,7 @@ MT-2 is closely related to another peptide you may have heard of, bremelanotide 
 
 For detailed compound information, see the [Melanotan 2 profile on PeptideArc](https://peptidearc.com).
 
-## How Does Melanotan 2 Work?
+## How Melanotan 2 Works: The Melanocortin Pathway
 
 MT-2 is a non-selective agonist of melanocortin receptors, particularly MC1R through MC5R. Its effects come from activating different receptors:
 
@@ -60,7 +66,7 @@ This sexual effect was so pronounced that researchers developed PT-141 (bremelan
 
 MC3R activation may influence energy balance and fat metabolism, though these effects are less well-characterized than the MC1R and MC4R pathways. Some researchers believe MC3R contributes to the appetite-suppressive effects and may influence nutrient partitioning.
 
-## What to Expect: Timeline and Effects
+## What to Expect: MT-2 Timeline and Effects
 
 ### Tanning
 
@@ -89,7 +95,7 @@ Typically noticeable within hours of injection. The effect is dose-dependent and
 
 ## Dosing Protocols
 
-MT-2 is administered via subcutaneous injection, typically into the abdominal fat. Here's a commonly followed protocol:
+MT-2 is administered via subcutaneous injection, typically into the abdominal fat. If you're unfamiliar with the process, our [subcutaneous injection guide](/articles/how-to-inject-peptides-subcutaneously) covers technique and best practices. Here's a commonly followed protocol:
 
 ### Reconstitution
 
@@ -119,11 +125,11 @@ MT-2 typically comes as a lyophilized (freeze-dried) powder in vials of 10 mg. I
 
 ### Storage
 
-Reconstituted MT-2 should be refrigerated and used within 4-6 weeks. Unreconstituted powder can be stored at room temperature but lasts longer refrigerated or frozen.
+Reconstituted MT-2 should be refrigerated and used within 4-6 weeks. For detailed storage tips, see our [peptide storage guide](/articles/how-to-store-peptides). Unreconstituted powder can be stored at room temperature but lasts longer refrigerated or frozen.
 
 ## Side Effects
 
-MT-2 has a definite side effect profile. Most effects are dose-dependent and manageable, but they're worth taking seriously.
+MT-2 has a definite side effect profile. For a broader overview of what peptides can do to your body, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know). Most effects are dose-dependent and manageable, but they're worth taking seriously.
 
 ### Common Side Effects
 
@@ -157,7 +163,7 @@ MT-2 has a definite side effect profile. Most effects are dose-dependent and man
 
 **Priapism:** Prolonged erections requiring medical attention have been reported in rare cases at higher doses.
 
-## Safety Concerns: Melanoma Risk
+## The Melanoma Question: Does MT-2 Increase Cancer Risk?
 
 Let's address the most serious question directly. Does MT-2 cause melanoma?
 
@@ -207,9 +213,9 @@ MT-2 has been used recreationally for about 15-20 years now. Long-term data on c
 
 MT-2 makes you more responsive to UV. While the eumelanin it produces is protective, users should still be cautious about UV exposure. The fact that you can tan more easily doesn't mean UV is suddenly safe. UV still causes DNA damage regardless of your melanin levels. Use reasonable sun exposure practices.
 
-## Legal Status
+## Legal Status of Melanotan 2
 
-MT-2 occupies a gray area in most countries:
+MT-2 occupies a gray area in most countries. For a full breakdown of peptide legality, see our [peptide regulations guide](/articles/are-peptides-legal-fda-regulations-2026).
 
 - **United States:** Not FDA-approved. Not scheduled as a controlled substance. Sold as a "research chemical" by peptide suppliers. Purchasing for personal use is technically legal in most states, but selling it for human consumption is not.
 - **United Kingdom:** Illegal to sell but not illegal to possess for personal use.
@@ -217,7 +223,7 @@ MT-2 occupies a gray area in most countries:
 - **European Union:** Not approved. Regulations vary by country.
 - **Canada:** Not approved. Available from research chemical suppliers.
 
-The regulatory landscape could change. Several countries have discussed tightening regulations on cosmetic peptides. Stay current on your local laws.
+The regulatory situation could change. Several countries have discussed tightening regulations on cosmetic peptides. Stay current on your local laws.
 
 ## Frequently Asked Questions
 

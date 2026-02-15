@@ -13,6 +13,12 @@ Methylene blue might be the most underrated compound in biohacking. It was first
 
 It's not technically a peptide. But it shows up in peptide and biohacking circles constantly because it targets something fundamental: how your cells produce energy. And that makes it relevant to almost everything else people in this space care about.
 
+> **Key Takeaways**
+> - Methylene blue acts as an alternative electron carrier in mitochondria, boosting ATP production while reducing free radical damage
+> - At low doses (0.5-1 mg/kg), it's an antioxidant and cognitive enhancer; at high doses, it becomes a pro-oxidant (less is more)
+> - CRITICAL: Never combine with SSRIs, SNRIs, MAOIs, or other serotonergic drugs due to fatal serotonin syndrome risk
+> - Only use USP pharmaceutical grade; industrial and aquarium grades contain toxic contaminants
+
 ## What Is Methylene Blue?
 
 Methylene blue (methylthioninium chloride) is a synthetic heterocyclic aromatic compound. Its chemical structure gives it the ability to accept and donate electrons, which is the key to almost everything it does in biology.
@@ -23,7 +29,7 @@ The compound exists in two forms in the body: the oxidized form (methylene blue,
 
 Methylene blue has been on the WHO's List of Essential Medicines for decades. It has a long safety record at appropriate doses. But, and this is critical, the dose makes the difference between a helpful nootropic and a harmful pro-oxidant.
 
-## How Methylene Blue Works
+## How Methylene Blue Works: The Electron Shuttle
 
 ### The Mitochondrial Mechanism
 
@@ -53,7 +59,7 @@ Methylene blue inhibits nitric oxide synthase (NOS) and also directly binds to n
 
 Methylene blue has mild acetylcholinesterase inhibitory activity, similar in concept (though weaker) to Alzheimer's drugs like donepezil ([Oz et al., 2009](https://pubmed.ncbi.nlm.nih.gov/19433341/)). This increases acetylcholine availability in the brain, which may contribute to its cognitive effects.
 
-## Cognitive Benefits
+## Cognitive Benefits: Memory, Focus, and Neuroprotection
 
 The brain is the most metabolically active organ in your body. It represents about 2% of body weight but consumes 20% of total oxygen and glucose. This makes it uniquely dependent on mitochondrial function. And that's why a mitochondrial enhancer has such pronounced effects on cognition.
 
@@ -73,7 +79,7 @@ TauRx Therapeutics developed a modified form of methylene blue (LMTM, or leucome
 
 This is the benefit most nootropic users report first. The increase in mitochondrial ATP output translates to a subjective feeling of mental clarity, reduced brain fog, and sustained focus. It's not a stimulant. There's no jitteriness or crash. Users describe it more like their brain is running more efficiently on the same fuel.
 
-## Anti-Aging Research
+## Anti-Aging Potential: What the Research Shows
 
 Aging is fundamentally a process of declining mitochondrial function. As we age, mitochondria accumulate damage, produce more ROS, and generate less ATP. This creates a vicious cycle that drives cellular aging.
 
@@ -90,7 +96,7 @@ The skin finding is particularly interesting. A 2017 study from the University o
 
 We're still waiting on long-term human anti-aging data. But the mechanistic rationale is solid, and the compound's safety profile at low doses makes it a reasonable candidate for those interested in longevity strategies.
 
-## Antimicrobial Properties
+## Antimicrobial Uses: From Malaria to Photodynamic Therapy
 
 Methylene blue has been used as an antimicrobial since the late 1800s. It has activity against:
 
@@ -101,7 +107,7 @@ Methylene blue has been used as an antimicrobial since the late 1800s. It has ac
 
 The antimicrobial mechanism involves ROS generation when methylene blue is activated by light. This is the basis of photodynamic therapy (PDT), used in dentistry for periodontal infections and in wound care.
 
-## Dosing: The Critical Details
+## Dosing Methylene Blue: Why Less Is More
 
 With methylene blue, dose is everything. The difference between a nootropic and a toxin is the amount you take. This isn't hyperbole.
 
@@ -127,7 +133,7 @@ At doses above 2 mg/kg, methylene blue starts acting as a pro-oxidant rather tha
 
 **The rule: less is more with methylene blue.** If some is good, more is not better. This is the opposite of how many compounds work, and it trips people up.
 
-## Pharmaceutical Grade vs. Industrial Grade
+## Pharmaceutical Grade vs. Industrial Grade: A Critical Distinction
 
 This distinction is critical and potentially life-saving.
 
@@ -182,7 +188,7 @@ This is not a theoretical risk. There are case reports of deaths from serotonin 
 
 **Pregnancy.** Methylene blue is contraindicated in pregnancy. It can cause fetal harm.
 
-## Drug Interactions Beyond Serotonin
+## Other Drug Interactions to Watch For
 
 Besides the critical serotonin interaction, be aware of:
 
@@ -191,7 +197,7 @@ Besides the critical serotonin interaction, be aware of:
 - **Dapsone and other oxidizing drugs.** Increased risk of methemoglobinemia, which is ironic given that methylene blue treats this condition.
 - **Blood pressure medications.** The NO inhibition can interfere with nitrate-based blood pressure drugs.
 
-For broader context on how methylene blue fits into biohacking protocols alongside peptides, check out [PeptideArc.com](https://peptidearc.com).
+For broader context on how methylene blue fits into biohacking protocols alongside peptides, check out [PeptideArc.com](https://peptidearc.com). If you're interested in other mitochondrial-targeting compounds, see our guide on [MOTS-c](/articles/mots-c-mitochondrial-peptide).
 
 ## Frequently Asked Questions
 
@@ -237,6 +243,6 @@ Methylene blue is a remarkable compound hiding in plain sight. It's been in cont
 
 But it demands respect. The serotonin syndrome risk is real and potentially fatal. The dose-response curve means more is worse, not better. And the difference between pharmaceutical grade and industrial grade is the difference between a nootropic and a poison.
 
-If you're not on serotonergic medications, don't have G6PD deficiency, and you source pharmaceutical grade product, methylene blue is one of the more evidence-backed compounds in the biohacking toolkit. Just keep the dose low, pay attention to your body, and don't skip the homework on drug interactions.
+If you're not on serotonergic medications, don't have G6PD deficiency, and you source pharmaceutical grade product, methylene blue is one of the more evidence-backed compounds in the biohacking toolkit. For a broader look at compound side effects, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know). Just keep the dose low, pay attention to your body, and don't skip the homework on drug interactions.
 
 *This article is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider before starting any new supplement or compound.*

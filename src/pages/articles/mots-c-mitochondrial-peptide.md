@@ -14,6 +14,12 @@ That molecule is MOTS-c.
 
 Since its discovery, MOTS-c has become one of the most talked-about peptides in the longevity and metabolic health space. It sits at the intersection of mitochondrial biology, metabolic regulation, and aging research. Let's go through what we actually know.
 
+> **Key Takeaways**
+> - MOTS-c is a 16-amino-acid peptide encoded by mitochondrial DNA, first discovered in 2015
+> - It activates AMPK (the metabolic master switch), improving glucose uptake, fat oxidation, and insulin sensitivity
+> - Animal studies show anti-obesity effects and improved physical performance in aged mice
+> - Human data is still limited; current dosing protocols are based on animal research and early practitioner experience
+
 ## What Is MOTS-c?
 
 MOTS-c (Mitochondrial Open Reading Frame of the Twelve S rRNA type-c) is a 16-amino-acid peptide encoded by the mitochondrial genome. Its sequence is MRWQEMGYIFYPRKLR.
@@ -26,7 +32,7 @@ MOTS-c is produced naturally in your body. It circulates in the blood and can be
 
 For a full compound profile on MOTS-c, check out [PeptideArc](https://peptidearc.com).
 
-## How Does MOTS-c Work?
+## How MOTS-c Works: AMPK, Metabolism, and Gene Expression
 
 The mechanisms behind MOTS-c are still being mapped out, but several key pathways have been identified.
 
@@ -59,7 +65,7 @@ This was a remarkable finding. A peptide encoded by mitochondrial DNA that physi
 
 MOTS-c improves insulin sensitivity through multiple mechanisms. By activating AMPK and increasing glucose uptake in muscle tissue, it essentially mimics some of the metabolic benefits of exercise on insulin sensitivity. Studies in obese mice showed that MOTS-c treatment improved glucose tolerance and reduced insulin resistance ([Lee et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25773600/)).
 
-## The Exercise Mimetic Effect
+## The "Exercise Mimetic" Effect: What It Actually Means
 
 This is probably the most attention-grabbing aspect of MOTS-c research. Can a peptide really mimic exercise?
 
@@ -80,7 +86,7 @@ But let's be clear about what "exercise mimetic" means in this context. MOTS-c a
 
 Think of MOTS-c as a metabolic booster that works through similar channels as exercise, not a replacement for it. And honestly, the most interesting application might be combining MOTS-c with exercise to amplify the metabolic benefits.
 
-## Insulin Sensitivity and Metabolic Health
+## MOTS-c for Insulin Sensitivity and Metabolic Health
 
 The metabolic health applications of MOTS-c are where the research is most developed. Several studies paint a consistent picture.
 
@@ -98,7 +104,7 @@ A study examining MOTS-c levels in humans found that circulating MOTS-c was sign
 
 The combination of insulin resistance, central obesity, dyslipidemia, and hypertension that constitutes metabolic syndrome aligns well with the pathways MOTS-c influences. By targeting AMPK and improving metabolic flexibility, MOTS-c could theoretically address multiple components of metabolic syndrome simultaneously.
 
-## Longevity Research
+## MOTS-c and Longevity: The Aging Connection
 
 The aging connection is what really captured the longevity community's attention. And the data, while preliminary, is genuinely intriguing.
 
@@ -138,7 +144,7 @@ The original mouse studies used 5 mg/kg intraperitoneally, which doesn't transla
 
 Timing is another consideration. Some practitioners recommend administering MOTS-c before exercise to amplify the metabolic response. Others use it on rest days to maintain metabolic activation. There's no definitive research on optimal timing in humans.
 
-MOTS-c is administered by injection because, like most peptides, it would be degraded by digestive enzymes if taken orally. The peptide is typically supplied as a lyophilized powder that needs to be reconstituted with bacteriostatic water before use.
+MOTS-c is administered by injection because, like most peptides, it would be degraded by digestive enzymes if taken orally. For injection technique, see our [subcutaneous injection guide](/articles/how-to-inject-peptides-subcutaneously). The peptide is typically supplied as a lyophilized powder that needs to be reconstituted with bacteriostatic water before use.
 
 ## Side Effects
 
@@ -166,7 +172,7 @@ People who should exercise extra caution:
 - Pregnant or breastfeeding women
 - Anyone with active cancer (AMPK activation has complex and sometimes contradictory effects on cancer biology)
 
-## Current Availability
+## Where to Get MOTS-c: Current Availability
 
 As of early 2026, MOTS-c is not FDA-approved for any medical indication. It's available through several channels:
 
@@ -202,9 +208,9 @@ Potentially. If you're already physically active, your MOTS-c levels may be high
 
 MOTS-c is sometimes used alongside other metabolic and longevity-focused peptides. Common combinations include:
 
-- **MOTS-c + Tesamorelin** for metabolic health and body composition
-- **MOTS-c + NAD+ precursors** for mitochondrial support
-- **MOTS-c + BPC-157** when combining metabolic optimization with tissue repair
+- **MOTS-c + [Tesamorelin/Ipamorelin](/articles/tesamorelin-ipamorelin-stack-guide)** for metabolic health and body composition
+- **MOTS-c + NAD+ precursors** (or [methylene blue](/articles/methylene-blue-guide)) for mitochondrial support
+- **MOTS-c + [BPC-157](/articles/bpc-157-complete-guide)** when combining metabolic optimization with tissue repair
 
 No formal interaction studies exist for these combinations. As with any stack, introduce one compound at a time.
 

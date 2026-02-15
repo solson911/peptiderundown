@@ -14,7 +14,13 @@ Two peptides that came out of this tradition stand out: Selank and Semax. Both w
 
 But there's more to these peptides than internet hype. Let's look at what the research actually tells us.
 
-## Origins: Cold War Science Meets Modern Neuroscience
+> **Key Takeaways**
+> - Selank is an anxiolytic peptide based on the immune peptide tuftsin; it modulates GABA and serotonin without sedation or addiction
+> - Semax is a cognitive enhancer derived from ACTH that upregulates BDNF and NGF for neuroprotection and focus
+> - Both are administered as nasal sprays and are approved prescription medications in Russia
+> - They can be stacked together for "calm focus," with Selank reducing anxiety and Semax sharpening cognition
+
+## Origins: From Soviet Research Labs to Modern Nootropics
 
 The development of both Selank and Semax traces back to Soviet-era research programs aimed at enhancing cognitive performance and stress resilience. The work was led by Nikolai Myasoedov and his colleagues at the Russian Academy of Sciences, starting in the 1980s and continuing through the post-Soviet period.
 
@@ -96,7 +102,7 @@ Despite both being Russian nootropic peptides administered the same way, Selank 
 
 Think of it this way: Selank quiets the noise, and Semax sharpens the signal. Both improve cognitive function, but they approach it from opposite directions.
 
-## Nasal Administration
+## Why Nasal Sprays? The Intranasal Advantage
 
 Both Selank and Semax are primarily administered as nasal sprays. This isn't just for convenience. The nasal route provides direct access to the brain via the olfactory pathway, bypassing the blood-brain barrier and first-pass metabolism.
 
@@ -156,7 +162,7 @@ Both peptides have favorable safety profiles based on available research and cli
 
 Neither peptide has shown the kind of serious adverse effects associated with pharmaceutical anxiolytics or stimulants. That said, long-term safety data outside of Russian clinical practice is limited.
 
-## Stacking Selank and Semax Together
+## The Selank + Semax Stack: Calm Focus in Practice
 
 Given their complementary mechanisms, combining Selank and Semax is a popular approach. The logic is straightforward: Selank handles the anxiety and stress side while Semax provides the cognitive boost. Together, you get calm focus.
 
@@ -170,9 +176,9 @@ Some people use them at the same time, alternating nostrils. Others separate the
 
 If you're new to either peptide, try them individually first. Get a sense of how each one affects you before combining. This lets you troubleshoot if something doesn't feel right.
 
-## Legal Status
+## Legal Status of Selank and Semax
 
-This is where things get a bit complicated.
+This is where things get a bit complicated. For a full breakdown of peptide regulations, see our [2026 peptide legality guide](/articles/are-peptides-legal-fda-regulations-2026).
 
 **In Russia:** Both peptides are approved prescription medications. Selank is classified as an anxiolytic, and Semax as a nootropic. They're widely available through pharmacies.
 
@@ -184,7 +190,7 @@ This is where things get a bit complicated.
 
 **In Canada:** Similar to the US, they occupy a gray zone. Not approved, not specifically prohibited.
 
-The regulatory landscape for peptides is shifting. Several countries have tightened restrictions on research peptides in recent years. Check your local regulations before purchasing.
+The regulatory environment for peptides is shifting. Several countries have tightened restrictions on research peptides in recent years. Check your local regulations before purchasing.
 
 ## Frequently Asked Questions
 
@@ -210,7 +216,7 @@ Both peptides are primarily designed for intranasal use. Oral bioavailability wo
 
 ### What's the shelf life?
 
-Reconstituted solutions should be refrigerated and used within 4 to 6 weeks. Lyophilized powder stored properly (cool, dry, dark) can last much longer, potentially years. Pre-mixed nasal sprays usually have expiration dates on the packaging.
+Reconstituted solutions should be refrigerated and used within 4 to 6 weeks. See our [peptide storage guide](/articles/how-to-store-peptides) for best practices. Lyophilized powder stored properly (cool, dry, dark) can last much longer, potentially years. Pre-mixed nasal sprays usually have expiration dates on the packaging.
 
 ### Will these show up on a drug test?
 
@@ -224,4 +230,4 @@ Selank is your choice if anxiety and stress are your primary concerns. Semax is 
 
 The main limitation is the lack of Western clinical trials. Most of the research was published in Russian journals, and while much of it has been translated, the studies don't always meet the methodological standards expected by Western regulatory bodies. That doesn't mean the science is wrong. It just means there's a gap that hasn't been filled yet.
 
-If you're interested in trying either peptide, start low, go slow, and keep notes on your response. These aren't miracle compounds, but for the right person, they can be genuinely helpful tools for cognitive optimization and stress management.
+If you're interested in trying either peptide, start low, go slow, and keep notes on your response. You might also want to explore [Cerebrolysin](/articles/cerebrolysin-neuropeptide-guide) for a different approach to neurotrophic support. These aren't miracle compounds, but for the right person, they can be genuinely helpful tools for cognitive optimization and stress management.

@@ -13,6 +13,12 @@ If you've spent any time looking into growth hormone peptides, you've probably r
 
 Let's break down what makes this peptide unique, what the research says, and what you should know before considering it.
 
+> **Key Takeaways**
+> - CJC-1295 DAC binds to albumin, extending its half-life to 6-8 days (vs. 30 minutes for the no-DAC version)
+> - It amplifies natural GH pulses and raises IGF-1 by 36-105%, with only twice-weekly injections needed
+> - Benefits include fat loss (especially visceral), better sleep, improved recovery, and skin/connective tissue support
+> - Water retention and tingling are the most common side effects; monitor IGF-1 and blood glucose with periodic labs
+
 ## What Is CJC-1295 DAC?
 
 CJC-1295 is a synthetic analog of growth hormone-releasing hormone (GHRH). Your hypothalamus naturally produces GHRH, which tells the pituitary gland to release growth hormone (GH). The problem with natural GHRH is that it gets chewed up by enzymes in minutes. It's effective but incredibly short-lived.
@@ -21,7 +27,7 @@ Researchers at ConjuChem Biotechnologies solved this by modifying the first 29 a
 
 And that albumin binding changes everything.
 
-## How the Drug Affinity Complex Works
+## How the Drug Affinity Complex (DAC) Extends Half-Life
 
 Here's the basic idea. Once CJC-1295 DAC is injected, the DAC moiety forms a covalent bond with circulating albumin. Albumin has a half-life of roughly 19-21 days in humans. By hitching a ride on albumin, CJC-1295 DAC extends its own half-life from about 30 minutes (for the non-DAC version) to approximately 5.8-8 days ([Teichman et al., 2006](https://pubmed.ncbi.nlm.nih.gov/16352683/)).
 
@@ -29,7 +35,7 @@ This means a single injection can elevate GH levels for nearly a week. Compare t
 
 The albumin binding also protects the peptide from enzymatic degradation by dipeptidyl peptidase IV (DPP-IV), which is the enzyme that normally destroys GHRH so quickly.
 
-## Mechanism of GH Release
+## How CJC-1295 DAC Stimulates Growth Hormone
 
 CJC-1295 DAC works through the GHRH receptor (GHRHR) on somatotroph cells in the anterior pituitary. When it binds this receptor, it triggers a signaling cascade that leads to GH synthesis and secretion.
 
@@ -41,7 +47,7 @@ A few key points about how this differs from other GH-boosting peptides:
 
 **Negative feedback still works.** Somatostatin, the hormone that puts the brakes on GH release, still functions. This provides a safety buffer that you don't get with direct GH injection. Your body can still regulate how much GH actually gets released.
 
-## Benefits of CJC-1295 DAC
+## Benefits: What CJC-1295 DAC Actually Does
 
 Most of the benefits come from the sustained elevation of GH and IGF-1. Here's what the research and clinical experience suggest:
 
@@ -94,9 +100,9 @@ These two get compared constantly because they're often used together. But they 
 
 CJC-1295 DAC is a GHRH analog. It acts on the GHRH receptor. Ipamorelin is a growth hormone secretagogue (GHS) that acts on the ghrelin receptor (GHS-R1a). They stimulate GH release through separate pathways, which is why combining them produces a synergistic effect rather than just an additive one.
 
-Ipamorelin is also selective. Unlike GHRP-6 or GHRP-2 (other ghrelin mimetics), ipamorelin doesn't significantly raise cortisol or prolactin at normal doses ([Raun et al., 2009](https://pubmed.ncbi.nlm.nih.gov/9849822/)). This makes the CJC-1295 DAC + ipamorelin combination popular: you get the sustained baseline GH elevation from CJC-1295 DAC plus the acute pulses from ipamorelin, without the hunger or cortisol spikes that come with other GHRPs.
+Ipamorelin is also selective. For a full breakdown of this pairing, see our [tesamorelin and ipamorelin stack guide](/articles/tesamorelin-ipamorelin-stack-guide). Unlike GHRP-6 or GHRP-2 (other ghrelin mimetics), ipamorelin doesn't significantly raise cortisol or prolactin at normal doses ([Raun et al., 2009](https://pubmed.ncbi.nlm.nih.gov/9849822/)). This makes the CJC-1295 DAC + ipamorelin combination popular: you get the sustained baseline GH elevation from CJC-1295 DAC plus the acute pulses from ipamorelin, without the hunger or cortisol spikes that come with other GHRPs.
 
-## Dosing Protocols
+## How to Dose CJC-1295 DAC
 
 **Standard dosing:** Most protocols call for 1-2 mg of CJC-1295 DAC injected subcutaneously, twice per week. Some users dose once weekly, but twice weekly tends to produce more stable GH and IGF-1 levels.
 
@@ -106,7 +112,7 @@ Ipamorelin is also selective. Unlike GHRP-6 or GHRP-2 (other ghrelin mimetics), 
 
 **Combination dosing:** When stacking with ipamorelin, a typical protocol would be CJC-1295 DAC at 2 mg twice weekly, with ipamorelin at 200-300 mcg 1-3 times daily (usually pre-bed or post-workout). The CJC-1295 DAC provides the baseline, and ipamorelin adds the acute pulses.
 
-**Reconstitution:** CJC-1295 DAC typically comes as a lyophilized powder. Reconstitute with bacteriostatic water. Store reconstituted peptide refrigerated and use within 3-4 weeks.
+**Reconstitution:** CJC-1295 DAC typically comes as a lyophilized powder. Reconstitute with bacteriostatic water. Store reconstituted peptide refrigerated and use within 3-4 weeks. See our [peptide storage guide](/articles/how-to-store-peptides) for details.
 
 ## Side Effects
 
@@ -134,9 +140,9 @@ CJC-1295 DAC is generally well-tolerated in studies, but side effects do occur. 
 
 Long-term effects of sustained GH elevation are a legitimate concern. Chronically high IGF-1 levels have been associated with increased cancer risk in epidemiological studies ([Renehan et al., 2004](https://pubmed.ncbi.nlm.nih.gov/15026468/)). However, the GH levels achieved with CJC-1295 DAC are typically within or slightly above the physiological range, which is quite different from supraphysiological GH dosing.
 
-Anyone with a history of cancer or active malignancy should avoid GH-stimulating peptides.
+Anyone with a history of cancer or active malignancy should avoid GH-stimulating peptides. For a broader look at risks, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know).
 
-## Practical Considerations
+## Practical Tips for CJC-1295 DAC Users
 
 **Fasting and food timing.** GH release is blunted by elevated blood sugar and insulin. For the no-DAC version, this matters a lot since you need to time injections away from meals. With the DAC version, the sustained release means you'll get GH output regardless, but some users still prefer to inject on an empty stomach or before bed.
 
