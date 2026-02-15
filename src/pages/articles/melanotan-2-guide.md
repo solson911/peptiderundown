@@ -9,280 +9,249 @@ tags: [melanotan 2, MT-2, tanning, melanin, MC1R, skin darkening, peptide]
 
 # Melanotan 2: Tanning Peptide Benefits, Risks, and Dosing
 
-Melanotan 2 is one of the most popular and most controversial peptides in the cosmetic space. It'll darken your skin without a tanning bed.
+Melanotan 2 is one of the most popular and most controversial peptides in the cosmetic space. It darkens your skin without a tanning bed.
 
-It can boost libido. It may suppress appetite.
-
-And it carries real risks that anyone considering it needs to understand.
-
-This is a balanced look at what MT-2 is, what it does, and what the actual evidence says about safety.
+It can boost libido. It may suppress appetite. And it carries real risks that anyone considering it needs to understand.
 
 > **Key Takeaways**
-> - Melanotan 2 produces real eumelanin (dark pigment) by stimulating MC1R receptors on melanocytes
-> - Side effects include nausea, facial flushing, mole darkening, and strong sexual arousal from MC4R activation
-> - The melanoma risk question remains unanswered, so anyone with a personal or family history should avoid MT-2
-> - MT-2 is not FDA-approved and sits in a legal gray area in most countries
+>
+> - Melanotan 2 produces real eumelanin (dark pigment) by stimulating **MC1R receptors** on melanocytes
+> - Side effects include nausea, facial flushing, mole darkening, and strong sexual arousal from **MC4R activation**
+> - The **melanoma risk question remains unanswered** — anyone with a personal or family history should avoid MT-2
+> - MT-2 is **not FDA-approved** and sits in a legal gray area in most countries
+
+## MT-2 at a Glance
+
+| Property | Detail |
+|----------|--------|
+| **Type** | Synthetic analog of alpha-MSH |
+| **Primary target** | MC1R (melanocortin 1 receptor) |
+| **Secondary targets** | MC3R, MC4R, MC5R |
+| **Primary effect** | Skin darkening (eumelanin production) |
+| **Secondary effects** | Sexual arousal, appetite suppression |
+| **Route** | Subcutaneous injection |
+| **FDA status** | Not approved |
+| **Related compound** | PT-141 (bremelanotide), derived from MT-2 research |
 
 ## What Is Melanotan 2?
 
-Melanotan 2 (MT-2) is a synthetic analog of alpha-melanocyte-stimulating hormone (alpha-MSH), a naturally occurring hormone that regulates skin pigmentation. It was originally developed at the University of Arizona in the 1990s as a potential preventive treatment for skin cancer. The idea was simple: if you could darken people's skin without UV exposure, you could protect them from UV damage.
+Melanotan 2 (MT-2) is a synthetic analog of alpha-melanocyte-stimulating hormone (alpha-MSH), a naturally occurring hormone that regulates skin pigmentation.
 
-The compound never made it through formal drug development. But it found a second life in the underground peptide market, where it became widely used for cosmetic tanning, and sometimes for its sexual side effects.
+It was originally developed at the University of Arizona in the 1990s as a potential preventive treatment for skin cancer. The idea: if you could darken people's skin without UV exposure, you could protect them from UV damage.
 
-MT-2 is closely related to another peptide you may have heard of, bremelanotide (PT-141), which was actually derived from MT-2 research and eventually received FDA approval for treating hypoactive sexual desire disorder in women.
+The compound never made it through formal drug development. But it found a second life in the underground peptide market for cosmetic tanning and its sexual side effects.
+
+MT-2 is closely related to **bremelanotide (PT-141)**, which was derived from MT-2 research and eventually received FDA approval for treating hypoactive sexual desire disorder in women.
 
 For detailed compound information, see the [Melanotan 2 profile on PeptideArc](https://peptidearc.com).
 
-## How Melanotan 2 Works: The Melanocortin Pathway
+## How Melanotan 2 Works
 
-MT-2 is a non-selective agonist of melanocortin receptors, particularly MC1R through MC5R. Its effects come from activating different receptors:
+MT-2 is a non-selective agonist of melanocortin receptors, particularly MC1R through MC5R.
 
-### MC1R: The Tanning Mechanism
+### Receptor Activity and Effects
 
-MC1R is the primary target for skin darkening. When MT-2 binds to MC1R on melanocytes (the pigment-producing cells in your skin), it triggers a cascade that increases melanin production.
+| Receptor | Location | Effect |
+|----------|----------|--------|
+| **MC1R** | Melanocytes (skin) | Skin darkening, eumelanin production |
+| **MC3R** | Brain, gut | Energy balance, fat metabolism |
+| **MC4R** | Hypothalamus | Sexual arousal, appetite suppression |
+| **MC5R** | Various | Sebaceous gland regulation |
 
-Here's the tanning cascade:
+### MC1R: The Tanning Cascade
 
 1. **MT-2 binds to MC1R** on melanocytes
-2. **Activates adenylate cyclase** → increases intracellular cAMP
-3. **cAMP activates protein kinase A** → upregulates tyrosinase
+2. **Activates adenylate cyclase** — increases intracellular cAMP
+3. **cAMP activates protein kinase A** — upregulates tyrosinase
 4. **More melanin produced** and transferred to surrounding skin cells
 5. **Skin darkens progressively** over days to weeks
 
-The key distinction: MT-2 produces eumelanin, the dark brown/black pigment that actually provides UV protection. This is different from pheomelanin (the reddish pigment found in fair-skinned, red-haired individuals), which doesn't protect against UV and may actually generate free radicals when exposed to sunlight.
+> **Key Distinction:** MT-2 produces **eumelanin**, the dark brown/black pigment that actually provides UV protection. This is different from pheomelanin (the reddish pigment in fair-skinned, red-haired individuals), which doesn't protect against UV and may generate free radicals.
 
-This means MT-2 can be particularly effective for fair-skinned individuals who normally burn rather than tan. Their melanocytes are capable of producing eumelanin but typically don't produce much. MT-2 essentially forces the issue.
+MT-2 can be particularly effective for fair-skinned individuals whose melanocytes can produce eumelanin but typically don't. Some UV exposure is still needed to optimize the tan, but far less than without the peptide.
 
-Some UV exposure is still needed to "activate" and optimize the tan. MT-2 primes the melanocytes, but some sunlight or tanning bed exposure helps distribute the pigment evenly. Most users report needing far less UV than they would without the peptide.
+### MC4R: Sexual and Appetite Effects
 
-### MC3R and MC4R: Sexual and Appetite Effects
+**Sexual arousal** from MC4R activation in the hypothalamus is often the most noticeable effect, sometimes occurring before any visible skin darkening. This effect was so pronounced that researchers developed **PT-141 (bremelanotide)** specifically to target it, receiving FDA approval in 2019 as Vyleesi ([Clayton et al., 2016](https://pubmed.ncbi.nlm.nih.gov/27045258/)).
 
-MT-2 doesn't just hit MC1R. It also activates MC3R and MC4R in the brain, and this is where the secondary effects come from.
+**Appetite suppression** through MC4R is also real but inconsistent and usually not dramatic ([Adan et al., 2006](https://pubmed.ncbi.nlm.nih.gov/16803859/)).
 
-**Sexual arousal:** MC4R activation in the hypothalamus produces significant pro-sexual effects in both men and women. Increased libido, spontaneous erections in men, and enhanced arousal in women are commonly reported. This isn't subtle. Many users describe it as the most noticeable effect of MT-2, sometimes occurring before any visible skin darkening.
+## What to Expect: Timeline
 
-This sexual effect was so pronounced that researchers developed PT-141 (bremelanotide) specifically to target it. PT-141 is essentially a modified version of MT-2 designed to activate MC4R without the tanning effects. It received FDA approval in 2019 as Vyleesi for female sexual dysfunction ([Clayton et al., 2016](https://pubmed.ncbi.nlm.nih.gov/27045258/)).
-
-**Appetite suppression:** MC4R is also involved in energy homeostasis. Activation tends to reduce appetite, and some MT-2 users report decreased hunger, especially in the hours following injection. The effect is inconsistent and usually not dramatic enough to be the primary reason anyone uses the peptide, but it's a real phenomenon supported by the receptor pharmacology ([Adan et al., 2006](https://pubmed.ncbi.nlm.nih.gov/16803859/)).
-
-### MC3R: Metabolic Effects
-
-MC3R activation may influence energy balance and fat metabolism, though these effects are less well-characterized than the MC1R and MC4R pathways. Some researchers believe MC3R contributes to the appetite-suppressive effects and may influence nutrient partitioning.
-
-## What to Expect: MT-2 Timeline and Effects
-
-### Tanning
-
-Most users follow a two-phase protocol:
-
-**Loading phase (weeks 1-3):**
-- Skin darkening begins gradually
-- Fair-skinned users may notice changes within 5-7 days
-- Already-tan individuals may see faster results
-- Color can appear slightly uneven initially but typically evens out
-
-**Maintenance phase (ongoing):**
-- Skin reaches desired shade, usually by 3-4 weeks
-- Less frequent dosing maintains the tan
-- Minimal UV exposure needed to keep color
-
-The tan produced by MT-2 looks natural because it IS real melanin. It's not a dye or a surface stain. However, some users report that the color can have a slightly different tone than their natural tan, sometimes leaning more "golden-brown" rather than "reddish-brown."
+| Phase | Timeline | What Happens |
+|-------|----------|-------------|
+| **First injection** | Hours | Sexual arousal effects, possible nausea and flushing |
+| **Loading (Week 1-2)** | 5-10 days | Skin darkening begins; fair skin may take longer |
+| **Loading (Week 2-3)** | 2-3 weeks | Color develops, may appear slightly uneven initially |
+| **Full tan** | 3-4 weeks | Desired shade reached, even distribution |
+| **Maintenance** | Ongoing | Less frequent dosing maintains color |
+| **After stopping** | 1-3 months | Tan fades gradually as skin cells turn over |
 
 ### Moles and Freckles
 
-MT-2 will darken existing moles and freckles. New moles may also appear.
-
-This is one of the more significant cosmetic concerns and also a safety consideration we'll address below. If you have moles, monitor them closely during and after MT-2 use.
-
-### Sexual Effects
-
-Typically noticeable within hours of injection. The effect is dose-dependent and tends to be most pronounced during the loading phase. Some users report the sexual effects diminish slightly as they become accustomed to the peptide, while the tanning effects continue to build.
+MT-2 **will** darken existing moles and freckles. New moles may also appear. This is both a cosmetic concern and a safety consideration. If you have moles, monitor them closely during and after use.
 
 ## Dosing Protocols
 
-MT-2 is administered via subcutaneous injection, typically into the abdominal fat. If you're unfamiliar with the process, our [subcutaneous injection guide](/articles/how-to-inject-peptides-subcutaneously) covers technique and best practices. Here's a commonly followed protocol:
+MT-2 is administered via subcutaneous injection, typically into the abdominal fat. For technique, see our [subcutaneous injection guide](/articles/how-to-inject-peptides-subcutaneously).
 
 ### Reconstitution
 
-MT-2 typically comes as a lyophilized (freeze-dried) powder in vials of 10 mg. It's reconstituted with bacteriostatic water. Adding 1 mL of water to a 10 mg vial gives a concentration of 10 mg/mL, making it easy to measure doses.
+MT-2 typically comes as lyophilized powder in **10 mg vials**. Adding 1 mL of bacteriostatic water gives a concentration of 10 mg/mL for easy dose measurement.
 
-### Loading Phase
+### Loading Phase Protocol
 
-- **Starting dose:** 0.1-0.25 mg per injection to assess tolerance
-- **Working dose:** 0.25-0.5 mg per injection
-- **Frequency:** Once daily, typically in the evening (nausea is easier to sleep through)
-- **Duration:** 2-4 weeks or until desired tan is achieved
-- **UV exposure:** Brief sessions (10-20 minutes) 2-3 times per week to help activate and distribute pigment
+| Parameter | Recommendation |
+|-----------|---------------|
+| **Starting dose** | 0.1-0.25 mg (assess tolerance) |
+| **Working dose** | 0.25-0.5 mg |
+| **Frequency** | Once daily, preferably evening |
+| **Duration** | 2-4 weeks or until desired tan |
+| **UV exposure** | Brief sessions (10-20 min), 2-3x/week |
 
-### Maintenance Phase
+### Maintenance Phase Protocol
 
-- **Dose:** 0.25-0.5 mg
-- **Frequency:** Once or twice per week
-- **UV exposure:** Minimal, once a week or as needed
+| Parameter | Recommendation |
+|-----------|---------------|
+| **Dose** | 0.25-0.5 mg |
+| **Frequency** | Once or twice per week |
+| **UV exposure** | Minimal, once per week or as needed |
 
 ### Dosing Tips
 
-- **Start low.** Nausea is the most common side effect and is dose-dependent. Beginning at 0.1 mg and working up lets your body adjust.
-- **Evening dosing** helps with nausea since you can sleep through the worst of it.
-- **Antihistamines** (like diphenhydramine) taken 30 minutes before injection can reduce nausea and flushing.
-- **Don't chase results.** More isn't better. Higher doses increase side effects without proportionally improving tanning.
-- **Rotate injection sites** to avoid local irritation.
+- **Start low** — nausea is dose-dependent; 0.1 mg lets your body adjust
+- **Evening dosing** — sleep through the worst of the nausea
+- **Antihistamines** — diphenhydramine 30 minutes before injection can reduce nausea and flushing
+- **Don't chase results** — higher doses increase side effects without proportionally improving tanning
+- **Rotate injection sites** — prevents local irritation
 
 ### Storage
 
-Reconstituted MT-2 should be refrigerated and used within 4-6 weeks. For detailed storage tips, see our [peptide storage guide](/articles/how-to-store-peptides). Unreconstituted powder can be stored at room temperature but lasts longer refrigerated or frozen.
+Reconstituted MT-2 should be refrigerated and used within **4-6 weeks**. For detailed storage tips, see our [peptide storage guide](/articles/how-to-store-peptides). Unreconstituted powder lasts longer refrigerated or frozen.
 
 ## Side Effects
 
-MT-2 has a definite side effect profile. For a broader overview of what peptides can do to your body, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know). Most effects are dose-dependent and manageable, but they're worth taking seriously.
+For a broader overview of peptide side effects, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know).
 
 ### Common Side Effects
 
-**Nausea:** The most frequent complaint, affecting roughly 50-70% of users at some point. Usually worst during the first few injections and with higher doses. Tends to improve as tolerance builds. Evening dosing and antihistamines help.
-
-**Facial flushing:** A warm, red flushing of the face occurring 15-30 minutes after injection. Usually lasts 30-60 minutes. Not harmful but can be noticeable.
-
-**Fatigue/drowsiness:** Some users feel tired after injecting, which is another reason evening dosing is popular.
-
-**Appetite suppression:** Usually mild. Can be a welcome side effect for some users.
-
-**Injection site reactions:** Minor redness, itching, or small bumps at the injection site. Rotating sites helps.
+| Side Effect | Frequency | Notes |
+|-------------|-----------|-------|
+| **Nausea** | 50-70% | Worst early on, improves with tolerance |
+| **Facial flushing** | Common | 15-30 min after injection, lasts 30-60 min |
+| **Fatigue/drowsiness** | Common | Another reason for evening dosing |
+| **Appetite suppression** | Mild | Can be welcome for some |
+| **Injection site reactions** | Common | Minor redness, itching |
 
 ### Less Common Side Effects
 
-**Spontaneous erections:** In men, this can be pronounced and sometimes inconvenient. It's a direct pharmacological effect of MC4R activation.
+| Side Effect | Notes |
+|-------------|-------|
+| **Spontaneous erections** | Pronounced MC4R effect in men |
+| **Mole/freckle darkening** | Essentially universal with sufficient use |
+| **New mole formation** | Reported by some users |
+| **Stomach cramping** | Accompanies nausea, resolves similarly |
+| **Dizziness** | Occasional, mild, transient |
 
-**Darkening of moles and freckles:** Essentially universal with enough exposure. Existing pigmented lesions get darker because the melanocytes within them respond to the same signal.
+### Rare or Serious
 
-**New mole formation:** Some users report new nevi (moles) appearing during MT-2 use.
+- **Melanoma risk** — see dedicated section below
+- **Rhabdomyolysis** — extremely rare case reports, unclear causality
+- **Priapism** — prolonged erections at higher doses, requiring medical attention
 
-**Stomach cramping:** Usually accompanies the nausea and resolves similarly.
-
-**Dizziness:** Occasional, usually mild and transient.
-
-### Rare or Serious Concerns
-
-**Melanoma risk:** This is the big one, and it deserves its own section below.
-
-**Rhabdomyolysis:** Extremely rare case reports exist but causality is unclear.
-
-**Priapism:** Prolonged erections requiring medical attention have been reported in rare cases at higher doses.
-
-## The Melanoma Question: Does MT-2 Increase Cancer Risk?
+## The Melanoma Question
 
 > **Important:** The melanoma risk question is unresolved. If you have a personal or family history of melanoma, **do not use MT-2**.
 
-Let's address the most serious question directly. Does MT-2 cause melanoma?
-
 ### The Theoretical Concern
 
-Melanoma develops from melanocytes, the same cells that MT-2 stimulates. The worry is that chronic stimulation of melanocytes could promote malignant transformation. If you're telling melanocytes to be more active, are you also increasing the chance that one goes rogue?
+Melanoma develops from melanocytes, the same cells MT-2 stimulates. Chronic stimulation could theoretically promote malignant transformation.
 
-### What the Evidence Shows
+### Evidence Summary
 
-The evidence is mixed and limited:
+| Evidence Type | Finding |
+|--------------|---------|
+| **Case reports** | Melanoma diagnoses in MT-2 users reported ([Hjuler et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25899937/)), but can't establish causation |
+| **Animal data** | MT-2 did not promote melanoma growth in one mouse model ([Langan et al., 2009](https://pubmed.ncbi.nlm.nih.gov/19175862/)) |
+| **Mechanistic concern** | Melanocyte activation could accelerate pre-existing atypical cells |
+| **Population data** | No large-scale epidemiological studies exist |
 
-**Case reports:** Several published case reports describe melanoma diagnoses in MT-2 users ([Hjuler et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25899937/)). However, case reports can't establish causation. Melanoma is common enough that some MT-2 users will develop it by coincidence.
+### Practical Guidance
 
-**Animal data:** In one animal study, MT-2 did not promote melanoma growth in a mouse model ([Langan et al., 2009](https://pubmed.ncbi.nlm.nih.gov/19175862/)). But animal models have significant limitations when it comes to human melanoma.
-
-**Mechanistic concerns:** Some researchers have pointed out that activating melanocyte proliferation and melanin synthesis could theoretically accelerate the progression of pre-existing atypical melanocytes. The concern is less about MT-2 "causing" melanoma from scratch and more about potentially accelerating something that was already developing.
-
-**Population data:** No large-scale epidemiological studies have been conducted on MT-2 and melanoma risk. Given that MT-2 use is largely underground and untracked, such studies are extremely difficult to conduct.
-
-### A Balanced Take
-
-The honest answer is: we don't know for certain whether MT-2 increases melanoma risk, and we may not know for a long time. The theoretical concerns are legitimate. The absence of clear evidence of harm doesn't mean it's safe.
-
-What we can say:
-
-- If you have a personal or family history of melanoma, MT-2 is a bad idea
-- If you have atypical moles or many moles, the risk calculus gets worse
-- If you use MT-2, monitor your skin carefully, including regular dermatologist checks
-- The darkening of moles makes self-monitoring harder, which is itself a safety concern
-- Minimizing UV exposure while using MT-2 reduces one known risk factor, even if the MT-2-specific risk remains uncertain
-
-Anyone considering MT-2 should go in with eyes open about this uncertainty.
+- **Personal or family history of melanoma** — do not use MT-2
+- **Atypical or many moles** — risk calculus gets worse
+- **If using MT-2** — monitor skin carefully, get regular dermatologist checks
+- **Mole darkening** — makes self-monitoring harder, which is itself a safety concern
+- **Minimize UV exposure** — reduces one known risk factor regardless
 
 ## Other Safety Considerations
 
 ### Purity and Contamination
 
-Because MT-2 is not pharmaceutical grade and is purchased from unregulated sources, contamination is a real concern. Studies analyzing peptides purchased online have found issues with purity, incorrect dosing, and contamination with other substances ([Cohen et al., 2023](https://pubmed.ncbi.nlm.nih.gov/36683093/)).
+MT-2 is not pharmaceutical grade. Studies analyzing online peptides have found purity issues, incorrect dosing, and contamination ([Cohen et al., 2023](https://pubmed.ncbi.nlm.nih.gov/36683093/)). Buy from suppliers providing third-party COAs showing HPLC purity and endotoxin testing.
 
-Buy from suppliers that provide third-party certificates of analysis (COA) showing purity by HPLC, and check for endotoxin testing.
+### Long-Term Effects
 
-### Long-Term Effects Unknown
+MT-2 has been used recreationally for 15-20 years. No systematic long-term data exists. We genuinely don't know what 10+ years of intermittent melanocyte stimulation does.
 
-MT-2 has been used recreationally for about 15-20 years now. Long-term data on chronic users doesn't exist in any systematic way. We genuinely don't know what 10+ years of intermittent melanocyte stimulation does.
+### UV Interaction
 
-### Interactions With UV
+MT-2 makes you more responsive to UV. The eumelanin it produces is protective, but UV still causes DNA damage regardless of melanin levels. Use reasonable sun exposure practices.
 
-MT-2 makes you more responsive to UV. While the eumelanin it produces is protective, users should still be cautious about UV exposure.
+## Legal Status
 
-The fact that you can tan more easily doesn't mean UV is suddenly safe. UV still causes DNA damage regardless of your melanin levels. Use reasonable sun exposure practices.
+MT-2 occupies a gray area in most countries. For a full breakdown, see our [peptide regulations guide](/articles/are-peptides-legal-fda-regulations-2026).
 
-## Legal Status of Melanotan 2
+| Country | Status |
+|---------|--------|
+| **United States** | Not FDA-approved, not scheduled; sold as "research chemical" |
+| **United Kingdom** | Illegal to sell, legal to possess for personal use |
+| **Australia** | Schedule 4 (prescription-only); importing without prescription is illegal |
+| **European Union** | Not approved; regulations vary by country |
+| **Canada** | Not approved; available from research suppliers |
 
-MT-2 occupies a gray area in most countries. For a full breakdown of peptide legality, see our [peptide regulations guide](/articles/are-peptides-legal-fda-regulations-2026).
-
-- **United States:** Not FDA-approved. Not scheduled as a controlled substance. Sold as a "research chemical" by peptide suppliers. Purchasing for personal use is technically legal in most states, but selling it for human consumption is not.
-- **United Kingdom:** Illegal to sell but not illegal to possess for personal use.
-- **Australia:** Prescription-only medicine (Schedule 4). Importing without a prescription is illegal, but enforcement has been inconsistent.
-- **European Union:** Not approved. Regulations vary by country.
-- **Canada:** Not approved. Available from research chemical suppliers.
-
-The regulatory situation could change. Several countries have discussed tightening regulations on cosmetic peptides. Stay current on your local laws.
+The regulatory situation could change. Several countries have discussed tightening regulations on cosmetic peptides.
 
 ## Frequently Asked Questions
 
 ### How long does it take for MT-2 to work?
 
-Most users notice some skin darkening within 5-10 days of starting the loading phase. A full, developed tan typically takes 3-4 weeks. Fair-skinned individuals may take slightly longer.
+Most users notice skin darkening within **5-10 days**. A full tan typically takes **3-4 weeks**. Fair-skinned individuals may take slightly longer.
 
 ### Do you still need sun exposure with MT-2?
 
-Some UV helps activate and distribute the melanin, but you need far less than tanning without MT-2. Brief exposures of 10-20 minutes a few times per week are typically sufficient during loading. Some users report darkening even without deliberate sun exposure, though results are better with some UV.
+Some UV helps activate and distribute the melanin, but far less than tanning without MT-2. Brief exposures of **10-20 minutes** a few times per week are typically sufficient. Some users report darkening without deliberate sun exposure.
 
-### How long does the tan last after stopping MT-2?
+### How long does the tan last after stopping?
 
-The tan fades gradually over 1-3 months after stopping, as melanin-containing skin cells naturally turn over. Maintenance dosing (once or twice weekly) preserves the color indefinitely.
+The tan fades gradually over **1-3 months** as melanin-containing skin cells turn over. Maintenance dosing preserves the color indefinitely.
 
 ### Can women use MT-2?
 
-Yes. MT-2 works the same way in women.
-
-Women also commonly experience the sexual arousal effects (MC4R activation). The dosing protocols are the same regardless of sex.
+Yes. MT-2 works the same way in women. Women also commonly experience the sexual arousal effects. Dosing protocols are the same regardless of sex.
 
 ### Is MT-2 the same as PT-141?
 
-No, though they're related. PT-141 (bremelanotide) was derived from MT-2 research. PT-141 is a cyclic peptide fragment designed to target MC4R for sexual effects without the tanning.
-
-PT-141 is FDA-approved (as Vyleesi). MT-2 is not approved and has broader receptor activity.
-
-### Can MT-2 darken already dark skin?
-
-Yes, but the effect is less dramatic. People with naturally darker skin already have high melanin levels. MT-2 can still increase pigmentation, but the change is subtler compared to what fair-skinned users experience.
-
-### Will MT-2 protect me from sunburn?
-
-The eumelanin produced by MT-2 does provide some UV protection. Many users report being able to tolerate more sun without burning.
-
-But it's not sunscreen. You can still burn, and UV still causes DNA damage. Don't rely on MT-2 as sun protection.
-
-### Is MT-2 addictive?
-
-Not in a physical or chemical sense. But some users develop a psychological preference for maintaining their tan and continue using it long-term. There's no withdrawal syndrome from stopping.
-
-### Can MT-2 cause permanent skin changes?
-
-The tan itself is temporary. But new moles or darkened existing moles may persist after stopping. This is another reason dermatological monitoring is important.
+No. PT-141 (bremelanotide) was derived from MT-2 research but is a cyclic peptide fragment designed to target MC4R for sexual effects without tanning. PT-141 is FDA-approved (as Vyleesi). MT-2 is not.
 
 ### What's the difference between Melanotan 1 and Melanotan 2?
 
-Melanotan 1 (afamelanotide) is a more selective MC1R agonist with fewer off-target effects. It was actually approved in Europe (as Scenesse) for patients with erythropoietic protoporphyria, a genetic condition causing extreme sun sensitivity.
+| Feature | Melanotan 1 (Afamelanotide) | Melanotan 2 |
+|---------|----------------------------|-------------|
+| **Selectivity** | More selective MC1R agonist | Non-selective (MC1R-MC5R) |
+| **Tanning effect** | Yes | Yes |
+| **Sexual side effects** | Minimal | Significant |
+| **Nausea** | Less | More |
+| **Approved use** | EU-approved (Scenesse) for EPP | Not approved anywhere |
+| **Availability** | Harder to obtain, more expensive | Widely available |
 
-MT-1 produces tanning with less nausea and fewer sexual side effects. It's also much harder to obtain and more expensive. MT-2's broader receptor activity gives it more side effects but also the sexual and appetite effects some users want.
+### Will MT-2 protect me from sunburn?
+
+The eumelanin provides some UV protection. Many users tolerate more sun without burning. But it's not sunscreen. UV still causes DNA damage regardless of melanin levels.
+
+### Can MT-2 cause permanent skin changes?
+
+The tan itself is temporary. But new moles or darkened existing moles may persist after stopping. Dermatological monitoring is important.
 
 ## The Bottom Line
 
@@ -290,8 +259,10 @@ MT-2 works for tanning. That's not really in question.
 
 It produces real melanin, creates a natural-looking tan, and does so with minimal UV exposure. The sexual side effects are a bonus for many users.
 
-But it's not without real risks. The melanoma question hangs over the compound, and the honest answer is that we don't have enough data to know for sure. Add in the lack of regulation, potential purity issues, and completely unknown long-term safety profile, and you have a compound that demands informed decision-making.
+But it's not without real risks. The melanoma question hangs over the compound, and the honest answer is that we don't have enough data to know for sure.
 
-If you choose to use MT-2, start with low doses, monitor your skin obsessively, get regular dermatologist checks, and stay honest with yourself about the risk-benefit tradeoff. Don't let the desire for a good tan override common sense about your health.
+Add in the lack of regulation, potential purity issues, and unknown long-term safety profile, and you have a compound that demands informed decision-making.
+
+If you choose to use MT-2, start with low doses, monitor your skin carefully, get regular dermatologist checks, and stay honest with yourself about the risk-benefit tradeoff.
 
 For more on MT-2 and related melanocortin peptides, visit [PeptideArc](https://peptidearc.com).
