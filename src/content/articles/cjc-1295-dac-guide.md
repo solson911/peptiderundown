@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/Article.astro
 title: "CJC-1295 with DAC: Long-Acting Growth Hormone Releaser"
 description: "A complete guide to CJC-1295 DAC - the long-acting GHRH analog with Drug Affinity Complex. Covers mechanism, benefits, dosing, side effects, and how it compares to CJC-1295 no-DAC and ipamorelin."
 image: /images/articles/cjc-1295.webp

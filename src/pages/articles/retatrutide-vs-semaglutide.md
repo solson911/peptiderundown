@@ -1,9 +1,11 @@
 ---
+layout: ../../layouts/Article.astro
 title: "Retatrutide vs Semaglutide: Why the Triple Agonist Wins"
 description: "A head-to-head comparison of retatrutide and semaglutide for weight loss, with clinical trial data, side effect profiles, and practical guidance."
 image: /images/articles/comparison.webp
 date: 2026-02-14
 author: "Peptide Rundown"
+category: "Peptide Guides"
 tags: ["retatrutide", "semaglutide", "weight loss", "GLP-1", "GIP", "glucagon"]
 ---
 

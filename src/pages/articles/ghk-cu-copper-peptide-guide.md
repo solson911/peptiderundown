@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/Article.astro
 title: "GHK-Cu: The Copper Peptide for Skin, Hair, and Healing"
 description: "A complete guide to GHK-Cu, the naturally occurring copper peptide with proven benefits for skin rejuvenation, hair growth, wound healing, and anti-aging. Mechanisms, dosing, and research."
 image: /images/articles/ghk-cu.webp

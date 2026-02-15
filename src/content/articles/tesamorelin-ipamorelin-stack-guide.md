@@ -1,9 +1,11 @@
 ---
+layout: ../../layouts/Article.astro
 title: "Tesamorelin and Ipamorelin: The Growth Hormone Stack Explained"
 description: "A complete guide to the tesamorelin and ipamorelin stack for growth hormone optimization, fat loss, and anti-aging benefits."
 image: /images/articles/tesamorelin-ipamorelin.webp
 date: 2026-02-14
 author: "Peptide Rundown"
+category: "Peptide Guides"
 tags: ["tesamorelin", "ipamorelin", "growth hormone", "peptide stack", "fat loss"]
 ---
 

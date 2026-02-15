@@ -1,8 +1,10 @@
 ---
+layout: ../../layouts/Article.astro
 title: "KPV Peptide: The Anti-Inflammatory Peptide for Gut Health"
 description: "A guide to KPV peptide, the alpha-MSH fragment showing promise for gut inflammation, IBD, colitis, and skin health."
 image: /images/articles/kpv.webp
 date: 2026-02-14
+category: "Peptide Guides"
 tags: ["kpv", "peptides", "gut-health", "anti-inflammatory", "ibd"]
 ---
 
