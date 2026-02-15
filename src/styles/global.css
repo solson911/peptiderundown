@@ -144,6 +144,11 @@ html {
 .prose h3 {
   font-size: 1.3rem;
   color: #0f766e;
+  margin-top: 2rem;
+}
+
+.prose h4 {
+  margin-top: 1.5rem;
 }
 
 /* ===== Bullet List Styling ===== */
