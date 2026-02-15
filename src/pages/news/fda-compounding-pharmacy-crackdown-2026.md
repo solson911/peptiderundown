@@ -3,6 +3,7 @@ title: "FDA Cracks Down on Compounding Pharmacies Selling Semaglutide and Tirzep
 description: "The FDA intensifies enforcement against compounding pharmacies selling semaglutide and tirzepatide as drug shortages end."
 date: 2026-02-14
 category: "Legal"
+image: /images/news/fda-compounding-pharmacy-crackdown-2026.webp
 layout: ../../layouts/NewsArticle.astro
 author: "PeptideRundown Team"
 ---

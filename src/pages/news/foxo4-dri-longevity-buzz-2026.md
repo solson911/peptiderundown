@@ -3,6 +3,7 @@ title: "Peptide Community Buzzing About FOXO4-DRI After New Longevity Data"
 description: "Growing interest in the senolytic peptide FOXO4-DRI after new pre-clinical longevity data emerges. What the buzz is about."
 date: 2026-02-13
 category: "Buzz"
+image: /images/news/foxo4-dri-longevity-buzz-2026.webp
 layout: ../../layouts/NewsArticle.astro
 author: "PeptideRundown Team"
 ---
