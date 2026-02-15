@@ -13,13 +13,25 @@ Peptides aren't cheap. And nothing's more frustrating than pulling a vial out of
 
 Proper storage is straightforward once you understand the basics. This guide covers everything you need to know about keeping both lyophilized (freeze-dried) and reconstituted peptides in optimal condition.
 
+## Storage Quick Reference
+
+| State | Temperature | Light | Shelf Life |
+|---|---|---|---|
+| **Lyophilized (powder)** | Freezer (-20°C) ideal; fridge OK | Dark | 2-3 years frozen |
+| **Reconstituted (BAC water)** | Fridge (2-8°C) only | Dark | 3-4 weeks |
+| **Reconstituted (sterile water)** | Fridge (2-8°C) only | Dark | 48-72 hours |
+
 ## Lyophilized vs. Reconstituted: What's the Difference?
 
 **Lyophilized peptides** are freeze-dried powders. When you receive a peptide from a supplier, it almost always arrives in this form: a small cake or loose powder sitting at the bottom of a sealed glass vial. In this state, peptides are remarkably stable. The freeze-drying process removes virtually all water, and without water, most degradation pathways simply can't proceed.
 
+> **⚠️ Key Rule:** Never freeze reconstituted peptides. Never leave reconstituted peptides at room temperature. Fridge only.
+
 **Reconstituted peptides** are lyophilized peptides that have been mixed with a solvent, usually bacteriostatic water (BAC water) or sterile water, to create an injectable solution. Once you add liquid, you've restarted the clock on degradation. The peptide is now in solution, exposed to potential hydrolysis, oxidation, and microbial contamination.
 
-Think of it like coffee. Whole beans last months in your pantry. But once you brew a pot, you've got hours before it goes stale. Peptides work on a longer timeline, but the principle is identical.
+Think of it like coffee. Whole beans last months in your pantry.
+
+But once you brew a pot, you've got hours before it goes stale. Peptides work on a longer timeline, but the principle is identical.
 
 ## Storing Lyophilized Peptides
 
@@ -126,7 +138,9 @@ Knowing what to look for can save you from injecting a degraded product. Watch f
 - The peptide doesn't seem to produce its expected effects at your usual dose
 - Increased injection site reactions (redness, swelling) that you didn't experience before with fresh product
 
-If any of these occur, err on the side of caution. Discard the vial and start fresh. Degraded peptides may not just be ineffective. They can potentially contain harmful breakdown products.
+If any of these occur, err on the side of caution. Discard the vial and start fresh.
+
+Degraded peptides may not just be ineffective. They can potentially contain harmful breakdown products.
 
 ## Traveling with Peptides
 
@@ -184,7 +198,9 @@ No. Freezing reconstituted peptides causes ice crystal formation that physically
 
 ### How long do lyophilized peptides last at room temperature?
 
-Most will tolerate room temperature for weeks to a few months without significant degradation. But this shortens their overall shelf life compared to cold storage. If you accidentally left a lyophilized vial out for a day or two, it's almost certainly fine. But make long-term storage cold.
+Most will tolerate room temperature for weeks to a few months without significant degradation. But this shortens their overall shelf life compared to cold storage.
+
+If you accidentally left a lyophilized vial out for a day or two, it's almost certainly fine. But make long-term storage cold.
 
 ### Does the type of peptide affect storage requirements?
 
@@ -202,7 +218,9 @@ While mild discoloration in certain peptides might be within normal range, it's 
 
 ### What's the difference between bacteriostatic water and sterile water?
 
-Bacteriostatic water contains 0.9% benzyl alcohol as a preservative. Sterile water is just that: pure water with no additives. BAC water allows multi-dose use over weeks because it inhibits microbial growth. Sterile water should be used for single-dose applications or consumed quickly.
+Bacteriostatic water contains 0.9% benzyl alcohol as a preservative. Sterile water is just that: pure water with no additives.
+
+BAC water allows multi-dose use over weeks because it inhibits microbial growth. Sterile water should be used for single-dose applications or consumed quickly.
 
 ### I lost power and my fridge was off for six hours. Are my peptides ruined?
 

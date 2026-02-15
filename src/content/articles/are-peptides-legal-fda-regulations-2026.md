@@ -25,6 +25,13 @@ Peptides aren't a single regulatory category. They span a wide spectrum from FDA
 
 Here's the simplified breakdown:
 
+| Category | Legal Status | Examples |
+|---|---|---|
+| **FDA-approved** | ✅ Legal with prescription | Semaglutide, tirzepatide, tesamorelin |
+| **Compounded** | ⚠️ Restricted (varies) | BPC-157, CJC-1295, ipamorelin |
+| **Research chemicals** | ⚠️ Gray area | Most non-approved peptides |
+| **Supplements** | ✅ Legal | Collagen peptides, bioactive blends |
+
 **FDA-approved prescription peptides** are fully legal with a valid prescription. These include semaglutide (Ozempic, Wegovy), tirzepatide (Mounjaro, Zepbound), tesamorelin (Egrifta), and others. They're manufactured by pharmaceutical companies, backed by clinical trials, and sold through licensed pharmacies.
 
 **Compounded peptides** occupy a middle zone. Under Section 503A and 503B of the Federal Food, Drug, and Cosmetic Act, compounding pharmacies can prepare custom formulations of certain drugs, including peptides, under specific conditions. But the FDA has been tightening the screws on this since 2024.
@@ -34,6 +41,8 @@ Here's the simplified breakdown:
 **Supplement-grade peptides** include things like collagen peptides, creatine peptides, and certain bioactive peptide blends sold as dietary supplements. These are legal for consumer sale under DSHEA (the Dietary Supplement Health and Education Act of 1994) as long as they don't make drug claims.
 
 ## The FDA's "Difficult to Compound" List: The Biggest Shake-Up
+
+> **⚠️ This is the #1 regulatory change affecting the peptide community since 2024.** Many previously accessible compounded peptides are now restricted or unavailable.
 
 This is the single most consequential regulatory development for the peptide community in recent years. Under the FDA Safety and Innovation Act, the agency maintains a list of drugs that are "difficult to compound" due to safety or efficacy concerns. Once a substance lands on this list, 503A compounding pharmacies essentially can't make it anymore.
 
@@ -96,11 +105,15 @@ Using these without a prescription is illegal. Selling them without being a lice
 
 This is where things get murky. Peptides like BPC-157, TB-500, CJC-1295/Ipamorelin, DSIP, Selank, Semax, and many others have never received FDA approval for human use. They're sold by research chemical companies with disclaimers that they're for in-vitro or animal research only.
 
-Is it legal to buy them? Technically, purchasing a chemical for legitimate research purposes isn't prohibited. But here's the catch: if you're buying them for personal use (i.e., injecting them), you're not conducting legitimate research. The "research use only" label is a legal fiction that protects the seller more than the buyer.
+Is it legal to buy them? Technically, purchasing a chemical for legitimate research purposes isn't prohibited.
+
+But here's the catch: if you're buying them for personal use (i.e., injecting them), you're not conducting legitimate research. The "research use only" label is a legal fiction that protects the seller more than the buyer.
 
 The FDA has increasingly taken the position that these products are unapproved new drugs being marketed illegally. In 2025, several prominent research peptide companies received warning letters, and a few were shut down entirely.
 
-Is the average individual buyer likely to face prosecution for purchasing research peptides? Historically, no. Enforcement has focused on sellers, not buyers. But the legal risk exists, and it's growing.
+Is the average individual buyer likely to face prosecution for purchasing research peptides? Historically, no.
+
+Enforcement has focused on sellers, not buyers. But the legal risk exists, and it's growing.
 
 ### Supplement-Grade Peptides
 
@@ -192,7 +205,9 @@ The FDA has a personal importation policy that allows, under very limited circum
 
 ### Did the FDA ban BPC-157?
 
-The FDA didn't issue an outright "ban" on BPC-157. What they did was determine that BPC-157 doesn't meet the criteria to be a bulk drug substance eligible for compounding under Section 503B. The practical effect is similar to a ban for compounding purposes, though it doesn't criminalize possession. Research chemical companies may still sell it labeled for research use, but that market is under increasing scrutiny.
+The FDA didn't issue an outright "ban" on BPC-157. What they did was determine that BPC-157 doesn't meet the criteria to be a bulk drug substance eligible for compounding under Section 503B.
+
+The practical effect is similar to a ban for compounding purposes, though it doesn't criminalize possession. Research chemical companies may still sell it labeled for research use, but that market is under increasing scrutiny.
 
 ### What about peptide supplements like collagen peptides?
 
@@ -212,8 +227,12 @@ However, a doctor cannot legally prescribe a substance that has never been FDA-a
 
 ## The Bottom Line
 
-The peptide regulatory environment in 2026 is more complex and more restrictive than it was just two years ago. The days of easily ordering a wide range of peptides from research vendors or getting them compounded at any pharmacy are fading. That doesn't mean peptides are gone or that access is impossible. It means the pathways to legal access are narrower and require more diligence.
+The peptide regulatory environment in 2026 is more complex and more restrictive than it was just two years ago. The days of easily ordering a wide range of peptides from research vendors or getting them compounded at any pharmacy are fading.
 
-Work with licensed providers. Use licensed pharmacies. Keep your documentation. And stay current on the regulations, because they're still evolving.
+That doesn't mean peptides are gone or that access is impossible. It means the pathways to legal access are narrower and require more diligence.
+
+Work with licensed providers. Use licensed pharmacies.
+
+Keep your documentation. And stay current on the regulations, because they're still evolving.
 
 For compound-specific regulatory updates and detailed peptide profiles, visit [peptidearc.com](https://peptidearc.com).

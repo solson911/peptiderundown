@@ -25,7 +25,7 @@ So what is it, what does the evidence say, and why do so many people in the bioh
 
 Cerebrolysin is a peptide preparation derived from purified porcine (pig) brain tissue. It's manufactured by the Austrian pharmaceutical company EVER Neuro Pharma (formerly Ebewe Pharma) through a standardized enzymatic process that breaks down brain proteins into small peptides and free amino acids.
 
-The final product contains roughly 25% low-molecular-weight peptides (below 10 kDa) and 75% free amino acids. It's the peptide fraction that provides the biological activity. These peptides mimic the effects of naturally occurring neurotrophic factors, which are the proteins your brain uses to grow, maintain, and repair neurons.
+The final product contains roughly 25% low-molecular-weight peptides (below 10 kDa) and **75%** free amino acids. It's the peptide fraction that provides the biological activity. These peptides mimic the effects of naturally occurring neurotrophic factors, which are the proteins your brain uses to grow, maintain, and repair neurons.
 
 Think of it as a cocktail of brain-derived signaling molecules. Not a single compound with a single target, but a complex mixture that acts on multiple pathways simultaneously. This multi-target approach is actually what makes it interesting, because brain injuries and neurodegenerative diseases involve dozens of overlapping mechanisms.
 
@@ -44,7 +44,7 @@ In countries where it's approved, it's been used on millions of patients over se
 
 ## How Cerebrolysin Works: Multiple Neuroprotective Pathways
 
-Cerebrolysin's effects come from its ability to mimic and support the brain's own repair mechanisms. The key pathways include:
+Cerebrolysin works through multiple brain repair pathways simultaneously:
 
 ### Neurotrophic Factor-Like Activity
 
@@ -120,10 +120,12 @@ Dosing varies significantly depending on the condition being treated:
 
 ### Medical Protocols (From Clinical Trials)
 
-- **Acute stroke:** 30-50 mL IV daily for 10-21 days, started within 24-72 hours of stroke onset
-- **TBI:** 30 mL IV daily for 5-10 days
-- **Alzheimer's/dementia:** 10-30 mL IV daily for 4-week cycles, repeated 2-4 times per year
-- **Mild cognitive impairment:** 10 mL IV or 5 mL IM daily for 10-20 days
+| Condition | Dose | Route | Duration |
+|---|---|---|---|
+| **Acute stroke** | 30-50 mL daily | IV | 10-21 days (start within 24-72h) |
+| **TBI** | 30 mL daily | IV | 5-10 days |
+| **Alzheimer's/dementia** | 10-30 mL daily | IV | 4-week cycles, 2-4x/year |
+| **Mild cognitive impairment** | 5-10 mL daily | IM or IV | 10-20 days |
 
 ### Biohacking/Nootropic Protocols
 
@@ -167,6 +169,8 @@ A 2012 safety meta-analysis covering over 3,000 patients in clinical trials foun
 
 ## Where to Get Cerebrolysin: Availability and Legal Status
 
+> **⚠️ Important:** Cerebrolysin is approved in **40+ countries** but is NOT available in the US (no FDA submission has been made).
+
 This is where things get complicated for people in the US and a few other countries.
 
 **Where it's available:** Cerebrolysin is registered and sold as a pharmaceutical product in over 40 countries, including Russia, China, South Korea, Austria, Germany, Mexico, and many others. In these countries, you can get it by prescription at a pharmacy.
@@ -185,7 +189,9 @@ Cerebrolysin doesn't directly create new neurons in any proven way. What it does
 
 ### How quickly does Cerebrolysin work?
 
-Some users report noticeable cognitive effects within the first few days. In clinical trials for stroke, measurable neurological improvements appeared within 10-21 days of daily treatment. For Alzheimer's patients, improvements on cognitive testing were seen after 4 weeks of treatment. Individual responses vary widely.
+Some users report noticeable cognitive effects within the first few days. In clinical trials for stroke, measurable neurological improvements appeared within 10-21 days of daily treatment.
+
+For Alzheimer's patients, improvements on cognitive testing were seen after 4 weeks of treatment. Individual responses vary widely.
 
 ### Is Cerebrolysin safe for long-term use?
 
@@ -217,7 +223,9 @@ Cerebrolysin is derived from pig brain tissue, so it's an animal product. There'
 
 Cerebrolysin sits in a fascinating position. It has more clinical evidence than most compounds in the nootropic and peptide space, yet it remains virtually unknown in American medicine. The research on stroke recovery and Alzheimer's disease is genuinely compelling, and the safety record over 40+ years of widespread use is reassuring.
 
-But it's not without limitations. The evidence, while extensive, includes many studies of moderate quality. It requires injection, which limits accessibility. And the lack of FDA approval means quality assurance depends entirely on sourcing from legitimate channels.
+But it's not without limitations. The evidence, while extensive, includes many studies of moderate quality.
+
+It requires injection, which limits accessibility. And the lack of FDA approval means quality assurance depends entirely on sourcing from legitimate channels.
 
 For people dealing with brain injuries, neurodegenerative conditions, or cognitive decline, Cerebrolysin represents an option that's backed by real science. For healthy individuals looking for cognitive enhancement, the rationale is plausible but less proven. Either way, it's a compound that deserves more attention than it currently gets in Western medicine.
 

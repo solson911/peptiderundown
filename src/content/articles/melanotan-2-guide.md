@@ -9,7 +9,9 @@ tags: [melanotan 2, MT-2, tanning, melanin, MC1R, skin darkening, peptide]
 
 # Melanotan 2: Tanning Peptide Benefits, Risks, and Dosing
 
-Melanotan 2 is one of the most popular and most controversial peptides in the cosmetic space. It'll darken your skin without a tanning bed. It can boost libido. It may suppress appetite.
+Melanotan 2 is one of the most popular and most controversial peptides in the cosmetic space. It'll darken your skin without a tanning bed.
+
+It can boost libido. It may suppress appetite.
 
 And it carries real risks that anyone considering it needs to understand.
 
@@ -39,14 +41,13 @@ MT-2 is a non-selective agonist of melanocortin receptors, particularly MC1R thr
 
 MC1R is the primary target for skin darkening. When MT-2 binds to MC1R on melanocytes (the pigment-producing cells in your skin), it triggers a cascade that increases melanin production.
 
-Here's the process:
+Here's the tanning cascade:
 
-1. MT-2 binds to MC1R on melanocytes
-2. This activates adenylate cyclase, increasing intracellular cAMP
-3. Elevated cAMP activates protein kinase A
-4. This upregulates tyrosinase, the rate-limiting enzyme in melanin synthesis
-5. More melanin is produced and transferred to surrounding skin cells
-6. Skin darkens progressively
+1. **MT-2 binds to MC1R** on melanocytes
+2. **Activates adenylate cyclase** → increases intracellular cAMP
+3. **cAMP activates protein kinase A** → upregulates tyrosinase
+4. **More melanin produced** and transferred to surrounding skin cells
+5. **Skin darkens progressively** over days to weeks
 
 The key distinction: MT-2 produces eumelanin, the dark brown/black pigment that actually provides UV protection. This is different from pheomelanin (the reddish pigment found in fair-skinned, red-haired individuals), which doesn't protect against UV and may actually generate free radicals when exposed to sunlight.
 
@@ -89,7 +90,9 @@ The tan produced by MT-2 looks natural because it IS real melanin. It's not a dy
 
 ### Moles and Freckles
 
-MT-2 will darken existing moles and freckles. New moles may also appear. This is one of the more significant cosmetic concerns and also a safety consideration we'll address below. If you have moles, monitor them closely during and after MT-2 use.
+MT-2 will darken existing moles and freckles. New moles may also appear.
+
+This is one of the more significant cosmetic concerns and also a safety consideration we'll address below. If you have moles, monitor them closely during and after MT-2 use.
 
 ### Sexual Effects
 
@@ -166,6 +169,8 @@ MT-2 has a definite side effect profile. For a broader overview of what peptides
 **Priapism:** Prolonged erections requiring medical attention have been reported in rare cases at higher doses.
 
 ## The Melanoma Question: Does MT-2 Increase Cancer Risk?
+
+> **⚠️ Important:** The melanoma risk question is unresolved. If you have a personal or family history of melanoma, **do not use MT-2**.
 
 Let's address the most serious question directly. Does MT-2 cause melanoma?
 
@@ -279,7 +284,9 @@ MT-1 produces tanning with less nausea and fewer sexual side effects. It's also 
 
 ## The Bottom Line
 
-MT-2 works for tanning. That's not really in question. It produces real melanin, creates a natural-looking tan, and does so with minimal UV exposure. The sexual side effects are a bonus for many users.
+MT-2 works for tanning. That's not really in question.
+
+It produces real melanin, creates a natural-looking tan, and does so with minimal UV exposure. The sexual side effects are a bonus for many users.
 
 But it's not without real risks. The melanoma question hangs over the compound, and the honest answer is that we don't have enough data to know for sure. Add in the lack of regulation, potential purity issues, and completely unknown long-term safety profile, and you have a compound that demands informed decision-making.
 
