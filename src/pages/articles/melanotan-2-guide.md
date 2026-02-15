@@ -96,6 +96,8 @@ MT-2 **will** darken existing moles and freckles. New moles may also appear. Thi
 
 MT-2 is administered via subcutaneous injection, typically into the abdominal fat. For technique, see our [subcutaneous injection guide](/articles/how-to-inject-peptides-subcutaneously).
 
+Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+
 ### Reconstitution
 
 MT-2 typically comes as lyophilized powder in **10 mg vials**. Adding 1 mL of bacteriostatic water gives a concentration of 10 mg/mL for easy dose measurement.

@@ -170,6 +170,8 @@ There is no established evidence-based cycling protocol. Some practitioners disc
 
 BPC-157 is typically supplied as a lyophilized (freeze-dried) powder in a sealed vial. It must be reconstituted with a sterile solvent before use. The most common solvent is **bacteriostatic water** (sterile water containing 0.9% benzyl alcohol as a preservative).
 
+Need help with the math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc to get exact measurements instantly. For a detailed walkthrough, see our full [reconstitution guide](/articles/how-to-reconstitute-peptides).
+
 ### Step-by-Step Reconstitution
 
 1. **Gather materials** — BPC-157 vial (lyophilized powder), bacteriostatic water, insulin syringe (typically 1 mL / 100 unit), alcohol swabs

@@ -147,6 +147,8 @@ For injection technique, see our [guide to injecting peptides](/articles/how-to-
 ## Dosing Guidelines
 
 | Route | Dose | Frequency | Results Timeline |
+
+Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
 |-------|------|-----------|-----------------|
 | **Topical** | 1-3 ppm or higher | 1-2x daily | 4-12 weeks |
 | **Subcutaneous** | 1-2 mg | Daily or every other day | 4-8 week cycles |

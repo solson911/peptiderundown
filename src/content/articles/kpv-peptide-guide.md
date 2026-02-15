@@ -119,6 +119,8 @@ Some people use both routes simultaneously, though no formal research exists on 
 
 No FDA-approved dosing exists. Information comes from animal studies and practitioner protocols.
 
+Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+
 | Route | Dose | Timing | Cycle |
 |-------|------|--------|-------|
 | **Oral** | 200-500 mcg/day | Empty stomach, split AM/PM | 4-8 weeks |

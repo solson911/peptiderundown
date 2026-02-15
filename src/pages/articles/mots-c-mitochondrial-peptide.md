@@ -152,6 +152,8 @@ MOTS-c enhances the cell's ability to handle metabolic stress through AMPK activ
 
 MOTS-c is still in the research phase. Dosing comes primarily from animal studies and the emerging practitioner community.
 
+Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+
 | Parameter | Protocol |
 |-----------|----------|
 | **Dose** | 5-10 mg per injection |

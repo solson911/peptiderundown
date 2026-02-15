@@ -154,6 +154,8 @@ TB-500 is typically administered via subcutaneous injection. Here are the practi
 
 TB-500 comes as a lyophilized (freeze-dried) powder in a vial, usually in 2 mg or 5 mg quantities.
 
+Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+
 1. Use bacteriostatic water (BAC water) for reconstitution
 2. Inject the BAC water slowly down the side of the vial, not directly onto the powder
 3. Gently swirl the vial until the powder dissolves completely. Don't shake it

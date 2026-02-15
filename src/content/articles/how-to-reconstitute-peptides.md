@@ -148,7 +148,9 @@ Your peptide is now reconstituted and ready to use. Label the vial with the date
 
 ## Peptide Dosage Math: Calculating Concentration and Dose
 
-This is where people get tripped up, but the math is dead simple once you see the pattern.
+> **Skip the math?** Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc. Plug in your vial size, water volume, and desired dose — it tells you exactly how many units to draw. No math required.
+
+If you prefer to understand the calculations yourself, here's how it works. The math is dead simple once you see the pattern.
 
 ### The Basic Formula
 
@@ -330,6 +332,8 @@ The key principles are **be gentle, be clean, and be precise**.
 Take your time the first couple of times. Within a week, this will feel like second nature.
 
 If you found this guide helpful, bookmark it for reference. And remember, when in doubt about dosing or usage, always consult with a healthcare professional.
+
+And if you don't want to do the dosage math by hand, bookmark our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc. It handles all the calculations instantly.
 
 Ready to learn more? Check out our guides on [how to inject peptides subcutaneously](/articles/how-to-inject-peptides-subcutaneously), [how to store peptides](/articles/how-to-store-peptides), and [peptide side effects](/articles/peptide-side-effects-what-to-know). If you're just getting started, our [beginner's guide to peptides](/articles/what-are-peptides-beginners-guide) covers the fundamentals.
 
