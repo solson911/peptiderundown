@@ -15,6 +15,13 @@ If you've just received your first vial of peptides, you're probably staring at 
 
 This guide walks you through everything: what reconstitution is, what you need, how to do it step by step, how to calculate your doses, and how to store your peptides properly. By the end, you'll feel confident handling the process like you've done it a hundred times.
 
+> **Key Takeaways**
+> - Reconstitution means dissolving freeze-dried peptide powder in bacteriostatic water
+> - Always use bacteriostatic water (not plain sterile water) for multi-use vials
+> - Add water slowly along the vial wall, never directly onto the powder
+> - Never shake the vial; gentle swirling only
+> - Reconstituted peptides last 3-4 weeks refrigerated
+> - The dose formula: Units to draw = (Dose in mg / Concentration in mg/mL) x 100
 
 ## What Is Reconstitution (and Why Is It Necessary)?
 
@@ -29,7 +36,7 @@ Think of it like powdered drink mix. The powder is shelf-stable and easy to tran
 Once peptides are in solution, they start a slow countdown. Light, temperature, and even gentle agitation can degrade them over time. Keeping them as powder until you're ready to use them maximizes their potency and shelf life.
 
 
-## What You'll Need
+## Supplies You'll Need for Peptide Reconstitution
 
 Before you start, gather everything so you're not scrambling mid-process. Here's your supply list:
 
@@ -60,7 +67,7 @@ You'll see two options: **bacteriostatic water** and **plain sterile water**. He
 For almost everyone reading this, **bacteriostatic water is the right choice**.
 
 
-## Step-by-Step: How to Reconstitute Peptides
+## Step-by-Step Peptide Reconstitution Instructions
 
 Alright, let's do this. Take your time; there's no rush.
 
@@ -130,7 +137,7 @@ The solution should be **clear** when fully dissolved. If it's cloudy or has vis
 That's it. Your peptide is now reconstituted and ready to use. Label the vial with the date, the peptide name, and the concentration (e.g., "BPC-157, 2.5mg/mL, Feb 13, 2026"), then store it in the refrigerator.
 
 
-## How to Calculate Your Concentration and Dose
+## Peptide Dosage Math: Calculating Concentration and Dose
 
 This is where people get tripped up, but the math is dead simple once you see the pattern.
 
@@ -191,7 +198,7 @@ Or if you prefer working in micrograms:
 **Pro tip:** If the math feels confusing, add a "round" amount of water that makes the concentration a clean number. For example, adding 2mL to a 5mg vial gives you 2.5mg/mL, which is easy to work with. Adding 1.73mL would give you 2.89mg/mL, which is unnecessarily annoying.
 
 
-## How to Draw Your Dose from a Reconstituted Vial
+## Drawing Your Dose from a Reconstituted Vial
 
 Once your peptide is mixed, here's how to draw your dose each time:
 
@@ -207,7 +214,7 @@ Once your peptide is mixed, here's how to draw your dose each time:
 Your dose is now ready for administration. Use a fresh insulin syringe each time. Never reuse needles.
 
 
-## Storage After Reconstitution
+## How to Store Reconstituted Peptides
 
 Proper storage is crucial. You went through the effort of reconstituting correctly, so don't let poor storage ruin your peptide.
 
@@ -217,7 +224,7 @@ Proper storage is crucial. You went through the effort of reconstituting correct
 - **Keep the vial upright** to minimize contact between the solution and the rubber stopper.
 - **Protect from light.** Keep the vial in its box or wrap it in foil. Light degrades many peptides.
 - **Don't freeze** reconstituted peptides. Freezing can damage the molecular structure.
-- **Shelf life:** Most reconstituted peptides (in BAC water) remain stable for **21–28 days** when refrigerated. Some more robust peptides may last longer, but 3–4 weeks is a safe general guideline.
+- **Shelf life:** Most reconstituted peptides (in BAC water) remain stable for **21–28 days** when refrigerated. Some hardier peptides may last longer, but 3–4 weeks is a safe general guideline.
 
 ### Unreconstituted Storage
 
@@ -228,7 +235,7 @@ If you haven't mixed your peptide yet:
 - **Freezer:** Best for long-term storage of unreconstituted peptides, and can last a year or more.
 
 
-## Common Mistakes to Avoid
+## 8 Common Reconstitution Mistakes to Avoid
 
 Learning from other people's mistakes is the best kind of learning. Here are the most common ones:
 
@@ -304,6 +311,8 @@ Reconstituting peptides is one of those things that seems complicated until you 
 Take your time the first couple of times. Write down your concentration and keep notes on your vials. Within a week, this will feel like second nature.
 
 If you found this guide helpful, bookmark it for reference. And remember, when in doubt about dosing or usage, always consult with a healthcare professional.
+
+Ready to learn more? Check out our guides on [how to inject peptides subcutaneously](/articles/how-to-inject-peptides-subcutaneously), [how to store peptides](/articles/how-to-store-peptides), and [peptide side effects](/articles/peptide-side-effects-what-to-know). If you're just getting started, our [beginner's guide to peptides](/articles/what-are-peptides-beginners-guide) covers the fundamentals.
 
 
 *This article is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions regarding peptides or any medical condition. Never disregard professional medical advice or delay seeking it because of something you read online.*

@@ -1,10 +1,12 @@
 ---
+layout: ../../layouts/Article.astro
 title: "Retatrutide: The Triple-Action GLP-1 That's Changing Weight Loss"
 description: "A complete guide to retatrutide, the first triple agonist targeting GLP-1, GIP, and glucagon receptors. Clinical data, dosing, side effects, and how it stacks up against semaglutide and tirzepatide."
 image: /images/articles/retatrutide.webp
-published: 2026-02-14
-category: weight-loss
-tags: [retatrutide, GLP-1, GIP, glucagon, weight loss, obesity, triple agonist]
+date: 2026-02-14
+category: "Peptide Guides"
+tags: ["retatrutide", "GLP-1", "GIP", "glucagon", "weight loss", "obesity", "triple agonist"]
+author: "PeptideRundown Team"
 ---
 
 # Retatrutide: The Triple-Action GLP-1 That's Changing Weight Loss
@@ -12,6 +14,14 @@ tags: [retatrutide, GLP-1, GIP, glucagon, weight loss, obesity, triple agonist]
 If you've been following the weight loss peptide space, you already know about semaglutide and tirzepatide. They were big. But retatrutide might be bigger. It's the first triple agonist to hit clinical trials, targeting not two but three metabolic receptors at once. And the early data? Stunning.
 
 Let's break down what retatrutide actually is, how it works, what the research shows, and where things stand right now.
+
+> **Key Takeaways**
+> - Retatrutide is the first triple agonist, targeting GLP-1, GIP, and glucagon receptors simultaneously
+> - Phase 2 trials showed 24.2% average body weight loss at the highest dose (12 mg) in 48 weeks
+> - The glucagon component increases energy expenditure and dramatically reduces liver fat (82% reduction)
+> - It outperformed both semaglutide (~16%) and tirzepatide (~22%) in cross-trial comparisons
+> - Not yet FDA-approved; phase 3 trials (TRIUMPH program) are underway
+> - Potential FDA approval estimated for 2027-2028
 
 ## What Is Retatrutide?
 
@@ -25,7 +35,7 @@ That third target is what makes retatrutide different from everything else in th
 
 For a deeper look at the compound profile, check out the [retatrutide overview on PeptideArc](https://peptidearc.com).
 
-## How Does Retatrutide Work?
+## How Retatrutide Works: Three Receptors, One Injection
 
 To understand why three targets matter, you need to understand what each receptor does on its own.
 
@@ -33,7 +43,7 @@ To understand why three targets matter, you need to understand what each recepto
 
 GLP-1 is the foundation. When you eat, your gut releases GLP-1, which tells your pancreas to produce insulin. But GLP-1 does more than manage blood sugar. It slows gastric emptying, meaning food sits in your stomach longer. You feel full faster and stay full longer. It also acts on the brain's appetite centers, reducing hunger at a neurological level.
 
-This is the same mechanism behind Ozempic and Wegovy. It works. The question was always whether we could make it work better.
+This is the same mechanism behind Ozempic and Wegovy (read our full [semaglutide guide](/articles/semaglutide-weight-loss-guide) for details). It works. The question was always whether we could make it work better.
 
 ### GIP Receptor Activation
 
@@ -62,7 +72,7 @@ Put all three together and you get a compound that:
 
 The result is weight loss that attacks the problem from multiple angles at once. You're eating less, absorbing differently, and burning more. That's the theory, anyway. Let's look at what the actual trials found.
 
-## Clinical Trial Results
+## Retatrutide Clinical Trial Results: The Numbers
 
 ### Phase 1 Data
 
@@ -157,7 +167,7 @@ Also, the weight loss numbers aren't directly comparable across trials. Differen
 
 For detailed comparisons of these compounds, [PeptideArc](https://peptidearc.com) maintains updated profiles on each.
 
-## Mechanism Deep Dive: Why Glucagon Changes Everything
+## Why the Glucagon Receptor Changes Everything
 
 Let's talk more about why that third receptor matters so much.
 
@@ -169,7 +179,7 @@ Research in animal models has consistently shown that glucagon agonism increases
 
 There's also the liver angle. Glucagon promotes hepatic fat oxidation and reduces de novo lipogenesis (the liver's creation of new fat). Given that fatty liver is both a consequence and a driver of metabolic dysfunction, cleaning up the liver may have cascading benefits for insulin sensitivity, inflammation, and cardiovascular risk.
 
-## Current Availability and Legal Status
+## Can You Get Retatrutide? Availability and Legal Status
 
 As of early 2026, retatrutide is **not approved** by the FDA or any other regulatory agency. It remains an investigational compound.
 
@@ -205,7 +215,7 @@ Based on the data so far, retatrutide could be particularly suited for:
 
 But again, this is speculative until phase 3 data confirms the phase 2 findings and the drug receives approval.
 
-## Potential Concerns and Open Questions
+## Retatrutide Risks and Open Questions
 
 No drug is perfect, and there are legitimate questions still to be answered:
 
@@ -262,3 +272,5 @@ But it's early. Phase 2 data with a few hundred participants is promising, not d
 If the phase 3 data confirms what phase 2 showed, retatrutide could become the most effective obesity treatment ever approved. That's a big "if," but it's one worth watching closely.
 
 For ongoing updates on retatrutide and other metabolic peptides, visit [PeptideArc](https://peptidearc.com).
+
+New to the peptide space? Start with our [beginner's guide to peptides](/articles/what-are-peptides-beginners-guide), or read our [semaglutide guide](/articles/semaglutide-weight-loss-guide) to understand the current gold standard in GLP-1 therapy.
