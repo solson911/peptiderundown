@@ -166,3 +166,16 @@ html {
 .prose hr {
   display: none;
 }
+
+/* ===== CRITICAL FIX: Paragraph Spacing ===== */
+/* Ensures proper spacing between paragraphs in article content */
+.prose p {
+  margin-bottom: 1.25rem !important;
+  line-height: 1.75;
+}
+
+/* Prevent excess spacing after last paragraph in sections */
+.prose > p:last-child,
+.prose div > p:last-child {
+  margin-bottom: 0 !important;
+}
