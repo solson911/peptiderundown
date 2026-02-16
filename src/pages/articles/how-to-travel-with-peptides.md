@@ -76,6 +76,8 @@ Lyophilized (powder) peptides are significantly more stable for travel. If you c
 | **Lyophilized** | 7-14 days | 86F (30C) |
 | **Reconstituted** | 24-72 hours | 59F (15C) |
 
+> **Note:** The stability of peptides after reconstitution is actively debated. Reported longevity ranges from days to months depending on the compound, storage conditions, and handling. Not all peptides degrade at the same rate.
+
 > **Key Finding:** Lyophilized BPC-157 showed no degradation after 14 days at room temperature, while reconstituted versions lost significant potency in 3 days.
 
 If you must travel with reconstituted peptides:
