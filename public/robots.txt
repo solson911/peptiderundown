@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
 
+# Disallow admin/build directories (if they exist)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.git/
+
+# Allow all major crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot  
+Allow: /
+
+# Sitemaps for SEO optimization
 Sitemap: https://peptiderundown.com/sitemap-index.xml
+Sitemap: https://peptiderundown.com/image-sitemap.xml
+
+# Cache directive for crawlers
+Crawl-delay: 1
