@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/Article.astro
 title: "Micro-dosing Peptides for Longevity: A Detailed Guide"
 description: "Guide to micro-dosing therapeutic peptides for anti-aging, longevity, and biohacking. Learn protocols, benefits, and safety considerations."
 image: /images/articles/micro-dosing-peptides-longevity-guide.webp
@@ -6,7 +7,6 @@ date: 2026-02-17
 category: "How-To"
 tags: ["micro-dosing", "longevity", "anti-aging", "biohacking", "peptide protocols", "low-dose"]
 author: "PeptideRundown Team"
-layout: "../../layouts/ArticleLayout.astro"
 ---
 
 The idea that "less is more" has gained traction in peptide therapy, especially among those focused on longevity and biohacking. Micro-dosing involves using peptides at doses far lower than typical research protocols, aiming for subtle physiological optimization rather than dramatic therapeutic effects. This approach appeals to healthy individuals looking to enhance aging, improve recovery, or optimize biological functions without the intensity of full doses. Emerging evidence suggests that consistent, low-dose use of certain peptides may offer meaningful benefits over time.
