@@ -25,9 +25,9 @@ Peptides can be powerful tools for health and performance, but they also interac
 Peptides influence hormones, metabolism, and organ function. Without labs, you’re flying blind. Bloodwork helps you:
 
 - **Identify underlying issues**  -  like undiagnosed thyroid dysfunction or insulin resistance.
-> - **Monitor safety**  -  catch liver stress, kidney strain, or hormonal imbalances early.
-> - **Optimize dosing**  -  adjust based on IGF-1 levels, glucose, or other biomarkers.
-> - **Avoid long-term harm**  -  some changes are silent until they’re severe.
+- **Monitor safety**  -  catch liver stress, kidney strain, or hormonal imbalances early.
+- **Optimize dosing**  -  adjust based on IGF-1 levels, glucose, or other biomarkers.
+- **Avoid long-term harm**  -  some changes are silent until they’re severe.
 
 > **Bottom line:** Skipping labs is like driving without a dashboard. You might get where you’re going, but you won’t know if something’s wrong until it’s too late.
 

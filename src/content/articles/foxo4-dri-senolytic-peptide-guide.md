@@ -46,8 +46,8 @@ Senescent cells accumulate with age. Normally, they should self-destruct via apo
 In senescent cells:
 
 - **FOXO4 binds p53**  -  keeping it inactive in the nucleus
-> - **Blocks apoptosis**  -  prevents cell death signals
-> - **Promotes survival**  -  allows senescent cells to persist
+- **Blocks apoptosis**  -  prevents cell death signals
+- **Promotes survival**  -  allows senescent cells to persist
 
 FOXO4-DRI works by:
 

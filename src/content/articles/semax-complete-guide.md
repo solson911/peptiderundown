@@ -1,3 +1,13 @@
+---
+title: "Semax: The Nootropic Peptide That Boosts BDNF and Brain Performance"
+description: "Semax is a synthetic peptide that enhances BDNF, improves cognition, and protects the brain. Full guide covering mechanisms, dosing, and research."
+image: /images/articles/semax-complete-guide.webp
+date: 2026-02-15
+category: "Peptide Guides"
+tags: ["semax", "nootropic", "bdnf", "neuroprotective", "cognitive", "brain"]
+author: "PeptideRundown Team"
+---
+
 ## What Is Semax?
 
 Semax is a synthetic peptide developed from a fragment of adrenocorticotropic hormone (ACTH 4-10). Russian scientists created it in the 1980s at the Institute of Molecular Genetics. This nootropic peptide enhances brain function without stimulating effects.

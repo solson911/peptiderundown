@@ -96,7 +96,7 @@ LL-37 is the only human cathelicidin antimicrobial peptide. It plays a dual role
 
 ### Dual-Action Gut Protection
 
-LL-37 provides comprehensive protection:
+LL-37 provides thorough protection:
 
 - **Direct antimicrobial action** against bacteria, viruses, fungi
 - **Immunomodulation** of innate and adaptive immunity

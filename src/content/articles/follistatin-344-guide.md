@@ -1,6 +1,6 @@
 ---
 title: "Follistatin 344: The Complete Guide to Myostatin Inhibition and Muscle Growth"
-description: "A deep dive into Follistatin 344, its role in myostatin inhibition, muscle growth research, dosing protocols, and how it compares to other peptides like Follistatin 315 and ACE-031."
+description: "A close look into Follistatin 344, its role in myostatin inhibition, muscle growth research, dosing protocols, and how it compares to other peptides like Follistatin 315 and ACE-031."
 image: /images/articles/follistatin-344.webp
 date: 2026-02-15
 category: "Peptide Guides"

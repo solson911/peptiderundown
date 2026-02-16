@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Article.astro
+title: "The Metabolic Stack: Tesamorelin + 5-Amino-1MQ + AOD-9604 for Fat Loss"
 description: "The Metabolic Stack combines Tesamorelin, 5-Amino-1MQ, and AOD-9604 for targeted fat loss through three distinct mechanisms. Full dosing and protocol guide."
 image: /images/articles/metabolic-stack.webp
 date: 2026-02-15

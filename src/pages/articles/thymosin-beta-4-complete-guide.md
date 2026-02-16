@@ -35,7 +35,7 @@ Thymosin Beta-4 (TB-4) is a 43-amino-acid peptide found in nearly all human tiss
 
 TB-4 is distinct from its fragment, TB-500, which lacks some of the full peptide's regenerative capabilities.
 
-For a deeper dive into TB-4, check out the [Thymosin Beta-4 overview on PeptideArc](https://peptidearc.com).
+For a deeper look at TB-4, check out the [Thymosin Beta-4 overview on PeptideArc](https://peptidearc.com).
 
 ## How Thymosin Beta-4 Works
 

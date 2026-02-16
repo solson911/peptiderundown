@@ -1,3 +1,4 @@
+---
 title: "Complete Guide to Peptide Stacking: How to Combine Peptides for Better Results"
 description: "Learn how to safely stack peptides for enhanced results. Popular combinations, timing strategies, dose adjustments, and compatibility matrices for every goal."
 image: /images/articles/peptide-stacking.webp

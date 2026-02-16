@@ -34,7 +34,7 @@ Thymosin Beta-4 (TB-4) is a 43-amino-acid peptide found in nearly all human tiss
 
 TB-4 is distinct from its fragment, TB-500, which lacks some of the full peptide's regenerative capabilities.
 
-For a deeper dive into TB-4, check out the [Thymosin Beta-4 overview on PeptideArc](https://peptidearc.com).
+For a deeper look at TB-4, check out the [Thymosin Beta-4 overview on PeptideArc](https://peptidearc.com).
 
 ## How Thymosin Beta-4 Works
 
@@ -45,8 +45,8 @@ TB-4 exerts its effects through multiple mechanisms, making it a powerful tool f
 TB-4 binds to actin, a key structural protein in cells, preventing its polymerization. This action:
 
 - **Reduces scar tissue formation**  -  by minimizing excessive actin polymerization
-> - **Promotes cell migration**  -  essential for wound healing
-> - **Enhances tissue remodeling**  -  critical for repair processes
+- **Promotes cell migration**  -  essential for wound healing
+- **Enhances tissue remodeling**  -  critical for repair processes
 
 ([Goldstein et al., 2012](https://pubmed.ncbi.nlm.nih.gov/22336712/))
 

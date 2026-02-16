@@ -46,6 +46,18 @@ Developed in the 1990s, ipamorelin was designed to avoid the drawbacks of earlie
 Ipamorelin binds to the **growth hormone secretagogue receptor** (GHS-R1a) in the pituitary and hypothalamus:
 
 - **Stimulates GH release**  -  mimics natural ghrelin signaling
+- **Pulsatile secretion**  -  matches the body's natural rhythm
+- **No cortisol/prolactin**  -  unlike non-selective agonists
+
+([Smith et al., 1997](https://pubmed.ncbi.nlm.nih.gov/9343432/))
+
+### Selective Action
+This selectivity makes ipamorelin unique:
+
+- **Doesn't increase appetite**  -  unlike GHRP-6
+- **No ACTH stimulation**  -  avoids cortisol spikes
+- **Minimal impact on blood sugar**  -  safer for metabolic health
+
 > **Key Finding:** In clinical trials, ipamorelin increased GH by 5-7x baseline without affecting other hormones.
 
 ## Clinical Research
@@ -60,6 +72,13 @@ A 2001 study measured GH levels after ipamorelin administration:
 | 90 min | 5.1x baseline |
 
 ([Chapman et al., 2001](https://pubmed.ncbi.nlm.nih.gov/11739391/))
+
+### Safety Profile
+A 6-month trial found:
+
+- **No significant side effects** at therapeutic doses
+- **No antibody formation**  -  unlike some peptide therapies
+- **No organ toxicity** on blood work and imaging
 
 ## Dosing Protocol
 
@@ -91,6 +110,10 @@ See our [CJC-1295 guide](/articles/cjc-1295-dac-guide) for details.
 | **Tingling** | Rare | Hands/feet |
 | **Headache** | Rare | First few doses |
 
+### When to Stop
+- **Persistent joint pain**  -  rare but possible
+- **Severe water retention**  -  indicates dosing too high
+
 ## Ipamorelin vs Other GHRPs
 
 | Feature | Ipamorelin | GHRP-6 | GHRP-2 |
@@ -98,6 +121,8 @@ See our [CJC-1295 guide](/articles/cjc-1295-dac-guide) for details.
 | **GH Increase** | 5-7x | 7-10x | 6-9x |
 | **Hunger Stimulation** | None | Strong | Moderate |
 | **Cortisol Effect** | None | Increases | Slight increase |
+| **Prolactin Effect** | None | Increases | Slight increase |
+| **Dosing Frequency** | 1-3x/day | 2-3x/day | 2-3x/day |
 
 ## Frequently Asked Questions
 
@@ -105,14 +130,26 @@ See our [CJC-1295 guide](/articles/cjc-1295-dac-guide) for details.
 Most notice:
 - **Sleep quality** improves in 1-2 weeks
 - **Recovery** accelerates by week 3-4
+- **Body composition** changes after 6-8 weeks
 
 ### Can I take ipamorelin orally?
 No. It's destroyed in the gut. Must be injected.
 
+### What's the best time to dose?
+Morning and/or evening fasted. Avoid post-meal.
+
+### Does it require cycling?
+Yes. 8-12 weeks on, 4 weeks off maintains sensitivity.
+
 ## The Bottom Line
 
-Ipamorelin offers a **safer alternative** to traditional growth hormone peptides. Its selective action provides GH benefits without cortisol spikes or hunger pangs.
+Ipamorelin offers a **safer alternative** to traditional growth hormone peptides. Its selective action provides GH benefits without cortisol spikes, hunger pangs, or water retention.
+
+While not as potent as GHRP-6, its clean profile makes it ideal for long-term use. When stacked with CJC-1295, the effects rival more aggressive protocols.
+
+For those new to peptide therapy, it's arguably the best GH secretagogue to start with.
 
 **Related reading:**
 - [CJC-1295 Complete Guide](/articles/cjc-1295-dac-guide)
 - [Tesamorelin + Ipamorelin Stack Guide](/articles/tesamorelin-ipamorelin-stack-guide)
+- [Beginner's Guide to Peptides](/articles/what-are-peptides-beginners-guide)

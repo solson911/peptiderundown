@@ -164,6 +164,6 @@ Peptides represent a new frontier in hair restoration by targeting the fundament
 
 For more detailed information on specific peptides:
 - [Complete Guide to GHK-Cu Copper Peptide](/articles/ghk-cu-copper-peptide-guide)
-- [Thymosin Beta-4 Deep Dive](/articles/thymosin-beta-4-complete-guide)
+- [Thymosin Beta-4 close look](/articles/thymosin-beta-4-complete-guide)
 - [Peptides for Skin and Hair Synergy](/articles/best-peptides-for-skin-and-hair)
 - [DIY GHK-Cu Formulations](/articles/diy-ghk-cu-copper-peptide-cream)

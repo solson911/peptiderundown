@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Article.astro
 title: "Best Peptides for Anti-Aging: A thorough Guide"
 description: "Discover the top peptides for anti-aging, including GHK-Cu, Epithalon, BPC-157, SS-31, and more. Learn their benefits, mechanisms, and how to stack them for optimal results."
 image: /images/articles/best-peptides-for-anti-aging.webp

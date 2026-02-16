@@ -48,7 +48,6 @@ For individual compound profiles, visit [PeptideArc](https://peptidearc.com).
 As the first triple agonist, Retatrutide works through:
 
 - **GLP-1**: Reduces hunger and slows digestion
-> **Key Finding:** Retatrutide produced 24.2% weight loss in phase 2 trials
 - **GIP**: Enhances GLP-1 effects and improves insulin sensitivity
 - **Glucagon**: Increases energy expenditure and liver fat burning
 

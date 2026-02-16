@@ -52,8 +52,6 @@ BPC-157 promotes healing in tendons, ligaments, and the gut. It works by:
 TB-500 is a fragment of thymosin beta-4, known for:
 
 - **Actin regulation**  -  essential for cell movement and repair
-> **Key Finding:** Highlight the most important research result from this section.
-
 - **Systemic effects**  -  works throughout the body
 - **Angiogenesis**  -  promotes new blood vessel formation
 

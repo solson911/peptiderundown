@@ -126,7 +126,7 @@ No - they enhance but don't replace fundamentals. Think of peptides as efficienc
 
 **What blood tests should I monitor?**
 Essential panels include:
-- Comprehensive metabolic panel
+- thorough metabolic panel
 - Lipid profile
 - HbA1c
 - IGF-1 levels (for GH-related peptides)

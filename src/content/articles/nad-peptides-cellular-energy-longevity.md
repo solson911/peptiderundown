@@ -59,7 +59,7 @@ SS-31 targets mitochondria to reduce oxidative damage:
 - **Improves ATP production efficiency**
 - **Reduces inflammation** in age-related conditions
 
-For a deep dive into SS-31, see our [SS-31 Elamipretide Guide](/articles/ss-31-elamipretide-mitochondrial-guide).
+For a close look into SS-31, see our [SS-31 Elamipretide Guide](/articles/ss-31-elamipretide-mitochondrial-guide).
 
 ## NAD+ Restoration Protocol
 

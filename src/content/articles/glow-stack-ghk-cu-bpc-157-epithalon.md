@@ -50,8 +50,8 @@ Each peptide in the Glow Stack targets a different aspect of skin health, creati
 GHK-Cu is a copper-binding peptide with proven benefits for skin health:
 
 - **Stimulates collagen production**  -  Increases types I and III collagen.
-> - **Reduces wrinkles**  -  Improves skin texture and elasticity.
-> - **Anti-inflammatory**  -  Calms irritated skin.
+- **Reduces wrinkles**  -  Improves skin texture and elasticity.
+- **Anti-inflammatory**  -  Calms irritated skin.
 
 ([Pickart et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25722140/))
 

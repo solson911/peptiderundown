@@ -77,7 +77,7 @@ These peptides benefit from nutrient co-factors:
 - **Day 2:** Add GH secretagogues (Tesamorelin morning/evening)
 - **Refeed:** Begin with bone broth + BPC-157 before solid food
 
-> Electrolyte management becomes crucial beyond 24 hours. Consider adding TB-500 for cellular hydration support.
+> Electrolyte management becomes important beyond 24 hours. Consider adding TB-500 for cellular hydration support.
 
 ## Autophagy-Enhancing Peptides
 
