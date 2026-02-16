@@ -80,7 +80,7 @@ cd /home/claw/.openclaw/workspace/projects/peptide-site
 
 ```yaml
 ---
-layout: ../../layouts/ArticleLayout.astro
+layout: ../../layouts/Article.astro
 title: "Article Title"
 description: "SEO description"
 image: /images/articles/article-slug.webp
