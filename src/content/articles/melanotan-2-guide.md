@@ -17,7 +17,7 @@ It can boost libido. It may suppress appetite. And it carries real risks that an
 >
 > - Melanotan 2 produces real eumelanin (dark pigment) by stimulating **MC1R receptors** on melanocytes
 > - Side effects include nausea, facial flushing, mole darkening, and strong sexual arousal from **MC4R activation**
-> - The **melanoma risk question remains unanswered** — anyone with a personal or family history should avoid MT-2
+> - The **melanoma risk question remains unanswered**  -  anyone with a personal or family history should avoid MT-2
 > - MT-2 is **not FDA-approved** and sits in a legal gray area in most countries
 
 ## MT-2 at a Glance
@@ -61,8 +61,8 @@ MT-2 is a non-selective agonist of melanocortin receptors, particularly MC1R thr
 ### MC1R: The Tanning Cascade
 
 1. **MT-2 binds to MC1R** on melanocytes
-2. **Activates adenylate cyclase** — increases intracellular cAMP
-3. **cAMP activates protein kinase A** — upregulates tyrosinase
+2. **Activates adenylate cyclase**  -  increases intracellular cAMP
+3. **cAMP activates protein kinase A**  -  upregulates tyrosinase
 4. **More melanin produced** and transferred to surrounding skin cells
 5. **Skin darkens progressively** over days to weeks
 
@@ -121,11 +121,11 @@ MT-2 typically comes as lyophilized powder in **10 mg vials**. Adding 1 mL of ba
 
 ### Dosing Tips
 
-- **Start low** — nausea is dose-dependent; 0.1 mg lets your body adjust
-- **Evening dosing** — sleep through the worst of the nausea
-- **Antihistamines** — diphenhydramine 30 minutes before injection can reduce nausea and flushing
-- **Don't chase results** — higher doses increase side effects without proportionally improving tanning
-- **Rotate injection sites** — prevents local irritation
+- **Start low**  -  nausea is dose-dependent; 0.1 mg lets your body adjust
+- **Evening dosing**  -  sleep through the worst of the nausea
+- **Antihistamines**  -  diphenhydramine 30 minutes before injection can reduce nausea and flushing
+- **Don't chase results**  -  higher doses increase side effects without proportionally improving tanning
+- **Rotate injection sites**  -  prevents local irritation
 
 ### Storage
 
@@ -157,9 +157,9 @@ For a broader overview of peptide side effects, see our [peptide side effects gu
 
 ### Rare or Serious
 
-- **Melanoma risk** — see dedicated section below
-- **Rhabdomyolysis** — extremely rare case reports, unclear causality
-- **Priapism** — prolonged erections at higher doses, requiring medical attention
+- **Melanoma risk**  -  see dedicated section below
+- **Rhabdomyolysis**  -  extremely rare case reports, unclear causality
+- **Priapism**  -  prolonged erections at higher doses, requiring medical attention
 
 ## The Melanoma Question
 
@@ -180,11 +180,11 @@ Melanoma develops from melanocytes, the same cells MT-2 stimulates. Chronic stim
 
 ### Practical Guidance
 
-- **Personal or family history of melanoma** — do not use MT-2
-- **Atypical or many moles** — risk calculus gets worse
-- **If using MT-2** — monitor skin carefully, get regular dermatologist checks
-- **Mole darkening** — makes self-monitoring harder, which is itself a safety concern
-- **Minimize UV exposure** — reduces one known risk factor regardless
+- **Personal or family history of melanoma**  -  do not use MT-2
+- **Atypical or many moles**  -  risk calculus gets worse
+- **If using MT-2**  -  monitor skin carefully, get regular dermatologist checks
+- **Mole darkening**  -  makes self-monitoring harder, which is itself a safety concern
+- **Minimize UV exposure**  -  reduces one known risk factor regardless
 
 ## Other Safety Considerations
 

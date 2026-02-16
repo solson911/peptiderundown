@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Article.astro
-title: "The Cognition Stack — Semax + Selank + Dihexa for Mental Performance and Focus"
+title: "The Cognition Stack  -  Semax + Selank + Dihexa for Mental Performance and Focus"
 description: "A complete guide to the cognition stack combining Semax, Selank, and Dihexa for enhanced focus, memory, and cognitive performance. Mechanisms, dosing, side effects, and clinical data."
 image: /images/articles/cognition-stack.webp
 date: 2026-02-15
@@ -9,17 +9,17 @@ tags: ["cognition stack", "semax", "selank", "dihexa", "nootropic", "brain", "fo
 author: "PeptideRundown Team"
 ---
 
-# The Cognition Stack — Semax + Selank + Dihexa for Mental Performance and Focus
+# The Cognition Stack  -  Semax + Selank + Dihexa for Mental Performance and Focus
 
-Imagine a cognitive enhancer that combines three powerful peptides, each targeting a different pathway in the brain. That's the cognition stack — a synergistic trio designed to boost focus, memory, and mental clarity.
+Imagine a cognitive enhancer that combines three powerful peptides, each targeting a different pathway in the brain. That's the cognition stack  -  a synergistic trio designed to boost focus, memory, and mental clarity.
 
 > **Key Takeaways**
 >
-> - **Three complementary mechanisms** — Semax (BDNF/NGF), Selank (GABA/anxiolytic), Dihexa (HGF/synaptogenesis)
-> - **Nasal vs. subcutaneous** — Optimal administration routes for each peptide
-> - **Cycle length** — 4-8 weeks with 2-4 week breaks recommended
-> - **Side effect profile** — Generally mild (nasal irritation, temporary headache)
-> - **Cost breakdown** — ~$120-200/month depending on sources
+> - **Three complementary mechanisms**  -  Semax (BDNF/NGF), Selank (GABA/anxiolytic), Dihexa (HGF/synaptogenesis)
+> - **Nasal vs. subcutaneous**  -  Optimal administration routes for each peptide
+> - **Cycle length**  -  4-8 weeks with 2-4 week breaks recommended
+> - **Side effect profile**  -  Generally mild (nasal irritation, temporary headache)
+> - **Cost breakdown**  -  ~$120-200/month depending on sources
 
 ## What Is the Cognition Stack?
 
@@ -45,37 +45,37 @@ For individual peptide profiles, see our guides on [Semax](/articles/semax-nootr
 
 Semax is a synthetic analog of ACTH(4-10) with unique properties:
 
-- **Increases BDNF** — Brain-derived neurotrophic factor, crucial for neuroplasticity
-- **Upregulates NGF** — Nerve growth factor, supporting neuron health
-- **Modulates melanocortin receptors** — Enhancing alertness and focus
+- **Increases BDNF**  -  Brain-derived neurotrophic factor, important for neuroplasticity
+- **Upregulates NGF**  -  Nerve growth factor, supporting neuron health
+- **Modulates melanocortin receptors**  -  Enhancing alertness and focus
 
 **Observed effects:**
 
 - **Sharpened focus** within 15-30 minutes (nasal administration)
-- **Improved task persistence** — Reduced mental fatigue during prolonged work
-- **Neuroprotective effects** — Shown in ischemia models ([Skvortsova et al., 2004](https://pubmed.ncbi.nlm.nih.gov/15179829/))
+- **Improved task persistence**  -  Reduced mental fatigue during prolonged work
+- **Neuroprotective effects**  -  Shown in ischemia models ([Skvortsova et al., 2004](https://pubmed.ncbi.nlm.nih.gov/15179829/))
 
 ### Selank: The Anxiolytic Stabilizer
 
 Selank is a heptapeptide derived from tuftsin with GABAergic activity:
 
-- **Modulates GABA transmission** — Reducing anxiety without sedation
-- **Regulates immune function** — Via effects on cytokines
-- **Enhances serotonin metabolism** — Contributing to mood stability
+- **Modulates GABA transmission**  -  Reducing anxiety without sedation
+- **Regulates immune function**  -  Via effects on cytokines
+- **Enhances serotonin metabolism**  -  Contributing to mood stability
 
 **Key benefits:**
 
-- **Smooths cognitive edges** — Counters potential overstimulation from Semax
-- **Improves stress resilience** — Particularly under pressure
-- **May enhance sleep quality** — When taken earlier in the day
+- **Smooths cognitive edges**  -  Counters potential overstimulation from Semax
+- **Improves stress resilience**  -  Particularly under pressure
+- **May enhance sleep quality**  -  When taken earlier in the day
 
 ### Dihexa: The Memory Molecule
 
 Dihexa is a small molecule peptide mimetic with unique properties:
 
-- **Activates HGF/c-Met pathway** — Promoting synaptogenesis
-- **Crosses blood-brain barrier** — Unlike native HGF
-- **Enhances long-term potentiation** — The cellular basis of memory
+- **Activates HGF/c-Met pathway**  -  Promoting synaptogenesis
+- **Crosses blood-brain barrier**  -  Unlike native HGF
+- **Enhances long-term potentiation**  -  The cellular basis of memory
 
 > **Key Finding:** In animal models, Dihexa restored cognitive function in Alzheimer's-like conditions ([Benoist et al., 2014](https://pubmed.ncbi.nlm.nih.gov/24361175/)).
 
@@ -125,10 +125,10 @@ Generally mild and transient:
 
 Based on current usage patterns:
 
-- **Students** — For exam preparation and focus
-- **Knowledge workers** — Sustaining mental clarity during long projects
-- **Age-related cognitive decline** — Potential neuroprotective benefits
-- **Creative professionals** — Enhanced associative thinking
+- **Students**  -  For exam preparation and focus
+- **Knowledge workers**  -  Sustaining mental clarity during long projects
+- **Age-related cognitive decline**  -  Potential neuroprotective benefits
+- **Creative professionals**  -  Enhanced associative thinking
 
 > **Important:** Not a substitute for sleep, nutrition, or professional medical advice.
 
@@ -172,13 +172,13 @@ No long-term human studies exist. Cycling is recommended. Most users report good
 
 Common safe combinations:
 
-- **Caffeine/L-theanine** — For additional focus
-- **Lion's mane mushroom** — Additional NGF support
-- **Omega-3s** — Foundation for brain health
+- **Caffeine/L-theanine**  -  For additional focus
+- **Lion's mane mushroom**  -  Additional NGF support
+- **Omega-3s**  -  Foundation for brain health
 
 ## The Bottom Line
 
-The cognition stack represents a sophisticated approach to cognitive enhancement — targeting focus, stress resilience, and memory formation simultaneously through distinct but complementary mechanisms.
+The cognition stack represents a sophisticated approach to cognitive enhancement  -  targeting focus, stress resilience, and memory formation simultaneously through distinct but complementary mechanisms.
 
 While not a magic bullet, many users report significant improvements in mental performance, particularly during demanding cognitive work. The favorable safety profile and relatively low cost make it an attractive option for those exploring peptide-based nootropics.
 

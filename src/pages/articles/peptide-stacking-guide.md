@@ -13,13 +13,13 @@ author: "PeptideRundown Team"
 
 Peptides work well alone. But when combined strategically, they can work even better.
 
-Peptide stacking — using multiple peptides together — requires understanding their mechanisms, timing, and compatibility. Done right, it can enhance results for muscle growth, recovery, fat loss, and cognitive function.
+Peptide stacking  -  using multiple peptides together  -  requires understanding their mechanisms, timing, and compatibility. Done right, it can enhance results for muscle growth, recovery, fat loss, and cognitive function.
 
 > **Key Takeaways**
 >
-> - **Synergy matters** — Some peptides enhance each other's effects
-> - **Timing is crucial** — Some work best together, others need separation
-> - **Not all mix well** — Certain combinations may cancel benefits
+> - **Synergy matters**  -  Some peptides enhance each other's effects
+> - **Timing is important**  -  Some work best together, others need separation
+> - **Not all mix well**  -  Certain combinations may cancel benefits
 > - **Popular stacks** include GH secretagogues (CJC-1295 + ipamorelin) and healing peptides (BPC-157 + TB-500)
 > - **Dosing adjustments** are often needed when stacking
 
@@ -33,9 +33,9 @@ Single peptides target specific pathways. Stacks target multiple pathways simult
 | **Stacked peptides** | Broader, synergistic effects | More complex, higher cost |
 
 **Three main reasons to stack:**
-1. **Additive effects** — Targeting different aspects of the same goal
-2. **Synergistic effects** — Where one peptide enhances another's action
-3. **Balanced effects** — Counteracting potential side effects
+1. **Additive effects**  -  Targeting different aspects of the same goal
+2. **Synergistic effects**  -  Where one peptide enhances another's action
+3. **Balanced effects**  -  Counteracting potential side effects
 
 ## Peptide Stacking Principles
 
@@ -109,10 +109,10 @@ When stacking, consider reducing individual doses by 20-30% to:
 
 ## What NOT to Stack
 
-1. **Opposing mechanisms** — e.g., GH secretagogues with somatostatin analogs
-2. **Redundant peptides** — Multiple GHRH analogs at full doses
-3. **Unproven combinations** — Without research or anecdotal evidence
-4. **High-risk peptides** — Those with significant side effect profiles
+1. **Opposing mechanisms**  -  e.g., GH secretagogues with somatostatin analogs
+2. **Redundant peptides**  -  Multiple GHRH analogs at full doses
+3. **Unproven combinations**  -  Without research or anecdotal evidence
+4. **High-risk peptides**  -  Those with significant side effect profiles
 
 ## Frequently Asked Questions
 
@@ -134,7 +134,7 @@ Yes, but account for bioavailability differences in dosing.
 
 ### What's the best stack for beginners?
 
-Start with CJC-1295 + ipamorelin — well-tolerated with clear benefits.
+Start with CJC-1295 + ipamorelin  -  well-tolerated with clear benefits.
 
 ### How do you know if a stack isn't working?
 
@@ -146,7 +146,7 @@ Possible but increases complexity and risk. Research each combination thoroughly
 
 ### Are there blood tests to monitor stacked peptides?
 
-Yes — IGF-1 for GH peptides, inflammatory markers for healing peptides, metabolic panels for fat loss stacks.
+Yes  -  IGF-1 for GH peptides, inflammatory markers for healing peptides, metabolic panels for fat loss stacks.
 
 ## The Bottom Line
 

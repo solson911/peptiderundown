@@ -14,11 +14,11 @@ A Certificate of Analysis (COA) is your guarantee that a peptide is what the ven
 
 > **Key Takeaways**
 >
-> - **What a COA is** — A lab-verified document proving identity, purity, and safety
-> - **Why it matters** — Protects against contamination, mislabeling, and low-quality peptides
-> - **Key sections** — Identity, HPLC purity, mass spectrometry, endotoxin, sterility
-> - **Red flags** — Missing data, inconsistent batch numbers, unverifiable labs
-> - **Verification** — Batch matching, third-party testing, trusted labs
+> - **What a COA is**  -  A lab-verified document proving identity, purity, and safety
+> - **Why it matters**  -  Protects against contamination, mislabeling, and low-quality peptides
+> - **Key sections**  -  Identity, HPLC purity, mass spectrometry, endotoxin, sterility
+> - **Red flags**  -  Missing data, inconsistent batch numbers, unverifiable labs
+> - **Verification**  -  Batch matching, third-party testing, trusted labs
 
 ## What Is a Peptide COA?
 
@@ -37,9 +37,9 @@ Without a COA, there’s no way to verify a peptide’s quality. Always request 
 
 Peptides are sensitive molecules. Even minor impurities can render them ineffective or harmful. A COA protects you by confirming:
 
-- **Identity** — The peptide is what the label says
-- **Purity** — Free from contaminants and byproducts
-- **Safety** — Low endotoxin levels and sterility
+- **Identity**  -  The peptide is what the label says
+- **Purity**  -  Free from contaminants and byproducts
+- **Safety**  -  Low endotoxin levels and sterility
 
 > **Key Finding:** Studies show up to **30% of peptides sold online are mislabeled or contaminated** ([Smith et al., 2025](https://pubmed.ncbi.nlm.nih.gov/example)). A COA is your first line of defense.
 
@@ -49,15 +49,15 @@ Peptides are sensitive molecules. Even minor impurities can render them ineffect
 
 This section confirms the peptide’s molecular structure. Look for:
 
-- **Amino acid sequence** — Matches the expected sequence
-- **Molecular weight** — Verified by mass spectrometry
+- **Amino acid sequence**  -  Matches the expected sequence
+- **Molecular weight**  -  Verified by mass spectrometry
 
 ### 2. HPLC Purity
 
 High-Performance Liquid Chromatography (HPLC) measures purity. Key terms:
 
-- **% Purity** — Ideally ≥95% for research peptides
-- **Impurity peaks** — Should be minimal and identified
+- **% Purity**  -  Ideally ≥95% for research peptides
+- **Impurity peaks**  -  Should be minimal and identified
 
 | Purity Level | Quality |
 |-------------|---------|
@@ -69,8 +69,8 @@ High-Performance Liquid Chromatography (HPLC) measures purity. Key terms:
 
 Mass spec verifies the peptide’s molecular weight. Compare:
 
-- **Expected MW** — From the peptide’s formula
-- **Observed MW** — Should match within 0.1%
+- **Expected MW**  -  From the peptide’s formula
+- **Observed MW**  -  Should match within 0.1%
 
 ### 4. Endotoxin Levels
 
@@ -85,17 +85,17 @@ Endotoxins are bacterial contaminants. Acceptable levels:
 
 Confirms the peptide is free from microbial contamination. Look for:
 
-- **Sterile** — No growth in culture tests
-- **Filtered** — 0.22 µm filtration noted
+- **Sterile**  -  No growth in culture tests
+- **Filtered**  -  0.22 µm filtration noted
 
 ## How to Spot Fake or Bad COAs
 
 Red flags to watch for:
 
-- **Missing data** — No HPLC or mass spec results
-- **Inconsistent batch numbers** — Doesn’t match the vial
-- **Unverifiable labs** — Lab name not searchable
-- **Generic templates** — No lab letterhead or signatures
+- **Missing data**  -  No HPLC or mass spec results
+- **Inconsistent batch numbers**  -  Doesn’t match the vial
+- **Unverifiable labs**  -  Lab name not searchable
+- **Generic templates**  -  No lab letterhead or signatures
 
 > **Bottom line:** If a COA looks sketchy, the peptide probably is too.
 
@@ -164,9 +164,9 @@ Yes, but it requires specialized equipment. Third-party labs are more practical.
 
 A COA is non-negotiable. Always verify:
 
-1. **Identity** — Matches the label
-2. **Purity** — ≥95% for research
-3. **Safety** — Low endotoxins, sterile
+1. **Identity**  -  Matches the label
+2. **Purity**  -  ≥95% for research
+3. **Safety**  -  Low endotoxins, sterile
 
 Skip vendors who can’t provide a COA. Your research depends on it.
 

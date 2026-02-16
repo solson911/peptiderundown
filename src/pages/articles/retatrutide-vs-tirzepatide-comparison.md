@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Article.astro
-title: "Retatrutide vs Tirzepatide — Next-Gen Weight Loss Comparison"
+title: "Retatrutide vs Tirzepatide  -  Next-Gen Weight Loss Comparison"
 description: "Head-to-head comparison of retatrutide (GLP-1/GIP/glucagon triple agonist) vs tirzepatide (GLP-1/GIP dual agonist) for weight loss. Mechanisms, trial data, side effects, dosing, and future outlook."
 image: /images/articles/retatrutide-vs-tirzepatide.webp
 date: 2026-02-15
@@ -9,9 +9,9 @@ tags: ["retatrutide", "tirzepatide", "weight loss", "GLP-1", "GIP", "glucagon", 
 author: "PeptideRundown Team"
 ---
 
-# Retatrutide vs Tirzepatide — Next-Gen Weight Loss Comparison
+# Retatrutide vs Tirzepatide  -  Next-Gen Weight Loss Comparison
 
-The obesity treatment landscape changed dramatically with GLP-1 drugs. Now, two next-generation options stand out: **tirzepatide** (Mounjaro/Zepbound) and **retatrutide** (in development).
+The obesity treatment space changed dramatically with GLP-1 drugs. Now, two next-generation options stand out: **tirzepatide** (Mounjaro/Zepbound) and **retatrutide** (in development).
 
 > **Key Takeaways**
 > 
@@ -27,8 +27,8 @@ The obesity treatment landscape changed dramatically with GLP-1 drugs. Now, two 
 
 Tirzepatide combines two mechanisms:
 
-- **GLP-1 receptor agonism** — appetite suppression, slower gastric emptying
-- **GIP receptor agonism** — enhances GLP-1 effects, improves insulin sensitivity
+- **GLP-1 receptor agonism**  -  appetite suppression, slower gastric emptying
+- **GIP receptor agonism**  -  enhances GLP-1 effects, improves insulin sensitivity
 
 This dual approach already outperformed semaglutide (GLP-1 only) in the SURMOUNT trials.
 
@@ -36,10 +36,10 @@ This dual approach already outperformed semaglutide (GLP-1 only) in the SURMOUNT
 
 Retatrutide adds a third target:
 
-- **GLP-1 + GIP** — same as tirzepatide
-- **Plus glucagon receptor agonism** — increases energy expenditure, burns fat
+- **GLP-1 + GIP**  -  same as tirzepatide
+- **Plus glucagon receptor agonism**  -  increases energy expenditure, burns fat
 
-> **Why glucagon matters:** It directly targets liver fat and metabolic rate — areas untouched by GLP-1/GIP drugs.
+> **Why glucagon matters:** It directly targets liver fat and metabolic rate  -  areas untouched by GLP-1/GIP drugs.
 
 ## Head-to-Head Clinical Data
 
@@ -127,7 +127,7 @@ Comparable GI side effect profiles. Retatrutide's glucagon component didn't intr
 
 ### Can you switch from tirzepatide to retatrutide?
 
-No clinical data yet. In theory, yes — but would require careful dose transition under medical supervision.
+No clinical data yet. In theory, yes  -  but would require careful dose transition under medical supervision.
 
 ### Will retatrutide be more expensive?
 
@@ -145,7 +145,7 @@ Possibly. Tirzepatide has years of real-world data. Retatrutide's glucagon compo
 
 Tirzepatide is the present. Retatrutide might be the future.
 
-For now, tirzepatide offers proven efficacy and safety. Retatrutide's phase 2 results suggest it could push weight loss boundaries further — especially for liver fat and metabolic rate.
+For now, tirzepatide offers proven efficacy and safety. Retatrutide's phase 2 results suggest it could push weight loss boundaries further  -  especially for liver fat and metabolic rate.
 
 If phase 3 confirms these findings, we may see both drugs used strategically:
 

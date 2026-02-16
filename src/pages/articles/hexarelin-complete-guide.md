@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Article.astro
-title: "HEXARELIN — Complete Guide"
+title: "HEXARELIN  -  Complete Guide"
 description: "A complete guide to hexarelin, a potent GHRP peptide with unique cardiac benefits. Covers mechanism, dosing, side effects, and comparisons to ipamorelin and GHRP-6."
 image: /images/articles/hexarelin.webp
 date: 2026-02-15
@@ -9,17 +9,17 @@ tags: ["hexarelin", "GHRP", "growth hormone", "cardiac", "ghrelin receptor"]
 author: "PeptideRundown Team"
 ---
 
-# HEXARELIN — Complete Guide
+# HEXARELIN  -  Complete Guide
 
 Hexarelin stands out as the most potent synthetic growth hormone-releasing peptide (GHRP) developed to date. Unlike other GHRPs, it offers unique cardioprotective benefits while stimulating significant GH release.
 
 > **Key Takeaways**
 >
->- **Most potent GHRP** — stronger GH release than GHRP-6 or ipamorelin
->- **Cardioprotective effects** — shown to improve heart function in preclinical models
->- **Ghrelin receptor agonist** — mimics hunger signals but with distinct effects
->- **Dosing flexibility** — effective at 1-3 mcg/kg, typically 100-300 mcg per dose
->- **Desensitization risk** — requires cycling strategies (2-4 weeks on/off)
+>- **Most potent GHRP**  -  stronger GH release than GHRP-6 or ipamorelin
+>- **Cardioprotective effects**  -  shown to improve heart function in preclinical models
+>- **Ghrelin receptor agonist**  -  mimics hunger signals but with distinct effects
+>- **Dosing flexibility**  -  effective at 1-3 mcg/kg, typically 100-300 mcg per dose
+>- **Desensitization risk**  -  requires cycling strategies (2-4 weeks on/off)
 
 ## What Is Hexarelin?
 
@@ -41,9 +41,9 @@ Hexarelin binds strongly to the ghrelin receptor (GHSR-1a), triggering growth ho
 
 Hexarelin stimulates GH release through multiple pathways:
 
-- **Direct pituitary action** — binds GHSR-1a on somatotrophs
-- **Hypothalamic signaling** — increases GHRH (growth hormone-releasing hormone)
-- **Somatostatin inhibition** — reduces the main GH suppressor
+- **Direct pituitary action**  -  binds GHSR-1a on somatotrophs
+- **Hypothalamic signaling**  -  increases GHRH (growth hormone-releasing hormone)
+- **Somatostatin inhibition**  -  reduces the main GH suppressor
 
 ([Locatelli et al., 1999](https://pubmed.ncbi.nlm.nih.gov/10443691/))
 
@@ -115,10 +115,10 @@ Animal studies show consistent benefits:
 
 Hexarelin influences multiple hormones:
 
-- **Growth hormone** — significant increase
-- **IGF-1** — rises over time with repeated dosing
-- **Cortisol** — moderate increase (~20-30%)
-- **Prolactin** — mild increase (~10-15%)
+- **Growth hormone**  -  significant increase
+- **IGF-1**  -  rises over time with repeated dosing
+- **Cortisol**  -  moderate increase (~20-30%)
+- **Prolactin**  -  mild increase (~10-15%)
 
 ## Hexarelin vs. Other GHRPs
 
@@ -134,9 +134,9 @@ Hexarelin influences multiple hormones:
 
 To prevent receptor desensitization:
 
-- **2 weeks on / 2 weeks off** — conservative approach
-- **3 weeks on / 3 weeks off** — balances efficacy and safety
-- **4 weeks on / 4 weeks off** — for those sensitive to desensitization
+- **2 weeks on / 2 weeks off**  -  conservative approach
+- **3 weeks on / 3 weeks off**  -  balances efficacy and safety
+- **4 weeks on / 4 weeks off**  -  for those sensitive to desensitization
 
 ## Legal Status
 

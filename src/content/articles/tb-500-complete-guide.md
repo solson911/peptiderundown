@@ -66,9 +66,9 @@ A study published in the *Annals of the New York Academy of Sciences* demonstrat
 
 These three mechanisms work together in a coordinated healing response:
 
-- **Cell migration** — moves repair cells to the injury site
-- **Angiogenesis** — builds new blood supply to feed the repair process
-- **Actin regulation** — provides structural reorganization for tissue rebuilding
+- **Cell migration**  -  moves repair cells to the injury site
+- **Angiogenesis**  -  builds new blood supply to feed the repair process
+- **Actin regulation**  -  provides structural reorganization for tissue rebuilding
 
 > **Quick Summary:** TB-500 orchestrates healing by getting the right cells to the right place, with the right blood supply, and the right structural support.
 
@@ -248,7 +248,7 @@ TB-500 isn't a miracle. It won't fix a torn ACL overnight. Here's what a realist
 | **Week 1-2** | Minimal visible changes; some report improved well-being or reduced inflammation |
 | **Week 3-4** | Most people notice reduced pain, improved range of motion, better flexibility |
 | **Week 5-8** | Peak effects; chronic stalled injuries may show significant improvement |
-| **Month 3+** | Long-term structural improvements — better tissue quality, not just symptom relief |
+| **Month 3+** | Long-term structural improvements  -  better tissue quality, not just symptom relief |
 
 Individual results vary enormously. Factors like injury severity, age, nutrition, sleep, and concurrent rehabilitation all influence outcomes.
 

@@ -19,11 +19,11 @@ As the first **selective ghrelin receptor agonist**, it boosts growth hormone (G
 
 > **Key Takeaways**
 >
-> - **First selective GHS-R agonist** — targets growth hormone release without affecting cortisol or prolactin
-> - **5-7x GH increase** — comparable to GHRP-6 but with better safety
-> - **No hunger spikes** — unlike other ghrelin agonists
-> - **Minimal side effects** — no water retention or joint pain at clinical doses
-> - **Synergistic with CJC-1295** — often stacked for amplified effects
+> - **First selective GHS-R agonist**  -  targets growth hormone release without affecting cortisol or prolactin
+> - **5-7x GH increase**  -  comparable to GHRP-6 but with better safety
+> - **No hunger spikes**  -  unlike other ghrelin agonists
+> - **Minimal side effects**  -  no water retention or joint pain at clinical doses
+> - **Synergistic with CJC-1295**  -  often stacked for amplified effects
 
 ## What Is Ipamorelin?
 
@@ -46,18 +46,18 @@ Developed in the 1990s, ipamorelin was designed to avoid the drawbacks of earlie
 ### Ghrelin Receptor Activation
 Ipamorelin binds to the **growth hormone secretagogue receptor** (GHS-R1a) in the pituitary and hypothalamus:
 
-- **Stimulates GH release** — mimics natural ghrelin signaling
-- **Pulsatile secretion** — matches the body's natural rhythm
-- **No cortisol/prolactin** — unlike non-selective agonists
+- **Stimulates GH release**  -  mimics natural ghrelin signaling
+- **Pulsatile secretion**  -  matches the body's natural rhythm
+- **No cortisol/prolactin**  -  unlike non-selective agonists
 
 ([Smith et al., 1997](https://pubmed.ncbi.nlm.nih.gov/9343432/))
 
 ### Selective Action
 This selectivity makes ipamorelin unique:
 
-- **Doesn't increase appetite** — unlike GHRP-6
-- **No ACTH stimulation** — avoids cortisol spikes
-- **Minimal impact on blood sugar** — safer for metabolic health
+- **Doesn't increase appetite**  -  unlike GHRP-6
+- **No ACTH stimulation**  -  avoids cortisol spikes
+- **Minimal impact on blood sugar**  -  safer for metabolic health
 
 > **Key Finding:** In clinical trials, ipamorelin increased GH by 5-7x baseline without affecting other hormones.
 
@@ -78,7 +78,7 @@ A 2001 study measured GH levels after ipamorelin administration:
 A 6-month trial found:
 
 - **No significant side effects** at therapeutic doses
-- **No antibody formation** — unlike some peptide therapies
+- **No antibody formation**  -  unlike some peptide therapies
 - **No organ toxicity** on blood work and imaging
 
 ## Dosing Protocol
@@ -112,8 +112,8 @@ See our [CJC-1295 guide](/articles/cjc-1295-dac-guide) for details.
 | **Headache** | Rare | First few doses |
 
 ### When to Stop
-- **Persistent joint pain** — rare but possible
-- **Severe water retention** — indicates dosing too high
+- **Persistent joint pain**  -  rare but possible
+- **Severe water retention**  -  indicates dosing too high
 
 ## Ipamorelin vs Other GHRPs
 

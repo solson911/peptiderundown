@@ -127,12 +127,12 @@ Understanding these categories is critical for knowing what's actually legal for
 
 These are FDA-approved drugs. You need a prescription from a licensed provider, and they must be dispensed by a licensed pharmacy.
 
-- **Semaglutide** — Ozempic, Wegovy, Rybelsus
-- **Tirzepatide** — Mounjaro, Zepbound
-- **Tesamorelin** — Egrifta
-- **Bremelanotide/PT-141** — Vyleesi
-- **Gonadorelin** — and various GnRH analogs
-- **Sermorelin** — approved but discontinued by its original manufacturer; still compounded in some states
+- **Semaglutide**  -  Ozempic, Wegovy, Rybelsus
+- **Tirzepatide**  -  Mounjaro, Zepbound
+- **Tesamorelin**  -  Egrifta
+- **Bremelanotide/PT-141**  -  Vyleesi
+- **Gonadorelin**  -  and various GnRH analogs
+- **Sermorelin**  -  approved but discontinued by its original manufacturer; still compounded in some states
 
 Using these without a prescription is illegal. Selling them without being a licensed pharmacy is illegal. There's no ambiguity here.
 
@@ -173,10 +173,10 @@ Some compounding pharmacies have challenged the FDA's determinations in court. T
 
 The United States doesn't have a single unified system for peptide regulation. Federal rules set the floor, but states can (and do) add their own restrictions.
 
-- **Texas** — relatively permissive toward compounding pharmacies and peptide prescribing through its medical board
-- **California** — tends to follow FDA guidance closely and has actively restricted compounding of substances the FDA has flagged
-- **Florida** — became a hub for peptide clinics and compounding operations, partly due to a regulatory environment that was slower to crack down; the Florida Board of Pharmacy tightened rules in 2025
-- **New York** — some of the strictest compounding regulations in the country and has been aggressive about enforcing them
+- **Texas**  -  relatively permissive toward compounding pharmacies and peptide prescribing through its medical board
+- **California**  -  tends to follow FDA guidance closely and has actively restricted compounding of substances the FDA has flagged
+- **Florida**  -  became a hub for peptide clinics and compounding operations, partly due to a regulatory environment that was slower to crack down; the Florida Board of Pharmacy tightened rules in 2025
+- **New York**  -  some of the strictest compounding regulations in the country and has been aggressive about enforcing them
 
 The practical reality is that your access to compounded peptides depends heavily on where you live and where your pharmacy operates. A peptide legally compounded in one state might not be available in another.
 
@@ -200,12 +200,12 @@ Traveling internationally with peptides requires extra caution. Carrying injecta
 
 The regulatory environment is tightening, not loosening. Here's how to protect yourself:
 
-- **Get a prescription when possible** — for peptides with approved pharmaceutical versions (semaglutide, tirzepatide, tesamorelin, PT-141), the safest route is a legitimate prescription from a licensed provider filled at a licensed pharmacy
-- **Use licensed compounding pharmacies** — verify the pharmacy is state-licensed and (ideally) FDA-registered as a 503B facility; check for recent FDA warning letters or inspection results
-- **Keep documentation** — if you have a prescription for a compounded peptide, keep a copy; carry prescription documentation when traveling
-- **Be skeptical of "research only" claims** — the research peptide market still exists, but it's under more pressure than ever; understand the legal risks
-- **Stay informed** — regulations change; follow developments through the FDA website, the Outsourcing Facilities Association, and sites like [peptidearc.com](https://peptidearc.com)
-- **Don't sell or redistribute** — buying for personal use is one level of legal risk; selling or distributing is a completely different level
+- **Get a prescription when possible**  -  for peptides with approved pharmaceutical versions (semaglutide, tirzepatide, tesamorelin, PT-141), the safest route is a legitimate prescription from a licensed provider filled at a licensed pharmacy
+- **Use licensed compounding pharmacies**  -  verify the pharmacy is state-licensed and (ideally) FDA-registered as a 503B facility; check for recent FDA warning letters or inspection results
+- **Keep documentation**  -  if you have a prescription for a compounded peptide, keep a copy; carry prescription documentation when traveling
+- **Be skeptical of "research only" claims**  -  the research peptide market still exists, but it's under more pressure than ever; understand the legal risks
+- **Stay informed**  -  regulations change; follow developments through the FDA website, the Outsourcing Facilities Association, and sites like [peptidearc.com](https://peptidearc.com)
+- **Don't sell or redistribute**  -  buying for personal use is one level of legal risk; selling or distributing is a completely different level
 
 ## FAQs
 

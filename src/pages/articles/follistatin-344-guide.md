@@ -88,8 +88,8 @@ Limited but promising:
 
 ### When to Stop
 
-- **Severe immune reactions** — discontinue immediately.
-- **Unexpected fertility issues** — consult a healthcare provider.
+- **Severe immune reactions**  -  discontinue immediately.
+- **Unexpected fertility issues**  -  consult a healthcare provider.
 
 ## Follistatin 344 vs. Follistatin 315
 

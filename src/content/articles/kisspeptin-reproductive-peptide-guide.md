@@ -14,12 +14,12 @@ Kisspeptin is a peptide that plays a critical role in reproductive health. It re
 
 > **Key Takeaways**
 >
-> - **Regulates GnRH** — Controls the hypothalamic-pituitary-gonadal (HPG) axis
-> - **Triggers puberty** — Essential for the onset of sexual maturation
-> - **Boosts testosterone** — Stimulates GnRH pulses in males
-> - **Supports fertility** — Used in IVF and reproductive research
-> - **Potential alternative** — May replace hCG or Clomid in testosterone therapy
-> - **Research ongoing** — Not yet FDA-approved for clinical use
+> - **Regulates GnRH**  -  Controls the hypothalamic-pituitary-gonadal (HPG) axis
+> - **Triggers puberty**  -  Essential for the onset of sexual maturation
+> - **Boosts testosterone**  -  Stimulates GnRH pulses in males
+> - **Supports fertility**  -  Used in IVF and reproductive research
+> - **Potential alternative**  -  May replace hCG or Clomid in testosterone therapy
+> - **Research ongoing**  -  Not yet FDA-approved for clinical use
 
 ## What Is Kisspeptin?
 
@@ -45,8 +45,8 @@ Kisspeptin's primary role is to regulate the **hypothalamic-pituitary-gonadal (H
 
 Kisspeptin stimulates the **GnRH pulse generator** in the hypothalamus, which releases GnRH in pulses. This pulsatile release is critical for normal reproductive function.
 
-- **In males** — Drives testosterone production via LH and FSH
-- **In females** — Regulates menstrual cycles and ovulation
+- **In males**  -  Drives testosterone production via LH and FSH
+- **In females**  -  Regulates menstrual cycles and ovulation
 
 ([Citation Author et al., Year](https://pubmed.ncbi.nlm.nih.gov/PMID/))
 
@@ -54,8 +54,8 @@ Kisspeptin stimulates the **GnRH pulse generator** in the hypothalamus, which re
 
 Kisspeptin is essential for the onset of puberty. Low levels during childhood suppress GnRH, while rising levels trigger sexual maturation.
 
-- **Deficiency** — Delayed or absent puberty
-- **Excess** — Precocious puberty (rare)
+- **Deficiency**  -  Delayed or absent puberty
+- **Excess**  -  Precocious puberty (rare)
 
 > **Key Finding:** Kisspeptin administration can induce puberty in animal models with genetic deficiencies.
 
@@ -76,8 +76,8 @@ Kisspeptin shows promise as a **natural alternative** to hCG or Clomid for boost
 
 Kisspeptin is used in IVF to **trigger ovulation** without the risk of ovarian hyperstimulation syndrome (OHSS).
 
-- **Advantage** — Lower risk of OHSS compared to hCG
-- **Limitation** — Shorter half-life requires precise timing
+- **Advantage**  -  Lower risk of OHSS compared to hCG
+- **Limitation**  -  Shorter half-life requires precise timing
 
 ### Diagnostic Use
 
@@ -106,8 +106,8 @@ Kisspeptin is generally well-tolerated, but side effects can occur.
 | **Headache** | Rare | Resolves quickly |
 
 ### When to Stop
-- **Severe allergic reaction** — Seek medical attention
-- **Persistent symptoms** — Discontinue and consult provider
+- **Severe allergic reaction**  -  Seek medical attention
+- **Persistent symptoms**  -  Discontinue and consult provider
 
 ## Kisspeptin vs. hCG vs. Clomid
 
@@ -120,9 +120,9 @@ Kisspeptin is generally well-tolerated, but side effects can occur.
 
 ## Who Might Benefit
 
-- **Men with low testosterone** — Natural alternative to hCG
-- **Women undergoing IVF** — Safer ovulation trigger
-- **Individuals with delayed puberty** — Diagnostic and therapeutic potential
+- **Men with low testosterone**  -  Natural alternative to hCG
+- **Women undergoing IVF**  -  Safer ovulation trigger
+- **Individuals with delayed puberty**  -  Diagnostic and therapeutic potential
 
 ## Legal Status and Availability
 

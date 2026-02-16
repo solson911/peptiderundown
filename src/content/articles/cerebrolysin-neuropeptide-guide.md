@@ -159,8 +159,8 @@ Cerebrolysin has a strong safety profile based on decades of clinical use.
 
 ### Rare/Serious
 
-- **Allergic reactions** — anyone allergic to porcine products should avoid entirely
-- **Seizures** — very small number of epilepsy patients; generally contraindicated in active epilepsy
+- **Allergic reactions**  -  anyone allergic to porcine products should avoid entirely
+- **Seizures**  -  very small number of epilepsy patients; generally contraindicated in active epilepsy
 
 > **Key Finding:** A 2012 safety meta-analysis covering over **3,000 patients** found the overall adverse event rate with Cerebrolysin was similar to placebo ([Bornstein et al., 2018](https://pubmed.ncbi.nlm.nih.gov/29484894/)).
 
@@ -199,9 +199,9 @@ Limited data on continuous long-term use since most protocols are cyclical. Deca
 
 Common stacks include:
 
-- **Cerebrolysin + [Semax](/articles/selank-semax-nootropic-peptides)** — another neurotrophic peptide
-- **Cerebrolysin + P21** — a synthetic BDNF mimetic
-- **Cerebrolysin + lion's mane mushroom** — a natural NGF stimulator
+- **Cerebrolysin + [Semax](/articles/selank-semax-nootropic-peptides)**  -  another neurotrophic peptide
+- **Cerebrolysin + P21**  -  a synthetic BDNF mimetic
+- **Cerebrolysin + lion's mane mushroom**  -  a natural NGF stimulator
 
 No formal interaction studies exist. Start compounds one at a time.
 

@@ -147,17 +147,17 @@ Here's what we can say:
 
 **The good news:**
 
-- **Well-tolerated** — many peptides are naturally occurring in your body
-- **Targeted action** — more precise than broad pharmaceuticals, often meaning fewer side effects
-- **FDA-approved options exist** — semaglutide and tesamorelin have gone through rigorous clinical trials
-- **Mild side effects** — when they occur, typically injection site redness, mild nausea, headache, or water retention
+- **Well-tolerated**  -  many peptides are naturally occurring in your body
+- **Targeted action**  -  more precise than broad pharmaceuticals, often meaning fewer side effects
+- **FDA-approved options exist**  -  semaglutide and tesamorelin have gone through rigorous clinical trials
+- **Mild side effects**  -  when they occur, typically injection site redness, mild nausea, headache, or water retention
 
 **The important caveats:**
 
-- **Not all peptides are FDA-approved** — many are used "off-label" or obtained through compounding pharmacies with varying oversight
-- **Quality matters enormously** — unregulated sources may be contaminated, underdosed, or mislabeled
-- **Individual responses vary** — pre-existing conditions, medications, and biology all play a role
-- **Long-term data is limited** — short- and medium-term safety looks promising for many, but we're still learning
+- **Not all peptides are FDA-approved**  -  many are used "off-label" or obtained through compounding pharmacies with varying oversight
+- **Quality matters enormously**  -  unregulated sources may be contaminated, underdosed, or mislabeled
+- **Individual responses vary**  -  pre-existing conditions, medications, and biology all play a role
+- **Long-term data is limited**  -  short- and medium-term safety looks promising for many, but we're still learning
 
 > **Important:** "Generally safe" and "safe for *you* specifically" are different conversations. Always work with a knowledgeable provider.
 
@@ -218,8 +218,8 @@ Keep notes on how you feel, any side effects, sleep quality, energy levels, and 
 
 Nope. They're completely different:
 
-- **Steroids** — synthetic hormones that directly flood your body with supraphysiological levels
-- **Peptides** — signaling molecules that encourage your body to optimize its own processes
+- **Steroids**  -  synthetic hormones that directly flood your body with supraphysiological levels
+- **Peptides**  -  signaling molecules that encourage your body to optimize its own processes
 
 **Myth: "Peptides are illegal."**
 Many peptides are perfectly legal when prescribed by a licensed provider. The legal situation is nuanced (see above), but working with a doctor and pharmacy keeps you on solid ground.

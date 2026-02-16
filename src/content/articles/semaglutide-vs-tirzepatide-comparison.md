@@ -10,7 +10,7 @@ author: "PeptideRundown Team"
 
 # Semaglutide vs Tirzepatide: The Ultimate Comparison
 
-The obesity treatment landscape changed forever with the arrival of GLP-1 receptor agonists. First came semaglutide (Ozempic, Wegovy). Then tirzepatide (Mounjaro, Zepbound) raised the bar. But how do these two titans compare? This guide breaks down everything from mechanisms to real-world results.
+The obesity treatment space changed forever with the arrival of GLP-1 receptor agonists. First came semaglutide (Ozempic, Wegovy). Then tirzepatide (Mounjaro, Zepbound) raised the bar. But how do these two titans compare? This guide breaks down everything from mechanisms to real-world results.
 
 > **Key Takeaways**
 > - **Semaglutide** targets only GLP-1 receptors; **tirzepatide** hits both GLP-1 and GIP

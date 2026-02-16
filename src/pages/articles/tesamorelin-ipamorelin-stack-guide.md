@@ -122,9 +122,9 @@ This reflects a bidirectional relationship: the peptides stimulate GH, GH suppor
 
 ### Skin, Hair, and Recovery
 
-- **Skin** — improved elasticity, thickness, and hydration (collagen synthesis)
-- **Hair** — growth may improve, though variable
-- **Recovery** — faster muscle repair, less soreness, better joint health
+- **Skin**  -  improved elasticity, thickness, and hydration (collagen synthesis)
+- **Hair**  -  growth may improve, though variable
+- **Recovery**  -  faster muscle repair, less soreness, better joint health
 
 ### Cognitive Function and Mood
 

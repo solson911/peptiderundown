@@ -22,7 +22,7 @@ It's the first **triple agonist** to hit clinical trials, targeting not two but 
 > - **24.2% average weight loss** at the highest dose (12 mg) in just 48 weeks
 > - **82% liver fat reduction** from the glucagon component
 > - **Outperformed** semaglutide (~16%) and tirzepatide (~22%) in cross-trial comparisons
-> - **Not yet FDA-approved** — phase 3 TRIUMPH trials are underway
+> - **Not yet FDA-approved**  -  phase 3 TRIUMPH trials are underway
 > - **Estimated approval:** 2027-2028
 
 ## What Is Retatrutide?
@@ -39,7 +39,7 @@ Here's how it compares to what's already out there:
 | **Tirzepatide** (Mounjaro/Zepbound) | GLP-1 + GIP | 2nd gen |
 | **Retatrutide** | GLP-1 + GIP + Glucagon | 3rd gen |
 
-That third target — **glucagon** — is what sets retatrutide apart from everything else in the pipeline.
+That third target  -  **glucagon**  -  is what sets retatrutide apart from everything else in the pipeline.
 
 For a deeper compound profile, check out the [retatrutide overview on PeptideArc](https://peptidearc.com).
 
@@ -51,10 +51,10 @@ Each receptor does something different. Together, they attack weight loss from e
 
 GLP-1 is the foundation. When you eat, your gut releases it, and it triggers a cascade:
 
-- **Stimulates insulin release** — improving blood sugar control
-- **Slows gastric emptying** — food stays in your stomach longer
-- **Signals the brain** — reducing hunger at a neurological level
-- **Increases satiety** — you feel full faster and stay full longer
+- **Stimulates insulin release**  -  improving blood sugar control
+- **Slows gastric emptying**  -  food stays in your stomach longer
+- **Signals the brain**  -  reducing hunger at a neurological level
+- **Increases satiety**  -  you feel full faster and stay full longer
 
 This is the same mechanism behind Ozempic and Wegovy. Read our full [semaglutide guide](/articles/semaglutide-weight-loss-guide) for details.
 
@@ -64,23 +64,23 @@ GIP is the second piece. For years, researchers debated whether GIP agonism help
 
 Tirzepatide settled that debate. GIP activation:
 
-- **Enhances GLP-1's effects** — making appetite suppression stronger
-- **Improves insulin sensitivity** — better metabolic function overall
-- **Regulates energy balance** — via signaling in the brain
-- **May reduce fat accumulation** — in adipose tissue
+- **Enhances GLP-1's effects**  -  making appetite suppression stronger
+- **Improves insulin sensitivity**  -  better metabolic function overall
+- **Regulates energy balance**  -  via signaling in the brain
+- **May reduce fat accumulation**  -  in adipose tissue
 
 ([Samms et al., 2020](https://pubmed.ncbi.nlm.nih.gov/32866435/))
 
-### Glucagon Receptor: The Game-Changer
+### Glucagon Receptor: The breakthrough
 
 This is where retatrutide gets truly interesting.
 
 Glucagon is traditionally the "opposite of insulin." But it does something critical for weight loss: **it increases energy expenditure**.
 
-- **Ramps up thermogenesis** — your body generates more heat, burning calories
-- **Promotes fat oxidation** — preferentially burns stored fat
-- **Reduces liver fat** — directly targets hepatic fat metabolism
-- **Fights fatty liver disease** — a condition affecting ~25% of the global population
+- **Ramps up thermogenesis**  -  your body generates more heat, burning calories
+- **Promotes fat oxidation**  -  preferentially burns stored fat
+- **Reduces liver fat**  -  directly targets hepatic fat metabolism
+- **Fights fatty liver disease**  -  a condition affecting ~25% of the global population
 
 > **Why This Matters:** None of the current GLP-1 drugs directly target liver fat. Glucagon does. That's a first.
 
@@ -131,9 +131,9 @@ Read that 12 mg number again. **24.2% body weight loss in 48 weeks.**
 And the curves hadn't plateaued yet, suggesting even greater results with longer treatment.
 
 > **For comparison:**
-> - **Semaglutide** (Wegovy) — ~15-16% in the STEP trials
-> - **Tirzepatide** (Zepbound) — ~20-22% in SURMOUNT-1
-> - **Retatrutide** — **24.2%** and still climbing
+> - **Semaglutide** (Wegovy)  -  ~15-16% in the STEP trials
+> - **Tirzepatide** (Zepbound)  -  ~20-22% in SURMOUNT-1
+> - **Retatrutide**  -  **24.2%** and still climbing
 
 ### Diabetes Results
 
@@ -141,11 +141,11 @@ A parallel trial in people with **type 2 diabetes** ([Rosenstock et al., 2023](h
 
 - **16.9% weight loss** at 36 weeks on the 12 mg dose
 - Significant **HbA1c improvements**
-- Many participants hit HbA1c below **5.7%** — technically non-diabetic range
+- Many participants hit HbA1c below **5.7%**  -  technically non-diabetic range
 
 ### Liver Fat: The Standout Finding
 
-> **Key Finding:** Retatrutide produced an **82% reduction in liver fat** — the most dramatic result in the entire trial.
+> **Key Finding:** Retatrutide produced an **82% reduction in liver fat**  -  the most dramatic result in the entire trial.
 
 Using MRI to measure hepatic fat:
 
@@ -167,7 +167,7 @@ Retatrutide is a **once-weekly subcutaneous injection** with a slow dose escalat
 | Escalation | Every 4 weeks | Gradual increases |
 | Maintenance | Ongoing | 1 mg, 4 mg, 8 mg, or 12 mg |
 
-> **Sweet spot:** The **8 mg dose** offered the best balance — **22.8% weight loss** with fewer side effects than 12 mg.
+> **Sweet spot:** The **8 mg dose** offered the best balance  -  **22.8% weight loss** with fewer side effects than 12 mg.
 
 **Important:** These are clinical trial protocols. Retatrutide is **not yet approved**, so no official prescribing guidelines exist.
 
@@ -187,9 +187,9 @@ Similar to other GLP-1 drugs. Gastrointestinal issues dominate, especially durin
 
 ### Less Common
 
-- **Injection site reactions** — mild redness or itching
-- **Slight heart rate increase** — 2-4 bpm, consistent with other GLP-1 drugs
-- **Elevated lipase/amylase** — pancreatic enzymes; generally not clinically significant
+- **Injection site reactions**  -  mild redness or itching
+- **Slight heart rate increase**  -  2-4 bpm, consistent with other GLP-1 drugs
+- **Elevated lipase/amylase**  -  pancreatic enzymes; generally not clinically significant
 
 ### Dropout Rate
 
@@ -197,7 +197,7 @@ Similar to other GLP-1 drugs. Gastrointestinal issues dominate, especially durin
 
 ### What About Blood Sugar Spikes?
 
-A valid concern — glucagon's primary job is *raising* blood sugar.
+A valid concern  -  glucagon's primary job is *raising* blood sugar.
 
 In practice? **Not an issue.** The GLP-1 and GIP components counterbalance the glucagon effect. Blood sugar actually **improved** across all dose groups, even in non-diabetic participants.
 
@@ -231,7 +231,7 @@ Here's the problem:
 Glucagon breaks this cycle by working on the **"calories out" side:**
 
 - **Increases resting energy expenditure** by an estimated 10-15% ([Habegger et al., 2010](https://pubmed.ncbi.nlm.nih.gov/20185758/))
-- **Promotes fat oxidation** — your body burns stored fat preferentially
+- **Promotes fat oxidation**  -  your body burns stored fat preferentially
 - **Reduces new fat creation** in the liver (de novo lipogenesis)
 
 The result? Less metabolic slowdown. Less plateauing. More sustained weight loss.
@@ -261,10 +261,10 @@ Results expected through 2025-2026.
 
 Some research chemical suppliers offer "research" versions. **We don't recommend this.** Risks include:
 
-- **Contamination** — no quality control
-- **Incorrect dosing** — potentially dangerous
-- **Degradation** — unknown storage conditions
-- **Legal consequences** — varies by jurisdiction
+- **Contamination**  -  no quality control
+- **Incorrect dosing**  -  potentially dangerous
+- **Degradation**  -  unknown storage conditions
+- **Legal consequences**  -  varies by jurisdiction
 
 ### Expected Timeline
 
@@ -280,10 +280,10 @@ Eli Lilly has manufacturing infrastructure from tirzepatide, which should help s
 
 Based on the data so far, retatrutide could be ideal for:
 
-- **People with BMI 35+** — who need more aggressive weight loss than current options
-- **People with fatty liver disease** — given the 82% liver fat reduction
-- **People with type 2 diabetes + obesity** — dual benefit of weight loss and glucose control
-- **People who've plateaued on semaglutide or tirzepatide** — the glucagon component adds a new mechanism
+- **People with BMI 35+**  -  who need more aggressive weight loss than current options
+- **People with fatty liver disease**  -  given the 82% liver fat reduction
+- **People with type 2 diabetes + obesity**  -  dual benefit of weight loss and glucose control
+- **People who've plateaued on semaglutide or tirzepatide**  -  the glucagon component adds a new mechanism
 
 > **Note:** This is speculative until phase 3 data confirms the findings and the drug is approved.
 
@@ -307,7 +307,7 @@ The highest dose (12 mg weekly) produced **24.2% average weight loss** over 48 w
 
 ### Is retatrutide better than Ozempic?
 
-By weight loss numbers, yes — significantly more. But "better" is complicated.
+By weight loss numbers, yes  -  significantly more. But "better" is complicated.
 
 Semaglutide has:
 - Years of real-world safety data
@@ -354,7 +354,7 @@ The glucagon component increases calorie expenditure and dramatically reduces li
 
 Retatrutide is the most promising obesity drug in development right now.
 
-The triple agonist approach — appetite suppression, insulin improvement, AND increased energy burn — produced **24.2% weight loss** in phase 2. The **82% liver fat reduction** is unprecedented.
+The triple agonist approach  -  appetite suppression, insulin improvement, AND increased energy burn  -  produced **24.2% weight loss** in phase 2. The **82% liver fat reduction** is unprecedented.
 
 But it's early. Phase 2 involved a few hundred people over 48 weeks. Phase 3 will tell us if these results hold in thousands of patients over longer timeframes.
 

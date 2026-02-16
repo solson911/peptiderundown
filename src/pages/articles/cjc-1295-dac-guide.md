@@ -45,9 +45,9 @@ CJC-1295 DAC works through the GHRH receptor (GHRHR) on somatotroph cells in the
 
 Key points about how it works:
 
-- **Amplifies natural pulses** — increases both the amplitude and frequency of GH pulses while maintaining pulsatile pattern ([Ionescu & Bhatt, 2018](https://pubmed.ncbi.nlm.nih.gov/29713752/))
-- **Raises IGF-1** — the Teichman study found IGF-1 levels increased by **36-105%** after single doses, with effects lasting up to 28 days
-- **Negative feedback still works** — somatostatin still functions, providing a safety buffer you don't get with direct GH injection
+- **Amplifies natural pulses**  -  increases both the amplitude and frequency of GH pulses while maintaining pulsatile pattern ([Ionescu & Bhatt, 2018](https://pubmed.ncbi.nlm.nih.gov/29713752/))
+- **Raises IGF-1**  -  the Teichman study found IGF-1 levels increased by **36-105%** after single doses, with effects lasting up to 28 days
+- **Negative feedback still works**  -  somatostatin still functions, providing a safety buffer you don't get with direct GH injection
 
 ## Benefits: What CJC-1295 DAC Actually Does
 
@@ -57,9 +57,9 @@ Most benefits come from sustained elevation of GH and IGF-1.
 
 GH is one of the most potent lipolytic hormones in your body:
 
-- **Promotes breakdown of stored triglycerides** — increases fatty acid oxidation
-- **Reduces visceral fat** — consistently shown in GH-deficient adults ([Johannsson et al., 1997](https://pubmed.ncbi.nlm.nih.gov/9024231/))
-- **Sustained elevation helps** — fat loss from GH requires consistent elevation over weeks to months
+- **Promotes breakdown of stored triglycerides**  -  increases fatty acid oxidation
+- **Reduces visceral fat**  -  consistently shown in GH-deficient adults ([Johannsson et al., 1997](https://pubmed.ncbi.nlm.nih.gov/9024231/))
+- **Sustained elevation helps**  -  fat loss from GH requires consistent elevation over weeks to months
 
 The long **5.8-8 day half-life** makes CJC-1295 DAC particularly well-suited for this purpose.
 
@@ -104,8 +104,8 @@ For a deeper comparison, check out the [CJC-1295 profile on PeptideArc](https://
 
 These two get compared constantly because they're often used together. But they work through completely different mechanisms.
 
-- **CJC-1295 DAC** — GHRH analog, acts on the GHRH receptor
-- **Ipamorelin** — growth hormone secretagogue (GHS), acts on the ghrelin receptor (GHS-R1a)
+- **CJC-1295 DAC**  -  GHRH analog, acts on the GHRH receptor
+- **Ipamorelin**  -  growth hormone secretagogue (GHS), acts on the ghrelin receptor (GHS-R1a)
 
 They stimulate GH release through separate pathways, producing a synergistic effect when combined. For a full breakdown, see our [tesamorelin and ipamorelin stack guide](/articles/tesamorelin-ipamorelin-stack-guide).
 
@@ -128,16 +128,16 @@ CJC-1295 DAC is generally well-tolerated in studies. Most side effects relate to
 
 ### Common Side Effects
 
-- **Water retention** — puffy hands, swollen ankles, general bloating; dose-dependent
-- **Numbness and tingling** — carpal tunnel-like symptoms from elevated GH/IGF-1; signal to lower dose if persistent
-- **Injection site reactions** — redness, swelling, itching; usually mild and temporary
-- **Headaches** — some users report these, particularly in the first week or two
+- **Water retention**  -  puffy hands, swollen ankles, general bloating; dose-dependent
+- **Numbness and tingling**  -  carpal tunnel-like symptoms from elevated GH/IGF-1; signal to lower dose if persistent
+- **Injection site reactions**  -  redness, swelling, itching; usually mild and temporary
+- **Headaches**  -  some users report these, particularly in the first week or two
 
 ### Less Common Concerns
 
-- **Cortisol and prolactin** — GHRH analogs can cause modest increases; less of a concern with ipamorelin pairing
-- **Blood sugar effects** — GH is a counter-regulatory hormone to insulin; people with insulin resistance should monitor glucose
-- **Joint pain** — initial water retention can cause joint discomfort
+- **Cortisol and prolactin**  -  GHRH analogs can cause modest increases; less of a concern with ipamorelin pairing
+- **Blood sugar effects**  -  GH is a counter-regulatory hormone to insulin; people with insulin resistance should monitor glucose
+- **Joint pain**  -  initial water retention can cause joint discomfort
 
 ### Serious Risks
 
@@ -147,9 +147,9 @@ Long-term effects of sustained GH elevation are a legitimate concern. Chronicall
 
 ## Practical Tips
 
-- **Fasting and food timing** — elevated blood sugar and insulin blunt GH release; some users inject on an empty stomach or before bed
-- **Lab monitoring** — track IGF-1 levels, fasting glucose, and HbA1c periodically; IGF-1 gives an objective measure of whether the peptide is working
-- **Storage** — keep lyophilized peptide frozen or refrigerated; once reconstituted, refrigerate and don't freeze; gently swirl, never shake
+- **Fasting and food timing**  -  elevated blood sugar and insulin blunt GH release; some users inject on an empty stomach or before bed
+- **Lab monitoring**  -  track IGF-1 levels, fasting glucose, and HbA1c periodically; IGF-1 gives an objective measure of whether the peptide is working
+- **Storage**  -  keep lyophilized peptide frozen or refrigerated; once reconstituted, refrigerate and don't freeze; gently swirl, never shake
 
 ## Frequently Asked Questions
 

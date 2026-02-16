@@ -18,7 +18,7 @@ In 2015, researchers at USC discovered that one of those molecules might be a ke
 > - **16-amino-acid peptide** encoded by mitochondrial DNA, first discovered in 2015
 > - **Activates AMPK** (the metabolic master switch), improving glucose uptake, fat oxidation, and insulin sensitivity
 > - **Animal studies** show anti-obesity effects and improved physical performance in aged mice
-> - **Human data is still limited** — current dosing protocols are based on animal research and early practitioner experience
+> - **Human data is still limited**  -  current dosing protocols are based on animal research and early practitioner experience
 > - **Levels decline with age**, connecting it directly to longevity research
 
 ## MOTS-c at a Glance
@@ -191,7 +191,7 @@ The safety profile of MOTS-c in humans is not well-established through formal cl
 - **Those with hypoglycemia** or on blood sugar-lowering medications
 - **Individuals with very low body fat**
 - **Pregnant or breastfeeding women**
-- **Anyone with active cancer** — AMPK activation has complex and sometimes contradictory effects on cancer biology
+- **Anyone with active cancer**  -  AMPK activation has complex and sometimes contradictory effects on cancer biology
 
 ## Where to Get MOTS-c
 
@@ -225,9 +225,9 @@ Metabolic changes (improved glucose tolerance, increased energy) may be noticeab
 
 Common combinations include:
 
-- **MOTS-c + [Tesamorelin/Ipamorelin](/articles/tesamorelin-ipamorelin-stack-guide)** — metabolic health and body composition
-- **MOTS-c + NAD+ precursors** (or [methylene blue](/articles/methylene-blue-guide)) — mitochondrial support
-- **MOTS-c + [BPC-157](/articles/bpc-157-complete-guide)** — metabolic optimization with tissue repair
+- **MOTS-c + [Tesamorelin/Ipamorelin](/articles/tesamorelin-ipamorelin-stack-guide)**  -  metabolic health and body composition
+- **MOTS-c + NAD+ precursors** (or [methylene blue](/articles/methylene-blue-guide))  -  mitochondrial support
+- **MOTS-c + [BPC-157](/articles/bpc-157-complete-guide)**  -  metabolic optimization with tissue repair
 
 No formal interaction studies exist. Introduce one compound at a time.
 

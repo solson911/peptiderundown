@@ -14,11 +14,11 @@ Thymosin Beta-4 (TB-4) is a naturally occurring peptide with remarkable regenera
 
 > **Key Takeaways**
 >
-> - **Naturally occurring peptide** — plays a key role in tissue repair and regeneration
-> - **Accelerates wound healing** — by promoting actin sequestration and angiogenesis
-> - **Supports cardiac repair** — shown in preclinical models of heart injury
-> - **Promotes hair regrowth** — via follicle stimulation and angiogenesis
-> - **Available as a research peptide** — not FDA-approved for medical use
+> - **Naturally occurring peptide**  -  plays a key role in tissue repair and regeneration
+> - **Accelerates wound healing**  -  by promoting actin sequestration and angiogenesis
+> - **Supports cardiac repair**  -  shown in preclinical models of heart injury
+> - **Promotes hair regrowth**  -  via follicle stimulation and angiogenesis
+> - **Available as a research peptide**  -  not FDA-approved for medical use
 
 ## What Is Thymosin Beta-4 (TB-4)?
 
@@ -44,9 +44,9 @@ TB-4 exerts its effects through multiple mechanisms, making it a powerful tool f
 
 TB-4 binds to actin, a key structural protein in cells, preventing its polymerization. This action:
 
-- **Reduces scar tissue formation** — by minimizing excessive actin polymerization
-> - **Promotes cell migration** — essential for wound healing
-> - **Enhances tissue remodeling** — critical for repair processes
+- **Reduces scar tissue formation**  -  by minimizing excessive actin polymerization
+> - **Promotes cell migration**  -  essential for wound healing
+> - **Enhances tissue remodeling**  -  critical for repair processes
 
 ([Goldstein et al., 2012](https://pubmed.ncbi.nlm.nih.gov/22336712/))
 
@@ -54,9 +54,9 @@ TB-4 binds to actin, a key structural protein in cells, preventing its polymeriz
 
 TB-4 stimulates the formation of new blood vessels, a process vital for healing:
 
-- **Increases VEGF expression** — a key protein in angiogenesis
-- **Improves blood flow to injured areas** — accelerating recovery
-- **Supports tissue regeneration** — by ensuring nutrient and oxygen delivery
+- **Increases VEGF expression**  -  a key protein in angiogenesis
+- **Improves blood flow to injured areas**  -  accelerating recovery
+- **Supports tissue regeneration**  -  by ensuring nutrient and oxygen delivery
 
 ([Sosne et al., 2010](https://pubmed.ncbi.nlm.nih.gov/20192819/))
 
@@ -64,9 +64,9 @@ TB-4 stimulates the formation of new blood vessels, a process vital for healing:
 
 TB-4 modulates the immune response to reduce inflammation:
 
-- **Decreases pro-inflammatory cytokines** — such as TNF-α and IL-6
-- **Promotes anti-inflammatory signals** — like IL-10
-- **Reduces tissue damage** — from excessive inflammation
+- **Decreases pro-inflammatory cytokines**  -  such as TNF-α and IL-6
+- **Promotes anti-inflammatory signals**  -  like IL-10
+- **Reduces tissue damage**  -  from excessive inflammation
 
 > **Key Finding:** TB-4 not only repairs tissue but also minimizes the inflammatory damage that can impede healing.
 
@@ -130,10 +130,10 @@ TB-4 is generally well-tolerated, with few reported side effects:
 
 Based on current research, TB-4 may be beneficial for:
 
-- **Individuals with chronic wounds** — diabetic ulcers, burns
-- **Athletes with injuries** — muscle, tendon, or ligament damage
-- **Those seeking hair regrowth** — androgenetic alopecia
-- **Patients with cardiac injury** — post-heart attack recovery
+- **Individuals with chronic wounds**  -  diabetic ulcers, burns
+- **Athletes with injuries**  -  muscle, tendon, or ligament damage
+- **Those seeking hair regrowth**  -  androgenetic alopecia
+- **Patients with cardiac injury**  -  post-heart attack recovery
 
 ## Legal Status and Availability
 

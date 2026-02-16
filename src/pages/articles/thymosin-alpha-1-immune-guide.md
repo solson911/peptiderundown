@@ -127,7 +127,7 @@ The combination with interferon consistently outperformed either agent alone.
 
 ### Hepatitis C
 
-Before direct-acting antivirals (DAAs) changed the hepatitis C treatment landscape, Ta1 was studied as an adjunct to interferon and ribavirin therapy.
+Before direct-acting antivirals (DAAs) changed the hepatitis C treatment space, Ta1 was studied as an adjunct to interferon and ribavirin therapy.
 
 - **Improved sustained virological response (SVR)** in combination regimens
 - **Better tolerated** than interferon dose escalation

@@ -15,12 +15,12 @@ Sermorelin is a synthetic peptide that mimics the action of growth hormone-relea
 
 > **Key Takeaways**
 >
-> - **GHRH analog** — stimulates natural GH release from the pituitary
+> - **GHRH analog**  -  stimulates natural GH release from the pituitary
 > - **FDA-approved** as Geref for diagnostic use (1997)
 > - **Anti-aging clinics** use it off-label for GH deficiency
 > - **Dosing protocols** vary (100-300 mcg/day, often cycled)
 > - **Side effects** are mild compared to direct GH
-> - **Legal status** — available as a compounded peptide in the US
+> - **Legal status**  -  available as a compounded peptide in the US
 
 ## What Is Sermorelin?
 
@@ -42,16 +42,16 @@ Sermorelin binds to GHRH receptors in the pituitary, triggering GH release. Unli
 
 ### Mechanism 1: GH Release
 
-- **Stimulates pituitary** — increases GH secretion
-- **Pulsatile release** — mimics natural GH rhythms
-- **Preserves feedback** — avoids GH suppression
+- **Stimulates pituitary**  -  increases GH secretion
+- **Pulsatile release**  -  mimics natural GH rhythms
+- **Preserves feedback**  -  avoids GH suppression
 
 ([Korbonits et al., 2001](https://pubmed.ncbi.nlm.nih.gov/11502827/))
 
 ### Mechanism 2: IGF-1 Production
 
-- **GH triggers IGF-1** — mediates many growth effects
-- **Tissue-specific actions** — benefits muscle, bone, and metabolism
+- **GH triggers IGF-1**  -  mediates many growth effects
+- **Tissue-specific actions**  -  benefits muscle, bone, and metabolism
 
 > **Key Finding:** Sermorelin preserves the natural pulsatility of GH, which may reduce side effects compared to direct GH therapy.
 
@@ -69,10 +69,10 @@ Sermorelin was approved by the FDA in 1997 as **Geref** for diagnosing GH defici
 
 Sermorelin is popular in anti-aging medicine for:
 
-- **GH deficiency** — age-related decline
-- **Muscle preservation** — combats sarcopenia
-- **Skin elasticity** — may improve collagen
-- **Metabolic health** — supports fat metabolism
+- **GH deficiency**  -  age-related decline
+- **Muscle preservation**  -  combats sarcopenia
+- **Skin elasticity**  -  may improve collagen
+- **Metabolic health**  -  supports fat metabolism
 
 ([Blackman et al., 2002](https://pubmed.ncbi.nlm.nih.gov/12042401/))
 
@@ -106,9 +106,9 @@ Generally mild and transient. Most side effects are linked to GH elevation.
 
 ### When to Stop
 
-- **Persistent joint pain** — may indicate excess GH
-- **Severe headaches** — rare but possible
-- **Swelling in extremities** — sign of fluid retention
+- **Persistent joint pain**  -  may indicate excess GH
+- **Severe headaches**  -  rare but possible
+- **Swelling in extremities**  -  sign of fluid retention
 
 For a broader overview, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know).
 
@@ -126,9 +126,9 @@ For a broader overview, see our [peptide side effects guide](/articles/peptide-s
 
 Based on current use:
 
-- **Adults with GH deficiency** — age-related or idiopathic
-- **Athletes** — for recovery and muscle preservation
-- **Anti-aging patients** — seeking metabolic and skin benefits
+- **Adults with GH deficiency**  -  age-related or idiopathic
+- **Athletes**  -  for recovery and muscle preservation
+- **Anti-aging patients**  -  seeking metabolic and skin benefits
 
 > **Important:** Not recommended for individuals with active cancer or pituitary disorders.
 

@@ -47,7 +47,7 @@ Growth hormone (GH) pulses naturally during deep sleep. CJC-1295 and Ipamorelin 
 | 150-200 lbs | 150mcg   | 300mcg     | 9:30 PM       |
 | > 200 lbs   | 200mcg   | 300mcg     | 10:00 PM      |
 
-For comprehensive dosing, see our [CJC-1295 guide](/articles/cjc-1295-dac-guide) and [Ipamorelin guide](/articles/ipamorelin-complete-guide).
+For thorough dosing, see our [CJC-1295 guide](/articles/cjc-1295-dac-guide) and [Ipamorelin guide](/articles/ipamorelin-complete-guide).
 
 ## BPC-157: Gut-Brain Axis Regulator
 

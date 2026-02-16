@@ -60,8 +60,8 @@ Gather everything before you start so you're not scrambling mid-process.
 
 You'll see two options: **bacteriostatic water** and **plain sterile water**. Here's the difference:
 
-- **Bacteriostatic water** — contains 0.9% benzyl alcohol, which prevents bacterial growth; you can draw from the vial multiple times over weeks without contamination; **this is what you want for multi-use vials**
-- **Sterile water** — has no preservative; once punctured, use within 24 hours; only for single-use applications
+- **Bacteriostatic water**  -  contains 0.9% benzyl alcohol, which prevents bacterial growth; you can draw from the vial multiple times over weeks without contamination; **this is what you want for multi-use vials**
+- **Sterile water**  -  has no preservative; once punctured, use within 24 hours; only for single-use applications
 
 For almost everyone reading this, **bacteriostatic water is the right choice**.
 
@@ -148,7 +148,7 @@ Your peptide is now reconstituted and ready to use. Label the vial with the date
 
 ## Peptide Dosage Math: Calculating Concentration and Dose
 
-> **Skip the math?** Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc. Plug in your vial size, water volume, and desired dose — it tells you exactly how many units to draw. No math required.
+> **Skip the math?** Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc. Plug in your vial size, water volume, and desired dose  -  it tells you exactly how many units to draw. No math required.
 
 If you prefer to understand the calculations yourself, here's how it works. The math is dead simple once you see the pattern.
 
@@ -200,7 +200,7 @@ A standard **1mL insulin syringe** has **100 units** total. Each unit = 0.01mL. 
 
 ### The Quick Dose Formula
 
-> **Pro Tip:** Add a "round" amount of water that makes the concentration a clean number. Adding 2mL to a 5mg vial gives 2.5mg/mL — easy to work with. Adding 1.73mL gives 2.89mg/mL — unnecessarily annoying.
+> **Pro Tip:** Add a "round" amount of water that makes the concentration a clean number. Adding 2mL to a 5mg vial gives 2.5mg/mL  -  easy to work with. Adding 1.73mL gives 2.89mg/mL  -  unnecessarily annoying.
 
 **Units to draw = (Dose in mg ÷ Concentration in mg/mL) × 100**
 
@@ -229,7 +229,7 @@ Your dose is now ready for administration. Use a fresh insulin syringe each time
 
 ## How to Store Reconstituted Peptides
 
-Proper storage is crucial. You went through the effort of reconstituting correctly, so don't let poor storage ruin your peptide.
+Proper storage is important. You went through the effort of reconstituting correctly, so don't let poor storage ruin your peptide.
 
 ### The Rules
 

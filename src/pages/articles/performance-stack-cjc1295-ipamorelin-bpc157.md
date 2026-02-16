@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Article.astro
-title: "The Performance Stack — CJC-1295 DAC + Ipamorelin + BPC-157 for Athletic Enhancement"
+title: "The Performance Stack  -  CJC-1295 DAC + Ipamorelin + BPC-157 for Athletic Enhancement"
 description: "A complete guide to the performance stack combining CJC-1295 DAC, Ipamorelin, and BPC-157 for muscle growth, recovery, and athletic performance. Learn about dosing, timing, and benefits."
 image: /images/articles/performance-stack.webp
 date: 2026-02-15
@@ -9,7 +9,7 @@ tags: ["performance stack", "CJC-1295", "ipamorelin", "BPC-157", "athletic", "mu
 author: "PeptideRundown Team"
 ---
 
-# The Performance Stack — CJC-1295 DAC + Ipamorelin + BPC-157 for Athletic Enhancement
+# The Performance Stack  -  CJC-1295 DAC + Ipamorelin + BPC-157 for Athletic Enhancement
 
 Athletes and fitness enthusiasts are always looking for ways to optimize performance, recovery, and muscle growth. The combination of **CJC-1295 DAC**, **Ipamorelin**, and **BPC-157** offers a powerful stack that targets growth hormone optimization and tissue repair.
 
@@ -44,25 +44,25 @@ For more details on individual peptides, check out our guides:
 
 CJC-1295 DAC is a **growth hormone-releasing hormone (GHRH) analog** with a long half-life. It provides sustained GH elevation, mimicking the body's natural GH pulses.
 
-- **Stimulates GH release** — binds to GHRH receptors in the pituitary
-- **Prolongs GH elevation** — half-life of ~7-10 days
-- **Minimal side effects** — no significant cortisol or prolactin increase
+- **Stimulates GH release**  -  binds to GHRH receptors in the pituitary
+- **Prolongs GH elevation**  -  half-life of ~7-10 days
+- **Minimal side effects**  -  no significant cortisol or prolactin increase
 
 ### Ipamorelin: The Selective Pulse
 
 Ipamorelin is a **growth hormone secretagogue (GHRP)** that selectively stimulates GH release without unwanted side effects.
 
-- **Ghrelin mimetic** — binds to ghrelin receptors
-- **No cortisol or prolactin spike** — unlike other GHRPs
-- **Natural GH pulse mimic** — enhances CJC-1295 DAC's effects
+- **Ghrelin mimetic**  -  binds to ghrelin receptors
+- **No cortisol or prolactin spike**  -  unlike other GHRPs
+- **Natural GH pulse mimic**  -  enhances CJC-1295 DAC's effects
 
 ### BPC-157: The Recovery Booster
 
 BPC-157 is a **tissue repair peptide** with systemic benefits for recovery and gut health.
 
-- **Angiogenic properties** — promotes blood vessel growth
-> - **Anti-inflammatory** — reduces muscle and joint inflammation
-> - **Gut healing** — repairs intestinal lining and improves nutrient absorption
+- **Angiogenic properties**  -  promotes blood vessel growth
+> - **Anti-inflammatory**  -  reduces muscle and joint inflammation
+> - **Gut healing**  -  repairs intestinal lining and improves nutrient absorption
 
 ## Dosing and Timing
 
@@ -84,10 +84,10 @@ BPC-157 is a **tissue repair peptide** with systemic benefits for recovery and g
 
 ## Performance Metrics to Track
 
-- **Strength gains** — 1RM improvements
-- **Recovery time** — DOMS duration
-- **Body composition** — DEXA scans or calipers
-- **Sleep quality** — GH-dependent recovery
+- **Strength gains**  -  1RM improvements
+- **Recovery time**  -  DOMS duration
+- **Body composition**  -  DEXA scans or calipers
+- **Sleep quality**  -  GH-dependent recovery
 
 ## Side Effects
 
@@ -104,9 +104,9 @@ BPC-157 is a **tissue repair peptide** with systemic benefits for recovery and g
 
 ## Who Benefits?
 
-- **Strength athletes** — enhanced muscle growth and recovery
-- **Endurance athletes** — improved recovery and injury prevention
-- **Weekend warriors** — faster recovery between sessions
+- **Strength athletes**  -  enhanced muscle growth and recovery
+- **Endurance athletes**  -  improved recovery and injury prevention
+- **Weekend warriors**  -  faster recovery between sessions
 
 ## Frequently Asked Questions
 

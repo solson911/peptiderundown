@@ -40,10 +40,10 @@ Most peptides are administered subcutaneously because the absorption rate from f
 
 ### Nice to Have
 
-- **Small ice pack** — for numbing the site beforehand
+- **Small ice pack**  -  for numbing the site beforehand
 - **Cotton balls or gauze pads**
-- **Bandages** — rarely needed, but reassuring for first-timers
-- **Notebook or app** — for tracking injection sites and doses
+- **Bandages**  -  rarely needed, but reassuring for first-timers
+- **Notebook or app**  -  for tracking injection sites and doses
 
 For detailed profiles on specific peptide compounds and their recommended administration routes, [peptidearc.com](https://peptidearc.com) maintains reference pages.
 
@@ -55,25 +55,25 @@ You have three primary options. Each works well, and the "best" site is mostly a
 
 The most popular site for subQ injections. The belly typically has a generous layer of subcutaneous fat.
 
-- **Where** — anywhere in a hand-width radius around your navel, but stay at least two inches away from the belly button itself
-- **Pros** — large surface area for rotation, easy to see what you're doing
-- **Cons** — can be more sensitive for very lean midsections
+- **Where**  -  anywhere in a hand-width radius around your navel, but stay at least two inches away from the belly button itself
+- **Pros**  -  large surface area for rotation, easy to see what you're doing
+- **Cons**  -  can be more sensitive for very lean midsections
 
 ### The Thigh
 
 The outer, upper thigh provides excellent injection sites with plenty of subcutaneous tissue.
 
-- **Where** — front or outer aspect, roughly in the middle third between hip and knee; avoid the inner thigh
-- **Pros** — easy to access, good tissue depth, can sit down while injecting
-- **Cons** — slightly more nerve endings in some individuals
+- **Where**  -  front or outer aspect, roughly in the middle third between hip and knee; avoid the inner thigh
+- **Pros**  -  easy to access, good tissue depth, can sit down while injecting
+- **Cons**  -  slightly more nerve endings in some individuals
 
 ### The Upper Arm
 
 The back of the upper arm, between shoulder and elbow.
 
-- **Where** — the fatty area on the back of the arm, roughly halfway between shoulder and elbow
-- **Pros** — good absorption, relatively painless
-- **Cons** — hard to reach on your own; usually requires a partner
+- **Where**  -  the fatty area on the back of the arm, roughly halfway between shoulder and elbow
+- **Pros**  -  good absorption, relatively painless
+- **Cons**  -  hard to reach on your own; usually requires a partner
 
 > **Key Finding:** A study in *Diabetes Technology & Therapeutics* found no clinically significant differences in absorption rates between abdominal and thigh injection sites ([PubMed: 19459763](https://pubmed.ncbi.nlm.nih.gov/19459763/)). Pick the site that feels most comfortable.
 
@@ -135,9 +135,9 @@ Research in *Diabetes Care* showed that patients who rotated sites had fewer com
 
 ### Rotation Systems
 
-- **Once daily** — rotate between four abdominal quadrants (upper left, upper right, lower left, lower right), moving clockwise
-- **Twice daily** — add thighs; morning in abdomen, evening in thigh, switching sides each day
-- **Clock method** — imagine a clock face around your navel; each injection moves to the next "hour" position
+- **Once daily**  -  rotate between four abdominal quadrants (upper left, upper right, lower left, lower right), moving clockwise
+- **Twice daily**  -  add thighs; morning in abdomen, evening in thigh, switching sides each day
+- **Clock method**  -  imagine a clock face around your navel; each injection moves to the next "hour" position
 
 Keep a simple log, even just jotting "left belly" or "right thigh" on your phone.
 
@@ -145,41 +145,41 @@ Keep a simple log, even just jotting "left belly" or "right thigh" on your phone
 
 SubQ injections with insulin needles are not very painful. Most people describe a brief pinch. But if you're needle-sensitive:
 
-1. **Fresh needle every time** — needles dull after a single use
-2. **Let alcohol dry completely** — wet alcohol causes stinging
-3. **Ice the site for 30-60 seconds** — a frozen pea bag wrapped in paper towel works great
-4. **Inject at room temperature** — cold solutions cause more discomfort
-5. **Relax the muscle underneath** — tension makes everything worse
-6. **Go at a steady speed** — hesitating mid-insertion makes it worse
-7. **Breathe out as you insert** — helps your body relax
+1. **Fresh needle every time**  -  needles dull after a single use
+2. **Let alcohol dry completely**  -  wet alcohol causes stinging
+3. **Ice the site for 30-60 seconds**  -  a frozen pea bag wrapped in paper towel works great
+4. **Inject at room temperature**  -  cold solutions cause more discomfort
+5. **Relax the muscle underneath**  -  tension makes everything worse
+6. **Go at a steady speed**  -  hesitating mid-insertion makes it worse
+7. **Breathe out as you insert**  -  helps your body relax
 
 ## Proper Sharps Disposal
 
 Used syringes are biohazardous sharps. Throwing them in regular trash is illegal in many states.
 
-- **Commercial sharps containers** — available at any pharmacy; many accept them back when full
-- **Mail-back programs** — companies like Stericycle sell prepaid disposal kits
-- **Community drop-off sites** — hospitals, fire stations, health departments; see [safeneedledisposal.org](https://safeneedledisposal.org)
-- **DIY containers** — thick plastic container with screw cap, labeled "SHARPS - DO NOT RECYCLE"
+- **Commercial sharps containers**  -  available at any pharmacy; many accept them back when full
+- **Mail-back programs**  -  companies like Stericycle sell prepaid disposal kits
+- **Community drop-off sites**  -  hospitals, fire stations, health departments; see [safeneedledisposal.org](https://safeneedledisposal.org)
+- **DIY containers**  -  thick plastic container with screw cap, labeled "SHARPS - DO NOT RECYCLE"
 
 Never put loose needles in the trash, recycling, or toilet.
 
 ## Common Mistakes to Avoid
 
-- **Reusing syringes** — contamination risk isn't worth the savings
-- **Injecting too shallow** — fluid pooling on skin means you went intradermal; go deeper next time
-- **Injecting too deep** — lean people using 90-degree angle may hit muscle; use short insulin needles (6-8 mm)
-- **Skipping the air bubble step** — injecting air into the vial first makes drawing much easier
-- **Not checking for air bubbles in syringe** — bubbles displace volume, giving you a smaller dose
-- **Rushing the injection** — too fast causes more soreness and a larger welt
-- **Injecting through clothing** — infection risk; always use clean, exposed skin
+- **Reusing syringes**  -  contamination risk isn't worth the savings
+- **Injecting too shallow**  -  fluid pooling on skin means you went intradermal; go deeper next time
+- **Injecting too deep**  -  lean people using 90-degree angle may hit muscle; use short insulin needles (6-8 mm)
+- **Skipping the air bubble step**  -  injecting air into the vial first makes drawing much easier
+- **Not checking for air bubbles in syringe**  -  bubbles displace volume, giving you a smaller dose
+- **Rushing the injection**  -  too fast causes more soreness and a larger welt
+- **Injecting through clothing**  -  infection risk; always use clean, exposed skin
 
 ## When to Seek Medical Help
 
 Contact a healthcare provider if you notice:
 
-- **Signs of infection** — increasing redness, warmth, swelling, or pus over 24-48 hours
-- **Allergic reactions** — hives, throat tightness, difficulty breathing, rapid heartbeat
+- **Signs of infection**  -  increasing redness, warmth, swelling, or pus over 24-48 hours
+- **Allergic reactions**  -  hives, throat tightness, difficulty breathing, rapid heartbeat
 - **Persistent pain or hard lumps** that don't resolve within a week
 - **Fever following injection** you can't attribute to another cause
 - **Unusual bleeding** that doesn't stop with gentle pressure

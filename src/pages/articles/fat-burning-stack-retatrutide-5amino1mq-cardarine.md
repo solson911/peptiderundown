@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Article.astro
-title: "The Fat Burning Stack — Retatrutide + 5-Amino-1MQ + Cardarine (GW501516) for Advanced Metabolic Research"
-description: "A complete guide to the advanced fat burning stack combining Retatrutide (triple agonist), 5-Amino-1MQ (NNMT inhibitor), and Cardarine (PPAR-delta agonist) for comprehensive metabolic research."
+title: "The Fat Burning Stack  -  Retatrutide + 5-Amino-1MQ + Cardarine (GW501516) for Advanced Metabolic Research"
+description: "A complete guide to the advanced fat burning stack combining Retatrutide (triple agonist), 5-Amino-1MQ (NNMT inhibitor), and Cardarine (PPAR-delta agonist) for thorough metabolic research."
 image: /images/articles/fat-burning-stack.webp
 date: 2026-02-15
 category: "Peptide Stacks"
@@ -9,7 +9,7 @@ tags: ["fat burning stack", "retatrutide", "5-amino-1MQ", "cardarine", "GW501516
 author: "PeptideRundown Team"
 ---
 
-# The Fat Burning Stack — Retatrutide + 5-Amino-1MQ + Cardarine (GW501516) for Advanced Metabolic Research
+# The Fat Burning Stack  -  Retatrutide + 5-Amino-1MQ + Cardarine (GW501516) for Advanced Metabolic Research
 
 Three compounds. Three distinct mechanisms. One powerful synergy for metabolic research.
 
@@ -21,7 +21,7 @@ This advanced stack combines the appetite suppression of Retatrutide, the fat ce
 > - **Retatrutide**: First triple agonist (GLP-1/GIP/glucagon) for appetite control and metabolism
 > - **5-Amino-1MQ**: NNMT enzyme inhibitor that reprograms fat cells for easier mobilization
 > - **Cardarine**: PPAR-delta agonist that dramatically increases fat oxidation (not a peptide)
-> - **Safety note**: Cardarine has rodent cancer concerns at high doses — research carefully
+> - **Safety note**: Cardarine has rodent cancer concerns at high doses  -  research carefully
 > - **Research only**: This combination is not approved for human use
 
 ## What Is This Fat Burning Stack?
@@ -64,9 +64,9 @@ This novel compound inhibits NNMT, an enzyme that:
 
 5-Amino-1MQ reverses this by:
 
-- **Increasing adiponectin** — improves fat burning
-- **Boosting NAD+ levels** — enhances mitochondrial function
-- **Activating AMPK** — stimulates fat breakdown
+- **Increasing adiponectin**  -  improves fat burning
+- **Boosting NAD+ levels**  -  enhances mitochondrial function
+- **Activating AMPK**  -  stimulates fat breakdown
 
 ([Kraus et al., 2021](https://pubmed.ncbi.nlm.nih.gov/34624258/))
 
@@ -214,7 +214,7 @@ This advanced stack represents the frontier of metabolic research, combining:
 2. **Fat cell reprogramming** (5-Amino-1MQ)
 3. **Enhanced fat burning** (Cardarine)
 
-While promising, it carries significant unknowns — particularly regarding Cardarine's safety profile. Researchers should proceed cautiously and document all observations.
+While promising, it carries significant unknowns  -  particularly regarding Cardarine's safety profile. Researchers should proceed cautiously and document all observations.
 
 **Related reading:**
 - [Retatrutide Complete Guide](/articles/retatrutide-complete-guide)

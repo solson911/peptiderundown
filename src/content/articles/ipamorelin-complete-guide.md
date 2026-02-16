@@ -18,11 +18,11 @@ As the first **selective ghrelin receptor agonist**, it boosts growth hormone (G
 
 > **Key Takeaways**
 >
-> - **First selective GHS-R agonist** — targets growth hormone release without affecting cortisol or prolactin
-> - **5-7x GH increase** — comparable to GHRP-6 but with better safety
-> - **No hunger spikes** — unlike other ghrelin agonists
-> - **Minimal side effects** — no water retention or joint pain at clinical doses
-> - **Synergistic with CJC-1295** — often stacked for amplified effects
+> - **First selective GHS-R agonist**  -  targets growth hormone release without affecting cortisol or prolactin
+> - **5-7x GH increase**  -  comparable to GHRP-6 but with better safety
+> - **No hunger spikes**  -  unlike other ghrelin agonists
+> - **Minimal side effects**  -  no water retention or joint pain at clinical doses
+> - **Synergistic with CJC-1295**  -  often stacked for amplified effects
 
 ## What Is Ipamorelin?
 
@@ -45,7 +45,7 @@ Developed in the 1990s, ipamorelin was designed to avoid the drawbacks of earlie
 ### Ghrelin Receptor Activation
 Ipamorelin binds to the **growth hormone secretagogue receptor** (GHS-R1a) in the pituitary and hypothalamus:
 
-- **Stimulates GH release** — mimics natural ghrelin signaling
+- **Stimulates GH release**  -  mimics natural ghrelin signaling
 > **Key Finding:** In clinical trials, ipamorelin increased GH by 5-7x baseline without affecting other hormones.
 
 ## Clinical Research

@@ -19,7 +19,7 @@ That's where KPV enters the picture. This tiny tripeptide fragment has been gene
 > - KPV is a **3-amino-acid fragment** of alpha-MSH with potent anti-inflammatory effects centered on **NF-kB inhibition**
 > - Animal studies show strong results for colitis and gut inflammation, with **oral administration actually working** (rare for peptides)
 > - It can be taken **orally for gut issues** or **injected subcutaneously** for systemic anti-inflammatory effects
-> - Human clinical trial data is still limited — treat the evidence as promising but preliminary
+> - Human clinical trial data is still limited  -  treat the evidence as promising but preliminary
 
 ## KPV at a Glance
 
@@ -59,9 +59,9 @@ A 2003 study demonstrated that alpha-MSH peptides, including KPV, could enter th
 
 ### Additional Mechanisms
 
-- **Reduces pro-inflammatory cytokine production** — decreased TNF-alpha and other inflammatory markers
-- **Modulates immune cell behavior** — influences macrophage and immune cell responses
-- **Crosses the blood-brain barrier** — central anti-inflammatory effects possible
+- **Reduces pro-inflammatory cytokine production**  -  decreased TNF-alpha and other inflammatory markers
+- **Modulates immune cell behavior**  -  influences macrophage and immune cell responses
+- **Crosses the blood-brain barrier**  -  central anti-inflammatory effects possible
 
 > **Key Distinction:** KPV provides broad inflammatory dampening without the immune suppression seen with corticosteroids or biologics.
 
@@ -144,9 +144,9 @@ Serious adverse effects have not been widely reported. Long-term effects remain 
 
 ### Who Should Be Cautious
 
-- **Pregnant or breastfeeding women** — no safety data
-- **People with melanoma history** — melanocortin pathway connection
-- **Those on immunosuppressive therapy** — potential interactions with immune modulation
+- **Pregnant or breastfeeding women**  -  no safety data
+- **People with melanoma history**  -  melanocortin pathway connection
+- **Those on immunosuppressive therapy**  -  potential interactions with immune modulation
 
 ## KPV vs. BPC-157 for Gut Health
 

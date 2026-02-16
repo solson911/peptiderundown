@@ -204,7 +204,7 @@ Possibly. Its stress-reducing effects may benefit PTSD sufferers, but more resea
 
 DSIP offers a unique approach to sleep improvement by enhancing natural sleep architecture rather than inducing sedation. Clinical studies demonstrate its ability to increase delta wave sleep while reducing stress hormones.
 
-While not FDA-approved, DSIP's excellent safety profile and non-addictive nature make it an intriguing option for those struggling with stress-related insomnia or age-related sleep changes. Proper dosing and administration are crucial for optimal results.
+While not FDA-approved, DSIP's excellent safety profile and non-addictive nature make it an intriguing option for those struggling with stress-related insomnia or age-related sleep changes. Proper dosing and administration are important for optimal results.
 
 **Related reading:**
 - [Peptides for Sleep: Complete Guide](/articles/peptides-for-sleep)

@@ -18,8 +18,8 @@ Proper storage is straightforward once you understand the basics.
 > - **Lyophilized (powder):** Store frozen (-20C) for years of stability; fridge is OK for months
 > - **Reconstituted with BAC water:** Fridge only, use within 3-4 weeks
 > - **Reconstituted with sterile water:** Fridge only, use within 48-72 hours
-> - **Never freeze reconstituted peptides** — ice crystals destroy peptide chains
-> - **Always store in the dark** — UV triggers photodegradation
+> - **Never freeze reconstituted peptides**  -  ice crystals destroy peptide chains
+> - **Always store in the dark**  -  UV triggers photodegradation
 
 ## Storage Quick Reference
 
@@ -59,7 +59,7 @@ Most peptides are sensitive to UV light, which triggers photodegradation through
 
 - **Keep vials in original box** or wrap in aluminum foil
 - **Store in dark area** of freezer or fridge
-- **Minimize counter time** — grab the vial, use it, put it back
+- **Minimize counter time**  -  grab the vial, use it, put it back
 
 ### Moisture Protection
 
@@ -67,8 +67,8 @@ Moisture is the silent killer of lyophilized peptides. The entire point of freez
 
 - **Keep vials sealed** until ready to reconstitute
 - **Store desiccant packets** alongside vials
-- **Don't open to check** — unnecessary exposure
-- **Humid climates** — double-bag with desiccant before freezing
+- **Don't open to check**  -  unnecessary exposure
+- **Humid climates**  -  double-bag with desiccant before freezing
 
 ### Shelf Life by Sensitivity
 
@@ -76,7 +76,7 @@ Moisture is the silent killer of lyophilized peptides. The entire point of freez
 |-------------|--------------------------|
 | **Most peptides** | 2-3 years, sometimes longer |
 | **Sensitive compounds** (methionine-containing) | 1-2 years |
-| **Compromised seal or moisture** | Unpredictable — use soon or discard |
+| **Compromised seal or moisture** | Unpredictable  -  use soon or discard |
 
 ## Storing Reconstituted Peptides
 
@@ -107,9 +107,9 @@ A 2012 study found that preservative-free formulations showed significantly high
 
 | Solvent | Refrigerated Shelf Life |
 |---------|------------------------|
-| **BAC water — most peptides** | 3-4 weeks |
-| **BAC water — delicate compounds** | ~2 weeks |
-| **Sterile water — all peptides** | 48-72 hours (1 week max) |
+| **BAC water  -  most peptides** | 3-4 weeks |
+| **BAC water  -  delicate compounds** | ~2 weeks |
+| **Sterile water  -  all peptides** | 48-72 hours (1 week max) |
 | **Any visual changes** | Discard immediately |
 
 ## Signs of Peptide Degradation
@@ -137,13 +137,13 @@ A 2012 study found that preservative-free formulations showed significantly high
 ### Short Trips (1-3 Days)
 
 - **Insulated cooler bag** with ice pack (lunch box style works)
-- **Carry-on for flights** — never checked luggage (cargo hold can freeze)
+- **Carry-on for flights**  -  never checked luggage (cargo hold can freeze)
 - **Prescription or doctor's letter** speeds TSA interactions
 
 ### Longer Trips
 
 - **Hotel mini-fridge** works in a pinch (temperatures can be inconsistent)
-- **Bring lyophilized vials instead** — no cold-chain worries during transit
+- **Bring lyophilized vials instead**  -  no cold-chain worries during transit
 - **Reconstitute at destination** with separately packed BAC water
 - **Digital thermometer** for cooler monitoring (under $10)
 

@@ -41,10 +41,10 @@ Semaglutide and retatrutide both belong to the incretin-based therapy family. Th
 
 Semaglutide is a GLP-1 receptor agonist. It mimics glucagon-like peptide-1, a gut hormone that:
 
-- **Slows gastric emptying** — food stays in your stomach longer
-- **Reduces appetite** — through hypothalamic signaling
-- **Enhances insulin secretion** — in response to food
-- **Suppresses glucagon release** — lowering blood sugar
+- **Slows gastric emptying**  -  food stays in your stomach longer
+- **Reduces appetite**  -  through hypothalamic signaling
+- **Enhances insulin secretion**  -  in response to food
+- **Suppresses glucagon release**  -  lowering blood sugar
 
 GLP-1 is powerful on its own. Semaglutide's long half-life (about 7 days) means once-weekly dosing.
 
@@ -64,10 +64,10 @@ Retatrutide hits three receptors: **GLP-1, GIP, and glucagon**. This triple agon
 
 The glucagon component is the wild card. Glucagon:
 
-- **Increases energy expenditure** — through thermogenesis
-- **Promotes hepatic fat oxidation** — burns liver fat directly
-- **Mobilizes fat** — from adipose tissue
-- **Reduces food intake** — through separate pathways from GLP-1
+- **Increases energy expenditure**  -  through thermogenesis
+- **Promotes hepatic fat oxidation**  -  burns liver fat directly
+- **Mobilizes fat**  -  from adipose tissue
+- **Reduces food intake**  -  through separate pathways from GLP-1
 
 Retatrutide doesn't just reduce caloric intake. It actively increases caloric expenditure, hitting both sides of the energy balance equation simultaneously.
 
@@ -190,19 +190,19 @@ This is semaglutide's biggest practical advantage. It exists. You can get a pres
 
 ### Choose Semaglutide If:
 
-- **You need treatment now** — FDA-approved and available today
-- **Safety data matters most** — years of real-world evidence
-- **Cardiovascular protection is a priority** — SELECT trial proved **20%** MACE reduction
-- **Insurance coverage is needed** — established clinical pathways exist
-- **You have type 2 diabetes** — decades of incretin therapy data behind it
+- **You need treatment now**  -  FDA-approved and available today
+- **Safety data matters most**  -  years of real-world evidence
+- **Cardiovascular protection is a priority**  -  SELECT trial proved **20%** MACE reduction
+- **Insurance coverage is needed**  -  established clinical pathways exist
+- **You have type 2 diabetes**  -  decades of incretin therapy data behind it
 
 ### Choose Retatrutide If:
 
-- **Maximum weight loss is the goal** — **24%** vs. **15%** for semaglutide
-- **Fatty liver is a major concern** — **82%** liver fat reduction in trials
-- **You've plateaued on GLP-1 monotherapy** — the triple mechanism offers more
-- **Muscle preservation matters** — early data suggests better fat-to-lean ratio (pending confirmation)
-- **You can tolerate uncertainty** — still experimental, no long-term data
+- **Maximum weight loss is the goal**  -  **24%** vs. **15%** for semaglutide
+- **Fatty liver is a major concern**  -  **82%** liver fat reduction in trials
+- **You've plateaued on GLP-1 monotherapy**  -  the triple mechanism offers more
+- **Muscle preservation matters**  -  early data suggests better fat-to-lean ratio (pending confirmation)
+- **You can tolerate uncertainty**  -  still experimental, no long-term data
 
 > **The Honest Take:** If I had to bet on the gold standard for obesity treatment in 5 years, I'd bet on retatrutide or something like it. Triple agonism addresses more of the obesity puzzle than single agonism. But semaglutide earned its status for a reason: it works, it's studied extensively, and it's available right now.
 

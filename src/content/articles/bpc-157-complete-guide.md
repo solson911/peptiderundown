@@ -66,9 +66,9 @@ This is significant because dysregulated NO signaling is implicated in condition
 
 Beyond VEGF, BPC-157 has been shown to influence several growth factors relevant to tissue repair:
 
-- **EGF (Epidermal Growth Factor)** — involved in mucosal healing
-- **HGF (Hepatocyte Growth Factor)** — relevant to liver and tissue repair
-- **FGF (Fibroblast Growth Factor)** — critical for connective tissue
+- **EGF (Epidermal Growth Factor)**  -  involved in mucosal healing
+- **HGF (Hepatocyte Growth Factor)**  -  relevant to liver and tissue repair
+- **FGF (Fibroblast Growth Factor)**  -  critical for connective tissue
 
 This broad growth factor engagement may explain why BPC-157 appears to accelerate healing across multiple tissue types [5].
 
@@ -92,18 +92,18 @@ There is evidence that BPC-157 interacts with the GABA system, which may contrib
 
 As a compound derived from gastric juice, BPC-157's strongest evidence base involves the GI tract. It has shown protective and healing effects across multiple GI conditions in animal studies:
 
-- **Ulcer healing** — accelerated healing of gastric, duodenal, and colonic ulcers caused by NSAIDs, alcohol, stress, and surgery [1, 9]
-- **IBD models** — reduced inflammation, promoted mucosal healing, and improved clinical scores comparable to standard treatments [10]
-- **Anastomosis healing** — accelerated surgical gut healing and reduced adhesion formation [11]
-- **Esophageal damage** — protective effects against acid reflux-induced lesions [9]
+- **Ulcer healing**  -  accelerated healing of gastric, duodenal, and colonic ulcers caused by NSAIDs, alcohol, stress, and surgery [1, 9]
+- **IBD models**  -  reduced inflammation, promoted mucosal healing, and improved clinical scores comparable to standard treatments [10]
+- **Anastomosis healing**  -  accelerated surgical gut healing and reduced adhesion formation [11]
+- **Esophageal damage**  -  protective effects against acid reflux-induced lesions [9]
 
 ### Tendon and Ligament Repair
 
 The tendon-healing effects of BPC-157 have generated some of the most interest in the athletic and sports medicine communities.
 
-- **Achilles tendon** — significantly accelerated healing of transected Achilles tendons in rats, with improved biomechanical properties and more organized collagen fiber formation [12]
-- **Medial collateral ligament (MCL)** — similar acceleration of healing demonstrated in MCL injury models [13]
-- **Mechanism** — effects appear mediated through increased collagen production, tendon fibroblast proliferation, FAK-paxillin pathway activation, and enhanced angiogenesis [6, 12]
+- **Achilles tendon**  -  significantly accelerated healing of transected Achilles tendons in rats, with improved biomechanical properties and more organized collagen fiber formation [12]
+- **Medial collateral ligament (MCL)**  -  similar acceleration of healing demonstrated in MCL injury models [13]
+- **Mechanism**  -  effects appear mediated through increased collagen production, tendon fibroblast proliferation, FAK-paxillin pathway activation, and enhanced angiogenesis [6, 12]
 
 ### Muscle Healing
 
@@ -121,16 +121,16 @@ Limited but promising research suggests BPC-157 may accelerate fracture healing.
 
 BPC-157 has demonstrated several neuroprotective properties in animal models:
 
-- **Traumatic brain injury (TBI)** — reduced brain edema, improved behavioral outcomes, and promoted neuronal survival [16]
-- **Peripheral nerve injury** — accelerated nerve regeneration and improved functional recovery following sciatic nerve crush [17]
-- **Dopaminergic protection** — counteracted neurotoxic effects in models relevant to Parkinson's-like pathology [7]
-- **Serotonin system** — may exert antidepressant-like effects in animal behavioral models [8]
+- **Traumatic brain injury (TBI)**  -  reduced brain edema, improved behavioral outcomes, and promoted neuronal survival [16]
+- **Peripheral nerve injury**  -  accelerated nerve regeneration and improved functional recovery following sciatic nerve crush [17]
+- **Dopaminergic protection**  -  counteracted neurotoxic effects in models relevant to Parkinson's-like pathology [7]
+- **Serotonin system**  -  may exert antidepressant-like effects in animal behavioral models [8]
 
 ### Cardiovascular Effects
 
-- **Blood pressure regulation** — counteracted both hypertensive and hypotensive states in animal models, suggesting a modulatory effect [4]
-- **Arrhythmia** — demonstrated anti-arrhythmic properties, counteracting digitalis-induced arrhythmias [18]
-- **Vascular protection** — promotes healthy vascular function and endothelial integrity through NO system and angiogenesis effects
+- **Blood pressure regulation**  -  counteracted both hypertensive and hypotensive states in animal models, suggesting a modulatory effect [4]
+- **Arrhythmia**  -  demonstrated anti-arrhythmic properties, counteracting digitalis-induced arrhythmias [18]
+- **Vascular protection**  -  promotes healthy vascular function and endothelial integrity through NO system and angiogenesis effects
 
 ### Liver Protection
 
@@ -157,9 +157,9 @@ The most commonly discussed human-equivalent dose, extrapolated from the animal 
 
 ### Routes of Administration
 
-- **Subcutaneous injection** — the most common route for systemic effects or localized tissue repair; typically administered near the site of injury when targeting a specific area
-- **Oral administration** — discussed primarily for gastrointestinal applications; BPC-157 is notable for its stability in gastric acid, making oral administration a viable research route [1]
-- **Intramuscular and intraperitoneal** — used in animal research but less commonly discussed in human contexts
+- **Subcutaneous injection**  -  the most common route for systemic effects or localized tissue repair; typically administered near the site of injury when targeting a specific area
+- **Oral administration**  -  discussed primarily for gastrointestinal applications; BPC-157 is notable for its stability in gastric acid, making oral administration a viable research route [1]
+- **Intramuscular and intraperitoneal**  -  used in animal research but less commonly discussed in human contexts
 
 ### Cycling
 
@@ -173,8 +173,8 @@ Need help with the math? Use our free [Peptide Reconstitution Calculator](https:
 
 ### Step-by-Step Reconstitution
 
-1. **Gather materials** — BPC-157 vial (lyophilized powder), bacteriostatic water, insulin syringe (typically 1 mL / 100 unit), alcohol swabs
-2. **Clean the vial tops** — wipe both the BPC-157 vial and the bacteriostatic water vial with alcohol swabs; allow to dry
+1. **Gather materials**  -  BPC-157 vial (lyophilized powder), bacteriostatic water, insulin syringe (typically 1 mL / 100 unit), alcohol swabs
+2. **Clean the vial tops**  -  wipe both the BPC-157 vial and the bacteriostatic water vial with alcohol swabs; allow to dry
 3. **Draw bacteriostatic water** into the syringe:
    - **5 mg vial + 2 mL BAC water = 2,500 mcg/mL** (each 0.1 mL / 10 units = 250 mcg)
    - **5 mg vial + 1 mL BAC water = 5,000 mcg/mL** (each 0.1 mL = 500 mcg)
@@ -199,7 +199,7 @@ Avoid repeated freeze-thaw cycles, direct sunlight, and temperatures above 8C fo
 
 BPC-157 has demonstrated a remarkably favorable safety profile in preclinical studies:
 
-- **No lethal dose (LD1) could be established** — even at extremely high doses, no mortality was observed in acute toxicity testing [1]
+- **No lethal dose (LD1) could be established**  -  even at extremely high doses, no mortality was observed in acute toxicity testing [1]
 - **No organ toxicity** observed at therapeutic or supratherapeutic doses in subchronic studies
 - **No mutagenic or carcinogenic effects** reported in the existing literature
 
@@ -207,19 +207,19 @@ BPC-157 has demonstrated a remarkably favorable safety profile in preclinical st
 
 In the limited clinical reports and community use, reported side effects are generally mild and infrequent:
 
-- **Mild nausea** — more common with oral administration
-- **Dizziness or lightheadedness** — rare
-- **Injection site reactions** — redness, mild discomfort
-- **Headache** — infrequent
-- **Fatigue or lethargy** — rare
+- **Mild nausea**  -  more common with oral administration
+- **Dizziness or lightheadedness**  -  rare
+- **Injection site reactions**  -  redness, mild discomfort
+- **Headache**  -  infrequent
+- **Fatigue or lethargy**  -  rare
 
 ### Important Caveats
 
-- **Limited human data** — no large-scale human clinical trials, so definitive safety claims can't be made
-- **Angiogenesis concerns** — blood vessel promotion is a double-edged sword; individuals with active cancer should exercise extreme caution [2]
-- **Long-term effects unknown** — most studies examine acute or short-term use only
-- **Source quality varies** — contamination and mislabeling are real concerns in the unregulated peptide market
-- **Drug interactions possible** — effects on NO, dopaminergic, and other systems suggest potential interactions with medications
+- **Limited human data**  -  no large-scale human clinical trials, so definitive safety claims can't be made
+- **Angiogenesis concerns**  -  blood vessel promotion is a double-edged sword; individuals with active cancer should exercise extreme caution [2]
+- **Long-term effects unknown**  -  most studies examine acute or short-term use only
+- **Source quality varies**  -  contamination and mislabeling are real concerns in the unregulated peptide market
+- **Drug interactions possible**  -  effects on NO, dopaminergic, and other systems suggest potential interactions with medications
 
 > **Important:** Anyone with active malignancies or taking prescription medications should consult a physician before considering BPC-157.
 
@@ -229,18 +229,18 @@ In the limited clinical reports and community use, reported side effects are gen
 
 BPC-157's legal status in the United States has become more restrictive in recent years.
 
-- **FDA classification** — BPC-157 is **not** an FDA-approved drug; it has never completed the approval process for any indication
-- **2022-2024 regulatory actions** — the FDA issued warning letters to companies marketing BPC-157 for human use, particularly those making therapeutic claims
-- **Compounding pharmacy restrictions** — in late 2023 and into 2024-2025, the FDA placed BPC-157 on its list of substances that cannot be used in compounding under section 503A and 503B, citing insufficient safety and efficacy data
-- **Research use** — remains available as a research chemical for in vitro research and non-human use
-- **Personal use** — exists in a gray area; purchasing research peptides is not explicitly illegal, but self-administration falls outside FDA-sanctioned use
+- **FDA classification**  -  BPC-157 is **not** an FDA-approved drug; it has never completed the approval process for any indication
+- **2022-2024 regulatory actions**  -  the FDA issued warning letters to companies marketing BPC-157 for human use, particularly those making therapeutic claims
+- **Compounding pharmacy restrictions**  -  in late 2023 and into 2024-2025, the FDA placed BPC-157 on its list of substances that cannot be used in compounding under section 503A and 503B, citing insufficient safety and efficacy data
+- **Research use**  -  remains available as a research chemical for in vitro research and non-human use
+- **Personal use**  -  exists in a gray area; purchasing research peptides is not explicitly illegal, but self-administration falls outside FDA-sanctioned use
 
 ### International
 
-- **Canada** — available through some compounding pharmacies; regulatory framework differs from the US
-- **European Union** — not approved as a pharmaceutical product; available in some countries as a research compound
-- **Australia** — classified under the TGA; prescription-level regulation applies
-- **WADA** — BPC-157 is **not** currently on the WADA Prohibited List as of 2025, but athletes should verify status regularly
+- **Canada**  -  available through some compounding pharmacies; regulatory framework differs from the US
+- **European Union**  -  not approved as a pharmaceutical product; available in some countries as a research compound
+- **Australia**  -  classified under the TGA; prescription-level regulation applies
+- **WADA**  -  BPC-157 is **not** currently on the WADA Prohibited List as of 2025, but athletes should verify status regularly
 
 > **Note:** Regulatory status can change. Always verify current regulations in your jurisdiction before purchasing or using any peptide.
 
@@ -278,11 +278,11 @@ Standard workplace drug panels do not test for BPC-157. Advanced peptide-specifi
 
 ## What We Still Don't Know About BPC-157
 
-1. **Concentration of research** — the majority of studies originate from a single research group (Sikiric et al., University of Zagreb); independent replication would strengthen the evidence
-2. **No large human RCTs** — as of early 2026, no completed large-scale randomized controlled trials in humans
-3. **Dose translation uncertainty** — extrapolating doses from rodent models to humans using allometric scaling is imperfect
-4. **Long-term safety** — the chronic safety profile in any species is not well characterized
-5. **Mechanism specificity** — the relative contribution of each pathway to observed effects remains unclear
+1. **Concentration of research**  -  the majority of studies originate from a single research group (Sikiric et al., University of Zagreb); independent replication would strengthen the evidence
+2. **No large human RCTs**  -  as of early 2026, no completed large-scale randomized controlled trials in humans
+3. **Dose translation uncertainty**  -  extrapolating doses from rodent models to humans using allometric scaling is imperfect
+4. **Long-term safety**  -  the chronic safety profile in any species is not well characterized
+5. **Mechanism specificity**  -  the relative contribution of each pathway to observed effects remains unclear
 
 > **Bottom line:** These gaps don't invalidate the existing research. They underscore the need for caution and intellectual honesty when discussing BPC-157's potential.
 

@@ -14,13 +14,13 @@ Peptides are revolutionizing dermatology and hair restoration. These small prote
 
 > **Key Takeaways**
 > 
-> - **GHK-Cu** — The gold standard for skin repair and collagen stimulation
-> - **Matrixyl** — Clinically proven to reduce wrinkles by 45% in 12 weeks
-> - **BPC-157** — Accelerates wound healing and reduces inflammation
-> - **Melanotan 2** — Increases melanin for UV protection and hair pigmentation
-> - **GH secretagogues** — Stimulate growth hormone for skin thickness
-> - **Topical vs injectable** — Absorption rates and protocol differences
-> - **8+ FAQs** — Safety, cycling, and combination strategies
+> - **GHK-Cu**  -  The gold standard for skin repair and collagen stimulation
+> - **Matrixyl**  -  Clinically proven to reduce wrinkles by 45% in 12 weeks
+> - **BPC-157**  -  Accelerates wound healing and reduces inflammation
+> - **Melanotan 2**  -  Increases melanin for UV protection and hair pigmentation
+> - **GH secretagogues**  -  Stimulate growth hormone for skin thickness
+> - **Topical vs injectable**  -  Absorption rates and protocol differences
+> - **8+ FAQs**  -  Safety, cycling, and combination strategies
 
 ## What Are Skin and Hair Peptides?
 
@@ -42,7 +42,7 @@ For a deeper dive on peptide science, see our [beginner's guide](/articles/what-
 
 The most researched skin peptide. Copper-bound GHK:
 
-- **Stimulates collagen I, III, and IV** — improves skin firmness
+- **Stimulates collagen I, III, and IV**  -  improves skin firmness
 > **Clinical finding:** Increased collagen density by 70% in photodamaged skin ([Pickart et al., 2015](https://pubmed.ncbi.nlm.nih.gov/26362110/))
 
 | Protocol | Details |
@@ -73,9 +73,9 @@ Synthetic peptide that mimics collagen fragments:
 
 Originally developed for gut healing, BPC shows surprising hair benefits:
 
-- **Extends anagen phase** — keeps follicles active longer
-- **Reduces inflammation** — addresses root causes of loss
-- **Accelerates healing** — repairs damaged follicles
+- **Extends anagen phase**  -  keeps follicles active longer
+- **Reduces inflammation**  -  addresses root causes of loss
+- **Accelerates healing**  -  repairs damaged follicles
 
 | Administration | Protocol |
 |---------------|----------|
@@ -86,7 +86,7 @@ Originally developed for gut healing, BPC shows surprising hair benefits:
 
 While primarily used for tanning, MT2 also:
 
-- **Darkens hair pigment** — reverses graying
+- **Darkens hair pigment**  -  reverses graying
 - **May stimulate growth** via melanocortin receptors
 
 See our dedicated [Melanotan 2 guide](/articles/melanotan-2-guide) for protocols.
@@ -127,7 +127,7 @@ Yes. Peptides like Matrixyl work synergistically with retinol. Apply peptides fi
 
 ### Do peptides replace botox?
 
-No. Peptides improve skin quality but don't paralyze muscles. Many use both for comprehensive anti-aging.
+No. Peptides improve skin quality but don't paralyze muscles. Many use both for thorough anti-aging.
 
 ### What's the best carrier for topical peptides?
 

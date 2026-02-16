@@ -17,11 +17,11 @@ These "zombie cells" stop dividing but refuse to die, spewing inflammatory signa
 
 > **Key Takeaways**
 >
-> - **Targets senescent cells** — the "zombie cells" driving inflammation and aging
-> - **First peptide senolytic** — unlike small molecules like dasatinib
-> - **Restored function in aged mice** — improved fur density, kidney function, and endurance
-> - **Potential lifespan extension** — 36% increase in progeria mouse models
-> - **Research-stage only** — not yet approved for human use
+> - **Targets senescent cells**  -  the "zombie cells" driving inflammation and aging
+> - **First peptide senolytic**  -  unlike small molecules like dasatinib
+> - **Restored function in aged mice**  -  improved fur density, kidney function, and endurance
+> - **Potential lifespan extension**  -  36% increase in progeria mouse models
+> - **Research-stage only**  -  not yet approved for human use
 
 ## What Is FOXO4-DRI?
 
@@ -46,15 +46,15 @@ Senescent cells accumulate with age. Normally, they should self-destruct via apo
 
 In senescent cells:
 
-- **FOXO4 binds p53** — keeping it inactive in the nucleus
-- **Blocks apoptosis** — prevents cell death signals
-- **Promotes survival** — allows senescent cells to persist
+- **FOXO4 binds p53**  -  keeping it inactive in the nucleus
+- **Blocks apoptosis**  -  prevents cell death signals
+- **Promotes survival**  -  allows senescent cells to persist
 
 FOXO4-DRI works by:
 
-- **Competing with native FOXO4** — binds p53 more strongly
-- **Releasing p53** — allowing it to activate apoptosis genes
-- **Selective targeting** — mainly affects senescent cells due to their unique biology
+- **Competing with native FOXO4**  -  binds p53 more strongly
+- **Releasing p53**  -  allowing it to activate apoptosis genes
+- **Selective targeting**  -  mainly affects senescent cells due to their unique biology
 
 ([Baar et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28199396/))
 
@@ -62,9 +62,9 @@ FOXO4-DRI works by:
 
 Key effects observed:
 
-- **Reduced senescent cell burden** — up to 80% clearance in tissues
-- **Decreased SASP factors** — lower IL-6, TNF-α, other inflammatory markers
-- **Tissue rejuvenation** — improved function in aged organs
+- **Reduced senescent cell burden**  -  up to 80% clearance in tissues
+- **Decreased SASP factors**  -  lower IL-6, TNF-α, other inflammatory markers
+- **Tissue rejuvenation**  -  improved function in aged organs
 
 > **Key Finding:** In progeria mice, FOXO4-DRI extended median lifespan by 36%.
 
@@ -108,9 +108,9 @@ Mouse data shows good tolerability, but key questions remain:
 
 ### Potential Concerns
 
-- **Off-target effects** — could healthy cells with high p53 be affected?
-- **Long-term consequences** — is continuous senescent cell removal safe?
-- **Dosing frequency** — how often would humans need treatment?
+- **Off-target effects**  -  could healthy cells with high p53 be affected?
+- **Long-term consequences**  -  is continuous senescent cell removal safe?
+- **Dosing frequency**  -  how often would humans need treatment?
 
 ### Mouse Study Observations
 
@@ -118,7 +118,7 @@ Mouse data shows good tolerability, but key questions remain:
 |-------------|-----------|-------|
 | **Transient weight loss** | Occasional | Resolved within days |
 | **No organ toxicity** | Not observed | Thorough histopathology |
-| **No increased mortality** | — | Even at high doses |
+| **No increased mortality** |  -  | Even at high doses |
 
 ## FOXO4-DRI vs. Other Senolytics
 
@@ -141,15 +141,15 @@ How it stacks up against existing approaches:
 
 FOXO4-DRI is:
 
-- **D-retro-inverso peptide** — requires special synthesis
+- **D-retro-inverso peptide**  -  requires special synthesis
 - **More expensive** than standard L-peptides
 - **Few suppliers** with capability
 
 ### Regulatory Status
 
 - **No IND filed** (as of 2026)
-- **Not scheduled** — legal for research use
-- **Gray market risk** — purity concerns with non-GMP material
+- **Not scheduled**  -  legal for research use
+- **Gray market risk**  -  purity concerns with non-GMP material
 
 ## Clinical Development Status
 
@@ -157,8 +157,8 @@ FOXO4-DRI is:
 |-------|--------|
 | **Preclinical** | Completed (mouse) |
 | **Phase 1** | Not started |
-| **Phase 2** | — |
-| **Phase 3** | — |
+| **Phase 2** |  -  |
+| **Phase 3** |  -  |
 | **Estimated Timeline** | 2028+ (if development continues) |
 
 ## Ethical Considerations
@@ -167,7 +167,7 @@ Senolytics raise unique questions:
 
 - **Should we eliminate senescent cells?** Some may have beneficial roles in wound healing and cancer suppression.
 - **Who should get access first?** Age-related diseases vs. general anti-aging.
-- **Long-term monitoring** — potential unintended consequences may take decades to appear.
+- **Long-term monitoring**  -  potential unintended consequences may take decades to appear.
 
 ## Frequently Asked Questions
 
@@ -197,7 +197,7 @@ Rapamycin modulates growth pathways (mTOR) while FOXO4-DRI removes senescent cel
 
 ## The Bottom Line
 
-FOXO4-DRI represents an exciting new approach to targeting senescent cells. The mouse data is compelling — improved function across multiple organs and significant lifespan extension in progeria models.
+FOXO4-DRI represents an exciting new approach to targeting senescent cells. The mouse data is compelling  -  improved function across multiple organs and significant lifespan extension in progeria models.
 
 But major questions remain before human use:
 - Is it safe long-term?

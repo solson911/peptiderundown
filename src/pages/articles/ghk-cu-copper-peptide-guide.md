@@ -91,8 +91,8 @@ GHK-Cu attracts mesenchymal stem cells to sites of injury. These stem cells can 
 
 ### Additional Skin Effects
 
-- **Skin thickness and density** — reverses a hallmark of chronological aging
-- **Glycosaminoglycan synthesis** — stimulates hyaluronic acid and dermatan sulfate production for hydration and plumpness
+- **Skin thickness and density**  -  reverses a hallmark of chronological aging
+- **Glycosaminoglycan synthesis**  -  stimulates hyaluronic acid and dermatan sulfate production for hydration and plumpness
 
 ## Hair Growth
 
