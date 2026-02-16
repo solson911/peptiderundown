@@ -21,9 +21,9 @@ Peptides trigger hair growth through three primary mechanisms:
 
 This copper-containing peptide:
 
-1. **Stimulates dormant follicles** through FGF-7 activation
-2. **Blocks DHT** by reducing 5-alpha reductase activity
-3. **Strengthens hair shafts** via collagen IV synthesis
+- **Stimulates dormant follicles** through FGF-7 activation
+- **Blocks DHT** by reducing 5-alpha reductase activity
+- **Strengthens hair shafts** via collagen IV synthesis
 
 > "In clinical trials, GHK-Cu increased hair density by 38% over 6 months with topical use" - Dermatology Practical Journal
 

@@ -125,10 +125,10 @@ For a full breakdown of peptide legality, see our [FDA regulations guide](/artic
 
 Hotel refrigerators often freeze contents or run too warm. Always:
 
-1. **Test temperature** with a thermometer before storing peptides
-2. **Use door compartments** - they maintain the most consistent temperature
-3. **Wrap vials in bubble wrap** to prevent freezing against back walls
-4. **Set to medium** - hotel fridges on "high" often freeze
+- **Test temperature** with a thermometer before storing peptides
+- **Use door compartments** - they maintain the most consistent temperature
+- **Wrap vials in bubble wrap** to prevent freezing against back walls
+- **Set to medium** - hotel fridges on "high" often freeze
 
 ### No-Fridge Alternatives
 
@@ -156,10 +156,10 @@ Car temperatures can reach 130F in minutes. Never leave peptides in a parked car
 
 ### Confiscation Response
 
-1. Ask for a supervisor and present all documentation
-2. Request written confiscation notice with badge numbers
-3. Contact your prescribing doctor for emergency replacement protocol
-4. File a complaint with the relevant authority if confiscation was improper
+- Ask for a supervisor and present all documentation
+- Request written confiscation notice with badge numbers
+- Contact your prescribing doctor for emergency replacement protocol
+- File a complaint with the relevant authority if confiscation was improper
 
 ### Temperature Excursion Protocol
 

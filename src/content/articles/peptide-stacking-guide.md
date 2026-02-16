@@ -32,9 +32,9 @@ Single peptides target specific pathways. Stacks target multiple pathways simult
 | **Stacked peptides** | Broader, synergistic effects | More complex, higher cost |
 
 **Three main reasons to stack:**
-1. **Additive effects**  -  Targeting different aspects of the same goal
-2. **Synergistic effects**  -  Where one peptide enhances another's action
-3. **Balanced effects**  -  Counteracting potential side effects
+- **Additive effects**  -  Targeting different aspects of the same goal
+- **Synergistic effects**  -  Where one peptide enhances another's action
+- **Balanced effects**  -  Counteracting potential side effects
 
 ## Peptide Stacking Principles
 
@@ -108,10 +108,10 @@ When stacking, consider reducing individual doses by 20-30% to:
 
 ## What NOT to Stack
 
-1. **Opposing mechanisms**  -  e.g., GH secretagogues with somatostatin analogs
-2. **Redundant peptides**  -  Multiple GHRH analogs at full doses
-3. **Unproven combinations**  -  Without research or anecdotal evidence
-4. **High-risk peptides**  -  Those with significant side effect profiles
+- **Opposing mechanisms**  -  e.g., GH secretagogues with somatostatin analogs
+- **Redundant peptides**  -  Multiple GHRH analogs at full doses
+- **Unproven combinations**  -  Without research or anecdotal evidence
+- **High-risk peptides**  -  Those with significant side effect profiles
 
 ## Frequently Asked Questions
 

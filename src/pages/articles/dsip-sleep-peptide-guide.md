@@ -120,10 +120,10 @@ A double-blind crossover study with 8 male volunteers:
 
 DSIP typically comes as lyophilized powder requiring reconstitution:
 
-1. Use bacteriostatic water
-2. Gently swirl (don't shake)
-3. Store refrigerated
-4. Use within 7 days
+- Use bacteriostatic water
+- Gently swirl (don't shake)
+- Store refrigerated
+- Use within 7 days
 
 See our [peptide reconstitution guide](/articles/how-to-reconstitute-peptides) for details.
 

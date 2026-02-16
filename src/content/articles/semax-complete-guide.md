@@ -156,9 +156,9 @@ Quality varies significantly between suppliers. Third-party testing is essential
 
 ### Human Studies
 
-1. **Cognitive Enhancement** (2018): 120 healthy adults showed 17% better memory recall (PubMed ID: 30212341)
-2. **Stroke Recovery** (2016): 34% faster rehabilitation in 200 patients (PubMed ID: 27428812)
-3. **ADHD Symptoms** (2020): Significant focus improvement in adolescents (PubMed ID: 32548991)
+- **Cognitive Enhancement** (2018): 120 healthy adults showed 17% better memory recall (PubMed ID: 30212341)
+- **Stroke Recovery** (2016): 34% faster rehabilitation in 200 patients (PubMed ID: 27428812)
+- **ADHD Symptoms** (2020): Significant focus improvement in adolescents (PubMed ID: 32548991)
 
 ### Animal Research
 

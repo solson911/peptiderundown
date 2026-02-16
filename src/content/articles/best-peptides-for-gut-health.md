@@ -22,10 +22,10 @@ Body Protection Compound-157 (BPC-157) is a 15-amino acid peptide derived from s
 
 BPC-157 works through multiple mechanisms:
 
-1. **Tightens junctions** between intestinal cells
-2. **Increases growth factors** like VEGF and FGF
-3. **Reduces oxidative stress** in damaged tissue
-4. **Balances gut motility** patterns
+- **Tightens junctions** between intestinal cells
+- **Increases growth factors** like VEGF and FGF
+- **Reduces oxidative stress** in damaged tissue
+- **Balances gut motility** patterns
 
 Animal studies show BPC-157 accelerates healing of ulcers, fistulas, and inflammatory lesions. In one notable study, it normalized gut function in rats with induced colitis within days. Human research, while limited, suggests similar protective effects.
 
@@ -87,9 +87,9 @@ LL-37 is the only human cathelicidin antimicrobial peptide. It plays a dual role
 
 LL-37 provides comprehensive protection:
 
-1. **Direct antimicrobial action** against bacteria, viruses, fungi
-2. **Immunomodulation** of innate and adaptive immunity
-3. **Barrier reinforcement** through tight junction support
+- **Direct antimicrobial action** against bacteria, viruses, fungi
+- **Immunomodulation** of innate and adaptive immunity
+- **Barrier reinforcement** through tight junction support
 
 Research demonstrates LL-37 maintains gut homeostasis by selectively targeting pathogens while preserving beneficial microbiota. It also promotes wound healing in intestinal tissue.
 
@@ -206,10 +206,10 @@ Start with one peptide matching your primary symptoms. Track your progress objec
 
 ## Scientific References
 
-1. Sikiric P et al. *BPC 157's effect on healing.* J Physiol Paris. 1997
-2. Larrick JW et al. *Anti-inflammatory effects of KPV.* PNAS. 2018
-3. Zhang L et al. *LL-37 in gut defense.* Gut Microbes. 2020
-4. Seiwerth S et al. *BPC 157 and gut barrier function.* World J Gastroenterol. 2018
-5. Gombart AF. *LL-37 as antimicrobial peptide.* Nutrients. 2020
-6. Hsu L et al. *KPV in inflammatory bowel disease.* Front Immunol. 2021
-7. Gwyer D et al. *Peptides in intestinal repair.* Br J Pharmacol. 2019
+- Sikiric P et al. *BPC 157's effect on healing.* J Physiol Paris. 1997
+- Larrick JW et al. *Anti-inflammatory effects of KPV.* PNAS. 2018
+- Zhang L et al. *LL-37 in gut defense.* Gut Microbes. 2020
+- Seiwerth S et al. *BPC 157 and gut barrier function.* World J Gastroenterol. 2018
+- Gombart AF. *LL-37 as antimicrobial peptide.* Nutrients. 2020
+- Hsu L et al. *KPV in inflammatory bowel disease.* Front Immunol. 2021
+- Gwyer D et al. *Peptides in intestinal repair.* Br J Pharmacol. 2019

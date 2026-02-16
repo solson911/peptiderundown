@@ -41,9 +41,9 @@ Here's where methylene blue comes in. At low doses, it acts as an alternative el
 
 Why does this matter? Complexes I and III are the main sites where electrons "leak" and react with oxygen to form reactive oxygen species (ROS). By shunting electrons around these problem spots, methylene blue:
 
-1. **Increases ATP production** by improving electron flow efficiency
-2. **Reduces ROS production** by preventing electron leak
-3. **Supports mitochondrial membrane potential** by maintaining proper proton gradient
+- **Increases ATP production** by improving electron flow efficiency
+- **Reduces ROS production** by preventing electron leak
+- **Supports mitochondrial membrane potential** by maintaining proper proton gradient
 
 This is a big deal. Mitochondrial dysfunction is implicated in aging, neurodegeneration, chronic fatigue, and dozens of other conditions. A compound that directly improves mitochondrial function has potential relevance to all of them.
 

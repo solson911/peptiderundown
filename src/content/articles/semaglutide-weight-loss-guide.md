@@ -314,14 +314,14 @@ New to peptides entirely? Check out our [beginner's guide to peptide therapy](/a
 
 ## References
 
-1. Wilding JPH, et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity. *NEJM*. 2021;384(11):989-1002.
-2. Davies M, et al. Semaglutide 2·4 mg once a week in adults with overweight or obesity, and type 2 diabetes (STEP 2). *Lancet*. 2021;397(10278):971-984.
-3. Wadden TA, et al. Effect of Subcutaneous Semaglutide vs Placebo as an Adjunct to Intensive Behavioral Therapy on Body Weight in Adults With Overweight or Obesity (STEP 3). *JAMA*. 2021;325(14):1403-1413.
-4. Rubino D, et al. Effect of Continued Weekly Subcutaneous Semaglutide vs Placebo on Weight Loss Maintenance in Adults With Overweight or Obesity (STEP 4). *JAMA*. 2021;325(14):1414-1425.
-5. Garvey WT, et al. Two-year effects of semaglutide in adults with overweight or obesity: the STEP 5 trial. *Nat Med*. 2022;28:2083-2091.
-6. Lincoff AM, et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. *NEJM*. 2023;389(24):2221-2232.
-7. Jastreboff AM, et al. Tirzepatide Once Weekly for the Treatment of Obesity. *NEJM*. 2022;387(4):327-340.
-8. Blundell J, et al. Effects of once-weekly semaglutide on appetite, energy intake, control of eating, food preference and body weight in subjects with obesity. *Diabetes Obes Metab*. 2017;19(9):1242-1251.
-9. Friedrichsen MH, et al.
+- Wilding JPH, et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity. *NEJM*. 2021;384(11):989-1002.
+- Davies M, et al. Semaglutide 2·4 mg once a week in adults with overweight or obesity, and type 2 diabetes (STEP 2). *Lancet*. 2021;397(10278):971-984.
+- Wadden TA, et al. Effect of Subcutaneous Semaglutide vs Placebo as an Adjunct to Intensive Behavioral Therapy on Body Weight in Adults With Overweight or Obesity (STEP 3). *JAMA*. 2021;325(14):1403-1413.
+- Rubino D, et al. Effect of Continued Weekly Subcutaneous Semaglutide vs Placebo on Weight Loss Maintenance in Adults With Overweight or Obesity (STEP 4). *JAMA*. 2021;325(14):1414-1425.
+- Garvey WT, et al. Two-year effects of semaglutide in adults with overweight or obesity: the STEP 5 trial. *Nat Med*. 2022;28:2083-2091.
+- Lincoff AM, et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. *NEJM*. 2023;389(24):2221-2232.
+- Jastreboff AM, et al. Tirzepatide Once Weekly for the Treatment of Obesity. *NEJM*. 2022;387(4):327-340.
+- Blundell J, et al. Effects of once-weekly semaglutide on appetite, energy intake, control of eating, food preference and body weight in subjects with obesity. *Diabetes Obes Metab*. 2017;19(9):1242-1251.
+- Friedrichsen MH, et al.
 
 The effect of semaglutide 2.4 mg once weekly on energy intake, appetite, control of eating, and gastric emptying in adults with obesity. *Diabetes Obes Metab*. 2021;23(3):754-762.

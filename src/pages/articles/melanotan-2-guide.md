@@ -61,11 +61,11 @@ MT-2 is a non-selective agonist of melanocortin receptors, particularly MC1R thr
 
 ### MC1R: The Tanning Cascade
 
-1. **MT-2 binds to MC1R** on melanocytes
-2. **Activates adenylate cyclase**  -  increases intracellular cAMP
-3. **cAMP activates protein kinase A**  -  upregulates tyrosinase
-4. **More melanin produced** and transferred to surrounding skin cells
-5. **Skin darkens progressively** over days to weeks
+- **MT-2 binds to MC1R** on melanocytes
+- **Activates adenylate cyclase**  -  increases intracellular cAMP
+- **cAMP activates protein kinase A**  -  upregulates tyrosinase
+- **More melanin produced** and transferred to surrounding skin cells
+- **Skin darkens progressively** over days to weeks
 
 > **Key Distinction:** MT-2 produces **eumelanin**, the dark brown/black pigment that actually provides UV protection. This is different from pheomelanin (the reddish pigment in fair-skinned, red-haired individuals), which doesn't protect against UV and may generate free radicals.
 

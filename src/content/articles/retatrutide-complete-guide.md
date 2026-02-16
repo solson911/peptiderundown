@@ -223,10 +223,10 @@ With GLP-1 alone, weight loss is mainly about **eating less**. That works, but i
 
 Here's the problem:
 
-1. You lose weight
-2. Your metabolic rate drops (adaptive thermogenesis)
-3. Reduced intake meets reduced burn
-4. **Weight loss stalls**
+- You lose weight
+- Your metabolic rate drops (adaptive thermogenesis)
+- Reduced intake meets reduced burn
+- **Weight loss stalls**
 
 Glucagon breaks this cycle by working on the **"calories out" side:**
 

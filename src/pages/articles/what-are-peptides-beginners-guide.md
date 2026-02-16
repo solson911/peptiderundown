@@ -52,10 +52,10 @@ Your body is a massive communication network. Hormones, neurotransmitters, and (
 
 Here's the simplified version of how peptide therapy works:
 
-1. **You introduce a specific peptide** into your body (through injection, orally, or nasally; more on that later).
-2. **The peptide travels to its target**, binding to specific receptors on cell surfaces, kind of like a key fitting into a lock.
-3. **The receptor activates a cellular response.** This could mean releasing growth hormone, reducing inflammation, triggering fat metabolism, or kickstarting tissue repair.
-4. **Your body does the actual work.** The peptide doesn't *force* anything. It signals your body to do what it already knows how to do, just more efficiently or at the right time.
+- **You introduce a specific peptide** into your body (through injection, orally, or nasally; more on that later).
+- **The peptide travels to its target**, binding to specific receptors on cell surfaces, kind of like a key fitting into a lock.
+- **The receptor activates a cellular response.** This could mean releasing growth hormone, reducing inflammation, triggering fat metabolism, or kickstarting tissue repair.
+- **Your body does the actual work.** The peptide doesn't *force* anything. It signals your body to do what it already knows how to do, just more efficiently or at the right time.
 
 This is one of the reasons peptide therapy is so appealing to many people. Rather than introducing a foreign substance that overrides your biology, peptides work *with* your body's existing systems. They're more like a nudge than a shove.
 
@@ -290,9 +290,9 @@ You've just covered a lot of ground. Congratulations! You now know more about pe
 
 Here's what we'd suggest as your next steps:
 
-1. **Explore our other guides** on specific peptides that interest you. We go deeper on [BPC-157](/articles/bpc-157-complete-guide), [semaglutide](/articles/semaglutide-weight-loss-guide), [TB-500](/articles/tb-500-complete-guide), and more. If you'll be injecting, our [reconstitution guide](/articles/how-to-reconstitute-peptides) is essential reading.
-2. **Start researching providers** in your area or reputable telehealth peptide clinics.
-3. **Join the conversation.** Peptide communities (including ours) are great places to learn from others' experiences.
+- **Explore our other guides** on specific peptides that interest you. We go deeper on [BPC-157](/articles/bpc-157-complete-guide), [semaglutide](/articles/semaglutide-weight-loss-guide), [TB-500](/articles/tb-500-complete-guide), and more. If you'll be injecting, our [reconstitution guide](/articles/how-to-reconstitute-peptides) is essential reading.
+- **Start researching providers** in your area or reputable telehealth peptide clinics.
+- **Join the conversation.** Peptide communities (including ours) are great places to learn from others' experiences.
 
 Peptide therapy isn't a magic bullet, but for many people, it's a powerful tool in the pursuit of better health, recovery, and longevity. The key is education, quality sourcing, and working with someone who knows what they're doing.
 

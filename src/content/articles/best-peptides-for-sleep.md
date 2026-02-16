@@ -151,12 +151,12 @@ Start with one peptide and track your sleep metrics. Most users achieve signific
 ---
 
 **References:**
-1. Kovalzon et al. (2024). *Sleep Med Rev* 45:102-110  
-2. Svensson et al. (2025). *J Clin Endocrinol Metab* 110(3):dgaa943  
-3. Lee et al. (2025). *Front Endocrinol* 16:789234  
-4. Sikiric et al. (2023). *Curr Pharm Des* 29(15):1152-1163  
-5. Zhang et al. (2024). *Gut Microbes* 16(1):2281010  
-6. NIH Sleep Disorders Report (2026)  
-7. Petrov et al. (2024). *Eur Neuropsychopharmacol* 78:15-23  
-8. Khavinson et al. (2023). *Aging* 15(8):2929-2947  
-9. Meta-analysis of 17 peptide sleep studies (2026). *Nat Sci Sleep* 18:45-59
+- Kovalzon et al. (2024). *Sleep Med Rev* 45:102-110  
+- Svensson et al. (2025). *J Clin Endocrinol Metab* 110(3):dgaa943  
+- Lee et al. (2025). *Front Endocrinol* 16:789234  
+- Sikiric et al. (2023). *Curr Pharm Des* 29(15):1152-1163  
+- Zhang et al. (2024). *Gut Microbes* 16(1):2281010  
+- NIH Sleep Disorders Report (2026)  
+- Petrov et al. (2024). *Eur Neuropsychopharmacol* 78:15-23  
+- Khavinson et al. (2023). *Aging* 15(8):2929-2947  
+- Meta-analysis of 17 peptide sleep studies (2026). *Nat Sci Sleep* 18:45-59

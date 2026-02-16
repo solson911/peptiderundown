@@ -156,11 +156,11 @@ TB-500 comes as a lyophilized (freeze-dried) powder in a vial, usually in 2 mg o
 
 Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
 
-1. Use bacteriostatic water (BAC water) for reconstitution
-2. Inject the BAC water slowly down the side of the vial, not directly onto the powder
-3. Gently swirl the vial until the powder dissolves completely. Don't shake it
-4. Store the reconstituted solution in the refrigerator (2 to 8 degrees Celsius)
-5. Reconstituted TB-500 is generally stable for 2 to 3 weeks when refrigerated
+- Use bacteriostatic water (BAC water) for reconstitution
+- Inject the BAC water slowly down the side of the vial, not directly onto the powder
+- Gently swirl the vial until the powder dissolves completely. Don't shake it
+- Store the reconstituted solution in the refrigerator (2 to 8 degrees Celsius)
+- Reconstituted TB-500 is generally stable for 2 to 3 weeks when refrigerated
 
 For a detailed walkthrough with dosage calculations, see our [complete peptide reconstitution guide](/articles/how-to-reconstitute-peptides).
 

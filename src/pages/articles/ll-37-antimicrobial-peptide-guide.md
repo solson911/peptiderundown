@@ -112,9 +112,9 @@ Beyond infection control, LL-37 directly promotes tissue repair:
 
 LL-37 production is directly linked to vitamin D status:
 
-1. Vitamin D binds its receptor (VDR)
-2. VDR complex activates CAMP gene
-3. Increased hCAP18/LL-37 production
+- Vitamin D binds its receptor (VDR)
+- VDR complex activates CAMP gene
+- Increased hCAP18/LL-37 production
 
 This explains why:
 

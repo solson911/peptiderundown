@@ -58,11 +58,11 @@ While some good vendors accept crypto, exclusive cryptocurrency payments elimina
 
 Real certificates contain specific verification markers:
 
-1. **Lab letterhead** - Should match the lab's official website
-2. **Unique ID number** - Verifiable on the testing lab's portal
-3. **Sample submission date** - Within vendor's stated timeframe
-4. **HPLC chromatogram** - Showing peak purity >98%
-5. **Mass spectrometry confirmation** - Exact molecular weight match
+- **Lab letterhead** - Should match the lab's official website
+- **Unique ID number** - Verifiable on the testing lab's portal
+- **Sample submission date** - Within vendor's stated timeframe
+- **HPLC chromatogram** - Showing peak purity >98%
+- **Mass spectrometry confirmation** - Exact molecular weight match
 
 > Pro Tip: Always contact the lab directly to confirm the report's authenticity. Reputable labs will verify document numbers.
 
@@ -109,11 +109,11 @@ These platforms offer crowd-sourced verification:
 
 ## If You Get a Bad Batch
 
-1. Document everything with photos
-2. Request refund with test evidence
-3. Report to community review platforms
-4. Consider independent testing ($50-150)
-5. Contact credit card company if applicable
+- Document everything with photos
+- Request refund with test evidence
+- Report to community review platforms
+- Consider independent testing ($50-150)
+- Contact credit card company if applicable
 
 ## Frequently Asked Questions
 

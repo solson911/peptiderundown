@@ -108,11 +108,11 @@ Let them air dry for a few seconds. This removes any surface bacteria or dust.
 
 Using your larger syringe (1–3mL), draw up your predetermined amount of BAC water:
 
-1. Insert the needle through the rubber stopper of the BAC water vial.
-2. Flip the vial upside down.
-3. Pull the plunger back to your desired volume.
-4. Remove any air bubbles by tapping the syringe and gently pushing the plunger until the air escapes.
-5. Withdraw the needle from the BAC water vial.
+- Insert the needle through the rubber stopper of the BAC water vial.
+- Flip the vial upside down.
+- Pull the plunger back to your desired volume.
+- Remove any air bubbles by tapping the syringe and gently pushing the plunger until the air escapes.
+- Withdraw the needle from the BAC water vial.
 
 ### Step 6: Add the Water to the Peptide Vial (Slowly!)
 
@@ -122,10 +122,10 @@ This is the most important step, and the one most people mess up. **Do not squir
 
 Here's the right way:
 
-1. Insert the needle through the rubber stopper of the peptide vial at a slight angle.
-2. **Aim the needle toward the inside wall of the vial**, not directly at the powder cake.
-3. **Push the plunger slowly.** Let the water trickle down the glass wall and pool at the bottom. This should take 30–60 seconds for 1–2mL.
-4. Once all the water is in, remove the needle.
+- Insert the needle through the rubber stopper of the peptide vial at a slight angle.
+- **Aim the needle toward the inside wall of the vial**, not directly at the powder cake.
+- **Push the plunger slowly.** Let the water trickle down the glass wall and pool at the bottom. This should take 30–60 seconds for 1–2mL.
+- Once all the water is in, remove the needle.
 
 **Why so gentle?** Peptides are delicate molecules. Blasting them with a jet of water can damage their structure through shear force. Think of it like slowly pouring water over a sugar cube versus hitting it with a pressure washer.
 
@@ -214,14 +214,14 @@ Or if you prefer working in micrograms:
 
 Once your peptide is mixed, here's how to draw your dose each time:
 
-1. **Wipe the vial stopper** with an alcohol swab.
-2. **Draw air** into the insulin syringe equal to the amount you plan to withdraw (e.g., if drawing 10 units of liquid, pull 10 units of air).
-3. **Insert the needle** through the rubber stopper.
-4. **Inject the air** into the vial. This equalizes pressure and makes drawing easier.
-5. **Flip the vial upside down** with the syringe still in it.
-6. **Pull the plunger** slowly to your desired dose.
-7. **Check for air bubbles.** If you see any, tap the syringe barrel to float them to the top, then push the plunger slightly to expel them.
-8. **Withdraw the needle** from the vial.
+- **Wipe the vial stopper** with an alcohol swab.
+- **Draw air** into the insulin syringe equal to the amount you plan to withdraw (e.g., if drawing 10 units of liquid, pull 10 units of air).
+- **Insert the needle** through the rubber stopper.
+- **Inject the air** into the vial. This equalizes pressure and makes drawing easier.
+- **Flip the vial upside down** with the syringe still in it.
+- **Pull the plunger** slowly to your desired dose.
+- **Check for air bubbles.** If you see any, tap the syringe barrel to float them to the top, then push the plunger slightly to expel them.
+- **Withdraw the needle** from the vial.
 
 Your dose is now ready for administration. Use a fresh insulin syringe each time. Never reuse needles.
 

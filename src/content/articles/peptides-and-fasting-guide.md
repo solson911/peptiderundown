@@ -20,9 +20,9 @@ Fasting triggers several key biological processes that peptides can enhance. Dur
 
 Three primary mechanisms make fasting an ideal partner for peptide therapy:
 
-1. **Autophagy activation** - Fasting triggers cellular "spring cleaning" where damaged components are recycled. Peptides like MOTS-c can boost this process.
-2. **Growth hormone surge** - Fasting increases GH production by up to 5 times. Peptides like Tesamorelin further amplify this effect.
-3. **Metabolic flexibility** - Fasting teaches your body to switch between fuel sources efficiently. Peptides support mitochondrial function during this transition.
+- **Autophagy activation** - Fasting triggers cellular "spring cleaning" where damaged components are recycled. Peptides like MOTS-c can boost this process.
+- **Growth hormone surge** - Fasting increases GH production by up to 5 times. Peptides like Tesamorelin further amplify this effect.
+- **Metabolic flexibility** - Fasting teaches your body to switch between fuel sources efficiently. Peptides support mitochondrial function during this transition.
 
 A 2024 study found participants combining fasting with peptides had 37% greater fat loss than fasting alone (PubMed: 38273421).
 
@@ -122,9 +122,9 @@ Refeeding presents the perfect opportunity for gut-healing peptides:
 
 BPC-157 works by:
 
-1. Strengthening tight junctions
-2. Reducing intestinal inflammation
-3. Accelerating mucosal repair
+- Strengthening tight junctions
+- Reducing intestinal inflammation
+- Accelerating mucosal repair
 
 ## Does Fasting Affect Peptide Absorption?
 
@@ -144,24 +144,24 @@ Practical recommendations:
 
 ### Fat Loss Protocol
 
-1. **Daily:** 16:8 fasting window
-2. **AM fasted:** Tesamorelin 1mg
-3. **Mid-day:** AOD-9604 300mcg
-4. **Meal time:** BPC-157 250mcg
+- **Daily:** 16:8 fasting window
+- **AM fasted:** Tesamorelin 1mg
+- **Mid-day:** AOD-9604 300mcg
+- **Meal time:** BPC-157 250mcg
 
 ### Longevity Protocol
 
-1. **Weekly:** 42-hour fast (dinner to lunch 2 days later)
-2. **Fasting day 1:** MOTS-c 5mg AM/PM
-3. **Fasting day 2:** Ipamorelin 300mcg AM/PM
-4. **Refeed:** BPC-157 with bone broth first
+- **Weekly:** 42-hour fast (dinner to lunch 2 days later)
+- **Fasting day 1:** MOTS-c 5mg AM/PM
+- **Fasting day 2:** Ipamorelin 300mcg AM/PM
+- **Refeed:** BPC-157 with bone broth first
 
 ### Athletic Recovery
 
-1. **Daily:** 14-hour overnight fast
-2. **Pre-sleep:** Ipamorelin 300mcg
-3. **Upon waking:** TB-500 2.5mg
-4. **Post-workout:** (fed) BPC-157 500mcg
+- **Daily:** 14-hour overnight fast
+- **Pre-sleep:** Ipamorelin 300mcg
+- **Upon waking:** TB-500 2.5mg
+- **Post-workout:** (fed) BPC-157 500mcg
 
 ## Frequently Asked Questions
 
@@ -185,11 +185,11 @@ Be cautious with insulin-sensitizing peptides like GLP-1 analogs if doing extend
 
 ## Key Takeaways
 
-1. Fasted peptides: GH secretagogues, autophagy boosters, fat burners
-2. Fed peptides: Gut healers, NAD+ precursors, cognitive enhancers
-3. Time peptides to your eating window for maximum effect
-4. Combine MOTS-c with extended fasts for autophagy boost
-5. Use BPC-157 during refeeding to protect gut health
-6. No need to adjust dosing for fasting absorption
+- Fasted peptides: GH secretagogues, autophagy boosters, fat burners
+- Fed peptides: Gut healers, NAD+ precursors, cognitive enhancers
+- Time peptides to your eating window for maximum effect
+- Combine MOTS-c with extended fasts for autophagy boost
+- Use BPC-157 during refeeding to protect gut health
+- No need to adjust dosing for fasting absorption
 
 For more detail on specific peptides, see our guides on [fat loss peptides](/articles/best-peptides-for-fat-loss), [MOTS-c](/articles/mots-c-mitochondrial-peptide), and [anti-aging protocols](/articles/best-peptides-for-anti-aging).

@@ -174,14 +174,14 @@ Need help with the math? Use our free [Peptide Reconstitution Calculator](https:
 
 ### Step-by-Step Reconstitution
 
-1. **Gather materials**  -  BPC-157 vial (lyophilized powder), bacteriostatic water, insulin syringe (typically 1 mL / 100 unit), alcohol swabs
-2. **Clean the vial tops**  -  wipe both the BPC-157 vial and the bacteriostatic water vial with alcohol swabs; allow to dry
-3. **Draw bacteriostatic water** into the syringe:
+- **Gather materials**  -  BPC-157 vial (lyophilized powder), bacteriostatic water, insulin syringe (typically 1 mL / 100 unit), alcohol swabs
+- **Clean the vial tops**  -  wipe both the BPC-157 vial and the bacteriostatic water vial with alcohol swabs; allow to dry
+- **Draw bacteriostatic water** into the syringe:
    - **5 mg vial + 2 mL BAC water = 2,500 mcg/mL** (each 0.1 mL / 10 units = 250 mcg)
    - **5 mg vial + 1 mL BAC water = 5,000 mcg/mL** (each 0.1 mL = 500 mcg)
-4. **Inject the water slowly** into the BPC-157 vial, aiming the stream against the glass wall, not directly onto the powder
-5. **Swirl gently** until fully dissolved; do not shake vigorously
-6. **Store the reconstituted solution** in the refrigerator (2-8C / 36-46F); do not freeze once reconstituted
+- **Inject the water slowly** into the BPC-157 vial, aiming the stream against the glass wall, not directly onto the powder
+- **Swirl gently** until fully dissolved; do not shake vigorously
+- **Store the reconstituted solution** in the refrigerator (2-8C / 36-46F); do not freeze once reconstituted
 
 For a more detailed walkthrough with dosage calculations, see our [complete peptide reconstitution guide](/articles/how-to-reconstitute-peptides).
 
@@ -279,11 +279,11 @@ Standard workplace drug panels do not test for BPC-157. Advanced peptide-specifi
 
 ## What We Still Don't Know About BPC-157
 
-1. **Concentration of research**  -  the majority of studies originate from a single research group (Sikiric et al., University of Zagreb); independent replication would strengthen the evidence
-2. **No large human RCTs**  -  as of early 2026, no completed large-scale randomized controlled trials in humans
-3. **Dose translation uncertainty**  -  extrapolating doses from rodent models to humans using allometric scaling is imperfect
-4. **Long-term safety**  -  the chronic safety profile in any species is not well characterized
-5. **Mechanism specificity**  -  the relative contribution of each pathway to observed effects remains unclear
+- **Concentration of research**  -  the majority of studies originate from a single research group (Sikiric et al., University of Zagreb); independent replication would strengthen the evidence
+- **No large human RCTs**  -  as of early 2026, no completed large-scale randomized controlled trials in humans
+- **Dose translation uncertainty**  -  extrapolating doses from rodent models to humans using allometric scaling is imperfect
+- **Long-term safety**  -  the chronic safety profile in any species is not well characterized
+- **Mechanism specificity**  -  the relative contribution of each pathway to observed effects remains unclear
 
 > **Bottom line:** These gaps don't invalidate the existing research. They underscore the need for caution and intellectual honesty when discussing BPC-157's potential.
 
@@ -301,43 +301,43 @@ New to peptides? Start with our [beginner's guide to peptide therapy](/articles/
 
 ## References
 
-1. Sikiric P, Seiwerth S, Rucman R, et al. Stable gastric pentadecapeptide BPC 157-NO-system relation. *Curr Pharm Des.* 2014;20(7):1126-1135. [PubMed](https://pubmed.ncbi.nlm.nih.gov/23829361/)
+- Sikiric P, Seiwerth S, Rucman R, et al. Stable gastric pentadecapeptide BPC 157-NO-system relation. *Curr Pharm Des.* 2014;20(7):1126-1135. [PubMed](https://pubmed.ncbi.nlm.nih.gov/23829361/)
 
-2. Hsieh MJ, Liu HT, Wang CN, et al. Therapeutic potential of pro-angiogenic BPC157 is associated with VEGFR2 activation and up-regulation. *J Mol Med.* 2017;95(3):323-333. [PubMed](https://pubmed.ncbi.nlm.nih.gov/27900448/)
+- Hsieh MJ, Liu HT, Wang CN, et al. Therapeutic potential of pro-angiogenic BPC157 is associated with VEGFR2 activation and up-regulation. *J Mol Med.* 2017;95(3):323-333. [PubMed](https://pubmed.ncbi.nlm.nih.gov/27900448/)
 
-3. Tkalcevic VI, Cuzic S, Brajsa K, et al. Enhancement by PL 14736 of granulation and collagen organization in healing wounds. *Eur J Pharmacol.* 2007;570(1-3):212-221. [PubMed](https://pubmed.ncbi.nlm.nih.gov/17628536/)
+- Tkalcevic VI, Cuzic S, Brajsa K, et al. Enhancement by PL 14736 of granulation and collagen organization in healing wounds. *Eur J Pharmacol.* 2007;570(1-3):212-221. [PubMed](https://pubmed.ncbi.nlm.nih.gov/17628536/)
 
-4. Sikiric P, Seiwerth S, Rucman R, et al. Stable gastric pentadecapeptide BPC 157 and wound healing. *Front Pharmacol.* 2018;9:1408.
+- Sikiric P, Seiwerth S, Rucman R, et al. Stable gastric pentadecapeptide BPC 157 and wound healing. *Front Pharmacol.* 2018;9:1408.
 
-5. Vukojevic J, Siroglavic M, Kasnik K, et al. Rat inferior caval vein (ICV) ligature and particular pentadecapeptide BPC 157 therapy. *Vasc Pharmacol.* 2018;106:46-57. [PubMed](https://pubmed.ncbi.nlm.nih.gov/29501668/)
+- Vukojevic J, Siroglavic M, Kasnik K, et al. Rat inferior caval vein (ICV) ligature and particular pentadecapeptide BPC 157 therapy. *Vasc Pharmacol.* 2018;106:46-57. [PubMed](https://pubmed.ncbi.nlm.nih.gov/29501668/)
 
-6. Chang CH, Tsai WC, Lin MS, Hsu YH, Pang JHS. The promoting effect of pentadecapeptide BPC 157 on tendon healing involves tendon outgrowth, cell survival, and cell migration. *J Appl Physiol.* 2011;110(3):774-780. [PubMed](https://pubmed.ncbi.nlm.nih.gov/21030672/)
+- Chang CH, Tsai WC, Lin MS, Hsu YH, Pang JHS. The promoting effect of pentadecapeptide BPC 157 on tendon healing involves tendon outgrowth, cell survival, and cell migration. *J Appl Physiol.* 2011;110(3):774-780. [PubMed](https://pubmed.ncbi.nlm.nih.gov/21030672/)
 
-7. Sikiric P, Seiwerth S, Brcic L, et al. Stable gastric pentadecapeptide BPC 157 in trials for inflammatory bowel disease. *Inflammopharmacology.* 2006;14(5-6):214-221. [PubMed](https://pubmed.ncbi.nlm.nih.gov/17091493/)
+- Sikiric P, Seiwerth S, Brcic L, et al. Stable gastric pentadecapeptide BPC 157 in trials for inflammatory bowel disease. *Inflammopharmacology.* 2006;14(5-6):214-221. [PubMed](https://pubmed.ncbi.nlm.nih.gov/17091493/)
 
-8. Sikiric P, Rucman R, Turkovic B, et al. Novel cytoprotective mediator, stable gastric pentadecapeptide BPC 157. *Curr Pharm Des.* 2018;24(18):1990-2001. [PubMed](https://pubmed.ncbi.nlm.nih.gov/29756564/)
+- Sikiric P, Rucman R, Turkovic B, et al. Novel cytoprotective mediator, stable gastric pentadecapeptide BPC 157. *Curr Pharm Des.* 2018;24(18):1990-2001. [PubMed](https://pubmed.ncbi.nlm.nih.gov/29756564/)
 
-9. Sikiric P et al. *Life Sci.* 1994;54(5):PL63-68. [PubMed](https://pubmed.ncbi.nlm.nih.gov/8163129/)
+- Sikiric P et al. *Life Sci.* 1994;54(5):PL63-68. [PubMed](https://pubmed.ncbi.nlm.nih.gov/8163129/)
 
-10. Cesarec V, Becejac T, Misic M, et al. Pentadecapeptide BPC 157 and the esophagocutaneous fistula healing therapy. *Eur J Pharmacol.* 2013;701(1-3):203-212. [PubMed](https://pubmed.ncbi.nlm.nih.gov/23220707/)
+- Cesarec V, Becejac T, Misic M, et al. Pentadecapeptide BPC 157 and the esophagocutaneous fistula healing therapy. *Eur J Pharmacol.* 2013;701(1-3):203-212. [PubMed](https://pubmed.ncbi.nlm.nih.gov/23220707/)
 
-11. Skorjanec S, Dolovski Z, Kocman I, et al. Therapy for unhealed gastrocutaneous fistulas in rats. *Dig Dis Sci.* 2009;54(12):2602-2611. [PubMed](https://pubmed.ncbi.nlm.nih.gov/19117128/)
+- Skorjanec S, Dolovski Z, Kocman I, et al. Therapy for unhealed gastrocutaneous fistulas in rats. *Dig Dis Sci.* 2009;54(12):2602-2611. [PubMed](https://pubmed.ncbi.nlm.nih.gov/19117128/)
 
-12. Staresinic M, Petrovic I, Novinscak T, et al. Effective therapy of transected quadriceps muscle in rat. *J Orthop Res.* 2006;24(5):1109-1117. [PubMed](https://pubmed.ncbi.nlm.nih.gov/16609979/)
+- Staresinic M, Petrovic I, Novinscak T, et al. Effective therapy of transected quadriceps muscle in rat. *J Orthop Res.* 2006;24(5):1109-1117. [PubMed](https://pubmed.ncbi.nlm.nih.gov/16609979/)
 
-13. Cerovecki T, Bojanic I, Brcic L, et al. Pentadecapeptide BPC 157 improves ligament healing in the rat. *J Orthop Res.* 2010;28(9):1155-1161. [PubMed](https://pubmed.ncbi.nlm.nih.gov/20225319/)
+- Cerovecki T, Bojanic I, Brcic L, et al. Pentadecapeptide BPC 157 improves ligament healing in the rat. *J Orthop Res.* 2010;28(9):1155-1161. [PubMed](https://pubmed.ncbi.nlm.nih.gov/20225319/)
 
-14. Novinscak T, Brcic L, Staresinic M, et al. Gastric pentadecapeptide BPC 157 as an effective therapy for muscle crush injury. *Surg Today.* 2008;38(8):716-725. [PubMed](https://pubmed.ncbi.nlm.nih.gov/18668316/)
+- Novinscak T, Brcic L, Staresinic M, et al. Gastric pentadecapeptide BPC 157 as an effective therapy for muscle crush injury. *Surg Today.* 2008;38(8):716-725. [PubMed](https://pubmed.ncbi.nlm.nih.gov/18668316/)
 
-15. Sebecic B, Nikolic V, Sikiric P, et al. Osteogenic effect of a gastric pentadecapeptide, BPC-157, on healing of segmental bone defect in rabbits. *Bone.* 1999;24(3):195-202. [PubMed](https://pubmed.ncbi.nlm.nih.gov/10071910/)
+- Sebecic B, Nikolic V, Sikiric P, et al. Osteogenic effect of a gastric pentadecapeptide, BPC-157, on healing of segmental bone defect in rabbits. *Bone.* 1999;24(3):195-202. [PubMed](https://pubmed.ncbi.nlm.nih.gov/10071910/)
 
-16. Tudor M, Jandric I, Marovic A, et al. Traumatic brain injury in mice and pentadecapeptide BPC 157 effect. *Regul Pept.* 2010;160(1-3):26-32. [PubMed](https://pubmed.ncbi.nlm.nih.gov/19931579/)
+- Tudor M, Jandric I, Marovic A, et al. Traumatic brain injury in mice and pentadecapeptide BPC 157 effect. *Regul Pept.* 2010;160(1-3):26-32. [PubMed](https://pubmed.ncbi.nlm.nih.gov/19931579/)
 
-17. Gjurasin M, Miklic P, Zupancic B, et al. Peptide therapy with pentadecapeptide BPC 157 in traumatic nerve injury. *Regul Pept.* 2010;160(1-3):33-41. [PubMed](https://pubmed.ncbi.nlm.nih.gov/19903499/)
+- Gjurasin M, Miklic P, Zupancic B, et al. Peptide therapy with pentadecapeptide BPC 157 in traumatic nerve injury. *Regul Pept.* 2010;160(1-3):33-41. [PubMed](https://pubmed.ncbi.nlm.nih.gov/19903499/)
 
-18. Barisic I, Balenovic D, Klicek R, et al. Mortal hyperkalemia disturbances in rats are NO-system related. *Regul Pept.* 2013;181:16-26. [PubMed](https://pubmed.ncbi.nlm.nih.gov/23318498/)
+- Barisic I, Balenovic D, Klicek R, et al. Mortal hyperkalemia disturbances in rats are NO-system related. *Regul Pept.* 2013;181:16-26. [PubMed](https://pubmed.ncbi.nlm.nih.gov/23318498/)
 
-19. Ilic S, Brcic I, Mester M, et al. Over-dose insulin and stable gastric pentadecapeptide BPC 157. *J Physiol Pharmacol.* 2009;60 Suppl 7:107-114. [PubMed](https://pubmed.ncbi.nlm.nih.gov/20388953/)
+- Ilic S, Brcic I, Mester M, et al. Over-dose insulin and stable gastric pentadecapeptide BPC 157. *J Physiol Pharmacol.* 2009;60 Suppl 7:107-114. [PubMed](https://pubmed.ncbi.nlm.nih.gov/20388953/)
 
 *Last updated: February 13, 2026*
 

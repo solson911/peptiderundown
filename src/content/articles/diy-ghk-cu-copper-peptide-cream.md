@@ -65,21 +65,21 @@ The formula balances efficacy with skin compatibility. Jojoba oil mimics natural
 
 Follow these steps precisely for best results:
 
-1. **Prepare workspace** - Clean surfaces with alcohol. Wear gloves throughout the process. Gather all ingredients and equipment.
+- **Prepare workspace** - Clean surfaces with alcohol. Wear gloves throughout the process. Gather all ingredients and equipment.
 
-2. **Reconstitute GHK-Cu** - Add 1ml sterile water to 10mg GHK-Cu powder. Gently swirl until fully dissolved. Do not shake vigorously.
+- **Reconstitute GHK-Cu** - Add 1ml sterile water to 10mg GHK-Cu powder. Gently swirl until fully dissolved. Do not shake vigorously.
 
-3. **Mix water phase** - Combine aloe vera gel, hyaluronic acid, glycerin and distilled water in glass bowl. Heat gently to 70°C (158°F) using double boiler.
+- **Mix water phase** - Combine aloe vera gel, hyaluronic acid, glycerin and distilled water in glass bowl. Heat gently to 70°C (158°F) using double boiler.
 
-4. **Mix oil phase** - Combine jojoba oil and emulsifying wax in separate container. Heat to same temperature as water phase.
+- **Mix oil phase** - Combine jojoba oil and emulsifying wax in separate container. Heat to same temperature as water phase.
 
-5. **Combine phases** - Slowly pour oil phase into water phase while mixing with hand mixer. Continue blending until creamy consistency forms.
+- **Combine phases** - Slowly pour oil phase into water phase while mixing with hand mixer. Continue blending until creamy consistency forms.
 
-6. **Add active ingredients** - When mixture cools to room temperature, add GHK-Cu solution and Optiphen. Mix gently but thoroughly.
+- **Add active ingredients** - When mixture cools to room temperature, add GHK-Cu solution and Optiphen. Mix gently but thoroughly.
 
-7. **Test and adjust pH** - Use pH strips to check acidity. Ideal range is 5.5-6.0. Adjust with citric acid solution if needed.
+- **Test and adjust pH** - Use pH strips to check acidity. Ideal range is 5.5-6.0. Adjust with citric acid solution if needed.
 
-8. **Transfer to storage** - Pour cream into amber glass jars immediately. Leave minimal air space at top.
+- **Transfer to storage** - Pour cream into amber glass jars immediately. Leave minimal air space at top.
 
 **Common pitfalls**:
 - Adding peptides when mixture is too hot (denatures peptide)
@@ -149,17 +149,17 @@ DIY costs about 3-5% of commercial products. You also control the concentration 
 
 ## Common Mistakes to Avoid
 
-1. **Incorrect pH** - Test with strips and adjust with citric acid or baking soda solution. GHK-Cu needs 5.5-6.0 pH.
+- **Incorrect pH** - Test with strips and adjust with citric acid or baking soda solution. GHK-Cu needs 5.5-6.0 pH.
 
-2. **High-temperature mixing** - Always cool mixture before adding peptides. Heat denatures proteins.
+- **High-temperature mixing** - Always cool mixture before adding peptides. Heat denatures proteins.
 
-3. **Insufficient preservation** - Without proper preservative, bacteria grows quickly. Never skip this step.
+- **Insufficient preservation** - Without proper preservative, bacteria grows quickly. Never skip this step.
 
-4. **Using metal utensils** - Copper reacts with metal. Use glass or plastic tools only.
+- **Using metal utensils** - Copper reacts with metal. Use glass or plastic tools only.
 
-5. **Inaccurate measurements** - Invest in a good 0.001g scale. Small errors affect potency.
+- **Inaccurate measurements** - Invest in a good 0.001g scale. Small errors affect potency.
 
-6. **Poor storage** - Refrigerate in amber glass. Light and heat degrade peptides.
+- **Poor storage** - Refrigerate in amber glass. Light and heat degrade peptides.
 
 ## Safety Considerations and Patch Testing
 

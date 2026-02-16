@@ -210,9 +210,9 @@ Yes. Some researchers substitute:
 
 This advanced stack represents the frontier of metabolic research, combining:
 
-1. **Appetite control** (Retatrutide)
-2. **Fat cell reprogramming** (5-Amino-1MQ)
-3. **Enhanced fat burning** (Cardarine)
+- **Appetite control** (Retatrutide)
+- **Fat cell reprogramming** (5-Amino-1MQ)
+- **Enhanced fat burning** (Cardarine)
 
 While promising, it carries significant unknowns  -  particularly regarding Cardarine's safety profile. Researchers should proceed cautiously and document all observations.
 

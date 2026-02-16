@@ -94,13 +94,13 @@ Wipe the rubber stopper on your peptide vial with an alcohol swab using a firm, 
 
 ### Step 4: Draw the Peptide Into the Syringe
 
-1. Pull back the plunger to the mark matching your desired dose, filling the barrel with air
-2. Insert the needle through the center of the rubber stopper
-3. Push the plunger to inject air into the vial (equalizes pressure)
-4. Turn the vial upside down so the needle tip is submerged
-5. Slowly pull the plunger to your desired dose marking
-6. Check for air bubbles; tap the barrel to move them up, then push the plunger slightly to expel them
-7. Confirm your dose, then withdraw the needle
+- Pull back the plunger to the mark matching your desired dose, filling the barrel with air
+- Insert the needle through the center of the rubber stopper
+- Push the plunger to inject air into the vial (equalizes pressure)
+- Turn the vial upside down so the needle tip is submerged
+- Slowly pull the plunger to your desired dose marking
+- Check for air bubbles; tap the barrel to move them up, then push the plunger slightly to expel them
+- Confirm your dose, then withdraw the needle
 
 ### Step 5: Clean the Injection Site
 
@@ -110,13 +110,13 @@ Injecting through wet alcohol stings. Just wait the extra 10 seconds.
 
 ### Step 6: Pinch and Inject
 
-1. With your non-dominant hand, pinch up a fold of skin about one to two inches wide
-2. Hold the syringe like a dart, at **45 to 90 degrees** to the skin (90 degrees works for most body compositions; 45 degrees if very lean)
-3. Insert the needle in one smooth, steady motion
-4. Release the skin pinch
-5. Push the plunger down slowly over 5-10 seconds
-6. Wait 5-10 seconds before withdrawing (ensures full dose is deposited)
-7. Pull the needle out at the same angle you inserted it
+- With your non-dominant hand, pinch up a fold of skin about one to two inches wide
+- Hold the syringe like a dart, at **45 to 90 degrees** to the skin (90 degrees works for most body compositions; 45 degrees if very lean)
+- Insert the needle in one smooth, steady motion
+- Release the skin pinch
+- Push the plunger down slowly over 5-10 seconds
+- Wait 5-10 seconds before withdrawing (ensures full dose is deposited)
+- Pull the needle out at the same angle you inserted it
 
 ### Step 7: Post-Injection
 
@@ -144,13 +144,13 @@ Keep a simple log, even just jotting "left belly" or "right thigh" on your phone
 
 SubQ injections with insulin needles are not very painful. Most people describe a brief pinch. But if you're needle-sensitive:
 
-1. **Fresh needle every time**  -  needles dull after a single use
-2. **Let alcohol dry completely**  -  wet alcohol causes stinging
-3. **Ice the site for 30-60 seconds**  -  a frozen pea bag wrapped in paper towel works great
-4. **Inject at room temperature**  -  cold solutions cause more discomfort
-5. **Relax the muscle underneath**  -  tension makes everything worse
-6. **Go at a steady speed**  -  hesitating mid-insertion makes it worse
-7. **Breathe out as you insert**  -  helps your body relax
+- **Fresh needle every time**  -  needles dull after a single use
+- **Let alcohol dry completely**  -  wet alcohol causes stinging
+- **Ice the site for 30-60 seconds**  -  a frozen pea bag wrapped in paper towel works great
+- **Inject at room temperature**  -  cold solutions cause more discomfort
+- **Relax the muscle underneath**  -  tension makes everything worse
+- **Go at a steady speed**  -  hesitating mid-insertion makes it worse
+- **Breathe out as you insert**  -  helps your body relax
 
 ## Proper Sharps Disposal
 

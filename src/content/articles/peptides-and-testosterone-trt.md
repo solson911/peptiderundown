@@ -180,12 +180,12 @@ Start with one peptide at a time. Get bloodwork before and during use. Work with
 **Read next:** [Kisspeptin Reproductive Guide](/articles/kisspeptin-reproductive-peptide-guide) | [Ipamorelin Guide](/articles/ipamorelin-complete-guide)
 
 **References**
-1. Giannoulis MG et al. J Clin Endocrinol Metab. 2006
-2. Blackman MR et al. JAMA. 2002
-3. Navarro VM. Front Neuroendocrinol. 2012
-4. George JT et al. J Clin Endocrinol Metab. 2011
-5. Jayasena CN et al. Eur J Endocrinol. 2014
-6. Chan YM et al. Proc Natl Acad Sci USA. 2011
-7. Bhasin S et al. J Clin Endocrinol Metab. 2007
-8. Chang CH et al. Am J Physiol. 2011
-9. Garaci E et al. Ann N Y Acad Sci. 2012
+- Giannoulis MG et al. J Clin Endocrinol Metab. 2006
+- Blackman MR et al. JAMA. 2002
+- Navarro VM. Front Neuroendocrinol. 2012
+- George JT et al. J Clin Endocrinol Metab. 2011
+- Jayasena CN et al. Eur J Endocrinol. 2014
+- Chan YM et al. Proc Natl Acad Sci USA. 2011
+- Bhasin S et al. J Clin Endocrinol Metab. 2007
+- Chang CH et al. Am J Physiol. 2011
+- Garaci E et al. Ann N Y Acad Sci. 2012

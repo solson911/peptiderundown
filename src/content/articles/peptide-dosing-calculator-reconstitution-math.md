@@ -57,42 +57,42 @@ Convert to syringe units:
 
 ### BPC-157 (500mcg dose from 5mg vial)
 
-1. Reconstitute 5mg vial with 2mL bacteriostatic water
-2. Concentration: 5mg / 2mL = 2.5mg/mL
-3. Convert dose to mg: 500mcg = 0.5mg
-4. Volume: 0.5mg / 2.5mg/mL = 0.2mL
-5. U-100 syringe: 0.2mL x 100 = **20 units**
+- Reconstitute 5mg vial with 2mL bacteriostatic water
+- Concentration: 5mg / 2mL = 2.5mg/mL
+- Convert dose to mg: 500mcg = 0.5mg
+- Volume: 0.5mg / 2.5mg/mL = 0.2mL
+- U-100 syringe: 0.2mL x 100 = **20 units**
 
 ### TB-500 (2mg dose from 10mg vial)
 
-1. Reconstitute 10mg vial with 1mL bacteriostatic water
-2. Concentration: 10mg/mL
-3. Volume: 2mg / 10mg/mL = 0.2mL
-4. U-100 syringe: **20 units**
+- Reconstitute 10mg vial with 1mL bacteriostatic water
+- Concentration: 10mg/mL
+- Volume: 2mg / 10mg/mL = 0.2mL
+- U-100 syringe: **20 units**
 
 > **Key Finding:** Higher water volumes make dosing easier and more precise for beginners.
 
 ### Ipamorelin (200mcg dose from 5mg vial)
 
-1. Reconstitute 5mg vial with 1mL bacteriostatic water
-2. Concentration: 5mg/mL
-3. Dose in mg: 200mcg = 0.2mg
-4. Volume: 0.2mg / 5mg/mL = 0.04mL
-5. U-100 syringe: **4 units**
+- Reconstitute 5mg vial with 1mL bacteriostatic water
+- Concentration: 5mg/mL
+- Dose in mg: 200mcg = 0.2mg
+- Volume: 0.2mg / 5mg/mL = 0.04mL
+- U-100 syringe: **4 units**
 
 ### CJC-1295 (1mg dose from 10mg vial)
 
-1. Reconstitute 10mg vial with 2mL bacteriostatic water
-2. Concentration: 5mg/mL
-3. Volume: 1mg / 5mg/mL = 0.2mL
-4. U-100 syringe: **20 units**
+- Reconstitute 10mg vial with 2mL bacteriostatic water
+- Concentration: 5mg/mL
+- Volume: 1mg / 5mg/mL = 0.2mL
+- U-100 syringe: **20 units**
 
 ### Semaglutide (0.25mg starter dose from 2mg vial)
 
-1. Reconstitute 2mg vial with 1mL bacteriostatic water
-2. Concentration: 2mg/mL
-3. Volume: 0.25mg / 2mg/mL = 0.125mL
-4. U-100 syringe: **12.5 units**
+- Reconstitute 2mg vial with 1mL bacteriostatic water
+- Concentration: 2mg/mL
+- Volume: 0.25mg / 2mg/mL = 0.125mL
+- U-100 syringe: **12.5 units**
 
 > **Key Finding:** Always double-check your math before drawing a dose. Small errors can lead to significant over/under-dosing.
 

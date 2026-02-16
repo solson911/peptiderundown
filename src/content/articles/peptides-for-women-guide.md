@@ -82,9 +82,9 @@ Menopause changes peptide requirements dramatically. Falling estrogen levels red
 ## Pregnancy and Breastfeeding Contraindications
 
 No peptides are approved during pregnancy due to unknown fetal effects. Avoid all peptide use while breastfeeding. High-risk categories include:
-1. Growth hormone secretagogues (may stimulate uterine growth)
-2. Metabolic peptides (could affect nutrient transfer)
-3. Libido peptides (unknown placental effects)
+- Growth hormone secretagogues (may stimulate uterine growth)
+- Metabolic peptides (could affect nutrient transfer)
+- Libido peptides (unknown placental effects)
 
 Wait 3 months after stopping peptides before conception. 
 

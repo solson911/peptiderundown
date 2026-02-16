@@ -164,9 +164,9 @@ Yes, but it requires specialized equipment. Third-party labs are more practical.
 
 A COA is non-negotiable. Always verify:
 
-1. **Identity**  -  Matches the label
-2. **Purity**  -  ≥95% for research
-3. **Safety**  -  Low endotoxins, sterile
+- **Identity**  -  Matches the label
+- **Purity**  -  ≥95% for research
+- **Safety**  -  Low endotoxins, sterile
 
 Skip vendors who can’t provide a COA. Your research depends on it.
 

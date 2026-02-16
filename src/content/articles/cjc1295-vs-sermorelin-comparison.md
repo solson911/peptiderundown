@@ -67,23 +67,23 @@ A 2024 crossover study found 30% higher IGF-1 levels with CJC-1295 vs Sermorelin
 ## Clinical Research Review
 
 ### CJC-1295 Studies
-1. **Phase II Trial (n=45)**[^1]:
+- **Phase II Trial (n=45)**[^1]:
    - 2-10x GH increase for 6+ days
    - IGF-1 elevated for 11-14 days
    - Lean mass +3.2kg at 6 months
 
-2. **Aging Study (2023)**[^5]:
+- **Aging Study (2023)**[^5]:
    - 22% fat reduction in 12 weeks
    - Improved skin elasticity scores
    - No significant adverse events
 
 ### Sermorelin Research
-1. **Long-term Safety Study (2024)**[^2]:
+- **Long-term Safety Study (2024)**[^2]:
    - 5-year safety data in 120 patients
    - Restoration of GH pulsatility in 78%
    - Zero discontinuations from side effects
 
-2. **Body Composition Trial (2022)**[^6]:
+- **Body Composition Trial (2022)**[^6]:
    - 9% body fat reduction at 6 months
    - Muscle mass increase +1.8kg
    - No adverse impacts on glucose
@@ -141,18 +141,18 @@ Sermorelin is significantly more cost-effective for budget-conscious users. Howe
 ## Choosing Your Peptide
 
 ### When CJC-1295 is Preferable
-1. For athletes needing sustained IGF-1 elevation
-2. Those seeking maximum muscle protein synthesis
-3. Patients who struggle with daily injections
-4. Users wanting deeper sleep enhancement
-5. Cases requiring convenience (travel, busy schedules)
+- For athletes needing sustained IGF-1 elevation
+- Those seeking maximum muscle protein synthesis
+- Patients who struggle with daily injections
+- Users wanting deeper sleep enhancement
+- Cases requiring convenience (travel, busy schedules)
 
 ### When Sermorelin Shines
-1. Younger users under 40
-2. Those wanting pulsatile, natural GH patterns
-3. Budget-constrained protocols
-4. Patients with insulin sensitivity concerns
-5. Long-term anti-aging programs
+- Younger users under 40
+- Those wanting pulsatile, natural GH patterns
+- Budget-constrained protocols
+- Patients with insulin sensitivity concerns
+- Long-term anti-aging programs
 
 > "CJC-1295 suits those seeking substantial body recomposition, while Sermorelin may better preserve natural GH pulsatility." - *Clinical Endocrinology Review* (2025)[^8]
 
@@ -160,23 +160,23 @@ Sermorelin is significantly more cost-effective for budget-conscious users. Howe
 Both peptides combine effectively with other compounds:
 
 **CJC-1295 Stacks**:
-1. Performance Stack: CJC-1295 + Ipamorelin + BPC-157 ([more details](/articles/performance-stack-cjc1295-ipamorelin-bpc157))
+- Performance Stack: CJC-1295 + Ipamorelin + BPC-157 ([more details](/articles/performance-stack-cjc1295-ipamorelin-bpc157))
    - Enhanced muscle recovery
    - Synergistic GH release
    - Tendon/bone healing support
 
-2. Metabolic Stack: CJC-1295 + Tesamorelin
+- Metabolic Stack: CJC-1295 + Tesamorelin
    - Potent fat loss combination
    - Preserves lean mass
    - Improved insulin sensitivity
 
 **Sermorelin Combinations**:
-1. Gentle Enhancement: Sermorelin + Ibutamoren
+- Gentle Enhancement: Sermorelin + Ibutamoren
    - Increased GH pulse amplitude
    - Reduced administration frequency
    - Cost-effective approach
 
-2. Comprehensive Anti-Aging: Sermorelin + Epitalon
+- Comprehensive Anti-Aging: Sermorelin + Epitalon
    - Telomere support
    - Improved circadian rhythm
    - Enhanced skin rejuvenation

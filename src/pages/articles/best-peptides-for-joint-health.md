@@ -81,9 +81,9 @@ Copper-bound peptide GHK-Cu stimulates collagen and elastin. Documented effects:
 > **Key Finding:** GHK-Cu increased collagen density by 70% in human skin studies. Similar mechanisms protect cartilage[^4].
 
 **Forms:**
-1. Subcutaneous injections (5mg/day)
-2. Topical creams (50-100mcg/ml)
-3. Oral supplements (1-2mg/day)
+- Subcutaneous injections (5mg/day)
+- Topical creams (50-100mcg/ml)
+- Oral supplements (1-2mg/day)
 
 [^4]: *GHK-Cu as a Regulator of Collagen* - PubMed ID: 28748972
 
@@ -116,17 +116,17 @@ Recent clinical trials validate peptide effectiveness:
 
 ### The Tendon Repair Stack
 
-1. **BPC-157**: 250mcg AM/PM
-2. **TB-500**: 2.5mg twice weekly
-3. **Vitamin C**: 1g daily
+- **BPC-157**: 250mcg AM/PM
+- **TB-500**: 2.5mg twice weekly
+- **Vitamin C**: 1g daily
 
 > **Key Finding:** Combining BPC-157 and TB-500 accelerates collagen alignment by 40% compared to either peptide alone.
 
 ### The Arthritis Stack
 
-1. **GHK-Cu**: 5mg daily injections
-2. **Collagen peptides**: 15g daily
-3. **Curcumin**: 500mg for inflammation
+- **GHK-Cu**: 5mg daily injections
+- **Collagen peptides**: 15g daily
+- **Curcumin**: 500mg for inflammation
 
 Administer for 8-12 weeks minimum.
 
@@ -167,10 +167,10 @@ After 8-12 weeks, take a 4-week break. This prevents receptor desensitization. U
 ## Final Recommendations
 
 For most joint issues:
-1. Start with BPC-157 + TB-500 combo
-2. Add GHK-Cu for cartilage-specific concerns
-3. Include 15g collagen peptides daily
-4. Continue for 3 months minimum
+- Start with BPC-157 + TB-500 combo
+- Add GHK-Cu for cartilage-specific concerns
+- Include 15g collagen peptides daily
+- Continue for 3 months minimum
 
 Always consult a healthcare provider before starting peptide therapy. Source from reputable suppliers testing for purity.
 

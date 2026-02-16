@@ -104,10 +104,10 @@ While not a primary fat burner, IGF-1 LR3 may:
 
 ### Reconstitution
 
-1. Add 1-2 mL bacteriostatic water to vial
-2. Gently swirl (don't shake)
-3. Store refrigerated
-4. Use within 30 days
+- Add 1-2 mL bacteriostatic water to vial
+- Gently swirl (don't shake)
+- Store refrigerated
+- Use within 30 days
 
 ## Side Effects
 

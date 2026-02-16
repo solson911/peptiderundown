@@ -104,13 +104,13 @@ NAD+ precursors like NMN and NR restore NAD+ levels, which drop with age.
 
 Combining peptides can amplify their benefits. Here are some effective stacks:
 
-1. **Skin and Collagen Boost**
+- **Skin and Collagen Boost**
    - GHK-Cu (topical) + BPC-157 (injectable)
 
-2. **Longevity and Cellular Repair**
+- **Longevity and Cellular Repair**
    - Epithalon + SS-31 + NAD+ precursors
 
-3. **Immune and Growth Hormone Support**
+- **Immune and Growth Hormone Support**
    - Thymosin Alpha-1 + CJC-1295/Ipamorelin
 
 > **Important:** Always consult a healthcare provider before starting any peptide regimen.
