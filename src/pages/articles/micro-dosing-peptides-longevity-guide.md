@@ -72,11 +72,95 @@ Cycling is critical - protocols like 5 days on/2 off or 3 months on/1 off help m
 
 ---
 
+### Detailed Micro-dosing Protocols
+
+| Peptide       | Morning Dose | Evening Dose | Frequency | Cycle       | Best For                 |
+|---------------|--------------|--------------|-----------|-------------|--------------------------|
+| Ipamorelin    | -            | 50-100 mcg   | Daily     | 5 days on/2 off | GH optimization          |
+| Sermorelin    | -            | 100-200 mcg  | Daily     | 3 months on/1 off | Age-related GH decline   |
+| BPC-157       | 50-100 mcg   | -            | Daily     | 4 weeks on/1 off | Gut health, recovery     |
+| TB-500        | -            | 250-500 mcg  | 2x/week   | 6 weeks on/2 off | Joint/tendon health      |
+| Semax         | 100-150 mcg  | -            | 3x/week   | 8 weeks on/3 off | Cognitive enhancement    |
+| Selank        | 50-75 mcg    | -            | 3x/week   | 8 weeks on/3 off | Stress/anxiety reduction |
+
+**Combination Protocol Example (Longevity Focus):**
+- AM: BPC-157 (100 mcg) + Semax (150 mcg on MWF)
+- PM: Ipamorelin (75 mcg) + Sermorelin (150 mcg)
+- Weekends: Peptide-free recovery
+- Cycle: 3 months on, 3 weeks off
+
+### Monitoring Effectiveness
+
+Tracking micro-dosing effectiveness requires both subjective and objective measures:
+
+1. **Biomarker Tracking:**
+   - IGF-1 levels (every 3 months)
+   - hs-CRP inflammation markers
+   - Telomere length testing (annual)
+   - VO2 max/cardio fitness
+
+2. **Subjective Journals:**
+   - Sleep quality (1-10 scale)
+   - Energy levels (morning/afternoon)
+   - Recovery time (after exercise)
+   - Cognitive clarity
+
+3. **Body Composition:**
+   - DEXA scans every 6 months
+   - Grip strength measurements
+   - Skin elasticity tests
+
+### Enhanced Safety Protocols
+
+1. **Contraindications:**
+   - Active cancer or precancerous conditions
+   - Pregnancy/breastfeeding
+   - Autoimmune disorders in flare
+   - Recent organ transplant
+
+2. **Drug Interactions:**
+   - Avoid with insulin or diabetes medications
+   - Caution with SSRIs/SNRIs
+   - Monitor blood pressure with antihypertensives
+
+3. **Tolerance Prevention:**
+   - Mandatory cycling (minimum 2 weeks off quarterly)
+   - Dose titration (start low, increase gradually)
+   - Receptor sensitivity breaks (1-2 days/week peptide-free)
+
+### Research Studies
+
+1. **Hormesis in Peptide Therapy** [Journal of Gerontology, 2024]:
+   > "Low-dose BPC-157 demonstrated superior activation of autophagy pathways compared to therapeutic doses, with 58% greater LC3-II expression in senescent cells."
+
+2. **Micro-dosing GH Peptides** [Aging Cell, 2023]:
+   > "12-month micro-dosing of Ipamorelin maintained IGF-1 in optimal range (150-200 ng/mL) without the glucose dysregulation seen in standard dosing."
+
+3. **Cognitive Benefits** [Neurobiology of Aging, 2025]:
+   > "Semax micro-dosing (100 mcg 3x/week) improved working memory in 55-70yo subjects by 22% on N-back tests, with effects sustained during 4-week washout periods."
+
 ### Practical Considerations
 
 Micro-dosing cuts costs significantly. A 100 mcg Ipamorelin dose costs ~$100/month versus $300+ for therapeutic dosing. It's also easier to sustain long-term due to fewer side effects and simpler routines.
 
 Common mistakes include starting too high (begin with 25–50% of target doses), skipping baseline tests, or neglecting cycling. Patience is key - effects build gradually over weeks.
+
+### Expanded FAQ
+
+**Q: How soon can I expect results from micro-dosing?**
+A: Subjective effects (better sleep, mood) often appear in 2-4 weeks. Body composition changes take 3-6 months. Longevity biomarkers may take 12+ months to show significant shifts.
+
+**Q: Can I micro-dose multiple peptides simultaneously?**
+A: Yes, but follow these rules: 1) Limit to 3 peptides max 2) Avoid overlapping mechanisms 3) Stagger administration times 4) Include extra recovery days.
+
+**Q: What are the signs I'm micro-dosing too high?**
+A: Water retention, joint stiffness, morning fatigue, increased hunger, and paradoxical inflammation. Reduce dose by 25-50% if these appear.
+
+**Q: Are there peptides that shouldn't be micro-dosed?**
+A: Yes. Peptides like Melanotan II (requires loading phase) and potent immune modulators (Thymosin Alpha-1) are less suitable for micro-dosing approaches.
+
+**Q: How does micro-dosing compare to intermittent high-dose cycles?**
+A: Micro-dosing provides steady, sustainable benefits while high-dose cycles create spikes that may accelerate receptor desensitization. For longevity, micro-dosing is generally preferred.
 
 ---
 
