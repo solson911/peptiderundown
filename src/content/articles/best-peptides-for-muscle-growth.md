@@ -24,6 +24,8 @@ This guide ranks every peptide commonly used for muscle growth, breaks down the 
 > - **MK-677** is technically not a peptide but gets grouped with them because it raises GH through a similar pathway
 > - **Stacking matters** more than any single compound; the right combinations outperform solo use significantly
 
+---
+
 ## Overall Ranking: Best Peptides for Muscle Growth
 
 Before the deep breakdown, here's how everything stacks up.
@@ -41,6 +43,8 @@ Before the deep breakdown, here's how everything stacks up.
 | 9 | **TB-500** | Recovery peptide | Indirect | Moderate | Low |
 
 > **Important:** "Evidence level" reflects the quality and quantity of human research. Many peptides have strong animal data but limited clinical trials in humans specifically for muscle growth.
+
+---
 
 ## GH Secretagogues: The Backbone of Peptide-Based Muscle Building
 
@@ -142,6 +146,8 @@ Sits between GHRP-6 and ipamorelin in terms of side effects. GHRP-2 produces sli
 | **GHRP-6** | Very strong | Significant | Moderate | Intense | Hard bulking phases |
 | **Tesamorelin** | Moderate pulse | Low | Low | None | FDA-approved protocol |
 
+---
+
 ## MK-677 (Ibutamoren): The Oral Option
 
 MK-677 is not a peptide. It's a small molecule ghrelin receptor agonist that you take orally. But it ends up in every peptide discussion because it raises GH and IGF-1 through the same ghrelin pathway as GHRP-6 and ipamorelin.
@@ -177,6 +183,8 @@ The convenience of oral dosing makes MK-677 extremely popular. No reconstitution
 
 > **Important:** The insulin resistance issue is not trivial. Anyone using MK-677 for extended periods should monitor fasting glucose and HbA1c regularly. Combining it with a glucose disposal agent or metformin is common practice among experienced users.
 
+---
+
 ## IGF-1 LR3: The Direct Approach
 
 While GH secretagogues raise IGF-1 indirectly (GH signals the liver to make it), IGF-1 LR3 skips the middleman entirely. It's a modified version of IGF-1 with a much longer half-life than native IGF-1.
@@ -211,6 +219,8 @@ IGF-1 LR3 is more potent than GH secretagogues but carries more risk:
 
 > **Important:** IGF-1 LR3 is not for beginners. The risk profile is meaningfully higher than GH secretagogues, and the dosing window between "effective" and "problematic" is narrower.
 
+---
+
 ## Follistatin and Myostatin Inhibitors: The Frontier
 
 Myostatin is a protein that limits muscle growth. It acts as a biological brake. Remove that brake, and muscle grows far beyond normal limits.
@@ -241,6 +251,8 @@ Follistatin binds to and neutralizes myostatin (and activin A). Follistatin 344 
 Several pharmaceutical companies have attempted to develop myostatin inhibitors. Acceleron's ACE-031 reached clinical trials for Duchenne muscular dystrophy before being shelved due to safety concerns (nosebleeds, gum bleeding, skin issues related to effects on blood vessel formation).
 
 This highlights a key issue: myostatin doesn't only regulate muscle. Blocking it has downstream effects that aren't fully understood yet.
+
+---
 
 ## BPC-157 and TB-500: The Recovery Peptides
 
@@ -284,6 +296,8 @@ For the complete breakdown, read our [TB-500 guide](/articles/tb-500-complete-gu
 | **Stack together?** | Yes, complementary mechanisms | Yes, complementary mechanisms |
 
 > **Key Finding:** The BPC-157 and TB-500 combination is one of the most commonly used recovery stacks in the peptide community. While no human clinical trial has tested them together, the distinct mechanisms of action provide a reasonable rationale for combination use.
+
+---
 
 ## Stacking Strategies: Putting It All Together
 
@@ -340,6 +354,8 @@ The most potent combination. Higher risk, higher potential reward.
 
 > **Important:** This stack requires experience and monitoring. Blood glucose, insulin sensitivity, and general blood work should be checked every 4-6 weeks. This is not a starting point.
 
+---
+
 ## Dosing Overview
 
 Here's a consolidated reference table for every compound discussed.
@@ -362,6 +378,8 @@ Here's a consolidated reference table for every compound discussed.
 
 For injection technique, see our [subcutaneous injection guide](/articles/how-to-inject-peptides-subcutaneously). For reconstitution instructions, check the [reconstitution guide](/articles/how-to-reconstitute-peptides).
 
+---
+
 ## What About Natural Myostatin Reduction?
 
 Before spending money on follistatin or exotic peptides, it's worth noting that resistance training itself reduces myostatin expression.
@@ -369,6 +387,8 @@ Before spending money on follistatin or exotic peptides, it's worth noting that 
 Heavy compound movements, particularly eccentrics, downregulate myostatin over time. This is one of the mechanisms behind "newbie gains" and why consistent training produces results that eventually plateau as the body recalibrates its myostatin setpoint.
 
 Epicatechin (found in dark chocolate and green tea) has also shown modest myostatin-inhibiting effects in preliminary research, though the magnitude is far smaller than pharmaceutical approaches.
+
+---
 
 ## Frequently Asked Questions
 
@@ -409,6 +429,8 @@ Yes. GH secretagogues, BPC-157, and TB-500 are used by women at the same or slig
 ### Do I need to inject peptides on an empty stomach?
 
 For GH secretagogues, yes. Insulin and elevated blood sugar blunt the GH response. Dose at least **2 hours after eating** and wait **30 minutes before eating** after injection. BPC-157 and TB-500 don't have this restriction.
+
+---
 
 ## The Bottom Line
 

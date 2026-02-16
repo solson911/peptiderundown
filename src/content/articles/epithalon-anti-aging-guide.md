@@ -23,6 +23,8 @@ Epithalon is different. It has three decades of published research behind it, mo
 > - **Limited human clinical data** but strong in vitro and animal evidence
 > - **Not FDA-approved** and sold only as a research chemical in the US
 
+---
+
 ## What Is Epithalon?
 
 Epithalon (also spelled **Epitalon**) is a synthetic version of **epithalamin**, a peptide naturally produced by the pineal gland.
@@ -42,6 +44,8 @@ Its full name is **Ala-Glu-Asp-Gly**, a sequence of just four amino acids. That 
 The peptide was first synthesized in the 1980s at the St. Petersburg Institute of Bioregulation and Gerontology. Dr. Khavinson's team isolated epithalamin from bovine pineal glands, identified its active sequence, and created the synthetic version.
 
 For a deeper compound profile, check out the [Epithalon overview on PeptideArc](https://peptidearc.com).
+
+---
 
 ## How Epithalon Works
 
@@ -93,6 +97,8 @@ Beyond telomerase and melatonin, Epithalon influences broader gene regulation.
 | **Gene regulation** | Normalized expression patterns | Healthier cell function |
 
 > **Bottom line:** Epithalon doesn't just target one pathway. It acts on the pineal gland, telomere maintenance, and antioxidant defenses simultaneously.
+
+---
 
 ## The Khavinson Research: 30 Years of Data
 
@@ -159,6 +165,8 @@ The sample size was roughly **260 patients** aged 60-89. While the results are p
 
 > **Important:** The human data is suggestive but not definitive. No double-blind, placebo-controlled phase 2 or phase 3 trials have been conducted on Epithalon by Western research institutions.
 
+---
+
 ## Epithalon vs. Other Longevity Peptides
 
 | Feature | Epithalon | BPC-157 | GHK-Cu | Thymosin Alpha-1 |
@@ -170,6 +178,8 @@ The sample size was roughly **260 patients** aged 60-89. While the results are p
 | **Lifespan data (animal)** | Yes, 12-24% extension | No | Limited | No |
 
 Epithalon is unique in this group because it's the only peptide with published **animal lifespan extension data**.
+
+---
 
 ## Dosing Protocols
 
@@ -214,6 +224,8 @@ Epithalon comes as a lyophilized powder. Reconstitute with bacteriostatic water,
 
 For detailed step-by-step instructions, see our [peptide reconstitution guide](/articles/how-to-reconstitute-peptides).
 
+---
+
 ## Side Effects
 
 Epithalon has a remarkably clean side effect profile across published studies. No serious adverse events have been reported in either animal or human research.
@@ -243,6 +255,8 @@ Long-term effects of repeated telomerase activation are not fully understood. In
 
 For a broader overview, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know).
 
+---
+
 ## Legal Status and Availability
 
 Epithalon occupies a gray area in most countries.
@@ -259,6 +273,8 @@ In the US, Epithalon falls into the same category as many research peptides. It'
 
 Check our [peptide legality guide](/articles/are-peptides-legal-fda-regulations-2026) for full details.
 
+---
+
 ## Measuring Results: What to Test
 
 Since Epithalon's effects are primarily cellular, you won't see dramatic visible changes. Bloodwork and biomarker testing are the best way to track progress.
@@ -272,6 +288,8 @@ Since Epithalon's effects are primarily cellular, you won't see dramatic visible
 | **Complete metabolic panel** | Overall health markers | Every 6 months |
 
 > **Important:** Telomere length testing has significant variability between labs and even between draws. Use the same lab and testing methodology for before/after comparisons.
+
+---
 
 ## Frequently Asked Questions
 
@@ -329,6 +347,8 @@ Both target telomerase, but through completely different mechanisms.
 In the United States, yes. It's sold as a research chemical. You can legally purchase and possess it.
 
 It is not legal to sell it labeled for human consumption, and it's not available by prescription.
+
+---
 
 ## The Bottom Line
 

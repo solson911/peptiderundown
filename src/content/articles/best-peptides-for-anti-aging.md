@@ -37,6 +37,8 @@ Peptides function as biological messengers that trigger specific cellular respon
 
 ## Comprehensive Analysis of Top Anti-Aging Peptides
 
+---
+
 ### GHK-Cu: The Master Skin Regenerator
 
 **Mechanism**: Copper-binding peptide that activates over 4,000 genes involved in tissue repair and regeneration. Stimulates collagen synthesis while inhibiting collagen degradation enzymes.
@@ -60,6 +62,8 @@ Peptides function as biological messengers that trigger specific cellular respon
 - Skin texture improvement: 2-4 weeks
 - Visible collagen enhancement: 8-12 weeks
 - Optimal results: 6+ months
+
+---
 
 ### Epithalon: The Telomere Extender
 
@@ -86,6 +90,8 @@ Peptides function as biological messengers that trigger specific cellular respon
 - Cellular benefits: 3-6 months
 - Longevity effects: Cumulative over years
 
+---
+
 ### BPC-157: The Systemic Healer
 
 **Mechanism**: Pentadecapeptide that accelerates angiogenesis (new blood vessel formation) and modulates growth factor expression (VEGF, FGF). Enhances cellular migration and repair.
@@ -110,6 +116,8 @@ Peptides function as biological messengers that trigger specific cellular respon
 - Acute injury healing: Days to weeks
 - Chronic inflammation reduction: 2-4 weeks
 - Systemic benefits: 3+ months
+
+---
 
 ### SS-31 (Elamipretide): Mitochondrial Optimizer
 
@@ -136,6 +144,8 @@ Peptides function as biological messengers that trigger specific cellular respon
 - Mitochondrial benefits: 2-4 weeks
 - Cognitive enhancement: 1-3 months
 
+---
+
 ### Thymosin Alpha-1: Immune System Restorer
 
 **Mechanism**: 28-amino acid peptide that enhances T-cell differentiation, dendritic cell maturation, and cytokine production (especially IL-2 and IFN-γ).
@@ -161,6 +171,8 @@ Peptides function as biological messengers that trigger specific cellular respon
 - Chronic immune restoration: 2-3 months
 - Cancer surveillance benefits: Ongoing
 
+---
+
 ### Growth Hormone Secretagogues: CJC-1295 + Ipamorelin
 
 **Mechanism**: CJC-1295 is a GHRH analog that binds albumin for prolonged action. Ipamorelin is a ghrelin mimetic that stimulates GH release without affecting cortisol or prolactin.
@@ -185,6 +197,8 @@ Peptides function as biological messengers that trigger specific cellular respon
 - Sleep improvement: 1-3 nights
 - Body composition changes: 3-6 months
 - Long-term anti-aging benefits: Ongoing
+
+---
 
 ### NAD+ Precursors: NMN and NR
 
