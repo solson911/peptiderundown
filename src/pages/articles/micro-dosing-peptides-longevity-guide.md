@@ -13,7 +13,7 @@ The idea that "less is more" has gained traction in peptide therapy, especially 
 
 While the science behind micro-dosing is still evolving, the principles are rooted in hormesis—the concept that mild stressors can strengthen cellular defenses. Unlike high doses that might overwhelm the body, micro-dosing works gently, mimicking natural rhythms to avoid receptor desensitization. For example, growth hormone peptides like Ipamorelin and Sermorelin are often micro-dosed to support natural pulses rather than replace them, preserving long-term sensitivity.
 
-This guide explores the peptides best suited for micro-dosing, practical protocols, and safety considerations. It’s important to note that much of this remains experimental, and consulting a healthcare provider familiar with peptide therapy is essential before starting.
+This guide explores the peptides best suited for micro-dosing, practical protocols, and safety considerations. It's important to note that much of this remains experimental, and consulting a healthcare provider familiar with peptide therapy is essential before starting.
 
 ---
 
@@ -74,7 +74,7 @@ Cycling is critical—protocols like 5 days on/2 off or 3 months on/1 off help m
 
 ### Practical Considerations
 
-Micro-dosing cuts costs significantly. A 100 mcg Ipamorelin dose costs ~$100/month versus $300+ for therapeutic dosing. It’s also easier to sustain long-term due to fewer side effects and simpler routines.
+Micro-dosing cuts costs significantly. A 100 mcg Ipamorelin dose costs ~$100/month versus $300+ for therapeutic dosing. It's also easier to sustain long-term due to fewer side effects and simpler routines.
 
 Common mistakes include starting too high (begin with 25–50% of target doses), skipping baseline tests, or neglecting cycling. Patience is key—effects build gradually over weeks.
 
