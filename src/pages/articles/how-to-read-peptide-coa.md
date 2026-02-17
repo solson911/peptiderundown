@@ -10,13 +10,11 @@ author: "PeptideRundown Team"
 ---
 <style is:inline>
 :root{--bg:#F5F4F0;--ink:#161620;--body:#3A3A4E;--navy:#1E3A5F;--navy-lt:#EAF0F7;--green:#1A7A4C;--green-lt:#E8F6EF;--amber:#C4850C;--amber-lt:#FFF8EA;--red:#C0392B;--red-lt:#FDEEEC;--card:#FFFFFF;--bdr:#DDD9D2;--mut:#88889A;--sub:#F0EFEB;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--body);line-height:1.78;font-size:16.5px;}
-.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
-h2{font-family:'Fraunces',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;font-weight:500;}
-h3{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;font-weight:500;}
-p{margin-bottom:18px;}
-strong{color:var(--ink);}
+.coa-article{max-width:100%;margin:0;padding:0;}
+.coa-article h2{font-family:'Fraunces',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;font-weight:500;}
+.coa-article h3{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;font-weight:500;}
+.coa-article > p, .coa-article .c > p{margin-bottom:18px;}
+.coa-article strong{color:var(--ink);}
 
 /* Dialogue */
 .d{border-left:3px solid var(--navy);background:var(--navy-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
@@ -99,9 +97,9 @@ strong{color:var(--ink);}
 .coa-note{position:absolute;right:-8px;background:var(--amber);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;transform:translateX(100%);white-space:nowrap;}
 @media(max-width:600px){.coa-note{position:static;transform:none;display:inline-block;margin-left:8px;}}
 .ann{display:inline-block;background:var(--amber-lt);border:1px solid var(--amber);color:var(--amber);font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:6px;vertical-align:middle;cursor:help;}
-
 </style>
 
+<div class="coa-article">
 <div class="c">
 
 <p>A Certificate of Analysis is the most important document in the peptide supply chain. It is the difference between a verified research compound and an unlabeled white powder. And yet, most people who buy peptides either never look at the COA, glance at the purity number and move on, or have no idea what they are actually reading.</p>
@@ -516,3 +514,5 @@ strong{color:var(--ink);}
 <p style="margin-top:8px;">Last updated: February 2026</p>
 </div>
 
+</div>
+</div>
