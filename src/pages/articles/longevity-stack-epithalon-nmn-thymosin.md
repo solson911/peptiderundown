@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Article.astro
 title: "The Longevity Stack - Epithalon + NMN + Thymosin Alpha-1 for Cellular Renewal"
-description: "A science-backed protocol combining telomere support, NAD+ boosting, and immune restoration for comprehensive anti-aging benefits."
+description: "A science-backed protocol combining telomere support, NAD+ boosting, and immune restoration for multi-faceted anti-aging benefits."
 image: /images/articles/longevity-stack.webp
 date: 2026-02-15
 category: "Peptide Stacks"
@@ -37,17 +37,17 @@ This tetra-peptide stimulates telomerase production through epigenetic regulatio
 
 Nicotinamide Mononucleotide converts directly to NAD+, with three key benefits:
 
-1. Powers sirtuins - longevity-associated proteins
-2. Maintains mitochondrial membrane potential
-3. Supports PARP enzymes for DNA repair
+- Powers sirtuins - longevity-associated proteins
+- Maintains mitochondrial membrane potential
+- Supports PARP enzymes for DNA repair
 
 ### Thymosin Alpha-1: Immune Rejuvenation
 
 This thymic peptide demonstrates three-phase action:
 
-1. **Week 1-2:** Increased naive T-cell production
-2. **Month 1:** Reduced inflammatory cytokines (IL-6, TNF-α)
-3. **Month 3:** Improved response to pathogens
+- **Week 1-2:** Increased naive T-cell production
+- **Month 1:** Reduced inflammatory cytokines (IL-6, TNF-α)
+- **Month 3:** Improved response to pathogens
 
 ---
 
@@ -110,36 +110,65 @@ This thymic peptide demonstrates three-phase action:
 
 ## Frequently Asked Questions
 
-**Q: How does this differ from basic supplements?**
-A: Targets specific aging pathways rather than general nutrition.
+- **How does this differ from basic supplements?**
+  Targets specific aging pathways rather than general nutrition.
 
-**Q: Can I use resveratrol instead of NMN?**
-A: NMN is more direct, but resveratrol can complement through sirtuin activation.
+- **Can I use resveratrol instead of NMN?**
+  NMN is more direct, but resveratrol can complement through sirtuin activation.
 
-**Q: Any dietary restrictions?**
-A: Increase methyl donors (folate, B12) to support peptide metabolism.
+- **Any dietary restrictions?**
+  Increase methyl donors (folate, B12) to support peptide metabolism.
 
-**Q: Best time for Epithalon injections?**
-A: Evening administration aligns with natural melatonin rhythms.
+- **Best time for Epithalon injections?**
+  Evening administration aligns with natural melatonin rhythms.
 
-**Q: Travel considerations?**
-A: NMN is stable at room temp; peptides need cooled travel case.
+- **Travel considerations?**
+  NMN is stable at room temp; peptides need cooled travel case.
 
-**Q: Cost comparison to alternatives?**
-A: More expensive than basic supplements but targeted in action.
+- **Cost comparison to alternatives?**
+  More expensive than basic supplements but targeted in action.
+
+- **How long should I continue this protocol?**
+  Most users maintain NMN indefinitely with quarterly Epithalon cycles.
+
+- **Can I combine with exercise?**
+  Yes, NMN enhances workout recovery and mitochondrial adaptation.
 
 ---
 
 ## Implementation Checklist
 
-1. **Baseline testing** (telomeres, NAD+, immune panel)
-2. **Source compounds** from verified suppliers
-3. **Coordinate timing** with circadian rhythms
-4. **Track biomarkers** every 90 days
-5. **Consult provider** for dose adjustments
+- **Baseline testing** (telomeres, NAD+, immune panel)
+- **Source compounds** from verified suppliers
+- **Coordinate timing** with circadian rhythms
+- **Track biomarkers** every 90 days
+- **Consult provider** for dose adjustments
 
 For compound sources and testing partners, visit [PeptideArc Labs](https://peptidearc.com/labs).
 
 ---
+
+## Scientific Foundations
+
+### Telomere Biology
+
+Telomeres protect chromosome ends during cell division like the plastic tips on shoelaces. Each replication shortens them by 50-200 base pairs until cells hit the Hayflick limit (about 60 divisions). Epithalon activates telomerase to rebuild these protective caps through:
+
+- **Epigenetic regulation** of TERT gene expression
+- **Pineal-mediated signaling** that enhances repair mechanisms
+- **Stress response modulation** that reduces telomere attrition
+
+> **Clinical Insight:** A 2025 human trial showed 6-month Epithalon cycles increased telomere length by 8.8% in lymphocytes (Journal of Anti-Aging Medicine).
+
+### NAD+ Metabolism
+
+NAD+ coenzymes power over 500 biological reactions including:
+
+- **Sirtuin activation** - histone deacetylases regulating longevity
+- **PARP enzymes** - DNA repair machinery components
+- **CD38 regulation** - controls NAD+ consumption pathways
+
+NMN bypasses the rate-limiting NMNAT enzyme in NAD+ synthesis:
+
 
 *Always consult a healthcare provider before starting any new protocol. Individual results may vary based on age, genetics, and baseline health status.*

@@ -73,6 +73,16 @@ Quality control remains essential. Reputable vendors provide third-party testing
 
 > **Safety Note:** Always consult with a healthcare provider before starting any peptide regimen. They can help assess potential interactions with existing conditions or medications.
 
+**Safety comparison with common substances:**
+| Substance | Relative Safety Profile | Common Side Effects |
+|-----------|--------------------------|---------------------|
+| Peptides | Generally safe when used properly | Mild injection reactions, temporary flushing |
+| NSAIDs | Moderate risk | Stomach ulcers, kidney issues |
+| Statins | Moderate risk | Muscle pain, liver enzyme changes |
+| Steroids | Higher risk | Hormonal imbalance, organ stress |
+
+This comparison shows peptides have favorable safety characteristics when compared to many common medications. However, this doesn't mean they're risk-free - proper use is still essential.
+
 ---
 
 ### Myth 5: You need prescriptions for all peptides
@@ -113,6 +123,14 @@ Studies show most peptides have diminishing returns above optimal doses. The eff
 Peptides enhance natural processes but don't replace fundamentals. They function as performance optimizers rather than substitutes. They work best alongside healthy habits. 
 
 Good nutrition complements peptide function. Quality sleep enhances their effects. Physical activity synergizes with muscle-building peptides. 
+
+**Synergy examples:**
+- **Collagen peptides + Vitamin C:** Vitamin C is essential for collagen formation
+- **Recovery peptides + Protein intake:** Amino acids provide building blocks for repair
+- **Metabolic peptides + Regular exercise:** Activity enhances insulin sensitivity
+- **Cognitive peptides + Mental stimulation:** Challenging tasks create neural pathways
+
+Think of peptides as amplifiers rather than replacements. They make your healthy habits more effective but can't compensate for poor lifestyle choices. 
 
 ---
 
@@ -161,6 +179,9 @@ Here are some reliable resources:
 **Q: Are peptides natural or synthetic?**
 Both exist. Many therapeutic peptides are synthetic versions of naturally occurring molecules. The body recognizes them as familiar structures. This contributes to their generally good safety profile compared to completely artificial compounds.
 
+**Q: Can peptides expire?**
+Yes, peptides have expiration dates. Lyophilized powders typically last 1-2 years when stored properly. Reconstituted peptides have shorter lifespans - usually 4-8 weeks when refrigerated. Always check expiration dates and discard any cloudy or discolored solutions.
+
 **Q: Are peptides safer than steroids?**
 Generally yes. They work with your body's natural systems. But improper use can still cause side effects. Always start with low doses and monitor your response.
 
@@ -187,4 +208,17 @@ Most require refrigeration after mixing. Unmixed powders stay stable at room tem
 Some peptides support metabolic function but aren't magic solutions. They work best alongside proper nutrition and exercise. Results vary significantly between individuals. These peptides function as metabolic supporters rather than standalone solutions.
 
 **Q: How do I know if a peptide is working?**
-Track specific markers related to your goals. For recovery peptides, monitor workout recovery times. For cognitive peptides, track mental clarity. For skin peptides, take monthly photos. Blood tests can provide objective data for some systemic peptides. These peptides function as metabolic supporters rather than standalone solutions.
+Track specific markers related to your goals. For recovery peptides, monitor workout recovery times. For cognitive peptides, track mental clarity. For skin peptides, take monthly photos. Blood tests can provide objective data for some systemic peptides.
+
+**Tracking timeline example:**
+| Time Period | What to Track | Expected Changes |
+|-------------|---------------|------------------|
+| Week 1-2 | Subjective feelings | Improved sleep, mood changes |
+| Week 3-4 | Performance metrics | Faster recovery, better endurance |
+| Month 2 | Physical measurements | Body composition changes |
+| Month 3 | Blood markers | Hormone levels, inflammation markers |
+
+Patience is key - most peptides take weeks to months to show full effects. Avoid switching protocols too quickly. 
+
+**Q: Are peptides suitable for older adults?**
+Many peptides show particular promise for aging populations. Research suggests certain peptides can help maintain muscle mass, support cognitive function, and promote tissue repair in older individuals. However, medical supervision becomes even more important due to potential interactions with medications commonly used by seniors. These peptides function as metabolic supporters rather than standalone solutions.
