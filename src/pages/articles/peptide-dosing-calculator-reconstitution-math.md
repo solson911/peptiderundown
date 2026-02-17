@@ -13,7 +13,7 @@ Understanding peptide dosing is essential for safe and effective use. Many peopl
 
 Working with peptides requires careful measurement. Small errors can lead to ineffective results or safety concerns. We'll show you how to calculate doses accurately every time.
 
-***
+---
 
 ## Understanding Peptide Vials and Diluents
 Peptides come as freeze-dried powders in sealed vials. You must mix them with liquid before use. Bacteriostatic water is the preferred mixing solution.
@@ -24,7 +24,7 @@ Bacteriostatic water contains a small amount of alcohol. This prevents bacteria 
 
 Common peptide vial sizes are 2mg, 5mg, and 10mg. The amount of water you add determines concentration. More water means lower concentration and easier measurement.
 
-***
+---
 
 ## Reconstitution Math Fundamentals
 Reconstitution means mixing the powder with liquid. The concentration formula is simple. It's total peptide amount divided by water volume.
@@ -46,7 +46,7 @@ Most peptides are measured using insulin syringes. These come in different types
 
 Each unit on a U-100 syringe equals 0.01mL. That's 10 microliters. This precision is essential for small peptide doses.
 
-***
+---
 
 ## Dose Calculation Formula
 Calculating your dose requires two steps. First determine concentration. Then calculate the volume needed for your dose.
@@ -71,7 +71,7 @@ This table shows common reconstitution options. It helps you choose the right wa
 
 > **Measurement Tip:** Always use the same units throughout calculations. Convert mcg to mg before starting (1 mg = 1000 mcg).
 
-***
+---
 
 ## Step-by-Step Calculation Examples
 Let's walk through real examples. We'll calculate doses for popular peptides.
@@ -128,7 +128,7 @@ Standard dose: 150mcg from 5mg vial
 - Dose volume = 0.15mg / 2.5mg/mL = 0.06mL
 - U-100 syringe units = 6 units
 
-***
+---
 
 ## Detailed Dosing Reference
 This table summarizes dosing for common peptides. It assumes standard reconstitution.
@@ -145,7 +145,7 @@ This table summarizes dosing for common peptides. It assumes standard reconstitu
 | Epitalon | 5 mg | 10mg | 2 mL | 100 |
 | Thymosin Alpha-1 | 1.5 mg | 6mg | 2 mL | 50 |
 
-***
+---
 
 ## Advanced Measurement Techniques
 Reading insulin syringes accurately takes practice. Focus on the plunger tip. Align it precisely with the unit mark.
@@ -160,7 +160,7 @@ Precision matters most with micro-doses. For doses under 10 units, consider:
 
 When mixing water and peptide, aim for gentle swirling. Avoid shaking vigorously. Aggressive mixing can damage delicate peptides.
 
-***
+---
 
 ## Common Dosing Mistakes
 Many errors come from unit confusion. Micrograms and milligrams look similar but differ greatly. Always double-check your conversions.
@@ -173,7 +173,7 @@ Storage mistakes reduce peptide effectiveness. Most reconstituted peptides need 
 
 Cross-contamination risks are real. Never use the same needle multiple times. Avoid touching sterile surfaces.
 
-***
+---
 
 ## Frequently Asked Questions
 
@@ -210,7 +210,7 @@ Pharmaceutical-grade bacteriostatic water is best. Avoid compounding pharmacies 
 ### How do I know if my peptide is damaged?
 Reconstituted peptides should be clear. Cloudiness, particles, or color changes signal problems. Discard immediately if these appear.
 
-***
+---
 
 ## Best Practices for Safe Dosing
 Label all vials clearly. Include reconstitution date and concentration. This prevents confusion and dosing errors later.
@@ -223,7 +223,7 @@ Always use alcohol swabs. Clean vial tops before drawing. Clean skin before inje
 
 Consider working with a partner. They can double-check measurements. They can assist with hard-to-reach injection sites.
 
-***
+---
 
 ## When to Seek Professional Guidance
 Consult a healthcare provider if you experience unexpected effects. They can help adjust dosing or identify issues.
@@ -234,7 +234,7 @@ Regular blood work helps monitor health markers. Some peptides affect hormone le
 
 Children and pregnant women should avoid peptides. Research is limited in these populations. Safety hasn't been established.
 
-***
+---
 
 ## Resources and Tools
 Online peptide calculators simplify the math. They reduce calculation errors. Use reputable sources only.
