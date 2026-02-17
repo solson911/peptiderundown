@@ -2,7 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "NAD+ and Peptides: Boosting Cellular Energy for Longevity"
 description: "Discover how NAD+ peptides like MOTS-c, 5-Amino-1MQ, and SS-31 support cellular energy production and combat age-related decline. Learn about protocols and safety."
-image: /images/articles/nad-peptides-cellular-energy-longevity.webp
+image: /images/articles/nad-peptides-longevity.webp
 date: 2026-02-17
 category: "Peptide Guides"
 tags:

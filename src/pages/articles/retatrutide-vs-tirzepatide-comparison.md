@@ -2,7 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "Retatrutide vs Tirzepatide Comparison - A Detailed Look at Weight Loss Peptides"
 description: "Detailed comparison of retatrutide and tirzepatide peptide medications for weight loss. Explore mechanisms, clinical results, safety profiles and practical considerations."
-image: /images/articles/retatrutide-vs-tirzepatide-comparison.webp
+image: /images/articles/retatrutide-vs-tirzepatide.webp
 date: 2026-02-17
 category: "Comparisons"
 tags: ["retatrutide", "tirzepatide", "weight loss", "GLP-1", "obesity treatment", "peptide comparison"]

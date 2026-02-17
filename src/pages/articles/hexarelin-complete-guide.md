@@ -2,7 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "Hexarelin Complete Guide"
 description: "Understanding hexarelin - a potent growth hormone-releasing peptide with unique cardiac benefits"
-image: /images/articles/hexarelin-complete-guide.webp
+image: /images/articles/hexarelin.webp
 date: 2026-02-17
 category: "Peptide Guides"
 tags: ["hexarelin", "GHRP", "growth hormone", "cardiac", "ghrelin"]
