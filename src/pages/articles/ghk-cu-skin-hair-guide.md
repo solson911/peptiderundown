@@ -2,7 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "The Complete Guide to GHK-Cu for Skin and Hair"
 description: "Discover the science behind GHK-Cu peptides for skin rejuvenation and hair growth. Evidence-based guide with usage recommendations."
-image: /images/articles/ghk-cu-skin-hair.webp
+image: /images/articles/ghk-cu.webp
 date: 2026-02-16
 category: "Peptide Guides"
 tags: ["ghk-cu", "copper peptide", "skin", "hair", "anti-aging", "collagen"]
