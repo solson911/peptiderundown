@@ -8,15 +8,7 @@ category: "Quality Control"
 tags: ["COA", "quality control", "purity testing", "mass spectrometry", "HPLC"]
 author: "PeptideRundown Team"
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Read a Peptide Certificate of Analysis (COA)</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
+<style is:inline>
 :root{--bg:#F5F4F0;--ink:#161620;--body:#3A3A4E;--navy:#1E3A5F;--navy-lt:#EAF0F7;--green:#1A7A4C;--green-lt:#E8F6EF;--amber:#C4850C;--amber-lt:#FFF8EA;--red:#C0392B;--red-lt:#FDEEEC;--card:#FFFFFF;--bdr:#DDD9D2;--mut:#88889A;--sub:#F0EFEB;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--body);line-height:1.78;font-size:16.5px;}
@@ -107,9 +99,9 @@ strong{color:var(--ink);}
 .coa-note{position:absolute;right:-8px;background:var(--amber);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;transform:translateX(100%);white-space:nowrap;}
 @media(max-width:600px){.coa-note{position:static;transform:none;display:inline-block;margin-left:8px;}}
 .ann{display:inline-block;background:var(--amber-lt);border:1px solid var(--amber);color:var(--amber);font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:6px;vertical-align:middle;cursor:help;}
+
 </style>
-</head>
-<body>
+
 <div class="c">
 
 <p>A Certificate of Analysis is the most important document in the peptide supply chain. It is the difference between a verified research compound and an unlabeled white powder. And yet, most people who buy peptides either never look at the COA, glance at the purity number and move on, or have no idea what they are actually reading.</p>
@@ -524,6 +516,3 @@ strong{color:var(--ink);}
 <p style="margin-top:8px;">Last updated: February 2026</p>
 </div>
 
-</div>
-</body>
-</html>
