@@ -1,0 +1,433 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const frontmatter = {
+  title: "The Glow Stack: GHK-Cu, BPC-157, and Epithalon",
+  description: "Explore the science behind combining GHK-Cu, BPC-157, and Epithalon for skin rejuvenation — mechanisms, dosing protocols, evidence gaps, and regulatory status.",
+  image: "/images/articles/glow-stack-ghk-cu-bpc-157-epithalon.webp",
+  date: "2026-02-17",
+  category: "Peptide Stacks",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d .q{font-style:italic;}
+.d .ci{font-size:12px;color:var(--mut);margin-top:8px;font-style:normal;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;font-style:normal;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;font-style:normal;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--amber);}.sb .v.c4{color:var(--plum);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}.cd.cp::before{background:var(--plum);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+
+.bl{list-style:none;padding:0;margin:12px 0;}
+.bl li{padding:5px 0 5px 24px;position:relative;font-size:14.5px;}
+.bl li::before{content:'';position:absolute;left:4px;top:13px;width:8px;height:8px;border-radius:50%;background:var(--blue);opacity:.22;}
+
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:13.5px;margin-bottom:0;}
+.mc .sub{font-size:10.5px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;}
+
+.co{border-radius:10px;padding:24px;margin:28px 0;}
+.co.cg{background:linear-gradient(135deg,var(--teal-lt),#edf8f4);}
+.co.cw{background:linear-gradient(135deg,var(--amber-lt),#fef6e0);}
+.co.crd{background:linear-gradient(135deg,var(--red-lt),#fde8e5);}
+.co.cpl{background:linear-gradient(135deg,var(--plum-lt),#efe6f4);}
+.co.cbl{background:linear-gradient(135deg,var(--blue-lt),#e0e9f6);}
+.co h4{font-family:'Lora',serif;font-size:1rem;margin-bottom:8px;}
+.co.cg h4{color:var(--teal);}.co.cw h4{color:var(--amber);}.co.crd h4{color:var(--red);}.co.cpl h4{color:var(--plum);}.co.cbl h4{color:var(--blue);}
+.co p{font-size:14px;margin-bottom:0;}
+.co.cg p{color:#14503E;}.co.cw p{color:#5A4010;}.co.crd p{color:#5A2020;}.co.cpl p{color:#3E2050;}.co.cbl p{color:#1E3362;}
+
+.dv{width:50px;height:2px;background:var(--blue);margin:50px auto;border-radius:1px;opacity:.28;}
+
+.ft{margin-top:60px;padding-top:28px;border-top:1px solid var(--bdr);font-size:12px;color:var(--mut);line-height:1.7;}
+.ft strong{color:var(--body);}
+
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:28px 0;}
+.cat-card{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;border-top:3px solid var(--blue);}
+.cat-card h4{font-family:'Lora',serif;font-size:.95rem;color:var(--ink);margin-bottom:4px;}
+.cat-card p{font-size:12.5px;margin-bottom:4px;color:var(--body);}
+.cat-card .ex{font-size:11.5px;color:var(--mut);font-style:italic;}
+.cat-card:nth-child(2){border-top-color:var(--teal);}
+.cat-card:nth-child(3){border-top-color:var(--plum);}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<p>There is a reason why skin is called the body's largest organ rather than its simplest one. It is a living tissue that regenerates, repairs, signals, and ages according to a staggeringly complex set of molecular instructions. Collagen synthesis, angiogenesis, telomere maintenance, circadian signaling, extracellular matrix remodeling, and inflammatory regulation all contribute to whether your skin looks like it belongs to someone a decade younger or a decade older than the calendar says.</p>
+
+<p>The "glow stack" is a peptide combination that attempts to address skin health from three completely different biological angles at once. Rather than hammering a single pathway (the way a retinoid hammers collagen turnover, or the way vitamin C hammers antioxidant defense), this approach layers three peptides that each operate through distinct mechanisms: <strong>GHK-Cu</strong> for extracellular matrix remodeling and gene expression, <strong>BPC-157</strong> for vascular repair and tissue healing, and <strong>Epithalon</strong> for telomerase activation and circadian regulation.</p>
+
+<p>The logic is straightforward. Skin deterioration is not a single-pathway problem, so a single-pathway solution will always leave gaps. Whether the logic holds up under scrutiny is what this guide is here to explore.</p>
+
+<div class="sr">
+<div class="sb"><div class="v c1">4,000+</div><div class="l">Genes modulated by GHK-Cu</div></div>
+<div class="sb"><div class="v c2">15</div><div class="l">Amino acids in BPC-157</div></div>
+<div class="sb"><div class="v c3">4</div><div class="l">Amino acids in Epithalon</div></div>
+<div class="sb"><div class="v c4">60%</div><div class="l">GHK-Cu decline by age 60</div></div>
+</div>
+
+<h2>GHK-Cu: The Matrix Architect</h2>
+
+<p>GHK-Cu (glycyl-L-histidyl-L-lysine copper) is a naturally occurring tripeptide first isolated from human blood plasma in 1973 by Loren Pickart at the University of California, San Francisco. Pickart noticed something peculiar: when plasma from young donors was added to liver cells from older donors, the older cells began synthesizing proteins characteristic of younger tissue. The active factor turned out to be a tiny three-amino-acid peptide with an unusually high affinity for copper ions.</p>
+
+<p>The discovery story matters because it reveals the core premise behind GHK-Cu. This is not a synthetic drug designed in a laboratory. It is an endogenous signaling molecule that your body produces naturally and whose levels decline predictably with age. At age 20, plasma GHK-Cu concentrations average roughly 200 ng/mL. By age 60, that number drops to approximately 80 ng/mL. That 60% decline tracks closely with the visible deterioration of skin quality, wound healing capacity, and tissue regeneration that we associate with aging.</p>
+
+<h3>How GHK-Cu Actually Works</h3>
+
+<p>Most skincare ingredients operate through one or two mechanisms. GHK-Cu operates through an almost absurdly broad set of them, which is why it has attracted so much research attention over the past five decades.</p>
+
+<p>The most direct mechanism involves <strong>collagen and extracellular matrix regulation</strong>. GHK-Cu stimulates fibroblasts to produce Type I collagen (the structural backbone of skin) and Type III collagen (essential for tissue flexibility and repair). Placebo-controlled clinical studies in women around age 50 found that topical GHK-Cu creams produced measurable collagen increases in 70% of participants, compared to 50% for vitamin C cream and 40% for retinoic acid. It also stimulates synthesis of elastin, glycosaminoglycans (including hyaluronic acid precursors), and decorin, a small proteoglycan that regulates collagen fiber organization.</p>
+
+<p>But here is where things get genuinely interesting. Using the Broad Institute's Connectivity Map (a genomic tool that tracks how substances influence gene expression across the entire human genome), researchers discovered that GHK-Cu modulates the activity of more than 4,000 human genes. These are not random genes. They cluster around pathways involved in tissue remodeling, antioxidant defense, anti-inflammatory response, DNA repair, and, perhaps most provocatively, the reversal of gene expression patterns associated with aggressive metastatic cancers.</p>
+
+<div class="d d-t">
+<div class="s">Research</div>
+<p class="q">GHK stimulates both synthesis and breakdown of collagen and glycosaminoglycans and modulates the activity of both metalloproteinases and their inhibitors. It stimulates collagen, dermatan sulfate, chondroitin sulfate, and the small proteoglycan, decorin.</p>
+<div class="ci">Pickart et al., BioMed Research International, 2015</div>
+</div>
+
+<p>That dual action on metalloproteinases (the enzymes that break down damaged proteins) and their inhibitors is worth pausing on. GHK-Cu does not simply build new collagen. It also orchestrates the removal of old, damaged collagen. This is fundamentally different from most "collagen-boosting" ingredients, which add new material without clearing the wreckage. The result is genuine remodeling rather than accumulation.</p>
+
+<p>The copper component is not decorative. Copper serves as an essential cofactor for lysyl oxidase and lysyl hydroxylase, two enzymes critical for proper collagen cross-linking and structural stability. Without adequate copper, even abundant collagen production yields tissue that lacks mechanical strength. GHK-Cu delivers copper directly to the sites where it is needed most.</p>
+
+<h3>Beyond Skin: Systemic Effects</h3>
+
+<p>GHK-Cu's activity extends well beyond dermatology. Animal studies demonstrate that it accelerates wound healing when injected in one area of the body while simultaneously improving healing at distant sites, suggesting a systemic signaling effect rather than purely local action. It has shown anti-fibrotic properties in liver, lung, and skin models by downregulating TGF-beta-1 and other pro-fibrotic genes. And preliminary observations in 28-month-old mice (roughly equivalent to humans in their 70s) showed that GHK treatment at 10 mg/kg body weight five times per week for three weeks significantly improved learning and spatial navigation compared to saline-treated controls.</p>
+
+<div class="co cw">
+<h4>The "Copper Uglies" Caveat</h4>
+<p>A small number of topical GHK-Cu users report a phenomenon colloquially known as the "copper uglies," where skin temporarily appears to age faster rather than improve. The likely mechanism: GHK-Cu stimulates matrix metalloproteinases (specifically MMP-1 and MMP-2) as part of its remodeling activity. In some individuals, the breakdown phase may outpace the rebuilding phase initially, particularly at excessive concentrations. This is why starting at lower concentrations and monitoring skin response matters. The effect is dose-dependent, and a 2024 study confirmed that elevated MMP-1 can contribute to collagen fragmentation when concentrations exceed the range needed for healthy turnover.</p>
+</div>
+
+<div class="dv"></div>
+
+<h2>BPC-157: The Emergency Responder</h2>
+
+<p>If GHK-Cu is the architect who redesigns the building, BPC-157 is the emergency crew that stabilizes it after damage. Body Protection Compound-157 is a 15-amino-acid synthetic peptide derived from a protective protein found in human gastric juice. Its original discovery context was the gut, where it was identified as a fragment of a larger protein that helps maintain the integrity of the stomach lining despite constant exposure to hydrochloric acid and digestive enzymes.</p>
+
+<p>The sequence (Gly-Glu-Pro-Pro-Pro-Gly-Lys-Pro-Ala-Asp-Asp-Ala-Gly-Leu-Val) has one property that immediately separates it from most peptides: <strong>extraordinary stability</strong>. BPC-157 resists hydrolysis and enzymatic degradation even in full-strength gastric juice. This is unusual. Most peptides are torn apart within minutes by digestive enzymes, which is why the vast majority must be injected rather than swallowed. BPC-157's acid resistance is precisely what made it interesting to researchers studying gastrointestinal protection, and it is why oral BPC-157 formulations are considered viable in ways that oral versions of most other peptides are not.</p>
+
+<h3>Mechanism of Action</h3>
+
+<p>The healing cascade that BPC-157 activates touches several interconnected systems simultaneously. The most robust evidence centers on <strong>angiogenesis</strong>, the formation of new blood vessels. BPC-157 upregulates vascular endothelial growth factor (VEGF-A) and promotes vascular tube formation, meaning it helps establish the blood supply that damaged tissue needs to receive oxygen, nutrients, and immune cells. In alkali-burn wound models in rats, BPC-157 treated wounds showed 54% closure by day 12 compared to just 28% in untreated controls, a performance comparable to basic fibroblast growth factor (bFGF), one of the standard growth factors used in clinical wound care.</p>
+
+<p>The second major pathway involves <strong>ERK1/2 signaling</strong> (extracellular signal-regulated kinases), a cascade that regulates cell growth, migration, and survival. BPC-157 modulates the phosphorylation of ERK1/2 and its downstream targets c-Fos, c-Jun, and Egr-1 (early growth response gene-1). Increased Egr-1 expression is particularly relevant for skin: it acts as a master switch for early collagen organization during wound repair. Studies comparing BPC-157 to platelet-derived growth factor (PDGF-BB) found that BPC-157 promoted earlier maturation of granulation tissue and organized collagen significantly more effectively, even in diabetic wound models where healing is notoriously impaired.</p>
+
+<p>The third pathway involves <strong>nitric oxide (NO) modulation</strong>. BPC-157's interaction with the NO system is nuanced. It can generate NO at levels comparable to L-arginine (the natural NO precursor), but its effect cannot be blocked by L-NAME (a standard NO inhibitor). This suggests BPC-157 accesses a distinct or parallel NO pathway, which may explain its ability to modulate blood vessel tone, protect against ischemic injury, and maintain tissue perfusion under stress.</p>
+
+<div class="d">
+<div class="s">Research</div>
+<p class="q">BPC-157 treatment may accelerate wound healing in a model of alkali burn-induced skin injury. The therapeutic mechanism may be associated with accelerated granulation tissue formation, reepithelialization, dermal remodeling, and collagen deposition.</p>
+<div class="ci">Chu et al., Drug Design, Development and Therapy, 2015</div>
+</div>
+
+<h3>Tissue Breadth</h3>
+
+<p>What makes BPC-157 unusual among healing peptides is the sheer range of tissues it affects. Published studies (primarily in animal models) document healing acceleration in skin, muscle, bone, tendon, ligament, cornea, colon, stomach lining, and spinal cord. A particularly striking finding is the healing of complex fistulas (abnormal connections between tissues) including colocutaneous, gastrocutaneous, esophagocutaneous, and vesicovaginal fistulas in rat models. These are among the most challenging surgical problems in human medicine precisely because they require simultaneous healing of two different tissue types.</p>
+
+<p>For the purposes of a skin-focused stack, BPC-157's relevance is twofold. First, its angiogenic action creates the vascular infrastructure that skin needs for nutrient delivery and waste removal, which are the fundamental prerequisites for healthy tissue maintenance. Second, its collagen-organizing activity (distinct from GHK-Cu's collagen-stimulating activity) contributes to the structural quality of repaired tissue rather than just its quantity.</p>
+
+<div class="dv"></div>
+
+<h2>Epithalon: The Cellular Clock Resetter</h2>
+
+<p>Epithalon (also spelled Epitalon) is a synthetic tetrapeptide with the sequence Ala-Glu-Asp-Gly (AEDG). It was developed by Vladimir Khavinson at the St. Petersburg Institute of Bioregulation and Gerontology, derived from Epithalamin, a polypeptide extract of the pineal gland. Where GHK-Cu works on the extracellular matrix and BPC-157 works on vascular repair and tissue healing, Epithalon operates at the level of cellular aging itself.</p>
+
+<p>The central mechanism is <strong>telomerase activation</strong>. Telomeres are the protective caps at the ends of chromosomes that shorten with each cell division. When they reach a critical minimum length, the cell can no longer divide and enters senescence (permanent growth arrest) or dies. This process, called the Hayflick limit, is one of the fundamental drivers of aging at the cellular level.</p>
+
+<p>Telomerase is the enzyme that can rebuild telomeres, but it is silenced in most adult somatic cells. Khavinson's landmark 2003 study, published in the Bulletin of Experimental Biology and Medicine, demonstrated that adding Epithalon to cultures of telomerase-negative human fetal fibroblasts reactivated expression of the telomerase catalytic subunit (hTERT), restored enzymatic telomerase activity, and produced measurable telomere elongation. The practical result: fibroblasts treated with Epithalon exceeded the normal Hayflick limit, extending their proliferative capacity from termination at the 34th passage to continued division beyond that point.</p>
+
+<div class="d d-p">
+<div class="s">Research</div>
+<p class="q">Addition of Epithalon peptide in telomerase-negative human fetal fibroblast culture induced expression of the catalytical subunit, enzymatic activity of telomerase, and telomere elongation, which can be due to reactivation of telomerase gene in somatic cells and indicates the possibility of prolonging life span of a cell population and of the whole organism.</p>
+<div class="ci">Khavinson, Bondarev, Butyugov. Bulletin of Experimental Biology and Medicine, 2003</div>
+</div>
+
+<p>A 2025 study by Al-Dulaimi et al. provided important quantitative confirmation: epitalon at 1 mcg/mL upregulated hTERT expression 12-fold in 21NT cells, while BT474 cells showed a 5-fold upregulation at 0.5 mcg/mL. In normal fibroblasts and epithelial cells, telomere extension occurred through telomerase upregulation specifically (not through the alternative ALT pathway that was observed only in cancer cells), which addresses a legitimate safety concern about telomere-extending therapies potentially promoting malignancy.</p>
+
+<h3>The Pineal Gland Connection</h3>
+
+<p>Epithalon's second major mechanism involves the <strong>pineal gland and melatonin production</strong>. The pineal gland is the body's primary source of melatonin, the hormone that regulates circadian rhythms and sleep-wake cycles. With aging, the pineal gland undergoes structural changes and melatonin output declines substantially. This is not merely a sleep issue. Melatonin is a potent antioxidant, an immune modulator, and a protector against UV-induced DNA damage in skin. Melatonin receptors are expressed in keratinocytes, melanocytes, and fibroblasts, meaning skin is directly responsive to circadian melatonin signaling.</p>
+
+<p>In rat pinealocytes (the cells that produce melatonin), Epithalon upregulates the enzymes AANAT and pCREB that drive melatonin biosynthesis. In aged Rhesus monkeys, Epithalon treatment restored melatonin production to more youthful patterns while also normalizing cortisol rhythms. A randomized clinical study in 75 women found that sublingual Epithalon at 0.5 mg/day for 20 days produced measurable changes in circadian markers compared to placebo and control cohorts.</p>
+
+<p>The skin relevance is direct. Disrupted circadian rhythms accelerate skin aging through increased oxidative stress, impaired DNA repair (which primarily occurs during sleep), and dysregulated inflammatory signaling. By supporting melatonin production and circadian integrity, Epithalon may protect skin through pathways that are completely independent of its telomerase activity.</p>
+
+<h3>Animal Lifespan Data</h3>
+
+<p>Epithalon reduced the incidence of spontaneous tumors and metastases in aging mice, increased activities of antioxidant enzymes (superoxide dismutase, glutathione peroxidase, glutathione-S-transferase) in aging rats, and extended lifespan in Drosophila models. In human clinical studies, both Epithalon and its parent compound Epithalamin significantly increased telomere lengths in blood cells of patients aged 60 to 80. However, the vast majority of this research originates from Khavinson's group, and independent replication from other laboratories has been limited until the 2025 Al-Dulaimi study provided external confirmation of the telomerase activation mechanism.</p>
+
+<div class="dv"></div>
+
+<h2>The Stack Rationale: Three Layers of Intervention</h2>
+
+<p>The theoretical case for combining GHK-Cu, BPC-157, and Epithalon rests on the observation that skin aging is driven by at least three distinct categories of deterioration, and each peptide addresses a different one.</p>
+
+<div class="svg-box">
+<div class="st">Three Layers of Skin Aging and the Glow Stack Response</div>
+<div class="ss">Each peptide targets a distinct biological layer of the aging process</div>
+<svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+<!-- Layer 1: Matrix -->
+<rect x="20" y="20" width="200" height="300" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+<text x="120" y="52" text-anchor="middle" font-family="'Lora',serif" font-size="15" font-weight="600" fill="#2956A6">GHK-Cu</text>
+<text x="120" y="72" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="#86869A" font-weight="600" letter-spacing="1">MATRIX LAYER</text>
+<line x1="60" y1="84" x2="180" y2="84" stroke="#2956A6" stroke-width="0.5" opacity="0.3"/>
+<text x="120" y="108" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Collagen synthesis</text>
+<text x="120" y="128" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Elastin production</text>
+<text x="120" y="148" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">MMP regulation</text>
+<text x="120" y="168" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Decorin stimulation</text>
+<text x="120" y="188" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Gene modulation</text>
+<text x="120" y="208" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Antioxidant defense</text>
+<text x="120" y="228" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Anti-inflammatory</text>
+<text x="120" y="258" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="#86869A" font-style="italic">Rebuilds the structure</text>
+<circle cx="120" cy="290" r="16" fill="#2956A6" opacity="0.12"/>
+<text x="120" y="295" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="16" fill="#2956A6">🔧</text>
+
+<!-- Layer 2: Vascular -->
+<rect x="250" y="20" width="200" height="300" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+<text x="350" y="52" text-anchor="middle" font-family="'Lora',serif" font-size="15" font-weight="600" fill="#187A62">BPC-157</text>
+<text x="350" y="72" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="#86869A" font-weight="600" letter-spacing="1">VASCULAR LAYER</text>
+<line x1="290" y1="84" x2="410" y2="84" stroke="#187A62" stroke-width="0.5" opacity="0.3"/>
+<text x="350" y="108" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Angiogenesis (VEGF)</text>
+<text x="350" y="128" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Blood vessel repair</text>
+<text x="350" y="148" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">ERK1/2 signaling</text>
+<text x="350" y="168" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Collagen organization</text>
+<text x="350" y="188" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">NO modulation</text>
+<text x="350" y="208" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Granulation tissue</text>
+<text x="350" y="228" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Re-epithelialization</text>
+<text x="350" y="258" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="#86869A" font-style="italic">Restores the supply lines</text>
+<circle cx="350" cy="290" r="16" fill="#187A62" opacity="0.12"/>
+<text x="350" y="295" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="16" fill="#187A62">🩸</text>
+
+<!-- Layer 3: Cellular -->
+<rect x="480" y="20" width="200" height="300" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+<text x="580" y="52" text-anchor="middle" font-family="'Lora',serif" font-size="15" font-weight="600" fill="#6E3B8A">Epithalon</text>
+<text x="580" y="72" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="#86869A" font-weight="600" letter-spacing="1">CELLULAR LAYER</text>
+<line x1="520" y1="84" x2="640" y2="84" stroke="#6E3B8A" stroke-width="0.5" opacity="0.3"/>
+<text x="580" y="108" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Telomerase activation</text>
+<text x="580" y="128" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Telomere elongation</text>
+<text x="580" y="148" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">hTERT upregulation</text>
+<text x="580" y="168" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Melatonin synthesis</text>
+<text x="580" y="188" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Circadian regulation</text>
+<text x="580" y="208" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Antioxidant enzymes</text>
+<text x="580" y="228" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="#3C3C52">Epigenetic modulation</text>
+<text x="580" y="258" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="#86869A" font-style="italic">Resets the cellular clock</text>
+<circle cx="580" cy="290" r="16" fill="#6E3B8A" opacity="0.12"/>
+<text x="580" y="295" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="16" fill="#6E3B8A">🧬</text>
+</svg>
+</div>
+
+<p><strong>Layer 1: The extracellular matrix.</strong> As we age, collagen production drops roughly 1% per year after age 30, elastin degrades and is essentially never replaced, and the glycosaminoglycans that maintain skin hydration become depleted. GHK-Cu directly addresses this layer by stimulating fibroblasts, regulating metalloproteinase activity, and orchestrating the gene expression patterns associated with tissue remodeling.</p>
+
+<p><strong>Layer 2: The vascular supply.</strong> Aging skin suffers from reduced microcirculation. Fewer capillaries, thinner vessel walls, and impaired angiogenesis mean that skin cells receive less oxygen and fewer nutrients while accumulating more metabolic waste. The dull, sallow appearance of aging skin is partly a blood supply problem. BPC-157 addresses this through VEGF upregulation, new vessel formation, and improved blood vessel integrity.</p>
+
+<p><strong>Layer 3: The cellular replication machinery.</strong> Even with a perfect extracellular matrix and robust blood supply, cells with critically shortened telomeres cannot divide to replace themselves. Fibroblast senescence (the inability to produce new collagen-generating cells) is a fundamental limit on skin regeneration. Epithalon targets this directly through telomerase reactivation, while its circadian-regulatory effects via melatonin provide an additional layer of DNA repair support and oxidative stress protection.</p>
+
+<h3>Where the Mechanisms Overlap (and Where They Don't)</h3>
+
+<table class="tbl">
+<thead><tr><th>Property</th><th>GHK-Cu</th><th>BPC-157</th><th>Epithalon</th></tr></thead>
+<tbody>
+<tr><td><strong>Collagen synthesis</strong></td><td>Direct stimulation of Type I and III collagen</td><td>Organizes collagen fibers; accelerates maturation</td><td>Indirect (via fibroblast replicative capacity)</td></tr>
+<tr><td><strong>Angiogenesis</strong></td><td>Moderate; stimulates VEGF and new vessel growth</td><td>Strong; primary mechanism via VEGF-A upregulation</td><td>Minimal direct effect</td></tr>
+<tr><td><strong>Anti-inflammatory</strong></td><td>Reduces TNF-alpha, IL-6; suppresses NF-kB</td><td>Modulates cytokine balance; reduces systemic inflammation</td><td>Indirect via melatonin's anti-inflammatory action</td></tr>
+<tr><td><strong>Antioxidant</strong></td><td>Increases SOD activity; chelates free copper</td><td>Modest direct antioxidant effects</td><td>Boosts SOD, glutathione peroxidase, glutathione-S-transferase</td></tr>
+<tr><td><strong>Gene expression</strong></td><td>4,000+ genes; broad epigenetic influence</td><td>Targeted (Egr-1, VEGF, ERK pathway)</td><td>hTERT activation; chromatin remodeling; epigenetic regulation</td></tr>
+<tr><td><strong>Telomere protection</strong></td><td>Not a primary mechanism</td><td>Not demonstrated</td><td>Primary mechanism; hTERT upregulation and telomere elongation</td></tr>
+<tr><td><strong>Circadian effects</strong></td><td>None established</td><td>None established</td><td>Melatonin synthesis; pineal gland regulation</td></tr>
+<tr><td><strong>Wound healing</strong></td><td>Strong; collagen 9-fold increase in rat wounds</td><td>Strong; comparable to bFGF in burn models</td><td>Indirect (via cellular health)</td></tr>
+<tr><td><strong>Hair growth</strong></td><td>Follicle stimulation; prolongs anagen phase</td><td>Some evidence for follicle support</td><td>Not a primary target</td></tr>
+<tr><td><strong>Oral bioavailability</strong></td><td>Low (topical or injectable)</td><td>Unusually high (acid-stable)</td><td>Low (injectable preferred; sublingual studied)</td></tr>
+</tbody>
+</table>
+
+<p>The overlap is minimal where it matters most. GHK-Cu and BPC-157 both influence collagen, but through different mechanisms (synthesis versus organization). GHK-Cu and Epithalon both have antioxidant effects, but through completely different enzyme systems. There is almost no mechanistic redundancy between BPC-157 and Epithalon. This is what makes the theoretical case for combining them more compelling than most peptide stacks, which often layer compounds with overlapping pathways and unclear additive benefit.</p>
+
+<h2>Practical Protocols</h2>
+
+<p>A note before discussing dosing: none of these peptides are FDA-approved for skin rejuvenation or anti-aging. All three are classified as research-use-only compounds in the United States. BPC-157, Epithalon, and injectable GHK-Cu were all added to the FDA's Category 2 Bulk Drug Substance list in 2024, which prohibits compounding pharmacies from producing them for human use. The protocols described below reflect dosing ranges reported in the research literature and clinical practice reports, not FDA-sanctioned treatment guidelines.</p>
+
+<div class="g3">
+<div class="mc">
+<div class="sub">GHK-Cu</div>
+<h4>Topical</h4>
+<p>Cosmetic formulations typically contain 1 to 3% GHK-Cu. Clinical studies showing collagen increases and wrinkle reduction used daily application for 8 to 12 weeks. Permeability data confirm the tripeptide and its copper complex can penetrate the stratum corneum, though advanced delivery systems (liposomes, microneedles) enhance absorption.</p>
+</div>
+<div class="mc">
+<div class="sub">GHK-Cu</div>
+<h4>Injectable</h4>
+<p>Clinical reports describe subcutaneous injection at approximately 1 to 2 mg, two to three times per week. The Pickart research group calculated a scaled human dose of approximately 140 mcg per injection based on rat wound-healing studies. Injectable delivery provides higher systemic bioavailability but carries greater regulatory risk.</p>
+</div>
+<div class="mc">
+<div class="sub">BPC-157</div>
+<h4>Injectable / Oral</h4>
+<p>Animal studies typically use 10 mcg/kg body weight. Scaled for a 70 kg human, this approximates 200 to 500 mcg per dose. Subcutaneous injection is most common. Oral BPC-157 (capsules) is viable due to the peptide's unusual acid stability, and some researchers consider oral delivery particularly relevant for systemic distribution.</p>
+</div>
+</div>
+
+<div class="g2">
+<div class="mc">
+<div class="sub">Epithalon</div>
+<h4>Injectable</h4>
+<p>Standard research protocols involve 5 to 10 mg daily via subcutaneous injection for cycles of 10 to 20 days, followed by extended rest periods (4 to 6 months). The human clinical study of sublingual Epithalon used 0.5 mg/day for 20 days. The cyclical dosing pattern reflects the compound's mechanism: it is designed to reactivate a biological process (telomerase expression), not to provide continuous supplementation.</p>
+</div>
+<div class="mc">
+<div class="sub">Stack Timing</div>
+<h4>Sequencing Considerations</h4>
+<p>There is no published data on optimal timing of these three compounds together. The mechanistic logic would suggest that BPC-157 and GHK-Cu (which address ongoing tissue maintenance) could run continuously, while Epithalon (which targets periodic cellular rejuvenation) follows its own cyclic schedule. Morning administration of BPC-157 and GHK-Cu with evening Epithalon (to align with circadian melatonin synthesis) has a theoretical basis but no clinical validation.</p>
+</div>
+</div>
+
+<h2>The Evidence Gap</h2>
+
+<p>Intellectual honesty requires acknowledging where the evidence is strong, where it is suggestive, and where it barely exists.</p>
+
+<div class="co cg">
+<h4>Strong Evidence</h4>
+<p>GHK-Cu topical efficacy for skin rejuvenation. Multiple placebo-controlled human trials demonstrate improvements in collagen production, wrinkle reduction, skin density, and firmness in women with photoaging. The genomic data (4,000+ genes modulated) is independently verifiable through the Broad Institute's Connectivity Map. Five decades of published research including wound healing, anti-inflammatory, and antioxidant studies provide a robust evidence base.</p>
+</div>
+
+<div class="co cw">
+<h4>Moderate Evidence</h4>
+<p>BPC-157 wound healing and tissue repair in animal models. Over 100 published studies demonstrate healing acceleration across multiple tissue types (skin, tendon, ligament, muscle, bone, gut, cornea). The consistency across diverse models is impressive. However, human clinical data remains extremely limited, with only one small retrospective case series and no published randomized controlled trials as of early 2026. The June 2024 systematic review in orthopaedic sports medicine found 35 preclinical studies but essentially no rigorous human evidence.</p>
+</div>
+
+<div class="co crd">
+<h4>Emerging Evidence</h4>
+<p>Epithalon telomerase activation is supported by in vitro cell culture studies, animal models, and a small number of human clinical observations, mostly from Khavinson's group. The 2025 Al-Dulaimi et al. study provides important independent confirmation. However, the translation from telomere elongation in cell culture to visible skin rejuvenation in humans involves a long chain of assumptions. Telomere length in blood cells has increased in human clinical studies, but whether this translates to skin fibroblast telomere restoration and improved skin appearance is unproven.</p>
+</div>
+
+<div class="co cpl">
+<h4>No Direct Evidence</h4>
+<p>The specific three-peptide combination of GHK-Cu + BPC-157 + Epithalon has never been studied together in any published trial, clinical or preclinical. The synergy argument is built on mechanistic reasoning, not empirical observation. It is plausible, but plausibility is not proof. The commercial "Glow Stack" (which typically combines BPC-157 + TB-500 + GHK-Cu without Epithalon) has also not been validated in controlled studies, though individual component data supports the biological rationale.</p>
+</div>
+
+<h2>Regulatory Reality</h2>
+
+<p>The regulatory landscape for all three peptides shifted dramatically in 2024. Here is where things currently stand.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>FDA Status (2024-2025)</th><th>WADA Status</th><th>Access</th></tr></thead>
+<tbody>
+<tr><td><strong>GHK-Cu</strong></td><td>Category 2 (injectable); topical cosmetic use remains legal</td><td>Not currently prohibited</td><td>Topical: widely available in cosmetic products. Injectable: prohibited from compounding pharmacies</td></tr>
+<tr><td><strong>BPC-157</strong></td><td>Category 2 (injectable); oral forms occupy a gray zone</td><td>Prohibited under S0 (non-approved substances), effective 2022</td><td>Injectable: prohibited from compounding. Oral: available from research suppliers; legal status contested</td></tr>
+<tr><td><strong>Epithalon</strong></td><td>Category 2; added to restricted list September 2024</td><td>Not currently prohibited</td><td>Available from research peptide suppliers; not available through compounding pharmacies</td></tr>
+</tbody>
+</table>
+
+<p>The FDA's rationale for all three Category 2 designations centers on three concerns: risk of immunogenicity, peptide-related impurities in compounded formulations, and limited safety data in humans. The response from the peptide medicine community has been vigorous. Multiple legal challenges are underway, and organizations like the Alliance for Pharmacy Compounding have argued that the FDA's actions exceed its statutory authority. The Department of Justice prosecution of Tailor Made Compounding LLC (which resulted in a $1.79 million forfeiture for distributing BPC-157 and other unapproved peptides) established that enforcement is real, not theoretical.</p>
+
+<p>The practical takeaway: topical GHK-Cu in cosmetic products remains legal and accessible. Injectable forms of all three peptides are not legally available through legitimate U.S. pharmacy channels. Research-grade peptides from online suppliers exist in a gray zone where products are labeled "for research use only" and are sold with disclaimers against human consumption.</p>
+
+<div class="d d-r">
+<div class="s">Regulatory Warning</div>
+<p>The FDA classifies BPC-157, injectable GHK-Cu, and Epithalon as Category 2 bulk drug substances with safety concerns. Compounding pharmacies are prohibited from producing these peptides for human use. The regulatory environment continues to evolve; legal challenges to FDA authority are ongoing as of early 2026. This is not legal advice. Consult qualified healthcare and legal professionals before making decisions about peptide use.</p>
+</div>
+
+<h2>Safety Considerations</h2>
+
+<p>The safety profiles of these three peptides differ considerably in both depth of evidence and nature of concerns.</p>
+
+<div class="cd cb">
+<div class="tg">GHK-Cu Safety</div>
+<h3>Generally Favorable</h3>
+<p>GHK-Cu has the longest safety track record of the three, with topical products in commercial use since the 1990s. One researcher described it as having a "long history of safe use in wound healing and skin care" that is "naturally occurring, nontoxic, and active at very low nanomolar concentrations." The primary caution involves the "copper uglies" phenomenon (excessive MMP activation at high doses) and the theoretical concern that copper-mediated MMP elevation could, in excess, promote collagen breakdown rather than remodeling. Patch testing before committing to a full protocol is prudent.</p>
+</div>
+
+<div class="cd ct">
+<div class="tg">BPC-157 Safety</div>
+<h3>Limited Human Data</h3>
+<p>BPC-157 has been used in clinical trials for inflammatory bowel disease and multiple sclerosis with no reported toxicity and no LD1 (lethal dose for 1% of test subjects) achieved in animal studies. The absence of observed toxicity across extensive animal research is notable. However, the FDA has flagged legitimate concerns: immunogenicity risk (any injected peptide can theoretically trigger an immune response), the possibility that BPC-157's pro-angiogenic and growth-factor-stimulating properties could theoretically promote tumor growth (unproven but mechanistically plausible), and quality control variability in compounded and research-grade products.</p>
+</div>
+
+<div class="cd cp">
+<div class="tg">Epithalon Safety</div>
+<h3>Theoretical Concerns About Telomerase and Cancer</h3>
+<p>Any compound that activates telomerase raises a legitimate question about cancer risk. Cancer cells characteristically reactivate telomerase to achieve immortality. The 2025 Al-Dulaimi study provided a partial answer by showing that in normal human cells, Epithalon extended telomeres through telomerase upregulation, while ALT (alternative lengthening of telomeres) activation was observed only in cancer cells. Additionally, multiple animal studies showed that Epithalon reduced spontaneous tumor incidence rather than increasing it. But these observations do not definitively resolve the concern for long-term human use, and no large-scale safety studies exist.</p>
+</div>
+
+<h2>Who Is This Stack Actually For?</h2>
+
+<p>Based on the available evidence, the full injectable glow stack (GHK-Cu + BPC-157 + Epithalon) is most defensible for individuals who meet several criteria simultaneously: they are experiencing visible signs of skin aging beyond what topical treatments address; they understand the regulatory status and accept the associated risks; they have access to a qualified healthcare provider who can supervise the protocol; they can source pharmaceutical-grade peptides with verified certificates of analysis; and they are not competitive athletes subject to WADA testing (BPC-157 is prohibited under S0).</p>
+
+<p>For everyone else, a more conservative approach has a much better risk-benefit ratio. Topical GHK-Cu alone is supported by human clinical data, is commercially available, and is legally unambiguous. It can be combined with established, FDA-recognized skincare actives (retinoids, vitamin C, niacinamide, sunscreen) for a protocol that addresses many of the same pathways without the regulatory, safety, or quality-control concerns that come with research peptide injections.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>The glow stack concept of combining GHK-Cu, BPC-157, and Epithalon has a genuine biological logic that sets it apart from most peptide stacks. Each component addresses a distinct layer of skin aging: extracellular matrix remodeling, vascular repair, and cellular replicative capacity. The mechanistic overlap between the three is minimal, which means there is a plausible case for additive or synergistic benefit.</p>
+
+<p>But logic is not evidence, and the stack has never been studied as a combination. GHK-Cu has the strongest human data. BPC-157 has extensive animal data but nearly no human trials. Epithalon has intriguing cell culture and limited clinical data, mostly from a single research group. All three injectable forms are currently prohibited from compounding pharmacy production by the FDA.</p>
+
+<p>The person most likely to benefit from this information is not someone looking for a miracle combination. It is someone willing to read the primary literature, evaluate the evidence hierarchy honestly, source verifiable products, and work with a knowledgeable clinician. Skin health is a decades-long project. The peptides worth paying attention to are the ones with the science to back them up, not just the marketing.</p>
+
+<div class="d d-a">
+<div class="s">Key Takeaway</div>
+<p>The glow stack is a three-peptide approach to skin rejuvenation with genuine mechanistic rationale but unproven clinical efficacy as a combination. GHK-Cu has the strongest human evidence. BPC-157 has the strongest preclinical tissue-healing data. Epithalon has the most unique mechanism (telomerase activation) but the most limited independent validation. Topical GHK-Cu is the only component that is both well-supported and legally straightforward for most people.</p>
+</div>
+
+<div class="ft">
+<p><strong>Sources and further reading:</strong> Pickart et al., "GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration," BioMed Research International, 2015. Pickart et al., "Regenerative and Protective Actions of the GHK-Cu Peptide in the Light of the New Gene Data," International Journal of Molecular Sciences, 2018. Pickart, "The potential of GHK as an anti-aging peptide," PMC, 2020. Pickart et al., "Skin Regenerative and Anti-Cancer Actions of Copper Peptides," Cosmetics, 2018. Seiwerth et al., "BPC 157's effect on healing," Journal of Physiology Paris, 1997. Chu et al., "Body protective compound-157 enhances alkali-burn wound healing in vivo and promotes proliferation, migration, and angiogenesis in vitro," Drug Design, Development and Therapy, 2015. Sikiric et al., "Stable Gastric Pentadecapeptide BPC 157 and Wound Healing," Frontiers in Pharmacology, 2021. Chang et al., "The promoting effect of pentadecapeptide BPC 157 on tendon healing," Journal of Applied Physiology, 2011. Khavinson et al., "Epithalon Peptide Induces Telomerase Activity and Telomere Elongation in Human Somatic Cells," Bulletin of Experimental Biology and Medicine, 2003. Al-Dulaimi et al., "Epitalon increases telomere length in human cell lines through telomerase upregulation or ALT activity," Biogerontology, 2025. Fischer et al., "Melatonin and human skin aging," PMC, 2008. Bocheva et al., "Protective Role of Melatonin and Its Metabolites in Skin Aging," International Journal of Molecular Sciences, 2022.</p>
+<p style="margin-top:12px;"><strong>Disclaimer:</strong> This article is for educational and informational purposes only. It does not constitute medical advice. GHK-Cu (injectable), BPC-157, and Epithalon are not FDA-approved for human use. All decisions about peptide use should be made in consultation with qualified healthcare professionals. BPC-157 is prohibited by WADA for competitive athletes.</p>
+</div>
+
+</div>
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <div class="mb-4">
+        <span class="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-2 py-1 rounded">{frontmatter.category}</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{frontmatter.title}</h1>
+      <p class="text-gray-500 text-sm mb-2">{frontmatter.description}</p>
+      <div class="text-gray-400 text-xs mb-8">By <strong>{frontmatter.author}</strong> · {formattedDate}</div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg max-w-none" set:html={rawHTML} />
+    </article>
+  </div>
+</Base>
