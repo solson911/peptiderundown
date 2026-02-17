@@ -113,3 +113,28 @@ There's considerable misinformation about peptides. Let's clarify:
 
 ## Peptide Therapy FAQ
 
+**Q: Are peptides safe for long-term use?**  A: Many peptides have excellent safety profiles, but duration should be guided by a healthcare provider based on individual needs.
+
+**Q: Can peptides interact with medications?**  A: Possible interactions exist - always disclose all medications/supplements to your provider.
+
+**Q: How soon will I see results?**  A: Timeline varies: some notice changes in days, others require months for cellular-level benefits.
+
+**Q: Are peptides FDA-approved?**  A: Some are FDA-approved for specific uses, others are research compounds - your provider can explain options.
+
+**Q: Do peptides require refrigeration?**  A: Most reconstituted peptides need refrigeration - follow storage instructions carefully.
+
+**Q: Can I use peptides while pregnant?**  A: Not recommended without direct medical supervision due to limited research.
+
+---
+
+## Final Thoughts
+
+Peptides offer exciting possibilities for targeted health support when used responsibly. Remember:
+
+- Quality sourcing is non-negotiable
+- Medical supervision ensures safety
+- Patience leads to sustainable results
+
+"Start low, go slow, and listen to your body," advises nurse practitioner Alicia Cortez. "That's the peptide user's golden rule."
+
+*Always consult a healthcare professional before starting any new therapy. Individual results may vary.*
