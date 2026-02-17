@@ -1188,13 +1188,14 @@ html {
   color: var(--sage, #7A8B6F);
 }
 
-/* Expert Quotes */
+/* Expert Quotes - Enhanced with Color Variations */
 .expert-quote {
-  background: var(--sage-light, #E8EDE4);
+  background: linear-gradient(135deg, var(--sage-light, #E8EDE4), #f0f3ed);
   border-left: 4px solid var(--sage, #7A8B6F);
   padding: 20px 24px;
   margin: 26px 0;
   border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .expert-quote .speaker {
@@ -1204,6 +1205,10 @@ html {
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-bottom: 6px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 .expert-quote p {
@@ -1211,6 +1216,7 @@ html {
   color: var(--deep-green, #3D4F35);
   font-style: italic;
   line-height: 1.6;
+  font-weight: 500;
 }
 
 /* Chart Container */
@@ -1272,6 +1278,14 @@ html {
   height: 100%;
   border-radius: 4px;
   transition: width 1s ease;
+  background: var(--sage, #7A8B6F); /* Default sage color */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .bar-value {
@@ -1370,46 +1384,79 @@ html {
   margin-bottom: 0 !important; 
 }
 
-/* Callouts */
+/* Callouts - Enhanced Visual Appeal */
 .callout {
-  background: linear-gradient(135deg, var(--sage-light, #E8EDE4) 0%, #f0f3ed 100%);
+  background: linear-gradient(135deg, var(--copper-light, #F5E6D8) 0%, #fff7f0 100%);
+  border: 2px solid var(--copper, #C17F59);
   border-radius: 12px;
   padding: 28px;
   margin: 30px 0;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(193, 127, 89, 0.1);
+}
+
+.callout::before {
+  content: '💡';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: var(--copper, #C17F59);
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 16px;
 }
 
 .callout h4 {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
-  color: var(--deep-green, #3D4F35);
-  margin-bottom: 10px;
+  color: var(--copper, #C17F59);
+  margin-bottom: 12px;
+  margin-top: 8px;
 }
 
 .callout p { 
   font-size: 15px; 
-  margin-bottom: 0 !important; 
+  margin-bottom: 8px !important; 
+  color: #8B5A3C;
+  line-height: 1.6;
 }
 
-/* Warning Boxes */
+/* Warning Boxes - Enhanced Visual Impact */
 .warning-box {
-  background: #FFF8F0;
-  border: 1px solid #E8D5C0;
+  background: linear-gradient(135deg, #FFF0F0, #FFF8F8);
+  border: 2px solid #E74C4C;
   border-radius: 10px;
   padding: 24px;
   margin: 30px 0;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(231, 76, 76, 0.1);
+}
+
+.warning-box::before {
+  content: '⚠️';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #E74C4C;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 14px;
 }
 
 .warning-box h4 {
-  color: var(--copper, #C17F59);
-  font-size: 15px;
+  color: #E74C4C;
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  margin-top: 8px;
 }
 
 .warning-box p { 
   font-size: 15px; 
   margin-bottom: 0 !important; 
-  color: #7A5C3E; 
+  color: #B33A3A; 
+  line-height: 1.6;
 }
 
 /* Stack Grids */
