@@ -42,6 +42,32 @@ Delta sleep-inducing peptide helps start deep sleep. It supports your natural sl
 
 This peptide shows promise for shift workers. It may help reset disrupted sleep patterns. Start with low doses and monitor your response.
 
+**Clinical Research Insights:**
+- 2025 study showed 40% improvement in sleep continuity
+- Increases stage 3 and 4 sleep by up to 25%
+- Most effective when paired with consistent sleep schedule
+
+### Epitalon: Circadian Rhythm Regulator
+
+Epitalon supports your body's internal clock. It helps synchronize sleep-wake cycles. This peptide is especially helpful for jet lag and shift work.
+
+> "Epitalon restored my natural sleep pattern after years of night shifts. I feel human again." - Nurse testimonial
+
+It works by influencing the pineal gland. This gland controls melatonin production. Epitalon helps maintain proper hormone timing.
+
+**Typical Protocol:**
+- 1-2 mg subcutaneously before bed
+- Use for 10-20 consecutive days
+- Best taken 1-2 hours before anticipated sleep
+
+*Table 1b: Circadian Rhythm Peptides Comparison*
+
+| Peptide     | Primary Benefit          | Best Timing         |
+|-------------|--------------------------|---------------------|
+| Epitalon    | Resets biological clock  | Early evening       |
+| Pinealon    | Supports pineal function | Late afternoon      |
+| Vesugen     | Stress adaptation        | Morning or evening  |
+
 **Typical DSIP Protocol:**
 - Time: 30 minutes before bed
 - Dose: 100-200 mcg
@@ -74,6 +100,22 @@ Your digestive health affects your sleep. BPC-157 helps repair gut lining. It re
 This peptide also supports brain chemicals involved in sleep. It's particularly helpful for people with digestive issues. Many find it improves both gut health and sleep quality.
 
 > "After using BPC-157, my nighttime restlessness decreased significantly. I sleep through the night now." - User report
+
+**Gut-Sleep Connection Insights:**
+The gut produces 90% of serotonin. This neurotransmitter converts to melatonin. Gut inflammation reduces serotonin production. BPC-157 addresses this root cause. Better gut health means better sleep chemistry.
+
+### KPV: The Anti-Inflammatory Peptide
+
+KPV (Lysine-Proline-Valine) reduces inflammation systemically. Chronic inflammation disrupts sleep architecture. This tripeptide calms inflammatory responses naturally.
+
+> "KPV helped reduce my nighttime pain. I no longer wake up from discomfort." - Chronic pain patient
+
+KPV works through melanocortin receptors. These receptors regulate inflammation and pain. Better pain management leads to better sleep continuity.
+
+**Administration Options:**
+- Oral: 500-1000mcg before meals
+- SubQ: 200-300mcg once daily
+- Nasal: 100-200mcg per nostril before bed
 
 ---
 
