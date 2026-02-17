@@ -79,41 +79,58 @@ Let's walk through real examples. We'll calculate doses for popular peptides.
 ### BPC-157 Dose Calculation
 Suppose you have a 5mg vial of BPC-157. Your desired dose is 500mcg (0.5mg).
 
-1. Add 2mL bacteriostatic water to vial
-2. Concentration = 5mg / 2mL = 2.5 mg/mL
-3. Dose volume = 0.5mg / 2.5 mg/mL = 0.2 mL
-4. U-100 syringe units = 0.2 × 100 = 20 units
+- Add 2mL bacteriostatic water to vial
+- Concentration = 5mg / 2mL = 2.5 mg/mL
+- Dose volume = 0.5mg / 2.5 mg/mL = 0.2 mL
+- U-100 syringe units = 0.2 × 100 = 20 units
 
 ### Semaglutide Starter Dose
 You have a 2mg vial. The starting dose is 0.25mg.
 
-1. Add 1mL bacteriostatic water
-2. Concentration = 2mg / 1mL = 2 mg/mL
-3. Dose volume = 0.25mg / 2 mg/mL = 0.125 mL
-4. U-100 syringe units = 0.125 × 100 = 12.5 units
+- Add 1mL bacteriostatic water
+- Concentration = 2mg / 1mL = 2 mg/mL
+- Dose volume = 0.25mg / 2 mg/mL = 0.125 mL
+- U-100 syringe units = 0.125 × 100 = 12.5 units
 
 ### Ipamorelin Micro-Dose
 For a 200mcg dose from a 5mg vial:
 
-1. Add 1mL bacteriostatic water
-2. Concentration = 5mg/mL
-3. Convert dose: 200mcg = 0.2mg
-4. Dose volume = 0.2mg / 5 mg/mL = 0.04 mL
-5. U-100 syringe units = 4 units
+- Add 1mL bacteriostatic water
+- Concentration = 5mg/mL
+- Convert dose: 200mcg = 0.2mg
+- Dose volume = 0.2mg / 5 mg/mL = 0.04 mL
+- U-100 syringe units = 4 units
 
 > **Precision Note:** For very small doses like 4 units, use syringes with half-unit markings. They allow more accurate measurement.
 
 ### TB-500 Standard Dose
 Calculating 2mg dose from 10mg vial:
 
-1. Add 1mL bacteriostatic water
-2. Concentration = 10mg/mL
-3. Dose volume = 2mg / 10mg/mL = 0.2 mL
-4. U-100 syringe units = 20 units
+- Add 1mL bacteriostatic water
+- Concentration = 10mg/mL
+- Dose volume = 2mg / 10mg/mL = 0.2 mL
+- U-100 syringe units = 20 units
+
+### CJC-1295 Dose from 5mg Vial
+For a 1mg dose of CJC-1295:
+
+- Add 1mL bacteriostatic water to 5mg vial
+- Concentration = 5mg/mL
+- Dose volume = 1mg / 5mg/mL = 0.2mL
+- U-100 syringe units = 20 units
+
+### GHRP-2 Dose Calculation
+Standard dose: 150mcg from 5mg vial
+
+- Add 2mL bacteriostatic water
+- Concentration = 5mg / 2mL = 2.5 mg/mL
+- Convert dose: 150mcg = 0.15mg
+- Dose volume = 0.15mg / 2.5mg/mL = 0.06mL
+- U-100 syringe units = 6 units
 
 ***
 
-## Comprehensive Dosing Reference
+## Detailed Dosing Reference
 This table summarizes dosing for common peptides. It assumes standard reconstitution.
 
 | Peptide | Typical Dose | Vial Size | Water | Syringe Units |
@@ -125,6 +142,23 @@ This table summarizes dosing for common peptides. It assumes standard reconstitu
 | GHRP-2 | 150 mcg | 5mg | 2 mL | 6 |
 | Semaglutide | 0.25 mg | 2mg | 1 mL | 12.5 |
 | PT-141 | 1.75 mg | 10mg | 2 mL | 35 |
+| Epitalon | 5 mg | 10mg | 2 mL | 100 |
+| Thymosin Alpha-1 | 1.5 mg | 6mg | 2 mL | 50 |
+
+***
+
+## Advanced Measurement Techniques
+Reading insulin syringes accurately takes practice. Focus on the plunger tip. Align it precisely with the unit mark.
+
+Air bubbles affect dose accuracy. Remove them by flicking the syringe gently. Push air out before injection.
+
+Precision matters most with micro-doses. For doses under 10 units, consider:
+
+- Using 0.3mL syringes with finer markings
+- Concentrating more on plunger position
+- Double-checking calculations
+
+When mixing water and peptide, aim for gentle swirling. Avoid shaking vigorously. Aggressive mixing can damage delicate peptides.
 
 ***
 
@@ -136,6 +170,8 @@ Using the wrong syringe type causes problems. U-40 and U-100 syringes aren't int
 > **Safety Reminder:** Always consult your healthcare provider before starting peptides. They can help determine appropriate dosing for your needs.
 
 Storage mistakes reduce peptide effectiveness. Most reconstituted peptides need refrigeration. Freezing can damage some peptides. Always follow storage guidelines.
+
+Cross-contamination risks are real. Never use the same needle multiple times. Avoid touching sterile surfaces.
 
 ***
 
@@ -165,6 +201,15 @@ Unreconstituted vials should be refrigerated. Some peptides require freezing. Al
 ### Can I reuse needles?
 Never reuse needles. This causes contamination and infection risk. Always use fresh sterile needles for each injection.
 
+### How do I prevent wastage?
+Consider vial size based on your dose needs. If taking small doses, smaller vials reduce waste. Storing properly maximizes shelf life.
+
+### What's the best water source?
+Pharmaceutical-grade bacteriostatic water is best. Avoid compounding pharmacies or non-sterile sources. Quality matters for safety.
+
+### How do I know if my peptide is damaged?
+Reconstituted peptides should be clear. Cloudiness, particles, or color changes signal problems. Discard immediately if these appear.
+
 ***
 
 ## Best Practices for Safe Dosing
@@ -176,6 +221,8 @@ Keep a dosing journal. Record dates, doses, and observations. This helps track e
 
 Always use alcohol swabs. Clean vial tops before drawing. Clean skin before injecting. This prevents infection.
 
+Consider working with a partner. They can double-check measurements. They can assist with hard-to-reach injection sites.
+
 ***
 
 ## When to Seek Professional Guidance
@@ -185,8 +232,20 @@ If you have medical conditions or take medications, get professional advice. Pep
 
 Regular blood work helps monitor health markers. Some peptides affect hormone levels or other biomarkers. Professional supervision ensures safety.
 
+Children and pregnant women should avoid peptides. Research is limited in these populations. Safety hasn't been established.
+
+***
+
+## Resources and Tools
+Online peptide calculators simplify the math. They reduce calculation errors. Use reputable sources only.
+
+Smartphone apps can help track dosing schedules. They provide reminders and logs. Some include calculation tools.
+
+Educational videos show proper injection techniques. Visual learning helps build confidence. Watch several to compare methods.
+
 **Related reading:**
 - [How to Reconstitute Peptides](/articles/how-to-reconstitute-peptides)
 - [How to Inject Peptides Subcutaneously](/articles/how-to-inject-peptides-subcutaneously)
 - [What Are Peptides? Beginner's Guide](/articles/what-are-peptides-beginners-guide)
 - [Peptide Storage and Handling Guide](/articles/peptide-storage-handling-guide)
+- [Common Peptide Side Effects and Solutions](/articles/common-peptide-side-effects-solutions)
