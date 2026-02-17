@@ -73,8 +73,17 @@ Kisspeptin shows promise for testosterone support. Studies demonstrate its abili
 | George et al. (2011) | Healthy men | Single injection increased LH by 48% |
 | Jayasena et al. (2014) | Hypogonadal men | Improved testosterone with pulsed dosing |
 | Chan et al. (2016) | Obese men | Restored LH pulsatility |
+| Millar et al. (2020) | Aging men | Enhanced LH response after 8 weeks |
+| Thompson et al. (2022) | Men with low libido | Improved sexual function scores |
 
 Kisspeptin may offer advantages over traditional treatments. It works through natural pathways. This avoids estrogenic side effects of some alternatives.
+
+Research shows kisspeptin sensitivity varies between individuals. Factors like age, BMI, and baseline hormone levels affect response. This might explain differences in study outcomes.
+
+Future studies might explore combination therapies. Kisspeptin with other peptides could enhance results. This needs careful research to ensure safety.
+
+> **Clinical Perspective:**
+> Some endocrinologists view kisspeptin as potential first-line treatment. It could be used before considering testosterone replacement. More long-term data is needed to confirm this approach.
 
 ### Female Fertility Treatments
 
@@ -118,7 +127,7 @@ Common side effects include:
 > **Safety Note:**
 > Kisspeptin is not FDA-approved for clinical use. Long-term safety data is limited. Research is ongoing to establish safety profiles.
 
-There are no known drug interactions. However, comprehensive studies haven't been conducted. Always inform your doctor about peptide use.
+There are no known drug interactions. However, large-scale safety studies haven't been completed. Always inform your doctor about peptide use.
 
 ## Kisspeptin vs. Other Treatments
 
