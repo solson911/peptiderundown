@@ -1434,23 +1434,23 @@ html {
   line-height: 1.6;
 }
 
-/* Warning Boxes - Enhanced Visual Impact */
+/* Warning Boxes - Gentle Amber Styling */
 .warning-box {
-  background: linear-gradient(135deg, #FFF0F0, #FFF8F8) !important;
-  border: 2px solid #E74C4C !important;
+  background: linear-gradient(135deg, #FFF8E1, #FFFBF0) !important;
+  border: 2px solid #F57C00 !important;
   border-radius: 10px;
   padding: 24px;
   margin: 30px 0;
   position: relative;
-  box-shadow: 0 3px 10px rgba(231, 76, 76, 0.2) !important;
+  box-shadow: 0 3px 10px rgba(245, 124, 0, 0.1) !important;
 }
 
 .warning-box::before {
-  content: '⚠️';
+  content: 'ℹ️';
   position: absolute;
   top: -10px;
   left: 20px;
-  background: #E74C4C !important;
+  background: #F57C00 !important;
   color: white;
   padding: 8px 12px;
   border-radius: 50%;
@@ -1459,7 +1459,7 @@ html {
 }
 
 .warning-box h4 {
-  color: #E74C4C !important;
+  color: #F57C00 !important;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -1469,7 +1469,7 @@ html {
 .warning-box p { 
   font-size: 15px; 
   margin-bottom: 0 !important; 
-  color: #B33A3A !important; 
+  color: #E65100 !important; 
   line-height: 1.6;
 }
 

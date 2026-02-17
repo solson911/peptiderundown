@@ -9,13 +9,7 @@ tags: ["ghk-cu", "copper peptide", "skin", "hair", "anti-aging", "collagen"]
 author: "PeptideRundown Team"
 ---
 
-<div class="hero">
-  <div class="hero-content">
-    <div class="hero-label">Evidence-Based Skincare</div>
-    <h1>The Complete Guide to GHK-Cu for Skin and Hair</h1>
-    <p>How copper peptides reverse aging signs, stimulate collagen, and promote hair growth. Science-backed benefits and usage guidelines.</p>
-  </div>
-</div>
+# The Complete Guide to GHK-Cu for Skin and Hair
   
   <p>GHK-Cu (copper peptide) has emerged as one of the most effective bioactive compounds in dermatology and trichology. This naturally occurring peptide demonstrates remarkable abilities to repair damaged tissue, stimulate collagen synthesis, and reactivate dormant hair follicles.</p>
 
