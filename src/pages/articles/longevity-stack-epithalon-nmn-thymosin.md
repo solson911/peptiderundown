@@ -170,5 +170,87 @@ NAD+ coenzymes power over 500 biological reactions including:
 
 NMN bypasses the rate-limiting NMNAT enzyme in NAD+ synthesis:
 
+| NAD+ Precursor | Conversion Steps | Bioavailability |
+|----------------|------------------|----------------|
+| **NMN** | Direct → NAD+ | High (sublingual 85%) |
+| NR | NR → NMN → NAD+ | Moderate (60-70%) |
+| Niacin | Multiple steps | Low (30-40%) |
+
+### Thymic Involution
+
+The thymus shrinks by 3% annually after puberty, reducing T-cell production. Thymosin Alpha-1 counters this through:
+
+- **Thymosin β4 stimulation** - increases thymic epithelial cells
+- **T-cell differentiation** - enhances CD4+ and CD8+ production
+- **Cytokine modulation** - reduces IL-6 and TNF-α
+
+---
+
+## Mechanism Comparison Table
+
+| Aging Mechanism | Protection Strategy | Compound Role |
+|-----------------|---------------------|---------------|
+| **Telomere shortening** | Telomerase activation | Epithalon stimulates TERT gene |
+| **Mitochondrial decline** | NAD+ restoration | NMN fuels electron transport chain |
+| **Immune exhaustion** | Thymic regeneration | Thymosin boosts naive T-cell output |
+| **Inflammaging** | Cytokine regulation | All three reduce chronic inflammation |
+
+---
+
+## Biomarker Tracking Timeline
+
+| Timeframe | Key Biomarkers | Optimal Change |
+|-----------|----------------|----------------|
+| **Baseline** | Telomere length, NAD+, CD4/CD8 | Establish reference |
+| **Month 1** | Inflammatory markers (CRP, IL-6) | 20-30% reduction |
+| **Month 3** | Lymphocyte telomere length | 5-8% increase |
+| **Month 6** | NAD+ levels, thymic output markers | 40-60% increase |
+
+---
+
+## Personalization Guide
+
+### By Age Group
+
+| Age | Epithalon Frequency | Thymosin Duration |
+|-----|----------------------|--------------------|
+| 40-50 | 10 days/year | 6 weeks |
+| 50-65 | 20 days/year | 8 weeks |
+| 65+ | 30 days/year | 12 weeks |
+
+### By Gender
+
+- **Women**: Lower NMN dose (300mg daily) due to estrogen synergy
+- **Men**: Consider adding Follistatin for muscle maintenance
+
+---
+
+## Extended FAQ
+
+- **What's the best NAD+ test method?** 
+  Liquid chromatography-mass spectrometry (LC-MS) provides highest accuracy.
+
+- **Can I take during pregnancy?**
+  Absolutely not - no safety data exists for developmental impacts.
+
+- **How to store peptides?**
+  Lyophilized powder: room temp; reconstituted: refrigerated 2-8°C.
+
+- **Any exercise restrictions?**
+  Avoid intense training on Epithalon days due to potential fatigue.
+
+- **Interaction with statins?**
+  Monitor liver enzymes - NMN may enhance metabolism.
+
+- **Difference between TA1 and TB4?**
+  Thymosin Alpha-1 focuses on immune function, Beta-4 on tissue repair.
+
+- **Can vegetarians use this stack?**
+  Yes, but increase B12 supplementation for methylation support.
+
+- **Best time for blood tests?**
+  Morning fasting, 24+ hours after last NMN dose.
+
+---
 
 *Always consult a healthcare provider before starting any new protocol. Individual results may vary based on age, genetics, and baseline health status.*

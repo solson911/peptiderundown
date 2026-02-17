@@ -207,28 +207,28 @@ These questions don't have easy answers. They require careful discussion.
 ## Frequently Asked Questions
 
 ### What exactly does FOXO4-DRI do?
-It's designed to selectively remove senescent cells. These cells drive inflammation and tissue damage during aging.
+It's designed to selectively remove senescent cells. These cells drive inflammation and tissue damage during aging. FOXO4-DRI works by disrupting a specific protein interaction (between FOXO4 and p53) that keeps senescent cells alive. By blocking this interaction, it allows the natural cell death process to eliminate these problematic cells.
 
 ### How is it different from other anti-aging approaches?
-FOXO4-DRI directly targets zombie cells. Most antioxidants and supplements work through different mechanisms.
+FOXO4-DRI directly targets zombie cells. Most antioxidants and supplements work through different mechanisms. While antioxidants neutralize free radicals and supplements might support cellular health, FOXO4-DRI specifically triggers the death of senescent cells. This makes it a senolytic rather than a protective or supportive therapy.
 
 ### Has any human taken FOXO4-DRI?
 No published human studies exist. Any human use is purely experimental and unsupervised.
 
 ### What are the known risks?
-Mouse studies showed good tolerability. But potential human risks include off-target effects and unknown long-term consequences.
+Mouse studies showed good tolerability. But potential human risks include off-target effects on healthy cells, unknown long-term consequences of removing senescent cells, and possible interference with tissue repair processes. Some senescent cells play beneficial roles in wound healing and cancer prevention, so removing them completely might have unintended effects.
 
 ### How often would someone need treatment?
-We don't know. Mouse studies used dosing every other day. Human frequency might differ significantly.
+We don't know. Mouse studies used dosing every other day. Human frequency might differ significantly. Senescent cells gradually reappear after clearance, so periodic treatments would likely be needed. The optimal interval would depend on how quickly these cells accumulate in different tissues and how effectively the body can manage them naturally between treatments.
 
 ### Can it extend human lifespan?
-There's no evidence for this. Mouse lifespan studies used progeria models, not normal aging.
+There's no evidence for this. Mouse lifespan studies used progeria models, not normal aging. While the 36% lifespan extension in progeria mice is impressive, progeria represents accelerated aging rather than natural aging. Whether FOXO4-DRI would extend lifespan in normally aging organisms remains completely unknown. The complex nature of human aging makes lifespan predictions extremely difficult.
 
 ### Is it available for purchase?
-Some research suppliers offer it. But quality varies and it isn't meant for human consumption.
+Some research suppliers offer it. But quality varies significantly between sources, and it isn't meant for human consumption. Without regulatory oversight, there's no guarantee of purity or proper formulation. Research-grade material might contain impurities or be incorrectly dosed, posing potential health risks.
 
 ### Should I try FOXO4-DRI?
-Consult a healthcare provider about any anti-aging approach. Currently, evidence doesn't support human use of FOXO4-DRI.
+You should consult a healthcare provider about any anti-aging approach. Currently, evidence doesn't support human use of FOXO4-DRI. The risks are unknown, and no human safety data exists. Self-experimentation carries significant potential dangers without medical supervision. There are established, evidence-based approaches to healthy aging that should be considered first.
 
 ---
 

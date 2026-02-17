@@ -36,7 +36,7 @@ Your cells communicate through receptors like locked doors. Peptides act as keys
 
 ## Exploring Therapeutic Peptides
 
-The peptide landscape continues to evolve rapidly. Here's an updated guide to key categories with mechanisms of action:
+Therapeutic peptide applications continue to expand across medical specialties. Here's an updated guide to key categories with mechanisms of action:
 
 ### Recovery & Repair Peptides
 These peptides support tissue regeneration:
@@ -76,6 +76,18 @@ Each category offers distinct benefits that should be matched to individual heal
 ---
 
 ## Understanding Administration Methods
+
+Proper administration maximizes benefits while minimizing discomfort. Recent advances in delivery systems have improved options:
+
+| Method              | Optimal Use Case   | Bioavailability | Frequency       | Pain Level |
+|---------------------|--------------------|-----------------|-----------------|------------|
+| Subcutaneous        | Systemic effects   | 85-95%          | Daily           | Low-Medium |
+| Intranasal          | Brain barrier      | 60-75%          | 2-3x daily      | None       |
+| Transdermal         | Localized effects  | 40-50%          | Daily           | None       |
+| Oral Encapsulated   | Gut-specific       | 15-30%          | 1-2x daily      | None       |
+| Buccal Spray        | Rapid absorption   | 50-65%          | As needed       | None       |
+
+> "Delivery method selection is both science and art," notes pharmacist Dr. Rachel Nguyen. "We match the administration route to the peptide's stability and target tissues for optimal results."
 
 Your delivery approach significantly impacts peptide effectiveness. Here's a detailed comparison:
 
