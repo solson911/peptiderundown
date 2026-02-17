@@ -12,6 +12,18 @@
   --color-text-muted: #64748b;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Template #3 (Beauty/Cosmetic) Color Variables */
+  --sage: #7A8B6F;
+  --sage-light: #E8EDE4;
+  --copper: #C17F59;
+  --copper-light: #F5E6D8;
+  --deep-green: #3D4F35;
+  --charcoal: #2C2C2C;
+  --warm-bg: #FAFAF8;
+  --card-bg: #FFFFFF;
+  --border: #E0D8CF;
+  --muted: #8B8B9E;
 }
 
 /* Subtle background pattern */
@@ -1190,8 +1202,8 @@ html {
 
 /* Expert Quotes - Enhanced with Color Variations */
 .expert-quote {
-  background: linear-gradient(135deg, var(--sage-light, #E8EDE4), #f0f3ed);
-  border-left: 4px solid var(--sage, #7A8B6F);
+  background: linear-gradient(135deg, #E8EDE4, #f0f3ed) !important;
+  border-left: 4px solid #7A8B6F !important;
   padding: 20px 24px;
   margin: 26px 0;
   border-radius: 0 8px 8px 0;
@@ -1200,20 +1212,20 @@ html {
 
 .expert-quote .speaker {
   font-weight: 600;
-  color: var(--deep-green, #3D4F35);
+  color: #3D4F35 !important;
   font-size: 12px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-bottom: 6px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 4px 8px;
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9) !important;
+  padding: 6px 12px;
+  border-radius: 6px;
   display: inline-block;
 }
 
 .expert-quote p {
   margin-bottom: 0 !important;
-  color: var(--deep-green, #3D4F35);
+  color: #3D4F35 !important;
   font-style: italic;
   line-height: 1.6;
   font-weight: 500;
@@ -1278,7 +1290,7 @@ html {
   height: 100%;
   border-radius: 4px;
   transition: width 1s ease;
-  background: var(--sage, #7A8B6F); /* Default sage color */
+  background: #7A8B6F !important; /* Sage color - forced override */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -1386,13 +1398,13 @@ html {
 
 /* Callouts - Enhanced Visual Appeal */
 .callout {
-  background: linear-gradient(135deg, var(--copper-light, #F5E6D8) 0%, #fff7f0 100%);
-  border: 2px solid var(--copper, #C17F59);
+  background: linear-gradient(135deg, #F5E6D8 0%, #fff7f0 100%) !important;
+  border: 2px solid #C17F59 !important;
   border-radius: 12px;
   padding: 28px;
   margin: 30px 0;
   position: relative;
-  box-shadow: 0 4px 12px rgba(193, 127, 89, 0.1);
+  box-shadow: 0 4px 12px rgba(193, 127, 89, 0.2) !important;
 }
 
 .callout::before {
@@ -1400,36 +1412,37 @@ html {
   position: absolute;
   top: -10px;
   left: 20px;
-  background: var(--copper, #C17F59);
+  background: #C17F59 !important;
+  color: white;
   padding: 8px 12px;
   border-radius: 50%;
   font-size: 16px;
 }
 
 .callout h4 {
-  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
-  color: var(--copper, #C17F59);
+  color: #C17F59 !important;
   margin-bottom: 12px;
   margin-top: 8px;
+  font-weight: 600;
 }
 
 .callout p { 
   font-size: 15px; 
   margin-bottom: 8px !important; 
-  color: #8B5A3C;
+  color: #8B5A3C !important;
   line-height: 1.6;
 }
 
 /* Warning Boxes - Enhanced Visual Impact */
 .warning-box {
-  background: linear-gradient(135deg, #FFF0F0, #FFF8F8);
-  border: 2px solid #E74C4C;
+  background: linear-gradient(135deg, #FFF0F0, #FFF8F8) !important;
+  border: 2px solid #E74C4C !important;
   border-radius: 10px;
   padding: 24px;
   margin: 30px 0;
   position: relative;
-  box-shadow: 0 3px 10px rgba(231, 76, 76, 0.1);
+  box-shadow: 0 3px 10px rgba(231, 76, 76, 0.2) !important;
 }
 
 .warning-box::before {
@@ -1437,15 +1450,16 @@ html {
   position: absolute;
   top: -10px;
   left: 20px;
-  background: #E74C4C;
+  background: #E74C4C !important;
   color: white;
   padding: 8px 12px;
   border-radius: 50%;
   font-size: 14px;
+  z-index: 1;
 }
 
 .warning-box h4 {
-  color: #E74C4C;
+  color: #E74C4C !important;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -1455,7 +1469,7 @@ html {
 .warning-box p { 
   font-size: 15px; 
   margin-bottom: 0 !important; 
-  color: #B33A3A; 
+  color: #B33A3A !important; 
   line-height: 1.6;
 }
 
