@@ -230,6 +230,12 @@ Some research suppliers offer it. But quality varies significantly between sourc
 ### Should I try FOXO4-DRI?
 You should consult a healthcare provider about any anti-aging approach. Currently, evidence doesn't support human use of FOXO4-DRI. The risks are unknown, and no human safety data exists. Self-experimentation carries significant potential dangers without medical supervision. There are established, evidence-based approaches to healthy aging that should be considered first.
 
+### How does FOXO4-DRI compare to rapamycin?
+Rapamycin works through mTOR inhibition to slow aging processes, while FOXO4-DRI removes existing senescent cells. They address different aspects of aging biology. Rapamycin has more human data but also known side effects like immune suppression. Both remain experimental for anti-aging applications.
+
+### Could FOXO4-DRI help with specific diseases?
+Potentially yes, particularly conditions driven by senescent cells. These include idiopathic pulmonary fibrosis, osteoarthritis, and some aspects of cardiovascular disease. But again, this is speculative based on mouse data. Human studies are needed to confirm any therapeutic potential for specific conditions.
+
 ---
 
 ## The Future of Senolytic Peptides

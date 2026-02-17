@@ -63,6 +63,41 @@ Modulate immune response:
 - **Thymosin α-1**: Enhances T-cell function and vaccine response
 - **LL-37**: Provides antimicrobial protection
 
+### Emerging Categories
+New research areas show promise:
+- **Ocular peptides**: Support eye health and retinal function
+- **Cardiac peptides**: May assist with heart tissue repair
+- **Dental peptides**: Support oral health and enamel regeneration
+
+Each category offers distinct benefits that should be matched to individual health goals.
+
+Therapeutic peptide applications continue to expand across medical specialties. Here's an updated guide to key categories with mechanisms of action:
+
+### Recovery & Repair Peptides
+These peptides support tissue regeneration:
+- **BPC-157**: Accelerates healing of tendons, ligaments, and gut lining by promoting angiogenesis
+- **TB-500**: Reduces inflammation and promotes cell migration for wound healing
+
+### Metabolic Support Peptides
+Target weight management and metabolic function:
+- **Semaglutide**: Reduces appetite through GLP-1 receptor activation
+- **AOD-9604**: Stimulates lipolysis without affecting blood sugar
+
+### Cognitive Enhancers
+Support brain health and function:
+- **Selank**: Modulates GABA receptors for anxiety reduction
+- **Semax**: Increases BDNF production for neuroprotection
+
+### Longevity Compounds
+Address aging processes:
+- **Epithalon**: May support telomere maintenance
+- **GHK-Cu**: Promotes collagen production and antioxidant activity
+
+### Immune Regulators
+Modulate immune response:
+- **Thymosin α-1**: Enhances T-cell function and vaccine response
+- **LL-37**: Provides antimicrobial protection
+
 Each category offers distinct benefits that should be matched to individual health goals.
 
 | Type              | Examples         | Primary Use           | Administration |
@@ -165,6 +200,56 @@ There's considerable misinformation about peptides. Let's clarify:
 
 ## Frequently Asked Questions
 
+### How do peptides differ from proteins?
+While both consist of amino acids, peptides are smaller (typically 2-50 amino acids) and more easily absorbed. Proteins are larger structures that often require digestion before utilization.
+
+### Are peptides hormones?
+Some peptides act as hormones (like insulin), but not all hormones are peptides. Peptides encompass a broader category of signaling molecules beyond just hormones.
+
+### Can peptides help with hair growth?
+Certain peptides like GHK-Cu and Copper Tripeptide-1 show promise for stimulating hair follicles. Research continues in this application area.
+
+### Are peptide results permanent?
+Most benefits require ongoing maintenance. Like exercise or good nutrition, peptides typically provide benefits while being used consistently.
+
+### Do peptides show on drug tests?
+Most therapeutic peptides don't appear on standard drug screens. However, competitive athletes should consult their governing bodies about specific compounds.
+
+### Are peptides safe for long-term use?
+Many peptides have excellent safety profiles when properly monitored, but duration should be guided by a healthcare provider based on individual needs. Regular blood work helps assess ongoing suitability.
+
+### Can peptides interact with medications?
+Possible interactions exist with certain medications. Always disclose all medications and supplements to your healthcare provider before starting peptide therapy.
+
+### How soon will I see results?
+Timelines vary significantly: some notice changes within days (energy, sleep), while structural benefits like tissue repair may take 6-8 weeks. Consistency is key.
+
+### Are peptides FDA-approved?
+Some peptides are FDA-approved for specific uses (like Tesamorelin), while others remain research compounds. Your provider can explain legal status and appropriate use cases.
+
+### Do peptides require special storage?
+Most reconstituted peptides need refrigeration (36-46°F). Unopened vials should be stored in a cool, dark place. Always follow specific storage instructions.
+
+### Can I use peptides with existing health conditions?
+This depends on your specific condition and medications. Always consult your healthcare provider, as certain peptides may be contraindicated with autoimmune disorders or cancer history.
+
+### Are there natural ways to boost peptides?
+Yes - adequate sleep, protein-rich foods, and exercise naturally support peptide production. Targeted therapy supplements these foundational habits.
+
+### How do I know if a peptide source is reliable?
+Look for pharmaceutical-grade products with third-party testing (COAs), proper labeling, and recommended storage information. Avoid products with unclear sourcing.
+
+### Do peptides have age restrictions?
+While not age-restricted, suitability depends on biological needs. Most providers recommend peptides for adults over 30 when natural production declines.
+
+### Can I combine multiple peptides?
+Peptide "stacks" can be effective but should only be designed by experienced providers. Beginners should start with single peptides to assess tolerance.
+
+### What's the difference between peptides and SARMs?
+Peptides are amino acid chains that act as signaling molecules, while SARMs (Selective Androgen Receptor Modulators) are synthetic compounds that bind to androgen receptors. They have different mechanisms and safety profiles.
+
+---
+
 ### Are peptides safe for long-term use?
 Many peptides have excellent safety profiles when properly monitored, but duration should be guided by a healthcare provider based on individual needs. Regular blood work helps assess ongoing suitability.
 
@@ -196,6 +281,23 @@ While not age-restricted, suitability depends on biological needs. Most provider
 Peptide "stacks" can be effective but should only be designed by experienced providers. Beginners should start with single peptides to assess tolerance.
 
 ---
+
+---
+
+## Real-World Applications
+
+Peptide therapy isn't theoretical - it's helping people today. Here are common scenarios:
+
+**Case 1: Injury Recovery**
+> Mark, 42, used BPC-157 after a torn rotator cuff. "I was back on the tennis court in 8 weeks instead of the predicted 6 months," he reports. "My physical therapist was amazed."
+
+**Case 2: Metabolic Health**
+> Sarah, 58, struggled with weight for years. With medical supervision, she used Semaglutide alongside dietary changes. "I lost 35 pounds in 6 months without constant hunger," she shares.
+
+**Case 3: Cognitive Support**
+> David, 49, used Selank during a high-stress career transition. "It took the edge off my anxiety without fogging my thinking," he explains. "I felt like myself again."
+
+These examples illustrate how peptides can complement traditional approaches under professional guidance.
 
 ---
 
