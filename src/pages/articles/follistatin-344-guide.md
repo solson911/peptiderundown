@@ -67,7 +67,7 @@ Follistatin 344 achieves its effects through sophisticated molecular interaction
 
 > **Clinical Finding**: In a small human pilot study, subjects showed improved muscle strength and reduced fatigue scores after 12 weeks of follistatin therapy. - Wagner et al. (2017)
 
-## Comprehensive Dosing Protocols
+## Detailed Dosing Protocols
 
 ### Research-Based Dosing Ranges
 
