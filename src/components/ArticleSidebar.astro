@@ -1,0 +1,53 @@
+---
+interface Props {
+  category?: string;
+  formattedDate: string;
+  author: string;
+}
+const { category, formattedDate, author } = Astro.props;
+---
+<aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0">
+  <div class="md:sticky md:top-8 space-y-6">
+    <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+      <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+      {category && (
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xs text-text-muted">Category:</span>
+          <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{category}</span>
+        </div>
+      )}
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-xs text-text-muted">Updated:</span>
+        <span class="text-xs font-medium text-text">{formattedDate}</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-xs text-text-muted">Author:</span>
+        <span class="text-xs font-medium text-text">{author}</span>
+      </div>
+    </div>
+    <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+      <h3 class="text-sm font-bold text-primary mb-2">🔬 Our Standards</h3>
+      <ul class="text-xs text-text-muted space-y-1.5">
+        <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> PubMed-cited research</li>
+        <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> No vendor affiliations</li>
+        <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Regularly updated</li>
+        <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Reviewed for accuracy</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+      <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Popular Guides</h3>
+      <div class="space-y-3">
+        <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+        <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+        <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+        <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects</a>
+      </div>
+      <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides →</a>
+    </div>
+    <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+      <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+      <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+      <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+    </div>
+  </div>
+</aside>

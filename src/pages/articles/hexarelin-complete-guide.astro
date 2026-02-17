@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import ArticleSidebar from '../../components/ArticleSidebar.astro';
 
 const frontmatter = {
   title: "Hexarelin: The Complete Guide",
@@ -497,5 +498,6 @@ const rawHTML = `
       <style set:html={rawCSS} />
       <div class="prose prose-lg max-w-none" set:html={rawHTML} />
     </article>
+    <ArticleSidebar category={frontmatter.category} formattedDate={formattedDate} author={frontmatter.author} />
   </div>
 </Base>
