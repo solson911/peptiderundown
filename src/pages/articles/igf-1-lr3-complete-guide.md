@@ -113,7 +113,7 @@ Proper dosing is essential for both safety and effectiveness. Individual respons
 - **Injection depth** - Subcutaneous for systemic effects
 
 > **Timing Considerations**
-> Post-workout administration may enhance nutrient uptake into trained muscles. Evening dosing leverages natural growth hormone pulses during sleep.
+> Post-workout administration may enhance nutrient uptake into trained muscles. Evening dosing works with natural growth hormone pulses during sleep.
 
 ### Reconstitution and Storage
 
@@ -218,7 +218,7 @@ Some combine with GHRP peptides like Ipamorelin. This requires careful dosing ad
 Essential baseline tests include:
 - Fasting glucose and HbA1c
 - IGF-1 levels
-- Comprehensive metabolic panel
+- Full metabolic panel
 - Complete blood count
 - Cancer markers if appropriate
 
@@ -237,7 +237,7 @@ Responsible use requires understanding both benefits and risks. These guidelines
 
 - Regular blood glucose monitoring
 - Periodic IGF-1 level checks
-- Comprehensive metabolic panels
+- Full metabolic panels
 - Cancer screening when appropriate
 
 ### Lifestyle Considerations
