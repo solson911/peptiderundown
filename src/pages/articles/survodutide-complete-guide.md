@@ -126,7 +126,7 @@ Regulatory decisions will weigh several factors. Agencies will want confirmation
 
 A successful survodutide launch could reshape obesity treatment significantly. It might become the new first-choice therapy for severe obesity, creating competitive pressure that drives further innovation. The healthcare system will need to adapt too, with provider training on using this triple-agonist therapy effectively.
 
-Cost and access will be important considerations. Survodutide will likely carry a premium price initially as a novel, highly effective therapy. Insurance coverage decisions will depend on how its benefits compare to existing options. Patient assistance programs will probably be available to help with affordability, especially for those without comprehensive coverage.
+Cost and access will be important considerations. Survodutide will likely carry a premium price initially as a novel, highly effective therapy. Insurance coverage decisions will depend on how its benefits compare to existing options. Patient assistance programs will probably be available to help with affordability, especially for those without full coverage.
 
 ## Common Questions Answered
 

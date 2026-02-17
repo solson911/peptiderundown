@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 # What Are Peptides? Your Friendly Introduction to Peptide Therapy
 
-Welcome to the fascinating world of peptides! If you're new to this topic, you're in the right place. Think of this guide as your personal tour through the landscape of peptide therapy - we'll walk through it together step by step.
+Welcome to the fascinating world of peptides! If you're new to this topic, you're in the right place. Think of this guide as your personal tour through the field of peptide therapy - we'll walk through it together step by step.
 
 ## The Basics: What Exactly Are Peptides?
 
@@ -85,7 +85,7 @@ However, important considerations include:
 - Individual responses differ based on biology and health status
 - Long-term data is still emerging for many peptides
 
-Working with a knowledgeable provider ensures peptides are safe for *you* specifically. They'll help you navigate quality concerns, potential interactions, and appropriate dosing.
+Working with a knowledgeable provider ensures peptides are safe for *you* specifically. They'll help you sort through quality concerns, potential interactions, and appropriate dosing.
 
 ## Getting Started with Peptide Therapy
 
