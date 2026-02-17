@@ -103,7 +103,7 @@ Based on clinical observation, preclinical research, and practitioner consensus,
 <li>Excellent safety profile across multiple human studies</li>
 </ul>
 
-<p style="margin-top:14px;margin-bottom:0;font-size:13.5px;color:var(--mut);"><strong>Typical microdose protocol:</strong> 5-10 mg subcutaneous, 3-5x per week. Often stacked with MOTS-c for comprehensive mitochondrial support. Cycled 12-16 weeks on, 4-8 weeks off.</p>
+<p style="margin-top:14px;margin-bottom:0;font-size:13.5px;color:var(--mut);"><strong>Typical microdose protocol:</strong> 5-10 mg subcutaneous, 3-5x per week. Often stacked with MOTS-c for thorough mitochondrial support. Cycled 12-16 weeks on, 4-8 weeks off.</p>
 </div>
 
 ### 4. BPC-157

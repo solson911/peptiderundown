@@ -17,7 +17,7 @@ The science behind this peptide is both compelling and complex. Animal studies c
 
 What makes **BPC-157** particularly intriguing isn't just its apparent effectiveness, but its unique stability in gastric acid and its ability to modulate multiple healing pathways simultaneously. Unlike many therapeutic peptides that target single mechanisms, this compound appears to orchestrate coordinated healing responses involving blood vessel formation, growth factor upregulation, and cellular signaling optimization.
 
-The most commonly referenced human-equivalent dose falls between **250-500 mcg** once or twice daily via subcutaneous injection, extrapolated from extensive animal research. However, it's crucial to understand that no large-scale human clinical trials exist as of early 2026, and the FDA has placed significant restrictions on its availability through compounding pharmacies in the United States.
+The most commonly referenced human-equivalent dose falls between **250-500 mcg** once or twice daily via subcutaneous injection, extrapolated from extensive animal research. However, it's critical to understand that no large-scale human clinical trials exist as of early 2026, and the FDA has placed significant restrictions on its availability through compounding pharmacies in the United States.
 
 ## What Is BPC-157?
 
@@ -107,7 +107,7 @@ Some practitioners discuss cycling protocols alternating 4-6 weeks of use with b
 
 BPC-157 typically arrives as a lyophilized powder in a sealed vial that requires reconstitution with sterile solvent before use. The most common solvent is bacteriostatic water containing 0.9% benzyl alcohol as a preservative, which extends the shelf life of the reconstituted solution.
 
-For precise measurements, use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc, or see our comprehensive [reconstitution guide](/articles/how-to-reconstitute-peptides) for detailed instructions.
+For precise measurements, use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc, or see our thorough [reconstitution guide](/articles/how-to-reconstitute-peptides) for detailed instructions.
 
 Start by gathering your materials: the BPC-157 vial, bacteriostatic water, insulin syringes (typically 1 mL), and alcohol swabs. Clean both vial tops with alcohol swabs and allow them to dry completely before proceeding.
 
@@ -138,7 +138,7 @@ Anyone with active malignancies or taking prescription medications should consul
 
 ## Is BPC-157 Legal? Current Regulatory Status
 
-The legal landscape for BPC-157 in the United States has become increasingly restrictive over recent years. The peptide has never been approved by the FDA as a pharmaceutical drug and hasn't completed the formal approval process for any medical indication.
+The legal environment for BPC-157 in the United States has become increasingly restrictive over recent years. The peptide has never been approved by the FDA as a pharmaceutical drug and hasn't completed the formal approval process for any medical indication.
 
 Between 2022-2024, the FDA issued warning letters to companies marketing BPC-157 for human use, particularly targeting those making specific therapeutic claims. In late 2023 and continuing through 2024-2025, the FDA placed BPC-157 on its list of substances prohibited from use in compounding under sections 503A and 503B, citing insufficient safety and efficacy data for human use.
 

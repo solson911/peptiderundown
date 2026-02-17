@@ -58,7 +58,7 @@ Not all peptides work the same way. They fall into four broad categories, each w
 
 ## The Best Peptides for Skin: A Detailed Breakdown
 
-With hundreds of peptides now available in skincare formulations, the landscape can feel overwhelming. Below are the five most effective and well-researched peptides for skin health, ranked by the breadth of their scientific evidence and the range of benefits they deliver.
+With hundreds of peptides now available in skincare formulations, the environment can feel overwhelming. Below are the five most effective and well-researched peptides for skin health, ranked by the breadth of their scientific evidence and the range of benefits they deliver.
 
 ### GHK-Cu (Copper Peptide)
 

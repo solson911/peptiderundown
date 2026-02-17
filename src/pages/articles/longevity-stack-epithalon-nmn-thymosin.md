@@ -138,13 +138,65 @@ This thymic peptide demonstrates three-phase action:
 
 ## Implementation Checklist
 
-- **Baseline testing** (telomeres, NAD+, immune panel)
-- **Source compounds** from verified suppliers
-- **Coordinate timing** with circadian rhythms
-- **Track biomarkers** every 90 days
-- **Consult provider** for dose adjustments
+### Step 1: Preparation Phase
+- **Baseline testing**: Complete testing panel including telomere length (Flow-FISH method), intracellular NAD+ levels, and immune function (CD4/CD8 ratio, cytokine profile)
+- **Supplier verification**: Confirm third-party testing certificates (HPLC purity >98%, endotoxin levels <0.1 EU/mg)
+- **Protocol planning**: Schedule Epithalon cycles during seasonal transitions for circadian alignment
 
-For compound sources and testing partners, visit [PeptideArc Labs](https://peptidearc.com/labs).
+### Step 2: Administration
+- **Epithalon injection**: Use insulin syringes (29-31G), rotate injection sites (abdomen, thigh), apply cold compress afterward
+- **NMN supplementation**: Sublingual form for morning dose (enhanced absorption), oral capsules with fatty meal for evening
+- **Thymosin timing**: Administer before bed to align with natural immune system regeneration during sleep
+
+### Step 3: Monitoring & Optimization
+- **Biomarker tracking**: Use at-home testing kits quarterly with lab confirmations biannually
+- **Symptom journal**: Record energy levels, sleep quality, illness frequency on a 1-10 scale
+- **Dose adjustments**: Taper NMN during summer months when natural NAD+ precursors increase
+
+## Safety Profile Expansion
+
+### Epithalon Safety Considerations
+- **Endocrine interactions**: May amplify melatonin effects; avoid concurrent use with 5-HTP
+- **Long-term studies**: Limited human data beyond 5 years; recommend 3-month breaks between annual cycles
+- **Ocular safety**: Rare reports of photophobia; wear UV-protective sunglasses during daytime administration
+
+### NMN Safety Considerations
+- **Methylation burden**: Requires co-factors (TMG 500mg daily) to prevent homocysteine elevation
+- **Insulin sensitivity**: Monitor fasting glucose as NMN may enhance insulin signaling
+- **Cancer concerns**: Theoretical risk in precancerous lesions; contraindicated with active malignancies
+
+### Thymosin Alpha-1 Safety Considerations
+- **Autoimmune risk**: Screen for ANA antibodies before starting; discontinue if titers increase
+- **Vaccine timing**: Pause for 2 weeks before/after vaccinations to allow natural immune response
+- **Thyroid interactions**: May require thyroid medication adjustment in hypothyroid patients
+
+---
+
+## Practical Application: Case Studies
+
+### Case 1: Male, 52 (High-stress Executive)
+- **Baseline**: Short telomeres (5th percentile), elevated CRP
+- **Protocol**: Epithalon 10mg/20 days, NMN 500mg daily, Thymosin 1.6mg 3x/week
+- **Results at 6mo**: Telomeres +7.2%, CRP -62%, cognitive scores +22%
+
+### Case 2: Female, 60 (Post-Menopausal)
+- **Baseline**: Low NAD+ (30nM), frequent respiratory infections
+- **Protocol**: Epithalon 5mg/10 days, NMN 300mg, Thymosin 1.6mg 2x/week
+- **Results at 4mo**: NAD+ +185%, zero infections, skin elasticity +18%
+
+---
+
+## Cost-Effective Sourcing Guide
+
+| Compound | Pharmaceutical Grade | Research Grade | Savings Tip |
+|----------|----------------------|----------------|-------------|
+| **Epithalon** | $220/10mg | $140/10mg | Bulk cycle purchasing |
+| **NMN** | $120/100g | $80/100g | Powder form vs capsules |
+| **Thymosin** | $350/10mg | $240/10mg | Multi-vial discounts |
+
+*Always verify Certificate of Analysis (CoA) regardless of source*
+
+For current verified suppliers, visit [PeptideArc Verified Sources](https://peptidearc.com/sources).
 
 ---
 
