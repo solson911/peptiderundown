@@ -1,0 +1,501 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const frontmatter = {
+  title: "Hexarelin: The Complete Guide",
+  description: "Hexarelin is the most potent growth hormone releasing peptide ever developed, with unique cardioprotective effects through CD36 receptors. Complete guide to mechanisms, dosing, and evidence.",
+  image: "/images/articles/hexarelin-complete-guide.webp",
+  date: "2026-02-17",
+  category: "Growth Hormone Peptides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F4F3EF;--ink:#171721;--body:#3B3B4F;--steel:#2C4A6E;--steel-lt:#E8EFF6;--teal:#1A6B5A;--teal-lt:#E6F4F0;--amber:#B07D1A;--amber-lt:#FFF8E8;--red:#B5403A;--red-lt:#FDEEEC;--violet:#5A4A8C;--violet-lt:#F0ECF7;--card:#FFFFFF;--bdr:#DBD8D0;--mut:#85859A;--sub:#EEEDE9;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Newsreader',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;font-weight:500;}
+h3{font-family:'Newsreader',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;font-weight:500;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+
+/* Dialogue blocks attributed to real sources */
+.d{border-left:3px solid var(--steel);background:var(--steel-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--steel);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#2A3A52;}
+.d .q{font-style:italic;}
+.d .cite{font-size:12px;color:var(--mut);margin-top:8px;font-style:normal;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}
+.d-t .s{color:var(--teal);}.d-t p{color:#1A4A32;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}
+.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;font-style:normal;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}
+.d-r .s{color:var(--red);}.d-r p{color:#5A2020;font-style:normal;}
+.d-v{border-left-color:var(--violet);background:var(--violet-lt);}
+.d-v .s{color:var(--violet);}.d-v p{color:#3A2860;}
+
+/* Stat row */
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Newsreader',serif;font-size:1.8rem;line-height:1;margin-bottom:4px;font-weight:500;}
+.sb .v.s1{color:var(--steel);}.sb .v.s2{color:var(--teal);}.sb .v.s3{color:var(--amber);}.sb .v.s4{color:var(--red);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+
+/* Tables */
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+
+/* Cards */
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cs::before{background:var(--steel);}.cd.ct::before{background:var(--teal);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}.cd.cv::before{background:var(--violet);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cs .tg{background:var(--steel-lt);color:var(--steel);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}.cd.cv .tg{background:var(--violet-lt);color:var(--violet);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+
+/* Bullet lists */
+.bl{list-style:none;padding:0;margin:12px 0;}
+.bl li{padding:5px 0 5px 24px;position:relative;font-size:14.5px;}
+.bl li::before{content:'';position:absolute;left:4px;top:13px;width:8px;height:8px;border-radius:50%;background:var(--steel);opacity:.22;}
+
+/* SVG container */
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Newsreader',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;font-weight:500;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+
+/* 2-column grid */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+@media(max-width:560px){.g2{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Newsreader',serif;font-size:1rem;color:var(--ink);margin-bottom:8px;font-weight:500;}
+.mc p{font-size:13.5px;margin-bottom:0;}
+
+/* Timeline */
+.tl{position:relative;padding-left:28px;margin:28px 0;}
+.tl::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--bdr);}
+.ti{position:relative;margin-bottom:22px;}
+.ti::before{content:'';position:absolute;left:-24px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--steel);border:2px solid var(--bg);}
+.ti .th{font-weight:600;font-size:14px;color:var(--ink);margin-bottom:2px;}
+.ti p{font-size:14px;margin-bottom:0;}
+
+/* Callout */
+.co{border-radius:10px;padding:24px;margin:28px 0;}
+.co.cg{background:linear-gradient(135deg,var(--teal-lt),#edf8f4);}
+.co.cw{background:linear-gradient(135deg,var(--amber-lt),#fef6e0);}
+.co h4{font-family:'Newsreader',serif;font-size:1rem;margin-bottom:8px;font-weight:500;}
+.co.cg h4{color:var(--teal);}.co.cw h4{color:var(--amber);}
+.co p{font-size:14px;margin-bottom:0;}
+.co.cg p{color:#1A4A32;}.co.cw p{color:#5A4010;}
+
+/* Divider */
+.dv{width:50px;height:2px;background:var(--steel);margin:50px auto;border-radius:1px;opacity:.28;}
+
+/* Footer */
+.ft{margin-top:60px;padding-top:28px;border-top:1px solid var(--bdr);font-size:12px;color:var(--mut);line-height:1.7;}
+.ft strong{color:var(--body);}
+
+/* Side-by-side mechanism */
+.mech{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+@media(max-width:560px){.mech{grid-template-columns:1fr;}}
+.mech-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:22px;text-align:center;}
+.mech-box .ico{font-size:28px;margin-bottom:8px;}
+.mech-box h4{font-family:'Newsreader',serif;font-size:1rem;color:var(--ink);margin-bottom:6px;font-weight:500;}
+.mech-box .sub{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;}
+.mech-box p{font-size:13px;margin-bottom:0;text-align:left;}
+
+/* Dosing visual */
+.dose-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #f0efeb;}
+.dose-row:last-child{border-bottom:none;}
+.dose-label{font-weight:600;font-size:13px;color:var(--ink);width:90px;flex-shrink:0;}
+.dose-bar{height:18px;border-radius:4px;position:relative;}
+.dose-val{font-size:11px;font-weight:600;color:var(--mut);margin-left:8px;white-space:nowrap;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<p>Hexarelin occupies a strange position in the peptide landscape. It is, by most measures, the most potent growth hormone releasing peptide ever developed. In human studies, it produced dose-dependent GH surges that exceeded those of GHRH itself, peaking at roughly 55 ng/mL within 30 minutes of administration. And yet, it was never approved, never marketed, and its clinical development was abandoned in 2005.</p>
+
+<p>The story of hexarelin is the story of a compound that turned out to be more interesting than anyone initially expected. Researchers at Tulane and later in Italy designed it in the early 1990s as an optimized growth hormone secretagogue. What they got was a peptide that not only released growth hormone with unmatched potency but also protected the heart through a completely separate receptor system that no one knew existed at the time.</p>
+
+<p>Three decades and hundreds of published studies later, hexarelin remains one of the most pharmacologically fascinating peptides in the GHRP family. It reached Phase 2 clinical trials for both GH deficiency and congestive heart failure. Its cardioprotective effects, mediated through the CD36 scavenger receptor rather than through growth hormone, represent a mechanism of action that is unique among all growth hormone secretagogues. And its desensitization profile, which ultimately limited its clinical development, has taught us a great deal about how the ghrelin receptor system actually works.</p>
+
+<p>This guide covers the mechanism, the evidence, the practical details, and the honest limitations of hexarelin.</p>
+
+<div class="sr">
+<div class="sb"><div class="v s1">Phase 2</div><div class="l">Furthest clinical trial stage reached</div></div>
+<div class="sb"><div class="v s2">~55 ng/mL</div><div class="l">Peak GH at 2 mcg/kg IV dose</div></div>
+<div class="sb"><div class="v s3">25-40%</div><div class="l">Infarct size reduction in animal models</div></div>
+<div class="sb"><div class="v s4">1-2 wks</div><div class="l">Time to GH response desensitization</div></div>
+</div>
+
+<div class="dv"></div>
+
+<h2>What Hexarelin Is</h2>
+
+<p>Hexarelin (also known as examorelin) is a synthetic hexapeptide with the amino acid sequence His-D-2-methylTrp-Ala-Trp-D-Phe-Lys-NH2. It belongs to the growth hormone releasing peptide (GHRP) family, a class of compounds derived from structural modifications to met-enkephalin that were found to stimulate growth hormone secretion through a receptor distinct from GHRH.</p>
+
+<p>It was specifically designed to maximize GH-releasing potency while improving metabolic stability. Compared to its predecessor GHRP-6, hexarelin is more resistant to enzymatic degradation and produces a stronger growth hormone response per unit dose. Its molecular weight is 887.06 Da, and it has a plasma half-life of approximately 60 to 80 minutes following subcutaneous injection.</p>
+
+<p>Hexarelin does not occur naturally. It is a synthetic analog that mimics certain actions of ghrelin, the endogenous 28-amino-acid hormone discovered in 1999, though hexarelin was developed a decade before ghrelin was even identified. This is one of those unusual cases in pharmacology where the synthetic tool came first, the receptor was cloned second, and the natural hormone was found last.</p>
+
+<div class="d">
+<div class="s">From the research literature</div>
+<p class="q">"The usual sequence of discovery in endocrinology is isolation of a hormone, cloning of its receptor, and development of analogs of the hormone for clinical use. With ghrelin, this sequence was reversed: first, analogs were synthesized, then the receptor was cloned, and lastly, the natural ligand of the orphan receptor was isolated."</p>
+<p class="cite">Bhatti et al., American Journal of Veterinary Research, 2006</p>
+</div>
+
+<div class="dv"></div>
+
+<h2>The Dual Mechanism: Two Receptors, Two Stories</h2>
+
+<p>What makes hexarelin genuinely unusual among growth hormone secretagogues is that it acts through two entirely separate receptor systems. Most GHRPs operate primarily through the ghrelin receptor (GHS-R1a). Hexarelin does this too, but it also binds with high affinity to CD36, a scavenger receptor found predominantly in cardiac tissue. These two mechanisms produce fundamentally different effects, and understanding both is essential to understanding hexarelin.</p>
+
+<div class="mech">
+<div class="mech-box" style="border-top:4px solid var(--steel);">
+<div class="sub">Pathway 1</div>
+<h4>GHS-R1a (Ghrelin Receptor)</h4>
+<p>Located in the pituitary gland and hypothalamus. Activation stimulates growth hormone release from anterior pituitary somatotroph cells. This is the mechanism shared by all GHRPs (GHRP-6, GHRP-2, ipamorelin). Hexarelin's activation of GHS-R1a triggers phospholipase C, increases intracellular calcium, and produces pulsatile GH secretion. It also mildly stimulates prolactin, ACTH, and cortisol through this pathway.</p>
+</div>
+<div class="mech-box" style="border-top:4px solid var(--teal);">
+<div class="sub">Pathway 2</div>
+<h4>CD36 (Scavenger Receptor)</h4>
+<p>Found abundantly on cardiomyocytes, vascular endothelial cells, macrophages, and adipocytes. Hexarelin binding to CD36 activates PPAR-gamma signaling, MAPK cascades, and PI3K/Akt pathways. This produces cardioprotective effects that are completely independent of growth hormone. In CD36-knockout animals, the cardiac benefits of hexarelin are abolished, while in GHS-R1a-knockout animals, they are preserved.</p>
+</div>
+</div>
+
+<p>This dual mechanism was discovered through an elegant series of experiments. Clinicians first noticed that patients receiving hexarelin for heart failure showed cardiac improvements even after their GH response had desensitized. That clinical observation led researchers at the University of Montreal to systematically identify CD36 as the cardiac binding target. They labeled rat cardiac membranes with a radioactive hexarelin derivative and purified the binding protein, identifying it as CD36.</p>
+
+<div class="d-t">
+<div class="s">Bodart et al., Circulation Research, 2002</div>
+<p class="q">"The N-terminal sequence determination of the deglycosylated protein was identical to rat CD36, a multifunctional glycoprotein, which was expressed in cardiomyocytes and microvascular endothelial cells. Activation of CD36 in perfused hearts by hexarelin was shown to elicit an increase in coronary perfusion pressure in a dose-dependent manner. This effect was lacking in hearts from CD36-null mice."</p>
+</div>
+
+<p>This finding fundamentally changed how researchers thought about hexarelin. It was no longer just a potent GH releaser with some incidental cardiac effects. It was a compound that happened to interact with two completely separate biological systems, producing two distinct therapeutic profiles.</p>
+
+<div class="dv"></div>
+
+<h2>Growth Hormone Release: The Evidence</h2>
+
+<p>The foundational human pharmacology study for hexarelin was published by Imbimbo and colleagues in the European Journal of Clinical Pharmacology in 1994. The study was a double-blind, placebo-controlled dose-response trial in healthy subjects receiving intravenous hexarelin at 0.5, 1.0, and 2.0 mcg/kg.</p>
+
+<!-- GH Release Dose-Response Chart -->
+<div class="svg-box">
+<div class="st">Hexarelin Dose-Response: Peak GH Levels in Healthy Subjects</div>
+<div class="ss">Data from Imbimbo et al., European Journal of Clinical Pharmacology, 1994</div>
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="Outfit, sans-serif">
+  <!-- Background grid -->
+  <line x1="100" y1="250" x2="620" y2="250" stroke="#e0ded8" stroke-width="1"/>
+  <line x1="100" y1="200" x2="620" y2="200" stroke="#f0efeb" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="100" y1="150" x2="620" y2="150" stroke="#f0efeb" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="100" y1="100" x2="620" y2="100" stroke="#f0efeb" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="100" y1="50" x2="620" y2="50" stroke="#f0efeb" stroke-width="1" stroke-dasharray="4"/>
+
+  <!-- Y-axis labels -->
+  <text x="90" y="254" text-anchor="end" fill="#85859A" font-size="11">0</text>
+  <text x="90" y="204" text-anchor="end" fill="#85859A" font-size="11">15</text>
+  <text x="90" y="154" text-anchor="end" fill="#85859A" font-size="11">30</text>
+  <text x="90" y="104" text-anchor="end" fill="#85859A" font-size="11">45</text>
+  <text x="90" y="54" text-anchor="end" fill="#85859A" font-size="11">60</text>
+  <text x="40" y="155" text-anchor="middle" fill="#85859A" font-size="10" font-weight="600" transform="rotate(-90 40 155)">Peak GH (ng/mL)</text>
+
+  <!-- Bars -->
+  <!-- Placebo: 3.9 ng/mL -->
+  <rect x="140" y="237" width="80" height="13" rx="3" fill="#DBD8D0"/>
+  <text x="180" y="233" text-anchor="middle" fill="#85859A" font-size="12" font-weight="600">3.9</text>
+  <text x="180" y="272" text-anchor="middle" fill="#85859A" font-size="11">Placebo</text>
+
+  <!-- 0.5 mcg/kg: 26.9 ng/mL -->
+  <rect x="260" y="160" width="80" height="90" rx="3" fill="#A8C4DE"/>
+  <text x="300" y="155" text-anchor="middle" fill="#2C4A6E" font-size="12" font-weight="600">26.9</text>
+  <text x="300" y="272" text-anchor="middle" fill="#3B3B4F" font-size="11">0.5 mcg/kg</text>
+
+  <!-- 1.0 mcg/kg: 52.3 ng/mL -->
+  <rect x="380" y="76" width="80" height="174" rx="3" fill="#6A9EC7"/>
+  <text x="420" y="71" text-anchor="middle" fill="#2C4A6E" font-size="12" font-weight="600">52.3</text>
+  <text x="420" y="272" text-anchor="middle" fill="#3B3B4F" font-size="11">1.0 mcg/kg</text>
+
+  <!-- 2.0 mcg/kg: 55.0 ng/mL -->
+  <rect x="500" y="68" width="80" height="182" rx="3" fill="#2C4A6E"/>
+  <text x="540" y="63" text-anchor="middle" fill="#2C4A6E" font-size="12" font-weight="700">55.0</text>
+  <text x="540" y="272" text-anchor="middle" fill="#3B3B4F" font-size="11">2.0 mcg/kg</text>
+
+  <!-- Near-ceiling annotation -->
+  <line x1="430" y1="70" x2="530" y2="67" stroke="#B07D1A" stroke-width="1" stroke-dasharray="3"/>
+  <text x="485" y="38" text-anchor="middle" fill="#B07D1A" font-size="10" font-weight="600">Near-maximal response</text>
+  <text x="485" y="50" text-anchor="middle" fill="#B07D1A" font-size="9">at 2 mcg/kg IV</text>
+</svg>
+</div>
+
+<p>The results showed a clear dose-dependent pattern. GH peaked at approximately 30 minutes after administration and returned to baseline within 240 minutes. At the 2 mcg/kg dose, the response was near the ceiling of what hexarelin could produce, with a Cmax of 55.0 ng/mL versus 3.9 ng/mL for placebo. Importantly, hexarelin did not affect plasma glucose, LH, FSH, or TSH, indicating specificity for the GH axis with minimal disruption to other pituitary hormones.</p>
+
+<p>However, hexarelin is not perfectly selective. Arvat and colleagues at the University of Turin published a comparative study in Peptides (1997) showing that hexarelin, like GHRP-2, produces mild but measurable increases in prolactin, ACTH, and cortisol. Their data placed hexarelin's prolactin-stimulating effect below that of TRH, while its ACTH/cortisol-stimulating effect was comparable to that of human CRH.</p>
+
+<div class="d">
+<div class="s">Arvat et al., Peptides, 1997</div>
+<p class="q">"In conclusion, our results demonstrate that, in man, GHRP-2 and Hexarelin have similar, dose- and age-dependent stimulatory effect on somatotrope secretion, releasing more GH than GHRH. The activity of both GHRP-2 and Hexarelin is not fully specific, as they induce similar increases in PRL, ACTH and cortisol levels."</p>
+</div>
+
+<p>A separate finding of note: in elderly subjects (ages 66-73), hexarelin still produced robust GH responses comparable to those in younger adults. This age-independence is noteworthy because natural GH secretion and GHRH responsiveness both decline significantly with age.</p>
+
+<div class="dv"></div>
+
+<h2>The Cardioprotective Evidence</h2>
+
+<p>The cardiac research on hexarelin is the most scientifically compelling aspect of this compound. It has been studied in multiple animal models of heart disease, including ischemia-reperfusion injury, myocardial infarction, cardiac fibrosis, and atherosclerosis. The consistency of the results across these models is striking.</p>
+
+<h3>Ischemia-Reperfusion Injury</h3>
+
+<p>In 1999, Locatelli and colleagues published a landmark study in Endocrinology demonstrating that hexarelin's cardioprotective effects are independent of growth hormone. They compared hexarelin and GH treatment in hypophysectomized rats (animals with no pituitary gland and thus no ability to produce GH). After seven days of treatment, the rats' hearts were subjected to ischemia and reperfusion.</p>
+
+<div class="d-t">
+<div class="s">Locatelli et al., Endocrinology, 1999</div>
+<p class="q">"Hexarelin (80 mcg/kg sc), given for 7 days, prevented exacerbation of the ischemia-reperfusion damage induced by hypophysectomy. Hexarelin prevents increases in left ventricular end diastolic pressure, coronary perfusion pressure, reactivity of the coronary vasculature to angiotensin II, and release of creatine kinase in the heart perfusate."</p>
+<p class="cite">Critically, EP 51389, another GHRP that does not bind to the heart, was ineffective, confirming the cardiac-specific nature of hexarelin's protection.</p>
+</div>
+
+<p>A later study by Rossoni and colleagues compared hexarelin to equimolar ghrelin in hypophysectomized rats. Hexarelin was far more effective: it provided 60% protection against left ventricular end-diastolic pressure increases, versus only 15% for ghrelin. Creatine kinase release (a marker of cardiac cell death) was reduced by 55% with hexarelin versus 15% with ghrelin.</p>
+
+<h3>Myocardial Infarction Model (2020)</h3>
+
+<p>The most clinically relevant cardiac study was published in 2020. Ma and colleagues used a mouse model of myocardial ischemia-reperfusion, ligating the left coronary artery and then allowing reperfusion, mimicking what happens during a heart attack and subsequent treatment. Hexarelin was administered at 0.3 mg/kg/day for 21 days, starting immediately before reperfusion.</p>
+
+<!-- Cardiac Results Summary -->
+<div class="cd ct">
+<span class="tg">Key Findings: Hexarelin in Ischemia-Reperfusion (2020)</span>
+<h3>Results After 21 Days of Treatment</h3>
+<ul class="bl">
+<li><strong>Left ventricular function:</strong> Significant improvement in hexarelin-treated mice compared to vehicle controls, measured by MRI</li>
+<li><strong>Cardiac fibrosis:</strong> Approximately 53% reduction in left ventricular collagen concentration</li>
+<li><strong>Inflammatory cytokines:</strong> Significant decreases in TNF-alpha and IL-1-beta expression</li>
+<li><strong>Myofibroblast differentiation:</strong> Reduced TGF-beta-1 expression and less fibrotic remodeling</li>
+<li><strong>Autonomic nervous system:</strong> Shifted balance toward parasympathetic predominance, suggesting vagal anti-inflammatory pathway activation</li>
+</ul>
+<p style="margin-top:14px;font-size:13px;color:var(--mut);margin-bottom:0;">Source: Ma et al., Biomedicine & Pharmacotherapy, 2020. PMID: 32403043</p>
+</div>
+
+<div class="d-a">
+<div class="s">Study conclusion</div>
+<p>"In this model of IR, hexarelin appeared to rebalance the deregulated autonomic nervous system and activate vagal anti-inflammatory pathways to prevent adverse remodelling and LV dysfunction. There are limited interventions focusing on IRI that have been successful in improving clinical outcome in acute myocardial infarction patients; this study provides compelling evidence towards the translational potential of hexarelin where all others have largely failed."</p>
+<p class="cite" style="color:var(--mut);margin-top:6px;">Ma et al., Biomedicine & Pharmacotherapy, 2020</p>
+</div>
+
+<h3>Anti-Atherosclerotic Effects</h3>
+
+<p>Hexarelin's interaction with CD36 on macrophages also has implications for atherosclerosis. In macrophage cell models, hexarelin reduced the uptake of oxidized LDL through CD36, which is a key step in foam cell formation within atherosclerotic plaques. A study by Pang and colleagues in Peptides (2010) showed that hexarelin treatment in atherosclerotic rats suppressed plaque formation, partially reversed unfavorable HDL/LDL ratios, and increased nitric oxide production and endothelial nitric oxide synthase expression.</p>
+
+<div class="dv"></div>
+
+<h2>The Desensitization Problem</h2>
+
+<p>This is the single biggest limitation of hexarelin, and it is what ultimately ended its clinical development. Repeated daily administration produces progressive attenuation of the GH response, with significant blunting evident within one to two weeks of continuous use.</p>
+
+<p>Rahim and Shalet published a study in the Journal of Clinical Endocrinology and Metabolism (1998) examining long-term hexarelin therapy. Over 16 weeks of treatment, they observed a marked decrease in participants' GH responsiveness. However, after a four-week washout period, sensitivity partially recovered, returning to near-baseline levels.</p>
+
+<!-- Desensitization Timeline -->
+<div class="svg-box">
+<div class="st">Hexarelin GH Response Desensitization Over Time</div>
+<div class="ss">Approximate trajectory based on published data (Rahim & Shalet, JCEM, 1998; Arvat et al., 1997)</div>
+<svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" font-family="Outfit, sans-serif">
+  <!-- Grid -->
+  <line x1="80" y1="240" x2="640" y2="240" stroke="#e0ded8" stroke-width="1"/>
+  <line x1="80" y1="240" x2="80" y2="30" stroke="#e0ded8" stroke-width="1"/>
+  <line x1="80" y1="190" x2="640" y2="190" stroke="#f0efeb" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="80" y1="140" x2="640" y2="140" stroke="#f0efeb" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="80" y1="90" x2="640" y2="90" stroke="#f0efeb" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="80" y1="40" x2="640" y2="40" stroke="#f0efeb" stroke-width="1" stroke-dasharray="4"/>
+
+  <!-- Y axis labels -->
+  <text x="70" y="244" text-anchor="end" fill="#85859A" font-size="10">0%</text>
+  <text x="70" y="194" text-anchor="end" fill="#85859A" font-size="10">25%</text>
+  <text x="70" y="144" text-anchor="end" fill="#85859A" font-size="10">50%</text>
+  <text x="70" y="94" text-anchor="end" fill="#85859A" font-size="10">75%</text>
+  <text x="70" y="44" text-anchor="end" fill="#85859A" font-size="10">100%</text>
+  <text x="30" y="145" text-anchor="middle" fill="#85859A" font-size="10" font-weight="600" transform="rotate(-90 30 145)">GH Response (% of baseline)</text>
+
+  <!-- X axis labels -->
+  <text x="100" y="258" text-anchor="middle" fill="#85859A" font-size="10">Day 1</text>
+  <text x="180" y="258" text-anchor="middle" fill="#85859A" font-size="10">Wk 1</text>
+  <text x="260" y="258" text-anchor="middle" fill="#85859A" font-size="10">Wk 2</text>
+  <text x="340" y="258" text-anchor="middle" fill="#85859A" font-size="10">Wk 4</text>
+  <text x="420" y="258" text-anchor="middle" fill="#85859A" font-size="10">Wk 8</text>
+  <text x="500" y="258" text-anchor="middle" fill="#85859A" font-size="10">Wk 12</text>
+  <text x="565" y="258" text-anchor="middle" fill="#85859A" font-size="10">Wk 16</text>
+  <text x="630" y="258" text-anchor="middle" fill="#B5403A" font-size="10" font-weight="600">Off 4wk</text>
+
+  <!-- Desensitization line -->
+  <path d="M100,40 C130,42 150,60 180,90 C210,120 230,140 260,155 C290,168 310,175 340,185 C370,192 400,195 420,198 C450,200 475,202 500,204 L565,206" fill="none" stroke="#2C4A6E" stroke-width="2.5"/>
+
+  <!-- Dotted off-cycle line (recovery) -->
+  <path d="M565,206 C580,200 600,150 630,90" fill="none" stroke="#1A6B5A" stroke-width="2.5" stroke-dasharray="6"/>
+
+  <!-- Recovery annotation -->
+  <rect x="555" y="55" width="80" height="30" rx="5" fill="#E6F4F0" stroke="#1A6B5A" stroke-width="1"/>
+  <text x="595" y="72" text-anchor="middle" fill="#1A6B5A" font-size="10" font-weight="600">Recovery</text>
+
+  <!-- Key decline zone -->
+  <rect x="100" y="25" width="175" height="20" rx="4" fill="#FDEEEC" stroke="#B5403A" stroke-width="0.5"/>
+  <text x="187" y="38" text-anchor="middle" fill="#B5403A" font-size="9" font-weight="600">Steepest decline: weeks 1-2</text>
+
+  <!-- 50% line marker -->
+  <circle cx="260" cy="155" r="4" fill="#B5403A"/>
+  <text x="275" y="148" fill="#B5403A" font-size="10" font-weight="600">~50% by week 2</text>
+</svg>
+</div>
+
+<p>The mechanisms behind this desensitization are multiple and concurrent. They include GHS-R1a receptor downregulation through ligand-induced internalization (the receptor literally pulls itself off the cell surface), increased hypothalamic somatostatin tone (the body's natural GH brake), and negative feedback through elevated IGF-1 levels. In vitro work by Orkin and colleagues (2003) showed that calcium response desensitization at the GHS receptor occurred within 2 to 5 minutes of the first hexarelin exposure, confirming that receptor-level desensitization is rapid and intrinsic.</p>
+
+<div class="co cw">
+<h4>Why this matters practically</h4>
+<p>Hexarelin's desensitization means it cannot be used continuously for chronic GH stimulation the way ipamorelin or MK-677 can (the latter of which shows minimal desensitization over months of use). Instead, hexarelin requires strict cycling: typically 12 to 16 weeks on, followed by a mandatory 4 to 6 week break to allow receptor sensitivity to recover. This cycling requirement is the primary reason hexarelin was not commercially developed. For acute research applications or short-term therapeutic windows, however, it remains among the most potent tools available.</p>
+</div>
+
+<div class="dv"></div>
+
+<h2>Hexarelin vs. Other GHRPs: A Comparison</h2>
+
+<p>The GHRP family includes several well-studied compounds. Each has a different profile of potency, selectivity, and side effects. Hexarelin sits at the high-potency, lower-selectivity end of the spectrum, while ipamorelin occupies the opposite position.</p>
+
+<table class="tbl">
+<thead><tr><th>Property</th><th>Hexarelin</th><th>GHRP-2</th><th>GHRP-6</th><th>Ipamorelin</th></tr></thead>
+<tbody>
+<tr><td><strong>GH potency</strong></td><td style="color:var(--steel);font-weight:600;">Highest</td><td>High</td><td>Moderate</td><td>Moderate</td></tr>
+<tr><td><strong>Prolactin elevation</strong></td><td>Mild</td><td>Mild-Moderate</td><td>Mild</td><td style="color:var(--teal);font-weight:600;">None</td></tr>
+<tr><td><strong>Cortisol/ACTH elevation</strong></td><td>Mild</td><td>Mild-Moderate</td><td>Mild-Moderate</td><td style="color:var(--teal);font-weight:600;">None</td></tr>
+<tr><td><strong>Hunger stimulation</strong></td><td>Minimal</td><td>Moderate</td><td style="color:var(--red);font-weight:600;">Strong</td><td>Minimal</td></tr>
+<tr><td><strong>Desensitization</strong></td><td style="color:var(--red);font-weight:600;">Significant (1-2 wks)</td><td>Moderate</td><td>Moderate</td><td>Mild</td></tr>
+<tr><td><strong>CD36/Cardiac effects</strong></td><td style="color:var(--teal);font-weight:600;">Yes (unique)</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td><strong>Bone growth</strong></td><td>Via GH/IGF-1</td><td>Via GH/IGF-1</td><td>Via GH/IGF-1</td><td style="color:var(--teal);font-weight:600;">Direct (4x deposition)</td></tr>
+<tr><td><strong>Half-life</strong></td><td>~60-80 min</td><td>~60 min</td><td>~25 min</td><td>~2 hours</td></tr>
+<tr><td><strong>Clinical development</strong></td><td>Phase 2 (discontinued)</td><td>Phase 2</td><td>Phase 2</td><td>Phase 2</td></tr>
+</tbody>
+</table>
+
+<div class="d-v">
+<div class="s">Key takeaway from the comparison</div>
+<p>In the Arvat et al. (1997) head-to-head comparison, hexarelin and GHRP-2 produced nearly identical GH responses at matched doses. Both released significantly more GH than GHRH. The practical difference comes down to secondary effects: hexarelin's unique advantage is its CD36-mediated cardioprotection, while ipamorelin's advantage is its clean selectivity (no cortisol, no prolactin, no appetite stimulation at any dose). For most GH-focused protocols, ipamorelin's selectivity is preferred for long-term use. Hexarelin's niche is short-cycle, high-potency GH release and cardiac research applications.</p>
+</div>
+
+<div class="dv"></div>
+
+<h2>Dosing Protocols</h2>
+
+<p>The published human pharmacology data and practitioner protocols converge on a fairly consistent dosing framework. The key principles are: start low, divide doses across the day, administer on an empty stomach, and cycle strictly.</p>
+
+<div class="cd cs">
+<span class="tg">Standard Protocol</span>
+<h3>Dosing Framework</h3>
+<ul class="bl">
+<li><strong>Starting dose:</strong> 100 mcg per day, single injection, to assess tolerance</li>
+<li><strong>Therapeutic range:</strong> 200 to 300 mcg per day, divided into 2-3 injections</li>
+<li><strong>Optimal timing:</strong> Morning fasted, midday (optional), and 30 minutes before bed</li>
+<li><strong>Administration:</strong> Subcutaneous injection (abdomen, deltoid, or outer thigh)</li>
+<li><strong>Fasting window:</strong> At least 60 minutes before meals or 3 hours after eating</li>
+<li><strong>Cycle length:</strong> 12 to 16 weeks maximum</li>
+<li><strong>Mandatory break:</strong> 4 to 6 weeks off between cycles</li>
+<li><strong>Reconstitution:</strong> Bacteriostatic water, refrigerate at 2-8 degrees C, use within 4 weeks</li>
+</ul>
+</div>
+
+<p>The bell-shaped dose-response curve means that escalating beyond 2 mcg/kg (roughly 140-200 mcg for most adults) per injection does not produce proportionally greater GH release. The Imbimbo data showed that 2 mcg/kg was already near the maximum effective dose. More is not better with hexarelin.</p>
+
+<h3>Synergistic Stacking</h3>
+
+<p>When combined with a GHRH analog (such as CJC-1295 without DAC or sermorelin), hexarelin produces synergistic GH release. The mechanism behind this synergy is well understood: GHRPs like hexarelin suppress somatostatin (the GH brake) and increase per-cell GH output, while GHRH increases the number of somatotroph cells that are actively secreting. Together, these produce GH surges that exceed what either compound produces alone.</p>
+
+<div class="g2">
+<div class="mc" style="border-top:3px solid var(--steel);">
+<h4>Common Stacks</h4>
+<p><strong>Hexarelin + CJC-1295 (no DAC):</strong> The most popular combination. CJC extends the GH pulse while hexarelin amplifies it. Typical doses: 100 mcg hexarelin + 100 mcg CJC-1295, 2-3x daily.</p>
+</div>
+<div class="mc" style="border-top:3px solid var(--teal);">
+<h4>Recovery Stacks</h4>
+<p><strong>Hexarelin + BPC-157 or TB-500:</strong> GH supports systemic repair while the healing peptides target specific tissue damage. Useful for injury recovery protocols where maximum GH output is desired for a limited period.</p>
+</div>
+</div>
+
+<div class="dv"></div>
+
+<h2>Side Effects and Safety</h2>
+
+<p>Hexarelin demonstrated acceptable safety in Phase 2 clinical trials. No serious adverse events were reported in the published human studies. However, its side effect profile is broader than more selective GHRPs like ipamorelin.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Mechanism</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Mild cortisol elevation</strong></td><td>Common</td><td>ACTH stimulation via GHS-R1a</td><td>Comparable to physiological CRH response</td></tr>
+<tr><td><strong>Prolactin increase</strong></td><td>Common (mild)</td><td>Pituitary stimulation</td><td>Lower than TRH-induced elevation</td></tr>
+<tr><td><strong>Water retention</strong></td><td>Common</td><td>GH-mediated fluid shifts</td><td>Typically transient, resolves within weeks</td></tr>
+<tr><td><strong>Injection site reactions</strong></td><td>Occasional</td><td>Local irritation</td><td>Minimized by rotating sites</td></tr>
+<tr><td><strong>Tingling/numbness in hands</strong></td><td>Occasional</td><td>GH-related (carpal tunnel-like)</td><td>Dose-dependent, resolves with dose reduction</td></tr>
+<tr><td><strong>Increased appetite</strong></td><td>Mild/occasional</td><td>Ghrelin receptor activation</td><td>Much less than GHRP-6</td></tr>
+<tr><td><strong>GH response desensitization</strong></td><td>Expected</td><td>Receptor downregulation</td><td>Reversible with 4-6 week washout</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+<div class="s">Important limitation</div>
+<p>Hexarelin reached Phase 2 clinical trials but was discontinued in 2005 for strategic (not safety) reasons. It was never approved for any indication. There are no long-term human safety studies. All dosing protocols in circulation are derived from short-term clinical data and practitioner experience, not from established therapeutic guidelines. Hexarelin is classified as a prohibited substance by the World Anti-Doping Agency (WADA) as a growth hormone secretagogue.</p>
+</div>
+
+<div class="dv"></div>
+
+<h2>What to Expect: A Realistic Timeline</h2>
+
+<div class="tl">
+<div class="ti"><div class="th">Day 1</div><p>Measurable GH spike within 30 minutes of first injection. This is pharmacological confirmation, not a subjective effect. You will not "feel" this.</p></div>
+<div class="ti"><div class="th">Week 1-2</div><p>Some users report improved sleep quality and subtle increases in energy. IGF-1 levels begin rising. GH response is at its strongest during this window. By the end of week 2, desensitization is beginning.</p></div>
+<div class="ti"><div class="th">Week 4-8</div><p>Body composition changes become noticeable: improved lean mass, reduced body fat, faster workout recovery. Skin quality may improve. GH response has declined 40-50% from baseline but is still pharmacologically active.</p></div>
+<div class="ti"><div class="th">Week 8-12</div><p>Continued benefits from elevated IGF-1 and sustained (though diminished) GH pulses. Recovery and tissue repair effects accumulate. The cardiac benefits, if present, are ongoing through the CD36 pathway regardless of GH desensitization.</p></div>
+<div class="ti"><div class="th">Week 12-16 (End of Cycle)</div><p>Maximum recommended cycle length. GH response is significantly blunted. Time to transition to the mandatory off-period.</p></div>
+<div class="ti" style="margin-bottom:0;"><div class="th">Off-Cycle (4-6 weeks)</div><p>GH response recovers to near-baseline within approximately 4 weeks. Rahim and Shalet (1998) confirmed this partial recovery. The cycle can then be repeated.</p></div>
+</div>
+
+<div class="dv"></div>
+
+<h2>The Bottom Line</h2>
+
+<p>Hexarelin is a compound that rewards close reading. On the surface, it looks like just another GHRP in a crowded category. Under the surface, it is a dual-mechanism peptide with the strongest acute GH-releasing potency in its class and a unique cardiac protective profile that operates through a completely separate receptor system.</p>
+
+<p>Its limitations are real. The desensitization problem makes it impractical for continuous, long-term GH therapy. Its off-target effects on cortisol and prolactin, while mild, make it less clean than ipamorelin for uncomplicated GH protocols. It was never approved, and its clinical development ended without resolution.</p>
+
+<p>But its strengths are equally real. The CD36-mediated cardioprotective effects are not shared by any other GHRP. The preclinical cardiac data, spanning from the Locatelli ischemia-reperfusion studies in 1999 through the Ma ischemia-reperfusion MRI study in 2020, is both consistent and impressive. The synergistic response when combined with GHRH analogs is potent. And its ability to produce robust GH responses even in elderly subjects suggests utility in populations where age-related GH decline is most clinically relevant.</p>
+
+<p>For short-cycle, high-intensity GH protocols or for anyone interested in the cardiac protective angle, hexarelin remains one of the most scientifically well-supported peptides available. For long-term, maintenance-level GH support, there are better options. Understanding which situation you are in determines whether hexarelin belongs in your protocol.</p>
+
+<div class="d">
+<div class="s">Mao, Tokudome & Kishimoto, Journal of Geriatric Cardiology, 2014</div>
+<p class="q">"Since hexarelin is a chemically stable synthetic GHS with more potent cardiac effects than its natural analog ghrelin, it can be a potential alternative to ghrelin as a promising therapeutic agent for the treatment of cardiovascular diseases. However, as current evidence is mainly from experimental animal models or in vitro cell lines, clinical trials aimed to extend the application of hexarelin in human subjects and observe its efficacy and potential side effects are warranted."</p>
+</div>
+
+<div class="ft">
+<p><strong>Sources:</strong> Imbimbo et al., European Journal of Clinical Pharmacology (1994). Arvat et al., Peptides 18(6):885-891 (1997). Rahim & Shalet, Journal of Clinical Endocrinology & Metabolism (1998). Locatelli et al., Endocrinology 140:4024-4031 (1999). Bodart et al., Circulation Research (2002). Muccioli et al., Journal of Endocrinology 175:201-209 (2002). Orkin et al., Journal of Endocrinological Investigation 26:743-747 (2003). Bhatti et al., American Journal of Veterinary Research (2006). Ishida et al., JCSM Rapid Communications (2020). Ma et al., Biomedicine & Pharmacotherapy (2020), PMID:32403043. Mao, Tokudome & Kishimoto, Journal of Geriatric Cardiology 11(3):253-258 (2014). Pang et al., Peptides 31(4):630-638 (2010). Huang et al., International Heart Journal (2017), PMID:28321024. Raun et al., European Journal of Endocrinology (1998). Wikipedia: Growth hormone secretagogue receptor; Ipamorelin.</p>
+<p style="margin-top:10px;"><strong>Important:</strong> Hexarelin is not approved by the FDA for any indication. It is classified as a prohibited substance by WADA. This article is for informational and educational purposes only. It is not medical advice. All treatment decisions should be made in consultation with a qualified healthcare provider. Do not self-administer peptides based on internet content.</p>
+<p style="margin-top:8px;">Last updated: February 2026</p>
+</div>
+
+</div>
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <div class="mb-4">
+        <span class="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-2 py-1 rounded">{frontmatter.category}</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{frontmatter.title}</h1>
+      <p class="text-gray-500 text-sm mb-2">{frontmatter.description}</p>
+      <div class="text-gray-400 text-xs mb-8">By <strong>{frontmatter.author}</strong> · {formattedDate}</div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg max-w-none" set:html={rawHTML} />
+    </article>
+  </div>
+</Base>
