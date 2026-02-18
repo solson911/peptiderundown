@@ -1560,6 +1560,19 @@ html {
 }
 
 /* ============================================
+   Article inner .c container — strip horizontal
+   padding & max-width so body matches image/header
+   ============================================ */
+.article-content .c {
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* ============================================
    Internal link styling — make links visible
    ============================================ */
 .article-content a[href^="/articles/"],
