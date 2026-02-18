@@ -1,0 +1,518 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const frontmatter = {
+  title: "BPC-157 vs TB-500: Which Healing Peptide Is Right for You?",
+  description: "A comprehensive guide comparing BPC-157 and TB-500, two popular healing peptides, to help you choose the right one for different injury types and understand their unique mechanisms of action.",
+  image: "/images/articles/bpc-157-vs-tb-500-comparison.webp",
+  date: "2026-02-18",
+  category: "Peptide Comparison Guide",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d .q{font-style:italic;}
+.d .ci{font-size:12px;color:var(--mut);margin-top:8px;font-style:normal;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;font-style:normal;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;font-style:normal;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--amber);}.sb .v.c4{color:var(--plum);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .win{color:var(--teal);font-weight:600;}
+.tbl .draw{color:var(--amber);font-weight:500;}
+
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}.cd.cp::before{background:var(--plum);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+
+.bl{list-style:none;padding:0;margin:12px 0;}
+.bl li{padding:5px 0 5px 24px;position:relative;font-size:14.5px;}
+.bl li::before{content:'';position:absolute;left:4px;top:13px;width:8px;height:8px;border-radius:50%;background:var(--blue);opacity:.22;}
+
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+
+/* Bar chart styles */
+.bar-chart{margin:24px 0;}
+.bar-row{display:flex;align-items:center;margin-bottom:10px;font-size:13px;}
+.bar-label{width:130px;flex-shrink:0;font-weight:500;color:var(--ink);text-align:right;padding-right:14px;}
+.bar-track{flex:1;height:28px;background:var(--sub);border-radius:6px;position:relative;overflow:hidden;display:flex;}
+.bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;font-weight:600;color:#fff;transition:width .6s ease;}
+.bar-fill.bf-blue{background:var(--blue);}.bar-fill.bf-teal{background:var(--teal);}.bar-fill.bf-plum{background:var(--plum);}
+.bar-legend{display:flex;gap:20px;justify-content:center;margin-top:12px;font-size:12px;color:var(--mut);}
+.bar-legend span{display:flex;align-items:center;gap:5px;}
+.bar-legend .dot{width:10px;height:10px;border-radius:3px;}
+
+/* VS badge */
+.vs-badge{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--ink);color:#fff;font-family:'Lora',serif;font-size:18px;font-weight:700;margin:0 auto;position:relative;z-index:2;}
+
+/* Stack highlight box */
+.stack-box{background:linear-gradient(135deg,var(--blue-lt) 0%,var(--teal-lt) 50%,var(--plum-lt) 100%);border:2px solid var(--bdr);border-radius:14px;padding:30px;margin:32px 0;position:relative;}
+.stack-box::before{content:'RECOMMENDED APPROACH';position:absolute;top:-10px;left:24px;font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--teal);background:var(--bg);padding:0 10px;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<p style="font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Peptide Comparison Guide</p>
+
+<h2 style="margin-top:0;font-size:2.2rem;">BPC-157 vs TB-500</h2>
+<p style="font-size:1.1rem;color:var(--mut);margin-bottom:36px;">Two healing peptides. Two completely different biological strategies. One comprehensive breakdown to help you decide.</p>
+
+<p>BPC-157 and TB-500 are the two most discussed peptides in the injury recovery space. Both accelerate tissue repair. Both have decades of preclinical research behind them. Both are used extensively by athletes, biohackers, and patients dealing with injuries that conventional medicine has not resolved.</p>
+
+<p>But they are not interchangeable. BPC-157 and TB-500 work through fundamentally different biological pathways, target different tissue types with different strengths, require different dosing strategies, and carry different regulatory profiles. Choosing the wrong one for your situation means leaving results on the table. Choosing the right one, or combining both, can mean the difference between an injury that lingers for months and one that actually resolves.</p>
+
+<div class="sr">
+<div class="sb"><div class="v c1">15</div><div class="l">Amino acids in BPC-157</div></div>
+<div class="sb"><div class="v c2">43</div><div class="l">Amino acids in TB-500</div></div>
+<div class="sb"><div class="v c3">100+</div><div class="l">BPC-157 published studies</div></div>
+<div class="sb"><div class="v c4">50+</div><div class="l">TB-500 published studies</div></div>
+</div>
+
+<!-- QUICK COMPARISON TABLE -->
+<h2>At a Glance</h2>
+
+<table class="tbl">
+<thead><tr><th>Property</th><th>BPC-157</th><th>TB-500</th></tr></thead>
+<tbody>
+<tr><td><strong>Full name</strong></td><td>Body Protection Compound-157</td><td>Thymosin Beta-4 active fragment</td></tr>
+<tr><td><strong>Origin</strong></td><td>Human gastric juice protein</td><td>Thymosin beta-4 (ubiquitous in all cells)</td></tr>
+<tr><td><strong>Primary mechanism</strong></td><td>Nitric oxide modulation, growth factor upregulation, VEGF</td><td>Actin regulation, angiogenesis, cell migration</td></tr>
+<tr><td><strong>Scope of action</strong></td><td>More localized (concentrates near injection)</td><td>More systemic (distributes bodywide)</td></tr>
+<tr><td><strong>Oral availability</strong></td><td class="win">Yes (stable in stomach acid)</td><td>No (injection only)</td></tr>
+<tr><td><strong>Typical dose</strong></td><td>250-500 mcg daily</td><td>2-2.5 mg twice/week (loading)</td></tr>
+<tr><td><strong>Injection frequency</strong></td><td>1-2x daily (smaller doses)</td><td>2x/week loading, then weekly maintenance</td></tr>
+<tr><td><strong>Approximate monthly cost</strong></td><td class="win">$30-60</td><td>$50-100+</td></tr>
+<tr><td><strong>FDA approved</strong></td><td>No</td><td>No</td></tr>
+<tr><td><strong>WADA status</strong></td><td class="win">Not currently banned</td><td>Banned (S2 category)</td></tr>
+<tr><td><strong>Strongest application</strong></td><td>Gut healing, localized tissue repair, nerve injury</td><td>Muscle regeneration, systemic recovery, cardiac repair</td></tr>
+</tbody>
+</table>
+
+<!-- MECHANISM SECTION -->
+<h2>How They Work: Two Different Healing Strategies</h2>
+
+<p>The fundamental difference between these two peptides comes down to their approach to the repair problem. BPC-157 is a chemical coordinator: it manipulates the signaling environment around an injury to recruit and direct the body\'s existing repair systems. TB-500 is a structural remodeler: it physically reorganizes the cellular machinery that enables cells to move, divide, and rebuild tissue.</p>
+
+<div class="svg-box">
+<div class="st">Two Pathways to Tissue Repair</div>
+<div class="ss">BPC-157 manages the chemical signals. TB-500 rebuilds the physical infrastructure.</div>
+<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2956A6" stop-opacity="0.12"/><stop offset="100%" stop-color="#2956A6" stop-opacity="0.03"/></linearGradient>
+<linearGradient id="gt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#187A62" stop-opacity="0.12"/><stop offset="100%" stop-color="#187A62" stop-opacity="0.03"/></linearGradient>
+</defs>
+<!-- BPC-157 Panel -->
+<rect x="10" y="10" width="325" height="380" rx="12" fill="url(#gb)" stroke="#2956A6" stroke-width="1.5" stroke-opacity="0.3"/>
+<text x="172" y="42" text-anchor="middle" font-family="Lora,serif" font-size="16" font-weight="700" fill="#2956A6">BPC-157</text>
+<text x="172" y="60" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#86869A">The Repair Coordinator</text>
+
+<rect x="30" y="78" width="285" height="32" rx="7" fill="#2956A6" fill-opacity="0.1"/>
+<text x="172" y="99" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#2956A6">Nitric Oxide Modulation</text>
+<text x="172" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Corrects NO excess or deficiency at injury site</text>
+
+<rect x="30" y="142" width="285" height="32" rx="7" fill="#2956A6" fill-opacity="0.1"/>
+<text x="172" y="163" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#2956A6">VEGF Upregulation</text>
+<text x="172" y="190" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Drives new blood vessel formation at injury</text>
+
+<rect x="30" y="206" width="285" height="32" rx="7" fill="#2956A6" fill-opacity="0.1"/>
+<text x="172" y="227" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#2956A6">Growth Factor Activation</text>
+<text x="172" y="254" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Upregulates EGF, HGF, FGF for tissue repair</text>
+
+<rect x="30" y="270" width="285" height="32" rx="7" fill="#2956A6" fill-opacity="0.1"/>
+<text x="172" y="291" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#2956A6">FAK-Paxillin Signaling</text>
+<text x="172" y="318" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Promotes cell adhesion and migration to wound</text>
+
+<rect x="30" y="334" width="285" height="32" rx="7" fill="#2956A6" fill-opacity="0.1"/>
+<text x="172" y="355" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#2956A6">GH Receptor Upregulation</text>
+<text x="172" y="380" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Amplifies tissue response to growth hormone</text>
+
+<!-- TB-500 Panel -->
+<rect x="365" y="10" width="325" height="380" rx="12" fill="url(#gt)" stroke="#187A62" stroke-width="1.5" stroke-opacity="0.3"/>
+<text x="527" y="42" text-anchor="middle" font-family="Lora,serif" font-size="16" font-weight="700" fill="#187A62">TB-500</text>
+<text x="527" y="60" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#86869A">The Systemic Rebuilder</text>
+
+<rect x="385" y="78" width="285" height="32" rx="7" fill="#187A62" fill-opacity="0.1"/>
+<text x="527" y="99" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#187A62">Actin Sequestration</text>
+<text x="527" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Controls G-actin polymerization for cell flexibility</text>
+
+<rect x="385" y="142" width="285" height="32" rx="7" fill="#187A62" fill-opacity="0.1"/>
+<text x="527" y="163" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#187A62">Endothelial Cell Migration</text>
+<text x="527" y="190" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Recruits vessel-building cells to injury sites</text>
+
+<rect x="385" y="206" width="285" height="32" rx="7" fill="#187A62" fill-opacity="0.1"/>
+<text x="527" y="227" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#187A62">Satellite Cell Activation</text>
+<text x="527" y="254" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Wakes up muscle stem cells for regeneration</text>
+
+<rect x="385" y="270" width="285" height="32" rx="7" fill="#187A62" fill-opacity="0.1"/>
+<text x="527" y="291" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#187A62">Anti-Inflammatory Action</text>
+<text x="527" y="318" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Reduces inflammatory cytokines systemically</text>
+
+<rect x="385" y="334" width="285" height="32" rx="7" fill="#187A62" fill-opacity="0.1"/>
+<text x="527" y="355" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#187A62">Collagen Deposition</text>
+<text x="527" y="380" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">Improves structural quality of repaired tissue</text>
+</svg>
+</div>
+
+<h3>BPC-157: The Repair Coordinator</h3>
+
+<p>BPC-157 (Body Protection Compound-157) is a 15-amino-acid synthetic peptide derived from a protein found in human gastric juice. It was first isolated by Professor Predrag Sikiric at the University of Zagreb in 1993 and has since accumulated over 100 published studies, making it one of the most researched peptides in regenerative medicine.</p>
+
+<p>Its primary mechanism centers on <strong>nitric oxide (NO) modulation</strong>. Unlike drugs that simply increase or decrease NO, BPC-157 appears to act as a bidirectional regulator: it can increase NO levels when they are pathologically low and decrease them when they are pathologically high (Sikiric et al., 2014). This matters because NO plays a critical role in blood vessel dilation, inflammation regulation, and tissue repair signaling. By normalizing NO at the injury site, BPC-157 creates an environment that is more conducive to healing.</p>
+
+<p>On top of NO modulation, BPC-157 upregulates <strong>vascular endothelial growth factor (VEGF)</strong>, driving the formation of new blood vessels at the injury site (Hsieh et al., 2017). It activates multiple growth factors including EGF, HGF, and FGF, and stimulates the <strong>FAK-paxillin signaling pathway</strong>, which promotes fibroblast migration to wound sites (Chang et al., 2011). A follow-up study by Chang found that BPC-157 also upregulated growth hormone receptor expression in tendon fibroblasts, one of the most prominently affected genes, suggesting the peptide amplifies the tissue\'s responsiveness to circulating growth factors.</p>
+
+<p>BPC-157\'s effects tend to concentrate near the administration site, which is why subcutaneous injection near the injury is the standard approach for musculoskeletal applications. However, even oral dosing has demonstrated systemic healing effects in animal studies, likely because the peptide is unusually stable in stomach acid, a property that makes biological sense given its gastric origin.</p>
+
+<h3>TB-500: The Systemic Rebuilder</h3>
+
+<p>TB-500 is a synthetic fragment of <strong>thymosin beta-4</strong>, a 43-amino-acid protein found in virtually every cell in the human body. Thymosin beta-4 is particularly concentrated in blood platelets, wound fluid, and immune cells, exactly the sites where tissue repair is actively underway. It was first isolated from calf thymus in the 1980s, and research has since been conducted across multiple independent laboratories, giving it broader independent replication than BPC-157.</p>
+
+<p>TB-500\'s core mechanism is <strong>actin regulation</strong>. Actin is one of the most abundant proteins in the body and forms the cytoskeleton, the structural scaffolding that gives cells their shape and enables them to move. TB-500 binds to G-actin monomers and prevents them from polymerizing into rigid filaments. This keeps cells flexible and mobile, which is essential for wound healing: fibroblasts, endothelial cells, and immune cells need to physically migrate to injury sites, and they cannot do that through a rigid cytoskeletal network.</p>
+
+<p>Beyond actin regulation, TB-500 promotes <strong>angiogenesis</strong> by recruiting endothelial cells to form new blood vessels (Smart et al., 2007). It activates <strong>satellite cells</strong>, the stem cells responsible for muscle fiber regeneration, giving it a direct regenerative mechanism in muscle tissue that BPC-157 lacks. Research published in the FASEB Journal showed that thymosin beta-4 promoted satellite cell mobilization and faster restoration of muscle architecture after injury.</p>
+
+<p>Critically, TB-500 distributes systemically regardless of injection site. It travels through the bloodstream and concentrates wherever damage signals are strongest. This means you do not need to inject it near the injury, a practical advantage for deep or difficult-to-reach tissue damage.</p>
+
+<div class="d d-a">
+<div class="s">Key distinction</div>
+<p>BPC-157 modulates the chemical environment for healing: growth factors, nitric oxide, neurotransmitter balance. TB-500 physically reorganizes the cellular machinery that enables repair: actin dynamics, cell migration, stem cell activation. They are different tools for different aspects of the same problem.</p>
+</div>
+
+<!-- MECHANISM COMPARISON CHART -->
+<h3>Mechanism Strength Comparison</h3>
+<p style="font-size:13px;color:var(--mut);margin-bottom:4px;">Relative strength of each peptide across key healing mechanisms (based on preclinical data).</p>
+
+<div class="svg-box" style="padding-bottom:24px;">
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+<!-- Labels -->
+<text x="150" y="30" text-anchor="end" font-family="DM Sans,sans-serif" font-size="12" font-weight="500" fill="#18182A">Angiogenesis</text>
+<text x="150" y="70" text-anchor="end" font-family="DM Sans,sans-serif" font-size="12" font-weight="500" fill="#18182A">Cell migration</text>
+<text x="150" y="110" text-anchor="end" font-family="DM Sans,sans-serif" font-size="12" font-weight="500" fill="#18182A">Growth factors</text>
+<text x="150" y="150" text-anchor="end" font-family="DM Sans,sans-serif" font-size="12" font-weight="500" fill="#18182A">NO modulation</text>
+<text x="150" y="190" text-anchor="end" font-family="DM Sans,sans-serif" font-size="12" font-weight="500" fill="#18182A">Actin regulation</text>
+<text x="150" y="230" text-anchor="end" font-family="DM Sans,sans-serif" font-size="12" font-weight="500" fill="#18182A">Stem cell activation</text>
+<text x="150" y="270" text-anchor="end" font-family="DM Sans,sans-serif" font-size="12" font-weight="500" fill="#18182A">Anti-inflammatory</text>
+
+<!-- Background tracks -->
+<rect x="165" y="18" width="480" height="18" rx="4" fill="#EDECE8"/>
+<rect x="165" y="58" width="480" height="18" rx="4" fill="#EDECE8"/>
+<rect x="165" y="98" width="480" height="18" rx="4" fill="#EDECE8"/>
+<rect x="165" y="138" width="480" height="18" rx="4" fill="#EDECE8"/>
+<rect x="165" y="178" width="480" height="18" rx="4" fill="#EDECE8"/>
+<rect x="165" y="218" width="480" height="18" rx="4" fill="#EDECE8"/>
+<rect x="165" y="258" width="480" height="18" rx="4" fill="#EDECE8"/>
+
+<!-- BPC-157 bars (blue) -->
+<rect x="165" y="18" width="336" height="8" rx="4" fill="#2956A6" opacity="0.85"/><!-- 70% angio -->
+<rect x="165" y="58" width="240" height="8" rx="4" fill="#2956A6" opacity="0.85"/><!-- 50% migration -->
+<rect x="165" y="98" width="432" height="8" rx="4" fill="#2956A6" opacity="0.85"/><!-- 90% GFs -->
+<rect x="165" y="138" width="456" height="8" rx="4" fill="#2956A6" opacity="0.85"/><!-- 95% NO -->
+<rect x="165" y="178" width="48" height="8" rx="4" fill="#2956A6" opacity="0.85"/><!-- 10% actin -->
+<rect x="165" y="218" width="96" height="8" rx="4" fill="#2956A6" opacity="0.85"/><!-- 20% stem -->
+<rect x="165" y="258" width="336" height="8" rx="4" fill="#2956A6" opacity="0.85"/><!-- 70% anti-inflam -->
+
+<!-- TB-500 bars (teal), offset down by 10px -->
+<rect x="165" y="28" width="384" height="8" rx="4" fill="#187A62" opacity="0.85"/><!-- 80% angio -->
+<rect x="165" y="68" width="432" height="8" rx="4" fill="#187A62" opacity="0.85"/><!-- 90% migration -->
+<rect x="165" y="108" width="192" height="8" rx="4" fill="#187A62" opacity="0.85"/><!-- 40% GFs -->
+<rect x="165" y="148" width="48" height="8" rx="4" fill="#187A62" opacity="0.85"/><!-- 10% NO -->
+<rect x="165" y="188" width="456" height="8" rx="4" fill="#187A62" opacity="0.85"/><!-- 95% actin -->
+<rect x="165" y="228" width="408" height="8" rx="4" fill="#187A62" opacity="0.85"/><!-- 85% stem -->
+<rect x="165" y="268" width="336" height="8" rx="4" fill="#187A62" opacity="0.85"/><!-- 70% anti-inflam -->
+
+<!-- Legend -->
+<rect x="230" y="298" width="12" height="12" rx="3" fill="#2956A6"/>
+<text x="248" y="309" font-family="DM Sans,sans-serif" font-size="12" fill="#86869A">BPC-157</text>
+<rect x="340" y="298" width="12" height="12" rx="3" fill="#187A62"/>
+<text x="358" y="309" font-family="DM Sans,sans-serif" font-size="12" fill="#86869A">TB-500</text>
+</svg>
+</div>
+
+<!-- INJURY-BY-INJURY -->
+<h2>Which Peptide for Which Injury?</h2>
+
+<p>This is where the comparison becomes practical. Each peptide has clear advantages depending on the tissue involved and whether the injury is acute or chronic.</p>
+
+<h3>Tendon and Ligament Injuries</h3>
+
+<p>Both peptides show strong preclinical results for connective tissue repair, but through different angles. BPC-157 accelerated healing of transected Achilles tendons in rats, improving collagen organization and biomechanical strength via FAK-paxillin mediated fibroblast migration (Chang et al., 2011). TB-500 improved collagen fiber alignment and mechanical properties in tendon models through its actin-regulation-driven cell migration.</p>
+
+<p>The practical distinction: for <strong>acute, localized tendon or ligament injuries</strong> (a fresh tear, a sprain), BPC-157 injected near the injury site offers the more targeted response, directly boosting local growth factors and VEGF. For <strong>chronic tendon problems</strong> where poor blood supply is the bottleneck (long-standing tendinopathy, old injuries with persistent pain), TB-500\'s systemic angiogenesis may be more effective because it does not depend on local injection to reach the target tissue.</p>
+
+<h3>Muscle Injuries</h3>
+
+<p>TB-500 has the clear edge here. Its ability to activate satellite cells, the stem cells responsible for regenerating muscle fibers, gives it a direct regenerative mechanism that BPC-157 does not possess. Research showed thymosin beta-4 promoted satellite cell mobilization and faster restoration of muscle architecture after injury. BPC-157 does accelerate muscle crush injury recovery in animal models (Novinscak et al., 2008), but through less direct pathways involving growth factor support rather than stem cell activation.</p>
+
+<h3>Gut and GI Issues</h3>
+
+<p>This category is not even close. BPC-157 is derived from a gastric protein and has its deepest evidence base in gastrointestinal applications. It has healed gastric, duodenal, and colonic ulcers across dozens of animal studies (Sikiric et al., 1994), protected against NSAID-induced gut damage, and improved inflammatory bowel disease markers in animal models. It is also orally bioavailable for GI targets, a unique advantage. TB-500 has no meaningful gastrointestinal research.</p>
+
+<h3>Nerve Injuries</h3>
+
+<p>BPC-157 takes this one. It accelerated sciatic nerve regeneration in rats and improved functional recovery (Gjurasin et al., 2010). It also demonstrated neuroprotective effects in traumatic brain injury models and interacts with the dopaminergic and GABAergic neurotransmitter systems. TB-500 lacks dedicated nerve healing research.</p>
+
+<h3>Cardiac Tissue</h3>
+
+<p>TB-500 wins outright. A landmark study published in Nature demonstrated that thymosin beta-4 activated cardiac progenitor cells and promoted new cardiomyocyte formation in adult mice (Smart et al., 2011). Additional research showed reduced scar size and improved cardiac function after heart attacks (Bock-Marquette et al., 2004). This is some of the strongest data in TB-500\'s entire portfolio. BPC-157 has some cardiovascular research, including anti-arrhythmic effects and blood pressure modulation, but nothing approaching TB-500\'s cardiac regeneration data.</p>
+
+<h3>Bone Healing</h3>
+
+<p>BPC-157 has the stronger direct evidence here. Studies in rabbit models showed improved bone callus formation and faster radiographic healing (Sebecic et al., 1999). TB-500\'s angiogenic properties could theoretically support the vascularization that bone repair requires, but direct bone healing data is limited.</p>
+
+<!-- INJURY DECISION TABLE -->
+<table class="tbl">
+<thead><tr><th>Injury Type</th><th>Best Choice</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><strong>Acute tendon tear</strong></td><td class="win">BPC-157</td><td>Localized growth factor response via VEGF and FAK-paxillin</td></tr>
+<tr><td><strong>Chronic tendinopathy</strong></td><td class="win" style="color:var(--teal);">TB-500</td><td>Systemic angiogenesis addresses poor vascularity</td></tr>
+<tr><td><strong>Muscle strain/tear</strong></td><td class="win" style="color:var(--teal);">TB-500</td><td>Satellite cell activation for muscle fiber regeneration</td></tr>
+<tr><td><strong>Gut issues (ulcers, IBD)</strong></td><td class="win">BPC-157</td><td>Gastric origin; extensive GI data; oral bioavailability</td></tr>
+<tr><td><strong>Ligament sprain (fresh)</strong></td><td class="win">BPC-157</td><td>Localized repair signaling</td></tr>
+<tr><td><strong>Ligament (chronic/old)</strong></td><td class="win" style="color:var(--teal);">TB-500</td><td>Blood vessel formation in hypovascular tissue</td></tr>
+<tr><td><strong>Bone fracture</strong></td><td class="win">BPC-157</td><td>Direct bone callus evidence in rabbit models</td></tr>
+<tr><td><strong>Heart tissue damage</strong></td><td class="win" style="color:var(--teal);">TB-500</td><td>Cardiac progenitor cell activation (Nature publication)</td></tr>
+<tr><td><strong>Nerve injury</strong></td><td class="win">BPC-157</td><td>Sciatic nerve regeneration evidence</td></tr>
+<tr><td><strong>General multi-site recovery</strong></td><td class="win" style="color:var(--teal);">TB-500</td><td>Systemic distribution regardless of injection site</td></tr>
+<tr><td><strong>Post-surgical healing</strong></td><td class="win">BPC-157</td><td>Anastomosis and wound healing data</td></tr>
+<tr><td><strong>Stubborn, non-healing injury</strong></td><td class="draw">Stack both</td><td>Complementary mechanisms cover more biological ground</td></tr>
+</tbody>
+</table>
+
+<!-- RESEARCH EVIDENCE -->
+<h2>Research Evidence: Depth and Quality</h2>
+
+<p>Neither peptide has completed large-scale human clinical trials. But the character of their evidence bases differs in ways that matter for how much confidence you can place in the findings.</p>
+
+<p>BPC-157 has the larger total publication count, with over 100 studies spanning three decades. However, the vast majority of this work comes from a single research group led by Professor Sikiric at the University of Zagreb. This is both a strength (extraordinary depth and consistency) and a limitation (independent replication by other laboratories is sparse). A 2025 systematic review in an orthopaedic sports medicine journal identified 36 studies specifically relevant to musculoskeletal injury, with 35 being preclinical and only one being a clinical study (a retrospective case series of 12 knee pain patients with no control group).</p>
+
+<p>TB-500\'s evidence base is smaller in total volume but benefits from broader independent replication across different research groups, including a landmark cardiac regeneration study published in Nature (Smart et al., 2011). For muscle and cardiac tissue, TB-500\'s evidence is arguably stronger in quality despite being smaller in quantity.</p>
+
+<div class="g2">
+<div class="cd cb">
+<div class="tg">BPC-157 evidence profile</div>
+<h3>Volume leader, replication gap</h3>
+<p style="font-size:14px;">100+ published studies. Consistent positive results across tendon, muscle, ligament, bone, gut, nerve, and vascular tissue. Primary limitation: most research originates from a single laboratory. The lone human musculoskeletal study (n=12, retrospective, uncontrolled) does not meet the standard for clinical validation.</p>
+</div>
+<div class="cd ct">
+<div class="tg">TB-500 evidence profile</div>
+<h3>Broader replication, Nature publication</h3>
+<p style="font-size:14px;">50+ published studies across multiple independent research groups. Stronger independent verification than BPC-157. Cardiac regeneration data published in Nature. Muscle satellite cell activation well-documented. Limitation: less total volume, no human trials for musculoskeletal applications.</p>
+</div>
+</div>
+
+<!-- DOSING PROTOCOLS -->
+<h2>Dosing Protocols</h2>
+
+<p>The dosing structures for these two peptides are quite different, reflecting their different pharmacological profiles and mechanisms of action.</p>
+
+<div class="g2">
+<div class="mc">
+<h4 style="color:var(--blue);">BPC-157 Protocol</h4>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Dose:</strong> 250-500 mcg per injection</p>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Frequency:</strong> Once or twice daily</p>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Route:</strong> Subcutaneous near injury site (or oral for GI)</p>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Cycle:</strong> 4-8 weeks</p>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Structure:</strong> Flat dosing (same dose throughout)</p>
+<p style="font-size:14px;margin-bottom:0;"><strong>Reconstitution:</strong> 5 mg vial + 2 mL BAC water = 250 mcg per 10 units</p>
+</div>
+<div class="mc">
+<h4 style="color:var(--teal);">TB-500 Protocol</h4>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Loading dose:</strong> 2-2.5 mg twice per week</p>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Loading duration:</strong> 4-6 weeks</p>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Maintenance dose:</strong> 2-2.5 mg once every 1-2 weeks</p>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Maintenance duration:</strong> 4-8 weeks</p>
+<p style="font-size:14px;margin-bottom:6px;"><strong>Route:</strong> Subcutaneous injection only (any site)</p>
+<p style="font-size:14px;margin-bottom:0;"><strong>Structure:</strong> Two-phase (loading + maintenance)</p>
+</div>
+</div>
+
+<p>BPC-157 requires more frequent injections but at smaller volumes. TB-500 uses fewer, larger injections with a distinct loading phase to build systemic levels before tapering to maintenance. BPC-157\'s oral option for GI applications is a significant practical advantage for people who prefer to avoid injections entirely, though subcutaneous injection remains the preferred route for musculoskeletal targets.</p>
+
+<!-- THE STACK SECTION -->
+<h2>The Best Approach: Stacking Both</h2>
+
+<div class="stack-box">
+<p style="font-size:1.05rem;color:var(--ink);font-weight:500;margin-bottom:16px;">For stubborn, moderate-to-severe, or multi-site injuries, combining BPC-157 and TB-500 is the most comprehensive peptide approach available. The rationale is not theoretical hand-waving. It follows directly from the non-overlapping mechanisms described above.</p>
+
+<p style="margin-bottom:14px;"><strong>BPC-157 handles the chemical coordination:</strong> growth factor upregulation, nitric oxide normalization, neurotransmitter stabilization, and localized VEGF-driven angiogenesis at the injury site.</p>
+
+<p style="margin-bottom:14px;"><strong>TB-500 handles the structural remodeling:</strong> actin reorganization for cell migration, endothelial cell recruitment for systemic angiogenesis, satellite cell activation for muscle regeneration, and improved collagen deposition quality.</p>
+
+<p style="margin-bottom:0;"><strong>Together:</strong> Both peptides drive angiogenesis, but through different pathways (VEGF upregulation vs. endothelial cell migration). This dual-pathway approach to blood vessel formation may amplify vascular support to hypovascular tissues like tendons and ligaments beyond what either peptide achieves alone. Meanwhile, BPC-157 primes the healing environment with growth factors while TB-500 physically delivers the cells needed to execute the repair.</p>
+</div>
+
+<h3>Stack Protocol</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Dose</th><th>Frequency</th><th>Duration</th><th>Injection Site</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>250-500 mcg</td><td>Once or twice daily</td><td>4-8 weeks</td><td>Subcutaneous, near the injury</td></tr>
+<tr><td><strong>TB-500 (loading)</strong></td><td>2-2.5 mg</td><td>Twice per week</td><td>4-6 weeks</td><td>Subcutaneous, anywhere (abdomen common)</td></tr>
+<tr><td><strong>TB-500 (maintenance)</strong></td><td>2-2.5 mg</td><td>Once every 1-2 weeks</td><td>4-8 weeks</td><td>Subcutaneous, anywhere</td></tr>
+</tbody>
+</table>
+
+<p>The most common approach is to inject BPC-157 near the injury site (taking advantage of its localized effects) and TB-500 subcutaneously in a convenient location like the abdomen (since it distributes systemically regardless). Many users run BPC-157 throughout the entire protocol while TB-500 follows its loading-then-maintenance schedule alongside it.</p>
+
+<h3>When to Stack vs. Use One</h3>
+
+<div class="g2">
+<div class="cd cb">
+<div class="tg">One peptide is enough</div>
+<h3>BPC-157 alone</h3>
+<ul class="bl">
+<li>Mild, acute tendon or ligament injury</li>
+<li>Gut/GI issues (ulcers, IBD, NSAID damage)</li>
+<li>Post-surgical recovery (single site)</li>
+<li>Budget-constrained (BPC-157 is cheaper)</li>
+<li>Nerve injury or neuropathy</li>
+</ul>
+</div>
+<div class="cd ct">
+<div class="tg">One peptide is enough</div>
+<h3>TB-500 alone</h3>
+<ul class="bl" style="--bl-color:var(--teal);">
+<li>Muscle tear or strain (satellite cell activation)</li>
+<li>Systemic inflammation or multiple injury sites</li>
+<li>Cardiac concerns (strongest evidence base)</li>
+<li>Chronic issues with poor blood supply</li>
+<li>Preference for fewer injections</li>
+</ul>
+</div>
+</div>
+
+<div class="cd cp">
+<div class="tg">Stack both</div>
+<h3>Combine BPC-157 + TB-500</h3>
+<p style="font-size:14px;">Moderate to severe single-site injury, chronic injury that has not responded to single-peptide approaches, post-surgical recovery from major procedures, or any situation where you want the broadest coverage of healing mechanisms. This is the protocol most experienced peptide users gravitate toward for serious injuries.</p>
+</div>
+
+<div class="d d-r">
+<div class="s">Important caveat</div>
+<p>No controlled studies have examined the BPC-157 and TB-500 combination in humans. Stacking protocols are based on mechanistic reasoning (non-overlapping pathways), pharmacological logic (no known negative interactions), and community experience. They are not validated by clinical trial data.</p>
+</div>
+
+<!-- SIDE EFFECTS -->
+<h2>Side Effects and Safety</h2>
+
+<p>Both peptides have favorable safety profiles in available research. In preclinical studies, no lethal dose could be determined for BPC-157 even at very high amounts, and no organ toxicity was observed with either compound. But the specific risk patterns differ, and the absence of long-term human safety data is the dominant concern for both.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>BPC-157</th><th>TB-500</th></tr></thead>
+<tbody>
+<tr><td><strong>Nausea</strong></td><td>Occasional (especially oral route)</td><td>Rare</td></tr>
+<tr><td><strong>Headache</strong></td><td>Infrequent</td><td>Most commonly reported side effect</td></tr>
+<tr><td><strong>Fatigue/lethargy</strong></td><td>Rare</td><td>Occasional (loading phase)</td></tr>
+<tr><td><strong>Injection site reaction</strong></td><td>Mild</td><td>Mild</td></tr>
+<tr><td><strong>Dizziness</strong></td><td>Rare</td><td>Occasional (post-injection)</td></tr>
+<tr><td><strong>Temporary pain increase</strong></td><td>Not typical</td><td>Reported by some users</td></tr>
+<tr><td><strong>Cancer concern</strong></td><td>Theoretical (angiogenesis)</td><td>Theoretical (angiogenesis + elevated Tb4 in some tumors)</td></tr>
+<tr><td><strong>Drug interactions</strong></td><td>Possible (NO system, neurotransmitters)</td><td>Less characterized</td></tr>
+<tr><td><strong>Long-term human safety data</strong></td><td>None</td><td>None</td></tr>
+</tbody>
+</table>
+
+<p>The shared concern for both peptides is <strong>angiogenesis in the context of cancer</strong>. Both BPC-157 and TB-500 promote the formation of new blood vessels. In the context of healing, this is exactly what you want. But tumors also depend on angiogenesis to grow and metastasize. Individuals with active cancer, a recent history of malignancy, or a strong family history of cancer should exercise significant caution and consult with an oncologist before using either peptide. TB-500 carries the additional nuance that thymosin beta-4 levels have been found elevated in some tumor types, though a causal relationship has not been established.</p>
+
+<div class="d d-a">
+<div class="s">Who should avoid both peptides</div>
+<p>Individuals with active cancer or recent history of malignancy. Pregnant or nursing women (no safety data). Anyone on prescription medications affecting the nitric oxide system, neurotransmitter balance, or immune function (discuss with a physician first). Competitive athletes subject to WADA testing should note that TB-500 is prohibited under the S2 category. BPC-157 is not currently on the prohibited list but classifications can change.</p>
+</div>
+
+<!-- REGULATORY STATUS -->
+<h2>Legal and Regulatory Status</h2>
+
+<table class="tbl">
+<thead><tr><th>Factor</th><th>BPC-157</th><th>TB-500</th></tr></thead>
+<tbody>
+<tr><td><strong>FDA approved</strong></td><td>No</td><td>No</td></tr>
+<tr><td><strong>FDA compounding status</strong></td><td>Category 2 (prohibited for compounding)</td><td>Category 2 (prohibited for compounding)</td></tr>
+<tr><td><strong>Available as research chemical</strong></td><td>Yes</td><td>Yes</td></tr>
+<tr><td><strong>WADA prohibited</strong></td><td>Not currently (verify regularly)</td><td>Yes (S2 category)</td></tr>
+<tr><td><strong>Standard drug test detection</strong></td><td>No</td><td>No</td></tr>
+<tr><td><strong>Advanced sports panel detection</strong></td><td>Possible</td><td>Yes, detectable</td></tr>
+</tbody>
+</table>
+
+<p>Both peptides were placed on FDA Category 2 of the interim 503A bulks list in September 2023, which effectively prohibited compounding pharmacies from producing them. As of early 2026, both remain in a restricted regulatory state. They are available through research chemical suppliers labeled "for research use only," but the quality control implications of purchasing from unregulated sources are significant. A 2025 systematic review noted that 12 to 58 percent of ergo-nutritional supplements are contaminated with other substances, and peptides from unregulated sources face the same risk profile.</p>
+
+<!-- BOTTOM LINE -->
+<h2>The Bottom Line</h2>
+
+<p>BPC-157 and TB-500 are the two most popular healing peptides for good reason. They both accelerate tissue repair, both have substantial preclinical research behind them, and both address fundamental bottlenecks in the body\'s healing process, particularly the poor blood supply and sluggish cellular response that make tendon, ligament, and cartilage injuries so frustratingly slow to resolve.</p>
+
+<p>But they are not the same tool. <strong>Choose BPC-157</strong> if your primary concern is gut healing, a localized tendon or ligament injury, nerve damage, bone healing, or post-surgical recovery. It is cheaper, more versatile in administration routes (including oral for GI targets), and has the larger overall research base. Its effects concentrate near the injection site, making it the more targeted option.</p>
+
+<p><strong>Choose TB-500</strong> if you are dealing with muscle injuries, systemic tissue damage, chronic problems with poor blood supply, cardiac concerns, or multiple injury sites. Its satellite cell activation is unique among healing peptides, its systemic distribution means it reaches damage wherever it is, and its cardiac regeneration data is the strongest in the entire peptide research landscape.</p>
+
+<p><strong>Stack both</strong> if you have a stubborn injury that has not responded to single-peptide approaches, a moderate-to-severe injury that would benefit from the broadest possible coverage, or if you simply want to address both the chemical signaling environment (BPC-157) and the physical cellular infrastructure (TB-500) simultaneously. This is the most comprehensive approach available, and it is the protocol experienced users gravitate toward for serious injuries.</p>
+
+<p>Neither peptide is FDA-approved for human use. All evidence is preclinical. Both are currently restricted for compounding in the United States. Work with a knowledgeable healthcare provider, do not treat these as replacements for proper medical care and rehabilitation, and understand that quality control with research-grade products is a real and present concern.</p>
+
+<div class="d d-t">
+<div class="s">Final word</div>
+<p>The strongest approach to peptide-assisted injury recovery is layering these compounds on top of a foundation that is already optimized: proper rehabilitation exercises, adequate protein and sleep, inflammation management, and appropriate medical care. Peptides can potentially accelerate recovery, but they do not replace the fundamentals. Build the base first, then consider the tools.</p>
+</div>
+
+<p style="font-size:13px;color:var(--mut);margin-top:40px;padding-top:20px;border-top:1px solid var(--bdr);">
+<strong>Sources:</strong> Sikiric P et al., Journal of Physiology (Paris), 1994; Sikiric P et al., Current Pharmaceutical Design, 2014; Hsieh MJ et al., International Journal of Medical Sciences, 2017; Chang CH et al., Journal of Orthopaedic Research, 2011; Goldstein AL et al., Annals of the New York Academy of Sciences, 2005; Smart N et al., Nature, 2011; Bock-Marquette I et al., Nature, 2004; Novinscak T et al., Journal of Physiology and Pharmacology, 2008; Gjurasin M et al., Digestive Diseases and Sciences, 2010; Cerovecki T et al., Journal of Orthopaedic Research, 2010; Sebecic B et al., Journal of Orthopaedic Research, 1999; Philp D et al., FASEB Journal, 2004; Systematic review: BPC-157 in Orthopaedic Sports Medicine, The Orthopaedic Journal of Sports Medicine, 2025; Lee E &amp; Padgett B, Alternative Therapies in Health and Medicine, 2021.
+<br><br>
+<em>This article is for informational purposes only and does not constitute medical advice. Neither BPC-157 nor TB-500 is FDA-approved for human use. Both are currently prohibited for compounding under FDA Category 2. Consult a qualified healthcare provider before considering any peptide protocol.</em>
+</p>
+
+</div>
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <div class="mb-4">
+        <span class="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-2 py-1 rounded">{frontmatter.category}</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{frontmatter.title}</h1>
+      <p class="text-gray-500 text-sm mb-2">{frontmatter.description}</p>
+      <div class="text-gray-400 text-xs mb-8">By <strong>{frontmatter.author}</strong> · {formattedDate}</div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg max-w-none" set:html={rawHTML} />
+    </article>
+  </div>
+</Base>
