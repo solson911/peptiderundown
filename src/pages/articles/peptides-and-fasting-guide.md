@@ -43,7 +43,7 @@ These peptides work best during fasting windows:
 
 These peptides benefit from nutrient co-factors:
 
-- **Gut-healing peptides** (BPC-157) - More effective during refeeding periods
+- **<a href="/articles/best-peptides-for-gut-health">Gut-healing peptides</a>** (BPC-157) - More effective during refeeding periods
 - **NAD+ precursors** (Epitalon) - Better absorption with dietary fats
 - **Cognitive peptides** (Semax) - Food buffers potential mild nausea
 
