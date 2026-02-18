@@ -13,15 +13,15 @@ author: "PeptideRundown Team"
 
 Peptides won't replace food and training. Nothing will.
 
-But if your nutrition and programming are already dialed in, certain peptides can push recovery, growth hormone output, and anabolic signaling in ways that natural lifters simply can't access. The trick is knowing which ones actually work, which ones are overhyped, and how to combine them intelligently.
+But if your nutrition and programming are already dialed in, certain <a href="/articles/what-are-peptides-beginners-guide">peptides</a> can push recovery, growth hormone output, and anabolic signaling in ways that natural lifters simply can't access. The trick is knowing which ones actually work, which ones are overhyped, and how to combine them intelligently.
 
 This guide ranks every peptide commonly used for muscle growth, breaks down the mechanisms behind each, and gives you practical stacking and dosing frameworks.
 
 > **Key Takeaways**
 >
-> - **GH secretagogues** like CJC-1295 and ipamorelin are the foundation of most muscle-building peptide protocols
+> - **GH secretagogues** like <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> and <a href="/articles/ipamorelin-complete-guide">ipamorelin</a> are the foundation of most muscle-building peptide protocols
 > - **Follistatin and myostatin inhibitors** offer the highest theoretical ceiling but carry the most unknowns
-> - **BPC-157 and TB-500** don't directly build muscle but accelerate recovery, which indirectly supports growth
+> - **<a href="/articles/bpc-157-complete-guide">BPC-157</a>** and <a href="/articles/tb-500-complete-guide">TB-500</a> don't directly build muscle but accelerate recovery, which indirectly supports growth
 > - **MK-677** is technically not a peptide but gets grouped with them because it raises GH through a similar pathway
 > - **Stacking matters** more than any single compound; the right combinations outperform solo use significantly
 
@@ -67,7 +67,7 @@ CJC-1295 raised IGF-1 levels by **65-100%** in clinical studies, with effects la
 
 ([Teichman et al., 2006](https://pubmed.ncbi.nlm.nih.gov/16352683/))
 
-For a full breakdown, see our [CJC-1295 DAC guide](/articles/cjc-1295-dac-guide).
+For a full breakdown, see our <a href="/articles/cjc-1295-dac-guide">CJC-1295 DAC guide</a>.
 
 ### CJC-1295 (without DAC) / Mod GRF 1-29
 
@@ -93,7 +93,7 @@ The cleanest ghrelin mimetic available. Ipamorelin stimulates GH release without
 
 > **Key Finding:** In a head-to-head comparison, ipamorelin produced GH pulses comparable to GHRP-6 but without the cortisol and prolactin spikes that make GHRP-6 problematic for long-term use. ([Raun et al., 1998](https://pubmed.ncbi.nlm.nih.gov/9849822/))
 
-For a detailed look at the CJC-1295 and ipamorelin combination, check out our [tesamorelin and ipamorelin stack guide](/articles/tesamorelin-ipamorelin-stack-guide).
+For a detailed look at the CJC-1295 and ipamorelin combination, check out our <a href="/articles/tesamorelin-ipamorelin-stack-guide">tesamorelin and ipamorelin stack guide</a>.
 
 ### Tesamorelin
 
@@ -260,7 +260,7 @@ A synthetic peptide derived from a protective protein found in human gastric jui
 
 ([Chang et al., 2011](https://pubmed.ncbi.nlm.nih.gov/21030672/))
 
-See our full [BPC-157 guide](/articles/bpc-157-complete-guide) for dosing and protocols.
+See our full <a href="/articles/bpc-157-complete-guide">BPC-157 guide</a> for dosing and protocols.
 
 ### TB-500
 
@@ -271,7 +271,7 @@ TB-500 (Thymosin Beta-4) is a naturally occurring peptide involved in tissue rep
 - **Promotes new blood vessel growth** similar to BPC-157
 - **Systemic effects** meaning it doesn't need to be injected at the injury site
 
-For the complete breakdown, read our [TB-500 guide](/articles/tb-500-complete-guide).
+For the complete breakdown, read our <a href="/articles/tb-500-complete-guide">TB-500 guide</a>.
 
 ### BPC-157 vs. TB-500
 
@@ -361,7 +361,7 @@ Here's a consolidated reference table for every compound discussed.
 
 > **Important:** These doses come from research protocols, community reports, and clinical trials where available. They are not medical prescriptions. Work with a qualified provider before starting any peptide protocol.
 
-For injection technique, see our [subcutaneous injection guide](/articles/how-to-inject-peptides-subcutaneously). For reconstitution instructions, check the [reconstitution guide](/articles/how-to-reconstitute-peptides).
+For injection technique, see our <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous injection guide</a>. For reconstitution instructions, check the <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a>.
 
 ## What About Natural Myostatin Reduction?
 
@@ -393,7 +393,7 @@ Yes, and many people do. MK-677 provides sustained baseline GH elevation while i
 
 ### Are muscle-building peptides legal?
 
-Most are legal to purchase as "research chemicals" in the United States but are not FDA-approved for muscle building. Tesamorelin is the exception, holding FDA approval for HIV-associated lipodystrophy. Check our [peptide legality guide](/articles/are-peptides-legal-fda-regulations-2026) for current regulations.
+Most are legal to purchase as "research chemicals" in the United States but are not FDA-approved for muscle building. Tesamorelin is the exception, holding FDA approval for HIV-associated lipodystrophy. Check our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for current regulations.
 
 ### Do I need to cycle peptides?
 
