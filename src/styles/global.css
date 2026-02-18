@@ -1558,3 +1558,25 @@ html {
   font-size: 14px;
   color: #666;
 }
+
+/* ============================================
+   Internal link styling — make links visible
+   ============================================ */
+.article-content a[href^="/articles/"],
+.prose a[href^="/articles/"] {
+  color: #0f766e;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #0f766e80;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  border-radius: 3px;
+  padding: 0 2px;
+  transition: background-color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.article-content a[href^="/articles/"]:hover,
+.prose a[href^="/articles/"]:hover {
+  background-color: #0f766e12;
+  text-decoration-color: #0f766e;
+}
