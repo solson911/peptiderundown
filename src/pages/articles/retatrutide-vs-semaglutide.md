@@ -15,7 +15,7 @@ Semaglutide changed everything. Wegovy and Ozempic proved that pharmacological <
 
 Losing **15%** of your body weight with a weekly injection was unheard of a decade ago.
 
-But semaglutide might already be getting surpassed. <a href="/articles/retatrutide-complete-guide">Retatrutide</a>, Eli Lilly's triple agonist, posted **24.2%** body weight loss at the highest dose in Phase 2, approaching bariatric surgery territory without the scalpel.
+But <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> might already be getting surpassed. <a href="/articles/retatrutide-complete-guide">Retatrutide</a>, Eli Lilly's triple agonist, posted **24.2%** body <a href="/articles/semaglutide-weight-loss-guide">weight loss</a> at the highest dose in Phase 2, approaching bariatric surgery territory without the scalpel.
 
 > **Bottom Line:** Retatrutide produces ~**60%** more weight loss than semaglutide in clinical trials. But semaglutide has years of real-world data and proven cardiovascular benefits. The data suggests retatrutide is the more promising molecule, though semaglutide has earned its place.
 
@@ -23,7 +23,7 @@ But semaglutide might already be getting surpassed. <a href="/articles/retatruti
 
 | Feature | Semaglutide (Wegovy) | Retatrutide |
 |---------|---------------------|-------------|
-| **Receptor targets** | GLP-1 only | GLP-1 + GIP + Glucagon |
+| **Receptor targets** | <a href="/articles/semaglutide-weight-loss-guide">GLP-1</a> only | <a href="/articles/semaglutide-weight-loss-guide">GLP-1</a> + <a href="/articles/tirzepatide-complete-guide">GIP</a> + <a href="/articles/fat-burning-stack-retatrutide-5amino1mq-cardarine">Glucagon</a> |
 | **Generation** | 1st gen | 3rd gen |
 | **Max weight loss** | ~15-16% (68 wk) | ~24.2% (48 wk) |
 | **Liver fat reduction** | Modest | **82%** |
@@ -98,7 +98,7 @@ The Phase 2 trial enrolled **338 adults** with obesity. At 48 weeks on the highe
 | **Lost >15% body weight** | 83% | N/A |
 | **Lost >20% body weight** | 63% | N/A |
 
-Nearly two-thirds of people on the highest dose lost over **20%** of their body weight. The weight loss curve hadn't plateaued at 48 weeks.
+Nearly two-thirds of people on the highest dose lost over **20%** of their body weight. The <a href="/articles/semaglutide-weight-loss-guide">weight loss</a> curve hadn't plateaued at 48 weeks.
 
 ### Weight Loss by Retatrutide Dose
 
@@ -133,13 +133,13 @@ In practice, the GLP-1 and GIP components counteract this effect. Retatrutide ac
 
 ### Heart Rate
 
-Heart rate increases were noted in some retatrutide participants. Semaglutide also shows mild heart rate increases. Both will need continued monitoring.
+Heart rate increases were noted in some retatrutide participants. <a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> also shows mild heart rate increases. Both will need continued monitoring.
 
 > **Bottom Line:** Roughly comparable GI profiles. Neither compound shows a clear safety advantage at this stage.
 
 ## Muscle Preservation
 
-When you lose weight rapidly, a significant portion can come from lean tissue. That's bad for metabolic health, physical function, and long-term weight maintenance.
+When you lose weight rapidly, a significant portion can come from lean tissue. That's bad for metabolic health, physical function, and long-term <a href="/articles/semaglutide-weight-loss-guide">weight maintenance</a>.
 
 | Factor | Semaglutide | Retatrutide |
 |--------|-------------|-------------|
@@ -155,9 +155,9 @@ Glucagon promotes fat oxidation specifically, and preclinical data suggests that
 
 ### Liver Fat
 
-| Metric | Semaglutide | Retatrutide |
+| Metric | <a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> | Retatrutide |
 |--------|-------------|-------------|
-| **Liver fat reduction** | Moderate | **82%** at 48 weeks |
+| **Liver fat reduction** | Modest | **82%** at 48 weeks |
 | **Mechanism** | Indirect (weight loss) | Direct (glucagon targets hepatic fat) |
 | **MASLD resolution** | Being studied | 80%+ no longer qualified for diagnosis |
 
@@ -188,7 +188,7 @@ This is semaglutide's biggest practical advantage. It exists. You can get a pres
 
 ## Which Is Better For Whom?
 
-### Choose Semaglutide If:
+### Choose <a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> If:
 
 - **You need treatment now**  -  FDA-approved and available today
 - **Safety data matters most**  -  years of real-world evidence
@@ -198,7 +198,7 @@ This is semaglutide's biggest practical advantage. It exists. You can get a pres
 
 ### Choose Retatrutide If:
 
-- **Maximum weight loss is the goal**  -  **24%** vs. **15%** for semaglutide
+- **Maximum <a href="/articles/semaglutide-weight-loss-guide">weight loss</a> is the goal**  -  **24%** vs. **15%** for semaglutide
 - **Fatty liver is a major concern**  -  **82%** liver fat reduction in trials
 - **You've plateaued on GLP-1 monotherapy**  -  the triple mechanism offers more
 - **Muscle preservation matters**  -  early data suggests better fat-to-lean ratio (pending confirmation)
@@ -247,11 +247,11 @@ Tirzepatide is the middle step in the evolution from single to triple agonism. I
 
 We don't know yet. Long-term data beyond 48 weeks isn't available.
 
-If the pattern follows other incretin therapies, weight regain after cessation is likely. But while on treatment, weight loss was ongoing at 48 weeks, meaning longer treatment may produce even greater reductions.
+If the pattern follows other incretin therapies, weight regain after cessation is likely. But while on treatment, <a href="/articles/semaglutide-weight-loss-guide">weight loss</a> was ongoing at 48 weeks, meaning longer treatment may produce even greater reductions.
 
 ## The Bottom Line
 
-Semaglutide opened the door. It proved pharmacological obesity treatment could produce clinically meaningful weight loss with an acceptable safety profile.
+Semaglutide opened the door. It proved pharmacological obesity treatment could produce clinically meaningful <a href="/articles/best-peptides-for-fat-loss">weight loss</a> with an acceptable safety profile.
 
 Retatrutide is walking through it with better numbers. Nearly **25%** body weight loss, superior liver fat reduction, potentially better muscle preservation, and a mechanism that addresses energy expenditure in addition to appetite suppression.
 

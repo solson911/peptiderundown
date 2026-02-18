@@ -42,9 +42,9 @@ Key factors determining legality include intended use and source quality. Pharma
 
 | **Regulatory Category** | **Example Peptides** | **Prescription Required** |
 |--------------------------|----------------------|----------------------------|
-| Approved Medications | Tesamorelin, Sermorelin | Yes |
-| Research Compounds | BPC-157, TB-500 | No |
-| Cosmetic Peptides | Copper peptides, Matrixyl | No |
+| Approved Medications | <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Tesamorelin</a>, <a href="/articles/sermorelin-growth-hormone-guide">Sermorelin</a> | Yes |
+| Research Compounds | <a href="/articles/bpc-157-complete-guide">BPC-157</a>, <a href="/articles/tb-500-complete-guide">TB-500</a> | No |
+| Cosmetic Peptides | <a href="/articles/ghk-cu-copper-peptide-guide">Copper peptides</a>, Matrixyl | No |
 
 ---
 
@@ -202,7 +202,7 @@ Possible interactions exist with blood thinners and diabetes medications. Always
 **Q: How should I store peptides?**
 Most require refrigeration after mixing. Unmixed powders stay stable at room temperature. Follow manufacturers' instructions. Improper storage degrades peptides quickly. Always check expiration dates and discard any cloudy solutions.
 
-> **Research Insight:** Studies show certain peptides like AOD9604 and Tesamorelin can support healthy fat metabolism when combined with lifestyle changes. They work by enhancing lipolysis and regulating appetite hormones.
+> **Research Insight:** Studies show certain peptides like <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD9604</a> and <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Tesamorelin</a> can support healthy fat metabolism when combined with lifestyle changes. They work by enhancing lipolysis and regulating appetite hormones.
 
 **Q: Can peptides help with weight loss?**
 Some peptides support metabolic function but aren't magic solutions. They work best alongside proper nutrition and exercise. Results vary significantly between individuals. These peptides function as metabolic supporters rather than standalone solutions.

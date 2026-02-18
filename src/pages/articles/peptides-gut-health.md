@@ -159,7 +159,7 @@ For gut-specific issues, oral administration can be very effective. BPC-157 and 
 Peptides should not replace prescription medications without medical supervision. They work best as complementary therapies. Some people eventually reduce medications under professional guidance, but this requires careful monitoring.
 
 **What's the difference between BPC-157 and TB-500?**
-Both promote healing but through different mechanisms. BPC-157 is more gut-specific while TB-500 has broader systemic effects. They can be combined but that's generally unnecessary for gut-focused protocols. See our [comparison guide](/articles/bpc-157-vs-tb-500-comparison) for details.
+Both promote healing but through different mechanisms. BPC-157 is more gut-specific while TB-500 has broader systemic effects. They can be combined but that's generally unnecessary for gut-focused protocols. See our [<a href="/articles/bpc-157-vs-tb-500-comparison">comparison guide</a>](/articles/bpc-157-vs-tb-500-comparison) for details.
 
 **Should I continue peptides after symptoms improve?**
 After initial healing (6-8 weeks), consider a maintenance protocol at lower doses. Many find benefit in cycling peptides 2-3 months on, 1 month off. Ongoing gut support may be needed for chronic conditions. Work with your healthcare provider to develop a sustainable plan.

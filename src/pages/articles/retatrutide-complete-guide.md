@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 ⚠️ **Medical Disclaimer:** This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
 
-Retatrutide is the drug that has the obesity pharmacology world talking in a way it has not talked since tirzepatide arrived on the scene. Developed by Eli Lilly under the designation LY3437943, it is the first <a href="/articles/fat-burning-stack-retatrutide-5amino1mq-cardarine">triple hormone receptor agonist</a> to make it through Phase 2 trials and into a large-scale Phase 3 program. Where <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> (Wegovy) targets one receptor and <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> (Zepbound) targets two, retatrutide hits all three at once: GLP-1, GIP, and glucagon.
+Retatrutide is the drug that has the obesity pharmacology world talking in a way it has not talked since <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> arrived on the scene. Developed by Eli Lilly under the designation LY3437943, it is the first <a href="/articles/fat-burning-stack-retatrutide-5amino1mq-cardarine">triple hormone receptor agonist</a> to make it through Phase 2 trials and into a large-scale Phase 3 program. Where <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> (Wegovy) targets one receptor and tirzepatide (Zepbound) targets two, retatrutide hits all three at once: GLP-1, GIP, and glucagon.
 
 The results so far have been staggering. In Phase 2 trials published in the New England Journal of Medicine, participants on the highest dose lost an average of 24.2% of their body weight in 48 weeks. And the weight loss curve had not yet plateaued when the trial ended. In the first Phase 3 trial (TRIUMPH-4), completed in late 2025, that number climbed even higher: 28.7% average body weight loss at 68 weeks on the 12 mg dose.
 
@@ -47,17 +47,17 @@ Most people in the peptide space already understand how <a href="/articles/semag
 
 <div class="mech-grid">
   <div class="mech-card glp">
-    <div class="receptor">GLP-1 Receptor</div>
+    <div class="receptor"><a href="/articles/semaglutide-weight-loss-guide">GLP-1</a> Receptor</div>
     <h4>Appetite Suppression</h4>
     <p>Reduces hunger signals to the brain. Slows gastric emptying so you feel full longer. Improves insulin secretion in response to meals.</p>
   </div>
   <div class="mech-card gip">
-    <div class="receptor">GIP Receptor</div>
+    <div class="receptor"><a href="/articles/tirzepatide-complete-guide">GIP</a> Receptor</div>
     <h4>Metabolic Enhancement</h4>
     <p>Amplifies satiety signaling beyond what GLP-1 alone achieves. Enhances insulin sensitivity and glucose handling. Supports broader metabolic balance.</p>
   </div>
   <div class="mech-card gcg">
-    <div class="receptor">Glucagon Receptor</div>
+    <div class="receptor"><a href="/articles/fat-burning-stack-retatrutide-5amino1mq-cardarine">Glucagon</a> Receptor</div>
     <h4>Energy Expenditure</h4>
     <p>Increases resting energy expenditure so your body burns more calories at rest. Stimulates lipolysis (fat breakdown). Dramatically reduces liver fat.</p>
   </div>
@@ -69,7 +69,7 @@ Retatrutide is structurally similar to GIP, with modifications to its peptide ba
 
 <div class="dialogue-patient">
   <div class="speaker">Endocrinologist in private practice</div>
-  <p>"Think of it this way. Semaglutide is like pressing one button that says 'eat less.' Tirzepatide presses that button and adds a second one that says 'use food more efficiently.' Retatrutide presses both of those and adds a third button: 'burn more energy, especially stored fat.' That third button is what changes the math."</p>
+  <p>"Think of it this way. <a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> is like pressing one button that says 'eat less.' Tirzepatide presses that button and adds a second one that says 'use food more efficiently.' Retatrutide presses both of those and adds a third button: 'burn more energy, especially stored fat.' That third button is what changes the math."</p>
 </div>
 
 <div class="divider"></div>
@@ -217,9 +217,9 @@ No head-to-head trials exist yet, so direct comparisons carry caveats. Different
   <tbody>
     <tr>
       <td><strong>Receptor targets</strong></td>
-      <td>GLP-1 only</td>
-      <td>GLP-1 + GIP</td>
-      <td>GLP-1 + GIP + Glucagon</td>
+      <td><a href="/articles/semaglutide-weight-loss-guide">GLP-1</a> only</td>
+      <td><a href="/articles/semaglutide-weight-loss-guide">GLP-1</a> + <a href="/articles/tirzepatide-complete-guide">GIP</a></td>
+      <td><a href="/articles/semaglutide-weight-loss-guide">GLP-1</a> + <a href="/articles/tirzepatide-complete-guide">GIP</a> + <a href="/articles/fat-burning-stack-retatrutide-5amino1mq-cardarine">Glucagon</a></td>
     </tr>
     <tr>
       <td><strong>Classification</strong></td>
@@ -496,7 +496,7 @@ Based on the combined data from Phase 2 and Phase 3 trials, here is what the cli
 
 ## The Weight Regain Question
 
-Every honest conversation about GLP-1 class medications must address what happens when treatment stops. Data from semaglutide and tirzepatide trials consistently show that patients regain a significant portion of their lost weight after discontinuation, typically beginning within weeks to months.
+Every honest conversation about <a href="/articles/semaglutide-weight-loss-guide">GLP-1</a> class medications must address what happens when treatment stops. Data from semaglutide and tirzepatide trials consistently show that patients regain a significant portion of their lost weight after discontinuation, typically beginning within weeks to months.
 
 Retatrutide will almost certainly follow the same pattern. These drugs work by modifying hormonal signaling. When that signal is removed, the body's appetite and metabolic setpoints reassert themselves. This is not a failure of the medication. It is the biology of obesity, which is increasingly understood as a chronic disease requiring chronic management, much like hypertension or diabetes.
 
@@ -519,7 +519,7 @@ But the trajectory is clear. From single agonists to dual agonists to triple ago
 
 <div class="dialogue-patient">
   <div class="speaker">An endocrinologist summarizing the field</div>
-  <p>"Five years ago, I would have told a patient with severe obesity that medication could help them lose maybe 8-10% of their weight. Today, with tirzepatide, I can tell them 20%. With retatrutide, that number could be 30%. We are living through a genuine revolution in metabolic medicine, and we are not done yet."</p>
+  <p>"Five years ago, I would have told a patient with severe obesity that medication could help them lose maybe 8-10% of their weight. Today, with <a href="/articles/tirzepatide-complete-guide">tirzepatide</a>, I can tell them 20%. With retatrutide, that number could be 30%. We are living through a genuine revolution in metabolic medicine, and we are not done yet."</p>
 </div>
 
 <div class="article-footer">

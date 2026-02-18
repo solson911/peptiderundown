@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Article.astro
-title: "<a href="/articles/cjc-1295-dac-guide">CJC-1295</a> vs <a href="/articles/sermorelin-growth-hormone-guide">Sermorelin</a>: Comparing Growth Hormone Peptides"
+title: "CJC-1295 vs Sermorelin: Comparing Growth Hormone Peptides"
 description: "Detailed comparison of CJC-1295 and Sermorelin growth hormone peptides, their mechanisms, dosing, benefits, and how to choose between them."
 image: /images/articles/cjc-1295-vs-sermorelin.webp
 date: 2026-02-17

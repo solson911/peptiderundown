@@ -32,7 +32,7 @@ But no bioactive substance is free of side effects. Peptides, despite being natu
 
 ## Side Effects by Peptide Category
 
-### GLP-1 Receptor Agonists (Semaglutide, Tirzepatide, etc.)
+### GLP-1 Receptor Agonists (<a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a>, <a href="/articles/tirzepatide-complete-guide">Tirzepatide</a>, etc.)
 
 GLP-1 peptides come with a very specific side effect profile dominated by gastrointestinal issues.
 

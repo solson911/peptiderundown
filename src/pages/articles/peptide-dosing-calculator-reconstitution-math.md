@@ -76,7 +76,7 @@ This table shows common reconstitution options. It helps you choose the right wa
 ## Step-by-Step Calculation Examples
 Let's walk through real examples. We'll calculate doses for popular peptides.
 
-### BPC-157 Dose Calculation
+### <a href="/articles/bpc-157-complete-guide">BPC-157</a> Dose Calculation
 Suppose you have a 5mg vial of BPC-157. Your desired dose is 500mcg (0.5mg).
 
 - Add 2mL bacteriostatic water to vial
@@ -84,7 +84,7 @@ Suppose you have a 5mg vial of BPC-157. Your desired dose is 500mcg (0.5mg).
 - Dose volume = 0.5mg / 2.5 mg/mL = 0.2 mL
 - U-100 syringe units = 0.2 × 100 = 20 units
 
-### Semaglutide Starter Dose
+### <a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> Starter Dose
 You have a 2mg vial. The starting dose is 0.25mg.
 
 - Add 1mL bacteriostatic water
@@ -92,7 +92,7 @@ You have a 2mg vial. The starting dose is 0.25mg.
 - Dose volume = 0.25mg / 2 mg/mL = 0.125 mL
 - U-100 syringe units = 0.125 × 100 = 12.5 units
 
-### Ipamorelin Micro-Dose
+### <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> Micro-Dose
 For a 200mcg dose from a 5mg vial:
 
 - Add 1mL bacteriostatic water
@@ -103,7 +103,7 @@ For a 200mcg dose from a 5mg vial:
 
 > **Precision Note:** For very small doses like 4 units, use syringes with half-unit markings. They allow more accurate measurement.
 
-### TB-500 Standard Dose
+### <a href="/articles/tb-500-complete-guide">TB-500</a> Standard Dose
 Calculating 2mg dose from 10mg vial:
 
 - Add 1mL bacteriostatic water
@@ -111,7 +111,7 @@ Calculating 2mg dose from 10mg vial:
 - Dose volume = 2mg / 10mg/mL = 0.2 mL
 - U-100 syringe units = 20 units
 
-### CJC-1295 Dose from 5mg Vial
+### <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> Dose from 5mg Vial
 For a 1mg dose of CJC-1295:
 
 - Add 1mL bacteriostatic water to 5mg vial
@@ -119,7 +119,7 @@ For a 1mg dose of CJC-1295:
 - Dose volume = 1mg / 5mg/mL = 0.2mL
 - U-100 syringe units = 20 units
 
-### GHRP-2 Dose Calculation
+### <a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157">GHRP-2</a> Dose Calculation
 Standard dose: 150mcg from 5mg vial
 
 - Add 2mL bacteriostatic water

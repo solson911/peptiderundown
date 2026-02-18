@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 # Kisspeptin: The Reproductive Peptide Guide
 
-Kisspeptin is a peptide hormone that plays a central role in reproductive health. It regulates gonadotropin-releasing hormone (GnRH) release. This control affects sex hormone production including testosterone and estrogen.
+Kisspeptin is a peptide hormone that plays a central role in <a href="/articles/peptides-for-women-guide">reproductive health</a>. It regulates gonadotropin-releasing hormone (GnRH) release. This control affects sex hormone production including testosterone and estrogen.
 
 Kisspeptin is essential for normal reproductive function. It influences puberty onset, fertility cycles, and sexual development. Research continues to explore its therapeutic potential.
 
@@ -60,7 +60,7 @@ Children with kisspeptin deficiency show delayed puberty. Research shows kisspep
 
 Kisspeptin regulates menstrual cyclicity in females. It controls the preovulatory GnRH/LH surge. This surge triggers ovulation each month.
 
-In males, kisspeptin stimulates GnRH pulses. These pulses drive testosterone production. Testosterone feedback regulates kisspeptin expression.
+In males, kisspeptin stimulates GnRH pulses. These pulses drive <a href="/articles/peptides-and-testosterone-trt">testosterone production</a>. Testosterone feedback regulates kisspeptin expression.
 
 ## Research and Clinical Applications
 
@@ -71,7 +71,7 @@ Kisspeptin shows promise for testosterone support. Studies demonstrate its abili
 | Study | Participants | Key Finding |
 |-------|-------------|-------------|
 | George et al. (2011) | Healthy men | Single injection increased LH by 48% |
-| Jayasena et al. (2014) | Hypogonadal men | Improved testosterone with pulsed dosing |
+| Jayasena et al. (2014) | Hypogonadal men | Improved testosterone with pulsed <a href="/articles/peptide-dosing-calculator-reconstitution-math">dosing</a> |
 | Chan et al. (2016) | Obese men | Restored LH pulsatility |
 | Millar et al. (2020) | Aging men | Enhanced LH response after 8 weeks |
 | Thompson et al. (2022) | Men with low libido | Improved sexual function scores |
@@ -102,7 +102,7 @@ Kisspeptin stimulation tests assess GnRH axis function. The test measures LH res
 
 ## Dosing and Administration
 
-Kisspeptin dosing varies by application. Research protocols use subcutaneous injection. Dosing is weight-based and pulsatile.
+Kisspeptin dosing varies by application. Research protocols use <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous injection</a>. Dosing is weight-based and pulsatile.
 
 | Application | Typical Dose | Frequency | Notes |
 |-------------|-------------|-----------|-------|
@@ -162,7 +162,7 @@ Kisspeptin remains an investigational compound. It is not approved for clinical 
 
 | Region | Status | Notes |
 |--------|--------|-------|
-| United States | Not approved | Research use only |
+| United States | Not approved | <a href="/articles/are-peptides-legal-fda-regulations-2026">Research use only</a> |
 | European Union | Not approved | Clinical trials ongoing |
 | Australia | Not approved | Special access schemes |
 | Canada | Not approved | Research chemical |
