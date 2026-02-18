@@ -225,7 +225,7 @@ This is one of the larger and better-designed trials of Ta1 in any condition.
 
 | Parameter | Detail |
 |-----------|--------|
-| **Standard dose** | 1.6 mg subcutaneous injection |
+| **Standard dose** | 1.6 mg <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a> injection |
 | **Frequency** | Twice weekly (typically Mon/Thu or Tue/Fri) |
 | **Route** | Subcutaneous (upper arm, abdomen, or thigh) |
 | **Cycle length** | 6 months for hepatitis B (approved use) |
@@ -246,7 +246,7 @@ The **1.6 mg dose is remarkably consistent** across nearly all studies. Unlike m
 
 ### Reconstitution
 
-Ta1 typically comes as a lyophilized powder. For reconstitution instructions, see our [guide to reconstituting peptides](/articles/how-to-reconstitute-peptides).
+Ta1 typically comes as a lyophilized powder. For <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ion instructions, see our [guide to reconstituting peptides](/articles/how-to-reconstitute-peptides).
 
 ## Side Effects
 

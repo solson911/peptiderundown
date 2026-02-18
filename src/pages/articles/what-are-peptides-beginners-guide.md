@@ -333,8 +333,8 @@ strong{color:var(--ink);}
 <ul class="bl">
 <li><strong>Ipamorelin:</strong> The most selective GHRP. Stimulates GH without affecting cortisol or prolactin. Popular for long-term protocols.</li>
 <li><strong>CJC-1295 (no DAC):</strong> A GHRH analog that extends GH pulses. Often paired with a GHRP for synergistic effect.</li>
-<li><strong>Hexarelin:</strong> The most potent GHRP. Also has unique cardioprotective properties through the CD36 receptor. Requires cycling due to desensitization.</li>
-<li><strong>GHRP-6 / GHRP-2:</strong> Earlier-generation GHRPs. Effective but with more side effects (hunger, cortisol elevation).</li>
+<li><strong>Hexarelin:</strong> The most potent GHRP. Also has unique cardioprotective properties through the CD36 receptor. Requires <a href="/articles/peptide-cycling-guide">cycling</a> due to desensitization.</li>
+<li><strong>GHRP-6 / GHRP-2:</strong> Earlier-generation GHRPs. Effective but with more <a href="/articles/peptide-side-effects-what-to-know">side effects</a> (hunger, cortisol elevation).</li>
 <li><strong>MK-677 (Ibutamoren):</strong> Technically not a peptide (it is a small molecule), but frequently grouped with GHS because it acts on the same receptor. Oral. Minimal desensitization.</li>
 <li><strong>Sermorelin:</strong> A truncated form of natural GHRH. One of the more well-studied GHS with clinical trial data.</li>
 </ul>
@@ -406,7 +406,7 @@ strong{color:var(--ink);}
 </tbody>
 </table>
 
-<p>For most people in the peptide community, subcutaneous injection is the standard route. It involves a small insulin syringe (typically 28-31 gauge), a brief pinch of skin, and a shallow injection. The process is nearly painless and takes seconds. Peptides come as lyophilized (freeze-dried) powder in a vial and must be <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ed with bacteriostatic water before use. Once reconstituted, they require refrigeration and have a limited shelf life (typically 2-4 weeks).</p>
+<p>For most people in the peptide community, <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a> injection is the standard route. It involves a small insulin syringe (typically 28-31 gauge), a brief pinch of skin, and a shallow injection. The process is nearly painless and takes seconds. Peptides come as lyophilized (freeze-dried) powder in a vial and must be <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ed with bacteriostatic water before use. Once reconstituted, they require refrigeration and have a limited shelf life (typically 2-4 weeks).</p>
 
 <div class="dv"></div>
 

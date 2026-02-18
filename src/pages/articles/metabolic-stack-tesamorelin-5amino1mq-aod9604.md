@@ -31,7 +31,7 @@ Tesamorelin is a synthetic growth hormone-releasing hormone (GHRH) analog. It st
 
 AOD-9604 is a modified fragment of human growth hormone (hGH) that mimics the fat-burning properties of hGH without its anabolic or diabetogenic effects. It works by stimulating lipolysis (fat breakdown) and inhibiting lipogenesis (fat storage).
 
-> **Key Finding:** <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> has been shown to reduce body fat by up to 12% in studies, with minimal side effects.
+> **Key Finding:** <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> has been shown to reduce body fat by up to 12% in studies, with minimal <a href="/articles/peptide-side-effects-what-to-know">side effects</a>.
 
 ## How They Synergize Together
 

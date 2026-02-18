@@ -152,7 +152,7 @@ GHK-Cu is safe for most when used at recommended doses. Those with Wilson's dise
 > - Track blood pressure weekly
 > - Note energy levels and sleep quality
 > - Watch for unusual bruising or bleeding
-> - Report persistent side effects to your provider
+> - Report persistent <a href="/articles/peptide-side-effects-what-to-know">side effects</a> to your provider
 
 Don't use if pregnant or breastfeeding. Stop if you notice concerning reactions and consult your healthcare provider. Most side effects resolve quickly when dosing stops.
 
@@ -164,7 +164,7 @@ Several groups often find value in this approach:
 
 - **Active people** - Faster recovery from sports injuries
 - **After surgery** - Supporting wound healing processes
-- **Chronic issues** - Those with long-term tendon or joint concerns
+- **Chronic issues** - Those with long-term tendon or <a href="/articles/best-peptides-for-joint-health">joint</a> concerns
 - **Skin concerns** - Improving wound healing and skin quality
 
 It's not a magic solution. But many find it helps when other approaches haven't. Realistic expectations are important.

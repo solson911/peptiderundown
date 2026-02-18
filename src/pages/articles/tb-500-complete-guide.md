@@ -261,7 +261,7 @@ It's a shorter peptide sequence designed to replicate the key biological functio
 
 ### How long should I run TB-500?
 
-Most protocols call for a 4 to 6 week loading phase followed by 4 to 8 weeks of maintenance. For chronic injuries, some people run longer cycles. There isn't a well-established maximum duration, but cycling off periodically is common practice.
+Most protocols call for a 4 to 6 week loading phase followed by 4 to 8 weeks of maintenance. For chronic injuries, some people run longer cycles. There isn't a well-established maximum duration, but <a href="/articles/peptide-cycling-guide">cycling</a> off periodically is common practice.
 
 ### Can I take TB-500 orally?
 
@@ -297,7 +297,7 @@ The cardiac and hair growth research adds even more intrigue. But let's be hones
 
 Most of the compelling data comes from animal models. Human clinical trials are sparse, and the peptide isn't approved for therapeutic use in any country.
 
-If you're considering TB-500 for an injury, do your homework. Work with a knowledgeable healthcare provider, get proper bloodwork, and don't abandon conventional rehabilitation. TB-500 should be a complement to good medicine, not a replacement for it.
+If you're considering TB-500 for an injury, do your homework. Work with a knowledgeable healthcare provider, get proper <a href="/articles/peptide-bloodwork-guide">bloodwork</a>, and don't abandon conventional rehabilitation. TB-500 should be a complement to good medicine, not a replacement for it.
 
 New to peptides? Our [beginner's guide](/articles/what-are-peptides-beginners-guide) covers the fundamentals. Also read about [<a href="/articles/peptide-side-effects-what-to-know">peptide side effects</a>](/articles/peptide-side-effects-what-to-know) and [proper peptide storage](/articles/how-to-store-peptides).
 

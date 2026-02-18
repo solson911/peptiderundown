@@ -82,7 +82,7 @@ A 2024 crossover study found 30% higher IGF-1 levels with CJC-1295 vs Sermorelin
 - **Long-term Safety Study (2024)**[^2]:
    - 5-year safety data in 120 patients
    - Restoration of GH pulsatility in 78%
-   - Zero discontinuations from side effects
+   - Zero discontinuations from <a href="/articles/peptide-side-effects-what-to-know">side effects</a>
 
 - **Body Composition Trial (2022)**[^6]:
    - 9% body fat reduction at 6 months
@@ -104,7 +104,7 @@ Proper administration is critical for results:
 - **Timing**: 1-2 hours after last meal
 - **Duration**: 6+ months recommended
 
-> Clinical note: Both peptides require reconstitution with bacteriostatic water and subcutaneous injection in abdominal fat tissue. Rotate injection sites.
+> Clinical note: Both peptides require reconstitution with bacteriostatic water and <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a> injection in abdominal fat tissue. Rotate injection sites.
 
 ## Side Effects Comparison
 Both peptides share excellent safety profiles with minimal reported side effects:

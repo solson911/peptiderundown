@@ -110,7 +110,7 @@ The pivotal trial that led to FDA approval.
 | **Participants** | 12 patients with genetically confirmed Barth syndrome |
 | **Design** | Randomized, double-blind, placebo-controlled crossover |
 | **Duration** | 12 weeks per treatment period |
-| **Dose** | 40 mg subcutaneous daily |
+| **Dose** | 40 mg <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a> daily |
 | **Primary endpoint** | 6-minute walk test (6MWT) |
 
 **Results:**
@@ -236,7 +236,7 @@ No controlled human trials have examined SS-31 specifically for exercise perform
 
 ### Reconstitution
 
-SS-31 from research suppliers typically comes as a lyophilized powder. Standard reconstitution with bacteriostatic water applies. See our [reconstitution guide](/articles/how-to-reconstitute-peptides) for step-by-step instructions.
+SS-31 from research suppliers typically comes as a lyophilized powder. Standard <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ion with bacteriostatic water applies. See our [reconstitution guide](/articles/how-to-reconstitute-peptides) for step-by-step instructions.
 
 ### Practical Notes
 

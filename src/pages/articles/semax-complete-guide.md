@@ -107,7 +107,7 @@ Long-term studies show good safety up to 30 days. There's limited data beyond 3 
 
 ### Common Reactions
 
-Most users experience minimal side effects. Potential temporary effects include:
+Most users experience minimal <a href="/articles/peptide-side-effects-what-to-know">side effects</a>. Potential temporary effects include:
 
 - Mild nasal irritation (15% of users)
 - Headache (less than 5%)

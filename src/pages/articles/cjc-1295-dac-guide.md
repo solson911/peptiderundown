@@ -19,7 +19,7 @@ CJC-1295 with DAC and CJC-1295 without DAC (sometimes called "mod GRF 1-29") are
 > - CJC-1295 DAC binds to albumin, extending its half-life to **6-8 days** (vs. 30 minutes for the no-DAC version)
 > - It amplifies natural GH pulses and raises IGF-1 by **36-105%**, with only twice-weekly injections needed
 > - Benefits include <a href="/articles/best-peptides-for-fat-loss">fat loss</a> (especially visceral), <a href="/articles/best-peptides-for-sleep">better sleep</a>, improved recovery, and skin/connective tissue support
-> - Water retention and tingling are the most common side effects; monitor IGF-1 and blood glucose with periodic labs
+> - Water retention and tingling are the most common <a href="/articles/peptide-side-effects-what-to-know">side effects</a>; monitor IGF-1 and blood glucose with periodic labs
 
 ## What Is CJC-1295 DAC?
 
@@ -119,7 +119,7 @@ Unlike GHRP-6 or GHRP-2, ipamorelin doesn't significantly raise cortisol or prol
 | **Cycle length** | 8-16 weeks on, 4-8 weeks off |
 | **With ipamorelin** | CJC-1295 DAC 2 mg 2x/week + ipamorelin 200-300 mcg 1-3x daily |
 
-**Reconstitution:** CJC-1295 DAC typically comes as lyophilized powder. Reconstitute with bacteriostatic water. Store reconstituted peptide refrigerated and use within 3-4 weeks. See our [peptide storage guide](/articles/how-to-store-peptides) for details.
+**Reconstitution:** CJC-1295 DAC typically comes as lyophilized powder. Reconstitute with bacteriostatic water. Store <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ed peptide refrigerated and use within 3-4 weeks. See our [peptide storage guide](/articles/how-to-store-peptides) for details.
 
 ## Side Effects
 

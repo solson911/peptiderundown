@@ -282,7 +282,7 @@ Regular monitoring during use is wise. Tell your healthcare providers about any 
 
 ### Should I take breaks from TB-4?
 
-Most protocols involve cycling. Typical cycles last 4-12 weeks followed by equal breaks. This helps prevent potential receptor desensitization.
+Most protocols involve <a href="/articles/peptide-cycling-guide">cycling</a>. Typical cycles last 4-12 weeks followed by equal breaks. This helps prevent potential receptor desensitization.
 
 ### Can I use TB-4 with other medications?
 
@@ -296,4 +296,4 @@ Thymosin Beta-4 represents an interesting area in repair science. Its broad mech
 
 Research continues to clarify optimal uses and protocols. Future studies will better define its potential role. For now, TB-4 remains primarily a research compound with scientific interest.
 
-> **Important Consideration:** This information is educational. Peptides should only be used under medical supervision. Consult your healthcare provider before trying any new approach. Report side effects promptly.
+> **Important Consideration:** This information is educational. Peptides should only be used under medical supervision. Consult your healthcare provider before trying any new approach. Report <a href="/articles/peptide-side-effects-what-to-know">side effects</a> promptly.

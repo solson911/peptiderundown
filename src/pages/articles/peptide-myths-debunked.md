@@ -69,7 +69,7 @@ Alternative delivery methods continue to develop. Nasal sprays work well for cog
 
 This myth overlooks rigorous safety testing on therapeutic peptides. Many have been used safely in medicine for decades. Insulin is a peptide that saves lives daily. 
 
-Quality control remains essential. Reputable vendors provide third-party testing. Following established dosing protocols minimizes risks. Medical supervision helps with systemically active peptides. 
+Quality control remains essential. Reputable <a href="/articles/peptide-vendor-red-flags">vendor</a>s provide third-party testing. Following established dosing protocols minimizes risks. Medical supervision helps with systemically active peptides. 
 
 > **Safety Note:** Always consult with a healthcare provider before starting any peptide regimen. They can help assess potential interactions with existing conditions or medications.
 
@@ -197,7 +197,7 @@ Thousands of human studies exist. Insulin research dates to the 1920s. Recent pe
 **Q: Do they interact with medications?**
 Possible interactions exist with blood thinners and diabetes medications. Always discuss peptides with your healthcare provider. Avoid combining with prescription drugs without professional guidance. Peptides can also affect how your body processes other substances through cytochrome pathways.
 
-> **Storage Tip:** Always store reconstituted peptides in the refrigerator. For unmixed powders, keep them in a cool, dark place away from humidity. Consider using dedicated peptide storage containers with desiccant packs.
+> **Storage Tip:** Always store <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ed peptides in the refrigerator. For unmixed powders, keep them in a cool, dark place away from humidity. Consider using dedicated peptide storage containers with desiccant packs.
 
 **Q: How should I store peptides?**
 Most require refrigeration after mixing. Unmixed powders stay stable at room temperature. Follow manufacturers' instructions. Improper storage degrades peptides quickly. Always check expiration dates and discard any cloudy solutions.

@@ -65,9 +65,9 @@ GH peptides stimulate your pituitary to release more growth hormone. For specifi
 | **Vivid dreams** | Common | Sleep architecture changes |
 | **Cortisol/prolactin increases** | Temporary | More common with GHRP-6/GHRP-2 |
 
-> **Important:** If you're pre-diabetic or insulin resistant, get bloodwork before and during GH peptide use. MK-677 can increase fasting glucose and decrease insulin sensitivity.
+> **Important:** If you're pre-diabetic or insulin resistant, get <a href="/articles/peptide-bloodwork-guide">bloodwork</a> before and during GH peptide use. MK-677 can increase fasting glucose and decrease insulin sensitivity.
 
-### BPC-157 and TB-500 (Healing Peptides)
+### <a href="/articles/bpc-157-complete-guide">BPC-157</a> and <a href="/articles/tb-500-complete-guide">TB-500</a> (Healing Peptides)
 
 | Side Effect | Compound | Notes |
 |-------------|----------|-------|

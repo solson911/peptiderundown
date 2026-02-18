@@ -36,7 +36,7 @@ Dihexa (also called **N-hexanoic-Tyr-Ile-(6) aminohexanoic amide**) is a synthet
 | **Origin** | Designed at Washington State University |
 | **Primary Research** | Preclinical (animal and in vitro only) |
 | **FDA Status** | Not approved for any indication |
-| **Route** | Oral, subcutaneous, intranasal |
+| **Route** | Oral, <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a>, intranasal |
 
 The compound was specifically engineered to be resistant to enzymatic breakdown, giving it a much longer half-life than natural angiotensin IV.
 

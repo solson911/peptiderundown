@@ -345,7 +345,7 @@ This hasn't been formally studied. Combining tirzepatide with other GLP-1 agonis
 
 ### How do you inject tirzepatide?
 
-Tirzepatide comes in a pre-filled pen. No mixing or reconstitution needed. Inject <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a>ly into the abdomen, thigh, or upper arm. Rotate injection sites each week. The pen has a hidden needle and is designed for ease of use.
+Tirzepatide comes in a pre-filled pen. No mixing or <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ion needed. Inject <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a>ly into the abdomen, thigh, or upper arm. Rotate injection sites each week. The pen has a hidden needle and is designed for ease of use.
 
 ## The Bottom Line
 

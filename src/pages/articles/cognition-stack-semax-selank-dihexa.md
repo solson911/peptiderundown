@@ -63,7 +63,7 @@ Selank is a peptide that supports balanced neurotransmitter activity:
 
 - **Modulates GABA systems** - Helping reduce excessive neural firing associated with anxiety
 - **Supports serotonin pathways** - Contributing to mood stability and emotional resilience
-- **Influences immune response** - Potentially affecting stress resilience through cytokine regulation
+- **Influences <a href="/articles/thymosin-alpha-1-immune-guide">immune response</a>** - Potentially affecting stress resilience through cytokine regulation
 - **Enhances learning and memory** - Particularly under stressful conditions
 
 Users typically notice reduced anxiety without sedation, making it suitable for daytime use. The effects are often described as a "calm focus" that supports productivity.
@@ -127,7 +127,7 @@ Considerations for cycling:
 
 ## Safety Profile and Side Effect Management
 
-Most users experience minimal side effects when using appropriate doses:
+Most users experience minimal <a href="/articles/peptide-side-effects-what-to-know">side effects</a> when using appropriate doses:
 
 | Potential Effect | Frequency | Management Strategies |
 |------------------|-----------|------------------------|
@@ -220,7 +220,7 @@ Unlike pharmaceuticals that target single pathways, this stack works through mul
 Many users add foundational supplements like omega-3s, vitamin D, or magnesium. Stimulants like caffeine might require dose adjustment when combined with Semax. Avoid mixing with pharmaceuticals without medical guidance. Lion's Mane mushroom may complement the neurotrophic effects.
 
 **What about storage requirements?**
-Peptides need careful storage. Nasal sprays should be refrigerated after opening. Dihexa vials require refrigeration and reconstitution with bacteriostatic water. Protect all peptides from light, heat, and frequent temperature fluctuations.
+Peptides need careful storage. Nasal sprays should be refrigerated after opening. Dihexa vials require refrigeration and reconstitution with <a href="/articles/how-to-reconstitute-peptides">bacteriostatic water</a>. Protect all peptides from light, heat, and frequent temperature fluctuations.
 
 **Do I need medical supervision?**
 While many experiment independently, professional guidance can help with dosing, interactions, and monitoring. This is especially important for those with health conditions or taking medications. Regular cognitive assessments provide objective progress measures.

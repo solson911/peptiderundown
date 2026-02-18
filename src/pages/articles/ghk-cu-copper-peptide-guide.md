@@ -192,7 +192,7 @@ You can. They work through different mechanisms with no known negative interacti
 
 ### Is injectable GHK-Cu better than topical?
 
-For skin-specific goals, <a href="/articles/diy-ghk-cu-copper-peptide-cream">topical is sufficient</a> and better studied. For systemic benefits (joint health, overall anti-aging), injections deliver the peptide to the whole body.
+For skin-specific goals, <a href="/articles/diy-ghk-cu-copper-peptide-cream">topical is sufficient</a> and better studied. For systemic benefits (joint health, overall <a href="/articles/best-peptides-for-anti-aging">anti-aging</a>), injections deliver the peptide to the whole body.
 
 ### Can GHK-Cu regrow hair?
 

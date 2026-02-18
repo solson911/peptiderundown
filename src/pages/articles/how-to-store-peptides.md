@@ -127,7 +127,7 @@ A 2012 study found that preservative-free formulations showed significantly high
 ### Functional Signs
 
 - **Reduced effects** at your usual dose
-- **Increased injection site reactions** compared to fresh product
+- **Increased <a href="/articles/how-to-inject-peptides-subcutaneously">inject</a>ion site reactions** compared to fresh product
 
 > **Important:** Degraded peptides aren't just ineffective. They can potentially contain harmful breakdown products. When in doubt, discard and start fresh.
 

@@ -50,7 +50,7 @@ This is a big deal. Mitochondrial dysfunction is implicated in aging, neurodegen
 
 ### Antioxidant Properties (At Low Doses)
 
-At concentrations below 2 micromolar, methylene blue functions as an antioxidant by cycling between its oxidized and reduced forms. Each molecule can neutralize multiple free radicals because it regenerates through this cycling. It's like a reusable free radical sponge.
+At concentrations below 2 micromolar, methylene blue functions as an antioxidant by <a href="/articles/peptide-cycling-guide">cycling</a> between its oxidized and reduced forms. Each molecule can neutralize multiple free radicals because it regenerates through this cycling. It's like a reusable free radical sponge.
 
 But here's the critical nuance: at high doses, methylene blue becomes a pro-oxidant. It generates superoxide and other ROS.
 

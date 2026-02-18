@@ -41,7 +41,7 @@ The magic happens when all three systems work together - they create synergistic
 
 Survodutide's development has progressed through multiple clinical trial phases, each providing more detailed information about its effectiveness and safety profile.
 
-Early Phase 1 studies established the therapy's safety fundamentals. Researchers found survodutide had no serious adverse events at therapeutic doses and confirmed its once-weekly dosing schedule worked effectively. The compound showed predictable effects in the body with manageable side effects similar to other GLP-1 therapies.
+Early Phase 1 studies established the therapy's safety fundamentals. Researchers found survodutide had no serious adverse events at therapeutic doses and confirmed its once-weekly dosing schedule worked effectively. The compound showed predictable effects in the body with manageable <a href="/articles/peptide-side-effects-what-to-know">side effects</a> similar to other GLP-1 therapies.
 
 The most compelling data comes from Phase 2 trials involving participants with obesity and type 2 diabetes. After 48 weeks of treatment, participants experienced an impressive 15-20% reduction in body weight on average. What's remarkable is how quickly results appeared, with significant weight loss visible within just 4-8 weeks for most participants. These benefits continued throughout the study period, accompanied by improved blood sugar control and healthier cholesterol profiles.
 
@@ -72,7 +72,7 @@ While final dosing recommendations await Phase 3 completion, current trial proto
 
 Like other GLP-1 therapies, survodutide requires gradual dose escalation to help your body adjust and minimize potential side effects. Treatment typically starts at 0.24 mg once weekly for the first month. After four weeks, the dose increases to 0.48 mg weekly, followed by 0.96 mg in week 9. Most participants reach a maintenance dose of 1.44 mg by week 13.
 
-This careful escalation allows your digestive system to adapt to increasing receptor activation, reducing the likelihood of nausea and other gastrointestinal side effects. You'll administer survodutide yourself through simple subcutaneous injections, rotating between your abdomen, thigh, and upper arm. The injections use small 32-gauge needles that minimize discomfort.
+This careful escalation allows your digestive system to adapt to increasing receptor activation, reducing the likelihood of nausea and other gastrointestinal side effects. You'll administer survodutide yourself through simple <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a> injections, rotating between your abdomen, thigh, and upper arm. The injections use small 32-gauge needles that minimize discomfort.
 
 You'll store survodutide refrigerated until use, though it can be at room temperature for about an hour before injection. The once-weekly dosing provides significant convenience compared to daily medications, and you can take it any time that fits your schedule, with or without food.
 

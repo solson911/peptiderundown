@@ -124,7 +124,7 @@ Sermorelin comes as lyophilized powder. You must mix it with bacteriostatic wate
 - Gently swirl until fully dissolved
 - Store in refrigerator
 
-Unused solution remains stable for about 2-3 weeks. Don't freeze reconstituted sermorelin. 
+Unused solution remains stable for about 2-3 weeks. Don't freeze <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ed sermorelin. 
 
 Always use sterile technique to prevent contamination.
 
@@ -243,7 +243,7 @@ Individual responses vary based on factors like age and baseline hormone levels.
 
 **Do I need to cycle sermorelin therapy?**
 
-Yes, most protocols involve cycling. Typical cycles last 3-6 months followed by a break. 
+Yes, most protocols involve <a href="/articles/peptide-cycling-guide">cycling</a>. Typical cycles last 3-6 months followed by a break. 
 
 Cycling helps maintain pituitary responsiveness. Your healthcare provider will determine appropriate cycling.
 
