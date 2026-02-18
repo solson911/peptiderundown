@@ -77,7 +77,7 @@ This multi-target approach provides more complete protection against aging than 
 
 ### Cognitive Enhancement Stack (Semax + Selank)
 
-For cognitive support, Semax and Selank offer complementary benefits. Semax enhances BDNF production and neuronal growth, improving focus and memory formation. Selank modulates stress responses and anxiety through GABAergic pathways, creating a calmer but more alert mental state.
+For cognitive support, Semax and Selank offer complementary benefits. <a href="/articles/semax-complete-guide">Semax</a> enhances BDNF production and neuronal growth, improving focus and memory formation. <a href="/articles/selank-complete-guide">Selank</a> modulates stress responses and anxiety through GABAergic pathways, creating a calmer but more alert mental state.
 
 Together they support both cognitive performance and emotional resilience. Both are administered intranasally, making them convenient to combine. Typical protocols run 10-20 days with breaks between cycles to maintain sensitivity.
 
@@ -106,7 +106,7 @@ Individual responses vary significantly. Always start with low doses when combin
 | Mon-Fri | BPC-157 (250mcg) post-workout | - | Inject near target muscle group |
 | Sat-Sun | Off | Off | Recovery days |
 
-For those focused on [muscle growth](/articles/best-peptides-for-muscle-growth), this protocol combines GH elevation with targeted tissue repair. Run for 8-12 weeks before taking a 4-week break.
+For those focused on [<a href="/articles/best-peptides-for-muscle-growth">muscle growth</a>](/articles/best-peptides-for-muscle-growth), this protocol combines GH elevation with targeted tissue repair. Run for 8-12 weeks before taking a 4-week break.
 
 ### Injury Recovery Protocol
 
@@ -132,7 +132,7 @@ Several mistakes can undermine your peptide stacking efforts:
 
 - **Dose doubling** - Taking full standalone doses of multiple peptides often leads to side effects without added benefits. Reduce to 50-70% of individual doses.
 - **Timing conflicts** - Administering competing peptides too close together can cause receptor competition. Space conflicting peptides by at least 2 hours.
-- **Ignoring cycling** - Running stacks indefinitely leads to diminishing returns through receptor desensitization. Follow our [Peptide Cycling Guide](/articles/peptide-cycling-guide) for timing.
+- **Ignoring cycling** - Running stacks indefinitely leads to diminishing returns through receptor desensitization. Follow our [<a href="/articles/peptide-cycling-guide">Peptide Cycling Guide</a>](/articles/peptide-cycling-guide) for timing.
 - **Combining too many** - Starting with more than 2-3 peptides increases complexity without proven benefits. You also can't tell what's working.
 - **Neglecting blood work** - Failing to monitor biomarkers like IGF-1, glucose, and inflammation markers means flying blind.
 - **Similar mechanisms** - Stacking two GHRH analogs at full doses is redundant and increases side effects without added synergy.
