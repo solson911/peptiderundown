@@ -1,0 +1,483 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const frontmatter = {
+  title: "The Tesamorelin + Ipamorelin Stack: A Complete Guide to Dual-Pathway Growth Hormone Optimization",
+  description: "Comprehensive guide to the tesamorelin and ipamorelin stack, covering dual-pathway GH synergy, clinical evidence, dosing protocols, safety, and regulatory status.",
+  image: "/images/articles/tesamorelin-ipamorelin-stack-guide.webp",
+  date: "2026-02-17",
+  category: "Peptide Stacks",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d .q{font-style:italic;}
+.d .ci{font-size:12px;color:var(--mut);margin-top:8px;font-style:normal;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;font-style:normal;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;font-style:normal;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--amber);}.sb .v.c4{color:var(--plum);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}.cd.cp::before{background:var(--plum);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+
+.bl{list-style:none;padding:0;margin:12px 0;}
+.bl li{padding:5px 0 5px 24px;position:relative;font-size:14.5px;}
+.bl li::before{content:'';position:absolute;left:4px;top:13px;width:8px;height:8px;border-radius:50%;background:var(--blue);opacity:.22;}
+
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+
+`;
+
+const rawHTML = `
+
+<div class="c">
+
+<p style="font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Peptide Stack Deep Dive</p>
+
+<h2 style="margin-top:0;font-size:2.2rem;">The Tesamorelin + Ipamorelin Stack</h2>
+<p style="font-size:1.1rem;color:var(--mut);margin-bottom:36px;">Two receptors, one goal: restoring the growth hormone pulse pattern your pituitary used to produce on its own.</p>
+
+<p>Your pituitary gland does not release growth hormone in a steady drip. It fires in bursts, sharp pulses that peak roughly every ninety minutes during sleep and in smaller waves throughout the day. Those bursts are what trigger your liver to produce IGF-1, what signal your fat cells to release stored triglycerides, what tell your muscles to increase protein synthesis after a hard workout. The peaks, not the averages, are what drive most of the biological work.</p>
+
+<p>The problem is that this pulsatile pattern degrades with age. By your forties, the amplitude of your growth hormone pulses has dropped substantially from where it was in your twenties. The troughs between pulses stretch wider. Your body still has the machinery to produce growth hormone, but the signaling that drives it has become sluggish. Two separate regulatory inputs, growth hormone-releasing hormone (GHRH) and ghrelin, both decline with age. A third signal, somatostatin, which acts as the brake on growth hormone release, keeps doing its job just fine. The accelerator fades while the brake stays strong.</p>
+
+<p>That imbalance is the entire rationale for combining tesamorelin with ipamorelin. Tesamorelin replaces the fading GHRH signal. Ipamorelin mimics the weakening ghrelin signal. Together, they address both sides of a dual-pathway system through two distinct receptors on the same pituitary cells, rather than trying to overpower the system through a single pathway alone.</p>
+
+<div class="sr">
+<div class="sb"><div class="v c1">44</div><div class="l">Amino acids in tesamorelin</div></div>
+<div class="sb"><div class="v c2">5</div><div class="l">Amino acids in ipamorelin</div></div>
+<div class="sb"><div class="v c3">2010</div><div class="l">Tesamorelin FDA approval year</div></div>
+<div class="sb"><div class="v c4">200x</div><div class="l">Ipamorelin selectivity over cortisol</div></div>
+</div>
+
+<!-- TESAMORELIN SECTION -->
+<h2>Tesamorelin: The GHRH Analog</h2>
+
+<p>Growth hormone-releasing hormone is a 44-amino-acid peptide produced in the arcuate nucleus of the hypothalamus. It travels through the portal blood supply to the anterior pituitary, binds to GHRH receptors on somatotroph cells, and activates the adenylate cyclase/cAMP pathway, which drives both the synthesis of new growth hormone and the release of stored growth hormone into circulation. GHRH is the primary "go" signal for growth hormone production.</p>
+
+<p>The problem with administering native GHRH as a therapeutic agent is that it gets chewed up almost immediately by an enzyme called dipeptidyl peptidase IV (DPP-IV), which cleaves it at the N-terminal tyrosine. The half-life of native GHRH in human blood is roughly seven minutes. That is not long enough to do much therapeutically.</p>
+
+<p>Tesamorelin solves this with a simple structural modification. It takes the full 44-amino-acid sequence of human GHRH and attaches a trans-3-hexenoic acid group to the N-terminal tyrosine residue. That hydrophobic cap blocks DPP-IV from reaching its cleavage site. The result is a molecule that preserves the full signaling profile of native GHRH but resists enzymatic breakdown long enough to sustain meaningful pituitary stimulation after a single subcutaneous injection.</p>
+
+<p>Developed by Theratechnologies, Inc., tesamorelin received FDA approval in 2010 under the brand name Egrifta, making it the first and only medication specifically approved for reducing excess abdominal fat in HIV-infected patients with lipodystrophy. In March 2025, a newer formulation called EGRIFTA WR was approved, requiring reconstitution only once per week rather than daily, though the daily injection schedule remains the same.</p>
+
+<h3>The Clinical Evidence</h3>
+
+<p>Tesamorelin's evidence base is unusually strong for a peptide discussed in longevity circles, because it actually went through the full FDA approval process. Two Phase III randomized, double-blind, placebo-controlled trials (Study 1 and Study 2) enrolled over 800 HIV-infected patients with lipodystrophy and abdominal fat accumulation. In the primary efficacy phases, tesamorelin at 2 mg subcutaneously daily reduced visceral adipose tissue by approximately 15 to 20 percent over 26 weeks, with statistical significance over placebo.</p>
+
+<p>One critical finding from those trials: the fat loss reversed when the drug was stopped. Patients switched from tesamorelin to placebo after 26 weeks saw their visceral fat return to near-baseline levels. This is not a cure. It is a treatment that requires continued use to maintain its effects.</p>
+
+<div class="d">
+<div class="s">From the literature</div>
+<p class="q">In preclinical studies, tesamorelin was found to be resistant to deactivation by DPP4, and markedly increased plasma levels of GH and IGF-1 after once daily dosing.</p>
+<p class="ci">Bedimo R, HIV/AIDS Research and Therapy, 2011</p>
+</div>
+
+<h3>Beyond Fat Loss: Liver and Brain</h3>
+
+<p>Two additional clinical findings have generated significant interest in tesamorelin beyond its approved indication.</p>
+
+<p><strong>Non-alcoholic fatty liver disease (NAFLD).</strong> A randomized, double-blind trial published in The Lancet HIV enrolled 61 people with HIV and hepatic steatosis. After 12 months, tesamorelin reduced hepatic fat fraction by 37 percent relative to placebo. Perhaps more importantly, only 10 percent of the tesamorelin group experienced fibrosis progression versus 37 percent of the placebo group. Fibrosis stage is the single strongest predictor of mortality in NAFLD, so preventing its progression is a meaningful clinical outcome. A separate post-hoc analysis found a 31 percent relative reduction in liver fat specifically among patients on integrase inhibitor regimens, which are known to promote weight gain.</p>
+
+<p><strong>Cognitive function.</strong> A 2012 study published in Archives of Neurology enrolled 152 adults aged 55 to 87, roughly half healthy and half with mild cognitive impairment. Daily subcutaneous tesamorelin injections at 1 mg for 20 weeks improved executive function significantly and showed a trend toward improved verbal memory, particularly in the MCI group. IGF-1 levels increased by 117 percent, reaching ranges typical of younger adults. A later neuroimaging substudy found that tesamorelin modulated brain GABA levels, a neurotransmitter linked to cognitive performance. A more recent 2025 Phase 2 trial in HIV-positive patients with abdominal obesity found a trend toward cognitive improvement (p = 0.060) but did not reach statistical significance, with the researchers noting limitations of small sample size and lack of a placebo arm.</p>
+
+<!-- IPAMORELIN SECTION -->
+<h2>Ipamorelin: The Selective GHRP</h2>
+
+<p>Ipamorelin occupies the other side of the growth hormone equation. Where tesamorelin mimics GHRH, ipamorelin mimics ghrelin, the stomach-derived hormone that acts on a completely separate receptor: the growth hormone secretagogue receptor type 1a, or GHS-R1a.</p>
+
+<p>Developed by Novo Nordisk in the late 1990s, ipamorelin is a synthetic pentapeptide with the sequence Aib-His-D-2-Nal-D-Phe-Lys-NH2. It was derived from GHRP-1 through a chemistry program that systematically removed and modified amino acids to find the most selective possible growth hormone secretagogue. The result was a molecule that binds GHS-R1a with high affinity and releases growth hormone with potency comparable to GHRP-6, but with one remarkable difference.</p>
+
+<p><strong>Selectivity.</strong> This is the word that defines ipamorelin and separates it from every GHRP that came before it. When the original characterization was published by Raun and colleagues in the European Journal of Endocrinology in 1998, the researchers reported something no one had seen before with a growth hormone secretagogue: ipamorelin did not increase ACTH or cortisol levels at doses more than 200 times higher than the dose needed to release growth hormone. In conscious swine, GHRP-6 and GHRP-2 both raised ACTH and cortisol alongside growth hormone. Ipamorelin did not. It released growth hormone with selectivity comparable to that of GHRH itself.</p>
+
+<div class="d d-t">
+<div class="s">The landmark finding</div>
+<p class="q">Ipamorelin is the first GHRP-receptor agonist with a selectivity for GH release similar to that displayed by GHRH. The specificity of ipamorelin makes this compound a very interesting candidate for future clinical development.</p>
+<p class="ci">Raun K et al., European Journal of Endocrinology, 1998</p>
+</div>
+
+<p>That selectivity matters for practical reasons. Cortisol is a catabolic hormone. Raising it alongside growth hormone partially cancels out the anabolic benefits you are trying to achieve. Prolactin elevation can cause side effects ranging from mood changes to gynecomastia. Older GHRPs like GHRP-6 and hexarelin are well-documented to increase both cortisol and prolactin. Ipamorelin avoids both problems, and it does not significantly increase appetite the way GHRP-6 does through its broader ghrelin mimicry.</p>
+
+<h3>The Gastric Motility Story</h3>
+
+<p>Because GHS-R1a is expressed throughout the gastrointestinal tract, ipamorelin was also investigated as a prokinetic agent for postoperative ileus, the temporary loss of gut motility that occurs after abdominal surgery. In rodent models, ipamorelin accelerated gastric emptying and reduced time to first bowel movement. However, when Novo Nordisk tested it in a Phase 2 clinical trial of 114 patients undergoing bowel resection, the results were disappointing: median time to first tolerated meal was 25.3 hours with ipamorelin versus 32.6 hours with placebo, but the difference did not reach statistical significance (p = 0.15). Two larger Phase III trials with a related ghrelin agonist also failed, and clinical development of ghrelin agonists for postoperative ileus was largely abandoned.</p>
+
+<p>The clinical trial data for ipamorelin's primary use case, growth hormone secretion for body composition and anti-aging, remains quite limited. The selectivity data is robust but comes primarily from the original Raun et al. characterization and subsequent pharmacological profiling. There are no large, long-term, placebo-controlled trials of ipamorelin for body composition, fat loss, or aging in general populations. This is a peptide whose clinical profile rests heavily on pharmacological characterization rather than outcomes data.</p>
+
+<!-- SYNERGY SECTION -->
+<h2>Why Stack Them: The Synergy Mechanism</h2>
+
+<p>The rationale for combining a GHRH analog with a GHRP is not marketing. It is a well-documented pharmacological phenomenon that has been studied since at least 1990, when Thorner, Bowers, and colleagues first reported that GHRH and growth hormone-releasing peptides act synergistically to stimulate growth hormone secretion in humans.</p>
+
+<p>The word "synergy" has a specific meaning here. It does not mean "additive," where 1 + 1 = 2. It means the combined response exceeds what you would predict by simply adding the individual responses together. GHRH alone might produce a certain GH pulse. A GHRP alone might produce a similar pulse. But administered together, the pulse they produce is substantially larger than either one alone or both added together.</p>
+
+<p>The mechanism involves three distinct actions working simultaneously:</p>
+
+<div class="svg-box">
+<div class="st">The Dual-Pathway Synergy</div>
+<div class="ss">How GHRH and GHRP pathways amplify each other at the pituitary</div>
+<svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2956A6" stop-opacity="0.12"/><stop offset="100%" stop-color="#2956A6" stop-opacity="0.03"/></linearGradient>
+<linearGradient id="gt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#187A62" stop-opacity="0.12"/><stop offset="100%" stop-color="#187A62" stop-opacity="0.03"/></linearGradient>
+<linearGradient id="gp" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6E3B8A" stop-opacity="0.12"/><stop offset="100%" stop-color="#6E3B8A" stop-opacity="0.03"/></linearGradient>
+</defs>
+<!-- Tesamorelin Panel -->
+<rect x="10" y="10" width="210" height="360" rx="12" fill="url(#gb)" stroke="#2956A6" stroke-width="1.5" stroke-opacity="0.3"/>
+<text x="115" y="40" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="600" fill="#2956A6">TESAMORELIN</text>
+<text x="115" y="58" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#86869A">GHRH Receptor (cAMP)</text>
+<rect x="30" y="74" width="170" height="28" rx="6" fill="#2956A6" fill-opacity="0.1"/>
+<text x="115" y="93" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="500" fill="#2956A6">Binds GHRH-R</text>
+<text x="115" y="123" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">↓</text>
+<rect x="30" y="134" width="170" height="28" rx="6" fill="#2956A6" fill-opacity="0.1"/>
+<text x="115" y="153" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="500" fill="#2956A6">Activates adenylate cyclase</text>
+<text x="115" y="176" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">↓</text>
+<rect x="30" y="186" width="170" height="28" rx="6" fill="#2956A6" fill-opacity="0.1"/>
+<text x="115" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="500" fill="#2956A6">↑ cAMP accumulation</text>
+<text x="115" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">↓</text>
+<rect x="30" y="238" width="170" height="40" rx="6" fill="#2956A6" fill-opacity="0.15"/>
+<text x="115" y="255" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#2956A6">GH synthesis + release</text>
+<text x="115" y="270" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6">(makes new GH &amp; releases it)</text>
+<text x="115" y="310" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Also: DPP-IV resistant</text>
+<text x="115" y="326" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">44 amino acids</text>
+<text x="115" y="342" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">FDA-approved (Egrifta)</text>
+
+<!-- Ipamorelin Panel -->
+<rect x="245" y="10" width="210" height="360" rx="12" fill="url(#gt)" stroke="#187A62" stroke-width="1.5" stroke-opacity="0.3"/>
+<text x="350" y="40" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="600" fill="#187A62">IPAMORELIN</text>
+<text x="350" y="58" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#86869A">GHS-R1a (PLC/IP3/DAG)</text>
+<rect x="265" y="74" width="170" height="28" rx="6" fill="#187A62" fill-opacity="0.1"/>
+<text x="350" y="93" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="500" fill="#187A62">Binds GHS-R1a</text>
+<text x="350" y="123" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">↓</text>
+<rect x="265" y="134" width="170" height="28" rx="6" fill="#187A62" fill-opacity="0.1"/>
+<text x="350" y="153" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="500" fill="#187A62">Activates phospholipase C</text>
+<text x="350" y="176" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">↓</text>
+<rect x="265" y="186" width="170" height="28" rx="6" fill="#187A62" fill-opacity="0.1"/>
+<text x="350" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="500" fill="#187A62">↑ IP3/DAG → Ca²⁺ release</text>
+<text x="350" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">↓</text>
+<rect x="265" y="238" width="170" height="40" rx="6" fill="#187A62" fill-opacity="0.15"/>
+<text x="350" y="255" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#187A62">GH release (not synthesis)</text>
+<text x="350" y="270" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62">(releases stored GH only)</text>
+<text x="350" y="310" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Also: suppresses somatostatin</text>
+<text x="350" y="326" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">5 amino acids (pentapeptide)</text>
+<text x="350" y="342" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Not FDA-approved</text>
+
+<!-- Synergy Panel -->
+<rect x="480" y="10" width="210" height="360" rx="12" fill="url(#gp)" stroke="#6E3B8A" stroke-width="1.5" stroke-opacity="0.3"/>
+<text x="585" y="40" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="600" fill="#6E3B8A">SYNERGY</text>
+<text x="585" y="58" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#86869A">Combined effect &gt; sum of parts</text>
+<rect x="500" y="74" width="170" height="36" rx="6" fill="#6E3B8A" fill-opacity="0.1"/>
+<text x="585" y="89" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="500" fill="#6E3B8A">PKC from GHRP amplifies</text>
+<text x="585" y="103" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="500" fill="#6E3B8A">cAMP from GHRH</text>
+<text x="585" y="126" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">+</text>
+<rect x="500" y="136" width="170" height="36" rx="6" fill="#6E3B8A" fill-opacity="0.1"/>
+<text x="585" y="151" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="500" fill="#6E3B8A">GHRP suppresses</text>
+<text x="585" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="500" fill="#6E3B8A">somatostatin (removes brake)</text>
+<text x="585" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3C3C52">+</text>
+<rect x="500" y="198" width="170" height="36" rx="6" fill="#6E3B8A" fill-opacity="0.1"/>
+<text x="585" y="213" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="500" fill="#6E3B8A">GHRH drives GH synthesis</text>
+<text x="585" y="227" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" font-weight="500" fill="#6E3B8A">GHRP drives GH exocytosis</text>
+<text x="585" y="256" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3C3C52">= = = = =</text>
+<rect x="500" y="268" width="170" height="46" rx="8" fill="#6E3B8A" fill-opacity="0.18"/>
+<text x="585" y="286" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#6E3B8A">Amplified GH Pulses</text>
+<text x="585" y="305" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#6E3B8A">Mimics youthful pulsatile pattern</text>
+<text x="585" y="340" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Documented since 1990</text>
+<text x="585" y="356" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">(Thorner, Bowers et al.)</text>
+</svg>
+</div>
+
+<p><strong>First, intracellular signal amplification.</strong> Tesamorelin activates the cAMP pathway through GHRH receptors. Ipamorelin activates the phospholipase C/IP3/DAG pathway through GHS-R1a, leading to protein kinase C (PKC) activation. PKC amplifies GHRH-induced cAMP accumulation within the same somatotroph cell. Two signaling cascades converge on the same downstream machinery, producing a response greater than either alone.</p>
+
+<p><strong>Second, somatostatin suppression.</strong> GHRPs like ipamorelin reduce hypothalamic somatostatin release. Somatostatin is the primary brake on growth hormone secretion, and it inhibits exocytosis (the physical release of GH granules from somatotrophs) without affecting GH synthesis. By suppressing somatostatin, ipamorelin removes a physiological brake that would otherwise limit the response to GHRH stimulation. This effect has been demonstrated in animal models where GHRH is absent: GHRP still produces significant GH release, largely through somatostatin suppression.</p>
+
+<p><strong>Third, complementary roles in GH production versus release.</strong> GHRH is essential for both GH synthesis and release. GHRPs like ipamorelin primarily drive GH release (exocytosis) rather than synthesis. Somatostatin restrains exocytosis but not synthesis, which means that under somatostatin's tonic influence, GHRH continues to stimulate GH production, building up releasable stores within somatotroph cells. When a GHRP then suppresses somatostatin and simultaneously triggers exocytosis, those accumulated stores are released in a large burst. The GHRH keeps filling the reservoir; the GHRP opens the floodgates.</p>
+
+<div class="d d-p">
+<div class="s">From the literature</div>
+<p class="q">GHRP does not augment GH synthesis, but it markedly potentiates GHRH-evoked GH release, thus serving as an in vivo amplifier of GH pulsatility.</p>
+<p class="ci">Veldhuis JD, Bowers CY, American Journal of Physiology - Endocrinology and Metabolism, 2009</p>
+</div>
+
+<p>A 2009 study by Veldhuis and Bowers directly measured this synergy in 47 healthy men across a wide age range (18 to 74 years). They found that GHRH-GHRP synergy correlated negatively with both age and abdominal visceral fat, and positively with IGF-1 levels. Together, abdominal visceral fat, IGF-1, and IGFBP-3 explained 60 percent of the variability in synergistic GH response. The practical implication: the people who most need growth hormone optimization (older, higher visceral fat, lower IGF-1) tend to have the weakest synergistic response, which means dosing and expectations need to be calibrated accordingly.</p>
+
+<!-- COMPARISON TABLE -->
+<h2>Head-to-Head Comparison</h2>
+
+<table class="tbl">
+<thead><tr><th>Property</th><th>Tesamorelin</th><th>Ipamorelin</th></tr></thead>
+<tbody>
+<tr><td><strong>Class</strong></td><td>GHRH analog</td><td>Growth hormone secretagogue (GHRP)</td></tr>
+<tr><td><strong>Receptor target</strong></td><td>GHRH receptor (cAMP pathway)</td><td>GHS-R1a / ghrelin receptor (PLC pathway)</td></tr>
+<tr><td><strong>Structure</strong></td><td>44-amino-acid polypeptide</td><td>Pentapeptide (5 amino acids)</td></tr>
+<tr><td><strong>Primary action</strong></td><td>GH synthesis + release</td><td>GH release (exocytosis)</td></tr>
+<tr><td><strong>Cortisol effect</strong></td><td>No significant increase</td><td>No increase (even at 200x ED50)</td></tr>
+<tr><td><strong>Prolactin effect</strong></td><td>No significant increase</td><td>No significant increase</td></tr>
+<tr><td><strong>Appetite effect</strong></td><td>Minimal</td><td>Minimal (unlike GHRP-6)</td></tr>
+<tr><td><strong>Visceral fat reduction</strong></td><td>15-20% in Phase III trials</td><td>No large controlled trial data</td></tr>
+<tr><td><strong>FDA approval</strong></td><td>Yes (2010, HIV lipodystrophy)</td><td>No</td></tr>
+<tr><td><strong>Compounding status (2025)</strong></td><td>Classified as biologic; not compoundable</td><td>Removed from Category 2 (Sep 2024); under PCAC review</td></tr>
+<tr><td><strong>WADA status</strong></td><td>Not specifically listed</td><td>Prohibited (growth hormone secretagogue)</td></tr>
+<tr><td><strong>Typical dose</strong></td><td>2 mg SubQ daily (FDA-approved)</td><td>200-300 mcg SubQ, 1-2x daily</td></tr>
+<tr><td><strong>GI prokinetic effect</strong></td><td>Not studied</td><td>Demonstrated in rodents; failed Phase II in humans</td></tr>
+<tr><td><strong>Cognitive data</strong></td><td>Improved executive function in RCT (n=152)</td><td>None</td></tr>
+<tr><td><strong>NAFLD data</strong></td><td>Reduced liver fat 37%, slowed fibrosis in RCT</td><td>None</td></tr>
+</tbody>
+</table>
+
+<!-- PRACTICAL PROTOCOLS -->
+<h2>Practical Protocols</h2>
+
+<p>There are no published clinical trials testing tesamorelin and ipamorelin together as a combination protocol. Every dosing recommendation that follows is derived from individual peptide data, clinical experience reported by practitioners, and the GHRH/GHRP synergy literature. This is an important caveat: the stack itself has never been validated in a controlled study.</p>
+
+<h3>Dosing</h3>
+
+<p><strong>Tesamorelin:</strong> The FDA-approved dose for its indicated use is 2 mg subcutaneously once daily. This is the dose used across all major clinical trials and is well-characterized for safety. Most practitioners working with this peptide off-label use this same dose. Pre-mixed blend products from research suppliers often contain lower amounts (e.g., tesamorelin 6 mg + ipamorelin 2 mg per vial, split across multiple doses), but these have no clinical validation.</p>
+
+<p><strong>Ipamorelin:</strong> No FDA-approved dose exists. The most commonly referenced range in clinical and practitioner settings is 200 to 300 mcg per injection, administered one to two times daily via subcutaneous injection. The original pharmacological characterization used intravenous administration in animal models at doses ranging from 0.01 to 1 mg/kg. The 200-300 mcg subcutaneous human dose is an empirical convention, not a rigorously validated therapeutic dose.</p>
+
+<h3>Timing</h3>
+
+<p>Growth hormone secretion follows a circadian rhythm, with the largest natural pulse occurring during slow-wave sleep. Most protocols recommend evening administration, typically 30 minutes before bedtime on an empty stomach (at least 2 hours after the last meal). This aligns with the natural nocturnal GH surge and avoids competition with postprandial insulin, which suppresses growth hormone release.</p>
+
+<p>Some practitioners advocate a split protocol, with tesamorelin in the morning and ipamorelin in the evening, or both administered together at bedtime. The split approach theoretically avoids receptor saturation and provides two daily GH pulses rather than one amplified pulse, but there is no controlled data comparing these timing strategies.</p>
+
+<h3>Cycling</h3>
+
+<p>Typical protocols run 8 to 12 weeks, followed by an equal period off (or shorter, 4 to 6 weeks). The rationale is to prevent GH receptor desensitization and allow the pituitary's own regulatory feedback loops to reset. However, the tesamorelin clinical trials ran continuously for 26 weeks (and 52 weeks in extension phases) without documented receptor desensitization, so the need for cycling may apply more to ipamorelin than to tesamorelin. The fat loss observed with tesamorelin reversed on discontinuation, which argues against cycling the GHRH component if visceral fat reduction is the primary goal.</p>
+
+<div class="d d-a">
+<div class="s">Practical note</div>
+<p>Blood glucose and insulin monitoring during therapy is important. Tesamorelin's prescribing information includes warnings about glucose intolerance and increased diabetes risk. IGF-1 levels should be tracked to ensure they remain within physiological range. Elevations above the age-adjusted upper limit of normal warrant dose reduction or discontinuation.</p>
+</div>
+
+<!-- EVIDENCE HIERARCHY -->
+<h2>The Evidence Hierarchy</h2>
+
+<p>Not all the science supporting this stack sits at the same level of confidence. Being honest about where the evidence is strong versus where it thins out is essential for making informed decisions.</p>
+
+<div class="g2">
+<div class="cd cb">
+<div class="tg">Strong evidence</div>
+<h3>Tesamorelin Visceral Fat Reduction</h3>
+<p style="font-size:14px;">Two large Phase III RCTs (806+ patients), FDA-approved indication, reproducible 15-20% VAT reduction at 26 weeks, well-characterized safety profile. This is pharmaceutical-grade evidence.</p>
+</div>
+<div class="cd ct">
+<div class="tg">Moderate evidence</div>
+<h3>GHRH + GHRP Synergy</h3>
+<p style="font-size:14px;">Multiple controlled studies confirm synergistic GH release when GHRH and GHRP pathways are activated simultaneously. Established since 1990, reproduced across species and in human subjects. However, studied with older GHRPs (GHRP-2, GHRP-6), not specifically tesamorelin + ipamorelin.</p>
+</div>
+<div class="cd ca">
+<div class="tg">Emerging evidence</div>
+<h3>Tesamorelin for NAFLD and Cognition</h3>
+<p style="font-size:14px;">Promising RCT data on liver fat reduction and fibrosis prevention (n=61). Cognitive benefits in healthy elderly and MCI (n=152) but a more recent trial in HIV patients did not reach significance. Encouraging but not yet definitive.</p>
+</div>
+<div class="cd cr">
+<div class="tg">Limited evidence</div>
+<h3>Ipamorelin Body Composition / Anti-Aging</h3>
+<p style="font-size:14px;">Excellent pharmacological selectivity data from original characterization. No large controlled trials for body composition, fat loss, or aging in general populations. Clinical profile rests on mechanism, not outcomes. The one RCT (postoperative ileus, n=114) failed its primary endpoint.</p>
+</div>
+</div>
+
+<div class="cd cp">
+<div class="tg">No direct evidence</div>
+<h3>Tesamorelin + Ipamorelin as a Combined Stack</h3>
+<p style="font-size:14px;">These two specific peptides have never been studied together in any published clinical trial. The synergy argument is mechanistic (GHRH + GHRP dual-receptor activation), extrapolated from older GHRH/GHRP combination studies. Plausible biology, but unproven as a specific combination.</p>
+</div>
+
+<!-- REGULATORY STATUS -->
+<h2>Regulatory Reality (2025)</h2>
+
+<p>The regulatory landscape for these two peptides is unusually asymmetric. One has full FDA approval. The other has never been approved for any indication. Understanding the current status of each is critical for anyone considering this stack.</p>
+
+<table class="tbl">
+<thead><tr><th>Category</th><th>Tesamorelin</th><th>Ipamorelin</th></tr></thead>
+<tbody>
+<tr><td><strong>FDA approval</strong></td><td>Yes (2010, Egrifta; 2025, Egrifta WR)</td><td>No approval for any indication</td></tr>
+<tr><td><strong>Regulatory class</strong></td><td>Biologic product (Purple Book)</td><td>Removed from Category 2 (Sep 2024); PCAC review pending</td></tr>
+<tr><td><strong>Compounding</strong></td><td>Ineligible (classified as biologic)</td><td>Currently not compoundable; PCAC recommended against 503A inclusion</td></tr>
+<tr><td><strong>Prescription access</strong></td><td>Available via Egrifta/Egrifta WR Rx (on-label: HIV lipodystrophy; off-label at physician discretion)</td><td>No legitimate Rx pathway in the U.S.</td></tr>
+<tr><td><strong>Research supply</strong></td><td>Available from research suppliers</td><td>Available from research suppliers ("for research use only")</td></tr>
+<tr><td><strong>WADA</strong></td><td>Not specifically prohibited</td><td>Prohibited under S2 (growth hormone secretagogues)</td></tr>
+</tbody>
+</table>
+
+<p><strong>Tesamorelin</strong> sits in a unique position. It is FDA-approved and commercially available by prescription, but only for HIV-associated lipodystrophy. Physicians may prescribe it off-label for other indications, but insurance coverage for off-label use is rarely available, and the brand-name product is expensive. Because the FDA reclassified tesamorelin as a biologic product, compounding pharmacies cannot legally produce generic versions.</p>
+
+<p><strong>Ipamorelin</strong> has gone through a regulatory rollercoaster. In September 2023, the FDA placed it on Category 2 of the interim 503A bulks list, effectively banning compounding pharmacies from producing it. In September 2024, the FDA removed ipamorelin from Category 2 after the nominator withdrew the substance. This moved it out of the "banned" category but did not make it legal to compound. The Pharmacy Compounding Advisory Committee (PCAC) reviewed ipamorelin at its October 2024 meeting and recommended against including it in the 503A Bulks Regulation, meaning compounding remains suspended while evaluation continues. As of early 2026, ipamorelin exists in regulatory limbo: not explicitly banned, but not authorized for compounding either.</p>
+
+<div class="d d-r">
+<div class="s">Regulatory warning</div>
+<p>The FDA's position on peptide compounding continues to evolve. Several legal challenges are ongoing, including actions by the Alliance for Pharmacy Compounding and other organizations contesting FDA authority over bulk drug substance classification. Enforcement actions have been taken against compounding pharmacies distributing prohibited peptides. Anyone considering these peptides should consult both healthcare and legal professionals and stay current with regulatory developments.</p>
+</div>
+
+<!-- SAFETY -->
+<h2>Safety Considerations</h2>
+
+<div class="g2">
+<div class="cd cb">
+<h3 style="color:var(--blue);">Tesamorelin</h3>
+<p style="font-size:14px;"><strong>Well-characterized.</strong> In clinical trials of 740+ patients, the most common adverse events were injection site reactions, arthralgia, extremity pain, peripheral edema, and myalgia. Approximately 56 percent of patients developed anti-tesamorelin IgG antibodies after 26 weeks, with roughly 60 percent of those showing cross-reactivity to endogenous GHRH. However, antibody status did not affect clinical response (VAT reduction and IGF-1 response were similar regardless of antibody status).</p>
+<p style="font-size:14px;"><strong>Key concerns:</strong> Glucose intolerance and increased diabetes risk (patients with pre-existing glucose abnormalities are at higher risk). IGF-1 elevation above upper limit of normal (requires monitoring). Theoretical concern about malignant tumor growth stimulation (contraindicated in active cancer). Effects reverse on discontinuation.</p>
+</div>
+<div class="cd ct">
+<h3 style="color:var(--teal);">Ipamorelin</h3>
+<p style="font-size:14px;"><strong>Limited data.</strong> The Phase 2 postoperative ileus trial (IV infusion, 0.03 mg/kg twice daily) showed a lower overall adverse event rate in the ipamorelin group (87.5%) than placebo (94.8%), in a population recovering from bowel surgery. Safety data for subcutaneous dosing at the lower doses used in anti-aging protocols is essentially absent from published literature.</p>
+<p style="font-size:14px;"><strong>Key concerns:</strong> The FDA cited a serious adverse event, including a death, during an IV infusion study, though causality was unclear and the route and dose were far from typical subcutaneous anti-aging protocols. No long-term safety data exists. Quality control variability in research-grade peptides is a significant practical concern.</p>
+</div>
+</div>
+
+<div class="d d-a">
+<div class="s">IGF-1 Monitoring</div>
+<p>Both peptides elevate IGF-1 levels, and the combination is expected to produce larger IGF-1 increases than either alone. Chronically elevated IGF-1 above age-adjusted reference ranges has been epidemiologically associated with increased cancer risk. Tesamorelin's prescribing information recommends monitoring IGF-1 levels during therapy and discontinuing if levels consistently exceed the upper limit of normal. This monitoring becomes even more important with a dual-pathway stack.</p>
+</div>
+
+<!-- WHO IS THIS FOR -->
+<h2>Who Is This Stack For</h2>
+
+<p>The tesamorelin/ipamorelin combination occupies a specific niche. It is not a general wellness supplement, not a beginner peptide, and not a substitute for the foundational interventions that drive body composition: resistance training, adequate protein intake, sleep optimization, and caloric management.</p>
+
+<p>The people who derive the most defensible rationale from this stack are those who have already optimized those foundational elements and still contend with stubborn visceral fat accumulation, declining body composition despite consistent effort, or documented low IGF-1 levels. A prescribing physician is essential, not optional, particularly given tesamorelin's glucose effects and the need for IGF-1 monitoring.</p>
+
+<p>Several populations should approach with particular caution or avoid this stack entirely:</p>
+
+<ul class="bl">
+<li>Individuals with active cancer or a history of cancer (IGF-1 is a growth factor)</li>
+<li>Those with uncontrolled diabetes or significant glucose intolerance</li>
+<li>Anyone with pituitary tumors, prior pituitary surgery, or hypothalamic-pituitary axis disorders</li>
+<li>Pregnant or nursing women (tesamorelin is contraindicated)</li>
+<li>Athletes subject to WADA testing (ipamorelin is a prohibited substance)</li>
+<li>Anyone unable to commit to regular lab monitoring (IGF-1, glucose, HbA1c, lipid panel)</li>
+</ul>
+
+<p>For those not ready for the full injectable stack, or whose primary concern is generalized body composition rather than specifically visceral fat, the simpler approach would be to address growth hormone through lifestyle optimization: prioritizing deep sleep (where the largest natural GH pulses occur), high-intensity resistance training (which acutely increases GH), managing blood sugar and insulin (which suppress GH), and maintaining healthy body weight (visceral fat directly suppresses GH pulsatility).</p>
+
+<!-- BOTTOM LINE -->
+<h2>The Bottom Line</h2>
+
+<p>The tesamorelin/ipamorelin stack is built on genuine pharmacology. The GHRH + GHRP synergy mechanism is well-established in scientific literature going back more than three decades. Tesamorelin brings something rare to the peptide world: actual FDA approval, Phase III RCT data, and a well-characterized safety profile. Ipamorelin brings something equally rare among GHRPs: genuine selectivity for growth hormone release without cortisol, prolactin, or appetite baggage.</p>
+
+<p>The combination makes mechanistic sense. Two distinct receptor pathways on the same pituitary cells, intracellular signal amplification, somatostatin suppression, and complementary roles in GH synthesis versus release. The pharmacological logic is sound.</p>
+
+<p>But logic and evidence are not the same thing. These two specific peptides have never been studied together in a clinical trial. The synergy data comes from older GHRH/GHRP combinations. Ipamorelin has never been through a large outcomes trial for body composition or aging. Tesamorelin's impressive evidence base covers HIV lipodystrophy, NAFLD, and cognition, not general anti-aging in healthy populations. The regulatory environment is turbulent, with tesamorelin available only by brand-name prescription and ipamorelin stuck in regulatory limbo.</p>
+
+<div class="d d-a">
+<div class="s">Key takeaway</div>
+<p>The tesamorelin/ipamorelin stack combines the strongest FDA-approved GHRH analog with the most selective GHRP available, targeting dual receptor pathways for synergistic growth hormone optimization. Tesamorelin carries the strongest evidence of any peptide in its class, including Phase III RCT data for visceral fat, NAFLD, and cognitive function. Ipamorelin carries the strongest selectivity profile of any GHRP, but lacks clinical outcomes data. The combination is mechanistically rational but clinically unvalidated as a specific stack. Medical supervision with regular lab monitoring is not optional.</p>
+</div>
+
+<p style="font-size:13px;color:var(--mut);margin-top:40px;padding-top:20px;border-top:1px solid var(--bdr);">
+<strong>Sources:</strong> Raun K et al., European Journal of Endocrinology, 1998; Bedimo R, HIV/AIDS Research and Therapy, 2011; Veldhuis JD & Bowers CY, American Journal of Physiology, 2009; Thorner MO et al., Metabolism, 1990; Baker LD et al., Archives of Neurology, 2012; Stanley TL et al., The Lancet HIV, 2019; Falutz J et al., New England Journal of Medicine, 2007; Beck DE et al., International Journal of Colorectal Disease, 2014; Greenwood-Van Meerveld B et al., Journal of Experimental Pharmacology, 2012; Sinha DK et al., Translational Andrology and Urology, 2020; Friedman SD et al., JAMA Neurology, 2013; Fourman LT et al., Scientific Reports, 2021; FDA Egrifta WR Prescribing Information, 2025; FDA 503A Interim Bulks List, September 2024.
+<br><br>
+<em>This article is for informational purposes only and does not constitute medical advice. Tesamorelin is FDA-approved only for HIV-associated lipodystrophy. Ipamorelin is not FDA-approved for any indication. Consult a qualified healthcare provider before considering any peptide therapy.</em>
+</p>
+
+</div>
+
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content" set:html={rawHTML} />
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0">
+      <div class="md:sticky md:top-8 space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">&#128300; Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Popular Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner&#39;s Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &#8594;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner&#39;s Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
