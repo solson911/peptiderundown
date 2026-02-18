@@ -10,15 +10,15 @@ tags: ["selank", "semax", "nootropics", "peptides", "cognitive-enhancement"]
 
 # Selank and Semax: Russian Nootropic Peptides Explained
 
-Russia has a long and somewhat underappreciated history of peptide research. While Western pharmaceutical development focused heavily on small molecules and later biologics, Russian scientists were quietly building an impressive body of work on synthetic peptides for cognitive enhancement and immune modulation.
+Russia has a long and somewhat underappreciated history of peptide research. While Western pharmaceutical development focused heavily on small molecules and later biologics, Russian scientists were quietly building an impressive body of work on synthetic <a href="/articles/what-are-peptides-beginners-guide">peptides</a> for cognitive enhancement and immune modulation.
 
-Two peptides that came out of this tradition stand out: Selank and Semax. Both were developed at the Institute of Molecular Genetics of the Russian Academy of Sciences, and both have been approved as prescription medications in Russia. In the West, they've built a dedicated following among nootropic enthusiasts and biohackers.
+Two peptides that came out of this tradition stand out: <a href="/articles/selank-complete-guide">Selank</a> and <a href="/articles/semax-complete-guide">Semax</a>. Both were developed at the Institute of Molecular Genetics of the Russian Academy of Sciences, and both have been approved as prescription medications in Russia. In the West, they've built a dedicated following among <a href="/articles/semax-complete-guide">nootropic</a> enthusiasts and biohackers.
 
 But there's more to these peptides than internet hype. Let's look at what the research actually tells us.
 
 > **Key Takeaways**
-> - Selank is an anxiolytic peptide based on the immune peptide tuftsin; it modulates GABA and serotonin without sedation or addiction
-> - Semax is a cognitive enhancer derived from ACTH that upregulates BDNF and NGF for neuroprotection and focus
+> - <a href="/articles/selank-complete-guide">Selank</a> is an <a href="/articles/selank-complete-guide">anxiolytic</a> peptide based on the immune peptide tuftsin; it modulates GABA and serotonin without sedation or addiction
+> - <a href="/articles/semax-complete-guide">Semax</a> is a cognitive enhancer derived from ACTH that upregulates BDNF and NGF for neuroprotection and focus
 > - Both are administered as nasal sprays and are approved prescription medications in Russia
 > - They can be stacked together for "calm focus," with Selank reducing anxiety and Semax sharpening cognition
 
@@ -46,7 +46,7 @@ Selank's mechanisms are multifaceted. The research points to several pathways:
 
 **Serotonin metabolism.** Research has shown that Selank influences serotonin metabolism, particularly affecting the enzyme responsible for breaking down serotonin. This could contribute to its mood-stabilizing properties ([Narkevich et al., 2008](https://pubmed.ncbi.nlm.nih.gov/18683656/)).
 
-**BDNF expression.** Brain-derived neurotrophic factor is critical for neuroplasticity and neuronal survival. Selank has been shown to increase BDNF expression in animal models, which may explain some of its cognitive benefits ([Inozemtseva et al., 2008](https://pubmed.ncbi.nlm.nih.gov/18683655/)).
+**BDNF expression.** Brain-derived neurotrophic factor is critical for neuroplasticity and neuronal survival. Selank has been shown to increase BDNF expression in animal models, which may explain some of its cognitive benefits ([Inozemtseva et al., 2008](https://pubmed.ncbi.nlm.nih.gov/18683655/))
 
 **Immune modulation.** Remember, Selank is based on tuftsin, an immune peptide. It retains immunomodulatory properties, influencing cytokine expression and immune cell activity. A study published in *Immunology* demonstrated that Selank could modulate the expression of 45 inflammation-related genes ([Kolomin et al., 2013](https://pubmed.ncbi.nlm.nih.gov/23710696/)).
 
@@ -170,7 +170,7 @@ Neither peptide has shown the kind of serious adverse effects associated with ph
 
 > **Quick Summary:** Selank quiets the noise (anxiety). Semax sharpens the signal (focus). Together = calm, productive focus.
 
-Given their complementary mechanisms, combining Selank and Semax is a popular approach. The logic is straightforward: Selank handles the anxiety and stress side while Semax provides the cognitive boost. Together, you get calm focus.
+Given their complementary mechanisms, combining <a href="/articles/selank-complete-guide">Selank</a> and <a href="/articles/semax-complete-guide">Semax</a> is a popular approach. The logic is straightforward: Selank handles the anxiety and stress side while Semax provides the cognitive boost. Together, you get calm focus.
 
 **A common stack protocol:**
 

@@ -11,13 +11,13 @@ author: "PeptideRundown Team"
 
 # The Longevity Stack - Epithalon + NMN + Thymosin Alpha-1 for Cellular Renewal
 
-Three biological pillars decline with age: telomere integrity, cellular energy production, and immune competence. This stack strategically addresses each through:
+Three biological pillars decline with age: <a href="/articles/epithalon-anti-aging-guide">telomere integrity</a>, cellular energy production, and immune competence. This stack strategically addresses each through:
 
 | Component | Primary Action | Biological Target |
 |-----------|----------------|-------------------|
 | Epithalon | Telomerase activation | Chromosome protection |
-| NMN | NAD+ precursor synthesis | Mitochondrial function |
-| Thymosin Alpha-1 | T-cell differentiation | Thymic regeneration |
+| <a href="/articles/nad-peptides-cellular-energy-longevity">NMN</a> | NAD+ precursor synthesis | Mitochondrial function |
+| <a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1</a> | T-cell differentiation | Thymic regeneration |
 
 ---
 
@@ -230,7 +230,7 @@ NMN bypasses the rate-limiting NMNAT enzyme in NAD+ synthesis:
 
 ### Thymic Involution
 
-The thymus shrinks by 3% annually after puberty, reducing T-cell production. Thymosin Alpha-1 counters this through:
+The thymus shrinks by 3% annually after puberty, reducing T-cell production. <a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1</a> counters this through:
 
 - **Thymosin β4 stimulation** - increases thymic epithelial cells
 - **T-cell differentiation** - enhances CD4+ and CD8+ production
@@ -273,7 +273,7 @@ The thymus shrinks by 3% annually after puberty, reducing T-cell production. Thy
 ### By Gender
 
 - **Women**: Lower NMN dose (300mg daily) due to estrogen synergy
-- **Men**: Consider adding Follistatin for muscle maintenance
+- **Men**: Consider adding <a href="/articles/follistatin-344-guide">Follistatin</a> for muscle maintenance
 
 ---
 
@@ -286,7 +286,7 @@ The thymus shrinks by 3% annually after puberty, reducing T-cell production. Thy
   Absolutely not - no safety data exists for developmental impacts.
 
 - **How to store peptides?**
-  Lyophilized powder: room temp; reconstituted: refrigerated 2-8°C.
+  Lyophilized powder: room temp; reconstituted: <a href="/articles/how-to-store-peptides">refrigerated</a> 2-8°C.
 
 - **Any exercise restrictions?**
   Avoid intense training on Epithalon days due to potential fatigue.

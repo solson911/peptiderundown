@@ -11,9 +11,9 @@ author: "PeptideRundown Team"
 
 # Selank: The Anxiolytic Peptide That Sharpens Your Mind
 
-Selank is a synthetic <a href="/articles/what-are-peptides-beginners-guide">peptide</a> developed from tuftsin - a natural immune-modulating peptide. Created at Russia's Institute of Molecular Genetics in the 1990s, this peptide bridges the gap between anxiety relief and cognitive enhancement. Unlike traditional anti-anxiety medications, Selank provides calming effects without sedation or cognitive impairment.
+Selank is a synthetic <a href="/articles/what-are-peptides-beginners-guide">peptide</a> developed from tuftsin - a natural immune-modulating peptide. Created at Russia's Institute of Molecular Genetics in the 1990s, this peptide bridges the gap between <a href="/articles/selank-semax-nootropic-peptides">anxiety relief</a> and cognitive enhancement. Unlike traditional anti-anxiety medications, Selank provides calming effects without sedation or cognitive impairment.
 
-This unique peptide has been researched extensively in Russia, with over 20 clinical studies backing its safety profile and benefits. Research consistently shows it reduces <a href="/articles/selank-semax-nootropic-peptides">anxiety</a> while improving memory, focus, and learning ability. Its dual-action profile makes it valuable for those seeking mental clarity alongside emotional balance.
+This unique <a href="/articles/what-are-peptides-beginners-guide">peptide</a> has been researched extensively in Russia, with over 20 clinical studies backing its safety profile and benefits. Research consistently shows it reduces <a href="/articles/selank-semax-nootropic-peptides">anxiety</a> while improving memory, focus, and learning ability. Its dual-action profile makes it valuable for those seeking mental clarity alongside emotional balance.
 
 ## Origins and Development
 
@@ -33,7 +33,7 @@ GABA modulation is a primary mechanism. Selank increases GABA activity without b
 
 Another important pathway involves enkephalin degradation inhibition. Selank slows the breakdown of natural enkephalins - opioid-like compounds that regulate pain and mood. This increases their availability without creating dependency.
 
-Immune modulation through its tuftsin-derived structure adds another dimension. Tuftsin naturally regulates immune function, and Selank inherits this property. Balanced <a href="/articles/ll-37-antimicrobial-peptide-guide">immune activity</a> contributes to overall mental well-being.
+Immune modulation through its tuftsin-derived structure adds another dimension. Tuftsin naturally regulates immune function, and Selank inherits this property. Balanced <a href="/articles/thymosin-alpha-1-immune-guide">immune activity</a> contributes to overall mental well-being.
 
 ## Research and Clinical Data
 
@@ -180,4 +180,4 @@ Selank represents a significant advancement in anxiety and cognitive management.
 
 Research supports its safety and efficacy profile. Russian clinical data shows consistent benefits for anxiety and cognition. The lack of dependency or withdrawal makes it suitable for long-term use. Immune modulation provides additional health benefits beyond mental wellness.
 
-For those new to peptides, start with our [beginner's guide](/articles/what-are-peptides-beginners-guide). Always consider [bloodwork monitoring](/articles/peptide-bloodwork-guide) when using peptides long-term. When used responsibly, Selank offers a balanced approach to mental wellness and performance.
+For those new to peptides, start with our [beginner's guide](/articles/what-are-peptides-beginners-guide). Always consider <a href="/articles/peptide-bloodwork-guide">bloodwork monitoring</a> when using peptides long-term. When used responsibly, Selank offers a balanced approach to mental wellness and performance.

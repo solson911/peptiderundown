@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 # LL-37: Your Body's Natural Antibiotic
 
-Your immune system makes its own antibiotics. They're called antimicrobial peptides. LL-37 stands out as one of the most important.
+Your <a href="/articles/thymosin-alpha-1-immune-guide">immune system</a> makes its own antibiotics. They're called antimicrobial peptides. LL-37 stands out as one of the most important.
 
 This 37-amino acid peptide does more than kill germs. It helps control your immune response and speeds up tissue repair. Think of it as your body's built-in defense system.
 
@@ -26,12 +26,12 @@ LL-37 is the only cathelicidin peptide in humans. It comes from a larger protein
 | **Type** | Cationic antimicrobial peptide |
 | **Length** | 37 amino acids |
 | **Weight** | About 4.5 kDa |
-| **Production Sites** | White blood cells, skin cells, immune cells |
+| **Production Sites** | White blood cells, <a href="/articles/best-peptides-for-skin-and-hair">skin</a> cells, immune cells |
 | **Gene Source** | CAMP gene |
 | **Activation** | Cut from hCAP18 by enzymes |
 | **Half-life** | Approximately 2-4 hours in tissues |
 
-Scientists first found it in white blood cells. Now we know many body tissues make it. Your skin, lungs, and gut lining all produce LL-37. This wide distribution shows its importance.
+Scientists first found it in white blood cells. Now we know many body tissues make it. Your skin, lungs, and <a href="/articles/best-peptides-for-gut-health">gut lining</a> all produce LL-37. This wide distribution shows its importance.
 
 > **Structural Insight:** The 'LL' part comes from its first two amino acids (leucine-leucine). The 37 shows its length. This structure gives it unique properties.
 
@@ -41,7 +41,7 @@ You can learn more about its molecular structure on PeptideArc.
 
 ## How LL-37 Protects You
 
-This peptide works in two main ways. It attacks germs directly and helps your immune system.
+This <a href="/articles/what-are-peptides-beginners-guide">peptide</a> works in two main ways. It attacks germs directly and helps your immune system.
 
 ### Direct Attack on Microbes
 
@@ -114,13 +114,13 @@ LL-37 doesn't just fight germs. It actively helps repair damage:
 | Diabetic ulcers | Better healing rates |
 | Burn injuries | Faster recovery time |
 | Surgical cuts | Lower infection risk |
-| Chronic wounds | Improved tissue repair |
+| Chronic <a href="/articles/bpc-157-complete-guide">wounds</a> | Improved tissue repair |
 
 ---
 
 ## The Vitamin D Link
 
-Your vitamin D levels directly affect LL-37 production through a clear biological pathway:
+Your <a href="/articles/thymosin-alpha-1-immune-guide">vitamin D</a> levels directly affect LL-37 production through a clear biological pathway:
 
 1. Vitamin D enters cells
 2. Binds to vitamin D receptors (VDR)
