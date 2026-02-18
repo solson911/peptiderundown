@@ -9,7 +9,7 @@ tags: ["wolverine stack", "BPC-157", "TB-500", "GHK-Cu", "healing", "recovery", 
 author: "PeptideRundown Team"
 ---
 
-# The Wolverine Stack - BPC-157, TB-500 and GHK-Cu for Healing and Recovery
+# The Wolverine Stack - <a href="/articles/bpc-157-complete-guide">BPC-157</a>, <a href="/articles/tb-500-complete-guide">TB-500</a> and <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a> for Healing and Recovery
 
 The Wolverine Stack brings together three peptides known for their healing properties: **BPC-157**, **TB-500**, and **GHK-Cu**. These compounds target different aspects of tissue repair, creating a coordinated approach to injury recovery and systemic healing.
 

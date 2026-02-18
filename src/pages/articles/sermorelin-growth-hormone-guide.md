@@ -56,7 +56,7 @@ Most growth hormone release occurs during deep sleep. That's why sermorelin is t
 
 ### The Growth Hormone Pathway
 
-- Sermorelin injection enters subcutaneous tissue
+- Sermorelin injection enters <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a> tissue
 - Peptide binds to GHRH receptors on pituitary cells
 - Pituitary releases stored growth hormone
 - Growth hormone circulates to liver and other tissues
@@ -166,8 +166,8 @@ Several peptides support growth hormone pathways. Each has distinct characterist
 | **Peptide** | **Mechanism** | **Dosing Frequency** | **Duration** |
 |-------------|---------------|----------------------|--------------|
 | Sermorelin | GHRH analog | Daily | 3-6 months |
-| Ipamorelin | GHRP analog | Daily | 3-6 months |
-| CJC-1295 | GHRH analog with DAC | Twice weekly | Longer acting |
+| <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> | GHRP analog | Daily | 3-6 months |
+| <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> | GHRH analog with DAC | Twice weekly | Longer acting |
 | Tesamorelin | GHRH analog | Daily | 3-6 months |
 
 ### Sermorelin vs. Direct Growth Hormone

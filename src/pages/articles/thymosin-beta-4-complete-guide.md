@@ -37,7 +37,7 @@ White blood cells and platelets are primary production sites. The peptide acts l
 | **Tissue Presence** | Found in nearly all body tissues |
 | **Concentration Increase** | During injury and repair |
 
-TB-4 is different from its fragment TB-500. The full peptide has structural elements that enable broader biological activities. These differences may explain variations in their regenerative capabilities.
+TB-4 is different from its fragment <a href="/articles/tb-500-complete-guide">TB-500</a>. The full peptide has structural elements that enable broader biological activities. These differences may explain variations in their regenerative capabilities.
 
 ---
 
@@ -195,8 +195,8 @@ TB-4 is often combined with other regenerative compounds. Potential pairings inc
 
 | Combination | Potential Benefit | Notes |
 |-------------|-------------------|-------|
-| BPC-157 | Better tissue repair | Different mechanisms |
-| GHK-Cu | Collagen support | Complementary actions |
+| <a href="/articles/bpc-157-complete-guide">BPC-157</a> | Better tissue repair | Different mechanisms |
+| <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a> | Collagen support | Complementary actions |
 | Epitalon | Cell protection | Different targets |
 
 Always discuss combination therapies with your healthcare provider. Potential interactions need consideration.

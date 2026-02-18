@@ -37,7 +37,7 @@ author: "PeptideRundown Team"
 <div class="sb"><div class="v c1">0</div><div class="l">Blood vessels in articular cartilage</div></div>
 <div class="sb"><div class="v c2">28</div><div class="l">Types of collagen in human joints</div></div>
 <div class="sb"><div class="v c3">60%</div><div class="l">Of OA patients are over 60</div></div>
-<div class="sb"><div class="v c4">36</div><div class="l">Preclinical BPC-157 studies (to 2024)</div></div>
+<div class="sb"><div class="v c4">36</div><div class="l">Preclinical <a href="/articles/bpc-157-complete-guide">BPC-157</a> studies (to 2024)</div></div>
 </div>
 
 <!-- BPC-157 -->
@@ -74,7 +74,7 @@ author: "PeptideRundown Team"
 <p>As noted in the systematic review: despite consistent preclinical results and growing clinical use, "there is no clinical safety data in humans" for BPC-157. The peptide remains FDA Category 2 (prohibited for compounding) and is banned in professional sports by WADA. Anyone reporting adverse effects from unregulated products may be experiencing contamination, incorrect dosing, or genuine pharmacological effects that have never been characterized in controlled human studies.</p>
 </div>
 
-<!-- TB-500 -->
+<!-- <a href="/articles/tb-500-complete-guide">TB-500</a> -->
 <h2>TB-500 (Thymosin Beta-4): The Systemic Remodeler</h2>
 
 <p>TB-500 is a synthetic peptide fragment derived from thymosin beta-4, a 43-amino-acid protein that is expressed in nearly every cell in the human body. Thymosin beta-4 was originally isolated from calf thymus in the early 1980s, and its concentration is particularly high in blood platelets, wound fluid, and immune cells, exactly the places where tissue repair is actively occurring.</p>
@@ -100,7 +100,7 @@ author: "PeptideRundown Team"
 <p>TB-500 has been studied primarily in veterinary medicine (especially equine tendon injuries) and in preclinical models of cardiac, dermal, and neurological injury. There are no published controlled clinical trials of TB-500 for human joint conditions. Its use in human joint therapy is extrapolated from its known biological mechanisms and from practitioner experience, not from direct clinical evidence.</p>
 </div>
 
-<!-- AOD-9604 -->
+<!-- <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> -->
 <h2>AOD-9604: The Cartilage Candidate</h2>
 
 <p>AOD-9604 is a modified fragment of human growth hormone, specifically amino acids 177 through 191 from the C-terminal end of the GH molecule. It was originally developed by Metabolic Pharmaceuticals in Australia as an anti-obesity agent, designed to retain GH's fat-metabolizing properties without its growth-promoting (and potentially dangerous) effects on IGF-1 levels.</p>
@@ -120,7 +120,7 @@ author: "PeptideRundown Team"
 <p>AOD-9604 is one of the most commonly discussed peptides for intra-articular injection, often combined with hyaluronic acid in clinical protocols. It received GRAS (Generally Recognized as Safe) status from the FDA for oral use as a food ingredient, but this does not extend to injectable applications. Like ipamorelin, it was placed on FDA Category 2 in September 2023 and later had its nomination withdrawn, leaving it in regulatory limbo for compounding as of early 2026.</p>
 </div>
 
-<!-- GHK-Cu -->
+<!-- <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a> -->
 <h2>GHK-Cu: The Connective Tissue Architect</h2>
 
 <p>GHK-Cu (glycyl-L-histidyl-L-lysine copper complex) is a naturally occurring tripeptide found in human blood plasma, saliva, and urine. Discovered in 1973, it is perhaps the best-characterized peptide on this list in terms of basic biology, though its joint-specific research is less developed than its skin and wound healing data.</p>

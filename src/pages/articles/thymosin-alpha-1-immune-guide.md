@@ -277,11 +277,11 @@ Ta1 has one of the cleanest safety profiles of any injectable peptide in clinica
 - **Autoimmune flare** - if you have an existing autoimmune condition that worsens, discontinue and consult your provider
 - **Persistent fever above 101F** - may indicate infection rather than immune activation
 
-For a broader overview, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know).
+For a broader overview, see our [<a href="/articles/peptide-side-effects-what-to-know">peptide side effects</a> guide](/articles/peptide-side-effects-what-to-know).
 
 ## Thymosin Alpha-1 vs. Other Immune Peptides
 
-| Feature | Thymosin Alpha-1 | BPC-157 | Thymosin Beta-4 |
+| Feature | Thymosin Alpha-1 | <a href="/articles/bpc-157-complete-guide">BPC-157</a> | Thymosin Beta-4 |
 |---------|-----------------|---------|-----------------|
 | **Primary action** | Immune modulation | Tissue repair / gut healing | Tissue repair / anti-inflammatory |
 | **Immune effects** | Direct T-cell activation | Indirect (via gut health) | Mild anti-inflammatory |
@@ -357,7 +357,7 @@ That said, anyone with an active autoimmune condition should use caution, since 
 
 Ta1 is commonly combined with:
 
-- **Thymosin beta-4 (TB-500)** - for combined immune and tissue repair benefits
+- **Thymosin beta-4 (<a href="/articles/tb-500-complete-guide">TB-500</a>)** - for combined immune and tissue repair benefits
 - **BPC-157** - for gut healing alongside immune support
 - **Interferon-alpha** - in approved hepatitis treatment protocols
 

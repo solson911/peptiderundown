@@ -9,7 +9,7 @@ author: "PeptideRundown Team"
 
 # How to Store Peptides: Lyophilized and Reconstituted
 
-Peptides aren't cheap. Nothing's more frustrating than pulling a vial out of the fridge only to realize it's gone cloudy, lost potency, or degraded because of a storage mistake you could have easily avoided.
+Peptides aren't cheap. Nothing's more frustrating than pulling a vial out of the fridge only to realize it's gone cloudy, lost <a href="/articles/peptide-myths-debunked">potency</a>, or degraded because of a storage mistake you could have easily avoided.
 
 Proper storage is straightforward once you understand the basics.
 
@@ -18,8 +18,8 @@ Proper storage is straightforward once you understand the basics.
 > - **Lyophilized (powder):** Store frozen (-20C) for years of stability; fridge is OK for months
 > - **Reconstituted with BAC water:** Fridge only, use within 3-4 weeks
 > - **Reconstituted with sterile water:** Fridge only, use within 48-72 hours
-> - **Never freeze reconstituted peptides**  -  ice crystals destroy peptide chains
-> - **Always store in the dark**  -  UV triggers photodegradation
+> - **Never freeze <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ed peptides**  -  ice crystals destroy peptide chains
+> - **Always store in the dark**  -  UV triggers photo<a href="/articles/peptide-side-effects-what-to-know">degradation</a>
 
 ## Storage Quick Reference
 

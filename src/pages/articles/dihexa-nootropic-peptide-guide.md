@@ -140,7 +140,7 @@ This last point is important. When researchers blocked c-Met with a specific inh
 
 This is one of Dihexa's most interesting properties.
 
-Most peptides have terrible oral bioavailability. Stomach acid and digestive enzymes break them apart before they can reach the bloodstream. That's why peptides like BPC-157 and most growth hormone secretagogues are typically injected.
+Most peptides have terrible oral bioavailability. Stomach acid and digestive enzymes break them apart before they can reach the bloodstream. That's why peptides like <a href="/articles/bpc-157-complete-guide">BPC-157</a> and most growth hormone secretagogues are typically injected.
 
 Dihexa was specifically designed to resist enzymatic degradation. The **N-hexanoic acid modification** and the **aminohexanoic amide C-terminus** protect the core structure from peptidases.
 
@@ -167,7 +167,7 @@ Dihexa was specifically designed to resist enzymatic degradation. The **N-hexano
 
 ### What Users Report
 
-Anecdotal reports from nootropic communities describe:
+Anecdotal reports from <a href="/articles/cerebrolysin-neuropeptide-guide">nootropic</a> communities describe:
 
 - **Improved verbal fluency** within days of starting
 - **Better recall and working memory** during the cycle
@@ -219,7 +219,7 @@ Based on the mechanism of action, the following groups should exercise extreme c
 
 Several other peptides are used for cognitive enhancement. Here's how they compare.
 
-| Feature | Dihexa | Selank | Semax |
+| Feature | Dihexa | <a href="/articles/selank-complete-guide">Selank</a> | <a href="/articles/semax-complete-guide">Semax</a> |
 |---------|--------|--------|-------|
 | **Type** | Angiotensin IV analog | Tuftsin analog | ACTH(4-10) analog |
 | **Primary mechanism** | HGF/c-Met synaptogenesis | GABA modulation, BDNF | BDNF, NGF upregulation |

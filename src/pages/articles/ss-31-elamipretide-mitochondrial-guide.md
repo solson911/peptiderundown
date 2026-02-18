@@ -272,9 +272,9 @@ SS-31 has a generally favorable safety profile based on clinical trial data acro
 - **Allergic reactions** - difficulty breathing, facial swelling, widespread hives
 - **Persistent worsening of symptoms** - consult your provider immediately
 
-For a broader overview, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know).
+For a broader overview, see our [<a href="/articles/peptide-side-effects-what-to-know">peptide side effects</a> guide](/articles/peptide-side-effects-what-to-know).
 
-## SS-31 vs. MOTS-c: Two Approaches to Mitochondrial Health
+## SS-31 vs. <a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a>: Two Approaches to Mitochondrial Health
 
 Both SS-31 and MOTS-c are called "mitochondrial peptides," but they work through completely different mechanisms.
 
@@ -337,13 +337,13 @@ Yes. SS-31 is the research name, elamipretide is the clinical/pharmaceutical nam
 
 ### Can SS-31 reverse aging?
 
-That's a strong claim, and the honest answer is: we don't know yet in humans. In aged mice, SS-31 reversed mitochondrial dysfunction in the heart, skeletal muscle, and kidneys. Whether that translates to measurable anti-aging effects in people remains to be proven.
+That's a strong claim, and the honest answer is: we don't know yet in humans. In aged mice, SS-31 reversed mitochondrial dysfunction in the heart, skeletal muscle, and kidneys. Whether that translates to measurable <a href="/articles/best-peptides-for-anti-aging">anti-aging</a> effects in people remains to be proven.
 
 What it can do is target one specific hallmark of aging: mitochondrial dysfunction. It won't make you younger, but it may help your mitochondria function more like they did when you were younger.
 
 ### Can I combine SS-31 with other peptides?
 
-No clinical trials have examined SS-31 in combination with other peptides. Theoretically, combining it with MOTS-c could provide complementary mitochondrial support through different mechanisms. Some in the research community also combine it with NAD+ precursors like NMN or NR, though evidence for synergy is limited to speculation.
+No clinical trials have examined SS-31 in combination with other peptides. Theoretically, combining it with MOTS-c could provide complementary mitochondrial support through different mechanisms. Some in the research community also combine it with <a href="/articles/nad-peptides-cellular-energy-longevity">NAD</a>+ precursors like NMN or NR, though evidence for synergy is limited to speculation.
 
 Always discuss combinations with a qualified provider.
 

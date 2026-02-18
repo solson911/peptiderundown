@@ -9,7 +9,7 @@ tags: ["cognition stack", "semax", "selank", "dihexa", "nootropic", "brain healt
 author: "PeptideRundown Team"
 ---
 
-# The Cognition Stack  -  Semax + Selank + Dihexa for Mental Performance and Focus
+# The Cognition Stack  -  <a href="/articles/semax-complete-guide">Semax</a> + <a href="/articles/selank-complete-guide">Selank</a> + <a href="/articles/dihexa-<a href="/articles/cerebrolysin-neuropeptide-guide">nootropic</a>-peptide-guide">Dihexa</a> for Mental Performance and Focus
 
 Combining specific peptides can create effects greater than any single compound. That's the idea behind the cognition stack  -  Semax, Selank, and Dihexa working together to support different aspects of brain function. This combination targets focus, emotional balance, and memory formation through distinct biological pathways.
 

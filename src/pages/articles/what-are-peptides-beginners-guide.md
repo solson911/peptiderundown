@@ -90,7 +90,7 @@ strong{color:var(--ink);}
 
 <div class="c">
 
-<p>If you have spent any time reading about health, fitness, anti-aging, or weight loss in the last few years, you have encountered the word "peptide." Semaglutide (Ozempic, Wegovy) is a peptide. Insulin is a peptide. BPC-157, the compound every athlete seems to be talking about, is a peptide. Collagen supplements are broken-down peptides. The GLP-1 drugs reshaping obesity medicine are peptides.</p>
+<p>If you have spent any time reading about health, fitness, anti-aging, or weight loss in the last few years, you have encountered the word "peptide." Semaglutide (Ozempic, Wegovy) is a peptide. Insulin is a peptide. <a href="/articles/bpc-157-complete-guide">BPC-157</a>, the compound every athlete seems to be talking about, is a peptide. Collagen supplements are broken-down peptides. The GLP-1 drugs reshaping obesity medicine are peptides.</p>
 
 <p>And yet, when most people hear the word, they have only a vague sense of what it actually means. "Something to do with amino acids" is about as far as the average understanding goes.</p>
 
@@ -214,7 +214,7 @@ strong{color:var(--ink);}
 <div class="cat-card">
 <h4>Structural Fragments</h4>
 <p>Fragments of larger proteins that retain biological activity in their smaller form.</p>
-<p class="ex">Collagen peptides, GHK-Cu (a tripeptide), BPC-157</p>
+<p class="ex">Collagen peptides, <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a> (a tripeptide), BPC-157</p>
 </div>
 </div>
 
@@ -360,7 +360,7 @@ strong{color:var(--ink);}
 <span class="tg">Repair Peptide Examples</span>
 <ul class="bl">
 <li><strong>BPC-157 (Body Protection Compound):</strong> Derived from gastric juice. Promotes healing across tendons, ligaments, muscle, gut, and nerve tissue in animal models. Nearly all evidence is preclinical. FDA has flagged it for safety concerns in compounding.</li>
-<li><strong>TB-500 (Thymosin Beta-4):</strong> Involved in cell migration, wound healing, and inflammation reduction. Studied for cardiac repair and tissue regeneration.</li>
+<li><strong><a href="/articles/tb-500-complete-guide">TB-500</a> (Thymosin Beta-4):</strong> Involved in cell migration, wound healing, and inflammation reduction. Studied for cardiac repair and tissue regeneration.</li>
 <li><strong>GHK-Cu (Copper Peptide):</strong> A tripeptide that modulates 4,000+ genes toward more youthful expression patterns. Used topically for skin and hair, and systemically for tissue repair.</li>
 </ul>
 </div>
@@ -406,7 +406,7 @@ strong{color:var(--ink);}
 </tbody>
 </table>
 
-<p>For most people in the peptide community, subcutaneous injection is the standard route. It involves a small insulin syringe (typically 28-31 gauge), a brief pinch of skin, and a shallow injection. The process is nearly painless and takes seconds. Peptides come as lyophilized (freeze-dried) powder in a vial and must be reconstituted with bacteriostatic water before use. Once reconstituted, they require refrigeration and have a limited shelf life (typically 2-4 weeks).</p>
+<p>For most people in the peptide community, subcutaneous injection is the standard route. It involves a small insulin syringe (typically 28-31 gauge), a brief pinch of skin, and a shallow injection. The process is nearly painless and takes seconds. Peptides come as lyophilized (freeze-dried) powder in a vial and must be <a href="/articles/how-to-reconstitute-peptides">reconstitut</a>ed with bacteriostatic water before use. Once reconstituted, they require refrigeration and have a limited shelf life (typically 2-4 weeks).</p>
 
 <div class="dv"></div>
 

@@ -14,7 +14,7 @@ author: "PeptideRundown Team"
 Semaglutide has become the most widely discussed anti-obesity medication in modern pharmacology. Originally developed for <a href="/articles/tirzepatide-complete-guide">type 2 diabetes</a>, its <a href="/articles/best-peptides-for-fat-loss">weight loss</a> effects were so pronounced in clinical trials that it was reformulated and FDA-approved specifically for chronic weight management. This guide covers the science, the data, the practical considerations, and the controversies, without the hype.
 
 > **Key Takeaways**
-> - Semaglutide is a <a href="/articles/semaglutide-weight-loss-guide">GLP-1 receptor agonist</a> available as Ozempic, Wegovy, and Rybelsus
+> - Semaglutide is a <a href="/articles/semaglutide-weight-loss-guide"><a href="/articles/semaglutide-vs-tirzepatide-comparison">GLP-1</a> receptor agonist</a> available as Ozempic, Wegovy, and Rybelsus
 > - The STEP trials showed average weight loss of ~**15%** over 68 weeks
 > - The SELECT trial proved a 20% reduction in major cardiovascular events
 > - Weight regain occurs after stopping (STEP 4), suggesting long-term use is necessary
@@ -124,7 +124,7 @@ Semaglutide for weight management (Wegovy) follows a **gradual titration** to mi
 
 Each escalation step lasts 4 weeks. The full titration takes **16 weeks** to reach the maintenance dose of 2.4 mg.
 
-The injection is administered subcutaneously once weekly in the abdomen, thigh, or upper arm. The day of the week can be consistent but does not need to align with meals.
+The injection is administered <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a>ly once weekly in the abdomen, thigh, or upper arm. The day of the week can be consistent but does not need to align with meals.
 
 **Practical notes:**
 - If a dose is poorly tolerated, clinicians may extend the titration period (e.g., 8 weeks at a given dose instead of 4) before escalating.

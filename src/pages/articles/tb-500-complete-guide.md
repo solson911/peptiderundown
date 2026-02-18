@@ -15,7 +15,7 @@ If you've spent any time around peptide communities, you've probably heard someo
 
 But what is TB-500 exactly? How does it work at the cellular level? And what does the actual science say about its potential?
 
-This guide breaks all of that down. We'll cover the mechanism of action, the research on injury healing, dosing protocols, side effects, and how it stacks up against BPC-157.
+This guide breaks all of that down. We'll cover the mechanism of action, the research on injury healing, dosing protocols, side effects, and how it stacks up against <a href="/articles/bpc-157-complete-guide">BPC-157</a>.
 
 > **Key Takeaways**
 > - TB-500 is a synthetic fragment of thymosin beta-4, a protein found in nearly every human cell
@@ -148,7 +148,7 @@ For acute injuries, most protocols recommend starting the loading phase as soon 
 
 ## How to Administer TB-500
 
-TB-500 is typically administered via subcutaneous injection. Here are the practical details.
+TB-500 is typically administered via <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a> injection. Here are the practical details.
 
 ### Reconstitution
 
@@ -301,6 +301,6 @@ Most of the compelling data comes from animal models. Human clinical trials are 
 
 If you're considering TB-500 for an injury, do your homework. Work with a knowledgeable healthcare provider, get proper bloodwork, and don't abandon conventional rehabilitation. TB-500 should be a complement to good medicine, not a replacement for it.
 
-New to peptides? Our [beginner's guide](/articles/what-are-peptides-beginners-guide) covers the fundamentals. Also read about [peptide side effects](/articles/peptide-side-effects-what-to-know) and [proper peptide storage](/articles/how-to-store-peptides).
+New to peptides? Our [beginner's guide](/articles/what-are-peptides-beginners-guide) covers the fundamentals. Also read about [<a href="/articles/peptide-side-effects-what-to-know">peptide side effects</a>](/articles/peptide-side-effects-what-to-know) and [proper peptide storage](/articles/how-to-store-peptides).
 
 For more detailed compound information and sourcing guidance, check out [PeptideArc](https://peptidearc.com).

@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 ## What Is Semax?
 
-Semax is a synthetic peptide developed from a fragment of adrenocorticotropic hormone (ACTH 4-10). Russian scientists created it in the 1980s at the Institute of Molecular Genetics. This nootropic peptide enhances brain function without stimulating effects.
+Semax is a synthetic peptide developed from a fragment of adrenocorticotropic hormone (ACTH 4-10). Russian scientists created it in the 1980s at the Institute of Molecular Genetics. This <a href="/articles/cognition-stack-semax-selank-dihexa">nootropic</a> peptide enhances brain function without stimulating effects.
 
 It's administered as a nasal spray. This allows rapid absorption into the bloodstream and brain. The peptide sequence is Met-Glu-His-Phe-Pro-Gly-Pro. That's shorter than the original ACTH molecule.
 
@@ -127,7 +127,7 @@ Avoid Semax if you have:
 
 Caution is advised with MAO inhibitors. Always consult a doctor before starting. There's no evidence of dependency or withdrawal.
 
-## Semax vs Selank: Key Differences
+## Semax vs <a href="/articles/selank-complete-guide">Selank</a>: Key Differences
 
 Both are Russian-developed peptides. But they have distinct mechanisms and effects:
 
@@ -209,6 +209,6 @@ It shows promise in depression models. Benefits come from BDNF and serotonin eff
 
 For more information, explore our related guides:
 - [Selank Complete Guide](/articles/selank-complete-guide)
-- [Cognition Stack: Semax, Selank, Dihexa](/articles/cognition-stack-semax-selank-dihexa)
+- [Cognition Stack: Semax, Selank, <a href="/articles/dihexa-nootropic-peptide-guide">Dihexa</a>](/articles/cognition-stack-semax-selank-dihexa)
 - [Dihexa: The Nootropic Peptide Guide](/articles/dihexa-nootropic-peptide-guide)
 - [What Are Peptides? Beginner's Guide](/articles/what-are-peptides-beginners-guide)

@@ -44,7 +44,7 @@ Most users report feeling steady energy improvements. The effects tend to build 
 
 ***
 
-## How Sermorelin Functions
+## How <a href="/articles/sermorelin-growth-hormone-guide">Sermorelin</a> Functions
 
 Sermorelin contains the first 29 amino acids of natural GHRH. It's essentially a fragment of the full hormone. It was once FDA-approved as Geref for growth deficiency testing. Though no longer commercially produced, it remains popular in peptide therapy.
 
@@ -153,7 +153,7 @@ Combining GHRH peptides with GHRPs often enhances results. Different combination
 
 | Combination        | Primary Benefit      | Best For            |
 |--------------------|----------------------|---------------------|
-| **CJC-1295 + Ipamorelin** | Clean energy & recovery | Athletic performance |
+| **CJC-1295 + <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a>** | Clean energy & recovery | Athletic performance |
 | **Sermorelin + GHRP-6** | Appetite stimulation | Weight gain goals   |
 | **CJC-1295 + Mod GRF** | Enhanced secretion | Overall vitality    |
 
