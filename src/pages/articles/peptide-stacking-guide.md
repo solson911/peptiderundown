@@ -49,7 +49,7 @@ Dose adjustments are critical when stacking. Most peptides require reduced doses
 
 This remains the gold standard GH stack for good reason. CJC-1295 (a GHRH analog) extends the half-life of natural GH pulses, while Ipamorelin (a GHRP) amplifies pulse amplitude. Together they create higher, longer-lasting GH elevations than either could achieve alone.
 
-What makes this combination special is how they complement each other. Ipamorelin's selective action means it doesn't significantly affect cortisol or prolactin, while CJC-1295's extended activity provides sustained benefits. For more details on dosing and protocols, see our [<a href="/articles/cjc-1295-ipamorelin-comparison">CJC-1295/Ipamorelin Guide</a>](/articles/cjc-1295-ipamorelin-guide).
+What makes this combination special is how they complement each other. Ipamorelin's selective action means it doesn't significantly affect cortisol or prolactin, while CJC-1295's extended activity provides sustained benefits. For more details on dosing and protocols, see our <a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157">CJC-1295/Ipamorelin Guide</a>.
 
 The typical protocol involves administering both peptides together before bed on an empty stomach. This timing takes advantage of the body's natural GH surge during deep sleep. Most users run this stack 5 days on, 2 days off to prevent receptor desensitization.
 

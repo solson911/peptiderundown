@@ -13,7 +13,7 @@ author: "PeptideRundown Team"
 
 Growth hormone secretagogues like ipamorelin and sermorelin offer potential benefits for body composition, recovery, and anti-aging. These peptides work differently to stimulate natural growth hormone production. Understanding their distinct mechanisms helps determine which might align with your health objectives.
 
-Both compounds require medical supervision. Always consult a healthcare provider before starting <a href="/articles/peptide-therapy-guide">peptide therapy</a>. They can assess your health status and determine if these options are appropriate for your situation.
+Both compounds require medical supervision. Always consult a healthcare provider before starting <a href="/articles/what-are-peptides-beginners-guide">peptide therapy</a>. They can assess your health status and determine if these options are appropriate for your situation.
 
 ---
 

@@ -209,6 +209,6 @@ It shows promise in depression models. Benefits come from BDNF and serotonin eff
 
 For more information, explore our related guides:
 - [Selank Complete Guide](/articles/selank-complete-guide)
-- [Cognition Stack: Semax, Selank, <a href="/articles/dihexa-nootropic-peptide-guide">Dihexa</a>](/articles/cognition-stack-semax-selank-dihexa)
+- <a href="/articles/cognition-stack-semax-selank-dihexa">Cognition Stack: Semax, Selank, Dihexa</a>
 - [Dihexa: The Nootropic Peptide Guide](/articles/dihexa-nootropic-peptide-guide)
 - [What Are Peptides? Beginner's Guide](/articles/what-are-peptides-beginners-guide)
