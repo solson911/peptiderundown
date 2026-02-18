@@ -100,7 +100,7 @@ A 2025 study showed MOTS-c increased autophagy markers by 142% during 72-hour fa
 
 Fasting naturally increases GH, but peptides can amplify this:
 
-- **Tesamorelin:** 1mg upon waking during fasting window
+- **<a href="/articles/tesamorelin-ipamorelin-stack-guide">Tesamorelin</a>:** 1mg upon waking during fasting window
 - **Ipamorelin:** 200-300mcg 2x daily (morning/late afternoon)
 - **CJC-1295:** Longer-acting option for 48+ hour fasts
 
@@ -170,7 +170,7 @@ Practical recommendations:
 Yes, most peptides are compatible with water fasting. Continue normal dosing schedules. The exception is oral peptides requiring fat for absorption - take these with your fish oil supplement if using during extended fasts. Stay well-hydrated as dehydration can affect subcutaneous absorption. Monitor for any lightheadedness and break your fast if needed.
 
 **Do peptides break a fast?**
-Pure peptides without additives won't break your fast. They contain negligible calories and don't trigger insulin response. Avoid peptides mixed with mannitol or other sweeteners if in strict fasting mode. Injectable peptides are generally safer than oral versions during fasts. When in doubt, check with your peptide provider about excipients.
+Pure peptides without additives won't break your fast. They contain negligible calories and don't trigger insulin response. Avoid peptides mixed with mannitol or other sweeteners if in strict fasting mode. Injectable <a href="/articles/how-to-inject-peptides-subcutaneously">peptides</a> are generally safer than oral versions during fasts. When in doubt, check with your peptide provider about excipients.
 
 **Which peptides help with hunger during fasting?**
 Tesamorelin and Ipamorelin can actually increase hunger slightly. For appetite control, consider MOTS-c which helps stabilize blood sugar. AOD-9604 may also indirectly help by increasing fat utilization. Some find GHRP-6 effective but it's not recommended due to strong hunger stimulation. Non-peptide options like electrolyte management work better for most.
