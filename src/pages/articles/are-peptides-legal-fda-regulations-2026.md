@@ -37,7 +37,7 @@ Where a specific peptide falls on that spectrum determines what's legal and what
 
 ### FDA-Approved Prescription Peptides
 
-These are fully legal with a valid prescription. They include **semaglutide** (Ozempic, Wegovy), **tirzepatide** (Mounjaro, Zepbound), **tesamorelin** (Egrifta), and others.
+These are fully legal with a valid prescription. They include <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> (Ozempic, Wegovy), <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> (Mounjaro, Zepbound), <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">tesamorelin</a> (Egrifta), and others.
 
 They're manufactured by pharmaceutical companies, backed by clinical trials, and sold through licensed pharmacies.
 
@@ -78,15 +78,15 @@ Followed a similar trajectory. Eli Lilly aggressively defended its market exclus
 ### Other Peptides Under Increased Scrutiny
 
 - [BPC-157](/articles/bpc-157-complete-guide)
-- AOD-9604
+- <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a>
 - [CJC-1295](/articles/cjc-1295-dac-guide)
 - Ipamorelin
-- PT-141 (bremelanotide)
+- <a href="/articles/pt-141-bremelanotide-guide">PT-141 (bremelanotide)</a>
 - Thymosin alpha-1
-- Thymosin beta-4 (TB-500)
+- <a href="/articles/tb-500-complete-guide">Thymosin beta-4 (TB-500)</a>
 - [GHK-Cu](/articles/ghk-cu-copper-peptide-guide)
-- Kisspeptin
-- DSIP
+- <a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a>
+- <a href="/articles/dsip-sleep-peptide-guide">DSIP</a>
 - [Selank and Semax](/articles/selank-semax-nootropic-peptides)
 
 The FDA flagged several of these as not meeting the definition of a "bulk drug substance" eligible for compounding, arguing they haven't been adequately studied or don't have USP monographs. This was a devastating blow to the compounding peptide market.
@@ -130,7 +130,7 @@ These are FDA-approved drugs. You need a prescription from a licensed provider, 
 - **Semaglutide**  -  Ozempic, Wegovy, Rybelsus
 - **Tirzepatide**  -  Mounjaro, Zepbound
 - **Tesamorelin**  -  Egrifta
-- **Bremelanotide/PT-141**  -  Vyleesi
+- **<a href="/articles/pt-141-bremelanotide-guide">Bremelanotide/PT-141</a>**  -  Vyleesi
 - **Gonadorelin**  -  and various GnRH analogs
 - **Sermorelin**  -  approved but discontinued by its original manufacturer; still compounded in some states
 

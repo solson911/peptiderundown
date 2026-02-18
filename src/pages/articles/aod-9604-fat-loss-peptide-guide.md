@@ -30,7 +30,7 @@ The result is one of the most studied fat loss peptides in history. Whether it a
 
 ## What Is AOD-9604?
 
-AOD-9604 (Anti-Obesity Drug 9604) is a synthetic peptide consisting of **16 amino acids**. It corresponds to the C-terminal fragment of human growth hormone (amino acids 176-191), with an added tyrosine residue at the N-terminus.
+<a href="/articles/what-are-peptides-beginners-guide">AOD-9604 (Anti-Obesity Drug 9604) is a synthetic peptide</a> consisting of **16 amino acids**. It corresponds to the C-terminal fragment of human growth hormone (amino acids 176-191), with an added tyrosine residue at the N-terminus.
 
 | Feature | Detail |
 |---------|--------|
@@ -233,11 +233,11 @@ Standard reconstitution:
 
 ### Stacking
 
-Some practitioners combine AOD-9604 with other peptides for fat loss. Common combinations include:
+Some practitioners combine AOD-9604 with other <a href="/articles/best-peptides-for-fat-loss">peptides for fat loss</a>. Common combinations include:
 
 - **AOD-9604 + CJC-1295/Ipamorelin** - adding growth hormone secretagogue support
-- **AOD-9604 + BPC-157** - combining fat loss with tissue repair
-- **AOD-9604 + Tesamorelin** - targeting both subcutaneous and visceral fat
+- AOD-9604 + <a href="/articles/bpc-157-complete-guide">BPC-157</a> - combining fat loss with tissue repair
+- AOD-9604 + <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Tesamorelin</a> - targeting both subcutaneous and visceral fat
 
 ## Side Effects
 
@@ -289,7 +289,7 @@ How does AOD-9604 stack up against the other options?
 
 ### Where AOD-9604 Fits
 
-AOD-9604 occupies a specific niche. It's not the most powerful fat loss tool available. Semaglutide and tirzepatide clearly produce greater weight loss.
+AOD-9604 occupies a specific niche. It's not the most powerful fat loss tool available. <a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> and <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> clearly produce greater weight loss.
 
 But it has advantages that matter to certain people:
 
@@ -321,7 +321,7 @@ The FDA's 2023 crackdown on certain compounded peptides (particularly semaglutid
 
 AOD-9604 is **not explicitly listed** on the World Anti-Doping Agency prohibited list. However, WADA's prohibition of growth hormone fragments could theoretically encompass it. Athletes should exercise caution and consult with anti-doping authorities.
 
-Check our [peptide legality guide](/articles/are-peptides-legal-fda-regulations-2026) for full details.
+Check our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for full details.
 
 ## Frequently Asked Questions
 
