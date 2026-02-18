@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageSidebar from '../components/PageSidebar.astro';
 
 const featured = [
   {
@@ -141,122 +142,113 @@ const compounds = [
     </div>
   </section>
 
-  <!-- Featured Spotlights with Images -->
-  <section class="bg-pattern bg-surface py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center gap-3 mb-2">
-        <div class="h-1 w-10 bg-gradient-to-r from-primary to-accent rounded-full"></div>
-        <span class="text-sm font-semibold text-primary uppercase tracking-wide">Featured</span>
-      </div>
-      <h2 class="text-3xl font-extrabold text-text mb-2">Spotlight Guides</h2>
-      <p class="text-text-muted mb-10">Our most popular compound guides and comparisons.</p>
-      
-      <!-- Top featured (large card) -->
-      <a href={featured[0].href}
-         class="group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 mb-6 border border-gray-100">
-        <div class="md:flex">
-          <div class="md:w-1/2 h-56 md:h-auto overflow-hidden">
-            <img src={featured[0].image} alt={featured[0].title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+  <!-- Main Content + Sidebar -->
+  <div class="bg-pattern bg-surface py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="md:flex md:gap-8 items-start">
+
+        <!-- Main content column -->
+        <div class="md:flex-1 min-w-0 space-y-16">
+
+          <!-- Featured Spotlights -->
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <div class="h-1 w-10 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+              <span class="text-sm font-semibold text-primary uppercase tracking-wide">Featured</span>
+            </div>
+            <h2 class="text-3xl font-extrabold text-text mb-2">Spotlight Guides</h2>
+            <p class="text-text-muted mb-8">Our most popular compound guides and comparisons.</p>
+            <!-- Top featured (large card) -->
+            <a href={featured[0].href}
+               class="group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 mb-6 border border-gray-100">
+              <div class="md:flex">
+                <div class="md:w-1/2 h-56 md:h-auto overflow-hidden">
+                  <img src={featured[0].image} alt={featured[0].title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                  <span class="inline-block w-fit px-3 py-1 text-xs font-bold text-accent bg-accent/10 rounded-full mb-3 uppercase tracking-wide">{featured[0].category}</span>
+                  <h3 class="text-2xl font-bold text-text group-hover:text-primary transition-colors mb-3">{featured[0].title}</h3>
+                  <p class="text-text-muted leading-relaxed mb-4">{featured[0].description}</p>
+                  <span class="text-sm font-bold text-primary group-hover:underline">Read the full comparison →</span>
+                </div>
+              </div>
+            </a>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {featured.slice(1).map((article) => (
+                <a href={article.href} class="group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
+                  <div class="h-44 overflow-hidden">
+                    <img src={article.image} alt={article.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div class="p-5">
+                    <span class="inline-block px-2.5 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full mb-2">{article.category}</span>
+                    <h3 class="text-lg font-bold text-text group-hover:text-primary transition-colors mb-2 line-clamp-2">{article.title}</h3>
+                    <p class="text-text-muted text-sm leading-relaxed line-clamp-2">{article.description}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
-          <div class="md:w-1/2 p-8 flex flex-col justify-center">
-            <span class="inline-block w-fit px-3 py-1 text-xs font-bold text-accent bg-accent/10 rounded-full mb-3 uppercase tracking-wide">
-              {featured[0].category}
-            </span>
-            <h3 class="text-2xl font-bold text-text group-hover:text-primary transition-colors mb-3">
-              {featured[0].title}
-            </h3>
-            <p class="text-text-muted leading-relaxed mb-4">{featured[0].description}</p>
-            <span class="text-sm font-bold text-primary group-hover:underline">
-              Read the full comparison →
-            </span>
+
+          <!-- Compound Quick Links -->
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <div class="h-1 w-10 bg-gradient-to-r from-accent to-primary rounded-full"></div>
+              <span class="text-sm font-semibold text-accent uppercase tracking-wide">Compounds</span>
+            </div>
+            <h2 class="text-3xl font-extrabold text-text mb-2">Explore by Compound</h2>
+            <p class="text-text-muted mb-8">Deep-dive guides on individual peptides and compounds.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              {compounds.map((compound) => (
+                <a href={compound.href} class="group block rounded-xl overflow-hidden card-glow transition-all hover:-translate-y-1 bg-white border border-gray-100 hover:border-primary/20">
+                  <div class="h-28 overflow-hidden">
+                    <img src={compound.image} alt={compound.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  </div>
+                  <div class="p-3 text-center">
+                    <span class="text-[10px] font-bold text-primary/70 uppercase tracking-wide">{compound.category}</span>
+                    <h3 class="text-sm font-bold text-text group-hover:text-primary transition-colors">{compound.title}</h3>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      </a>
 
-      <!-- Other featured (3 cards) -->
-      <div class="grid md:grid-cols-3 gap-6">
-        {featured.slice(1).map((article) => (
-          <a href={article.href}
-             class="group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
-            <div class="h-44 overflow-hidden">
-              <img src={article.image} alt={article.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <!-- Getting Started Guides -->
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <div class="h-1 w-10 bg-gradient-to-r from-primary to-primary-light rounded-full"></div>
+              <span class="text-sm font-semibold text-primary uppercase tracking-wide">Essentials</span>
             </div>
-            <div class="p-5">
-              <span class="inline-block px-2.5 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full mb-2">
-                {article.category}
-              </span>
-              <h3 class="text-lg font-bold text-text group-hover:text-primary transition-colors mb-2 line-clamp-2">
-                {article.title}
-              </h3>
-              <p class="text-text-muted text-sm leading-relaxed line-clamp-2">{article.description}</p>
+            <h2 class="text-3xl font-extrabold text-text mb-2">Getting Started</h2>
+            <p class="text-text-muted mb-8">Beginner guides, how-tos, and safety essentials.</p>
+            <div class="grid sm:grid-cols-2 gap-5">
+              {guides.map((article) => (
+                <a href={article.href} class="group flex bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
+                  <div class="w-32 shrink-0 overflow-hidden">
+                    <img src={article.image} alt={article.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div class="p-4 flex flex-col justify-center">
+                    <span class="inline-block w-fit px-2.5 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full mb-2">{article.category}</span>
+                    <h3 class="text-base font-bold text-text group-hover:text-primary transition-colors mb-1">{article.title}</h3>
+                    <p class="text-text-muted text-xs leading-relaxed line-clamp-2">{article.description}</p>
+                  </div>
+                </a>
+              ))}
             </div>
-          </a>
-        ))}
+            <div class="text-center mt-10">
+              <a href="/articles" class="inline-block px-8 py-3 text-primary font-bold border-2 border-primary rounded-xl hover:bg-primary hover:text-white transition-all hover:-translate-y-0.5">
+                View All Guides →
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /main content -->
+
+        <!-- Sidebar -->
+        <PageSidebar />
+
       </div>
     </div>
-  </section>
-
-  <!-- Compound Quick Links -->
-  <section class="bg-white py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center gap-3 mb-2">
-        <div class="h-1 w-10 bg-gradient-to-r from-accent to-primary rounded-full"></div>
-        <span class="text-sm font-semibold text-accent uppercase tracking-wide">Compounds</span>
-      </div>
-      <h2 class="text-3xl font-extrabold text-text mb-2">Explore by Compound</h2>
-      <p class="text-text-muted mb-10">Deep-dive guides on individual peptides and compounds.</p>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-        {compounds.map((compound) => (
-          <a href={compound.href}
-             class="group block rounded-xl overflow-hidden card-glow transition-all hover:-translate-y-1 bg-gray-50 border border-gray-100 hover:border-primary/20">
-            <div class="h-28 overflow-hidden">
-              <img src={compound.image} alt={compound.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-            </div>
-            <div class="p-3 text-center">
-              <span class="text-[10px] font-bold text-primary/70 uppercase tracking-wide">{compound.category}</span>
-              <h3 class="text-sm font-bold text-text group-hover:text-primary transition-colors">{compound.title}</h3>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Getting Started Guides -->
-  <section class="bg-pattern bg-surface py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center gap-3 mb-2">
-        <div class="h-1 w-10 bg-gradient-to-r from-primary to-primary-light rounded-full"></div>
-        <span class="text-sm font-semibold text-primary uppercase tracking-wide">Essentials</span>
-      </div>
-      <h2 class="text-3xl font-extrabold text-text mb-2">Getting Started</h2>
-      <p class="text-text-muted mb-10">Beginner guides, how-tos, and safety essentials.</p>
-      <div class="grid md:grid-cols-2 gap-6">
-        {guides.map((article) => (
-          <a href={article.href}
-             class="group flex bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
-            <div class="w-32 sm:w-40 shrink-0 overflow-hidden">
-              <img src={article.image} alt={article.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div class="p-5 flex flex-col justify-center">
-              <span class="inline-block w-fit px-2.5 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full mb-2">
-                {article.category}
-              </span>
-              <h3 class="text-lg font-bold text-text group-hover:text-primary transition-colors mb-1">
-                {article.title}
-              </h3>
-              <p class="text-text-muted text-sm leading-relaxed line-clamp-2">{article.description}</p>
-            </div>
-          </a>
-        ))}
-      </div>
-      <div class="text-center mt-10">
-        <a href="/articles" class="inline-block px-8 py-3 text-primary font-bold border-2 border-primary rounded-xl hover:bg-primary hover:text-white transition-all hover:-translate-y-0.5">
-          View All Guides →
-        </a>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <!-- CTA -->
   <section class="relative overflow-hidden bg-gradient-to-r from-surface-dark via-primary-dark to-surface-dark py-16">
