@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 ## Preamble
 
-Testosterone replacement therapy delivers powerful benefits but has limitations that leave many men seeking more complete hormonal optimization. This is where peptides come in - these short-chain amino acid compounds offer targeted solutions to challenges that TRT alone can't fully address.
+Testosterone replacement therapy delivers powerful benefits but has limitations that leave many men seeking more complete hormonal optimization. This is where <a href="/articles/what-are-peptides-beginners-guide">peptides</a> come in - these short-chain amino acid compounds offer targeted solutions to challenges that TRT alone can't fully address.
 
 By combining specific peptides with testosterone protocols, men can achieve superior results in body composition, recovery, sexual health, and hormonal balance. Peptides work through precise biological pathways to amplify testosterone's benefits while countering some of its drawbacks.
 
@@ -36,7 +36,7 @@ These limitations explain why many TRT users add peptides. Peptides can address 
 
 ## GH Secretagogues + TRT
 
-Growth hormone secretagogues like CJC-1295 and Ipamorelin work synergistically with testosterone. Research shows this combination delivers superior results for body composition, recovery, and sleep quality compared to either compound alone.
+Growth hormone secretagogues like <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> and <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> work synergistically with testosterone. Research shows this combination delivers superior results for body composition, recovery, and sleep quality compared to either compound alone.
 
 Testosterone and growth hormone operate through complementary pathways:
 
@@ -55,7 +55,7 @@ Adding CJC-1295/Ipamorelin to TRT protocols leads to:
 
 Typical dosing involves nightly injections of 100-300mcg Ipamorelin combined with 100-200mcg CJC-1295, taken at least 2 hours after eating. Most users report noticeable benefits within 4-6 weeks.
 
-## Kisspeptin
+## <a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a>
 
 Kisspeptin represents an exciting frontier in peptide-enhanced TRT. This naturally occurring peptide directly stimulates gonadotropin-releasing hormone production. Studies show it can activate the HPG axis even during testosterone suppression.
 
@@ -90,7 +90,7 @@ Key considerations for gonadorelin use:
 
 GnRH analogs represent a more advanced approach. Compounds like Tesamorelin provide longer-acting stimulation of pituitary gonadotropes. This allows less frequent dosing while maintaining efficacy.
 
-## BPC-157 and TB-500 with TRT
+## <a href="/articles/bpc-157-complete-guide">BPC-157</a> and <a href="/articles/tb-500-complete-guide">TB-500</a> with TRT
 
 Men on TRT often train intensely, creating demand for enhanced recovery support. BPC-157 and TB-500 offer powerful solutions for connective tissue repair and inflammation management.
 
@@ -117,7 +117,7 @@ For TRT users, this combination offers:
 
 ## PT-141 for Sexual Health
 
-PT-141 (Bremelanotide) offers a novel approach to sexual health that complements TRT. Unlike PDE5 inhibitors that target blood flow, PT-141 works centrally in the brain to enhance sexual desire.
+<a href="/articles/pt-141-bremelanotide-guide">PT-141 (Bremelanotide)</a> offers a novel approach to sexual health that complements TRT. Unlike PDE5 inhibitors that target blood flow, PT-141 works centrally in the brain to enhance sexual desire.
 
 This peptide activates melanocortin receptors in the hypothalamus, specifically:
 
@@ -221,6 +221,6 @@ Different peptides work on different timelines. GH peptides show noticeable body
 Peptides offer a more targeted approach with fewer side effects than many pharmaceuticals. However, "natural" doesn't mean risk-free. Potential issues include immune reactions, contamination risks, and unknown long-term effects. Always source peptides from reputable suppliers and consult your healthcare provider.
 
 **Can I use multiple peptides at once?**
-Strategic peptide stacking can be highly effective. Most combinations have no significant interactions. Common stacks pair GH peptides with tissue-healing peptides. Avoid combining peptides with overlapping mechanisms unless specifically researched. Start with one peptide at a time to assess tolerance before adding others.
+Strategic <a href="/articles/peptide-stacking-guide">peptide stacking</a> can be highly effective. Most combinations have no significant interactions. Common stacks pair GH peptides with tissue-healing peptides. Avoid combining peptides with overlapping mechanisms unless specifically researched. Start with one peptide at a time to assess tolerance before adding others.
 
 > **Important Safety Note:** Always consult a qualified healthcare provider before starting TRT or any peptide regimen. Hormone optimization requires professional oversight and regular monitoring.

@@ -11,15 +11,15 @@ author: "PeptideRundown Team"
 
 # Selank: The Anxiolytic Peptide That Sharpens Your Mind
 
-Selank is a synthetic peptide developed from tuftsin - a natural immune-modulating peptide. Created at Russia's Institute of Molecular Genetics in the 1990s, this peptide bridges the gap between anxiety relief and cognitive enhancement. Unlike traditional anti-anxiety medications, Selank provides calming effects without sedation or cognitive impairment.
+Selank is a synthetic <a href="/articles/what-are-peptides-beginners-guide">peptide</a> developed from tuftsin - a natural immune-modulating peptide. Created at Russia's Institute of Molecular Genetics in the 1990s, this peptide bridges the gap between anxiety relief and cognitive enhancement. Unlike traditional anti-anxiety medications, Selank provides calming effects without sedation or cognitive impairment.
 
-This unique peptide has been researched extensively in Russia, with over 20 clinical studies backing its safety profile and benefits. Research consistently shows it reduces anxiety while improving memory, focus, and learning ability. Its dual-action profile makes it valuable for those seeking mental clarity alongside emotional balance.
+This unique peptide has been researched extensively in Russia, with over 20 clinical studies backing its safety profile and benefits. Research consistently shows it reduces <a href="/articles/selank-semax-nootropic-peptides">anxiety</a> while improving memory, focus, and learning ability. Its dual-action profile makes it valuable for those seeking mental clarity alongside emotional balance.
 
 ## Origins and Development
 
 Selank emerged from research at Moscow's Institute of Molecular Genetics. Scientists modified tuftsin - a natural immune-modulating peptide - to create this synthetic analog. The goal was developing an anxiety treatment without benzodiazepine side effects.
 
-Russian researchers spent years testing Selank's properties. Initial studies focused on its anxiety-reducing effects. Later research revealed unexpected cognitive benefits. This led to its classification as a nootropic - a substance that enhances cognitive function.
+Russian researchers spent years testing Selank's properties. Initial studies focused on its anxiety-reducing effects. Later research revealed unexpected cognitive benefits. This led to its classification as a <a href="/articles/selank-semax-nootropic-peptides">nootropic</a> - a substance that enhances cognitive function.
 
 Selank received regulatory approval in Russia as an anti-anxiety medication. It has been commercially available there since the early 2000s. Outside Russia, it remains a research compound with growing interest.
 
@@ -33,7 +33,7 @@ GABA modulation is a primary mechanism. Selank increases GABA activity without b
 
 Another important pathway involves enkephalin degradation inhibition. Selank slows the breakdown of natural enkephalins - opioid-like compounds that regulate pain and mood. This increases their availability without creating dependency.
 
-Immune modulation through its tuftsin-derived structure adds another dimension. Tuftsin naturally regulates immune function, and Selank inherits this property. Balanced immune activity contributes to overall mental well-being.
+Immune modulation through its tuftsin-derived structure adds another dimension. Tuftsin naturally regulates immune function, and Selank inherits this property. Balanced <a href="/articles/ll-37-antimicrobial-peptide-guide">immune activity</a> contributes to overall mental well-being.
 
 ## Research and Clinical Data
 

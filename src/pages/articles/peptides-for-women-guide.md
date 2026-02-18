@@ -11,7 +11,7 @@ author: "PeptideRundown Editorial"
 
 # Peptides for Women: Complete Guide to Female-Specific Protocols
 
-<p>Women's bodies run on different biological software than men's. Fluctuating estrogen and progesterone levels, monthly hormonal cycles, pregnancy potential, and menopause transitions all create a physiological environment where peptides behave differently — sometimes dramatically so. Yet the majority of peptide research has been conducted on male subjects or mixed populations without gender-stratified analysis.</p>
+<p>Women's bodies run on different biological software than men's. Fluctuating estrogen and progesterone levels, monthly hormonal cycles, pregnancy potential, and menopause transitions all create a physiological environment where <a href="/articles/what-are-peptides-beginners-guide">peptides</a> behave differently — sometimes dramatically so. Yet the majority of peptide research has been conducted on male subjects or mixed populations without gender-stratified analysis.</p>
 
 <p>This creates a real problem. A peptide dosing protocol optimized for a 200-pound male with stable testosterone levels may produce entirely different effects in a 140-pound woman whose estrogen levels shift by 10-fold across her menstrual cycle. The pharmacokinetics change. The receptor sensitivity changes. The outcomes change.</p>
 
@@ -129,7 +129,7 @@ author: "PeptideRundown Editorial"
 
 <div class="peptide-card">
   <span class="peptide-tag">Skin & Anti-Aging</span>
-  <h3>GHK-Cu (Copper Peptide)</h3>
+  <h3><a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu (Copper Peptide)</a></h3>
   <p>GHK-Cu is a naturally occurring tripeptide that declines with age — from ~200 ng/mL at age 20 to ~80 ng/mL by age 60. It activates over 4,000 genes involved in tissue remodeling, collagen synthesis, and antioxidant defense <sup>[9]</sup>.</p>
   <p><strong>Why it matters for women:</strong> Women lose collagen at approximately 1% per year after age 30, with an accelerated 30% loss in the first five years of menopause <sup>[10]</sup>. GHK-Cu directly counteracts this by upregulating collagen I, III, and IV production. Estrogen enhances GHK-Cu's receptor binding, making it particularly effective in premenopausal women.</p>
   <p><strong>Dosing (topical):</strong> 0.5–2% serum applied twice daily. For injection: 1–2 mg subcutaneously, 3× per week.</p>
@@ -164,7 +164,7 @@ author: "PeptideRundown Editorial"
 
 <div class="peptide-card">
   <span class="peptide-tag">Fat Loss</span>
-  <h3>AOD-9604</h3>
+  <h3><a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a></h3>
   <p>AOD-9604 is a modified fragment of human growth hormone (amino acids 177-191) that stimulates lipolysis without the insulin resistance, IGF-1 elevation, or growth-promoting effects of full GH <sup>[11]</sup>. It received TGA approval in Australia for a cartilage repair indication, establishing a safety profile.</p>
   <p><strong>Why it matters for women:</strong> Women often struggle with stubborn fat in the hips, thighs, and lower abdomen — areas with high alpha-2 adrenergic receptor density that resist conventional fat loss. AOD-9604 bypasses these receptors by acting through a different lipolytic pathway. It does not suppress reproductive hormones.</p>
   <p><strong>Dosing:</strong> 250–300 mcg subcutaneously, once daily on an empty stomach (morning, 30 minutes before eating).</p>
@@ -182,7 +182,7 @@ author: "PeptideRundown Editorial"
 
 <div class="peptide-card">
   <span class="peptide-tag">Healing & Recovery</span>
-  <h3>BPC-157 (Body Protection Compound)</h3>
+  <h3><a href="/articles/bpc-157-complete-guide">BPC-157</a> (Body Protection Compound)</h3>
   <p>BPC-157 is a 15-amino-acid peptide derived from human gastric juice that accelerates healing across multiple tissue types — tendons, ligaments, muscle, gut lining, and even nerve tissue. It works partly through VEGF-mediated angiogenesis and nitric oxide pathways <sup>[13]</sup>.</p>
   <p><strong>Why it matters for women:</strong> Women experience higher rates of ACL injuries (2-8× more than men in the same sports), partly due to estrogen's effects on ligament laxity during the luteal phase. BPC-157 can accelerate recovery from these injuries. It also supports gut healing — relevant since women are 2× more likely to have IBS than men.</p>
   <p><strong>Dosing:</strong> 250–500 mcg subcutaneously or orally, 1-2× daily. For gut issues, oral dosing on an empty stomach is preferred. For musculoskeletal injuries, subcutaneous injection near the injury site.</p>
@@ -191,7 +191,7 @@ author: "PeptideRundown Editorial"
 
 <div class="peptide-card">
   <span class="peptide-tag">Healing & Recovery</span>
-  <h3>TB-500 (Thymosin Beta-4)</h3>
+  <h3><a href="/articles/tb-500-complete-guide">TB-500</a> (Thymosin Beta-4)</h3>
   <p>TB-500 is a synthetic version of thymosin beta-4, a protein involved in cell migration, blood vessel formation, and tissue repair. It reduces inflammation through downregulation of NF-κB and promotes stem cell activation at injury sites <sup>[14]</sup>.</p>
   <p><strong>Why it matters for women:</strong> TB-500's anti-inflammatory and tissue-remodeling properties make it valuable for women dealing with endometriosis-related inflammation, post-surgical recovery, and chronic joint issues that worsen with hormonal fluctuations.</p>
   <p><strong>Dosing:</strong> 2.5–5 mg subcutaneously, 2× per week during loading (4 weeks), then 2.5 mg once weekly for maintenance.</p>
@@ -227,7 +227,7 @@ author: "PeptideRundown Editorial"
 <div class="peptide-card">
   <span class="peptide-tag">Fertility & Hormones</span>
   <h3>Kisspeptin</h3>
-  <p>Kisspeptin is a neuropeptide that acts as the master regulator of the hypothalamic-pituitary-gonadal (HPG) axis. It triggers GnRH release, which drives FSH and LH secretion — the hormones that control ovulation, estrogen production, and progesterone output <sup>[15]</sup>.</p>
+  <p><a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a> is a neuropeptide that acts as the master regulator of the hypothalamic-pituitary-gonadal (HPG) axis. It triggers GnRH release, which drives FSH and LH secretion — the hormones that control ovulation, estrogen production, and progesterone output <sup>[15]</sup>.</p>
   <p><strong>Why it matters for women:</strong> Kisspeptin is being studied as an alternative to traditional fertility medications for IVF stimulation. Early trials show it may trigger egg maturation with a lower risk of ovarian hyperstimulation syndrome (OHSS) — a serious complication that affects up to 10% of IVF patients <sup>[16]</sup>. It also shows promise for treating hypothalamic amenorrhea.</p>
   <p><strong>Dosing:</strong> Clinical doses range from 1.0–12.8 nmol/kg IV in research settings. This peptide should ONLY be used under direct medical supervision in a clinical fertility setting.</p>
   <p><strong>Cycle timing:</strong> Administered at specific points during IVF stimulation protocols, typically as an ovulation trigger.</p>
@@ -258,7 +258,7 @@ author: "PeptideRundown Editorial"
 
 <div class="peptide-card">
   <span class="peptide-tag">Metabolic</span>
-  <h3>Tesamorelin</h3>
+  <h3><a href="/articles/tesamorelin-ipamorelin-stack-guide">Tesamorelin</a></h3>
   <p>Tesamorelin is an FDA-approved GHRH analog originally indicated for HIV-associated lipodystrophy. It produces a strong, sustained GH pulse and has been shown to reduce visceral adipose tissue by 15-18% in clinical trials <sup>[19]</sup>.</p>
   <p><strong>Why it matters for women:</strong> Visceral fat accumulation accelerates during perimenopause and menopause as estrogen declines. Tesamorelin targets this specific fat depot while preserving subcutaneous fat distribution. It also improves cognitive function in studies — a relevant benefit for menopausal women experiencing cognitive decline.</p>
   <p><strong>Dosing:</strong> 1–2 mg subcutaneously daily, administered in the evening. Women typically start at 1 mg.</p>
@@ -314,15 +314,15 @@ author: "PeptideRundown Editorial"
 <div class="stack-grid">
   <div class="stack-card">
     <h4>Collagen Stack</h4>
-    <p>GHK-Cu (topical + injectable) paired with Ipamorelin 100 mcg at bedtime. Collagen loss begins accelerating. This combination stimulates both local and systemic collagen production.</p>
+    <p>GHK-Cu (topical + injectable) paired with <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> 100 mcg at bedtime. Collagen loss begins accelerating. This combination stimulates both local and systemic collagen production.</p>
   </div>
   <div class="stack-card">
     <h4>Fertility Support</h4>
-    <p>Kisspeptin (clinical setting only) for women pursuing IVF. BPC-157 for uterine lining support. Consult a reproductive endocrinologist for protocol design.</p>
+    <p><a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a> (clinical setting only) for women pursuing IVF. BPC-157 for uterine lining support. Consult a reproductive endocrinologist for protocol design.</p>
   </div>
   <div class="stack-card">
     <h4>Body Composition</h4>
-    <p>AOD-9604 250 mcg morning + Ipamorelin 100 mcg bedtime. Addresses the metabolic slowdown that begins in the mid-30s without disrupting fertility.</p>
+    <p><a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> 250 mcg morning + Ipamorelin 100 mcg bedtime. Addresses the metabolic slowdown that begins in the mid-30s without disrupting fertility.</p>
   </div>
 </div>
 
@@ -332,7 +332,7 @@ author: "PeptideRundown Editorial"
   <div class="step-number">1</div>
   <div class="step-content">
     <h4>Hormonal Transition Support</h4>
-    <p>CJC-1295/Ipamorelin combination (50/100 mcg) nightly. As natural GH production drops 14% per decade, this stack maintains youthful GH pulses through perimenopause.</p>
+    <p><a href="/articles/tesamorelin-ipamorelin-stack-guide">CJC-1295/Ipamorelin combination</a> (50/100 mcg) nightly. As natural GH production drops 14% per decade, this stack maintains youthful GH pulses through perimenopause.</p>
   </div>
 </div>
 
@@ -340,7 +340,7 @@ author: "PeptideRundown Editorial"
   <div class="step-number">2</div>
   <div class="step-content">
     <h4>Cognitive & Mood Support</h4>
-    <p>Selank 500 mcg 2× daily for brain fog and anxiety. DSIP 100 mcg at bedtime for sleep disruption. These address the two most common perimenopausal complaints.</p>
+    <p><a href="/articles/selank-complete-guide">Selank</a> 500 mcg 2× daily for brain fog and anxiety. <a href="/articles/dsip-sleep-peptide-guide">DSIP</a> 100 mcg at bedtime for sleep disruption. These address the two most common perimenopausal complaints.</p>
   </div>
 </div>
 
@@ -365,7 +365,7 @@ author: "PeptideRundown Editorial"
 <div class="stack-grid">
   <div class="stack-card">
     <h4>Longevity Protocol</h4>
-    <p>Epithalon 5 mg daily × 20 days, 2-3× per year. Tesamorelin 1-2 mg nightly. Addresses accelerated telomere shortening and GH decline post-menopause.</p>
+    <p><a href="/articles/epithalon-anti-aging-guide">Epithalon</a> 5 mg daily × 20 days, 2-3× per year. Tesamorelin 1-2 mg nightly. Addresses accelerated telomere shortening and GH decline post-menopause.</p>
   </div>
   <div class="stack-card">
     <h4>Tissue Repair</h4>

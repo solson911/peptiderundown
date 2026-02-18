@@ -14,7 +14,7 @@ author: "PeptideRundown Team"
 This research combination targets multiple pathways in metabolism simultaneously. It pairs appetite regulation with fat cell reprogramming and enhanced oxidation. Each compound works through distinct mechanisms.
 
 > **Mechanism Overview**  
-> Retatrutide controls appetite and metabolism. 5-Amino-1MQ changes how fat cells store energy. Cardarine shifts fuel preference toward fat burning.
+> Retatrutide controls appetite and metabolism. 5-Amino-1MQ changes how fat cells store energy. Cardarine shifts fuel preference toward <a href="/articles/best-peptides-for-fat-loss">fat burning</a>.
 
 These substances aren't approved for human use. They're for laboratory study only. Always work with a healthcare provider for personal health questions.
 
@@ -40,7 +40,7 @@ This combination brings together three different approaches:
 
 | Compound         | Type          | Primary Research Focus |
 |------------------|---------------|------------------------|
-| Retatrutide      | Peptide       | Appetite regulation    |
+| <a href="/articles/retatrutide-complete-guide">Retatrutide</a>      | Peptide       | Appetite regulation    |
 | 5-Amino-1MQ      | Small molecule| Fat cell reprogramming |
 | Cardarine        | PPAR agonist  | Fat oxidation          |
 
@@ -66,7 +66,7 @@ Retatrutide works through three hormone pathways:
 - Slows food movement through the digestive system
 - Boosts calorie burning in liver tissue
 
-This combination helps manage calorie intake. It also increases how many calories get used.
+This combination helps manage <a href="/articles/peptide-dosing-calculator-reconstitution-math">calorie intake</a>. It also increases how many calories get used.
 
 > **Research Insight**  
 > Studies show Retatrutide maintains more muscle mass than other weight loss compounds. This is important for metabolic health.
@@ -125,7 +125,7 @@ Recent research shows metabolic impacts:
 | 12 weeks      | Liver fat        | 70% reduction | NAFLD patients |
 | 48 weeks      | Blood sugar      | Significant improvement | Type 2 diabetics |
 
-These studies note digestive side effects. They're similar to other gut hormone drugs. Most effects diminish over time.
+These studies note <a href="/articles/peptide-side-effects-what-to-know">digestive side effects</a>. They're similar to other gut hormone drugs. Most effects diminish over time.
 
 ### 5-Amino-1MQ Findings
 
@@ -281,7 +281,7 @@ Research requires patience. Proper measurement takes time. Short-term studies mi
 **What alternatives exist for Cardarine?**  
 Researchers sometimes substitute:
 
-- Tesamorelin for abdominal fat studies
+- Tesamorelin for <a href="/articles/tesamorelin-ipamorelin-stack-guide">abdominal fat studies</a>
 - AOD9604 for stubborn fat research
 - SR9009 for circadian rhythm impacts
 - AMPK activators for metabolic rate effects

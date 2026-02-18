@@ -10,7 +10,7 @@ tags: [GHK-Cu, copper peptide, skin, hair growth, wound healing, anti-aging, col
 
 # GHK-Cu: The Copper Peptide for Skin, Hair, and Healing
 
-GHK-Cu is one of those peptides that sounds too good to be true. A tiny tripeptide that boosts collagen, speeds up wound healing, regrows hair, and reduces inflammation?
+GHK-Cu is one of those <a href="/articles/what-are-peptides-beginners-guide">peptides</a> that sounds too good to be true. A tiny tripeptide that boosts collagen, speeds up wound healing, regrows <a href="/articles/ghk-cu-skin-hair-guide">hair</a>, and reduces inflammation?
 
 But the research goes back decades, and it holds up surprisingly well.
 
@@ -18,7 +18,7 @@ But the research goes back decades, and it holds up surprisingly well.
 >
 > - GHK-Cu is a **naturally occurring copper peptide** that declines with age, linked to slower healing and visible aging
 > - Clinical studies show it **boosts collagen, reduces wrinkles**, and speeds wound healing with results **comparable to retinoids**
-> - It can be used **topically** (creams/serums), via **subcutaneous injection**, or with **microneedling**
+> - It can be used **topically** (creams/serums), via <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous injection</a>, or with **microneedling**
 > - GHK-Cu has an **excellent safety profile**, though anyone with active cancer should consult their oncologist first
 
 ## GHK-Cu at a Glance
@@ -148,7 +148,7 @@ For injection technique, see our [guide to injecting peptides](/articles/how-to-
 
 | Route | Dose | Frequency | Results Timeline |
 
-Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+Need help with dosing math? Use our free [<a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>](https://peptidearc.com/tools/reconstitution) on PeptideArc.
 |-------|------|-----------|-----------------|
 | **Topical** | 1-3 ppm or higher | 1-2x daily | 4-12 weeks |
 | **Subcutaneous** | 1-2 mg | Daily or every other day | 4-8 week cycles |
@@ -192,7 +192,7 @@ You can. They work through different mechanisms with no known negative interacti
 
 ### Is injectable GHK-Cu better than topical?
 
-For skin-specific goals, topical is sufficient and better studied. For systemic benefits (joint health, overall anti-aging), injections deliver the peptide to the whole body.
+For skin-specific goals, <a href="/articles/diy-ghk-cu-copper-peptide-cream">topical is sufficient</a> and better studied. For systemic benefits (joint health, overall anti-aging), injections deliver the peptide to the whole body.
 
 ### Can GHK-Cu regrow hair?
 

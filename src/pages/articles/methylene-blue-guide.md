@@ -46,7 +46,7 @@ Why does this matter? Complexes I and III are the main sites where electrons "le
 - **Reduces ROS production** by preventing electron leak
 - **Supports mitochondrial membrane potential** by maintaining proper proton gradient
 
-This is a big deal. Mitochondrial dysfunction is implicated in aging, neurodegeneration, chronic fatigue, and dozens of other conditions. A compound that directly improves mitochondrial function has potential relevance to all of them.
+This is a big deal. Mitochondrial dysfunction is implicated in aging, neurodegeneration, chronic fatigue, and dozens of other conditions. A compound that directly improves <a href="/articles/mots-c-mitochondrial-peptide">mitochondrial function</a> has potential relevance to all of them.
 
 ### Antioxidant Properties (At Low Doses)
 
@@ -107,7 +107,7 @@ Animal studies have shown that methylene blue:
 
 The skin finding is particularly interesting. A 2017 study from the University of Maryland found that methylene blue outperformed retinol, the gold standard anti-aging ingredient, in promoting skin cell proliferation and reducing markers of senescence in human skin cell models ([Xiong et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28041895/)).
 
-We're still waiting on long-term human anti-aging data. But the mechanistic rationale is solid, and the compound's safety profile at low doses makes it a reasonable candidate for those interested in longevity strategies.
+We're still waiting on long-term human <a href="/articles/epithalon-anti-aging-guide">anti-aging</a> data. But the mechanistic rationale is solid, and the compound's safety profile at low doses makes it a reasonable candidate for those interested in longevity strategies.
 
 ## Antimicrobial Uses: From Malaria to Photodynamic Therapy
 
@@ -216,7 +216,7 @@ Besides the critical serotonin interaction, be aware of:
 - **Dapsone and other oxidizing drugs.** Increased risk of methemoglobinemia, which is ironic given that methylene blue treats this condition.
 - **Blood pressure medications.** The NO inhibition can interfere with nitrate-based blood pressure drugs.
 
-For broader context on how methylene blue fits into biohacking protocols alongside peptides, check out [PeptideArc.com](https://peptidearc.com). If you're interested in other mitochondrial-targeting compounds, see our guide on [MOTS-c](/articles/mots-c-mitochondrial-peptide).
+For broader context on how methylene blue fits into biohacking protocols alongside peptides, check out [PeptideArc.com](https://peptidearc.com). If you're interested in <a href="/articles/mots-c-mitochondrial-peptide">other mitochondrial-targeting compounds</a>, see our guide on [<a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a>](/articles/mots-c-mitochondrial-peptide).
 
 ## Frequently Asked Questions
 
@@ -274,6 +274,6 @@ But it demands respect. The serotonin syndrome risk is real and potentially fata
 
 The dose-response curve means more is worse, not better. And the difference between pharmaceutical grade and industrial grade is the difference between a nootropic and a poison.
 
-If you're not on serotonergic medications, don't have G6PD deficiency, and you source pharmaceutical grade product, methylene blue is one of the more evidence-backed compounds in the biohacking toolkit. For a broader look at compound side effects, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know). Just keep the dose low, pay attention to your body, and don't skip the homework on drug interactions.
+If you're not on serotonergic medications, don't have G6PD deficiency, and you source pharmaceutical grade product, methylene blue is one of the more evidence-backed compounds in the biohacking toolkit. For a broader look at compound side effects, see our [<a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>](/articles/peptide-side-effects-what-to-know). Just keep the dose low, pay attention to your body, and don't skip the homework on drug interactions.
 
 *This article is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider before starting any new supplement or compound.*

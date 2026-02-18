@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 ⚠️ **Medical Disclaimer:** This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
 
-Retatrutide is the drug that has the obesity pharmacology world talking in a way it has not talked since tirzepatide arrived on the scene. Developed by Eli Lilly under the designation LY3437943, it is the first triple hormone receptor agonist to make it through Phase 2 trials and into a large-scale Phase 3 program. Where semaglutide (Wegovy) targets one receptor and tirzepatide (Zepbound) targets two, retatrutide hits all three at once: GLP-1, GIP, and glucagon.
+Retatrutide is the drug that has the obesity pharmacology world talking in a way it has not talked since tirzepatide arrived on the scene. Developed by Eli Lilly under the designation LY3437943, it is the first <a href="/articles/fat-burning-stack-retatrutide-5amino1mq-cardarine">triple hormone receptor agonist</a> to make it through Phase 2 trials and into a large-scale Phase 3 program. Where <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> (Wegovy) targets one receptor and <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> (Zepbound) targets two, retatrutide hits all three at once: GLP-1, GIP, and glucagon.
 
 The results so far have been staggering. In Phase 2 trials published in the New England Journal of Medicine, participants on the highest dose lost an average of 24.2% of their body weight in 48 weeks. And the weight loss curve had not yet plateaued when the trial ended. In the first Phase 3 trial (TRIUMPH-4), completed in late 2025, that number climbed even higher: 28.7% average body weight loss at 68 weeks on the 12 mg dose.
 
@@ -43,7 +43,7 @@ To put that in real terms: participants in TRIUMPH-4 lost an average of 71.2 pou
 
 ## How It Works: The Triple Agonist Mechanism
 
-Most people in the peptide space already understand how GLP-1 agonists suppress appetite and slow gastric emptying. The leap retatrutide makes is adding two additional receptor targets, each contributing a different metabolic effect. The three pathways work synergistically, creating an outcome greater than any single pathway could achieve alone.
+Most people in the peptide space already understand how <a href="/articles/semaglutide-weight-loss-guide">GLP-1</a> agonists suppress appetite and slow gastric emptying. The leap retatrutide makes is adding two additional receptor targets, each contributing a different metabolic effect. The three pathways work synergistically, creating an outcome greater than any single pathway could achieve alone.
 
 <div class="mech-grid">
   <div class="mech-card glp">
@@ -209,8 +209,8 @@ No head-to-head trials exist yet, so direct comparisons carry caveats. Different
   <thead>
     <tr>
       <th>Feature</th>
-      <th>Semaglutide (Wegovy)</th>
-      <th>Tirzepatide (Zepbound)</th>
+      <th><a href="/articles/semaglutide-weight-loss-guide">Semaglutide (Wegovy)</a></th>
+      <th><a href="/articles/tirzepatide-complete-guide">Tirzepatide (Zepbound)</a></th>
       <th>Retatrutide</th>
     </tr>
   </thead>

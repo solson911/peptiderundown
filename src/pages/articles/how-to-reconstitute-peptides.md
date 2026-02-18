@@ -25,9 +25,9 @@ This guide walks you through everything: what reconstitution is, what you need, 
 
 ## What Is Reconstitution (and Why Is It Necessary)?
 
-Reconstitution simply means **adding a liquid (solvent) to a powdered substance to turn it into an injectable solution**. You're dissolving the powder so it can be measured and administered accurately.
+**Reconstitution** simply means **adding a liquid (solvent) to a powdered substance to turn it into an injectable solution**. You're dissolving the powder so it can be measured and administered accurately.
 
-Peptides are shipped as a freeze-dried (lyophilized) powder because they're far more stable in that form. In powder form, they can survive shipping and sit on a shelf without degrading. But you can't inject a powder, so you need it in liquid form first.
+Peptides are shipped as a freeze-dried (lyophilized) powder because they're far more stable in that form. In powder form, they can <a href="/articles/how-to-travel-with-peptides">survive shipping</a> and sit on a shelf without degrading. But you can't inject a powder, so you need it in liquid form first.
 
 Think of it like powdered drink mix. The powder is shelf-stable and easy to transport, but to actually use it, you need to add water.
 
@@ -63,7 +63,7 @@ You'll see two options: **bacteriostatic water** and **plain sterile water**. He
 - **Bacteriostatic water**  -  contains 0.9% benzyl alcohol, which prevents bacterial growth; you can draw from the vial multiple times over weeks without contamination; **this is what you want for multi-use vials**
 - **Sterile water**  -  has no preservative; once punctured, use within 24 hours; only for single-use applications
 
-For almost everyone reading this, **bacteriostatic water is the right choice**.
+For almost everyone reading this, <a href="/articles/how-to-reconstitute-peptides">bacteriostatic water is the right choice</a>.
 
 
 ## Step-by-Step Peptide Reconstitution Instructions
@@ -128,7 +128,7 @@ Here's the right way:
 - **Push the plunger slowly.** Let the water trickle down the glass wall and pool at the bottom. This should take 30–60 seconds for 1–2mL.
 - Once all the water is in, remove the needle.
 
-**Why so gentle?** Peptides are delicate molecules. Blasting them with a jet of water can damage their structure through shear force. Think of it like slowly pouring water over a sugar cube versus hitting it with a pressure washer.
+**Why so gentle?** Peptides are delicate molecules. Blasting them with a jet of water can damage their <a href="/articles/what-are-peptides-beginners-guide">structure</a> through shear force. Think of it like slowly pouring water over a sugar cube versus hitting it with a pressure washer.
 
 ### Step 7: Let It Dissolve (Don't Shake)!
 
@@ -148,7 +148,7 @@ Your peptide is now reconstituted and ready to use. Label the vial with the date
 
 ## Peptide Dosage Math: Calculating Concentration and Dose
 
-> **Skip the math?** Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc. Plug in your vial size, water volume, and desired dose  -  it tells you exactly how many units to draw. No math required.
+> **Skip the math?** Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc. Plug in your vial size, water volume, and desired dose  -  it tells you exactly <a href="/articles/peptide-dosing-calculator-reconstitution-math">how many units to draw</a>. No math required.
 
 If you prefer to understand the calculations yourself, here's how it works. The math is dead simple once you see the pattern.
 

@@ -32,7 +32,7 @@ It can boost libido. It may suppress appetite. And it carries real risks that an
 | **Secondary effects** | Sexual arousal, appetite suppression |
 | **Route** | Subcutaneous injection |
 | **FDA status** | Not approved |
-| **Related compound** | PT-141 (bremelanotide), derived from MT-2 research |
+| **Related compound** | <a href="/articles/pt-141-bremelanotide-guide">PT-141 (bremelanotide)</a>, derived from MT-2 research |
 
 ## What Is Melanotan 2?
 
@@ -73,7 +73,7 @@ MT-2 can be particularly effective for fair-skinned individuals whose melanocyte
 
 ### MC4R: Sexual and Appetite Effects
 
-**Sexual arousal** from MC4R activation in the hypothalamus is often the most noticeable effect, sometimes occurring before any visible skin darkening. This effect was so pronounced that researchers developed **PT-141 (bremelanotide)** specifically to target it, receiving FDA approval in 2019 as Vyleesi ([Clayton et al., 2016](https://pubmed.ncbi.nlm.nih.gov/27045258/)).
+**Sexual arousal** from MC4R activation in the hypothalamus is often the most noticeable effect, sometimes occurring before any visible skin darkening. This effect was so pronounced that researchers developed **<a href="/articles/pt-141-bremelanotide-guide">PT-141 (bremelanotide)</a>** specifically to target it, receiving FDA approval in 2019 as Vyleesi ([Clayton et al., 2016](https://pubmed.ncbi.nlm.nih.gov/27045258/)).
 
 **Appetite suppression** through MC4R is also real but inconsistent and usually not dramatic ([Adan et al., 2006](https://pubmed.ncbi.nlm.nih.gov/16803859/)).
 
@@ -94,7 +94,7 @@ MT-2 **will** darken existing moles and freckles. New moles may also appear. Thi
 
 ## Dosing Protocols
 
-MT-2 is administered via subcutaneous injection, typically into the abdominal fat. For technique, see our [subcutaneous injection guide](/articles/how-to-inject-peptides-subcutaneously).
+MT-2 is administered via subcutaneous injection, typically into the abdominal fat. For technique, see our [<a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous injection guide</a>](/articles/how-to-inject-peptides-subcutaneously).
 
 Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
 
@@ -130,11 +130,11 @@ MT-2 typically comes as lyophilized powder in **10 mg vials**. Adding 1 mL of ba
 
 ### Storage
 
-Reconstituted MT-2 should be refrigerated and used within **4-6 weeks**. For detailed storage tips, see our [peptide storage guide](/articles/how-to-store-peptides). Unreconstituted powder lasts longer refrigerated or frozen.
+Reconstituted MT-2 should be refrigerated and used within **4-6 weeks**. For detailed storage tips, see our [<a href="/articles/how-to-store-peptides">peptide storage guide</a>](/articles/how-to-store-peptides). Unreconstituted powder lasts longer refrigerated or frozen.
 
 ## Side Effects
 
-For a broader overview of peptide side effects, see our [peptide side effects guide](/articles/peptide-side-effects-what-to-know).
+For a broader overview of peptide side effects, see our [<a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>](/articles/peptide-side-effects-what-to-know).
 
 ### Common Side Effects
 
@@ -203,7 +203,7 @@ MT-2 makes you more responsive to UV. The eumelanin it produces is protective, b
 
 ## Legal Status
 
-MT-2 occupies a gray area in most countries. For a full breakdown, see our [peptide regulations guide](/articles/are-peptides-legal-fda-regulations-2026).
+MT-2 occupies a gray area in most countries. For a full breakdown, see our [<a href="/articles/are-peptides-legal-fda-regulations-2026">peptide regulations guide</a>](/articles/are-peptides-legal-fda-regulations-2026).
 
 | Country | Status |
 |---------|--------|

@@ -26,9 +26,9 @@ Epithalon is different. It has three decades of published research behind it, mo
 
 ## What Is Epithalon?
 
-Epithalon (also spelled **Epitalon**) is a synthetic version of **epithalamin**, a peptide naturally produced by the pineal gland.
+Epithalon (also spelled **Epitalon**) is a synthetic version of **epithalamin**, a <a href="/articles/what-are-peptides-beginners-guide">peptide</a> naturally produced by the pineal gland.
 
-Its full name is **Ala-Glu-Asp-Gly**, a sequence of just four amino acids. That makes it one of the smallest bioactive peptides in longevity research.
+Its full name is **Ala-Glu-Asp-Gly**, a sequence of just four <a href="/articles/what-are-peptides-beginners-guide">amino acids</a>. That makes it one of the smallest bioactive peptides in longevity research.
 
 | Feature | Detail |
 |---------|--------|
@@ -56,7 +56,7 @@ When telomeres get too short, the cell enters **senescence**. It stops dividing.
 
 **Telomerase** is the enzyme that rebuilds telomeres. Most adult cells produce very little of it.
 
-Epithalon reactivates telomerase expression. In human somatic cells, it has been shown to:
+Epithalon reactivates <a href="/articles/longevity-stack-epithalon-nmn-thymosin">telomerase expression</a>. In human somatic cells, it has been shown to:
 
 - **Increase telomerase activity** in cell cultures by stimulating hTERT gene expression
 - **Elongate telomeres** in human fetal fibroblasts beyond the Hayflick limit
@@ -76,7 +76,7 @@ The pineal gland is central to circadian rhythm, and its function declines sharp
 
 ([Anisimov et al., 2003](https://pubmed.ncbi.nlm.nih.gov/12946226/))
 
-This melatonin connection matters. Melatonin is not just a sleep hormone. It's a potent antioxidant, immune modulator, and oncostatic agent.
+This melatonin connection matters. <a href="/articles/dsip-sleep-peptide-guide">Melatonin is not just a sleep hormone</a>. It's a potent antioxidant, immune modulator, and oncostatic agent.
 
 ### Antioxidant and Gene Expression Effects
 
@@ -213,7 +213,7 @@ Epithalon is almost always used in cycles rather than continuously. The rational
 
 Epithalon comes as a lyophilized powder. Reconstitute with bacteriostatic water, then draw doses from the vial.
 
-For detailed step-by-step instructions, see our [peptide reconstitution guide](/articles/how-to-reconstitute-peptides).
+For detailed step-by-step instructions, see our [<a href="/articles/how-to-reconstitute-peptides">peptide reconstitution guide</a>](/articles/how-to-reconstitute-peptides).
 
 ## Side Effects
 

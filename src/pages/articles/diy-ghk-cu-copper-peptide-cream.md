@@ -9,7 +9,7 @@ tags: ["ghk-cu", "copper-peptide", "diy", "skin-care", "topical", "anti-aging"]
 author: "PeptideRundown Team"
 ---
 
-GHK-Cu (copper peptide) is one of the most exciting discoveries in skin science. This small peptide naturally occurs in our bodies but declines with age. Research shows it triggers collagen production, accelerates wound healing, and fights inflammation.
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu (copper peptide)</a> is one of the most exciting discoveries in skin science. This small peptide naturally occurs in our bodies but declines with age. Research shows it triggers <a href="/articles/best-peptides-for-skin-and-hair">collagen production</a>, accelerates wound healing, and fights inflammation.
 
 Commercial GHK-Cu creams cost $60-120 for tiny jars. That puts clinical-grade results out of reach for many. But you can make the same powerful formula at home for a fraction of the cost.
 
@@ -23,7 +23,7 @@ Research shows GHK-Cu increases collagen production by up to 70%. A 2020 study f
 
 > **Key Finding:** GHK-Cu works through multiple pathways. It stimulates collagen synthesis while reducing inflammation. This dual action makes it exceptional for anti-aging.
 
-The peptide also acts as a powerful antioxidant. It protects skin from environmental damage and free radicals. This helps prevent premature aging caused by sun exposure.
+The peptide also acts as a powerful antioxidant. It protects skin from environmental damage and free radicals. This helps prevent <a href="/articles/epithalon-anti-aging-guide">premature aging</a> caused by sun exposure.
 
 Bioavailability is key with topical peptides. GHK-Cu has excellent skin penetration compared to larger molecules. Its copper component helps stabilize the peptide during absorption.
 
@@ -68,7 +68,7 @@ Follow these steps precisely for best results:
 
 - **Prepare workspace** - Clean surfaces with alcohol. Wear gloves throughout the process. Gather all ingredients and equipment.
 
-- **Reconstitute GHK-Cu** - Add 1ml sterile water to 10mg GHK-Cu powder. Gently swirl until fully dissolved. Do not shake vigorously.
+- **Reconstitute GHK-Cu** - Add 1ml <a href="/articles/how-to-reconstitute-peptides">sterile water</a> to 10mg GHK-Cu powder. Gently swirl until fully dissolved. Do not shake vigorously.
 
 - **Mix water phase** - Combine aloe vera gel, hyaluronic acid, glycerin and distilled water in glass bowl. Heat gently to 70°C (158°F) using double boiler.
 
@@ -90,11 +90,11 @@ Follow these steps precisely for best results:
 
 ## How to Reconstitute GHK-Cu Powder
 
-Proper reconstitution is critical for peptide stability. Always use sterile water - never tap water. The minerals in tap water can degrade the peptide.
+Proper <a href="/articles/how-to-reconstitute-peptides">reconstitution</a> is critical for peptide stability. Always use sterile water - never tap water. The minerals in tap water can degrade the peptide.
 
 Measure 1ml of sterile water per 10mg of GHK-Cu powder. Draw the water into a syringe and gently inject it into the peptide vial. Let it sit for 1 minute before swirling.
 
-Never shake the vial vigorously. This can damage the peptide structure. Gentle swirling is sufficient for dissolution. Use reconstituted peptide within 48 hours for best results.
+Never shake the vial vigorously. This can damage the <a href="/articles/what-are-peptides-beginners-guide">peptide structure</a>. Gentle swirling is sufficient for dissolution. Use reconstituted peptide within 48 hours for best results.
 
 ## Choosing a Base Cream/Carrier
 

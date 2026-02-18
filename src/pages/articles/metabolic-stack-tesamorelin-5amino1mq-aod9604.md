@@ -23,7 +23,7 @@ Tesamorelin is a synthetic growth hormone-releasing hormone (GHRH) analog. It st
 
 ### 5-Amino-1MQ
 
-5-Amino-1MQ is a small molecule inhibitor of nicotinamide N-methyltransferase (NNMT). NNMT is an enzyme that depletes nicotinamide adenine dinucleotide (NAD+), a critical cofactor for energy metabolism. By inhibiting NNMT, 5-Amino-1MQ boosts NAD+ levels, enhancing mitochondrial function and fat oxidation.
+5-Amino-1MQ is a small molecule inhibitor of nicotinamide N-methyltransferase (NNMT). NNMT is an enzyme that depletes nicotinamide adenine dinucleotide (NAD+), a critical cofactor for energy metabolism. By inhibiting NNMT, 5-Amino-1MQ boosts <a href="/articles/nad-peptides-cellular-energy-longevity">NAD+</a> levels, enhancing mitochondrial function and fat oxidation.
 
 > **Key Finding:** Research suggests that 5-Amino-1MQ can increase metabolic rate by up to 10%, making it a potent tool for fat loss.
 
@@ -31,7 +31,7 @@ Tesamorelin is a synthetic growth hormone-releasing hormone (GHRH) analog. It st
 
 AOD-9604 is a modified fragment of human growth hormone (hGH) that mimics the fat-burning properties of hGH without its anabolic or diabetogenic effects. It works by stimulating lipolysis (fat breakdown) and inhibiting lipogenesis (fat storage).
 
-> **Key Finding:** AOD-9604 has been shown to reduce body fat by up to 12% in studies, with minimal side effects.
+> **Key Finding:** <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> has been shown to reduce body fat by up to 12% in studies, with minimal side effects.
 
 ## How They Synergize Together
 
@@ -121,7 +121,7 @@ Overall, this stack has a favorable safety profile compared to many alternatives
 | **Cost per month** | $200-400 | $800-1,200 (brand) | Limited availability |
 | **Administration** | Daily injections + oral | Weekly injection | Weekly injection |
 
-> **Key Finding:** The Metabolic Stack is ideal for those who want targeted fat loss without muscle loss, while GLP-1 agonists are better for appetite control and generalized weight loss. For a deeper look at retatrutide, see our [Retatrutide Complete Guide](/articles/retatrutide-complete-guide).
+> **Key Finding:** The Metabolic Stack is ideal for those who want targeted fat loss without muscle loss, while GLP-1 agonists are better for appetite control and generalized weight loss. For a deeper look at retatrutide, see our [<a href="/articles/retatrutide-complete-guide">Retatrutide Complete Guide</a>](/articles/retatrutide-complete-guide).
 
 ## Bloodwork to Monitor
 
@@ -135,7 +135,7 @@ Before and during the stack, monitor these markers:
 | **Lipid panel** | Tracks fat metabolism improvements | Baseline + week 12 |
 | **Liver enzymes (ALT/AST)** | General safety monitoring | Baseline + week 6 |
 
-For a detailed guide on what to test and when, check out our [Peptide Bloodwork Guide](/articles/peptide-bloodwork-guide).
+For a detailed guide on what to test and when, check out our [<a href="/articles/peptide-bloodwork-guide">Peptide Bloodwork Guide</a>](/articles/peptide-bloodwork-guide).
 
 ## Frequently Asked Questions
 

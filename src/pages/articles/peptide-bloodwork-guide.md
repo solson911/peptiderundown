@@ -16,7 +16,7 @@ Peptides can be powerful tools for health and performance, but they also interac
 > **Key Takeaways**
 >
 > - **Baseline labs are non-negotiable**  -  establish your starting point before any peptide protocol.
-> - **Different peptides require different panels**  -  GH secretagogues need IGF-1, GLP-1s need A1c, and healing peptides need inflammation markers.
+> - **Different peptides require different panels**  -  GH secretagogues need IGF-1, <a href="/articles/semaglutide-weight-loss-guide">GLP-1s</a> need A1c, and healing peptides need inflammation markers.
 > - **Timing matters**  -  some labs should be drawn fasted, others post-dose.
 > - **Red flags exist**  -  certain results mean you should stop peptides immediately.
 > - **Cost varies**  -  cash pay options like HealthLabs can be cheaper than insurance for some tests.
@@ -91,7 +91,7 @@ Key for healing peptides like BPC-157 or TB-500.
 
 Different peptides require different monitoring. Here’s what to track based on your protocol.
 
-### GH Secretagogues (e.g., GHRP-2, Ipamorelin, CJC-1295)
+### GH Secretagogues (e.g., GHRP-2, <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a>, <a href="/articles/cjc-1295-dac-guide">CJC-1295</a>)
 
 These peptides increase GH and IGF-1. Monitor:
 
@@ -99,7 +99,7 @@ These peptides increase GH and IGF-1. Monitor:
 - **Glucose**  -  GH can raise blood sugar. Test **fasted and post-dose**.
 - **Insulin**  -  GH antagonizes insulin; monitor for resistance.
 
-### GLP-1 Agonists (e.g., Semaglutide, Tirzepatide)
+### GLP-1 Agonists (e.g., <a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a>, <a href="/articles/tirzepatide-complete-guide">Tirzepatide</a>)
 
 These peptides affect blood sugar and metabolism. Monitor:
 
@@ -108,7 +108,7 @@ These peptides affect blood sugar and metabolism. Monitor:
 - **Lipids**  -  GLP-1s can improve or worsen cholesterol.
 - **Liver enzymes**  -  some GLP-1s are metabolized by the liver.
 
-### Healing Peptides (e.g., BPC-157, TB-500)
+### Healing Peptides (e.g., <a href="/articles/bpc-157-complete-guide">BPC-157</a>, <a href="/articles/tb-500-complete-guide">TB-500</a>)
 
 These peptides modulate inflammation. Monitor:
 
@@ -218,7 +218,7 @@ Compare to your baseline. Levels **>400 ng/mL** suggest excessive GH activity an
 Bloodwork is the **only way** to use peptides safely and effectively. Skipping labs is like driving blindfolded  -  you might get lucky, but the risks aren’t worth it.
 
 **Related reading:**
-- [Peptide Side Effects: What to Know](/articles/peptide-side-effects-what-to-know)
-- [How to Inject Peptides Subcutaneously](/articles/how-to-inject-peptides-subcutaneously)
+- [<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a>](/articles/peptide-side-effects-what-to-know)
+- [<a href="/articles/how-to-inject-peptides-subcutaneously">How to Inject Peptides Subcutaneously</a>](/articles/how-to-inject-peptides-subcutaneously)
 
 For lab testing discounts and peptide resources, visit [PeptideArc](https://peptidearc.com).

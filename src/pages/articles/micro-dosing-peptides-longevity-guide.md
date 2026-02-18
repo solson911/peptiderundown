@@ -51,7 +51,7 @@ Based on clinical observation, preclinical research, and practitioner consensus,
 <div class="cd ct">
 <span class="tg">Telomere Protection</span>
 <h3>1. Epithalon (Epitalon)</h3>
-<p>Epithalon is the peptide with the strongest mechanistic case for longevity use. Developed by Dr. Vladimir Khavinson at the St. Petersburg Institute of Bioregulation and Gerontology, it is a synthetic version of epithalamin, a peptide naturally produced by the pineal gland. Its primary mechanism is telomerase activation, the enzyme that prevents chromosomal shortening during cell division.</p>
+<p>Epithalon is the peptide with the strongest mechanistic case for longevity use. Developed by Dr. Vladimir Khavinson at the St. Petersburg Institute of Bioregulation and Gerontology, it is a synthetic version of epithalamin, a peptide naturally produced by the pineal gland. Its primary mechanism is <a href="/articles/epithalon-anti-aging-guide">telomerase activation</a>, the enzyme that prevents chromosomal shortening during cell division.</p>
 
 <p>Multiple Russian studies spanning decades have shown that Epithalon can lengthen telomeres in aged animals and humans, restore circadian rhythms, and extend both average and maximum lifespan in laboratory models. A 2025 follow-up study tracked elderly subjects for 12 years after a single 20-day Epithalon cycle and found significantly reduced mortality compared to placebo. While the research originates primarily from Eastern Europe (raising questions about replication and independence), the consistency of findings across multiple research groups and the clear biological mechanism give it credibility.</p>
 
@@ -71,7 +71,7 @@ Based on clinical observation, preclinical research, and practitioner consensus,
 <div class="cd cv">
 <span class="tg">Mitochondrial Signaling</span>
 <h3>2. MOTS-c (Mitochondrial-Derived Peptide)</h3>
-<p>MOTS-c is an endogenous peptide encoded by mitochondrial DNA that functions as a metabolic signaling molecule. It translocates to the nucleus during times of metabolic stress and regulates nuclear gene expression to improve glucose metabolism, insulin sensitivity, and mitochondrial function. Think of it as the mitochondria's way of communicating with the nucleus to coordinate energy production and cellular health.</p>
+<p>MOTS-c is an endogenous peptide encoded by mitochondrial DNA that functions as a metabolic signaling molecule. It translocates to the nucleus during times of metabolic stress and regulates nuclear gene expression to improve glucose metabolism, insulin sensitivity, and <a href="/articles/mots-c-mitochondrial-peptide">mitochondrial function</a>. Think of it as the mitochondria's way of communicating with the nucleus to coordinate energy production and cellular health.</p>
 
 <p>Animal studies show that MOTS-c levels decline with age and that restoration improves exercise capacity, reduces obesity, and extends lifespan. Young mice injected with MOTS-c from aged animals showed improved exercise performance, while aged mice given MOTS-c exhibited metabolic profiles resembling younger animals. Small human studies suggest benefits for metabolic syndrome, insulin resistance, and exercise recovery, though larger trials are needed to confirm clinical efficacy.</p>
 
@@ -90,7 +90,7 @@ Based on clinical observation, preclinical research, and practitioner consensus,
 
 <div class="cd cg">
 <span class="tg">Mitochondrial Membrane Repair</span>
-<h3>3. SS-31 (Elamipretide)</h3>
+<h3>3. <a href="/articles/ss-31-elamipretide-mitochondrial-guide">SS-31</a> (Elamipretide)</h3>
 <p>SS-31 is a mitochondria-targeted peptide that selectively accumulates in the inner mitochondrial membrane, where it binds to cardiolipin and stabilizes mitochondrial structure. It does not directly produce energy but instead repairs the machinery that produces energy, making existing mitochondria more efficient rather than forcing them to work harder.</p>
 
 <p>The most compelling evidence comes from a study in aged mice where SS-31 restored mitochondrial function, improved muscle performance, and enhanced cognitive function to levels indistinguishable from young controls. Human trials in heart failure and primary mitochondrial diseases have shown improvements in exercise capacity, fatigue, and quality of life. The peptide is well-tolerated across all studies, with minimal side effects even at therapeutic doses.</p>
@@ -110,7 +110,7 @@ Based on clinical observation, preclinical research, and practitioner consensus,
 
 <div class="cd cr">
 <span class="tg">Tissue Repair and Inflammation</span>
-<h3>4. BPC-157 (Body Protection Compound)</h3>
+<h3>4. <a href="/articles/bpc-157-complete-guide">BPC-157</a> (Body Protection Compound)</h3>
 <p>BPC-157 is a synthetic fragment of a protein found in human gastric juice. It has demonstrated remarkable healing properties in animal models: accelerating wound healing, protecting organs from damage, reducing inflammation, and supporting gut barrier function. For longevity protocols, it serves as the anti-inflammatory and tissue maintenance component.</p>
 
 <p>The challenge with BPC-157 is the gap between animal data (which is extraordinary) and human evidence (which is extremely limited). Most clinical use is based on veterinary research, case reports, and clinical observation. That said, practitioners report consistent benefits for gut health, joint comfort, and overall resilience. The FDA has flagged it for potential safety concerns in compounding, noting the lack of human safety data.</p>
@@ -130,7 +130,7 @@ Based on clinical observation, preclinical research, and practitioner consensus,
 
 <div class="cd cb">
 <span class="tg">Collagen and Gene Expression</span>
-<h3>5. GHK-Cu (Copper Peptide)</h3>
+<h3>5. <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a> (Copper Peptide)</h3>
 <p>GHK-Cu was covered in depth in our skin and hair guide, but its longevity applications extend far beyond cosmetics. Gene profiling studies reveal that GHK-Cu modulates the expression of over 4,000 genes, resetting many of them toward patterns associated with younger tissue. It stimulates collagen and elastin synthesis, reduces inflammatory signaling, promotes wound healing, and functions as a potent antioxidant.</p>
 
 <p>For microdosing protocols, GHK-Cu serves as the connective tissue and extracellular matrix support layer. Plasma levels decline from approximately 200 ng/mL at age 20 to about 80 ng/mL by age 60. Restoring those levels through topical or low-dose systemic application maintains the repair signaling that keeps skin, joints, and vasculature healthy over time. It has a well-established safety profile across decades of cosmetic and clinical use.</p>
@@ -150,7 +150,7 @@ Based on clinical observation, preclinical research, and practitioner consensus,
 
 <div class="cd cs">
 <span class="tg">Cellular Energy Currency</span>
-<h3>6. NAD+ (Nicotinamide Adenine Dinucleotide)</h3>
+<h3>6. <a href="/articles/nad-peptides-cellular-energy-longevity">NAD+</a> (Nicotinamide Adenine Dinucleotide)</h3>
 <p>NAD+ is not technically a peptide, but it is so central to longevity microdosing protocols that no guide would be complete without it. It is the essential cofactor for sirtuins (the "longevity genes"), DNA repair enzymes (PARPs), and mitochondrial energy metabolism. Without adequate NAD+, the other peptides in this list cannot fully do their jobs. Think of it as the fuel that powers all the cellular repair machinery.</p>
 
 <p>NAD+ levels decline approximately 50% between age 20 and 50, and faster under chronic stress, poor sleep, or inflammation. This decline is linked to reduced sirtuin activity, impaired DNA repair, disrupted circadian rhythms, and decreased mitochondrial function. Restoring NAD+ levels through direct supplementation (IV/IM injection) or precursors (NMN, NR) provides the biochemical fuel that powers cellular defense systems. Multiple randomized controlled trials with NMN and NR precursors confirm that they elevate tissue NAD+ levels.</p>

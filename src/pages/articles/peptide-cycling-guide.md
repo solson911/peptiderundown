@@ -150,12 +150,12 @@ The data is clear on what happens when you stop:
 
 | GLP-1 Peptide | Cycling Recommended? | Standard Duration |
 |---------------|---------------------|-------------------|
-| **Semaglutide** (Wegovy/Ozempic) | No | Ongoing / indefinite |
-| **Tirzepatide** (Mounjaro/Zepbound) | No | Ongoing / indefinite |
-| **Retatrutide** (investigational) | No | Ongoing / indefinite |
-| **AOD-9604** | Optional | 12-week cycles with 4-week breaks |
-| **5-Amino-1MQ** | Yes | 8-12 weeks on, 4 weeks off |
-| **Tesamorelin** | Depends | FDA-approved for continuous use, but GH component may benefit from cycling |
+| **<a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a>** (Wegovy/Ozempic) | No | Ongoing / indefinite |
+| **<a href="/articles/tirzepatide-complete-guide">Tirzepatide</a>** (Mounjaro/Zepbound) | No | Ongoing / indefinite |
+| **<a href="/articles/retatrutide-complete-guide">Retatrutide</a>** (investigational) | No | Ongoing / indefinite |
+| **<a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a>** | Optional | 12-week cycles with 4-week breaks |
+| **<a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">5-Amino-1MQ</a>** | Yes | 8-12 weeks on, 4 weeks off |
+| **<a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Tesamorelin</a>** | Depends | FDA-approved for continuous use, but GH component may benefit from cycling |
 
 AOD-9604 and 5-Amino-1MQ are different from GLP-1s. They work through different mechanisms and can benefit from cycling. But if you're on a true GLP-1 agonist for weight management, plan to stay on it.
 

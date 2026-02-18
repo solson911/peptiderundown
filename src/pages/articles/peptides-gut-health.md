@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 ## Preamble: Gut Health Matters
 
-Your gut does more than digest food. It's central to your immune system, mood regulation, and overall health. When gut function suffers, it can lead to conditions like IBS, leaky gut syndrome, and inflammatory bowel diseases. Conventional treatments often focus on symptom management rather than healing the underlying tissue damage. That's where peptides come in - they offer a targeted approach to repair and restore gut function at the cellular level.
+Your gut does more than digest food. It's central to your immune system, mood regulation, and overall health. When gut function suffers, it can lead to conditions like IBS, leaky gut syndrome, and inflammatory bowel diseases. Conventional treatments often focus on symptom management rather than healing the underlying tissue damage. That's where <a href="/articles/what-are-peptides-beginners-guide">peptides</a> come in - they offer a targeted approach to repair and restore gut function at the cellular level.
 
 Peptides are short chains of amino acids that act as signaling molecules in the body. They can promote tissue repair, reduce inflammation, and modulate the immune response. This makes them particularly valuable for gut health issues where conventional approaches fall short. While they're not a replacement for medical care, they represent a promising complementary approach worth exploring with your healthcare provider.
 
@@ -29,11 +29,11 @@ Dosing protocols vary based on individual needs:
 - **Injectable route**: 250-500mcg subcutaneously once daily
 - Typical course: 4-8 weeks
 
-Most users notice improvements within 2-4 weeks, though full healing may take longer for chronic conditions. For more details, see our [BPC-157 Complete Guide](/articles/bpc-157-complete-guide).
+Most users notice improvements within 2-4 weeks, though full healing may take longer for chronic conditions. For more details, see our [<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a>](/articles/bpc-157-complete-guide).
 
 > **Key Finding:** BPC-157 significantly accelerates the healing of intestinal anastomoses in animal studies, suggesting potential for post-surgical recovery.
 
-## KPV Tripeptide
+## <a href="/articles/kpv-peptide-guide">KPV</a> Tripeptide
 
 KPV is a tiny peptide (just three amino acids) derived from alpha-MSH with potent anti-inflammatory effects. Its small size gives it excellent oral bioavailability, making it convenient for gut-focused applications. KPV works by inhibiting NF-kB signaling, a major pathway in inflammatory responses.
 
@@ -49,7 +49,7 @@ Dosing recommendations:
 
 KPV's stability in the digestive tract makes it particularly suitable for gut conditions. Unlike many peptides, it doesn't require injection for gut-specific effects.
 
-## LL-37: The Antimicrobial Defender
+## <a href="/articles/ll-37-antimicrobial-peptide-guide">LL-37</a>: The Antimicrobial Defender
 
 LL-37 is part of your body's innate immune system (cathelicidin family). This antimicrobial peptide plays several roles in gut health:
 - Directly kills harmful bacteria and fungi
@@ -142,7 +142,7 @@ Important considerations:
 - Source from reputable suppliers
 - Consult a healthcare provider before starting, especially if you have autoimmune conditions
 
-For more safety information, see our [Peptide Safety Guide](/articles/peptide-safety-side-effects-guide). Always work with a medical professional when using peptides.
+For more safety information, see our [<a href="/articles/peptide-side-effects-what-to-know">Peptide Safety Guide</a>](/articles/peptide-safety-side-effects-guide). Always work with a medical professional when using peptides.
 
 ## Frequently Asked Questions
 
@@ -153,7 +153,7 @@ Yes, BPC-157 and KPV are often combined. LL-37 can be added for antimicrobial su
 Most people notice initial improvements in 2-4 weeks. Full healing of chronic gut issues may take 3-6 months. Inflammatory symptoms often improve faster than structural repairs. Consistency is key - don't expect overnight results with deep tissue healing.
 
 **Are oral peptides effective?**
-For gut-specific issues, oral administration can be very effective. BPC-157 and KPV show good stability in the digestive tract. However injectable forms may be better for systemic issues. We cover preparation methods in our [reconstitution guide](/articles/how-to-reconstitute-peptides).
+For gut-specific issues, oral administration can be very effective. BPC-157 and KPV show good stability in the digestive tract. However injectable forms may be better for systemic issues. We cover preparation methods in our [<a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a>](/articles/how-to-reconstitute-peptides).
 
 **Can peptides replace my current medications?**
 Peptides should not replace prescription medications without medical supervision. They work best as complementary therapies. Some people eventually reduce medications under professional guidance, but this requires careful monitoring.

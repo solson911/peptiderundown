@@ -8,7 +8,7 @@ category: "Peptide Guides"
 tags: ["cerebrolysin", "neuropeptides", "brain recovery", "nootropics", "neurotrophic"]
 ---
 
-# Cerebrolysin: The Neuropeptide Complex for Brain Recovery
+# Cerebrolysin: The <a href="/articles/peptides-brain-injury-tbi-recovery">Neuropeptide Complex for Brain Recovery</a>
 
 Cerebrolysin splits the medical world along geographic lines. In Russia, China, and much of Europe, it's a mainstream treatment for stroke and dementia.
 
@@ -18,10 +18,10 @@ This disconnect isn't because the research doesn't exist. There are over **200 c
 
 > **Key Takeaways**
 >
-> - Cerebrolysin is a **porcine brain-derived peptide complex** that mimics neurotrophic factors like BDNF and NGF
+> - Cerebrolysin is a **<a href="/articles/what-are-peptides-beginners-guide">porcine brain-derived peptide complex</a>** that mimics neurotrophic factors like BDNF and NGF
 > - Approved in **40+ countries** for stroke, TBI, and Alzheimer's, but **not available in the US** (no FDA submission)
 > - Clinical trials show benefits for **stroke recovery, traumatic brain injury**, and cognitive function in dementia
-> - Administration is **injectable only** (IM or IV), with typical nootropic protocols running **2-5 mL IM** for 4-week cycles
+> - Administration is **<a href="/articles/how-to-inject-peptides-subcutaneously">injectable only</a>** (IM or IV), with typical nootropic protocols running **2-5 mL IM** for 4-week cycles
 
 ## Cerebrolysin at a Glance
 
@@ -79,7 +79,7 @@ This is where the evidence is strongest.
 
 The E-COMPASS trial's finding is particularly notable: Cerebrolysin **enhances the brain's ability to rewire during rehabilitation**.
 
-### Traumatic Brain Injury
+### <a href="/articles/peptides-brain-injury-tbi-recovery">Traumatic Brain Injury</a>
 
 | Trial | Population | Results |
 |-------|-----------|---------|
@@ -127,7 +127,7 @@ Cerebrolysin is available only as an injectable solution. Peptides would be dest
 
 | Protocol | Dose | Frequency | Duration |
 |----------|------|-----------|----------|
-| **Cognitive enhancement** | 2-5 mL IM | 3-5x/week | 4-week cycles |
+| **<a href="/articles/cognition-stack-semax-selank-dihexa">Cognitive enhancement</a>** | 2-5 mL IM | 3-5x/week | 4-week cycles |
 | **Maintenance** | 2 mL IM | 2-3x/week | Ongoing |
 | **Intensive** | 5-10 mL daily (IM or slow IV) | Daily | 10-20 days, then break |
 

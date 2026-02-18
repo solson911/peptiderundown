@@ -39,11 +39,11 @@ In 2015, researchers at USC discovered that one of those molecules might be a ke
 
 MOTS-c was first identified by Changhan David Lee and colleagues at the University of Southern California in a landmark 2015 paper in *Cell Metabolism* ([Lee et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25773600/)).
 
-It belongs to a growing family of **mitochondrial-derived peptides (MDPs)** that also includes humanin and SHLPs. These molecules challenge the old view of mitochondria as simple energy factories. Mitochondria are active signaling organelles that communicate with the rest of the cell and with distant tissues.
+It belongs to a growing family of **<a href="/articles/ss-31-elamipretide-mitochondrial-guide">mitochondrial-derived peptides (MDPs)</a>** that also includes humanin and SHLPs. These molecules challenge the old view of mitochondria as simple energy factories. Mitochondria are active signaling organelles that communicate with the rest of the cell and with distant tissues.
 
 MOTS-c is produced naturally in your body. It circulates in the blood and can be detected in various tissues.
 
-Levels appear to decline with age, which has obvious implications for aging research.
+Levels appear to <a href="/articles/epithalon-anti-aging-guide">decline with age</a>, which has obvious implications for aging research.
 
 For a full compound profile, check out [PeptideArc](https://peptidearc.com).
 
@@ -166,7 +166,7 @@ The original mouse studies used 5 mg/kg intraperitoneally, which doesn't transla
 
 > **Timing Note:** Some practitioners recommend administering MOTS-c before exercise to amplify the metabolic response. Others use it on rest days. There's no definitive research on optimal timing in humans.
 
-MOTS-c is administered by injection because, like most peptides, it would be degraded by digestive enzymes if taken orally. For injection technique, see our [subcutaneous injection guide](/articles/how-to-inject-peptides-subcutaneously). The peptide is typically supplied as a lyophilized powder reconstituted with bacteriostatic water.
+MOTS-c is administered by injection because, like most peptides, it would be degraded by digestive enzymes if taken orally. For injection technique, see our <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous injection guide</a>(/articles/how-to-inject-peptides-subcutaneously). The peptide is typically supplied as a lyophilized powder reconstituted with bacteriostatic water.
 
 ## Side Effects
 
@@ -226,9 +226,9 @@ Metabolic changes (improved glucose tolerance, increased energy) may be noticeab
 
 Common combinations include:
 
-- **MOTS-c + [Tesamorelin/Ipamorelin](/articles/tesamorelin-ipamorelin-stack-guide)**  -  metabolic health and body composition
-- **MOTS-c + NAD+ precursors** (or [methylene blue](/articles/methylene-blue-guide))  -  mitochondrial support
-- **MOTS-c + [BPC-157](/articles/bpc-157-complete-guide)**  -  metabolic optimization with tissue repair
+- **MOTS-c + [<a href="/articles/tesamorelin-ipamorelin-stack-guide">Tesamorelin/Ipamorelin</a>]**  -  metabolic health and body composition
+- **MOTS-c + NAD+ precursors** (or [<a href="/articles/methylene-blue-guide">methylene blue</a>])  -  mitochondrial support
+- **MOTS-c + [<a href="/articles/bpc-157-complete-guide">BPC-157</a>]**  -  metabolic optimization with tissue repair
 
 No formal interaction studies exist. Introduce one compound at a time.
 

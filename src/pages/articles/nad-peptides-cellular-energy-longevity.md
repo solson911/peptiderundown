@@ -48,7 +48,7 @@ Chronic inflammation and oxidative stress accelerate NAD+ depletion. Lifestyle f
 
 ## NAD+-Boosting Peptides Explained
 
-### MOTS-c: The Metabolic Regulator
+### <a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a>: The Metabolic Regulator
 
 MOTS-c is a mitochondrial-derived peptide that influences energy metabolism. It's naturally produced during exercise and helps regulate how cells use fuel. Research shows MOTS-c can:
 
@@ -58,7 +58,7 @@ MOTS-c is a mitochondrial-derived peptide that influences energy metabolism. It'
 
 > **Research Note:** A 2021 study found aged mice given MOTS-c showed 30% higher NAD+ levels and significantly improved endurance. This suggests potential for human applications.
 
-### 5-Amino-1MQ: The NNMT Inhibitor
+### <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">5-Amino-1MQ</a>: The NNMT Inhibitor
 
 5-Amino-1MQ works differently from other NAD+ boosters. It targets NNMT, an enzyme that breaks down NAD+ precursors. By inhibiting NNMT, 5-Amino-1MQ helps preserve NAD+ building blocks. Key benefits include:
 
@@ -66,7 +66,7 @@ MOTS-c is a mitochondrial-derived peptide that influences energy metabolism. It'
 - Improving metabolic flexibility during fasting
 - Supporting healthy body composition
 
-### SS-31 (Elamipretide): Mitochondrial Protector
+### <a href="/articles/ss-31-elamipretide-mitochondrial-guide">SS-31</a> (Elamipretide): Mitochondrial Protector
 
 SS-31 protects mitochondria from oxidative damage. It stabilizes mitochondrial membranes and improves energy production efficiency. This peptide is particularly valuable for:
 
@@ -202,8 +202,8 @@ Certain genetic variations in NAD+ pathway genes (like NAMPT) may indicate who r
 
 For broader benefits, consider combining NAD+ peptides with these complementary approaches:
 
-- **Epithalon:** Supports telomere maintenance through peptide signaling
-- **Thymosin Beta-4:** Aids tissue repair by modulating cellular responses
+- **<a href="/articles/epithalon-anti-aging-guide">Epithalon</a>:** Supports telomere maintenance through peptide signaling
+- **<a href="/articles/thymosin-beta-4-complete-guide">Thymosin Beta-4</a>:** Aids tissue repair by modulating cellular responses
 - **Hyperbaric oxygen:** Enhances mitochondrial function via oxygen saturation
 - **Red light therapy:** May boost cellular energy production through photon absorption
 
@@ -214,5 +214,5 @@ These combinations should be guided by a knowledgeable healthcare provider. They
 **Related reading:**
 - [SS-31 Elamipretide Guide](/articles/ss-31-elamipretide-mitochondrial-guide)
 - [MOTS-c Mitochondrial Peptide](/articles/mots-c-mitochondrial-peptide)
-- [Peptide Bloodwork Guide](/articles/peptide-bloodwork-guide)
+- [<a href="/articles/peptide-bloodwork-guide">Peptide Bloodwork Guide</a>](/articles/peptide-bloodwork-guide)
 - [Longevity Stack Guide](/articles/longevity-stack-epithalon-nmn-thymosin)

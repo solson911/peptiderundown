@@ -15,7 +15,7 @@ Viagra and Cialis work on blood flow. PT-141 works on your brain.
 
 That distinction matters more than you might think. Most sexual dysfunction treatments target plumbing. PT-141 targets desire itself, activating melanocortin receptors in the central nervous system to increase arousal at its source.
 
-It's also one of the few peptides with actual FDA approval behind it.
+It's also one of the few <a href="/articles/what-are-peptides-beginners-guide">peptides</a> with actual FDA approval behind it.
 
 > **Key Takeaways**
 >
@@ -28,7 +28,7 @@ It's also one of the few peptides with actual FDA approval behind it.
 
 ## What Is PT-141?
 
-PT-141, known by its generic name **bremelanotide**, is a synthetic cyclic heptapeptide derived from **Melanotan II**. It was developed by Palatin Technologies and is marketed under the brand name **Vyleesi**.
+PT-141, known by its generic name **bremelanotide**, is a synthetic cyclic heptapeptide derived from **<a href="/articles/melanotan-2-guide">Melanotan II</a>**. It was developed by Palatin Technologies and is marketed under the brand name **Vyleesi**.
 
 | Feature | Detail |
 |---------|--------|
@@ -97,6 +97,8 @@ On **June 21, 2019**, the FDA approved bremelanotide (Vyleesi) for the treatment
 | **Delivery** | Single-dose autoinjector (1.75 mg) |
 | **Dosing** | As needed, at least 45 min before activity |
 | **Max frequency** | Once per 24 hours, max 8 doses per month |
+| **Onset** | 45 minutes to 2 hours |
+| **Duration of effect** | Up to 12 hours (varies by individual) |
 
 The approval was based on two pivotal Phase 3 trials: **RECONNECT-1** and **RECONNECT-2**.
 
@@ -146,7 +148,7 @@ A Phase 2 trial in men with ED who had **failed to respond to sildenafil** showe
 
 > **Key Finding:** In men who failed Viagra, PT-141 still produced measurable improvements in erectile function, supporting its unique central mechanism of action.
 
-A separate study by Rosen et al. evaluated subcutaneous bremelanotide in men with ED and found dose-dependent increases in erectile function, including in men with diabetes-related ED.
+A separate study by Rosen et al. evaluated <a href="/articles/what-are-peptides-beginners-guide">subcutaneous</a> bremelanotide in men with ED and found dose-dependent increases in erectile function, including in men with diabetes-related ED.
 
 ([Rosen et al., 2004](https://pubmed.ncbi.nlm.nih.gov/15474588/))
 
@@ -154,7 +156,7 @@ A separate study by Rosen et al. evaluated subcutaneous bremelanotide in men wit
 
 PT-141 may be particularly useful for **psychogenic ED**, where the problem originates in the brain rather than the vasculature.
 
-Since PT-141 works centrally, it addresses the psychological and motivational components that PDE5 inhibitors cannot. No large-scale trials have been completed for this specific indication, but the mechanism strongly supports its potential.
+Since <a href="/articles/what-are-peptides-beginners-guide">PT-141</a> works centrally, it addresses the psychological and motivational components that PDE5 inhibitors cannot. No large-scale trials have been completed for this specific indication, but the mechanism strongly supports its potential.
 
 ## Dosing
 
@@ -183,15 +185,15 @@ Dosing in male studies has varied. The following reflects protocols from clinica
 | **Route** | Subcutaneous injection |
 | **Timing** | 30 to 60 minutes before activity |
 
-> **Important:** Higher doses do not necessarily produce better results but do increase the likelihood of nausea and blood pressure elevation. More is not better with this peptide.
+> **Important:** Higher doses do not necessarily produce better results but do increase the likelihood of nausea and blood pressure elevation. More is not better with this <a href="/articles/peptide-stacking-guide">peptide</a>.
 
 ### Reconstitution
 
-If using lyophilized powder (research setting), follow standard peptide reconstitution with bacteriostatic water. See our [reconstitution guide](/articles/how-to-reconstitute-peptides) for step-by-step instructions.
+If using lyophilized powder (research setting), follow standard peptide reconstitution with bacteriostatic water. See our [reconstitution guide](<a href="/articles/how-to-reconstitute-peptides">/articles/how-to-reconstitute-peptides</a>) for step-by-step instructions.
 
 ## Side Effects
 
-The side effect profile is well-characterized from the RECONNECT trials and other clinical studies. Nausea is by far the most common complaint.
+The <a href="/articles/peptide-side-effects-what-to-know">side effect</a> profile is well-characterized from the RECONNECT trials and other clinical studies. Nausea is by far the most common complaint.
 
 ### Common
 
@@ -216,7 +218,7 @@ The side effect profile is well-characterized from the RECONNECT trials and othe
 - **Severe nausea or vomiting** that doesn't resolve within a few hours
 - **Darkening of skin or gums** indicating melanocyte stimulation; discuss with your provider
 
-> **Important:** PT-141 is contraindicated in patients with **uncontrolled hypertension** or **cardiovascular disease** due to its transient blood pressure effects. It should not be used alongside flibanserin (Addyi).
+> **Important:** PT-141 is contraindicated in patients with <a href="/articles/peptide-side-effects-what-to-know">uncontrolled hypertension</a> or **cardiovascular disease** due to its transient blood pressure effects. It should not be used alongside flibanserin (Addyi).
 
 ## PT-141 vs. Viagra vs. Cialis
 
@@ -283,7 +285,7 @@ Based on clinical data and the mechanism of action:
 
 | Region | Status |
 |--------|--------|
-| **United States** | FDA-approved as Vyleesi (prescription only); also available as research peptide |
+| **United States** | FDA-approved as Vyleesi (prescription only); also available as research <a href="/articles/what-are-peptides-beginners-guide">peptide</a> |
 | **European Union** | Not approved; available through research chemical suppliers |
 | **Australia** | Not TGA-approved; available through compounding pharmacies in some cases |
 | **Canada** | Not approved by Health Canada |
@@ -308,7 +310,7 @@ Effects typically persist for **6 to 12 hours**, though this varies. The peak ef
 
 Yes, though it's not FDA-approved for men. Clinical trials have shown it produces measurable improvements in erectile function, particularly in men who didn't respond to Viagra. Many men's health clinics prescribe it off-label.
 
-### Is PT-141 the same as Melanotan II?
+### Is PT-141 the same as <a href="/articles/melanotan-2-guide">Melanotan II</a>?
 
 No. PT-141 is a **metabolite derivative** of Melanotan II, but with key differences:
 
@@ -338,7 +340,7 @@ The FDA label recommends limiting use to **8 doses per month** partly due to the
 
 ### Why is PT-141 an injection and not a pill?
 
-PT-141 is a peptide, and peptides are generally broken down by digestive enzymes before they can be absorbed. Subcutaneous injection bypasses the GI tract and delivers the drug directly into the bloodstream. An intranasal formulation was studied earlier in development but was abandoned due to blood pressure concerns at the nasal doses required.
+PT-141 is a peptide, and peptides are generally broken down by digestive enzymes before they can be absorbed. <a href="/articles/how-to-inject-peptides-subcutaneously">Subcutaneous injection</a> bypasses the GI tract and delivers the drug directly into the bloodstream. An intranasal formulation was studied earlier in development but was abandoned due to blood pressure concerns at the nasal doses required.
 
 ## The Bottom Line
 
@@ -352,7 +354,7 @@ But for the right patient, PT-141 fills a gap that no other drug currently addre
 
 **Related reading:**
 - [What Are Peptides? Beginner's Guide](/articles/what-are-peptides-beginners-guide)
-- [Peptide Side Effects: What to Know](/articles/peptide-side-effects-what-to-know)
+- [<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a>](/articles/peptide-side-effects-what-to-know)
 - [Are Peptides Legal? FDA Regulations in 2026](/articles/are-peptides-legal-fda-regulations-2026)
 
 For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

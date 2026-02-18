@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 # Retatrutide vs Tirzepatide: A Detailed Comparison
 
-Obesity treatments have evolved significantly with GLP-1 based peptides. Two advanced options now stand out: **tirzepatide** (brand names Mounjaro and Zepbound) and **retatrutide** (still in development). Both show impressive results, but they work differently.
+<a href="/articles/best-peptides-for-fat-loss">Obesity treatments</a> have evolved significantly with GLP-1 based peptides. Two advanced options now stand out: **tirzepatide** (brand names Mounjaro and Zepbound) and **retatrutide** (still in development). Both show impressive results, but they work differently.
 
 > **Understanding the differences matters** because these aren't interchangeable medications. Your healthcare provider will consider your specific health profile when recommending one over the other.
 
@@ -27,7 +27,7 @@ Tirzepatide works through two main pathways:
 - **GLP-1 receptor activation** - reduces appetite and slows food movement
 - **GIP receptor activation** - enhances metabolic effects, improves insulin sensitivity
 
-This dual action gives it an advantage over single-action peptides like semaglutide.
+This dual action gives it an advantage over single-action peptides like <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a>.
 
 > **Why two receptors?** Combining GLP-1 and GIP creates a synergistic effect. The GIP component helps reduce side effects while improving metabolic benefits beyond weight loss alone. It's not just about eating less - it's about better metabolic function.
 
@@ -97,7 +97,7 @@ Both medications share similar side effect profiles. Most are gastrointestinal a
 
 | Side Effect | Tirzepatide | Retatrutide |
 |-------------|-------------|-------------|
-| Nausea | Common | Common |
+| <a href="/articles/peptide-side-effects-what-to-know">Nausea</a> | Common | Common |
 | Diarrhea | Common | Common |
 | Vomiting | Occasional | Occasional |
 | Constipation | Occasional | Occasional |
@@ -110,7 +110,7 @@ Both medications share similar side effect profiles. Most are gastrointestinal a
 Neither medication is right for everyone. Important precautions include:
 
 - **Not recommended** for those with personal/family history of medullary thyroid cancer
-- **Caution needed** for people with pancreatitis history
+- **Caution needed** for people with <a href="/articles/peptide-side-effects-what-to-know">pancreatitis history</a>
 - **Avoid during pregnancy** - weight loss isn't recommended during pregnancy
 - **Gallbladder issues** may occur more frequently
 
@@ -162,7 +162,7 @@ Dosing schedules may change once retatrutide completes phase 3 trials and receiv
 ### Tirzepatide Could Be Right For You If:
 
 - You need treatment now (it's already available)
-- You have type 2 diabetes (it's approved for this too)
+- You have <a href="/articles/semaglutide-weight-loss-guide">type 2 diabetes</a> (it's approved for this too)
 - You prefer something with established real-world safety data
 - Your insurance covers it
 

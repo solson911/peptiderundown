@@ -19,7 +19,7 @@ Fasting triggers several key biological processes that peptides can enhance. Dur
 
 ### Why Fasting Enhances Peptide Effects
 
-Three primary mechanisms make fasting an ideal partner for peptide therapy:
+Three primary mechanisms make fasting an ideal partner for <a href="/articles/what-are-peptides-beginners-guide">peptide</a> therapy:
 
 - **Autophagy activation** - Fasting triggers cellular "spring cleaning" where damaged components are recycled. Peptides like MOTS-c can boost this process.
 - **Growth hormone surge** - Fasting increases GH production by up to 5 times. Peptides like Tesamorelin further amplify this effect.
@@ -34,7 +34,7 @@ A 2024 study found participants combining fasting with peptides had 37% greater 
 These peptides work best during fasting windows:
 
 - **Growth hormone secretagogues** (Tesamorelin, Ipamorelin) - Maximize natural GH pulses during fasting
-- **Metabolic peptides** (AOD-9604) - Enhance fat burning without affecting blood sugar
+- **Metabolic peptides** (AOD-9604) - Enhance <a href="/articles/best-peptides-for-fat-loss">fat burning</a>
 - **Autophagy boosters** (MOTS-c, Rapamycin peptides) - Work with fasting-induced cellular cleanup
 
 > Take these upon waking or during your fasting window. Wait at least 30 minutes before consuming calories.

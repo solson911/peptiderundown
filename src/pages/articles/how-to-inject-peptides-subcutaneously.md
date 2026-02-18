@@ -11,7 +11,7 @@ author: "PeptideRundown Team"
 
 Your first self-injection can feel intimidating. There's no way around that.
 
-But subcutaneous (subQ) injections are one of the simplest medical procedures you can learn, and millions of people do them at home every single day for things like insulin, blood thinners, and peptides.
+But subcutaneous (subQ) <a href="/articles/what-are-peptides-beginners-guide">injections</a> are one of the simplest medical procedures you can learn, and millions of people do them at home every single day for things like insulin, blood thinners, and peptides.
 
 > **Reassurance:** After 2-3 injections, most people say it becomes completely routine.
 
@@ -33,8 +33,8 @@ Most peptides are administered subcutaneously because the absorption rate from f
 |---|---|
 | **Insulin syringes (29-31 gauge, 0.5 or 1 mL)** | Standard for subQ peptide injections |
 | **Alcohol swabs (70% isopropyl)** | Cleaning injection site and vial stopper |
-| **Reconstituted peptide vial** | Your prepared peptide ([storage guide](/articles/how-to-store-peptides)) |
-| **Bacteriostatic water** | For reconstitution if needed (0.9% benzyl alcohol preservative) |
+> - **Reconstituted peptide vial** | Your prepared peptide (<a href="/articles/how-to-store-peptides">storage guide</a>) |
+> - **Bacteriostatic water** | For <a href="/articles/how-to-reconstitute-peptides">reconstitution if needed</a> (0.9% benzyl alcohol preservative) |
 | **Sharps container** | Safe needle disposal |
 | **Clean, flat surface** | For laying out supplies |
 
@@ -210,7 +210,7 @@ For subcutaneous injections, no. The CDC and WHO both recommend against aspirati
 
 ### Can I use the same injection site every day?
 
-You can, but you shouldn't. Repeated trauma leads to tissue changes over time. Rotate consistently.
+You can, but you shouldn't. Repeated trauma leads to tissue changes over time. <a href="/articles/peptide-cycling-guide">Rotate consistently</a>.
 
 ### What gauge needle is best?
 
