@@ -1,0 +1,474 @@
+---\nimport Base from '../../layouts/Base.astro';\n\nconst frontmatter = {\n  title: "",\n  description: "An evidence-based guide to the best peptides for muscle growth, detailing their mechanisms, efficacy, side effects, and legal status.",\n  image: "/images/articles/best-peptides-for-muscle-growth.webp",\n  date: "2026-02-18",\n  category: "Peptide Guides",\n  author: "PeptideRundown Team"\n};\nconst formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });\n\nconst rawCSS = `\n:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--slate:#4A6274;--slate-lt:#EBF0F4;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--body);line-height:1.78;font-size:16.5px;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+
+/* Callout boxes */
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.d-sl{border-left-color:var(--slate);background:var(--slate-lt);}.d-sl .s{color:var(--slate);}.d-sl p{color:#2A3E4E;}
+
+/* Stat row */
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--amber);}.sb .v.c4{color:var(--plum);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+
+/* Tables */
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .win{color:var(--teal);font-weight:600;}
+.tbl .caut{color:var(--amber);font-weight:500;}
+.tbl .warn{color:var(--red);font-weight:500;}
+
+/* Cards */
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}.cd.cp::before{background:var(--plum);}.cd.cs::before{background:var(--slate);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.cs .tg{background:var(--slate-lt);color:var(--slate);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+
+/* Lists */
+.bl{list-style:none;padding:0;margin:12px 0;}
+.bl li{padding:5px 0 5px 24px;position:relative;font-size:14.5px;}
+.bl li::before{content:'';position:absolute;left:4px;top:13px;width:8px;height:8px;border-radius:50%;background:var(--blue);opacity:.22;}
+
+/* SVG containers */
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+
+/* Grid layouts */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+
+/* Tier badges */
+.tier{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:8px;}
+.tier-1{background:var(--teal-lt);color:var(--teal);border:1px solid var(--teal);}
+.tier-2{background:var(--blue-lt);color:var(--blue);border:1px solid var(--blue);}
+.tier-3{background:var(--amber-lt);color:var(--amber);border:1px solid var(--amber);}
+.tier-f{background:var(--plum-lt);color:var(--plum);border:1px solid var(--plum);}
+
+/* Stack highlight */
+.stack-box{background:linear-gradient(135deg,var(--blue-lt) 0%,var(--teal-lt) 50%,var(--plum-lt) 100%);border:2px solid var(--bdr);border-radius:14px;padding:30px;margin:32px 0;position:relative;}
+.stack-box::before{content:'RECOMMENDED STACK';position:absolute;top:-10px;left:24px;font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--teal);background:var(--bg);padding:0 10px;}
+
+/* Peptide number badges */
+.pnum{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;font-family:'Lora',serif;font-size:14px;font-weight:700;color:#fff;margin-right:8px;vertical-align:middle;}\n`;\n\nconst rawHTML = `\n<div class="c">
+
+<p style="font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Peptide Research Guide</p>
+
+<h2 style="margin-top:0;font-size:2.2rem;">Best Peptides for Muscle Growth</h2>
+<p style="font-size:1.1rem;color:var(--mut);margin-bottom:36px;">What the clinical evidence actually supports, where the hype outpaces the science, and which peptides target which pathways in the muscle-building cascade.</p>
+
+<p>Peptides have become the most discussed category of performance-enhancing compounds outside of traditional anabolic steroids and SARMs. The appeal is straightforward: instead of flooding the body with exogenous hormones, peptides stimulate the body's own growth hormone (GH) and insulin-like growth factor (IGF-1) production, theoretically offering a more physiological approach to muscle growth with a potentially cleaner side-effect profile.</p>
+
+<p>That is the pitch. The reality is more nuanced. Some of these peptides have genuine clinical trial data in humans. Others are riding on preclinical animal studies and extrapolation from known biological mechanisms. And a critical distinction that most peptide content ignores: <strong>increasing GH and IGF-1 levels is not the same thing as building muscle.</strong> The Nass et al. 2008 trial demonstrated this clearly — MK-677 raised GH and IGF-1 to youthful levels in elderly adults and increased fat-free mass, but produced zero improvement in strength or function. Some of that "lean mass" turned out to be intracellular water, not contractile muscle tissue.</p>
+
+<p>This guide covers the six peptides most commonly used for muscle growth, organized by their mechanism of action and ranked by the quality of their supporting evidence. We are separating what is known from what is assumed, because that distinction matters when you are deciding what to put in your body.</p>
+
+<div class="sr">
+<div class="sb"><div class="v c1">GH/IGF-1</div><div class="l">Primary anabolic axis targeted</div></div>
+<div class="sb"><div class="v c2">2–10×</div><div class="l">GH increase from CJC-1295 (Teichman 2006)</div></div>
+<div class="sb"><div class="v c3">1.1 kg</div><div class="l">FFM gain, MK-677 vs placebo at 12mo</div></div>
+<div class="sb"><div class="v c4">0</div><div class="l">FDA-approved muscle peptides</div></div>
+</div>
+
+<!-- HOW MUSCLE GROWTH WORKS -->
+<h2>How Peptides Target Muscle Growth</h2>
+
+<p>Muscle hypertrophy depends on the balance between protein synthesis and protein degradation. Peptides influence this balance by acting on three primary systems, each operating at a different level of the growth cascade.</p>
+
+<div class="svg-box">
+<div class="st">The Muscle Growth Cascade</div>
+<div class="ss">Three intervention points: upstream GH stimulation, midstream IGF-1 signaling, and downstream myostatin inhibition.</div>
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2956A6" stop-opacity="0.08"/><stop offset="100%" stop-color="#2956A6" stop-opacity="0.02"/></linearGradient>
+<linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#187A62" stop-opacity="0.08"/><stop offset="100%" stop-color="#187A62" stop-opacity="0.02"/></linearGradient>
+<linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6E3B8A" stop-opacity="0.08"/><stop offset="100%" stop-color="#6E3B8A" stop-opacity="0.02"/></linearGradient>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#86869A"/></marker>
+</defs>
+
+<!-- Tier 1: GH Secretagogues -->
+<rect x="10" y="10" width="680" height="115" rx="10" fill="url(#g1)" stroke="#2956A6" stroke-width="1" stroke-opacity="0.25"/>
+<text x="24" y="34" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#2956A6" text-transform="uppercase">TIER 1 — GH SECRETAGOGUES</text>
+<text x="24" y="52" font-family="DM Sans,sans-serif" font-size="11" fill="#3C3C52">Stimulate pituitary to release endogenous growth hormone → liver produces IGF-1</text>
+
+<rect x="30" y="68" width="135" height="44" rx="8" fill="#2956A6" fill-opacity="0.12" stroke="#2956A6" stroke-width="1" stroke-opacity="0.3"/>
+<text x="97" y="86" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#2956A6">CJC-1295</text>
+<text x="97" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">GHRH analog</text>
+
+<rect x="185" y="68" width="135" height="44" rx="8" fill="#2956A6" fill-opacity="0.12" stroke="#2956A6" stroke-width="1" stroke-opacity="0.3"/>
+<text x="252" y="86" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#2956A6">Ipamorelin</text>
+<text x="252" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">Selective GHRP</text>
+
+<rect x="340" y="68" width="135" height="44" rx="8" fill="#2956A6" fill-opacity="0.12" stroke="#2956A6" stroke-width="1" stroke-opacity="0.3"/>
+<text x="407" y="86" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#2956A6">MK-677</text>
+<text x="407" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">Oral ghrelin mimetic</text>
+
+<rect x="495" y="68" width="135" height="44" rx="8" fill="#2956A6" fill-opacity="0.08" stroke="#2956A6" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4"/>
+<text x="562" y="86" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#2956A6">Tesamorelin</text>
+<text x="562" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">FDA-approved GHRH</text>
+
+<!-- Arrow down -->
+<line x1="350" y1="130" x2="350" y2="155" stroke="#86869A" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="370" y="148" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">↑ GH → liver</text>
+
+<!-- Tier 2: IGF-1 Direct -->
+<rect x="10" y="160" width="680" height="105" rx="10" fill="url(#g2)" stroke="#187A62" stroke-width="1" stroke-opacity="0.25"/>
+<text x="24" y="184" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#187A62">TIER 2 — DIRECT IGF-1 SIGNALING</text>
+<text x="24" y="202" font-family="DM Sans,sans-serif" font-size="11" fill="#3C3C52">Bypass GH pathway entirely → direct activation of PI3K/Akt/mTOR for protein synthesis</text>
+
+<rect x="30" y="218" width="155" height="36" rx="8" fill="#187A62" fill-opacity="0.12" stroke="#187A62" stroke-width="1" stroke-opacity="0.3"/>
+<text x="107" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#187A62">IGF-1 LR3</text>
+
+<rect x="205" y="218" width="155" height="36" rx="8" fill="#187A62" fill-opacity="0.08" stroke="#187A62" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4"/>
+<text x="282" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#187A62">MGF (IGF-1Ec)</text>
+
+<!-- Arrow down -->
+<line x1="350" y1="270" x2="350" y2="295" stroke="#86869A" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="370" y="288" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">protein synthesis ↑</text>
+
+<!-- Tier 3: Myostatin Inhibition -->
+<rect x="10" y="300" width="680" height="105" rx="10" fill="url(#g3)" stroke="#6E3B8A" stroke-width="1" stroke-opacity="0.25"/>
+<text x="24" y="324" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="#6E3B8A">TIER 3 — MYOSTATIN INHIBITION</text>
+<text x="24" y="342" font-family="DM Sans,sans-serif" font-size="11" fill="#3C3C52">Remove the brake on muscle growth → block TGF-β signaling that limits hypertrophy</text>
+
+<rect x="30" y="358" width="155" height="36" rx="8" fill="#6E3B8A" fill-opacity="0.12" stroke="#6E3B8A" stroke-width="1" stroke-opacity="0.3"/>
+<text x="107" y="380" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#6E3B8A">Follistatin</text>
+</svg>
+</div>
+
+<p><strong>Tier 1 — GH Secretagogues</strong> work upstream by stimulating the pituitary gland to release more growth hormone. This is the most "physiological" approach because it amplifies the body's existing GH pulsatile pattern rather than introducing an exogenous hormone. The tradeoff: GH must be converted to IGF-1 in the liver to exert most of its anabolic effects, and that conversion step introduces variability.</p>
+
+<p><strong>Tier 2 — Direct IGF-1</strong> peptides bypass the pituitary entirely. IGF-1 LR3 and mechano growth factor (MGF) act directly on muscle tissue through the PI3K/Akt/mTOR pathway, the master regulator of protein synthesis. This is more direct but carries higher risk and is further from physiological.</p>
+
+<p><strong>Tier 3 — Myostatin Inhibition</strong> takes an entirely different approach. Instead of pushing growth signals harder, follistatin removes a natural brake on muscle growth by blocking myostatin, a TGF-β family member that limits muscle mass. In animal models, myostatin knockout produces dramatic doubling of muscle mass. Follistatin overexpression produced even greater increases: 194–327% above controls.</p>
+
+<!-- THE PEPTIDES -->
+<h2>The Six Peptides</h2>
+
+<!-- CJC-1295 -->
+<div class="cd cb">
+<div class="tg">GH secretagogue — GHRH analog</div>
+<span class="pnum" style="background:var(--blue);">1</span>
+<h3 style="display:inline;">CJC-1295</h3>
+</div>
+
+<p>CJC-1295 is a synthetic analog of growth hormone-releasing hormone (GHRH) engineered for dramatically extended duration. Where natural GHRH has a half-life of minutes, CJC-1295 with DAC (Drug Affinity Complex) binds covalently to serum albumin after injection, extending its half-life to approximately 6–8 days. This allows it to maintain sustained GH elevation from a single injection rather than requiring multiple daily doses.</p>
+
+<p>CJC-1295 has the strongest human clinical data of any muscle-growth peptide. In the pivotal 2006 Teichman trial, a randomized, placebo-controlled, double-blind ascending dose study in healthy adults aged 21–61, single subcutaneous injections produced dose-dependent GH increases of 2- to 10-fold lasting 6+ days, and IGF-1 increases of 1.5- to 3-fold lasting 9–11 days. After multiple doses, IGF-1 remained above baseline for up to 28 days. No serious adverse events were reported (Teichman et al., J Clin Endocrinol Metab, 2006).</p>
+
+<p>A follow-up study by Ionescu and Frohman in the same year confirmed that CJC-1295 increased trough and mean GH secretion while preserving the natural pulsatile pattern — GH pulse frequency and magnitude were unchanged, but basal trough GH levels increased 7.5-fold, contributing to a 46% increase in mean GH and 45% increase in IGF-1 levels (Ionescu et al., J Clin Endocrinol Metab, 2006).</p>
+
+<div class="d">
+<div class="s">What the data shows — and what it doesn't</div>
+<p>CJC-1295 reliably raises GH and IGF-1 in human subjects. That is well-established. What is not established is whether these hormonal increases translate to meaningful muscle growth in healthy, trained individuals. The clinical trials measured hormone endpoints, not body composition or strength. The assumption that elevated GH/IGF-1 equals muscle gain does not hold automatically — systematic reviews of GH research show modest muscle-building effects at best in healthy individuals.</p>
+</div>
+
+<p>CJC-1295 comes in two forms: <strong>with DAC</strong> (half-life ~6–8 days, the version used in clinical trials) and <strong>without DAC</strong> (often called Mod GRF 1-29, half-life ~30 minutes). The no-DAC version produces shorter, more discrete GH pulses and is the version most commonly paired with GHRPs like ipamorelin. Typical protocols: CJC-1295 with DAC at 1-2 mg once or twice weekly subcutaneously; Mod GRF 1-29 at 100 mcg 1-3 times daily.</p>
+
+<!-- Ipamorelin -->
+<div class="cd ct">
+<div class="tg">GH secretagogue — Selective GHRP</div>
+<span class="pnum" style="background:var(--teal);">2</span>
+<h3 style="display:inline;">Ipamorelin</h3>
+</div>
+
+<p>Ipamorelin is a pentapeptide growth hormone releasing peptide (GHRP) that acts on the ghrelin receptor (GHS-R1a) to trigger GH release from the pituitary. What sets ipamorelin apart from older GHRPs like GHRP-2 and GHRP-6 is its selectivity. In the landmark Raun et al. 1998 study that introduced it, ipamorelin was described as "the first selective growth hormone secretagogue" because it produced robust GH release without elevating cortisol, ACTH, or prolactin, even at doses 200 times its effective dose (Raun et al., Eur J Endocrinol, 1998).</p>
+
+<p>This selectivity matters practically. GHRP-6 causes significant appetite increases (problematic during cutting phases), and GHRP-2 can elevate cortisol (counterproductive for muscle gain). Ipamorelin avoids both of these issues, making it the cleanest GHRP from a side-effect perspective.</p>
+
+<p>In pharmacokinetic studies, ipamorelin demonstrated a short half-life of approximately 2 hours intravenously, producing a single time-limited GH pulse after each dose. The only significant clinical trial was a Phase 2 study by Beck et al. (2014) in postoperative ileus patients, not a muscle-growth context, where it was well tolerated for up to 7 days but did not meet its primary GI endpoint. There are no human clinical trials examining ipamorelin's effects on body composition or muscle mass.</p>
+
+<p>Typical protocols: 200–300 mcg subcutaneously 1–3 times daily, usually timed to pre-bed and/or post-workout on an empty stomach. Most commonly stacked with CJC-1295 (Mod GRF 1-29) to combine GHRH and GHRP pathways.</p>
+
+<!-- MK-677 -->
+<div class="cd ca">
+<div class="tg">GH secretagogue — Oral ghrelin mimetic</div>
+<span class="pnum" style="background:var(--amber);">3</span>
+<h3 style="display:inline;">MK-677 (Ibutamoren)</h3>
+</div>
+
+<p>MK-677 is not technically a peptide — it is a non-peptide, orally active ghrelin receptor agonist. It is included in every peptide muscle-growth discussion because it targets the same GH axis as the injectable secretagogues, but with the significant practical advantage of being taken as a pill rather than injected.</p>
+
+<p>MK-677 has the most extensive human body composition data of any compound in this guide, thanks to the Nass et al. 2008 trial. This was a 2-year, double-blind, randomized, placebo-controlled trial in 65 healthy older adults (ages 60–81) that produced definitive results — and critical caveats.</p>
+
+<p><strong>What the trial showed:</strong> 25 mg MK-677 daily significantly increased GH 1.8-fold and IGF-1 1.5-fold over 12 months. Fat-free mass increased 1.1 kg in the MK-677 group versus a 0.5 kg decrease in placebo (P < 0.001). Body cell mass, reflected by intracellular water, also increased. These effects were sustained through year two and reversed when the drug was discontinued.</p>
+
+<p><strong>What the trial also showed:</strong> Increased fat-free mass did not translate to improvements in strength or physical function. Average fasting glucose increased by about 0.28 mmol/L (5 mg/dL), and insulin sensitivity worsened. Cortisol levels rose by 47 nmol/L. A separate 2-month study in 24 obese men showed approximately 3 kg of lean mass gained, though intracellular water likely contributed a significant portion of that figure.</p>
+
+<div class="d d-a">
+<div class="s">The water vs. muscle problem</div>
+<p>GH increases intracellular water retention, which registers as "fat-free mass" or "lean mass" on body composition scans. When the Nass trial reported +1.1 kg FFM, a meaningful portion was likely intracellular water rather than new contractile muscle protein. The fact that strength did not improve despite increased lean mass strongly supports this interpretation. This is a systemic issue with GH-based body composition data, not specific to MK-677.</p>
+</div>
+
+<p>MK-677's appetite-stimulating effect (it mimics ghrelin, the "hunger hormone") is significant and cuts both ways. For hardgainers struggling to eat in a surplus, it is a benefit. For anyone trying to control caloric intake, it can be counterproductive and may confound body composition outcomes. Typical protocol: 10–25 mg orally once daily, usually at bedtime to coincide with natural GH release during slow-wave sleep.</p>
+
+<!-- IGF-1 LR3 -->
+<div class="cd cp">
+<div class="tg">Direct IGF-1 signaling</div>
+<span class="pnum" style="background:var(--plum);">4</span>
+<h3 style="display:inline;">IGF-1 LR3</h3>
+</div>
+
+<p>IGF-1 LR3 (Insulin-like Growth Factor-1 Long Arg3) is a modified version of endogenous IGF-1 with two critical structural changes. An additional 13 amino acids extend the N-terminus, and an arginine substitution at position 3 reduces binding to IGF-binding proteins. The result: where native IGF-1 has a half-life of minutes, IGF-1 LR3 remains active for approximately 20–30 hours, with dramatically increased bioavailability.</p>
+
+<p>This peptide is the most directly anabolic compound in this guide. Instead of stimulating GH and hoping it converts to enough IGF-1, IGF-1 LR3 activates the PI3K/Akt/mTOR pathway directly — the master switch for protein synthesis. Research demonstrates that IGF-1 signaling increases skeletal muscle protein synthesis, inhibits protein degradation through suppression of FoxO-mediated ubiquitin ligases, and activates satellite cell proliferation and differentiation (Yoshida & Delafontaine, Cells, 2020).</p>
+
+<p>The most compelling aspect of IGF-1 from a muscle-growth perspective is the <strong>hyperplasia hypothesis</strong>. While most anabolic interventions only produce hypertrophy (making existing muscle fibers bigger), there is evidence from animal studies that IGF-1 can stimulate hyperplasia — the creation of entirely new muscle fibers through satellite cell activation. Barton-Davis et al. showed that mice overexpressing IGF-1 in skeletal muscle had increased muscle mass and strength, and that approximately half of this effect was prevented when satellite cell proliferation was blocked.</p>
+
+<div class="d d-r">
+<div class="s">High potency, high risk</div>
+<p>IGF-1 LR3 is dosed in micrograms, not milligrams. Typical protocols use 20–80 mcg per day. The compound carries real risks: hypoglycemia (IGF-1 is structurally similar to insulin and affects glucose uptake), suppression of endogenous GH production, and the theoretical but concerning link between elevated IGF-1 and cancer cell proliferation. Elevated IGF-1 levels have been epidemiologically associated with prostate, colorectal, and lung cancers. No human muscle-growth clinical trials exist for IGF-1 LR3. All applications are extrapolated from endogenous IGF-1 biology and animal research.</p>
+</div>
+
+<!-- MGF -->
+<div class="cd cs">
+<div class="tg">Direct IGF-1 signaling — Local splice variant</div>
+<span class="pnum" style="background:var(--slate);">5</span>
+<h3 style="display:inline;">MGF (Mechano Growth Factor)</h3>
+</div>
+
+<p>Mechano Growth Factor (MGF) is a splice variant of IGF-1 (specifically IGF-1Ec in humans) that is produced locally in muscle tissue in response to mechanical overload — that is, resistance training. Unlike systemic IGF-1 that circulates from the liver, MGF is a local, autocrine/paracrine factor released directly at the site of muscle damage.</p>
+
+<p>MGF's primary role is satellite cell activation. Goldspink (2002) described it as a key mediator in the initial muscle repair response: when muscle fibers are mechanically stressed or damaged, MGF is rapidly upregulated and acts as a signal to activate dormant satellite cells, initiating the proliferation phase of muscle repair and growth. This makes MGF mechanistically distinct from systemic IGF-1 — it acts at the very beginning of the repair cascade rather than driving the sustained anabolic response.</p>
+
+<p>However, synthetic MGF has a very short half-life, on the order of minutes. PEGylated versions (PEG-MGF) extend this but introduce additional unknowns. All MGF research relevant to muscle growth comes from basic biology studies, not clinical applications. Typical protocols: 200–400 mcg injected intramuscularly into the target muscle post-workout, used in short 4–10 day bursts. This peptide sits firmly in the experimental category with minimal supporting data for human use.</p>
+
+<!-- Follistatin -->
+<div class="cd cp">
+<div class="tg">Myostatin inhibition</div>
+<span class="pnum" style="background:var(--plum);">6</span>
+<h3 style="display:inline;">Follistatin</h3>
+</div>
+
+<p>Follistatin takes an entirely different approach to muscle growth. Instead of pushing anabolic signals harder, it removes a natural brake. Myostatin (GDF-8) is a TGF-β family member that actively limits muscle growth. It is why your muscles do not grow indefinitely — myostatin serves as a negative feedback regulator, constraining hypertrophy. Follistatin is a naturally occurring protein that binds to and inhibits myostatin (and other TGF-β family members like activin A), effectively lifting that constraint.</p>
+
+<p>The preclinical data is dramatic. Myostatin knockout mice have approximately double the muscle mass of wild-type animals. But follistatin overexpression produced even greater effects: transgenic mice expressing high follistatin levels showed muscle mass increases of 194–327% above controls, significantly exceeding myostatin knockout alone (Lee et al., PLoS ONE, 2007). When myostatin-knockout mice were crossed with follistatin-overexpressing mice, the result was a quadrupling of muscle mass, confirming that follistatin acts through pathways beyond myostatin inhibition alone (Lee et al., Mol Endocrinol, 2010).</p>
+
+<p>Critical translational step: follistatin gene therapy delivered via AAV1 (adeno-associated virus) to cynomolgus macaque monkeys produced pronounced, durable increases in muscle size and strength with no abnormal changes in organ morphology or function (Kota et al., Sci Transl Med, 2009). This primate data is significant because it demonstrates the effect translates beyond rodents.</p>
+
+<p>Follistatin has even entered human clinical trials, but in the context of Becker muscular dystrophy (BMD), not healthy muscle growth. AAV1-FS344 gene therapy improved ambulation in BMD patients (Mendell et al., Mol Ther, 2015), providing the first human proof-of-concept that follistatin gene delivery can meaningfully affect muscle function.</p>
+
+<div class="d d-p">
+<div class="s">The gap between gene therapy and injectable peptide</div>
+<p>The impressive follistatin data comes from gene therapy delivering sustained follistatin expression directly to muscle tissue via viral vectors, not from injectable synthetic follistatin peptides. Exogenous follistatin peptide injections face challenges including short half-life, difficulty reaching effective concentrations in muscle, and potential off-target effects on the hypothalamic-pituitary-gonadal axis (follistatin can suppress FSH, affecting reproductive function). The injectable follistatin products available through research chemical suppliers are not comparable to gene therapy delivery.</p>
+</div>
+
+<!-- COMPARISON TABLE -->
+<h2>Head-to-Head Comparison</h2>
+
+<table class="tbl">
+<thead><tr><th>Property</th><th>CJC-1295</th><th>Ipamorelin</th><th>MK-677</th><th>IGF-1 LR3</th><th>Follistatin</th></tr></thead>
+<tbody>
+<tr><td><strong>Mechanism</strong></td><td>GHRH analog → GH release</td><td>Ghrelin receptor → GH pulse</td><td>Oral ghrelin mimetic → sustained GH</td><td>Direct IGF-1R agonism → mTOR</td><td>Myostatin/activin inhibition</td></tr>
+<tr><td><strong>Route</strong></td><td>SubQ injection</td><td>SubQ injection</td><td class="win">Oral</td><td>SubQ or IM injection</td><td>SubQ injection</td></tr>
+<tr><td><strong>Frequency</strong></td><td>1-2×/week (DAC) or 1-3×/day (no DAC)</td><td>1-3× daily</td><td class="win">Once daily</td><td>Once daily</td><td>Daily (short burst cycles)</td></tr>
+<tr><td><strong>Human RCT data</strong></td><td class="win">Yes (Teichman 2006)</td><td>Phase 2 (GI, not muscle)</td><td class="win">Yes (Nass 2008)</td><td>No (muscle context)</td><td>Gene therapy only (BMD)</td></tr>
+<tr><td><strong>Proven GH/IGF-1 increase</strong></td><td class="win">2-10× GH, 1.5-3× IGF-1</td><td>Demonstrated (short pulses)</td><td class="win">1.8× GH, 1.5× IGF-1</td><td>Bypasses GH axis</td><td>Independent of GH axis</td></tr>
+<tr><td><strong>Proven muscle gain</strong></td><td class="caut">Not directly tested</td><td class="caut">No human data</td><td class="caut">FFM ↑ but strength unchanged</td><td class="caut">No human data</td><td class="caut">Gene therapy context only</td></tr>
+<tr><td><strong>Key side effects</strong></td><td>Injection site reaction, water retention</td><td>Headache, flushing</td><td>Appetite ↑↑, insulin resistance, edema</td><td class="warn">Hypoglycemia, GH suppression, cancer concern</td><td>Potential FSH suppression</td></tr>
+<tr><td><strong>WADA status</strong></td><td class="warn">Prohibited</td><td class="warn">Prohibited</td><td class="warn">Prohibited</td><td class="warn">Prohibited</td><td>Not listed</td></tr>
+<tr><td><strong>FDA approved</strong></td><td>No</td><td>No</td><td>No (IND for PGHD)</td><td>No (mecasermin for IGF-1 deficiency)</td><td>No</td></tr>
+<tr><td><strong>~Monthly cost</strong></td><td>$40-80</td><td>$30-60</td><td>$40-80</td><td>$80-150</td><td>$100-200+</td></tr>
+</tbody>
+</table>
+
+<!-- EVIDENCE RANKING -->
+<h2>Evidence Hierarchy</h2>
+
+<p>Not all peptides are supported by the same quality of evidence. Here is an honest ranking based on the current state of the science as it relates to muscle growth specifically.</p>
+
+<div class="cd cb" style="margin-top:24px;">
+<span class="tier tier-1">Tier 1 — Human RCT data exists</span>
+<h3>CJC-1295 + MK-677</h3>
+<p style="font-size:14px;">Both have human randomized controlled trials demonstrating they reliably increase GH and IGF-1. MK-677 additionally has body composition data (increased FFM in elderly). However, neither has demonstrated increased muscle strength or functional outcomes from hormonal elevation. The critical gap: GH/IGF-1 ↑ ≠ muscle ↑ is well documented in systematic reviews of GH research.</p>
+</div>
+
+<div class="cd ct">
+<span class="tier tier-2">Tier 2 — Strong mechanistic basis, limited human data</span>
+<h3>Ipamorelin + IGF-1 LR3</h3>
+<p style="font-size:14px;">Ipamorelin has pharmacokinetic human data and one Phase 2 trial (wrong indication). IGF-1 LR3 has the strongest mechanistic case for direct muscle growth through the PI3K/Akt/mTOR pathway and satellite cell activation, supported by extensive animal and in vitro research, but no human muscle-growth trials. The endogenous IGF-1 biology is well-characterized; the exogenous LR3 application is extrapolated.</p>
+</div>
+
+<div class="cd cp">
+<span class="tier tier-3">Tier 3 — Dramatic preclinical, very early clinical</span>
+<h3>Follistatin + MGF</h3>
+<p style="font-size:14px;">Follistatin has the most dramatic preclinical muscle data (194-327% increases in mice, primate efficacy) and has entered human gene therapy trials for muscular dystrophy. But injectable follistatin peptides are not the same as gene therapy. MGF has compelling mechanistic biology as a local satellite cell activator but minimal applied research data. Both sit at the frontier of experimental.</p>
+</div>
+
+<div class="svg-box">
+<div class="st">Evidence Quality vs. Anabolic Potency</div>
+<div class="ss">Position reflects both strength of clinical evidence (x-axis) and theoretical anabolic potential (y-axis).</div>
+<svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
+<!-- Axes -->
+<line x1="80" y1="280" x2="650" y2="280" stroke="#D9D6CE" stroke-width="1.5"/>
+<line x1="80" y1="280" x2="80" y2="30" stroke="#D9D6CE" stroke-width="1.5"/>
+<text x="365" y="320" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#86869A">STRENGTH OF HUMAN EVIDENCE →</text>
+<text x="28" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" font-weight="600" fill="#86869A" transform="rotate(-90,28,155)">ANABOLIC POTENTIAL →</text>
+
+<!-- Grid lines -->
+<line x1="80" y1="180" x2="650" y2="180" stroke="#EDECE8" stroke-width="1"/>
+<line x1="80" y1="80" x2="650" y2="80" stroke="#EDECE8" stroke-width="1"/>
+<line x1="270" y1="280" x2="270" y2="30" stroke="#EDECE8" stroke-width="1"/>
+<line x1="460" y1="280" x2="460" y2="30" stroke="#EDECE8" stroke-width="1"/>
+
+<!-- Quadrant labels -->
+<text x="175" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#D9D6CE">High potential / Low evidence</text>
+<text x="555" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#D9D6CE">High potential / High evidence</text>
+
+<!-- Peptide dots -->
+<circle cx="540" cy="180" r="22" fill="#2956A6" opacity="0.15" stroke="#2956A6" stroke-width="2"/>
+<text x="540" y="184" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#2956A6">CJC-1295</text>
+
+<circle cx="490" cy="155" r="22" fill="#B48118" opacity="0.15" stroke="#B48118" stroke-width="2"/>
+<text x="490" y="159" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#B48118">MK-677</text>
+
+<circle cx="310" cy="175" r="22" fill="#187A62" opacity="0.15" stroke="#187A62" stroke-width="2"/>
+<text x="310" y="179" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#187A62">Ipamorelin</text>
+
+<circle cx="180" cy="80" r="22" fill="#6E3B8A" opacity="0.15" stroke="#6E3B8A" stroke-width="2"/>
+<text x="180" y="84" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#6E3B8A">IGF-1 LR3</text>
+
+<circle cx="150" cy="55" r="22" fill="#6E3B8A" opacity="0.15" stroke="#6E3B8A" stroke-width="2"/>
+<text x="150" y="52" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="600" fill="#6E3B8A">Follistatin</text>
+<text x="150" y="64" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#86869A">(gene therapy)</text>
+
+<circle cx="140" cy="160" r="18" fill="#4A6274" opacity="0.15" stroke="#4A6274" stroke-width="2"/>
+<text x="140" y="164" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#4A6274">MGF</text>
+</svg>
+</div>
+
+<!-- STACKING -->
+<h2>The Best Approach: CJC-1295 + Ipamorelin Stack</h2>
+
+<div class="stack-box">
+<p style="font-size:1.05rem;color:var(--ink);font-weight:500;margin-bottom:16px;">The CJC-1295 + ipamorelin combination is the most widely used and most pharmacologically rational peptide stack for muscle growth. The logic follows directly from the GH axis biology: GHRH and GHRP work through complementary, synergistic pathways.</p>
+
+<p style="margin-bottom:14px;"><strong>CJC-1295 (Mod GRF 1-29)</strong> acts as a GHRH analog, stimulating the pituitary through the GHRH receptor → cAMP pathway to increase GH synthesis and release. Think of it as pressing the gas pedal on GH production.</p>
+
+<p style="margin-bottom:14px;"><strong>Ipamorelin</strong> acts as a GHRP, stimulating through the ghrelin receptor → Gq/11 pathway to trigger GH exocytosis from stored granules. Think of it as opening the floodgates to release already-manufactured GH.</p>
+
+<p style="margin-bottom:0;"><strong>Synergy:</strong> The combination of GHRH + GHRP produces GH releases 3–5× greater than either compound alone. This has been documented since Thorner and Bowers first described GHRH/GHRP synergy in 1990. Three mechanisms drive it: intracellular signal amplification (PKC from GHRP amplifies cAMP from GHRH), somatostatin suppression (GHRP reduces the brake on GHRH response), and complementary roles (GHRH drives synthesis while GHRP drives release).</p>
+</div>
+
+<h3>Stack Protocol</h3>
+
+<table class="tbl">
+<thead><tr><th>Component</th><th>Dose</th><th>Frequency</th><th>Timing</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>CJC-1295 (Mod GRF 1-29)</strong></td><td>100 mcg</td><td>1-3× daily</td><td>Empty stomach; pre-bed primary</td><td>8-12 weeks</td></tr>
+<tr><td><strong>Ipamorelin</strong></td><td>200-300 mcg</td><td>1-3× daily</td><td>Combined with CJC-1295</td><td>8-12 weeks</td></tr>
+</tbody>
+</table>
+
+<p>The pre-bed dose is typically considered most important because it coincides with the body's natural nocturnal GH surge during slow-wave sleep. Some protocols add a post-workout dose to take advantage of the exercise-induced GH response window. Both peptides should be administered on an empty stomach (fasting 2+ hours from food, especially carbohydrates and fats) because insulin and elevated blood glucose blunt GH release.</p>
+
+<p>Cycling is standard: 8–12 weeks on, followed by an equal period off to prevent receptor desensitization and allow the pituitary to recover normal sensitivity. Monitoring IGF-1 levels, fasting glucose, and HbA1c is recommended during any GH-elevating protocol.</p>
+
+<h3>Adding a Third Component</h3>
+
+<div class="g2">
+<div class="mc">
+<h4 style="color:var(--amber);">+ MK-677 (Convenience)</h4>
+<p style="font-size:14px;margin-bottom:0;">Adding MK-677 at 10-25 mg orally provides continuous baseline GH elevation between the injectable CJC/Ipa doses. This is the most common three-compound protocol. Trade-off: increased appetite, potential insulin sensitivity impact, and the water retention question becomes more pronounced.</p>
+</div>
+<div class="mc">
+<h4 style="color:var(--plum);">+ IGF-1 LR3 (Advanced)</h4>
+<p style="font-size:14px;margin-bottom:0;">Adding IGF-1 LR3 at 20-50 mcg post-workout targets the downstream pathway directly, bypassing the GH-to-IGF-1 conversion step. This is an advanced protocol with significant additional risk (hypoglycemia, GH suppression, cancer concern). Not recommended as a starting point.</p>
+</div>
+</div>
+
+<!-- SIDE EFFECTS -->
+<h2>Side Effects and Safety Concerns</h2>
+
+<p>All GH-elevating peptides share a common safety profile that reflects the known effects of elevated growth hormone and IGF-1 levels. The intensity varies by compound, but the categories are consistent.</p>
+
+<table class="tbl">
+<thead><tr><th>Concern</th><th>GH Secretagogues (CJC/Ipa/MK-677)</th><th>IGF-1 LR3</th><th>Follistatin</th></tr></thead>
+<tbody>
+<tr><td><strong>Water retention/edema</strong></td><td>Common; dose-dependent</td><td>Less (bypasses GH)</td><td>Not reported</td></tr>
+<tr><td><strong>Insulin resistance</strong></td><td>Documented in MK-677 trial (glucose ↑, insulin sensitivity ↓)</td><td class="warn">Hypoglycemia risk (insulin-like effects)</td><td>Not characterized</td></tr>
+<tr><td><strong>Joint stiffness/pain</strong></td><td>Occasional (fluid-related)</td><td>Occasional</td><td>Not reported</td></tr>
+<tr><td><strong>Appetite changes</strong></td><td>MK-677: significant increase. Others: minimal</td><td>Minimal</td><td>Not characterized</td></tr>
+<tr><td><strong>Cancer concern</strong></td><td class="caut">Theoretical (IGF-1 is a growth factor)</td><td class="warn">Higher concern (direct IGF-1R activation; epidemiological associations with prostate, colorectal, lung)</td><td class="caut">Theoretical (promotes cell proliferation)</td></tr>
+<tr><td><strong>Hormonal suppression</strong></td><td>Minimal at standard doses</td><td>Suppresses endogenous GH/IGF-1</td><td>May suppress FSH (reproductive effects)</td></tr>
+<tr><td><strong>Long-term human safety data</strong></td><td>MK-677: 2 years. CJC-1295: 49 days. Ipamorelin: 7 days.</td><td>None</td><td>Gene therapy: limited</td></tr>
+</tbody>
+</table>
+
+<div class="d d-r">
+<div class="s">Who should not use muscle-growth peptides</div>
+<p>Individuals with active cancer or recent history of malignancy (all these compounds promote cell growth). Diabetics or pre-diabetics (GH antagonizes insulin). People with active cardiovascular disease (fluid shifts, blood pressure effects). Pregnant or nursing women. Competitive athletes subject to WADA testing (all listed GH secretagogues and IGF-1 are prohibited at all times). Anyone under 25 whose growth plates have not fully closed (GH/IGF-1 can cause acromegaly-like changes).</p>
+</div>
+
+<!-- REGULATORY STATUS -->
+<h2>Regulatory Status (2026)</h2>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>FDA Status</th><th>Compounding Status</th><th>WADA</th></tr></thead>
+<tbody>
+<tr><td><strong>CJC-1295</strong></td><td>Not approved (clinical trial withdrawn after death in Phase 2)</td><td>Category 2 — review pending</td><td class="warn">Prohibited (S2)</td></tr>
+<tr><td><strong>Ipamorelin</strong></td><td>Not approved</td><td>Removed from Category 2 (Sep 2024); PCAC recommended against 503A inclusion</td><td class="warn">Prohibited (S2)</td></tr>
+<tr><td><strong>MK-677</strong></td><td>Investigational (LUM-201 for pediatric GHD)</td><td>Not a compounding candidate (patented)</td><td class="warn">Prohibited (S2)</td></tr>
+<tr><td><strong>IGF-1 LR3</strong></td><td>Not approved (mecasermin approved for severe IGF-1 deficiency)</td><td>Not available through compounding</td><td class="warn">Prohibited (S2)</td></tr>
+<tr><td><strong>Follistatin</strong></td><td>Not approved (gene therapy IND for muscular dystrophy)</td><td>Not available through compounding</td><td>Not specifically listed</td></tr>
+</tbody>
+</table>
+
+<p>A critical regulatory note on CJC-1295: the DAC version's clinical development was halted after a death occurred in a Phase 2 volunteer, a fact that rarely appears in peptide community discussions. All of these compounds are currently available only as "research chemicals" from unregulated suppliers, with all the quality control, purity, and sterility concerns that implies. A 2025 systematic review noted that 12 to 58 percent of ergo-nutritional supplements are contaminated with other substances, and research-grade peptides face the same risk profile.</p>
+
+<!-- THE UNCOMFORTABLE TRUTH -->
+<h2>The Uncomfortable Truth About Peptides and Muscle Growth</h2>
+
+<p>Here is what most peptide content will not tell you: <strong>the evidence that any of these peptides produces meaningful muscle growth in healthy, trained individuals is weak to nonexistent.</strong></p>
+
+<p>The strongest human data (CJC-1295, MK-677) demonstrates that GH secretagogues reliably elevate GH and IGF-1. That is well-established. But systematic reviews of GH research consistently show that even when GH is elevated significantly, the muscle-building effects in healthy adults are modest at best. The Nass MK-677 trial put a fine point on this: 12 months of elevated GH/IGF-1 increased fat-free mass but did not produce any strength improvement, and a meaningful portion of that FFM gain was likely water.</p>
+
+<p>The compounds with the strongest theoretical case for direct muscle growth — IGF-1 LR3 and follistatin — have no human muscle-growth trials. Their application to bodybuilding is extrapolated from basic biology and animal studies. That extrapolation might be correct, but it is not proven.</p>
+
+<p>None of this means peptides are useless. GH secretagogues consistently improve sleep quality (particularly slow-wave deep sleep), recovery speed, connective tissue health, and body composition through both lean mass support and fat metabolism improvement. These are real, meaningful benefits for athletes and aging adults. But the narrative that peptides are a safe, effective shortcut to significantly increased muscle mass does not hold up to scrutiny of the actual data.</p>
+
+<div class="d d-t">
+<div class="s">What is proven to build muscle</div>
+<p>Progressive resistance training (3–5 days/week, 10–20 hard sets per muscle weekly). Adequate protein (1.6–2.2 g/kg/day across 3–5 meals). Quality sleep (7–9 hours on a consistent schedule). Creatine monohydrate (3–5 g daily — legal, inexpensive, and supported by hundreds of studies). These fundamentals are not exciting, but they are overwhelmingly supported by evidence. Peptides should be viewed as potential optimizers layered on top of a strong foundation, not replacements for it.</p>
+</div>
+
+<!-- BOTTOM LINE -->
+<h2>The Bottom Line</h2>
+
+<p>If you are considering peptides for muscle growth, here is the honest assessment. <strong>CJC-1295 + ipamorelin</strong> is the most pharmacologically rational starting point: proven GH/IGF-1 elevation, synergistic GHRH/GHRP combination, clean side-effect profile (particularly ipamorelin's selectivity), and the most clinical data supporting the hormonal effects. Expect improved sleep, recovery, and body composition support rather than dramatic muscle gain.</p>
+
+<p><strong>MK-677</strong> offers the convenience of oral administration and the most extensive body composition data, but comes with significant appetite stimulation, documented insulin sensitivity impairment, and the water-versus-muscle confound in its lean mass data.</p>
+
+<p><strong>IGF-1 LR3</strong> has the strongest direct-anabolic mechanism but the highest risk profile and no human data for its intended use. <strong>Follistatin</strong> represents the most exciting scientific frontier (myostatin inhibition is biologically the most powerful lever for muscle growth) but the furthest from practical application as an injectable peptide.</p>
+
+<p>No peptide in this guide is FDA-approved for muscle growth. None has demonstrated clinically meaningful strength gains in controlled human trials. All are prohibited by WADA. All are available only through unregulated sources with uncertain quality control. Build the foundation first — training, nutrition, sleep, creatine — and treat peptides as what they currently are: experimental tools with promising mechanisms but incomplete evidence.</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:40px;padding-top:20px;border-top:1px solid var(--bdr);">
+<strong>Sources:</strong> Teichman SL et al., J Clin Endocrinol Metab 2006;91(3):799-805; Ionescu M & Frohman LA, J Clin Endocrinol Metab 2006;91(12):4792-7; Raun K et al., Eur J Endocrinol 1998;139(5):552-61; Beck DE et al., Dis Colon Rectum 2014;57(2):197-204; Nass R et al., Ann Intern Med 2008;149(9):601-11; Yoshida T & Delafontaine P, Cells 2020;9(9):1970; Barton-Davis ER et al., Proc Natl Acad Sci 1998;95(26):15603-7; Lee SJ, PLoS ONE 2007;2(8):e789; Lee SJ et al., Mol Endocrinol 2010;24(10):1998-2008; Kota J et al., Sci Transl Med 2009;1(6):6ra15; Mendell JR et al., Mol Ther 2015;23(1):192-201; Goldspink G, Trends Endocrinol Metab 2002;13(1):23-8; Rodino-Klapac LR et al., Muscle Nerve 2009;40(3):363-80; Sinha DK et al., Transl Androl Urol 2020;9(Suppl 2):S149-S159.
+<br><br>
+<em>This article is for informational purposes only and does not constitute medical advice. None of the peptides discussed are FDA-approved for muscle growth. All GH secretagogues and IGF-1 are prohibited by WADA. Consult a qualified healthcare provider before considering any peptide protocol.</em>
+</p>
+
+</div>\n`;\n---\n<Base title={frontmatter.title} description={frontmatter.description}>\n  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">\n    <article class="md:flex-1 min-w-0">\n      <div class="mb-8 -mx-4 sm:mx-0">\n        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />\n      </div>\n      <header class="mb-10">\n        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>\n        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>\n        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>\n        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">\n          <span>By <strong class="text-text">{frontmatter.author}</strong></span>\n          <span>•</span>\n          <time datetime={frontmatter.date}>{formattedDate}</time>\n        </div>\n      </header>\n      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">\n        <strong>⚠️ Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.\n      </div>\n      <style set:html={rawCSS} />\n      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content" set:html={rawHTML} />\n    </article>\n    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0">\n      <div class="md:sticky md:top-8 space-y-6">\n        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">\n          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>\n          <div class="flex items-center gap-2 mb-2">\n            <span class="text-xs text-text-muted">Category:</span>\n            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>\n          </div>\n          <div class="flex items-center gap-2 mb-2">\n            <span class="text-xs text-text-muted">Updated:</span>\n            <span class="text-xs font-medium text-text">{formattedDate}</span>\n          </div>\n          <div class="flex items-center gap-2">\n            <span class="text-xs text-text-muted">Author:</span>\n            <span class="text-xs font-medium text-text">{frontmatter.author}</span>\n          </div>\n        </div>\n        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">\n          <h3 class="text-sm font-bold text-primary mb-2">🔬 Our Standards</h3>\n          <ul class="text-xs text-text-muted space-y-1.5">\n            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> PubMed-cited research</li>\n            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> No vendor affiliations</li>\n            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Regularly updated</li>\n            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Reviewed for accuracy</li>\n          </ul>\n        </div>\n        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">\n          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Popular Guides</h3>\n          <div class="space-y-3">\n            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>\n            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>\n            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>\n            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects</a>\n          </div>\n          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides →</a>\n        </div>\n        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">\n          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>\n          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>\n          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>\n        </div>\n      </div>\n    </aside>\n  </div>\n</Base>\n
