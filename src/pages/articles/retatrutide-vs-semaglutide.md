@@ -71,8 +71,6 @@ The glucagon component is the wild card. Glucagon:
 
 Retatrutide doesn't just reduce caloric intake. It actively increases caloric expenditure, hitting both sides of the energy balance equation simultaneously.
 
-For detailed profiles of both compounds, check out [PeptideArc](https://peptidearc.com).
-
 ## Clinical Trial Data: The Numbers
 
 ### Semaglutide (STEP 1 Trial)
@@ -263,4 +261,3 @@ If you need treatment now, semaglutide and <a href="/articles/tirzepatide-comple
 
 But if you're watching the field and wondering what's next, retatrutide is the answer. The triple agonist wins on the science. Now it just needs to prove it at scale.
 
-For more information on both compounds and other weight loss peptides, visit [PeptideArc](https://peptidearc.com).

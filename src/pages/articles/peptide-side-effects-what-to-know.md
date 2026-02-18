@@ -50,8 +50,7 @@ These GI effects happen because GLP-1 slows gastric emptying. Food sits in your 
 
 > **Key Rule:** Slow dose titration is critical. Jumping to a high dose too fast is the number one reason people feel miserable on GLP-1 compounds.
 
-For detailed GLP-1 compound profiles, visit [peptidearc.com](https://peptidearc.com).
-
+For detailed GLP-1 compound profiles, 
 ### Growth Hormone Secretagogues (CJC-1295, Ipamorelin, MK-677, Tesamorelin)
 
 GH peptides stimulate your pituitary to release more growth hormone. For specifics, see our guides on [CJC-1295 DAC](/articles/cjc-1295-dac-guide) and the [tesamorelin-ipamorelin stack](/articles/tesamorelin-ipamorelin-stack-guide).
@@ -81,8 +80,6 @@ GH peptides stimulate your pituitary to release more growth hormone. For specifi
 | **Head rush** | TB-500 | Shortly after injection |
 
 > **Theoretical Concern:** BPC-157's potential to promote angiogenesis (new blood vessel formation) has implications for anyone with a cancer history ([PubMed: 29767834](https://pubmed.ncbi.nlm.nih.gov/29767834/)). Clinical significance at typical doses isn't established, but discuss with your doctor.
-
-For detailed profiles, visit [peptidearc.com](https://peptidearc.com).
 
 ### Antimicrobial and Immune Peptides (Thymosin Alpha-1, LL-37)
 
@@ -208,4 +205,3 @@ Peptides are powerful tools, but they come with real trade-offs. Understanding t
 
 Don't skip your bloodwork. Don't rush your titration. And don't ignore your body when it's telling you something is off.
 
-For in-depth profiles on specific peptides, including dosing protocols and safety data, visit [peptidearc.com](https://peptidearc.com).

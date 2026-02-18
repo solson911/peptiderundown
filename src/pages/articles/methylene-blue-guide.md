@@ -216,7 +216,7 @@ Besides the critical serotonin interaction, be aware of:
 - **Dapsone and other oxidizing drugs.** Increased risk of methemoglobinemia, which is ironic given that methylene blue treats this condition.
 - **Blood pressure medications.** The NO inhibition can interfere with nitrate-based blood pressure drugs.
 
-For broader context on how methylene blue fits into biohacking protocols alongside peptides, check out [PeptideArc.com](https://peptidearc.com). If you're interested in <a href="/articles/mots-c-mitochondrial-peptide">other mitochondrial-targeting compounds</a>, see our guide on [<a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a>](/articles/mots-c-mitochondrial-peptide).
+For broader context on how methylene blue fits into biohacking protocols alongside peptides,  If you're interested in <a href="/articles/mots-c-mitochondrial-peptide">other mitochondrial-targeting compounds</a>, see our guide on [<a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a>](/articles/mots-c-mitochondrial-peptide).
 
 ## Frequently Asked Questions
 

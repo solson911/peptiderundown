@@ -362,4 +362,3 @@ Neither peptide is FDA-approved, and all evidence comes from preclinical researc
 - [Peptide Side Effects: What to Know](/articles/peptide-side-effects-what-to-know)
 - [What Are Peptides? Beginner's Guide](/articles/what-are-peptides-beginners-guide)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

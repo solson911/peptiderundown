@@ -42,8 +42,7 @@ Its full name is **Ala-Glu-Asp-Gly**, a sequence of just four <a href="/articles
 
 The peptide was first synthesized in the 1980s at the St. Petersburg Institute of Bioregulation and Gerontology. Dr. Khavinson's team isolated epithalamin from bovine pineal glands, identified its active sequence, and created the synthetic version.
 
-For a deeper compound profile, check out the [Epithalon overview on PeptideArc](https://peptidearc.com).
-
+For a deeper compound profile, 
 ## How Epithalon Works
 
 Epithalon's central mechanism is **telomerase activation**. But its effects branch out into several downstream pathways that collectively influence aging.
@@ -344,4 +343,3 @@ For people interested in longevity science, Epithalon sits in an interesting spo
 - [Peptide Side Effects: What to Know](/articles/peptide-side-effects-what-to-know)
 - [Are Peptides Legal? FDA Regulations in 2026](/articles/are-peptides-legal-fda-regulations-2026)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

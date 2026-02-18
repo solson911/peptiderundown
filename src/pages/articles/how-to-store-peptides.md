@@ -51,8 +51,7 @@ Think of it like coffee. Whole beans last months in your pantry. Once you brew a
 
 Research in the *Journal of Pharmaceutical Sciences* shows lyophilized peptides stored at -20C retain structural integrity and bioactivity for years ([PubMed: 25200029](https://pubmed.ncbi.nlm.nih.gov/25200029/)).
 
-For compound-specific stability data, [peptidearc.com](https://peptidearc.com) provides storage recommendations.
-
+For compound-specific stability data, 
 ### Light Sensitivity
 
 Most peptides are sensitive to UV light, which triggers photodegradation through oxidation of amino acid residues like tryptophan and tyrosine ([PubMed: 26055427](https://pubmed.ncbi.nlm.nih.gov/26055427/)).
@@ -180,7 +179,7 @@ Most tolerate room temperature for weeks to a few months without significant deg
 
 ### Does the type of peptide affect storage requirements?
 
-Yes. Peptides containing oxidation-sensitive residues (methionine, cysteine, tryptophan) are less stable and benefit most from cold, dark storage. Check [peptidearc.com](https://peptidearc.com) for compound-specific guidance.
+Yes. Peptides containing oxidation-sensitive residues (methionine, cysteine, tryptophan) are less stable and benefit most from cold, dark storage. Check  for compound-specific guidance.
 
 ### Can I reconstitute, use some, then freeze the rest?
 
@@ -202,4 +201,4 @@ Most likely not. A closed refrigerator maintains safe temperatures for about **f
 
 Not necessary, but convenient. Main advantage is consistent temperature without constant door-opening. A standard refrigerator works well following the guidelines above.
 
-*This article is for educational purposes only and does not constitute medical advice. Always consult with a qualified healthcare provider regarding the use and handling of any peptide products. For detailed compound profiles and storage specifications, visit [peptidearc.com](https://peptidearc.com).*
+*This article is for educational purposes only and does not constitute medical advice. Always consult with a qualified healthcare provider regarding the use and handling of any peptide products. *

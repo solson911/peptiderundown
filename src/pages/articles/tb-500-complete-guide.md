@@ -35,8 +35,7 @@ Specifically, it contains the amino acid sequence responsible for the protein's 
 
 Thymosin beta-4 is one of the most abundant intracellular proteins in the human body. It shows up everywhere, from platelets and white blood cells to the cornea and heart tissue. Its concentration spikes at injury sites, which is what first tipped researchers off to its healing properties.
 
-For a deeper profile on this compound, check out the [TB-500 page on PeptideArc](https://peptidearc.com).
-
+For a deeper profile on this compound, 
 ## How TB-500 Works: Actin, Angiogenesis, and Cell Migration
 
 TB-500's effects trace back to three interconnected processes: actin regulation, angiogenesis, and cell migration. Let's walk through each one.
@@ -154,7 +153,7 @@ TB-500 is typically administered via <a href="/articles/how-to-inject-peptides-s
 
 TB-500 comes as a lyophilized (freeze-dried) powder in a vial, usually in 2 mg or 5 mg quantities.
 
-Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+Need help with dosing math? Use our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>.
 
 - Use bacteriostatic water (BAC water) for reconstitution
 - Inject the BAC water slowly down the side of the vial, not directly onto the powder
@@ -238,8 +237,7 @@ A common stack protocol:
 - TB-500: 2.5 mg twice weekly
 - BPC-157: 250 to 500 mcg daily
 
-For a detailed comparison and stacking guide, visit [PeptideArc's compound profiles](https://peptidearc.com).
-
+For a detailed comparison and stacking guide, 
 ## TB-500 Results Timeline: What to Expect Week by Week
 
 TB-500 isn't a miracle. It won't fix a torn ACL overnight. Here's what a realistic timeline looks like for most users:
@@ -303,4 +301,3 @@ If you're considering TB-500 for an injury, do your homework. Work with a knowle
 
 New to peptides? Our [beginner's guide](/articles/what-are-peptides-beginners-guide) covers the fundamentals. Also read about [<a href="/articles/peptide-side-effects-what-to-know">peptide side effects</a>](/articles/peptide-side-effects-what-to-know) and [proper peptide storage](/articles/how-to-store-peptides).
 
-For more detailed compound information and sourcing guidance, check out [PeptideArc](https://peptidearc.com).

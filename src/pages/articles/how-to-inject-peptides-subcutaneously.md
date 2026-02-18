@@ -45,8 +45,6 @@ Most peptides are administered subcutaneously because the absorption rate from f
 - **Bandages**  -  rarely needed, but reassuring for first-timers
 - **Notebook or app**  -  for tracking injection sites and doses
 
-For detailed profiles on specific peptide compounds and their recommended administration routes, [peptidearc.com](https://peptidearc.com) maintains reference pages.
-
 ## Choosing Your Injection Site
 
 You have three primary options. Each works well, and the "best" site is mostly about personal preference.
@@ -224,4 +222,4 @@ Absolutely. The anticipation is worse than the actual needle. After two or three
 
 With BAC water, **3-4 weeks** refrigerated. With sterile water, use within a few days. See our [peptide storage guide](/articles/how-to-store-peptides).
 
-*This article is for educational purposes only. It does not constitute medical advice. Always consult with a qualified healthcare provider before beginning any peptide regimen. For detailed information on specific peptide compounds, visit [peptidearc.com](https://peptidearc.com).*
+*This article is for educational purposes only. It does not constitute medical advice. Always consult with a qualified healthcare provider before beginning any peptide regimen. *

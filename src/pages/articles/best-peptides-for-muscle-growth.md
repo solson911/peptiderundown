@@ -429,4 +429,3 @@ The best peptide protocol is one you can sustain consistently alongside serious 
 - [How to Reconstitute Peptides](/articles/how-to-reconstitute-peptides)
 - [What Are Peptides? Beginner's Guide](/articles/what-are-peptides-beginners-guide)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

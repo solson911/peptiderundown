@@ -44,8 +44,7 @@ The result is one of the most studied fat loss peptides in history. Whether it a
 
 The peptide was originally developed at **Monash University** in Melbourne, Australia, during the 1990s. Metabolic Pharmaceuticals Ltd later licensed it and pushed it through clinical trials.
 
-For a deeper compound profile, check out the [AOD-9604 overview on PeptideArc](https://peptidearc.com).
-
+For a deeper compound profile, 
 ## How AOD-9604 Works
 
 The basic idea behind AOD-9604 is straightforward: isolate the fat-burning activity of growth hormone from everything else.
@@ -387,4 +386,3 @@ AOD-9604 isn't a failure. It's a niche tool. And in the right context, niche too
 - [Semaglutide: Complete Weight Loss Guide](/articles/semaglutide-weight-loss-guide)
 - [Peptide Side Effects: What to Know](/articles/peptide-side-effects-what-to-know)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

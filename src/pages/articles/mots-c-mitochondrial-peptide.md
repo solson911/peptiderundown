@@ -45,8 +45,6 @@ MOTS-c is produced naturally in your body. It circulates in the blood and can be
 
 Levels appear to <a href="/articles/epithalon-anti-aging-guide">decline with age</a>, which has obvious implications for aging research.
 
-For a full compound profile, check out [PeptideArc](https://peptidearc.com).
-
 ## How MOTS-c Works
 
 ### AMPK Activation
@@ -152,7 +150,7 @@ MOTS-c enhances the cell's ability to handle metabolic stress through AMPK activ
 
 MOTS-c is still in the research phase. Dosing comes primarily from animal studies and the emerging practitioner community.
 
-Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+Need help with dosing math? Use our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>.
 
 | Parameter | Protocol |
 |-----------|----------|
@@ -206,8 +204,7 @@ As of early 2026, MOTS-c is not FDA-approved for any medical indication.
 
 The cost is relatively high compared to many other research peptides, reflecting both synthesis complexity and growing demand.
 
-For sourcing considerations and updated availability, [PeptideArc](https://peptidearc.com) maintains current compound profiles.
-
+For sourcing considerations and updated availability, 
 ## Frequently Asked Questions
 
 ### Is MOTS-c natural or synthetic?

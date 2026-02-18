@@ -58,8 +58,7 @@ Animal studies have demonstrated anxiolytic effects across multiple behavioral m
 
 The immune angle is interesting too. Some research suggests Selank could be beneficial during periods of high stress or immune challenge, though this application needs more clinical data.
 
-For a compound profile on Selank, visit [PeptideArc](https://peptidearc.com).
-
+For a compound profile on Selank, 
 ## Semax: The Cognitive Enhancer
 
 ### What It Is
@@ -89,7 +88,7 @@ In Russia, Semax has been used clinically for:
 
 One Russian clinical trial involving stroke patients found that intranasal Semax administration within the first 12 hours of ischemic stroke led to significantly better neurological outcomes compared to standard treatment alone ([Gusev et al., 2005](https://pubmed.ncbi.nlm.nih.gov/16447576/)).
 
-Check out [PeptideArc](https://peptidearc.com) for the full Semax compound profile with dosing details.
+Check out  for the full Semax compound profile with dosing details.
 
 ## How Selank and Semax Differ
 

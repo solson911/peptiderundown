@@ -196,8 +196,7 @@ This thymic peptide demonstrates three-phase action:
 
 *Always verify Certificate of Analysis (CoA) regardless of source*
 
-For current verified suppliers, visit [PeptideArc Verified Sources](https://peptidearc.com/sources).
-
+For current verified suppliers, 
 ---
 
 ## Scientific Foundations

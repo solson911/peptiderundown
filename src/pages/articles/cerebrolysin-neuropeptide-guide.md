@@ -99,8 +99,7 @@ The evidence here is thinner but the interest is high. No large controlled studi
 
 Anecdotal reports from the biohacking community describe improved focus, mental clarity, faster processing, and better verbal fluency. The mechanisms are plausible: BDNF-like activity and increased synaptic density are the same processes targeted by exercise and other cognitive enhancers.
 
-For more on neuropeptide compounds, visit [PeptideArc.com](https://peptidearc.com).
-
+For more on neuropeptide compounds, 
 ## Administration
 
 Cerebrolysin is available only as an injectable solution. Peptides would be destroyed by digestive enzymes if taken orally.

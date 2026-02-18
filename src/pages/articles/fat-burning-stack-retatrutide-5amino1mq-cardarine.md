@@ -328,4 +328,3 @@ Always consult healthcare professionals for personal guidance. Research findings
 - Combination metabolic therapies
 - Fat cell biology innovations
 
-For more compound information, visit PeptideArc research resources.

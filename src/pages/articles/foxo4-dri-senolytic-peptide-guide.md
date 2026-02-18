@@ -272,4 +272,4 @@ Always prioritize evidence-based approaches. Consult healthcare providers about 
 - [Understanding Senescent Cells and Aging](/articles/senescent-cells-aging)
 - [Peptide Therapies in Development](/articles/peptide-therapies-development)
 
-For research updates, visit [PeptideArc Research Hub](https://peptidearc.com/research).
+For research updates, 

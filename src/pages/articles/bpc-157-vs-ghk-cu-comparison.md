@@ -238,4 +238,4 @@ Used together, they may offer thorough regenerative support  -  healing from the
 - [GHK-Cu Copper Peptide Guide](/articles/ghk-cu-copper-peptide-guide)
 - [Peptide Stacking Strategies](/articles/peptide-stacking-guide)
 
-For peptide sourcing and research updates, visit [PeptideArc](https://peptidearc.com).
+For peptide sourcing and research updates, 

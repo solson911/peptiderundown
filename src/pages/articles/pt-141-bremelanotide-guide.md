@@ -43,8 +43,7 @@ PT-141, known by its generic name **bremelanotide**, is a synthetic cyclic hepta
 
 Unlike its parent compound Melanotan II, PT-141 was specifically engineered to isolate the pro-sexual effects while reducing melanogenic (skin-darkening) activity.
 
-For a deeper compound profile, check out the [PT-141 overview on PeptideArc](https://peptidearc.com).
-
+For a deeper compound profile, 
 ## How PT-141 Works
 
 Every other sexual dysfunction drug on the market works downstream, targeting blood vessels or hormones. PT-141 goes upstream.
@@ -357,4 +356,3 @@ But for the right patient, PT-141 fills a gap that no other drug currently addre
 - [<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a>](/articles/peptide-side-effects-what-to-know)
 - [Are Peptides Legal? FDA Regulations in 2026](/articles/are-peptides-legal-fda-regulations-2026)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

@@ -125,4 +125,4 @@ Peptides represent a revolutionary frontier in evidence-based anti-aging medicin
 - [Mitochondrial Optimizers Guide](/articles/mitochondrial-optimizers)
 - [NAD+ Anti-Aging Protocols](/articles/nad-anti-aging-protocols)
 
-For personalized peptide protocols, visit [PeptideArc Clinic](https://peptidearc.com/clinic).
+For personalized peptide protocols, 

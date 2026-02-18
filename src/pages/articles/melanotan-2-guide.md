@@ -44,7 +44,7 @@ The compound never made it through formal drug development. But it found a secon
 
 MT-2 is closely related to **bremelanotide (PT-141)**, which was derived from MT-2 research and eventually received FDA approval for treating hypoactive sexual desire disorder in women.
 
-For detailed compound information, see the [Melanotan 2 profile on PeptideArc](https://peptidearc.com).
+For detailed compound information, see the [Melanotan 2 profile](https://peptiderundown.com).
 
 ## How Melanotan 2 Works
 
@@ -96,7 +96,7 @@ MT-2 **will** darken existing moles and freckles. New moles may also appear. Thi
 
 MT-2 is administered via subcutaneous injection, typically into the abdominal fat. For technique, see our [<a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous injection guide</a>](/articles/how-to-inject-peptides-subcutaneously).
 
-Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+Need help with dosing math? Use our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>.
 
 ### Reconstitution
 
@@ -268,4 +268,4 @@ Add in the lack of regulation, potential purity issues, and unknown long-term sa
 
 If you choose to use MT-2, start with low doses, monitor your skin carefully, get regular dermatologist checks, and stay honest with yourself about the risk-benefit tradeoff.
 
-For more on MT-2 and related melanocortin peptides, visit [PeptideArc](https://peptidearc.com).
+For more on MT-2 and related melanocortin peptides, 

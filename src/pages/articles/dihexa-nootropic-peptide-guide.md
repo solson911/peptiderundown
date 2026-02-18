@@ -40,8 +40,7 @@ Dihexa (also called **N-hexanoic-Tyr-Ile-(6) aminohexanoic amide**) is a synthet
 
 The compound was specifically engineered to be resistant to enzymatic breakdown, giving it a much longer half-life than natural angiotensin IV.
 
-For a deeper compound profile, check out the [Dihexa overview on PeptideArc](https://peptidearc.com).
-
+For a deeper compound profile, 
 ## How Dihexa Works
 
 Understanding Dihexa requires a detour through an unexpected pathway: the one connecting blood pressure regulation to memory formation.
@@ -347,4 +346,3 @@ If you're considering Dihexa, understand what you're signing up for: a genuinely
 - [Peptide Side Effects: What to Know](/articles/peptide-side-effects-what-to-know)
 - [Are Peptides Legal? FDA Regulations 2026](/articles/are-peptides-legal-fda-regulations-2026)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

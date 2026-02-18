@@ -41,7 +41,7 @@ Researchers discovered that much of alpha-MSH's anti-inflammatory activity could
 
 At just three amino acids, KPV is one of the smallest bioactive peptides studied for anti-inflammatory effects. Its small size also means it can potentially survive oral administration better than larger peptides, which typically get destroyed in the digestive tract.
 
-For a deeper look at alpha-MSH and its fragments, check out the compound profile on [PeptideArc](https://peptidearc.com).
+For a deeper look at alpha-MSH and its fragments, check out the compound profile on.
 
 ## How KPV Works
 
@@ -117,7 +117,7 @@ Some people use both routes simultaneously, though no formal research exists on 
 
 No FDA-approved dosing exists. Information comes from animal studies and practitioner protocols.
 
-Need help with dosing math? Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+Need help with dosing math? Use our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>.
 
 | Route | Dose | Timing | Cycle |
 |-------|------|--------|-------|
@@ -166,8 +166,7 @@ But large randomized controlled trials haven't been completed. Small peptide fra
 
 Research continues on advanced delivery systems including nanoparticle formulations and hydrogel-based approaches for targeted gut delivery.
 
-For the latest updates, [PeptideArc](https://peptidearc.com) maintains up-to-date compound profiles.
-
+For the latest updates, 
 ## Frequently Asked Questions
 
 ### Is KPV legal?

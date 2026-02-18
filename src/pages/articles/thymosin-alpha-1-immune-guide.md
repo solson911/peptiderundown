@@ -42,8 +42,7 @@ It's the primary active fraction of a crude preparation called thymosin fraction
 
 The synthetic version is called **thymalfasin**. It's identical to the naturally occurring peptide and has been manufactured by SciClone Pharmaceuticals (now part of Pharmanovia) since the 1990s.
 
-For a deeper compound profile, check out the [thymosin alpha-1 overview on PeptideArc](https://peptidearc.com).
-
+For a deeper compound profile, 
 ## How Thymosin Alpha-1 Works
 
 Ta1 doesn't jack up your immune system the way a stimulant would. It's a modulator, not an accelerator. That distinction is critical.
@@ -399,4 +398,3 @@ The biggest limitation? It's not FDA-approved, which limits access in the US and
 - [Peptide Side Effects: What to Know](/articles/peptide-side-effects-what-to-know)
 - [Are Peptides Legal? FDA Regulations in 2026](/articles/are-peptides-legal-fda-regulations-2026)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

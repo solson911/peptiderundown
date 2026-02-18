@@ -98,8 +98,7 @@ The no-DAC version is often preferred by people who want to preserve the most na
 
 Some researchers have raised concern about partial desensitization of somatotroph cells over time, though clinical data hasn't shown this to be a major issue.
 
-For a deeper comparison, check out the [CJC-1295 profile on PeptideArc](https://peptidearc.com).
-
+For a deeper comparison, 
 ## CJC-1295 DAC vs. Ipamorelin
 
 These two get compared constantly because they're often used together. But they work through completely different mechanisms.
@@ -181,8 +180,7 @@ Both are GHRH analogs, but sermorelin is the original with a very short half-lif
 
 CJC-1295 DAC is a more potent, longer-lasting successor. Sermorelin requires daily injections; CJC-1295 DAC needs only twice weekly.
 
-For more detailed compound breakdowns, visit [PeptideArc.com](https://peptidearc.com).
-
+For more detailed compound breakdowns, 
 ## The Bottom Line
 
 CJC-1295 DAC is one of the most practical GH-releasing peptides available. Its long half-life means fewer injections, more stable GH output, and better compliance compared to short-acting alternatives. The trade-off is less precise control over GH pulsatility.

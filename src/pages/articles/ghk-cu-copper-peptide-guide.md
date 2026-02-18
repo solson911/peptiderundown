@@ -40,7 +40,7 @@ GHK-Cu was first isolated from human plasma in the 1970s by Dr. Loren Pickart ([
 
 Your body naturally produces GHK-Cu, but levels decline with age. That decline correlates with visible aging, slower wound healing, and reduced tissue repair capacity.
 
-For a full compound profile, see the [GHK-Cu page on PeptideArc](https://peptidearc.com).
+For a full compound profile, see the [GHK-Cu page](https://peptiderundown.com).
 
 ## How GHK-Cu Works
 
@@ -148,7 +148,7 @@ For injection technique, see our [guide to injecting peptides](/articles/how-to-
 
 | Route | Dose | Frequency | Results Timeline |
 
-Need help with dosing math? Use our free [<a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>](https://peptidearc.com/tools/reconstitution) on PeptideArc.
+Need help with dosing math? Use our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>.
 |-------|------|-----------|-----------------|
 | **Topical** | 1-3 ppm or higher | 1-2x daily | 4-12 weeks |
 | **Subcutaneous** | 1-2 mg | Daily or every other day | 4-8 week cycles |
@@ -218,4 +218,4 @@ Its safety profile is excellent. For skin concerns, topical GHK-Cu is a well-sup
 
 For broader anti-aging goals, injectable use shows promise but needs more clinical data.
 
-For more on GHK-Cu and related peptides, visit [PeptideArc](https://peptidearc.com).
+For more on GHK-Cu and related peptides, 

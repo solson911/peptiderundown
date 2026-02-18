@@ -65,7 +65,6 @@ You'll see two options: **bacteriostatic water** and **plain sterile water**. He
 
 For almost everyone reading this, <a href="/articles/how-to-reconstitute-peptides">bacteriostatic water is the right choice</a>.
 
-
 ## Step-by-Step Peptide Reconstitution Instructions
 
 Alright, let's do this. Take your time; there's no rush.
@@ -145,10 +144,9 @@ The solution should be **clear** when fully dissolved. If it's cloudy or has vis
 
 Your peptide is now reconstituted and ready to use. Label the vial with the date, peptide name, and concentration (e.g., "BPC-157, 2.5mg/mL, Feb 13, 2026"). Store it in the refrigerator.
 
-
 ## Peptide Dosage Math: Calculating Concentration and Dose
 
-> **Skip the math?** Use our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc. Plug in your vial size, water volume, and desired dose  -  it tells you exactly <a href="/articles/peptide-dosing-calculator-reconstitution-math">how many units to draw</a>. No math required.
+> **Skip the math?** Use our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>. Plug in your vial size, water volume, and desired dose  -  it tells you exactly <a href="/articles/peptide-dosing-calculator-reconstitution-math">how many units to draw</a>. No math required.
 
 If you prefer to understand the calculations yourself, here's how it works. The math is dead simple once you see the pattern.
 
@@ -210,7 +208,6 @@ Or if you prefer working in micrograms:
 
 **Pro tip:** Add a "round" amount of water that makes the concentration a clean number. Adding 2mL to a 5mg vial gives you 2.5mg/mL, which is easy to work with. Adding 1.73mL would give you 2.89mg/mL, which is unnecessarily annoying.
 
-
 ## Drawing Your Dose from a Reconstituted Vial
 
 Once your peptide is mixed, here's how to draw your dose each time:
@@ -225,7 +222,6 @@ Once your peptide is mixed, here's how to draw your dose each time:
 - **Withdraw the needle** from the vial.
 
 Your dose is now ready for administration. Use a fresh insulin syringe each time. Never reuse needles.
-
 
 ## How to Store Reconstituted Peptides
 
@@ -246,7 +242,6 @@ If you haven't mixed your peptide yet:
 - **Room temperature:** Most lyophilized peptides are stable for weeks to months.
 - **Refrigerator:** Extends shelf life significantly, lasting months to a year or more.
 - **Freezer:** Best for long-term storage of unreconstituted peptides, and can last a year or more.
-
 
 ## 8 Common Reconstitution Mistakes to Avoid
 
@@ -275,7 +270,6 @@ Double-check your concentration calculation and your dose calculation every time
 
 ### 8. Using Too Little Water
 If you add very little water (e.g., 0.5mL to a 10mg vial), the concentration becomes very high (20mg/mL), and a tiny measurement error translates to a huge dose error. Use enough water that your dose lands in a comfortable, measurable range on the syringe.
-
 
 ## Frequently Asked Questions
 
@@ -322,7 +316,6 @@ Yes. If you realize your concentration is too high and you want to dilute it fur
 
 This can happen during shipping due to temperature changes or pressure. As long as the vial's seal is intact and the powder hasn't been exposed to moisture, it should be fine. Reconstitute normally.
 
-
 ## Wrapping Up
 
 Reconstituting peptides is one of those things that seems complicated until you do it once. The process is simple: add water to powder, let it dissolve, do some basic math, and store it properly.
@@ -333,9 +326,8 @@ Take your time the first couple of times. Within a week, this will feel like sec
 
 If you found this guide helpful, bookmark it for reference. And remember, when in doubt about dosing or usage, always consult with a healthcare professional.
 
-And if you don't want to do the dosage math by hand, bookmark our free [Peptide Reconstitution Calculator](https://peptidearc.com/tools/reconstitution) on PeptideArc. It handles all the calculations instantly.
+And if you don't want to do the dosage math by hand, bookmark our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>. It handles all the calculations instantly.
 
 Ready to learn more? Check out our guides on [how to inject peptides subcutaneously](/articles/how-to-inject-peptides-subcutaneously), [how to store peptides](/articles/how-to-store-peptides), and [peptide side effects](/articles/peptide-side-effects-what-to-know). If you're just getting started, our [beginner's guide to peptides](/articles/what-are-peptides-beginners-guide) covers the fundamentals.
-
 
 *This article is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions regarding peptides or any medical condition. Never disregard professional medical advice or delay seeking it because of something you read online.*

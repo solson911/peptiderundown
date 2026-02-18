@@ -173,4 +173,3 @@ The Metabolic Stack offers a multi-pathway approach to fat loss that targets vis
 - [Retatrutide Complete Guide](/articles/retatrutide-complete-guide)
 - [Peptide Bloodwork Guide](/articles/peptide-bloodwork-guide)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

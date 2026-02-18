@@ -221,4 +221,4 @@ Bloodwork is the **only way** to use peptides safely and effectively. Skipping l
 - [<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a>](/articles/peptide-side-effects-what-to-know)
 - [<a href="/articles/how-to-inject-peptides-subcutaneously">How to Inject Peptides Subcutaneously</a>](/articles/how-to-inject-peptides-subcutaneously)
 
-For lab testing discounts and peptide resources, visit [PeptideArc](https://peptidearc.com).
+For lab testing discounts and peptide resources, 

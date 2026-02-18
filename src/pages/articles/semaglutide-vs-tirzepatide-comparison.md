@@ -425,4 +425,3 @@ Tirzepatide's dual agonism produces greater weight loss than semaglutide in clin
 - [Tirzepatide: The Dual-Action GLP-1/GIP Guide](/articles/tirzepatide-complete-guide)
 - [What Are Peptides? Beginner's Guide](/articles/what-are-peptides-beginners-guide)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

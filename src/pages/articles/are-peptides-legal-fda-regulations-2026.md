@@ -91,8 +91,6 @@ Followed a similar trajectory. Eli Lilly aggressively defended its market exclus
 
 The FDA flagged several of these as not meeting the definition of a "bulk drug substance" eligible for compounding, arguing they haven't been adequately studied or don't have USP monographs. This was a devastating blow to the compounding peptide market.
 
-For detailed compound profiles and current status updates on specific peptides, [peptidearc.com](https://peptidearc.com) maintains up-to-date information.
-
 ## The 2024-2025 FDA Crackdowns: A Timeline
 
 The period from mid-2024 through 2025 was the most aggressive regulatory crackdown on peptides in U.S. history.
@@ -204,7 +202,7 @@ The regulatory environment is tightening, not loosening. Here's how to protect y
 - **Use licensed compounding pharmacies**  -  verify the pharmacy is state-licensed and (ideally) FDA-registered as a 503B facility; check for recent FDA warning letters or inspection results
 - **Keep documentation**  -  if you have a prescription for a compounded peptide, keep a copy; carry prescription documentation when traveling
 - **Be skeptical of "research only" claims**  -  the research peptide market still exists, but it's under more pressure than ever; understand the legal risks
-- **Stay informed**  -  regulations change; follow developments through the FDA website, the Outsourcing Facilities Association, and sites like [peptidearc.com](https://peptidearc.com)
+- **Stay informed**  -  regulations change; follow developments through the FDA website and the Outsourcing Facilities Association
 - **Don't sell or redistribute**  -  buying for personal use is one level of legal risk; selling or distributing is a completely different level
 
 ## FAQs
@@ -269,4 +267,4 @@ That doesn't mean peptides are gone or that access is impossible. It means the p
 
 Work with licensed providers. Use licensed pharmacies. Keep your documentation. And stay current on the regulations, because they're still evolving.
 
-For compound-specific regulatory updates and detailed peptide profiles, visit [peptidearc.com](https://peptidearc.com).
+For compound-specific regulatory updates and detailed peptide profiles, 

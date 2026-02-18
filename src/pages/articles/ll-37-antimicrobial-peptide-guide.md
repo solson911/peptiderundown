@@ -35,7 +35,7 @@ Scientists first found it in white blood cells. Now we know many body tissues ma
 
 > **Structural Insight:** The 'LL' part comes from its first two amino acids (leucine-leucine). The 37 shows its length. This structure gives it unique properties.
 
-You can learn more about its molecular structure on PeptideArc.
+You can learn more about its molecular structure.
 
 ---
 
@@ -296,4 +296,3 @@ We've still got much to learn. But one thing's clear: this natural antibiotic is
 - [Topical Peptides for Skin](/articles/topical-peptides-guide)
 - [Antimicrobial Peptides Overview](/articles/antimicrobial-peptides)
 
-For current LL-37 research, visit PeptideArc.

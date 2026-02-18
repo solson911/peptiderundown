@@ -38,8 +38,7 @@ SS-31 is a small synthetic peptide with the sequence **D-Arg-Dmt-Lys-Phe-NH2** (
 
 Unlike most peptides that bind extracellular receptors, SS-31 is cell-permeable. It concentrates inside mitochondria at roughly **1,000 to 5,000 times** the extracellular concentration within minutes of administration.
 
-For a deeper compound profile, check out the [SS-31 overview on PeptideArc](https://peptidearc.com).
-
+For a deeper compound profile, 
 ## How SS-31 Works
 
 The mechanism is specific and well-characterized. SS-31 doesn't just "support mitochondrial health" in some vague way. It binds a single target with measurable downstream effects.
@@ -372,4 +371,3 @@ The big question is whether the striking animal results will translate to meanin
 - [Peptide Side Effects: What to Know](/articles/peptide-side-effects-what-to-know)
 - [Are Peptides Legal? FDA Regulations 2026](/articles/are-peptides-legal-fda-regulations-2026)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

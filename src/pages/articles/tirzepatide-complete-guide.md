@@ -40,8 +40,7 @@ Tirzepatide is a synthetic peptide that activates two gut hormone receptors simu
 
 Unlike semaglutide, which only hits the GLP-1 receptor, tirzepatide was designed from the ground up as a **twincretin**. The GIP component isn't an afterthought. It's baked into the molecule's structure.
 
-For a deeper compound profile, check out the [tirzepatide overview on PeptideArc](https://peptidearc.com).
-
+For a deeper compound profile, 
 ## How Tirzepatide Works
 
 Both GLP-1 and GIP are **incretin hormones** released by your gut after eating. They regulate insulin, appetite, and energy balance. Tirzepatide mimics both of them at the same time.
@@ -361,4 +360,3 @@ But the data is strong, the FDA approvals are in hand, and millions of patients 
 - [Semaglutide: Complete Weight Loss Guide](/articles/semaglutide-weight-loss-guide)
 - [<a href="/articles/retatrutide-complete-guide">Retatrutide</a>: The Triple-Action GLP-1 Guide](/articles/retatrutide-complete-guide)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).

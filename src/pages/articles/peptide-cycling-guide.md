@@ -330,4 +330,3 @@ Build your schedule around your goals. Use bloodwork to confirm what you're feel
 - [How to Reconstitute Peptides](/articles/how-to-reconstitute-peptides)
 - [Peptide Side Effects: What to Know](/articles/peptide-side-effects-what-to-know)
 
-For compound profiles and sourcing info, visit [PeptideArc](https://peptidearc.com).
