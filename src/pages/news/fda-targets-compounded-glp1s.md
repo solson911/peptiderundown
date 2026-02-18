@@ -6,6 +6,7 @@ date: 2026-02-17
 category: Legal
 tags: ["FDA", "compounding pharmacy", "GLP-1", "regulatory", "semaglutide", "tirzepatide"]
 author: "PeptideRundown Team"
+image: /images/articles/fda-targets-compounded-glp1s.webp
 ---
 
 In a move that underscores its commitment to patient safety and regulatory oversight, the Food and Drug Administration (FDA) has announced plans to curb the mass marketing of compounded glucagon-like peptide-1 (GLP-1) active pharmaceutical ingredients (APIs). This action targets non-FDA approved compounded drugs that have emerged as alternatives to approved GLP-1 products, such as semaglutide and tirzepatide, which are popular for weight loss and diabetes management.

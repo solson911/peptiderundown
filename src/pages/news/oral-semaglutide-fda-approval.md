@@ -6,6 +6,7 @@ date: 2026-02-17
 category: Industry
 tags: ["semaglutide", "weight loss", "FDA", "GLP-1", "Wegovy"]
 author: "PeptideRundown Team"
+image: /images/articles/oral-semaglutide-fda-approval.webp
 ---
 
 A groundbreaking announcement from the Food and Drug Administration (FDA) is set to redefine how individuals approach weight management. Oral semaglutide, marketed by Novo Nordisk as Wegovy, has officially secured FDA approval as the first oral glucagon-like peptide-1 (GLP-1) pill for weight loss. This significant milestone offers a convenient and accessible alternative to injectable GLP-1 agonists, potentially broadening the reach of effective weight management therapies.
