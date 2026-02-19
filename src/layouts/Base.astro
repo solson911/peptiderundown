@@ -107,9 +107,138 @@ const { title, description = 'Your science-based peptide guide. Independent, evi
     </div>
   </footer>
 
+  <!-- Search modal — rendered once globally -->
+  <div id="search-modal" class="fixed inset-0 z-[200] hidden">
+    <div id="search-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="relative z-10 max-w-2xl mx-auto mt-16 sm:mt-24 px-4">
+      <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="flex items-center gap-3 px-4 py-3 border-b border-gray-100">
+          <svg class="w-5 h-5 text-text-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input id="search-input" type="text" placeholder="Search guides… e.g. GHK-Cu, BPC-157, fat loss"
+            class="flex-1 text-base text-text placeholder-text-muted outline-none bg-transparent"
+            autocomplete="off" spellcheck="false" />
+          <button id="search-close" class="p-1 text-text-muted hover:text-text transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div id="search-results" class="max-h-[60vh] overflow-y-auto">
+          <div id="search-placeholder" class="px-4 py-8 text-center text-sm text-text-muted">Start typing to search all guides and news…</div>
+          <div id="search-hits" class="hidden divide-y divide-gray-50"></div>
+          <div id="search-empty" class="hidden px-4 py-8 text-center text-sm text-text-muted">No results found. Try a different keyword.</div>
+        </div>
+        <div class="px-4 py-2 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
+          <span class="text-xs text-text-muted">Press <kbd class="px-1.5 py-0.5 bg-white border border-gray-200 rounded text-xs font-mono">Esc</kbd> to close</span>
+          <span class="text-xs text-text-muted">Powered by Pagefind</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // Mobile menu
     document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
       document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+
+    // Search
+    let pagefind: any = null;
+    let debounceTimer: ReturnType<typeof setTimeout>;
+
+    const modal = document.getElementById('search-modal')!;
+    const backdrop = document.getElementById('search-backdrop')!;
+    const input = document.getElementById('search-input') as HTMLInputElement;
+    const hits = document.getElementById('search-hits')!;
+    const placeholder = document.getElementById('search-placeholder')!;
+    const empty = document.getElementById('search-empty')!;
+    const closeBtn = document.getElementById('search-close')!;
+
+    async function loadPagefind() {
+      if (!pagefind) {
+        try {
+          // @ts-ignore
+          pagefind = await import('/pagefind/pagefind.js');
+          await pagefind.init();
+        } catch (e) {
+          console.warn('Pagefind not available (run build first)', e);
+        }
+      }
+    }
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      input.focus();
+      loadPagefind();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      input.value = '';
+      showPlaceholder();
+    }
+
+    function showPlaceholder() {
+      placeholder.classList.remove('hidden');
+      hits.classList.add('hidden');
+      empty.classList.add('hidden');
+      hits.innerHTML = '';
+    }
+
+    function renderResults(results: any[]) {
+      if (results.length === 0) {
+        placeholder.classList.add('hidden');
+        hits.classList.add('hidden');
+        empty.classList.remove('hidden');
+        return;
+      }
+      placeholder.classList.add('hidden');
+      empty.classList.add('hidden');
+      hits.classList.remove('hidden');
+      hits.innerHTML = '';
+      results.slice(0, 10).forEach(async (result) => {
+        const data = await result.data();
+        const item = document.createElement('a');
+        item.href = data.url;
+        item.className = 'flex items-start gap-3 px-4 py-3 hover:bg-gray-50 transition-colors block';
+        item.innerHTML = `
+          <div class="mt-0.5 w-6 h-6 shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
+            <svg class="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="text-sm font-semibold text-text truncate">${data.meta?.title || 'Article'}</div>
+            <div class="text-xs text-text-muted mt-0.5 line-clamp-2">${data.excerpt || ''}</div>
+          </div>`;
+        item.addEventListener('click', closeModal);
+        hits.appendChild(item);
+      });
+    }
+
+    async function doSearch(query: string) {
+      if (!pagefind || !query.trim()) { showPlaceholder(); return; }
+      const results = await pagefind.search(query);
+      renderResults(results.results);
+    }
+
+    // Wire up all search trigger buttons (desktop + mobile share the same modal)
+    document.querySelectorAll('#search-trigger').forEach(btn => {
+      btn.addEventListener('click', openModal);
+    });
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    input.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => doSearch(input.value), 200);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); openModal(); }
     });
   </script>
 </body>
