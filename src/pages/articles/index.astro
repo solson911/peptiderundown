@@ -2,7 +2,9 @@
 import Base from '../../layouts/Base.astro';
 import PageSidebar from '../../components/PageSidebar.astro';
 
-const allPosts = await Astro.glob('./*.md');
+const mdPosts = await Astro.glob('./*.md');
+const astroPosts = (await Astro.glob('./*.astro')).filter(p => p.frontmatter && p.url !== '/articles/');
+const allPosts = [...mdPosts, ...astroPosts];
 const posts = allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 
 const categories = [...new Set(posts.map(p => p.frontmatter.category).filter(Boolean))].sort();
