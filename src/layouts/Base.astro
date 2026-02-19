@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Search from '../components/Search.astro';
 
 interface Props {
   title: string;
@@ -41,18 +42,22 @@ const { title, description = 'Your science-based peptide guide. Independent, evi
         <a href="/" class="flex items-center gap-2 group">
           <img src="/images/logo.png" alt="PeptideRundown" class="h-20 w-auto" />
         </a>
-        <div class="hidden md:flex items-center gap-8">
+        <div class="hidden md:flex items-center gap-6">
           <a href="/articles" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">All Guides</a>
           <a href="/news" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">News</a>
           <a href="/articles/what-are-peptides-beginners-guide" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">Start Here</a>
           <a href="https://peptidearc.com" target="_blank" rel="noopener" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">Compound Database ↗</a>
+          <Search />
         </div>
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-text-muted hover:text-primary transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <!-- Mobile: search + menu button -->
+        <div class="md:hidden flex items-center gap-1">
+          <Search />
+          <button id="mobile-menu-btn" class="p-2 text-text-muted hover:text-primary transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
       <!-- Mobile menu -->
       <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-100 mt-2">
@@ -66,7 +71,7 @@ const { title, description = 'Your science-based peptide guide. Independent, evi
     </div>
   </nav>
 
-  <main>
+  <main data-pagefind-body>
     <slot />
   </main>
 
