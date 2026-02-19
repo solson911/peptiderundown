@@ -1,0 +1,780 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const frontmatter = {
+  title: "Are Peptides Legal? FDA Regulations, the RFK Factor, and What It All Means in 2026",
+  description: "A comprehensive guide to peptide legality, FDA regulations, and the impact of RFK Jr.'s policy changes on compounded peptides in 2026.",
+  image: "/images/articles/peptide-legality-fda-rfk-guide.webp",
+  date: "2026-02-19",
+  category: "Safety",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+
+:root{
+  --bg:#F5F4F0;--ink:#141425;--body:#3A3A50;--slate:#64647A;
+  --navy:#1B3A6B;--navy-lt:#E6EDF7;
+  --crim:#9B2335;--crim-lt:#FCEDEF;
+  --gold:#A67C00;--gold-lt:#FFF8E1;
+  --teal:#0D7C66;--teal-lt:#E3F5EF;
+  --plum:#6B2D8B;--plum-lt:#F4ECF9;
+  --storm:#4A5568;--storm-lt:#EDF0F4;
+  --card:#FFFFFF;--bdr:#D6D3CC;--sub:#EDECE7;--mut:#8E8E9E;
+}
+.c{max-width:780px;margin:0 auto;padding:0 24px 90px;}
+
+/* Hero */
+.hero{position:relative;background:linear-gradient(135deg,#0F1E38 0%,#1B3A6B 40%,#2D1B4E 100%);margin:0 -24px;padding:80px 48px 60px;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hero-kicker{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:16px;}
+.hero h1{font-family:'Newsreader',serif;font-size:clamp(2rem,5vw,2.9rem);color:#fff;line-height:1.22;max-width:650px;font-weight:600;}
+.hero .sub{color:rgba(255,255,255,.62);font-size:15px;margin-top:20px;max-width:560px;line-height:1.7;}
+.hero .meta{display:flex;gap:20px;margin-top:28px;font-size:12px;color:rgba(255,255,255,.38);font-weight:500;}
+.hero .meta span{display:flex;align-items:center;gap:5px;}
+.hero-badge{position:absolute;right:40px;bottom:40px;width:90px;height:90px;border-radius:50%;border:2px solid rgba(255,255,255,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Newsreader',serif;color:rgba(255,255,255,.2);font-size:11px;line-height:1.2;text-align:center;letter-spacing:1px;text-transform:uppercase;}
+@media(max-width:600px){.hero{padding:50px 24px 40px;}.hero-badge{display:none;}}
+
+/* TOC */
+.toc{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:28px 30px;margin:36px 0;}
+.toc-title{font-family:'Newsreader',serif;font-size:1.05rem;color:var(--ink);margin-bottom:12px;font-weight:600;}
+.toc ol{padding-left:22px;font-size:14.5px;color:var(--navy);line-height:2.1;}
+.toc a{text-decoration:none;color:var(--navy);border-bottom:1px solid transparent;transition:.2s;}
+.toc a:hover{border-bottom-color:var(--navy);}
+
+h2{font-family:'Newsreader',serif;font-size:1.75rem;color:var(--ink);margin:58px 0 16px;line-height:1.28;}
+h3{font-family:'Newsreader',serif;font-size:1.2rem;color:var(--ink);margin:36px 0 10px;line-height:1.35;}
+h4{font-family:'Newsreader',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--navy);}
+
+/* Callout boxes */
+.cb{border-left:3px solid var(--navy);background:var(--navy-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.cb .k{font-weight:700;color:var(--navy);font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px;}
+.cb p{margin-bottom:0;color:#1A2E50;font-size:15px;line-height:1.7;}
+.cb-r{border-left-color:var(--crim);background:var(--crim-lt);}.cb-r .k{color:var(--crim);}.cb-r p{color:#5A1520;}
+.cb-g{border-left-color:var(--gold);background:var(--gold-lt);}.cb-g .k{color:var(--gold);}.cb-g p{color:#5A4010;}
+.cb-t{border-left-color:var(--teal);background:var(--teal-lt);}.cb-t .k{color:var(--teal);}.cb-t p{color:#0A4A3A;}
+.cb-p{border-left-color:var(--plum);background:var(--plum-lt);}.cb-p .k{color:var(--plum);}.cb-p p{color:#3E2050;}
+.cb-s{border-left-color:var(--storm);background:var(--storm-lt);}.cb-s .k{color:var(--storm);}.cb-s p{color:#2D3748;}
+
+/* Quote boxes */
+.qt{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px 28px;margin:28px 0;position:relative;}
+.qt::before{content:'"';position:absolute;top:8px;left:16px;font-family:'Newsreader',serif;font-size:48px;color:var(--bdr);line-height:1;}
+.qt blockquote{font-family:'Newsreader',serif;font-size:17px;font-style:italic;color:var(--ink);line-height:1.65;padding-left:24px;margin:0;}
+.qt .attr{font-family:'Outfit',sans-serif;font-style:normal;font-size:12.5px;color:var(--mut);margin-top:10px;padding-left:24px;}
+.qt .attr strong{color:var(--slate);font-weight:600;}
+
+/* Versus quote pair */
+.vs-pair{display:grid;grid-template-columns:1fr auto 1fr;gap:0;margin:32px 0;align-items:stretch;}
+.vs-q{border-radius:12px;padding:22px 20px;position:relative;}
+.vs-q::before{content:'"';position:absolute;top:4px;left:12px;font-family:'Newsreader',serif;font-size:40px;line-height:1;}
+.vs-q blockquote{font-family:'Newsreader',serif;font-size:14.5px;font-style:italic;line-height:1.6;padding-left:18px;margin:0;}
+.vs-q .attr{font-style:normal;font-size:11.5px;margin-top:10px;padding-left:18px;font-weight:600;}
+.vs-left{background:#E6EDF7;border:1px solid #C8D6EC;}.vs-left::before{color:#C8D6EC;}.vs-left blockquote{color:#1A2E50;}.vs-left .attr{color:var(--navy);}
+.vs-right{background:var(--crim-lt);border:1px solid #E8C4C9;}.vs-right::before{color:#E8C4C9;}.vs-right blockquote{color:#5A1520;}.vs-right .attr{color:var(--crim);}
+.vs-mid{display:flex;align-items:center;justify-content:center;padding:0 8px;}
+.vs-badge{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;font-family:'Newsreader',serif;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+@media(max-width:640px){.vs-pair{grid-template-columns:1fr;gap:8px;}.vs-mid{padding:4px 0;}}
+
+/* Stat row */
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px 14px;text-align:center;}
+.sb .v{font-family:'Newsreader',serif;font-size:1.65rem;line-height:1;margin-bottom:4px;font-weight:600;}
+.sb .v.c1{color:var(--navy);}.sb .v.c2{color:var(--crim);}.sb .v.c3{color:var(--gold);}.sb .v.c4{color:var(--teal);}
+.sb .l{font-size:10.5px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.5px;line-height:1.3;}
+
+/* Tables */
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.55;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--crim);font-weight:600;}.tbl .y{color:var(--gold);font-weight:600;}
+.tbl .sm{font-size:11.5px;color:var(--mut);}
+
+/* Timeline */
+.tl{position:relative;margin:36px 0;padding-left:32px;}
+.tl::before{content:'';position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--navy),var(--crim),var(--gold),var(--teal));}
+.tl-item{position:relative;margin-bottom:28px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{position:absolute;left:-28px;top:6px;width:16px;height:16px;border-radius:50%;border:3px solid var(--bg);z-index:2;}
+.tl-dot.d-navy{background:var(--navy);}.tl-dot.d-crim{background:var(--crim);}.tl-dot.d-gold{background:var(--gold);}.tl-dot.d-teal{background:var(--teal);}.tl-dot.d-plum{background:var(--plum);}.tl-dot.d-storm{background:var(--storm);}
+.tl-date{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;}
+.tl-date.navy{color:var(--navy);}.tl-date.crim{color:var(--crim);}.tl-date.gold{color:var(--gold);}.tl-date.teal{color:var(--teal);}.tl-date.plum{color:var(--plum);}.tl-date.storm{color:var(--storm);}
+.tl-title{font-family:'Newsreader',serif;font-size:1.05rem;color:var(--ink);font-weight:600;margin-bottom:4px;}
+.tl-body{font-size:14px;color:var(--body);line-height:1.65;}
+
+/* Cards grid */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+@media(max-width:600px){.cg{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:22px;position:relative;overflow:hidden;}
+.mc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.mc.mc-n::before{background:var(--navy);}.mc.mc-c::before{background:var(--crim);}.mc.mc-g::before{background:var(--gold);}.mc.mc-t::before{background:var(--teal);}.mc.mc-p::before{background:var(--plum);}
+.mc h4{margin-top:0;font-size:1rem;}
+.mc p{font-size:14px;margin-bottom:0;line-height:1.6;}
+
+/* SVG container */
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 20px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Newsreader',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;font-weight:600;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+
+/* Flowchart */
+.flow{display:flex;flex-direction:column;align-items:center;gap:0;margin:28px 0;}
+.flow-node{background:var(--card);border:2px solid var(--bdr);border-radius:10px;padding:14px 24px;text-align:center;max-width:400px;width:100%;}
+.flow-node.fn-y{border-color:var(--teal);background:var(--teal-lt);}.flow-node.fn-n{border-color:var(--crim);background:var(--crim-lt);}
+.flow-node.fn-q{border-color:var(--gold);background:var(--gold-lt);border-radius:50%;padding:18px;width:auto;min-width:200px;}
+.flow-node h4{margin:0 0 4px;font-size:.95rem;}
+.flow-node p{margin:0;font-size:13px;line-height:1.5;}
+.flow-arrow{font-size:20px;color:var(--mut);padding:4px 0;}
+
+/* Badge chips */
+.chip{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:4px;}
+.chip-n{background:var(--navy-lt);color:var(--navy);}.chip-c{background:var(--crim-lt);color:var(--crim);}.chip-g{background:var(--gold-lt);color:var(--gold);}.chip-t{background:var(--teal-lt);color:var(--teal);}.chip-p{background:var(--plum-lt);color:var(--plum);}
+
+/* Disclaimer */
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--slate);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+
+/* Section divider */
+.sep{border:none;border-top:1px solid var(--bdr);margin:50px 0;}
+
+/* Sticky nav bar */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(245,244,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr);padding:12px 24px;margin:0 -24px;display:flex;align-items:center;gap:12px;}
+.topbar .logo{font-family:'Newsreader',serif;font-weight:700;color:var(--ink);font-size:14px;white-space:nowrap;}
+.topbar .pipe{color:var(--bdr);font-size:18px;font-weight:300;}
+.topbar .cat{font-size:11px;font-weight:600;color:var(--navy);letter-spacing:.5px;text-transform:uppercase;}
+
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Sticky top bar -->
+<div class="topbar">
+  <span class="logo">The Peptide Rundown</span>
+  <span class="pipe">|</span>
+  <span class="cat">Regulation & Legal Guide</span>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-kicker">Updated February 2026 · Regulatory Deep Dive</div>
+  <h1>Are Peptides Legal? The FDA, RFK Jr., and the Battle Over America's Most Confusing Wellness Category</h1>
+  <p class="sub">Seventeen peptides banned overnight. A Health Secretary pledging to "end the war." Lawsuits, advisory panels, and TikTok influencers mixing vials on kitchen counters. Here's what's actually happening — and what it means for you.</p>
+  <div class="meta">
+    <span>📖 25 min read</span>
+    <span>📅 Feb 18, 2026</span>
+  </div>
+  <div class="hero-badge">2026<br>Guide</div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <div class="toc-title">In This Guide</div>
+  <ol>
+    <li><a href="#landscape">The Current Landscape: Why Nobody Knows What's Legal</a></li>
+    <li><a href="#framework">How Peptide Regulation Actually Works (503A, Categories, and the FDA's System)</a></li>
+    <li><a href="#timeline">Timeline: The Crackdown, the Lawsuit, and the Reversal</a></li>
+    <li><a href="#rfk">The RFK Factor: What He's Promised and What's Actually Changed</a></li>
+    <li><a href="#fda-case">The FDA's Case: Why They Restricted These Peptides</a></li>
+    <li><a href="#freedom-case">The Medical Freedom Case: Why Critics Say the FDA Went Too Far</a></li>
+    <li><a href="#peptide-status">Peptide-by-Peptide: Current Legal Status of Popular Compounds</a></li>
+    <li><a href="#gray-market">The Gray Market Problem: "Research Use Only" and What It Really Means</a></li>
+    <li><a href="#whats-next">What's Coming Next: 2026 Outlook and What to Watch</a></li>
+    <li><a href="#consumer-guide">Consumer Decision Guide: How to Navigate This Mess</a></li>
+  </ol>
+</div>
+
+<!-- Stat row -->
+<div class="sr">
+  <div class="sb"><div class="v c1">17+</div><div class="l">Peptides Restricted<br>by FDA Since 2023</div></div>
+  <div class="sb"><div class="v c2">$50B+</div><div class="l">Projected Peptide Market<br>Value, 2026</div></div>
+  <div class="sb"><div class="v c3">0</div><div class="l">Wellness Peptides with<br>FDA Approval</div></div>
+  <div class="sb"><div class="v c4">43%</div><div class="l">Research Peptides Failing<br>Purity Claims (2024)</div></div>
+</div>
+
+<!-- Section 1 -->
+<h2 id="landscape">The Current Landscape: Why Nobody Knows What's Legal</h2>
+
+<p>If you've tried to figure out whether you can legally get BPC-157, TB-500, or CJC-1295 in 2026, you've probably encountered a maze of contradictory information. Wellness clinics say they're available. Online vendors sell them with "research use only" labels. Your doctor may have prescribed them a year ago but now says they can't. TikTok influencers inject them on camera while linking to discount codes in their bios.</p>
+
+<p>The confusion isn't your fault. The regulatory landscape for peptides is genuinely one of the most complex, rapidly shifting areas of American health policy right now — and it sits at the intersection of three powerful forces colliding simultaneously.</p>
+
+<div class="cg">
+  <div class="mc mc-n">
+    <h4>Force 1: The FDA Crackdown</h4>
+    <p>Starting in September 2023, the FDA added 17+ peptides to its "Category 2" restricted list, effectively banning compounding pharmacies from making them. The agency cited safety concerns and a lack of human clinical data.</p>
+  </div>
+  <div class="mc mc-c">
+    <h4>Force 2: The Political Counter-Offensive</h4>
+    <p>Health Secretary Robert F. Kennedy Jr. has publicly and repeatedly vowed to "end FDA's war on peptides," creating enormous uncertainty about whether these restrictions will survive, soften, or be reversed entirely.</p>
+  </div>
+  <div class="mc mc-g">
+    <h4>Force 3: The Exploding Consumer Market</h4>
+    <p>Consumer demand for peptides has surged far beyond what regulation can contain. Gray-market "research chemical" vendors, overseas suppliers, and TikTok-driven protocols have created a parallel marketplace operating almost entirely outside regulatory oversight.</p>
+  </div>
+  <div class="mc mc-t">
+    <h4>Force 4: The Legal Battles</h4>
+    <p>Compounding pharmacies and wellness companies have fought back through federal lawsuits, forcing the FDA to hold public advisory meetings it initially bypassed — and the results have been a confusing back-and-forth of bans, removals, and re-rejections.</p>
+  </div>
+</div>
+
+<p>The result is a landscape where the same peptide can be simultaneously: banned from compounding pharmacies, available from unregulated online vendors, under active federal review, and the subject of political promises to deregulate. Making sense of this requires understanding how the system works, what happened, and who's pulling the levers.</p>
+
+<!-- Section 2 -->
+<h2 id="framework">How Peptide Regulation Actually Works</h2>
+
+<p>Before we get to the politics and drama, you need to understand the regulatory framework. Without this foundation, nothing else will make sense. The key is a section of federal law called <strong>Section 503A</strong> of the Federal Food, Drug, and Cosmetic Act — and the FDA's system for categorizing what substances can and can't be used in "compounding."</p>
+
+<h3>What Is Compounding?</h3>
+
+<p>Compounding is the practice of pharmacies creating customized medications — adjusting dosages, combining ingredients, or preparing formulations not available from standard drug manufacturers. It's a legitimate, centuries-old pharmaceutical practice. When your doctor prescribes a specific peptide like BPC-157 or CJC-1295, a compounding pharmacy creates that preparation from raw ingredients (called "bulk drug substances") according to pharmaceutical standards.</p>
+
+<p>Under Section 503A, compounding pharmacies can prepare medications that are <strong>exempt from the standard FDA drug approval process</strong> — but only if the raw ingredients they use meet certain criteria. The substance must either have a USP/NF monograph, be a component of an FDA-approved drug, or appear on the FDA's official "503A Bulks List."</p>
+
+<h3>The Three-Category System</h3>
+
+<p>Here's where it gets critical. While the FDA has been developing its official Bulks List (a process that has taken years), it created an <strong>interim policy</strong> with three categories to sort nominated substances:</p>
+
+<div class="svg-box">
+  <div class="st">FDA's Three-Category Classification System</div>
+  <div class="ss">How bulk drug substances are sorted under the interim 503A policy</div>
+  <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg">
+    <!-- Category 1 -->
+    <rect x="20" y="20" width="200" height="280" rx="12" fill="#E3F5EF" stroke="#0D7C66" stroke-width="2"/>
+    <text x="120" y="56" text-anchor="middle" font-family="Newsreader,serif" font-size="18" font-weight="700" fill="#0D7C66">Category 1</text>
+    <text x="120" y="78" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="600" fill="#0D7C66" letter-spacing="1">APPROVED FOR USE</text>
+    <line x1="50" y1="92" x2="190" y2="92" stroke="#0D7C66" stroke-opacity=".3"/>
+    <text x="120" y="115" text-anchor="middle" font-family="Outfit,sans-serif" font-size="12" fill="#0A4A3A">Can be compounded</text>
+    <text x="120" y="133" text-anchor="middle" font-family="Outfit,sans-serif" font-size="12" fill="#0A4A3A">by 503A pharmacies</text>
+    <line x1="50" y1="152" x2="190" y2="152" stroke="#0D7C66" stroke-opacity=".15"/>
+    <text x="120" y="175" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" fill="#0A4A3A" font-weight="600">Examples:</text>
+    <text x="120" y="195" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#0A4A3A">Sermorelin</text>
+    <text x="120" y="213" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#0A4A3A">Gonadorelin</text>
+    <text x="120" y="231" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#0A4A3A">GHK-Cu (topical)</text>
+    <text x="120" y="249" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#0A4A3A">L-Theanine</text>
+    <circle cx="120" cy="282" r="14" fill="#0D7C66"/>
+    <text x="120" y="287" text-anchor="middle" font-family="Outfit,sans-serif" font-size="16" fill="#fff">✓</text>
+
+    <!-- Category 2 -->
+    <rect x="250" y="20" width="200" height="280" rx="12" fill="#FCEDEF" stroke="#9B2335" stroke-width="2"/>
+    <text x="350" y="56" text-anchor="middle" font-family="Newsreader,serif" font-size="18" font-weight="700" fill="#9B2335">Category 2</text>
+    <text x="350" y="78" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="600" fill="#9B2335" letter-spacing="1">SAFETY CONCERNS</text>
+    <line x1="280" y1="92" x2="420" y2="92" stroke="#9B2335" stroke-opacity=".3"/>
+    <text x="350" y="115" text-anchor="middle" font-family="Outfit,sans-serif" font-size="12" fill="#5A1520">Cannot be compounded.</text>
+    <text x="350" y="133" text-anchor="middle" font-family="Outfit,sans-serif" font-size="12" fill="#5A1520">FDA may take action.</text>
+    <line x1="280" y1="152" x2="420" y2="152" stroke="#9B2335" stroke-opacity=".15"/>
+    <text x="350" y="175" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" fill="#5A1520" font-weight="600">Examples:</text>
+    <text x="350" y="195" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#5A1520">BPC-157</text>
+    <text x="350" y="213" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#5A1520">TB-500 / Thymosin β4</text>
+    <text x="350" y="231" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#5A1520">LL-37, Epitalon</text>
+    <text x="350" y="249" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#5A1520">GHK-Cu (injectable)</text>
+    <circle cx="350" cy="282" r="14" fill="#9B2335"/>
+    <text x="350" y="287" text-anchor="middle" font-family="Outfit,sans-serif" font-size="16" fill="#fff">✕</text>
+
+    <!-- Category 3 -->
+    <rect x="480" y="20" width="200" height="280" rx="12" fill="#EDF0F4" stroke="#4A5568" stroke-width="2"/>
+    <text x="580" y="56" text-anchor="middle" font-family="Newsreader,serif" font-size="18" font-weight="700" fill="#4A5568">Category 3</text>
+    <text x="580" y="78" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="600" fill="#4A5568" letter-spacing="1">INSUFFICIENT DATA</text>
+    <line x1="510" y1="92" x2="650" y2="92" stroke="#4A5568" stroke-opacity=".3"/>
+    <text x="580" y="115" text-anchor="middle" font-family="Outfit,sans-serif" font-size="12" fill="#2D3748">Nomination lacked</text>
+    <text x="580" y="133" text-anchor="middle" font-family="Outfit,sans-serif" font-size="12" fill="#2D3748">supporting evidence.</text>
+    <line x1="510" y1="152" x2="650" y2="152" stroke="#4A5568" stroke-opacity=".15"/>
+    <text x="580" y="175" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" fill="#2D3748" font-weight="600">Result:</text>
+    <text x="580" y="195" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#2D3748">Not allowed for</text>
+    <text x="580" y="213" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#2D3748">compounding.</text>
+    <text x="580" y="235" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#2D3748">May be re-nominated</text>
+    <text x="580" y="253" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11.5" fill="#2D3748">with better evidence.</text>
+    <circle cx="580" cy="282" r="14" fill="#4A5568"/>
+    <text x="580" y="287" text-anchor="middle" font-family="Outfit,sans-serif" font-size="16" fill="#fff">?</text>
+  </svg>
+</div>
+
+<div class="cb-g">
+  <div class="k">Key Concept</div>
+  <p><strong>Category 2 is the battleground.</strong> When the FDA places a peptide in Category 2, it means the agency has identified "significant safety risks" and compounding pharmacies are effectively prohibited from using it. This is the category that triggered the lawsuits, the political backlash, and the ongoing regulatory war. Almost every popular "wellness peptide" — BPC-157, TB-500, CJC-1295, ipamorelin, epitalon — landed here in September 2023.</p>
+</div>
+
+<h3>503A vs. 503B: Two Types of Compounding</h3>
+
+<p>There are two kinds of compounding facilities, and they operate under different rules. <strong>503A pharmacies</strong> are traditional state-licensed compounding pharmacies that prepare individual prescriptions for specific patients on a doctor's order. <strong>503B outsourcing facilities</strong> are larger operations registered with the FDA that can compound drugs in larger batches without patient-specific prescriptions. Both are governed by the same Category system for allowed bulk substances, but with separate lists that don't always align perfectly — adding another layer of confusion.</p>
+
+<!-- Section 3: Timeline -->
+<h2 id="timeline">Timeline: The Crackdown, the Lawsuit, and the Reversal</h2>
+
+<p>Understanding how we got here requires walking through a specific sequence of events. Each step makes the next one make sense — but taken out of order, it looks like chaos (which is partly why the public is so confused).</p>
+
+<div class="tl">
+  <div class="tl-item">
+    <div class="tl-dot d-navy"></div>
+    <div class="tl-date navy">Pre-2023 · The Gray Area Years</div>
+    <div class="tl-title">Peptides Compounded in a Regulatory Blind Spot</div>
+    <div class="tl-body">For years, compounding pharmacies prepared peptides like BPC-157, TB-500, and CJC-1295 in a legal gray area. These peptides weren't on the FDA's official "allowed" list — but they weren't explicitly banned, either. Doctors prescribed them. Patients used them. The FDA largely looked the other way. Meanwhile, a parallel "research chemical" market grew alongside, selling the same compounds directly to consumers with "not for human consumption" labels.</div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot d-crim"></div>
+    <div class="tl-date crim">September 29, 2023 · The Bombshell</div>
+    <div class="tl-title">FDA Adds 17 Peptides to Category 2 Overnight</div>
+    <div class="tl-body">Without public comment, advisory committee review, or detailed safety data, the FDA updated its 503A interim bulks list and placed more than a dozen popular peptides into Category 2 — the "significant safety concerns" classification that effectively prohibits compounding. BPC-157, TB-500, thymosin alpha-1, CJC-1295, ipamorelin, AOD-9604, epitalon, LL-37, GHK-Cu (injectable), and others were all hit simultaneously. Clinics, pharmacies, and patients were blindsided. The Alliance for Pharmacy Compounding (APC) called the move out and said that "trust us" isn't a sufficient explanation for agency actions.</div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot d-gold"></div>
+    <div class="tl-date gold">October 2024 · RFK's Tweet Ignites a Movement</div>
+    <div class="tl-title">Kennedy Pledges to End "FDA's War on Public Health"</div>
+    <div class="tl-body">Shortly before the November election, Robert F. Kennedy Jr. posted on social media that the FDA's "war on public health is about to end. This includes its aggressive suppression of psychedelics, peptides, stem cells…" The post went viral and became a defining statement of the MAHA movement. Peptide companies and wellness influencers seized on it as a signal that deregulation was coming.</div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot d-plum"></div>
+    <div class="tl-date plum">April 2024 · The Industry Fights Back</div>
+    <div class="tl-title">Evexias and Farmakeio Sue the FDA</div>
+    <div class="tl-body">EVEXIAS Health Solutions and FarmaKeio Pharmacy filed a federal lawsuit in the Northern District of Texas, arguing the FDA violated the Administrative Procedure Act by placing peptides in Category 2 without proper notice, public comment, or evidence disclosure. Their core argument: the FDA made new rules without following its own legally required process.</div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot d-teal"></div>
+    <div class="tl-date teal">September 2024 · A Partial Retreat</div>
+    <div class="tl-title">Settlement Reached — Five Peptides Removed from Category 2</div>
+    <div class="tl-body">The lawsuit produced a settlement. The FDA agreed to remove five peptides from Category 2 — AOD-9604, CJC-1295, ipamorelin, thymosin alpha-1, and Selank — based on nominators withdrawing their nominations. The FDA also agreed to schedule two public meetings of the Pharmacy Compounding Advisory Committee (PCAC) to properly review these peptides. It was widely seen as a win: the FDA had "blinked" and would now follow proper procedure.</div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot d-crim"></div>
+    <div class="tl-date crim">October 29, 2024 · PCAC Meeting #1</div>
+    <div class="tl-title">Advisory Committee Rejects Ipamorelin and Ibutamoren</div>
+    <div class="tl-body">At the first PCAC meeting, the FDA reviewed ipamorelin, ibutamoren mesylate (MK-677), kisspeptin-10, and L-theanine. The FDA's own analysis recommended that none should be included in the 503A Bulks List. The committee agreed — rejecting all except L-theanine. The door that seemed to be opening began closing again.</div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot d-crim"></div>
+    <div class="tl-date crim">December 4, 2024 · PCAC Meeting #2</div>
+    <div class="tl-title">CJC-1295, Thymosin Alpha-1, and AOD-9604 Also Rejected</div>
+    <div class="tl-body">At the second meeting, the committee reviewed the peptides that had been removed from Category 2 just months earlier. All were rejected for inclusion on the approved bulks list — including CJC-1295 and thymosin alpha-1, despite thymosin alpha-1 being approved for therapeutic use in more than 30 countries. The back-and-forth created enormous confusion: removed from the banned list, then rejected by the advisory committee.</div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot d-navy"></div>
+    <div class="tl-date navy">January 7, 2025 · New Rules Formalized</div>
+    <div class="tl-title">FDA Publishes Final Interim Policy Guidance</div>
+    <div class="tl-body">The FDA published its updated interim policy in the Federal Register, finalizing its approach to bulk drug substance categorization. The guidance also announced that the agency would stop creating new Category 1/2/3 designations for newly nominated substances going forward — but the existing categorizations remain in effect.</div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot d-gold"></div>
+    <div class="tl-date gold">2025 · Kennedy Takes Office</div>
+    <div class="tl-title">RFK Jr. Becomes HHS Secretary — Removes FDA Advisory Panel Members</div>
+    <div class="tl-body">After confirmation, Kennedy began reshaping the FDA. Experts were removed from the compounding advisory panel — including Dr. Anita Gupta of Johns Hopkins, who had served on the committee. This move was widely interpreted as paving the way for appointing more peptide-friendly experts. Kennedy reiterated his pledge on Gary Brecka's podcast to "end the war at FDA" on peptides and other alternative therapies.</div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-dot d-storm"></div>
+    <div class="tl-date storm">February 2026 · Where We Are Now</div>
+    <div class="tl-title">Limbo: Formal Bans Persist, But Enforcement Is Uncertain</div>
+    <div class="tl-body">As of this writing, the Category 2 restrictions on BPC-157, TB-500, epitalon, LL-37, and injectable GHK-Cu remain in effect. CJC-1295, ipamorelin, and thymosin alpha-1 were rejected by PCAC and remain prohibited for compounding. But with Kennedy reshaping the FDA and compounding pharmacies growing more aggressive in their offerings, the gap between formal policy and on-the-ground reality is widening by the day.</div>
+  </div>
+</div>
+
+<!-- Section 4: RFK -->
+<h2 id="rfk">The RFK Factor: What He's Promised and What's Actually Changed</h2>
+
+<p>No single person has had more impact on the peptide landscape than Robert F. Kennedy Jr. His public statements about peptides haven't been subtle — they've been sweeping, specific, and delivered to audiences of millions.</p>
+
+<div class="qt">
+  <blockquote>FDA's war on public health is about to end. This includes its aggressive suppression of psychedelics, peptides, stem cells, raw milk, hyperbaric therapies, chelating compounds, ivermectin, hydroxychloroquine, vitamins, clean foods, sunshine, exercise, nutraceuticals and anything else that advances human health and can't be patented by Pharma. If you work for the FDA and are part of this corrupt system, I have two messages for you: 1. Preserve your records, and 2. Pack your bags.</blockquote>
+  <div class="attr"><strong>Robert F. Kennedy Jr.</strong> — Social media post, October 2024 (pre-election)</div>
+</div>
+
+<p>In a later appearance on the Ultimate Human podcast with Gary Brecka, Kennedy expanded on his vision:</p>
+
+<div class="qt">
+  <blockquote>We're going to end the war at FDA against alternative medicine: the war on stem cells, the war on chelating drugs, the war on peptides. Our position is that the FDA has a job: Just do the science on these kinds of issues and then tell the public what they've learned from the science … but don't tell physicians what they can and cannot prescribe.</blockquote>
+  <div class="attr"><strong>Robert F. Kennedy Jr.</strong> — Ultimate Human Podcast with Gary Brecka, 2025</div>
+</div>
+
+<p>Kennedy added a nuance that's often lost in the headlines: he stated that he doesn't want a "Wild West" scenario, but rather wants to "respect the intelligence of the American people" to make their own health decisions based on available science. His fundamental argument is that the FDA should be an information provider, not a gatekeeper.</p>
+
+<h3>What Has Actually Changed Under Kennedy's Influence?</h3>
+
+<p>The gap between Kennedy's rhetoric and concrete policy changes is worth examining honestly:</p>
+
+<div class="cg">
+  <div class="mc mc-t">
+    <h4>✓ What Has Changed</h4>
+    <p><strong>Advisory panel restructuring.</strong> Experts were removed from the PCAC compounding advisory committee, potentially opening the door for more peptide-friendly appointees. <strong>Enforcement posture has softened</strong> — compounding pharmacies report growing more aggressive in their peptide offerings, betting that enforcement will ease. <strong>Public meetings</strong> on peptide compounding were forced (partly via the Evexias settlement, but Kennedy's political pressure contributed).</p>
+  </div>
+  <div class="mc mc-c">
+    <h4>✕ What Hasn't Changed (Yet)</h4>
+    <p><strong>Category 2 restrictions remain in effect.</strong> BPC-157, TB-500, epitalon, and LL-37 are still formally prohibited for compounding. <strong>PCAC rejections stand.</strong> CJC-1295, ipamorelin, thymosin alpha-1, and AOD-9604 were all rejected for the bulks list by the advisory committee. <strong>No executive order or formal policy reversal</strong> has been issued regarding peptides specifically. <strong>Warning letters continue</strong> — as recently as December 2024, the FDA issued warnings to "research chemical" vendors.</p>
+  </div>
+</div>
+
+<div class="cb-g">
+  <div class="k">The Likely Path Forward</div>
+  <p>Industry observers expect Kennedy won't directly reverse the Category 2 designations through executive action (which would face legal challenges). Instead, the more likely mechanism is <strong>enforcement discretion</strong> — the FDA could simply announce it won't enforce compounding restrictions on certain peptides, effectively legalizing them without changing the formal rules. This would be similar to how marijuana enforcement works in some states: technically illegal federally, but unenforced. As Jay Campbell, a prominent peptide advocate and author, put it: "2026 is going to be a very interesting year."</p>
+</div>
+
+<h3>Kennedy's Conflicts of Interest</h3>
+
+<p>It's worth noting — as multiple media investigations have reported — that several of Kennedy's close associates are prominent peptide marketers. Gary Brecka, who hosts the podcast where Kennedy made his most detailed peptide statements, sells peptide injectables, patches, and nasal sprays through his website for $350-$600 each — including ipamorelin and CJC-1295, both of which the FDA has flagged for safety risks. Dr. Mark Hyman, another Kennedy associate, is also a prominent peptide proponent. Whether these relationships represent genuine shared health philosophy or financial entanglement is a matter of perspective, but transparency requires noting them.</p>
+
+<!-- Section 5: FDA's Case -->
+<h2 id="fda-case">The FDA's Case: Why They Restricted These Peptides</h2>
+
+<p>It's easy to cast the FDA as the villain in this story, and much of the peptide community does exactly that. But the agency's concerns aren't fabricated. Understanding them is essential for making informed decisions — even if you ultimately disagree with the FDA's approach.</p>
+
+<h3>The Core Safety Arguments</h3>
+
+<div class="qt">
+  <blockquote>Patients should be really asking their health care professionals: Are these medications safe long term? That's the question I would ask if I was a patient.</blockquote>
+  <div class="attr"><strong>Dr. Anita Gupta</strong> — Johns Hopkins School of Medicine, former FDA compounding committee member (AP, Nov 2025)</div>
+</div>
+
+<p>The FDA's position rests on several pillars, all of which deserve honest evaluation:</p>
+
+<p><strong>No completed human clinical trials for most wellness peptides.</strong> This is the FDA's strongest argument and it's essentially unchallengeable on the facts. BPC-157 has exactly one human study — a retrospective review of 12 patients with no control group (Lee 2021). TB-500, epitalon, LL-37, and injectable GHK-Cu have zero completed human clinical trials for their promoted uses. Even peptides with more data, like CJC-1295 (Teichman 2006) and ipamorelin (Raun 1998), have pharmacokinetic studies measuring hormone levels — not clinical outcomes trials measuring whether patients actually get better.</p>
+
+<p><strong>Unknown long-term safety profiles.</strong> The longest human safety data exists for MK-677 (2 years, Nass 2008) and CJC-1295 (49 days, Teichman 2006). For BPC-157, TB-500, and most others, long-term human safety data simply doesn't exist.</p>
+
+<p><strong>Quality control concerns are severe and documented.</strong> An independent investigation by The Peptide List in 2024 sent samples from four tiers of vendors to an analytical lab. The results were alarming:</p>
+
+<div class="svg-box">
+  <div class="st">Research Peptide Purity by Vendor Tier</div>
+  <div class="ss">Independent lab testing results — lower purity means more unknown contaminants in each vial</div>
+  <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- Bars -->
+    <text x="140" y="40" text-anchor="end" font-family="Outfit,sans-serif" font-size="12" fill="#3A3A50" font-weight="500">Tier 1: 503B Facility</text>
+    <rect x="150" y="24" width="460" height="26" rx="5" fill="#E3F5EF"/>
+    <rect x="150" y="24" width="460" height="26" rx="5" fill="#0D7C66"/>
+    <text x="600" y="42" font-family="Outfit,sans-serif" font-size="11" fill="#fff" font-weight="700">99.2%</text>
+
+    <text x="140" y="88" text-anchor="end" font-family="Outfit,sans-serif" font-size="12" fill="#3A3A50" font-weight="500">Tier 2: Established Vendor</text>
+    <rect x="150" y="72" width="460" height="26" rx="5" fill="#E6EDF7"/>
+    <rect x="150" y="72" width="445" height="26" rx="5" fill="#1B3A6B"/>
+    <text x="583" y="90" font-family="Outfit,sans-serif" font-size="11" fill="#fff" font-weight="700">97.2%</text>
+
+    <text x="140" y="136" text-anchor="end" font-family="Outfit,sans-serif" font-size="12" fill="#3A3A50" font-weight="500">Tier 3: Bulk Supplier</text>
+    <rect x="150" y="120" width="460" height="26" rx="5" fill="#FFF8E1"/>
+    <rect x="150" y="120" width="380" height="26" rx="5" fill="#A67C00"/>
+    <text x="518" y="138" font-family="Outfit,sans-serif" font-size="11" fill="#fff" font-weight="700">~90%</text>
+
+    <text x="140" y="184" text-anchor="end" font-family="Outfit,sans-serif" font-size="12" fill="#3A3A50" font-weight="500">Tier 4: Budget Vendor</text>
+    <rect x="150" y="168" width="460" height="26" rx="5" fill="#FCEDEF"/>
+    <rect x="150" y="168" width="320" height="26" rx="5" fill="#9B2335"/>
+    <text x="458" y="186" font-family="Outfit,sans-serif" font-size="11" fill="#fff" font-weight="700">&lt;85%</text>
+
+    <!-- Threshold line -->
+    <line x1="564" y1="14" x2="564" y2="210" stroke="#9B2335" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="564" y="230" text-anchor="middle" font-family="Outfit,sans-serif" font-size="10" fill="#9B2335" font-weight="600">FDA Injectable</text>
+    <text x="564" y="244" text-anchor="middle" font-family="Outfit,sans-serif" font-size="10" fill="#9B2335" font-weight="600">Threshold (97.5%)</text>
+
+    <!-- Lead contamination note -->
+    <rect x="150" y="204" width="18" height="18" rx="3" fill="#9B2335"/>
+    <text x="159" y="217" text-anchor="middle" font-family="Outfit,sans-serif" font-size="12" fill="#fff" font-weight="700">!</text>
+    <text x="176" y="218" font-family="Outfit,sans-serif" font-size="11" fill="#5A1520">Tier 3-4: Lead contamination detected. Multiple unidentified impurity peaks at 5-15%.</text>
+  </svg>
+</div>
+
+<p>Separately, a broader analysis by Janoshik Analytical found that <strong>43% of research peptides tested in 2024 failed to meet label purity claims</strong>. The FDA's own warning letters have documented vendors selling vials with unknown composition, no sterility testing, and manufacturing in uncontrolled environments.</p>
+
+<div class="qt">
+  <blockquote>Research-grade peptides are going to have junk in them. They're going to have chemicals used in the purification process and fragments of peptides that you don't want. What's actually in there? If someone injects it under their skin, what are they getting?</blockquote>
+  <div class="attr"><strong>Paul Knoepfler, Ph.D.</strong> — Cellular biologist, University of California Davis (CNN, Nov 2025)</div>
+</div>
+
+<p><strong>The biologics classification problem.</strong> The FDA considers many peptides to be biologics — the most complex and potentially high-risk category of drugs — requiring extra precautions in manufacturing and storage. This classification puts peptides in a more restrictive regulatory framework than simple chemical compounds, which some industry advocates argue is inappropriate for short-chain peptides that can be reliably synthesized.</p>
+
+<!-- Section 6: Freedom Case -->
+<h2 id="freedom-case">The Medical Freedom Case: Why Critics Say the FDA Went Too Far</h2>
+
+<p>The counter-arguments to the FDA's position are substantial, and they come from physicians, pharmacists, patients, and legal scholars — not just from wellness influencers and supplement companies.</p>
+
+<h3>The Procedural Argument: The FDA Broke Its Own Rules</h3>
+
+<p>This was the core of the Evexias lawsuit and it succeeded. The FDA placed 17 peptides in Category 2 in September 2023 without following the legally required steps: no public comment period, no Pharmacy Compounding Advisory Committee review, no published safety data supporting the specific restrictions. As the Alliance for Pharmacy Compounding stated in a letter to the FDA:</p>
+
+<div class="qt">
+  <blockquote>"Trust us" is not a sufficient explanation for agency actions.</blockquote>
+  <div class="attr"><strong>Alliance for Pharmacy Compounding (APC)</strong> — Letter to FDA Office of Compounding Quality and Compliance, 2023</div>
+</div>
+
+<p>The FDA's settlement — agreeing to hold PCAC meetings and follow proper review processes — was widely seen as an acknowledgment that the agency had overstepped procedurally.</p>
+
+<h3>The Clinical Experience Argument</h3>
+
+<p>Practitioners point to years of real-world clinical use without major safety incidents. Thymosin alpha-1, for example, has been studied in over 80 clinical trials involving more than 230,000 patients globally and is approved for therapeutic use in over 30 countries. The FDA classified it alongside peptides with far less evidence — a blanket approach that critics say fails to differentiate between genuinely untested compounds and peptides with meaningful clinical track records.</p>
+
+<div class="qt">
+  <blockquote>Patients deserve access to critical therapies that have been proven safe by science but are being blocked by the bureaucracy. EVEXIAS is proud to stand up against the FDA's unlawful actions to protect the rights of patients and practitioners.</blockquote>
+  <div class="attr"><strong>Dan DeNeui</strong> — CEO, EVEXIAS Health Solutions (Peptide Legal Fund press release, April 2024)</div>
+</div>
+
+<h3>The Pharmaceutical Industry Argument</h3>
+
+<p>Perhaps the most politically potent argument is the perception of a double standard. Critics note that the timing of the FDA's peptide crackdown coincided with the explosive commercial success of GLP-1 drugs — peptide-based medications generating tens of billions in revenue for pharmaceutical companies like Novo Nordisk and Eli Lilly. When the FDA restricts compounding pharmacies from making peptides that compete (even indirectly) with patented blockbuster drugs, the optics are difficult.</p>
+
+<p>EVEXIAS framed this argument directly, noting that the FDA banned compounding of certain peptides while "Big Pharma drugs, which are FDA-approved and use these recategorized peptides as their dominant ingredient, have not encountered regulatory consequences."</p>
+
+<div class="cb-s">
+  <div class="k">Both Sides Have a Point</div>
+  <p>This is one of those rare policy debates where both sides are making legitimate arguments. The FDA is correct that most wellness peptides lack adequate human safety data and the quality of unregulated products is genuinely dangerous. Critics are correct that the FDA bypassed its own procedures, applied restrictions too broadly, and operates within a system where pharmaceutical industry interests create real conflicts. Honest engagement with this issue requires holding both truths simultaneously.</p>
+</div>
+
+<!-- Section 7: Peptide Status -->
+<hr class="sep">
+<h2 id="peptide-status">Peptide-by-Peptide: Current Legal Status</h2>
+
+<p>Here's what you actually need to know about each major peptide's regulatory status as of February 2026. This table reflects the <em>formal</em> legal position — the reality on the ground (what's actually available) may differ as enforcement posture continues to shift.</p>
+
+<table class="tbl">
+<thead>
+<tr><th>Peptide</th><th>FDA Status</th><th>Compoundable?</th><th>WADA Status</th><th>Key Detail</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td><span class="r">Category 2</span></td><td><span class="r">No</span></td><td>Not listed</td><td>Remains restricted. No PCAC review scheduled. Most popular peptide affected.</td></tr>
+<tr><td><strong>TB-500 / Thymosin β4</strong></td><td><span class="r">Category 2</span></td><td><span class="r">No</span></td><td><span class="r">Banned (S2)</span></td><td>Remains restricted. Classified as biologic by FDA.</td></tr>
+<tr><td><strong>CJC-1295</strong></td><td><span class="y">Removed from Cat 2 → PCAC Rejected</span></td><td><span class="r">No</span></td><td><span class="r">Banned (S2)</span></td><td>Removed from Cat 2 in Sep 2024, then rejected by PCAC in Dec 2024. Prohibited.</td></tr>
+<tr><td><strong>Ipamorelin</strong></td><td><span class="y">Removed from Cat 2 → PCAC Rejected</span></td><td><span class="r">No</span></td><td><span class="r">Banned (S2)</span></td><td>PCAC recommended against 503A inclusion in Oct 2024.</td></tr>
+<tr><td><strong>Thymosin Alpha-1</strong></td><td><span class="y">Removed from Cat 2 → PCAC Rejected</span></td><td><span class="r">No</span></td><td>Not listed</td><td>Approved in 30+ countries. Rejected by PCAC despite extensive global clinical use.</td></tr>
+<tr><td><strong>AOD-9604</strong></td><td><span class="y">Removed from Cat 2 → PCAC Rejected</span></td><td><span class="r">No</span></td><td><span class="r">Banned (S2)</span></td><td>GH fragment for fat metabolism. Rejected at Dec 2024 PCAC.</td></tr>
+<tr><td><strong>MK-677 / Ibutamoren</strong></td><td><span class="r">PCAC Rejected</span></td><td><span class="r">No</span></td><td><span class="r">Banned (S2)</span></td><td>Not a peptide (oral ghrelin mimetic). Patented; Eli Lilly investigating as LUM-201.</td></tr>
+<tr><td><strong>Epitalon</strong></td><td><span class="r">Category 2</span></td><td><span class="r">No</span></td><td>Not listed</td><td>Longevity/telomere peptide. Remains restricted.</td></tr>
+<tr><td><strong>LL-37</strong></td><td><span class="r">Category 2</span></td><td><span class="r">No</span></td><td>Not listed</td><td>Antimicrobial peptide. Remains restricted.</td></tr>
+<tr><td><strong>GHK-Cu (injectable)</strong></td><td><span class="r">Category 2</span></td><td><span class="r">No</span></td><td>Not listed</td><td>Injectable form restricted. Topical GHK-Cu is Category 1 (allowed).</td></tr>
+<tr><td><strong>Selank</strong></td><td><span class="y">Removed from Cat 2</span></td><td><span class="y">Under Review</span></td><td>Not listed</td><td>Anxiolytic peptide. Nomination withdrawn; status uncertain.</td></tr>
+<tr><td><strong>Sermorelin</strong></td><td><span class="g">Category 1</span></td><td><span class="g">Yes</span></td><td><span class="r">Banned (S2)</span></td><td>Previously FDA-approved (Geref, discontinued 2008 for commercial reasons). Legal to compound.</td></tr>
+<tr><td><strong>GHK-Cu (topical)</strong></td><td><span class="g">Category 1</span></td><td><span class="g">Yes</span></td><td>Not listed</td><td>Topical formulations approved for compounding with limitations.</td></tr>
+<tr><td><strong>Gonadorelin</strong></td><td><span class="g">Category 1</span></td><td><span class="g">Yes</span></td><td>Not listed</td><td>Previously FDA-approved (LutrePulse). Legal to compound.</td></tr>
+<tr><td><strong>Semaglutide</strong></td><td><span class="g">FDA Approved</span></td><td><span class="y">Shortage-dependent</span></td><td>Not listed</td><td>Prescription drug (Ozempic/Wegovy). Compounding allowed only during shortages.</td></tr>
+<tr><td><strong>Tirzepatide</strong></td><td><span class="g">FDA Approved</span></td><td><span class="y">Shortage-dependent</span></td><td>Not listed</td><td>Prescription drug (Mounjaro/Zepbound). Subject of its own compounding legal battles.</td></tr>
+</tbody>
+</table>
+
+<div class="cb-r">
+  <div class="k">Critical Distinction</div>
+  <p><strong>"Removed from Category 2" ≠ "Legal to Compound."</strong> This has been one of the biggest sources of public confusion. When the FDA removed CJC-1295, ipamorelin, thymosin alpha-1, and AOD-9604 from Category 2 in September 2024, many clinics and media outlets reported this as the peptides being "unbanned." But removal was procedural — the nominators withdrew their applications. The peptides then went to PCAC for formal review and were all rejected. They remain prohibited for compounding despite no longer being in Category 2.</p>
+</div>
+
+<!-- Section 8: Gray Market -->
+<h2 id="gray-market">The Gray Market Problem: "Research Use Only"</h2>
+
+<p>While the regulatory battle plays out in Washington, a massive parallel marketplace has emerged that operates almost entirely outside the FDA's reach. Understanding this market — and its risks — is critical for anyone considering peptides.</p>
+
+<h3>How the "Research Chemical" Loophole Works</h3>
+
+<p>The FDA regulates substances intended for human use. It does <strong>not</strong> regulate chemicals sold for legitimate laboratory research. This distinction has created a thriving gray market where vendors sell peptides labeled "For Research Use Only" or "Not For Human Consumption" — while clearly marketing them to consumers who intend to inject them.</p>
+
+<p>The legal fiction is transparent. As CNN reported, Facebook groups instruct members to use specific language: "instead of 'taking,' you are 'researching' peptides." Vendors include dosing guides, reconstitution instructions, and injection protocols alongside their "research only" disclaimers. The FDA has stated explicitly in warning letters that these disclaimers are legally ineffective when the products are clearly intended for human use.</p>
+
+<div class="qt">
+  <blockquote>It's really a choose-your-own-adventure. It's up to the chemical companies making these things to figure out quality control, good manufacturing practices, testing for C of As, verifying that there's no contaminants, heavy metals, pesticides, whatever. It's anybody's guess what's really happening with the quality control of these unregulated peptides.</blockquote>
+  <div class="attr"><strong>Daniel Catlin</strong> — Researcher, as quoted in NutraCast (Dec 2025)</div>
+</div>
+
+<h3>Where "Research Peptides" Actually Come From</h3>
+
+<p>As CNN, ABC News, and multiple investigative outlets have reported, a significant portion of research peptides sold in the U.S. originate from chemical manufacturers in China and other countries. These products are shipped directly to consumers — sometimes for as little as $5 per vial on platforms like Alibaba — with no FDA oversight, no sterility verification, and no way to confirm what's actually in them.</p>
+
+<p>On TikTok, influencers demonstrate reconstituting lyophilized peptide powder into injectable solutions on kitchen counters — without gloves, without proper sterilization, and without the pharmaceutical-grade bacteriostatic water that licensed pharmacies use. The casualness of these tutorials stands in stark contrast to the USP 797 sterile compounding standards that licensed pharmacies must follow.</p>
+
+<div class="cb-r">
+  <div class="k">The Real Danger Zone</div>
+  <p>Here is the uncomfortable irony at the center of the FDA's approach: by restricting access through legitimate compounding pharmacies (which follow quality standards, use pharmaceutical-grade ingredients, and operate under state oversight), the FDA has <strong>pushed more consumers toward unregulated gray-market sources</strong> with no quality controls whatsoever. Pharmacist Annie Lambert, a compounding specialist with Wolters Kluwer, has noted that even "99% purity" claims from research chemical vendors are meaningless without official USP monographs to define testing standards. The FDA's war on compounded peptides may be winning the battle over legal pharmacies while losing the larger war over patient safety.</p>
+</div>
+
+<!-- Section 9: What's Next -->
+<h2 id="whats-next">What's Coming Next: 2026 Outlook</h2>
+
+<p>Based on the current trajectory, several developments are likely in the months ahead:</p>
+
+<div class="cg">
+  <div class="mc mc-t">
+    <h4>Most Likely: Enforcement Discretion</h4>
+    <p>Rather than formally reversing Category 2 designations (which would face legal challenges), the FDA under Kennedy's HHS could announce it will exercise "enforcement discretion" — meaning it won't pursue compounding pharmacies that prepare certain peptides. This would effectively legalize compounded peptides without changing the rules on paper.</p>
+  </div>
+  <div class="mc mc-n">
+    <h4>Possible: New PCAC Appointments</h4>
+    <p>With experts removed from the advisory committee, Kennedy could appoint members more favorable to peptide compounding. Future PCAC meetings could reach different conclusions about substances like CJC-1295 and thymosin alpha-1, potentially reversing the 2024 rejections.</p>
+  </div>
+  <div class="mc mc-g">
+    <h4>Possible: Targeted Enforcement on Gray Market</h4>
+    <p>Even as compounding restrictions loosen, the FDA may increase enforcement against the most dangerous gray-market sources — particularly cheap overseas imports and vendors making explicit medical claims. This "dual approach" could let legitimate compounding expand while cracking down on unregulated research chemicals.</p>
+  </div>
+  <div class="mc mc-c">
+    <h4>Unlikely but Possible: Congressional Action</h4>
+    <p>Two GOP lawmakers have already requested that the FDA use enforcement discretion on peptide compounding. Formal legislation creating clearer regulatory pathways for peptides — separate from the full NDA drug approval process — has been discussed but faces long odds in the current Congress.</p>
+  </div>
+</div>
+
+<div class="qt">
+  <blockquote>The genie is out of the bottle with peptides. We know what they can do. We know that there are millions of people in the world now using them for various reasons. So it'll be really, really hard for the FDA, or any other government oversight, to regulate them. 2026 is going to be a very interesting year.</blockquote>
+  <div class="attr"><strong>Jay Campbell</strong> — Author, The Testosterone Optimization Therapy Bible (Glossy, Jan 2026)</div>
+</div>
+
+<!-- Section 10: Consumer Guide -->
+<hr class="sep">
+<h2 id="consumer-guide">Consumer Decision Guide: How to Navigate This</h2>
+
+<p>Given everything above, here's a practical framework for making informed decisions about peptides in 2026. This isn't medical advice — it's a map of the terrain.</p>
+
+<h3>The Peptide Access Hierarchy</h3>
+
+<p>Not all peptide sources are created equal. Here they are ranked from most to least regulated:</p>
+
+<div class="svg-box">
+  <div class="st">Peptide Source Quality Hierarchy</div>
+  <div class="ss">Higher tiers = more oversight, higher cost, greater assurance of safety and purity</div>
+  <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+    <!-- Tier 1 -->
+    <rect x="40" y="10" width="600" height="52" rx="8" fill="#E3F5EF" stroke="#0D7C66" stroke-width="1.5"/>
+    <text x="60" y="42" font-family="Newsreader,serif" font-size="14" font-weight="700" fill="#0D7C66">Tier 1: FDA-Approved Drugs</text>
+    <text x="340" y="42" font-family="Outfit,sans-serif" font-size="11.5" fill="#0A4A3A">Semaglutide, tirzepatide, insulin, tesamorelin — full clinical trials, prescription required</text>
+
+    <!-- Tier 2 -->
+    <rect x="60" y="72" width="560" height="52" rx="8" fill="#E6EDF7" stroke="#1B3A6B" stroke-width="1.5"/>
+    <text x="80" y="104" font-family="Newsreader,serif" font-size="14" font-weight="700" fill="#1B3A6B">Tier 2: 503B Outsourcing Facilities</text>
+    <text x="340" y="104" font-family="Outfit,sans-serif" font-size="11.5" fill="#1A2E50">FDA-registered, batch testing, cGMP standards — limited to Category 1 substances</text>
+
+    <!-- Tier 3 -->
+    <rect x="80" y="134" width="520" height="52" rx="8" fill="#FFF8E1" stroke="#A67C00" stroke-width="1.5"/>
+    <text x="100" y="166" font-family="Newsreader,serif" font-size="14" font-weight="700" fill="#A67C00">Tier 3: 503A Compounding Pharmacies</text>
+    <text x="360" y="166" font-family="Outfit,sans-serif" font-size="11.5" fill="#5A4010">State-licensed, patient-specific prescriptions, USP 797 standards</text>
+
+    <!-- Tier 4 -->
+    <rect x="100" y="196" width="480" height="52" rx="8" fill="#F4ECF9" stroke="#6B2D8B" stroke-width="1.5"/>
+    <text x="120" y="228" font-family="Newsreader,serif" font-size="14" font-weight="700" fill="#6B2D8B">Tier 4: U.S. Research Chemical Vendors</text>
+    <text x="380" y="228" font-family="Outfit,sans-serif" font-size="11.5" fill="#3E2050">Unregulated. Variable quality. "Research use only." No sterility assurance.</text>
+
+    <!-- Tier 5 -->
+    <rect x="120" y="258" width="440" height="52" rx="8" fill="#FCEDEF" stroke="#9B2335" stroke-width="1.5"/>
+    <text x="140" y="290" font-family="Newsreader,serif" font-size="14" font-weight="700" fill="#9B2335">Tier 5: Overseas / Gray Market Sources</text>
+    <text x="400" y="290" font-family="Outfit,sans-serif" font-size="11.5" fill="#5A1520">No oversight. Unknown origin. $5 vials from Alibaba. Maximum risk.</text>
+
+    <!-- Arrow + label -->
+    <text x="20" y="90" font-family="Outfit,sans-serif" font-size="10" fill="#0D7C66" transform="rotate(-90 20 90)" text-anchor="middle" font-weight="600" letter-spacing="1">SAFER</text>
+    <text x="20" y="250" font-family="Outfit,sans-serif" font-size="10" fill="#9B2335" transform="rotate(-90 20 250)" text-anchor="middle" font-weight="600" letter-spacing="1">RISKIER</text>
+  </svg>
+</div>
+
+<h3>Questions to Ask Before Using Any Peptide</h3>
+
+<p>Regardless of where you stand on the FDA vs. medical freedom debate, these questions apply to everyone:</p>
+
+<p><strong>1. Does this peptide have any human clinical data?</strong> Not animal studies, not mechanism-of-action rationale, not testimonials — actual controlled human trials. For most wellness peptides, the honest answer is no or very limited. That doesn't necessarily mean they don't work, but it means you're accepting uncertainty about both efficacy and safety.</p>
+
+<p><strong>2. Where is this product actually coming from?</strong> A licensed compounding pharmacy operating under USP 797 standards with pharmaceutical-grade ingredients is a fundamentally different proposition than a research chemical vendor shipping lyophilized powder in unmarked vials. The peptide molecule may be the same, but what else is in that vial — endotoxins, heavy metals, synthesis byproducts, degradation products — can be the difference between a therapeutic experience and a medical emergency.</p>
+
+<p><strong>3. Is a physician overseeing my use?</strong> Self-administering peptides based on Reddit protocols and TikTok videos removes all medical accountability. A physician can monitor bloodwork, adjust dosing, screen for contraindications, and manage side effects. This applies even if you philosophically support patient autonomy — having expert oversight doesn't mean surrendering your decision-making authority.</p>
+
+<p><strong>4. Am I prepared for the regulatory reality?</strong> If you're a competitive athlete, any growth hormone secretagogue (CJC-1295, ipamorelin, MK-677) and many other peptides are WADA-prohibited. If you're a healthcare provider, prescribing Category 2 substances exposes you to real legal liability regardless of the current political winds. If you're a consumer, "research use only" labels don't provide legal protection.</p>
+
+<div class="cb-t">
+  <div class="k">The Bottom Line</div>
+  <p>The peptide regulatory landscape in 2026 is genuinely in flux. The formal rules say most popular wellness peptides can't be legally compounded. The political winds suggest that may change — possibly soon. The gray market ensures access regardless of what the rules say. And the quality of what people are actually injecting ranges from pharmaceutical-grade purity to unknown substances from unaccountable sources.<br><br>
+  The most reasonable approach: work with a knowledgeable physician, use the highest-quality sources available to you, understand what clinical evidence does and doesn't exist for your specific peptide, and stay informed as this landscape continues to evolve. This guide will be updated as regulations change.</p>
+</div>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical or legal advice. Peptide regulations vary by state and are changing rapidly. Always consult with a licensed healthcare provider before using any peptide therapy and a qualified attorney for legal questions about peptide compounding or prescribing. The regulatory information in this article reflects our best understanding as of February 2026 but may not reflect the most current FDA actions or enforcement positions.
+</div>
+
+<!-- Sources section -->
+<h3 style="margin-top:40px;font-size:1rem;">Sources & Further Reading</h3>
+<p style="font-size:13px;color:var(--slate);line-height:1.8;">
+FDA, "Interim Policy on Compounding Using Bulk Drug Substances Under Section 503A," Federal Register, Jan 7, 2025 · 
+FDA, "Bulk Drug Substances Used in Compounding Under Section 503A," updated Sep 27, 2024 · 
+FDA Warning Letter to Summit Research Peptides, Dec 10, 2024 · 
+Reed Smith LLP / Lexology, "FDA Removes Certain Peptide Bulk Drug Substances from Category 2," Oct 1, 2024 · 
+Alliance for Pharmacy Compounding (APC), "Settlement Reached in Evexias Suit Against FDA," Sep 2024 · 
+Peptide Legal Fund / EVEXIAS, Press Release, Apr 2, 2024 · 
+CNN, "The Trend of Unproven Peptides Is Spreading Through Influencers and RFK Jr. Allies," Nov 15, 2025 · 
+ABC News/AP, "Americans Are Injecting Themselves with Unproven Peptides," Nov 14, 2025 · 
+Fortune Well, "RFK Jr. Will 'End the War' Against Alternative Medicine at the FDA," Jun 6, 2025 ·
+NutraCast, "The Hidden Epidemic of Unapproved Research Peptides," Dec 19, 2025 · 
+The Peptide List, "We Sent 10 Peptides to a Lab. Here's What We Found," 2024 · 
+Glossy, "Injectable Peptide Therapy Went Mainstream in 2025," Jan 5, 2026 · 
+Project Biohacking, "RFK Jr.'s Peptide War and the FDA," Jan 9, 2026 · 
+Frier Levitt, "Regulatory Status of Peptide Compounding in 2025," Apr 3, 2025 · 
+Fagron Academy, "Interim 503A and 503B Bulks Lists New Revisions," 2024 · 
+Holt Law, "Deep Dive: Regulatory Status of Popular Compounded Peptides," 2025 · 
+PeptideLaws.com, "FDA Peptide Regulations 2026," Feb 2026
+</p>
+
+</div><!-- end .c -->
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>•</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>⚠️ Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content" set:html={rawHTML} />
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0">
+      <div class="md:sticky md:top-8 space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">🔬 Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Popular Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides →</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
