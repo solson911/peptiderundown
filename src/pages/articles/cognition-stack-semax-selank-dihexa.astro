@@ -1,0 +1,632 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "The Cognition Stack: Semax + Selank + Dihexa — Mechanisms, Evidence, and Practical Protocols",
+  description: "A deep dive into the Semax, Selank, and Dihexa peptide stack for cognitive enhancement, examining their individual mechanisms, human and animal evidence, and theoretical synergistic effects.",
+  image: "/images/articles/cognition-stack-semax-selank-dihexa.webp",
+  date: "2026-02-20",
+  category: "Nootropics",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+.hero{background:linear-gradient(135deg,#1A1040 0%,#2B1862 35%,#1A3260 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50Z' fill='none' stroke='%23ffffff' stroke-opacity='0.03' stroke-width='1'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.6rem);color:#fff;line-height:1.22;max-width:620px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:540px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.bar-chart{margin:24px 0;}
+.bar-row{display:flex;align-items:center;margin-bottom:10px;font-size:13px;}
+.bar-label{width:140px;flex-shrink:0;font-weight:500;color:var(--ink);text-align:right;padding-right:14px;}
+.bar-track{flex:1;height:28px;background:var(--sub);border-radius:6px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;font-weight:600;color:#fff;}
+.bar-fill.bf-b{background:var(--blue);}.bar-fill.bf-t{background:var(--teal);}.bar-fill.bf-p{background:var(--plum);}.bar-fill.bf-a{background:var(--amber);}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Nootropic Peptide Guide · Stacking Protocol</div>
+  <h1>The Cognition Stack: Semax + Selank + Dihexa for Focus, Calm, and Memory</h1>
+  <p class="sub">Three peptides targeting three distinct neurological pathways — neurotrophic growth, GABAergic stabilization, and growth-factor-driven synaptogenesis — and the actual science behind combining them.</p>
+  <div class="pills">
+    <span class="pill">Semax · BDNF Axis</span>
+    <span class="pill">Selank · GABA System</span>
+    <span class="pill">Dihexa · HGF/c-Met</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">1,500+</div><div class="l">Genes Modulated<br>by Semax (Ischemia)</div></div>
+  <div class="sb"><div class="v c2">52</div><div class="l">GABA Genes<br>Affected by Selank</div></div>
+  <div class="sb"><div class="v c3">10⁷×</div><div class="l">Dihexa Potency vs.<br>BDNF (In-vitro)</div></div>
+  <div class="sb"><div class="v c4">0</div><div class="l">Human RCTs for<br>This Combination</div></div>
+</div>
+
+<p>Peptide stacking for cognitive enhancement has exploded in biohacker and nootropic communities. The combination of Semax, Selank, and Dihexa — sometimes called "the cognition stack" — targets three distinct neuroscience pathways: neurotrophic factor production, inhibitory neurotransmitter modulation, and growth-factor-driven synaptogenesis.</p>
+
+<p>The rationale is pharmacologically elegant. But the distance between the rationale and the evidence is something most guides gloss over. Here, we'll go deep on what each compound actually does at the molecular level, what the research actually shows (and where it stops), why combining them makes theoretical sense, and what the real risks are.</p>
+
+<div class="d-a">
+  <div class="s">Evidence Reality Check</div>
+  <p><strong>Not a single component of this stack has been tested in a human randomized controlled trial for cognitive enhancement in healthy individuals.</strong> Semax and Selank have clinical use in Russia for neurological conditions, and Dihexa has only animal data. The stack itself has never been studied in any formal context. Everything about their combined use is theoretical extrapolation from individual compound research.</p>
+</div>
+
+<!-- ========== THREE-PATHWAY MODEL ========== -->
+<h2>The Three-Pathway Model: Why These Three Peptides</h2>
+
+<p>The logic behind combining Semax, Selank, and Dihexa rests on the premise that optimal cognition requires support across multiple neurological domains simultaneously. Each peptide addresses a fundamentally different bottleneck:</p>
+
+<div class="svg-box">
+  <div class="st">Three-Pathway Cognition Model</div>
+  <div class="ss">Each peptide targets a distinct system — non-overlapping mechanisms create the synergy rationale</div>
+  <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="15" width="200" height="270" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="120" y="48" text-anchor="middle" font-family="Lora,serif" font-size="17" font-weight="700" fill="#2956A6">Semax</text>
+    <text x="120" y="68" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#2956A6" letter-spacing="1">UPSTREAM GROWTH</text>
+    <line x1="45" y1="80" x2="195" y2="80" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="120" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#1E3362">↑ BDNF production</text>
+    <text x="120" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#1E3362">↑ NGF expression</text>
+    <text x="120" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#1E3362">↑ TrkB activation</text>
+    <text x="120" y="156" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#1E3362">Melanocortin modulation</text>
+    <text x="120" y="174" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#1E3362">Immune gene regulation</text>
+    <line x1="45" y1="192" x2="195" y2="192" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="120" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#2956A6" font-weight="600">RESULT</text>
+    <text x="120" y="236" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#1E3362" font-weight="500">Neuronal health, focus,</text>
+    <text x="120" y="254" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#1E3362" font-weight="500">neuroprotection</text>
+
+    <rect x="250" y="15" width="200" height="270" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="350" y="48" text-anchor="middle" font-family="Lora,serif" font-size="17" font-weight="700" fill="#187A62">Selank</text>
+    <text x="350" y="68" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#187A62" letter-spacing="1">SIGNAL STABILIZATION</text>
+    <line x1="275" y1="80" x2="425" y2="80" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="350" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#14503E">GABA-A modulation</text>
+    <text x="350" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#14503E">Enkephalin preservation</text>
+    <text x="350" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#14503E">Serotonin regulation</text>
+    <text x="350" y="156" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#14503E">IL-6 suppression</text>
+    <text x="350" y="174" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#14503E">Dopamine modulation</text>
+    <line x1="275" y1="192" x2="425" y2="192" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="350" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#187A62" font-weight="600">RESULT</text>
+    <text x="350" y="236" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#14503E" font-weight="500">Calm focus, stress</text>
+    <text x="350" y="254" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#14503E" font-weight="500">resilience, mood balance</text>
+
+    <rect x="480" y="15" width="200" height="270" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="580" y="48" text-anchor="middle" font-family="Lora,serif" font-size="17" font-weight="700" fill="#6E3B8A">Dihexa</text>
+    <text x="580" y="68" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#6E3B8A" letter-spacing="1">DOWNSTREAM WIRING</text>
+    <line x1="505" y1="80" x2="655" y2="80" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="580" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#3E2050">HGF/c-Met activation</text>
+    <text x="580" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#3E2050">Synaptogenesis</text>
+    <text x="580" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#3E2050">Dendritic spine growth</text>
+    <text x="580" y="156" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#3E2050">PI3K/Akt cascades</text>
+    <text x="580" y="174" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11.5" fill="#3E2050">Long-term potentiation</text>
+    <line x1="505" y1="192" x2="655" y2="192" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="580" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#6E3B8A" font-weight="600">RESULT</text>
+    <text x="580" y="236" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#3E2050" font-weight="500">New synapses, memory</text>
+    <text x="580" y="254" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#3E2050" font-weight="500">formation, neuroplasticity</text>
+  </svg>
+</div>
+
+<p>Think of it as a construction analogy: <strong>Semax provides the building materials</strong> (neurotrophic factors that keep neurons healthy and growth-capable), <strong>Selank clears the noise from the worksite</strong> (reducing anxiety and excessive neural excitation so the brain can function in an optimal state), and <strong>Dihexa builds the new connections</strong> (directly stimulating synapse formation between neurons). None of these mechanisms duplicate the others — they stack vertically across different levels of the cognitive system.</p>
+
+<!-- ========== SEMAX ========== -->
+<hr class="sep">
+<h2>Semax: The Neurotrophic Engine</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Semax (Met-Glu-His-Phe-Pro-Gly-Pro)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic heptapeptide, ACTH(4-10) analog &nbsp;|&nbsp; <strong>Origin:</strong> Russian Academy of Sciences, 1980s &nbsp;|&nbsp; <strong>Route:</strong> Intranasal &nbsp;|&nbsp; <strong>Clinical Status:</strong> Approved in Russia for stroke and cognitive disorders; not FDA-approved &nbsp;|&nbsp; <strong>Half-life:</strong> 20-24 hours (vs. minutes for native ACTH fragments)</p>
+</div>
+
+<h3>What Semax Actually Is</h3>
+
+<p>Semax is a synthetic analog of the ACTH(4-10) fragment — the portion of adrenocorticotropic hormone that researchers discovered in the 1950s had cognitive effects independent of ACTH's hormonal activity. Native ACTH fragments degraded in minutes, making them therapeutically useless. In the 1970s-80s, scientists at the Russian Academy of Sciences solved this by attaching a Pro-Gly-Pro (PGP) tripeptide to the C-terminus, creating a molecule that resisted enzymatic degradation and extended its active duration dramatically (Kolomin et al., 2013).</p>
+
+<p>The critical design achievement: Semax retains ACTH's neurotrophic effects <strong>without activating glucocorticoid receptors</strong>. This means it influences brain function without cortisol elevation, HPA axis disruption, or the hormonal side effects that make native ACTH problematic for cognitive applications.</p>
+
+<h3>Mechanism of Action: Three Parallel Pathways</h3>
+
+<h4>1. BDNF / Neurotrophin Axis (Primary Mechanism)</h4>
+
+<p>The most validated mechanism is Semax's modulation of brain-derived neurotrophic factor (BDNF) and related neurotrophins. BDNF is the primary growth factor supporting neuron survival, synaptic plasticity, and the structural changes underlying learning and memory.</p>
+
+<p>Dolotov et al. (2006) demonstrated that a single intranasal application of Semax (50 μg/kg) in rats produced a <strong>1.4-fold increase in BDNF protein levels</strong> in the hippocampus, accompanied by a <strong>1.6-fold increase in TrkB receptor phosphorylation</strong> and a <strong>3-fold increase in BDNF mRNA expression</strong>. Semax-treated animals showed significantly improved conditioned avoidance task performance — a direct cognitive outcome linked to the BDNF increase.</p>
+
+<p>A follow-up study (Dolotov et al., 2009) mapped the temporal dynamics: Semax activates BDNF and NGF expression in a region-specific pattern across hippocampus, frontal cortex, and retina — with the hippocampus showing the strongest and most sustained response, peaking at 3-8 hours post-administration.</p>
+
+<div class="d">
+  <div class="s">Why BDNF Matters for Cognition</div>
+  <p>BDNF isn't just neuroprotective — it's the molecular substrate of learning itself. Long-term potentiation (LTP), the cellular process underlying memory formation, is BDNF-dependent. Humans with the Val66Met BDNF polymorphism (reducing activity-dependent BDNF secretion) show measurably impaired episodic memory and hippocampal function. Semax's ability to reliably increase BDNF is the strongest mechanistic basis for its cognitive effects.</p>
+</div>
+
+<h4>2. Immunomodulatory / Anti-inflammatory Pathway</h4>
+
+<p>A genome-wide transcriptome analysis by Medvedeva et al. (2014) revealed something unexpected: under ischemic conditions, Semax modulated over 1,500 genes, and the <strong>immune system was the most significantly affected category</strong> — not direct neuronal genes. Semax enhanced leukocyte activation, dendritic cell function, and immunoglobulin expression in damaged brain tissue.</p>
+
+<p>This is relevant because neuroinflammation is increasingly recognized as a driver of cognitive decline and brain fog. RNA-Seq analysis (Dergunova et al., 2020) showed Semax suppresses inflammatory gene expression and activates anti-inflammatory pathways — suggesting it may improve cognition partly by reducing the low-grade neuroinflammation caused by chronic stress, sleep deprivation, or aging.</p>
+
+<h4>3. Melanocortin System Modulation</h4>
+
+<p>As an ACTH-derived peptide, Semax interacts with the melanocortin receptor system (MC1R-MC5R), which is involved in attention, arousal, motivation, and stress response. Through this pathway, Semax appears to influence dopaminergic signaling, contributing to its reported effects on focus and mental energy without the jitteriness of stimulants. Research has also suggested Semax may augment the effects of psychostimulants on central dopamine release, which has implications for attention-deficit conditions.</p>
+
+<h3>Semax Human Evidence</h3>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Population</th><th>Result</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td><strong>Gusev et al., 2017</strong></td><td>110 stroke patients</td><td>Semax (6,000 μg/day × 10 days, 2 courses) increased plasma BDNF; high-BDNF patients had improved rehab timing</td><td>Open-label; stroke population</td></tr>
+<tr><td><strong>Pilot (24 healthy)</strong></td><td>Healthy adults</td><td>1% Semax (1.2 mg) increased attention and short-term memory; EEG changes resembled neuroprotective drugs</td><td>Small; in Russian; limited access</td></tr>
+<tr><td><strong>Russian regulatory data</strong></td><td>Clinical populations</td><td>Approved for stroke, encephalopathy, optic nerve atrophy; side effects: rare allergic reactions, ~7.4% minor glucose changes</td><td>Regulatory filings, not peer-reviewed</td></tr>
+<tr><td><strong>ADHD research</strong></td><td>Animal models</td><td>Semax augmented psychostimulant effects on dopamine; suggested as potential ADHD adjunct</td><td>No human ADHD trials published</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Evidence Assessment</div>
+  <p><strong>Semax has the strongest evidence base of this stack</strong>, with decades of Russian clinical use and multiple peer-reviewed mechanistic studies. However, the cognitive enhancement data in healthy humans is extremely thin — limited to small Russian-language studies. The BDNF mechanism is well-established in animals, and the safety profile appears favorable based on clinical use, but Western-standard RCTs for nootropic effects are essentially nonexistent.</p>
+</div>
+
+<!-- ========== SELANK ========== -->
+<hr class="sep">
+<h2>Selank: The GABAergic Stabilizer</h2>
+
+<div class="cd ct">
+  <div class="tg">Compound Profile</div>
+  <h3>Selank (Thr-Lys-Pro-Arg-Pro-Gly-Pro)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic heptapeptide, modified tuftsin analog &nbsp;|&nbsp; <strong>Origin:</strong> Institute of Molecular Genetics, Russian Academy of Sciences, early 1990s &nbsp;|&nbsp; <strong>Route:</strong> Intranasal &nbsp;|&nbsp; <strong>Clinical Status:</strong> Approved in Russia for generalized anxiety disorder; not FDA-approved &nbsp;|&nbsp; <strong>Key Feature:</strong> Anxiolytic effects comparable to benzodiazepines without sedation, dependence, or withdrawal</p>
+</div>
+
+<h3>What Selank Actually Is</h3>
+
+<p>Selank is a synthetic analog of <strong>tuftsin</strong> — a naturally occurring tetrapeptide (Thr-Lys-Pro-Arg) found in the heavy chain of human immunoglobulin G (IgG). Tuftsin's primary role in the body is immunomodulatory — it regulates phagocyte activity and immune cell function. But researchers at the Russian Academy of Sciences discovered that tuftsin also had neurocognitive effects, and they extended its sequence with the same Pro-Gly-Pro tripeptide used in Semax to improve metabolic stability and half-life.</p>
+
+<p>The result is a peptide that bridges two systems — immune regulation and neurotransmitter modulation — in a way that no conventional anxiolytic drug does. This dual mechanism is central to why Selank behaves so differently from benzodiazepines despite producing similar anxiolytic effects.</p>
+
+<h3>Mechanism of Action: Four Interlocking Systems</h3>
+
+<h4>1. GABAergic Modulation (Core Anxiolytic Mechanism)</h4>
+
+<p>A landmark study by Kasian et al. (2016) in Frontiers in Pharmacology mapped Selank's effects on GABA-related gene expression in rat frontal cortex. The findings were striking: of 84 genes involved in GABAergic neurotransmission, <strong>52 showed altered expression</strong> after Selank administration, with 7 showing particularly heavy modulation. The changes correlated positively with those produced by GABA itself — confirming that Selank's anxiolytic mechanism operates through the same receptor system as benzodiazepines.</p>
+
+<p>However, Selank appears to modulate GABA-A receptors through an allosteric mechanism that changes receptor <em>affinity</em> for GABA rather than directly activating the receptor (which is what benzodiazepines do). This distinction is crucial — it may explain why Selank produces anxiolysis without the sedation, amnesia, dependence, and withdrawal that plague benzodiazepine therapy.</p>
+
+<div class="d-t">
+  <div class="s">Why This Matters for the Stack</div>
+  <p>Anxiety and cognitive performance have an inverted-U relationship: too little arousal and you're unfocused, too much and you're overwhelmed. Selank's ability to reduce excessive neural excitation <strong>without sedation</strong> positions it as a cognitive optimizer, not just an anxiolytic. In the stack, it creates the stable neurochemical environment that allows Semax's neurotrophic effects and Dihexa's synaptogenic effects to operate optimally — like reducing turbulence so the runway is clear.</p>
+</div>
+
+<h4>2. Enkephalin Preservation</h4>
+
+<p>Research has demonstrated that Selank inhibits enkephalinase — the enzyme that degrades enkephalins, the body's natural opioid-like anxiolytic peptides. People with anxiety disorders show elevated enkephalinase activity, meaning their natural calming peptides are broken down faster. By protecting enkephalins from degradation, Selank may restore the body's own anxiety-buffering system rather than imposing an external pharmacological effect.</p>
+
+<p>A study comparing mouse strains confirmed this: BALB/c mice (high enkephalinase activity, anxiety-prone) showed significant anxiolytic response to Selank, while C57Bl/6 mice (low enkephalinase, naturally calm) showed no behavioral change — supporting the idea that Selank works by correcting a deficit rather than creating an artificial effect.</p>
+
+<h4>3. Serotonergic and Dopaminergic Regulation</h4>
+
+<p>Selank modulates monoamine neurotransmitter levels, including serotonin, dopamine, and norepinephrine. This multi-transmitter modulation distinguishes it from drugs that target single systems (SSRIs for serotonin, benzodiazepines for GABA). The serotonergic effects contribute to mood stability, while dopamine modulation may enhance motivation and the cognitive effort required for sustained mental work.</p>
+
+<h4>4. Immunomodulatory Effects and BDNF</h4>
+
+<p>As a tuftsin analog, Selank retains significant immune-regulatory properties. It modulates IL-6 expression (a key inflammatory cytokine), influences T-helper cell balance, and has shown antiviral activity against the H3N2 influenza strain in both in-vitro and in-vivo models. Intriguingly, Selank has also been found to rapidly elevate BDNF expression in the hippocampus — creating an overlap with Semax that may be additive rather than redundant, since the two peptides reach BDNF through different upstream pathways.</p>
+
+<h3>Selank Human Evidence</h3>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Population</th><th>Result</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td><strong>Russian clinical trials</strong></td><td>Generalized anxiety disorder</td><td>Anxiolytic effects comparable to diazepam and phenazepam (benzodiazepines); approved for GAD treatment in Russia</td><td>Limited international publication; primarily Russian data</td></tr>
+<tr><td><strong>14-day human trial</strong></td><td>Depression patients + healthy controls</td><td>Daily Selank suppressed IL-6 gene expression in depressed patients (not healthy controls); mood improvement</td><td>Small sample; limited details in English</td></tr>
+<tr><td><strong>Kozlovskaya et al., 2003</strong></td><td>Animal (rats)</td><td>Optimized conditioned avoidance learning under stress; dose of 300 μg/kg identified as most effective anxiolytic dose</td><td>Animal model only</td></tr>
+<tr><td><strong>Kolik et al., 2019</strong></td><td>Animal (rats)</td><td>Selank protected against ethanol-induced memory impairment by regulating BDNF content in hippocampus and prefrontal cortex</td><td>Animal model; ethanol-impairment model</td></tr>
+</tbody>
+</table>
+
+<!-- ========== DIHEXA ========== -->
+<hr class="sep">
+<h2>Dihexa: The Synaptogenic Powerhouse</h2>
+
+<div class="cd cp">
+  <div class="tg">Compound Profile</div>
+  <h3>Dihexa (N-hexanoic-Tyr-Ile-(6) aminohexanoic amide)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic oligopeptide, angiotensin IV derivative &nbsp;|&nbsp; <strong>Origin:</strong> Washington State University (Dr. Joseph Harding's lab) &nbsp;|&nbsp; <strong>Route:</strong> Oral or subcutaneous &nbsp;|&nbsp; <strong>Clinical Status:</strong> No clinical trials in humans; animal data only &nbsp;|&nbsp; <strong>Key Feature:</strong> Orally bioavailable, crosses blood-brain barrier, reported 10⁷× potency vs. BDNF in neurotrophic assay</p>
+</div>
+
+<h3>What Dihexa Actually Is</h3>
+
+<p>Dihexa is a synthetic derivative of angiotensin IV (AngIV), a fragment of the renin-angiotensin system that — somewhat unexpectedly — was discovered to have cognitive effects alongside its cardiovascular functions. Dr. Joseph Harding's group at Washington State University spent years studying AngIV analogs for cognitive enhancement, but the native molecule couldn't cross the blood-brain barrier. Dihexa was designed specifically to solve this problem — it's orally bioavailable, BBB-permeable, and metabolically stable, with a remarkably long circulating half-life of approximately 12.7 days after IV administration in rats (McCoy et al., 2013).</p>
+
+<p>Dihexa is pharmacologically unique among nootropic peptides because it doesn't work through neurotransmitter modulation, receptor agonism, or neurotrophin production. Instead, it operates through an entirely different system: the <strong>hepatocyte growth factor (HGF)/c-Met receptor pathway</strong>.</p>
+
+<h3>The HGF/c-Met Mechanism: Building New Synapses</h3>
+
+<p>The landmark study by Benoist et al. (2014), published in the Journal of Pharmacology and Experimental Therapeutics, elucidated Dihexa's mechanism. The key findings:</p>
+
+<p><strong>Dihexa binds directly to hepatocyte growth factor (HGF)</strong> with high affinity. When Dihexa binds HGF in the presence of even subthreshold concentrations of the growth factor, it creates an active HGF-Dihexa heterodimer that triggers <strong>c-Met receptor phosphorylation</strong> — activating the downstream signaling cascades (PI3K/Akt, MAPK/ERK) that drive cellular growth, repair, and connectivity.</p>
+
+<p>In brain tissue specifically, this c-Met activation promotes:</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Synaptogenesis</h4>
+    <p>Formation of new synaptic connections between neurons — more synapses means stronger, more redundant neural networks for information processing and memory storage.</p>
+  </div>
+  <div class="mc">
+    <h4>Spinogenesis</h4>
+    <p>Growth of new dendritic spines — the tiny protrusions on neurons where synapses actually form. More spines = more potential connection sites.</p>
+  </div>
+  <div class="mc">
+    <h4>Long-Term Potentiation</h4>
+    <p>Enhancement of LTP, the cellular process by which repeated synaptic activation strengthens the connection — the fundamental mechanism of memory encoding.</p>
+  </div>
+  <div class="mc">
+    <h4>Neuroprotection</h4>
+    <p>HGF/c-Met signaling also activates anti-apoptotic pathways, potentially protecting neurons from oxidative stress and metabolic damage.</p>
+  </div>
+</div>
+
+<p>In their neurotrophic activity assay, Dihexa was found to be <strong>seven orders of magnitude (10 million times) more potent than BDNF</strong>. This number is dramatic but requires context — it refers to the concentration needed to promote neurite outgrowth in a specific in-vitro assay, not to "brain-boosting power" in any holistic sense. BDNF and Dihexa work through completely different receptors and signaling cascades. The comparison describes assay potency, not clinical superiority.</p>
+
+<div class="d-r">
+  <div class="s">Critical Safety Concern: The HGF/c-Met Cancer Question</div>
+  <p><strong>HGF/c-Met signaling is also involved in tumor progression.</strong> The same pathway that promotes synaptogenesis and cellular growth in brain tissue can promote uncontrolled cell growth in other contexts. Dysregulated c-Met signaling is implicated in several cancer types, and pharmaceutical companies have developed c-Met <em>inhibitors</em> (not activators) as cancer treatments. Short-duration safety studies with Dihexa showed no apparent toxicity or neoplastic induction (per patent documents), but <strong>zero long-term safety data exists in any species</strong>. The theoretical cancer risk from chronic HGF/c-Met activation is the single most significant safety concern with Dihexa and should not be dismissed.</p>
+</div>
+
+<h3>Dihexa Animal Evidence</h3>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Model</th><th>Result</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td><strong>McCoy et al., 2013</strong></td><td>Scopolamine-amnesic rats</td><td>Orally delivered Dihexa reversed memory deficits in Morris water maze; effect blocked by HGF antagonist (confirming mechanism)</td><td>Animal model; scopolamine-induced amnesia</td></tr>
+<tr><td><strong>Benoist et al., 2014</strong></td><td>Rat hippocampal neurons</td><td>Dihexa induced hippocampal spinogenesis and synaptogenesis similar to HGF itself; effects blocked by c-Met shRNA</td><td>In-vitro + animal behavioral confirmation</td></tr>
+<tr><td><strong>Aged rat studies</strong></td><td>Memory-compromised aged rats</td><td>Dihexa facilitated memory consolidation and retrieval as measured by Morris water maze</td><td>Animal model; no human aging equivalence</td></tr>
+<tr><td><strong>Sun et al., 2021</strong></td><td>APP/PS1 mouse (Alzheimer's model)</td><td>Dihexa rescued cognitive impairment and recovered memory via PI3K/AKT signaling pathway</td><td>Transgenic mouse model; no human AD data</td></tr>
+<tr><td><strong>Martino et al.</strong></td><td>Repeated mild TBI rats</td><td>HGF/MET activator rescued working memory deficits after repeated mild traumatic brain injury</td><td>Animal TBI model</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Evidence Assessment</div>
+  <p><strong>Dihexa has zero human data.</strong> No clinical trials, no case reports, no Russian clinical use — nothing. Every claim about Dihexa's cognitive effects comes from animal studies or extrapolation from HGF biology. The mechanistic research is high-quality (published in reputable journals, well-controlled), and the animal results are consistent and impressive. But the gap between "improved maze navigation in amnesic rats" and "enhances cognitive performance in healthy humans" is enormous. Combine this with the theoretical cancer risk and you have a compound that should be approached with significantly more caution than Semax or Selank.</p>
+</div>
+
+<!-- ========== SYNERGY RATIONALE ========== -->
+<hr class="sep">
+<h2>The Synergy Rationale: How the Three Interact</h2>
+
+<p>The theoretical synergy between these three peptides isn't just "more is better." There are specific mechanistic reasons why they might amplify each other's effects:</p>
+
+<div class="svg-box">
+  <div class="st">Mechanistic Synergy Map</div>
+  <div class="ss">Arrows show proposed interactions between each compound's primary pathway</div>
+  <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+    <!-- Three nodes -->
+    <rect x="20" y="50" width="180" height="60" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="110" y="76" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Semax</text>
+    <text x="110" y="96" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#2956A6">↑ BDNF / NGF</text>
+
+    <rect x="260" y="50" width="180" height="60" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="350" y="76" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Selank</text>
+    <text x="350" y="96" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#187A62">GABA / Enkephalins</text>
+
+    <rect x="500" y="50" width="180" height="60" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="590" y="76" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Dihexa</text>
+    <text x="590" y="96" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#6E3B8A">HGF → Synapses</text>
+
+    <!-- Arrows and labels -->
+    <path d="M200 70 Q230 35 260 70" fill="none" stroke="#2956A6" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="230" y="30" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">BDNF improves</text>
+    <text x="230" y="42" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">GABA sensitivity</text>
+
+    <path d="M440 70 Q470 35 500 70" fill="none" stroke="#187A62" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="470" y="30" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">Reduced noise →</text>
+    <text x="470" y="42" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">better signal for LTP</text>
+
+    <path d="M200 90 Q350 180 500 90" fill="none" stroke="#6E3B8A" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="350" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">BDNF primes neurons for HGF-driven synapse formation;</text>
+    <text x="350" y="182" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A">new synapses need neurotrophic support to survive</text>
+
+    <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#86869A" stroke-width="1"/></marker></defs>
+  </svg>
+</div>
+
+<p><strong>Semax → Selank synergy:</strong> BDNF has been shown to modulate GABAergic interneuron function and improve inhibitory circuit efficiency. By elevating BDNF, Semax may enhance the substrate that Selank acts upon — making GABAergic modulation more effective. Both peptides also independently elevate BDNF through different mechanisms (Semax via melanocortin pathways, Selank via immune/enkephalin pathways), potentially producing additive neurotrophic effects.</p>
+
+<p><strong>Selank → Dihexa synergy:</strong> Long-term potentiation (the process Dihexa enhances via HGF/c-Met) is impaired by excessive stress hormones and neural noise. By stabilizing GABAergic tone and reducing anxiety-driven cortisol, Selank may create optimal conditions for LTP — making Dihexa's synaptic strengthening more effective and durable.</p>
+
+<p><strong>Semax → Dihexa synergy:</strong> New synapses formed under Dihexa's HGF stimulation need neurotrophic support to survive and integrate into functional circuits. Without adequate BDNF and NGF, newly formed synapses may be pruned. Semax's elevation of these growth factors may increase the survival rate of Dihexa-generated connections — the "build it AND maintain it" logic.</p>
+
+<div class="d-a">
+  <div class="s">Honesty Check</div>
+  <p>These synergistic interactions are theoretically sound but <strong>entirely unproven</strong>. No study has tested any two of these compounds together, let alone all three. The proposed interactions are extrapolated from each compound's individual mechanism research. It's possible they synergize as described. It's also possible they interfere with each other, produce unexpected feedback loops, or simply don't interact meaningfully at all. Intellectual honesty requires acknowledging that stacking three untested compounds based on mechanism-level reasoning is fundamentally experimental.</p>
+</div>
+
+<!-- ========== PRACTICAL PROTOCOL ========== -->
+<hr class="sep">
+<h2>Practical Protocol: Dosing, Timing, and Cycling</h2>
+
+<p>The following protocols are drawn from community consensus, practitioner recommendations, and extrapolation from individual compound research. <strong>They are not clinically validated.</strong></p>
+
+<h3>Administration Overview</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Route</th><th>Starting Dose</th><th>Common Range</th><th>Timing</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Semax</strong></td><td>Intranasal spray</td><td>200-300 mcg</td><td>400-800 mcg/day</td><td>Morning, before noon</td><td>Split doses above 600 mcg. N-Acetyl Semax (NASA) is a more potent variant — reduce dose by ~50% if using</td></tr>
+<tr><td><strong>Selank</strong></td><td>Intranasal spray</td><td>200 mcg</td><td>300-600 mcg/day</td><td>Morning or as needed</td><td>Can dose before high-stress events. N-Acetyl Selank available with enhanced stability</td></tr>
+<tr><td><strong>Dihexa</strong></td><td>Subcutaneous or oral</td><td>0.5-1 mg</td><td>1-4 mg/day</td><td>Morning, consistent daily</td><td>Start at lowest effective dose given extreme potency. Oral bioavailability confirmed in animal studies</td></tr>
+</tbody>
+</table>
+
+<h3>Recommended Onboarding Sequence</h3>
+
+<p>Don't start all three simultaneously. This makes it impossible to identify which compound is producing which effects, and prevents isolating any adverse reactions.</p>
+
+<div class="cd ca">
+  <div class="tg">Week-by-Week Introduction</div>
+  <h3>Staged Onboarding Protocol</h3>
+  <p style="font-size:14px;"><strong>Weeks 1-2:</strong> Semax only at starting dose. Assess for focus improvement, mood changes, sleep quality, any headaches or nasal irritation. If well-tolerated, increase toward effective range by end of week 2.</p>
+  <p style="font-size:14px;"><strong>Weeks 3-4:</strong> Add Selank. Assess for anxiety reduction, emotional stability, any interaction effects. Note whether Selank modifies the Semax response (some report Selank smooths out overstimulation from higher Semax doses).</p>
+  <p style="font-size:14px;"><strong>Weeks 5-6:</strong> Add Dihexa at lowest dose (0.5-1 mg). Monitor for memory changes, vivid dreams (common), any unusual effects. Dihexa's effects build gradually over days to weeks — don't expect immediate cognitive changes.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Week 7+:</strong> Full stack operational. Adjust individual doses based on response. Begin cycling plan.</p>
+</div>
+
+<h3>Cycling Protocol</h3>
+
+<p>Regular breaks maintain sensitivity and reduce unknown long-term risks. The standard approach:</p>
+
+<table class="tbl">
+<thead><tr><th>Cycle Type</th><th>Pattern</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>Standard</strong></td><td>6 weeks on → 2 weeks off → repeat</td><td>General cognitive enhancement; most conservative approach</td></tr>
+<tr><td><strong>Extended</strong></td><td>4 weeks on → 8-12 weeks off</td><td>After 3+ standard cycles; for long-term users; allows full neurochemical reset</td></tr>
+<tr><td><strong>Targeted</strong></td><td>Use during specific high-demand periods only (exams, projects)</td><td>Minimizes total exposure; most cautious approach</td></tr>
+</tbody>
+</table>
+
+<p><strong>Important:</strong> Dihexa warrants shorter cycles and longer breaks than Semax or Selank given its extreme potency and the theoretical HGF/c-Met safety concern. Some practitioners recommend limiting Dihexa to 4-week blocks maximum with extended off periods, while Semax and Selank can be used on the standard 6/2 cycle.</p>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety Profile and Risk Assessment</h2>
+
+<p>Each compound has a different risk profile — and combining them creates additional unknowns.</p>
+
+<table class="tbl">
+<thead><tr><th>Concern</th><th>Semax</th><th>Selank</th><th>Dihexa</th></tr></thead>
+<tbody>
+<tr><td><strong>Human safety data</strong></td><td class="g">Extensive (Russian clinical use)</td><td class="y">Moderate (Russian clinical use)</td><td class="r">None</td></tr>
+<tr><td><strong>Common side effects</strong></td><td>Nasal irritation, rare headache, minor glucose changes</td><td>Nasal irritation; very rare anxiety increase at low doses</td><td>Vivid dreams; unknown profile in humans</td></tr>
+<tr><td><strong>Dependence risk</strong></td><td class="g">No reports</td><td class="g">No reports; no benzodiazepine-type withdrawal</td><td class="y">Unknown</td></tr>
+<tr><td><strong>Long-term risk</strong></td><td class="y">Low concern; decades of use</td><td class="y">Low concern; years of clinical use</td><td class="r">Theoretical cancer risk (HGF/c-Met pathway)</td></tr>
+<tr><td><strong>Drug interactions</strong></td><td>May interact with psychostimulants (enhanced dopamine)</td><td>Synergistic with benzodiazepines (GABA potentiation)</td><td>Unknown; caution with growth-factor-modulating therapies</td></tr>
+<tr><td><strong>Contraindications</strong></td><td>Active hormonal cancers (theoretical)</td><td>Severe immunodeficiency (immune modulation)</td><td>Any cancer diagnosis or history; pregnancy</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">The Stack-Specific Safety Problem</div>
+  <p>The biggest safety unknown with stacking isn't any individual compound — it's the <strong>combination</strong>. Both Semax and Selank elevate BDNF. Dihexa activates HGF/c-Met. These are all growth-promoting signals. In healthy brain tissue, this may be beneficial. In tissue with pre-malignant cells, you're simultaneously hitting three different growth-promoting pathways. There is no data — zero — on whether combining these compounds creates any meaningful cancer risk. The honest answer is: we don't know. For people with any cancer history, family predisposition, or elevated growth factor levels, this stack should be avoided entirely until human safety data exists.</p>
+</div>
+
+<!-- ========== WHO IS THIS FOR ========== -->
+<hr class="sep">
+<h2>Who This Stack Is (and Isn't) For</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Reasonable Candidates</h4>
+    <p><strong>Professionals in high-cognitive-demand periods</strong> — complex project work, strategic planning, sustained analytical tasks. <strong>Students during intense study periods</strong> — exam prep, thesis writing, language acquisition. <strong>Adults 35+ experiencing early cognitive decline</strong> — noticing reduced processing speed, memory lapses, diminished focus. <strong>People with high stress who need cognitive performance</strong> — Selank addresses the stress component while Semax supports focus. All candidates should be healthy, with no cancer history, and working with a physician.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Not Appropriate For</h4>
+    <p><strong>Anyone with cancer history or active malignancy.</strong> <strong>People under 25</strong> — brain development is ongoing and growth factor manipulation is unpredictable. <strong>Anyone not willing to get baseline bloodwork</strong> — liver function, metabolic panel, and hormones should be monitored. <strong>People seeking a "magic pill"</strong> — this stack won't compensate for poor sleep, nutrition, or exercise. <strong>Anyone using it unsupervised</strong> — the Dihexa component especially warrants physician oversight. <strong>Pregnant or nursing women.</strong></p>
+  </div>
+</div>
+
+<!-- ========== COST ========== -->
+<h2>Cost and Sourcing Realities</h2>
+
+<table class="tbl">
+<thead><tr><th>Component</th><th>Monthly Cost</th><th>Key Quality Indicators</th></tr></thead>
+<tbody>
+<tr><td><strong>Semax nasal spray (0.1%)</strong></td><td>$40-80</td><td>Third-party COA; HPLC purity ≥98%; proper refrigerated shipping; Russian pharmaceutical grade (if available) is gold standard</td></tr>
+<tr><td><strong>Selank nasal spray</strong></td><td>$30-60</td><td>Clear solution (no particulates); proper concentration verified; COA from reputable lab</td></tr>
+<tr><td><strong>Dihexa vials</strong></td><td>$60-120</td><td>Pharmaceutical-grade purity; COA with mass spectrometry confirmation; proper lyophilization</td></tr>
+<tr><td><strong>Total stack cost</strong></td><td><strong>$130-260/month</strong></td><td>Cheaper sources should raise immediate red flags about purity and authenticity</td></tr>
+</tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">Sourcing Warning</div>
+  <p>All three compounds exist in the "research chemical" market with the standard disclaimer problems. Independent lab testing in 2024 found that <strong>43% of research peptides failed to meet purity claims</strong>. For injectable/intranasal compounds entering your bloodstream and brain, this is not a trivial concern. Budget vendors may provide compounds with unknown impurities, incorrect concentrations, or degraded peptides. A certificate of analysis from the vendor is a minimum requirement — third-party verification from an independent lab (like Janoshik Analytical or MZ Biolabs) is significantly better.</p>
+</div>
+
+<!-- ========== TRACKING ========== -->
+<h2>Measuring Whether It's Working</h2>
+
+<p>Subjective feelings of "better focus" are unreliable for assessing nootropic effects due to placebo response and expectation bias. Here's a more rigorous approach:</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Objective Measures</h4>
+    <p><strong>Dual N-Back scores</strong> — free apps available; test working memory daily. <strong>Typing speed/accuracy</strong> — proxy for processing speed. <strong>Task completion metrics</strong> — track actual output (words written, problems solved, tickets closed). <strong>Cambridge Brain Sciences</strong> or similar validated cognitive testing platforms. <strong>Reaction time tests</strong> — online tools measure processing speed changes.</p>
+  </div>
+  <div class="mc">
+    <h4>Subjective Tracking</h4>
+    <p><strong>Daily journal</strong> — rate focus, anxiety, memory, energy on 1-10 scales at consistent times. <strong>Start tracking 1-2 weeks before beginning</strong> to establish a true baseline. <strong>Sleep quality logs</strong> — track Dihexa's vivid dream effects and any sleep disruption from Semax timing. <strong>Mood tracking</strong> — especially important for detecting Selank's anxiolytic effects vs. placebo expectation.</p>
+  </div>
+</div>
+
+<!-- ========== ALTERNATIVES ========== -->
+<h2>If This Stack Isn't Right: Alternatives</h2>
+
+<table class="tbl">
+<thead><tr><th>If You Want…</th><th>Consider Instead</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Focus without any peptides</td><td>Lion's Mane + Alpha-GPC + caffeine/L-theanine</td><td>Well-studied supplements with established safety data and meaningful nootropic effects</td></tr>
+<tr><td>Just the anxiety reduction</td><td>Selank alone</td><td>Strongest safety profile of the three; benzodiazepine-comparable anxiolysis without dependence risk</td></tr>
+<tr><td>Just the neuroprotection</td><td>Semax alone</td><td>Most evidence-supported compound; decades of Russian clinical use for neurological conditions</td></tr>
+<tr><td>Memory enhancement, lower risk</td><td>Semax + Selank (no Dihexa)</td><td>Removes the compound with zero human data and theoretical cancer risk; still addresses BDNF + GABA pathways</td>
+</tr>
+<tr><td>Pharmaceutical options</td><td>Modafinil, methylphenidate (prescription)</td><td>FDA-approved with known safety profiles; single-mechanism but well-characterized</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ========== KEY TAKEAWAYS ========== -->
+<hr class="sep">
+<h2>Key Takeaways</h2>
+
+<div class="d-t">
+  <div class="s">Bottom Line</div>
+  <p>The Semax + Selank + Dihexa cognition stack targets three distinct neurological systems through non-overlapping mechanisms, creating a theoretically sound approach to multi-dimensional cognitive enhancement. <strong>Semax</strong> has the strongest evidence base — decades of Russian clinical use and well-characterized BDNF/neurotrophin mechanisms. <strong>Selank</strong> offers a genuinely novel anxiolytic approach that avoids benzodiazepine pitfalls while supporting the calm-focus state that enables cognitive performance. <strong>Dihexa</strong> has the most dramatic preclinical data but also the highest risk profile — zero human studies and a theoretical cancer concern from chronic HGF/c-Met activation.</p>
+</div>
+
+<p>The most conservative approach: start with Semax + Selank only (solid evidence, established safety), and consider adding Dihexa only if the two-peptide stack is well-tolerated and insufficient for your needs. Physician oversight, baseline bloodwork, and objective cognitive tracking should be considered non-negotiable, not optional.</p>
+
+<p>What makes this stack interesting isn't that any single component is a breakthrough — it's that the three mechanisms genuinely don't overlap. In a field full of redundant nootropic stacking (five things that all raise acetylcholine), this combination represents a more sophisticated pharmacological approach. Whether that sophistication translates into meaningful real-world cognitive enhancement in healthy humans remains an open question that only rigorous clinical research can answer.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and no peptide protocol should be started without consultation with a qualified healthcare provider. None of the compounds discussed are FDA-approved for cognitive enhancement. The "cognition stack" has not been studied in clinical trials. Individual responses vary. Dihexa in particular carries theoretical risks that warrant serious consideration. Always prioritize safety over optimization.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Dolotov OV et al. (2006). Semax, an analog of ACTH(4-10) with cognitive effects, regulates BDNF and trkB expression in the rat hippocampus. <em>Brain Res.</em> 1117(1):54-60. PMID: 16996037.<br>
+Dolotov OV et al. (2009). Comparison of the temporary dynamics of NGF and BDNF gene expression in rat hippocampus, frontal cortex, and retina under Semax action. <em>J Mol Neurosci.</em> 38(2):127-35. PMID: 19662538.<br>
+Medvedeva EV et al. (2014). The peptide semax affects the expression of genes related to the immune and vascular systems in rat brain focal ischemia: genome-wide transcriptional analysis. <em>BMC Genomics.</em> 15:228. PMC3987924.<br>
+Dergunova LV et al. (2020). Novel insights into protective properties of ACTH(4-7)PGP (Semax) peptide at the transcriptome level following cerebral ischaemia–reperfusion in rats. <em>Genes.</em> 11(6):681.<br>
+Kolomin TA et al. (2013). Transcriptomic response of rat hippocampus and spleen to Semax. <em>Regulatory Peptides.</em> Cited in Cognitive Vitality review, Alzheimer's Drug Discovery Foundation.<br>
+Gusev EI et al. (2017). Semax in prevention of disease progress in patients with ischemic stroke. BDNF and rehabilitation data. [Referenced in Cognitive Vitality review].<br>
+Kasian A et al. (2016). Selank administration affects the expression of some genes involved in GABAergic neurotransmission. <em>Front Pharmacol.</em> 7:31. PMC4757669.<br>
+Volkova A et al. (2017). GABA, Selank, and olanzapine affect the expression of genes involved in GABAergic neurotransmission in IMR-32 cells. <em>Front Pharmacol.</em> 8:89.<br>
+Kolik LG et al. (2019). Selank protects against ethanol-induced memory impairment by regulating BDNF content in hippocampus and prefrontal cortex. <em>Bull Exp Biol Med.</em> 167(5):641-644.<br>
+Benoist CC et al. (2014). The procognitive and synaptogenic effects of angiotensin IV–derived peptides are dependent on activation of the hepatocyte growth factor/c-Met system. <em>J Pharmacol Exp Ther.</em> 351(2):390-402. PMC4201273.<br>
+McCoy AT et al. (2013). Evaluation of metabolically stabilized angiotensin IV analogs as procognitive/antidementia agents. <em>J Pharmacol Exp Ther.</em> 344(1):141-54.<br>
+Sun XJ et al. (2021). AngIV-analog dihexa rescues cognitive impairment and recovered memory in the APP/PS1 mouse via the PI3K/AKT signaling pathway. <em>Brain Sci.</em> 11(11):1487.<br>
+Wright JW, Harding JW (2021). Small molecule activation of the neurotrophin hepatocyte growth factor to treat Alzheimer disease. <em>Ageing Neurodegener Dis.</em> 1:2.
+</p>
+
+</div>
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>•</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>⚠️ Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content" set:html={rawHTML} />
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">🔬 Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Popular Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides →</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
