@@ -11,14 +11,14 @@ author: "PeptideRundown Editorial"
 
 # Peptides for Women: Complete Guide to Female-Specific Protocols
 
-<p>Women's bodies run on different biological software than men's. Fluctuating estrogen and progesterone levels, monthly hormonal cycles, pregnancy potential, and menopause transitions all create a physiological environment where <a href="/articles/what-are-peptides-beginners-guide">peptides</a> behave differently — sometimes dramatically so. Yet the majority of peptide research has been conducted on male subjects or mixed populations without gender-stratified analysis.</p>
+<p>Women's bodies run on different biological software than men's. Fluctuating estrogen and progesterone levels, monthly hormonal cycles, pregnancy potential, and menopause transitions all create a physiological environment where <a href="/articles/what-are-peptides-beginners-guide">peptides</a> behave differently  -  sometimes dramatically so. Yet the majority of peptide research has been conducted on male subjects or mixed populations without gender-stratified analysis.</p>
 
 <p>This creates a real problem. A peptide dosing protocol optimized for a 200-pound male with stable testosterone levels may produce entirely different effects in a 140-pound woman whose estrogen levels shift by 10-fold across her menstrual cycle. The pharmacokinetics change. The receptor sensitivity changes. The outcomes change.</p>
 
-<p>Women account for a growing share of peptide therapy patients — roughly 40% of clinical peptide prescriptions in 2025, up from 25% just three years prior, according to telehealth prescribing data. Much of this growth is driven by women seeking solutions for stubborn fat loss, skin aging, hormonal imbalances, fertility support, and the cognitive fog that often accompanies perimenopause.</p>
+<p>Women account for a growing share of peptide therapy patients  -  roughly 40% of clinical peptide prescriptions in 2025, up from 25% just three years prior, according to telehealth prescribing data. Much of this growth is driven by women seeking solutions for stubborn fat loss, skin aging, hormonal imbalances, fertility support, and the cognitive fog that often accompanies perimenopause.</p>
 
 <div class="expert-quote">
-  <div class="speaker">Dr. Sarah Chen, MD — Integrative Endocrinologist</div>
+  <div class="speaker">Dr. Sarah Chen, MD  -  Integrative Endocrinologist</div>
   <p>"The biggest mistake I see in women's peptide therapy is copy-pasting male protocols. Women need lower starting doses, cycle-aware timing, and careful attention to how peptides interact with estrogen and progesterone. When you get these variables right, the results can be extraordinary."</p>
 </div>
 
@@ -37,9 +37,9 @@ author: "PeptideRundown Editorial"
 
 ### Estrogen-Peptide Interactions
 
-<p>Estrogen doesn't just regulate reproduction — it modulates nearly every system in the body, including how peptide receptors function. Estradiol (E2) upregulates growth hormone receptor expression in the liver, which means women in their follicular phase (when estrogen is rising) may experience amplified responses to GH-releasing peptides like Ipamorelin or CJC-1295 <sup>[1]</sup>.</p>
+<p>Estrogen doesn't just regulate reproduction  -  it modulates nearly every system in the body, including how peptide receptors function. Estradiol (E2) upregulates growth hormone receptor expression in the liver, which means women in their follicular phase (when estrogen is rising) may experience amplified responses to GH-releasing peptides like Ipamorelin or CJC-1295 <sup>[1]</sup>.</p>
 
-<p>Conversely, estrogen blunts the IGF-1 response to growth hormone. Women naturally produce about 50% more growth hormone than men but generate less IGF-1 per unit of GH — a phenomenon called the "GH-IGF-1 disconnect" <sup>[2]</sup>. This has practical implications: women may need different peptide combinations to achieve the same downstream effects that men get from simpler protocols.</p>
+<p>Conversely, estrogen blunts the IGF-1 response to growth hormone. Women naturally produce about 50% more growth hormone than men but generate less IGF-1 per unit of GH  -  a phenomenon called the "GH-IGF-1 disconnect" <sup>[2]</sup>. This has practical implications: women may need different peptide combinations to achieve the same downstream effects that men get from simpler protocols.</p>
 
 <p>Estrogen also influences peptide metabolism through its effects on hepatic enzymes. CYP3A4, a liver enzyme responsible for breaking down many bioactive compounds, is expressed at higher levels in women, potentially shortening the half-life of certain peptides <sup>[3]</sup>.</p>
 
@@ -68,13 +68,13 @@ author: "PeptideRundown Editorial"
 
 ### Metabolic Differences
 
-<p>Women oxidize more fat and less carbohydrate during exercise compared to men, a difference driven by estrogen's effect on lipid metabolism <sup>[4]</sup>. This means fat-loss peptides that work through lipolytic pathways may produce subtler results in women — not because they're less effective, but because women's baseline fat metabolism is already more active.</p>
+<p>Women oxidize more fat and less carbohydrate during exercise compared to men, a difference driven by estrogen's effect on lipid metabolism <sup>[4]</sup>. This means fat-loss peptides that work through lipolytic pathways may produce subtler results in women  -  not because they're less effective, but because women's baseline fat metabolism is already more active.</p>
 
 <p>Women also have approximately 10-15% higher body fat percentages than men at equivalent fitness levels, with essential fat stores supporting reproductive function. Aggressive fat-loss peptide protocols that work for men can disrupt menstrual cycles in women, a condition called hypothalamic amenorrhea <sup>[5]</sup>.</p>
 
 <div class="callout">
   <h4>Key Insight</h4>
-  <p>Female fat metabolism is not a deficiency — it's an adaptation. Peptide protocols for women should work with this biology, not against it. Gradual approaches that preserve menstrual regularity produce better long-term results than aggressive protocols that trigger hormonal disruption.</p>
+  <p>Female fat metabolism is not a deficiency  -  it's an adaptation. Peptide protocols for women should work with this biology, not against it. Gradual approaches that preserve menstrual regularity produce better long-term results than aggressive protocols that trigger hormonal disruption.</p>
 </div>
 
 <p>Thyroid function adds another layer of complexity. Women are 5-8 times more likely than men to develop thyroid disorders, and subclinical hypothyroidism can blunt the effects of growth hormone peptides <sup>[6]</sup>. Any serious peptide protocol for women should include thyroid panel monitoring.</p>
@@ -86,7 +86,7 @@ author: "PeptideRundown Editorial"
 <div class="peptide-card">
   <span class="peptide-tag">Growth Hormone</span>
   <h3>Ipamorelin</h3>
-  <p>Ipamorelin is a selective GH secretagogue that stimulates the ghrelin receptor without significantly raising cortisol or prolactin — two hormones women are particularly sensitive to. It produces a clean, physiological GH pulse that mirrors the body's natural release pattern <sup>[7]</sup>.</p>
+  <p>Ipamorelin is a selective GH secretagogue that stimulates the ghrelin receptor without significantly raising cortisol or prolactin  -  two hormones women are particularly sensitive to. It produces a clean, physiological GH pulse that mirrors the body's natural release pattern <sup>[7]</sup>.</p>
   <p><strong>Why it matters for women:</strong> Ipamorelin's selectivity means it won't worsen the cortisol dysregulation common in stressed women or elevate prolactin (which can disrupt menstrual cycles). It supports collagen synthesis, lean body composition, and sleep quality.</p>
   <p><strong>Dosing:</strong> 100–200 mcg subcutaneously, 1-2× daily. Start at 100 mcg. Best administered 30 minutes before bed on an empty stomach.</p>
   <p><strong>Cycle timing:</strong> Most effective during the follicular phase (days 6–13) when GH receptor sensitivity peaks.</p>
@@ -122,7 +122,7 @@ author: "PeptideRundown Editorial"
   <span class="peptide-tag">Growth Hormone</span>
   <h3>CJC-1295 (no DAC)</h3>
   <p>CJC-1295 without the Drug Affinity Complex is a modified GHRH analog that amplifies the body's natural GH pulses. Paired with Ipamorelin, it creates a synergistic effect that increases total GH output by 2-3× compared to either peptide alone <sup>[8]</sup>.</p>
-  <p><strong>Why it matters for women:</strong> The no-DAC version allows tighter control over GH elevation — critical for women who need to avoid sustained GH spikes that can worsen insulin resistance during the luteal phase.</p>
+  <p><strong>Why it matters for women:</strong> The no-DAC version allows tighter control over GH elevation  -  critical for women who need to avoid sustained GH spikes that can worsen insulin resistance during the luteal phase.</p>
   <p><strong>Dosing:</strong> 50–100 mcg subcutaneously, paired with Ipamorelin at bedtime. Women typically respond well at the lower end of the dosing range.</p>
   <p><strong>Cycle timing:</strong> Can be used throughout the cycle but consider reducing dose during the luteal phase if fasting glucose rises.</p>
 </div>
@@ -130,7 +130,7 @@ author: "PeptideRundown Editorial"
 <div class="peptide-card">
   <span class="peptide-tag">Skin & Anti-Aging</span>
   <h3><a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu (Copper Peptide)</a></h3>
-  <p>GHK-Cu is a naturally occurring tripeptide that declines with age — from ~200 ng/mL at age 20 to ~80 ng/mL by age 60. It activates over 4,000 genes involved in tissue remodeling, collagen synthesis, and antioxidant defense <sup>[9]</sup>.</p>
+  <p>GHK-Cu is a naturally occurring tripeptide that declines with age  -  from ~200 ng/mL at age 20 to ~80 ng/mL by age 60. It activates over 4,000 genes involved in tissue remodeling, collagen synthesis, and antioxidant defense <sup>[9]</sup>.</p>
   <p><strong>Why it matters for women:</strong> Women lose collagen at approximately 1% per year after age 30, with an accelerated 30% loss in the first five years of menopause <sup>[10]</sup>. GHK-Cu directly counteracts this by upregulating collagen I, III, and IV production. Estrogen enhances GHK-Cu's receptor binding, making it particularly effective in premenopausal women.</p>
   <p><strong>Dosing (topical):</strong> 0.5–2% serum applied twice daily. For injection: 1–2 mg subcutaneously, 3× per week.</p>
   <p><strong>Cycle timing:</strong> Topical use is cycle-independent. Injectable protocols are most effective during the follicular phase.</p>
@@ -166,7 +166,7 @@ author: "PeptideRundown Editorial"
   <span class="peptide-tag">Fat Loss</span>
   <h3><a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a></h3>
   <p>AOD-9604 is a modified fragment of human growth hormone (amino acids 177-191) that stimulates lipolysis without the insulin resistance, IGF-1 elevation, or growth-promoting effects of full GH <sup>[11]</sup>. It received TGA approval in Australia for a cartilage repair indication, establishing a safety profile.</p>
-  <p><strong>Why it matters for women:</strong> Women often struggle with stubborn fat in the hips, thighs, and lower abdomen — areas with high alpha-2 adrenergic receptor density that resist conventional fat loss. AOD-9604 bypasses these receptors by acting through a different lipolytic pathway. It does not suppress reproductive hormones.</p>
+  <p><strong>Why it matters for women:</strong> Women often struggle with stubborn fat in the hips, thighs, and lower abdomen  -  areas with high alpha-2 adrenergic receptor density that resist conventional fat loss. AOD-9604 bypasses these receptors by acting through a different lipolytic pathway. It does not suppress reproductive hormones.</p>
   <p><strong>Dosing:</strong> 250–300 mcg subcutaneously, once daily on an empty stomach (morning, 30 minutes before eating).</p>
   <p><strong>Cycle timing:</strong> Most effective during the follicular phase and early luteal phase. Progesterone dominance in the late luteal phase may reduce efficacy.</p>
 </div>
@@ -183,8 +183,8 @@ author: "PeptideRundown Editorial"
 <div class="peptide-card">
   <span class="peptide-tag">Healing & Recovery</span>
   <h3><a href="/articles/bpc-157-complete-guide">BPC-157</a> (Body Protection Compound)</h3>
-  <p>BPC-157 is a 15-amino-acid peptide derived from human gastric juice that accelerates healing across multiple tissue types — tendons, ligaments, muscle, gut lining, and even nerve tissue. It works partly through VEGF-mediated angiogenesis and nitric oxide pathways <sup>[13]</sup>.</p>
-  <p><strong>Why it matters for women:</strong> Women experience higher rates of ACL injuries (2-8× more than men in the same sports), partly due to estrogen's effects on ligament laxity during the luteal phase. BPC-157 can accelerate recovery from these injuries. It also supports gut healing — relevant since women are 2× more likely to have IBS than men.</p>
+  <p>BPC-157 is a 15-amino-acid peptide derived from human gastric juice that accelerates healing across multiple tissue types  -  tendons, ligaments, muscle, gut lining, and even nerve tissue. It works partly through VEGF-mediated angiogenesis and nitric oxide pathways <sup>[13]</sup>.</p>
+  <p><strong>Why it matters for women:</strong> Women experience higher rates of ACL injuries (2-8× more than men in the same sports), partly due to estrogen's effects on ligament laxity during the luteal phase. BPC-157 can accelerate recovery from these injuries. It also supports gut healing  -  relevant since women are 2× more likely to have IBS than men.</p>
   <p><strong>Dosing:</strong> 250–500 mcg subcutaneously or orally, 1-2× daily. For gut issues, oral dosing on an empty stomach is preferred. For musculoskeletal injuries, subcutaneous injection near the injury site.</p>
   <p><strong>Cycle timing:</strong> Particularly beneficial during the menstrual phase (days 1–5) when inflammation peaks.</p>
 </div>
@@ -227,8 +227,8 @@ author: "PeptideRundown Editorial"
 <div class="peptide-card">
   <span class="peptide-tag">Fertility & Hormones</span>
   <h3>Kisspeptin</h3>
-  <p><a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a> is a neuropeptide that acts as the master regulator of the hypothalamic-pituitary-gonadal (HPG) axis. It triggers GnRH release, which drives FSH and LH secretion — the hormones that control ovulation, estrogen production, and progesterone output <sup>[15]</sup>.</p>
-  <p><strong>Why it matters for women:</strong> Kisspeptin is being studied as an alternative to traditional fertility medications for IVF stimulation. Early trials show it may trigger egg maturation with a lower risk of ovarian hyperstimulation syndrome (OHSS) — a serious complication that affects up to 10% of IVF patients <sup>[16]</sup>. It also shows promise for treating hypothalamic amenorrhea.</p>
+  <p><a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a> is a neuropeptide that acts as the master regulator of the hypothalamic-pituitary-gonadal (HPG) axis. It triggers GnRH release, which drives FSH and LH secretion  -  the hormones that control ovulation, estrogen production, and progesterone output <sup>[15]</sup>.</p>
+  <p><strong>Why it matters for women:</strong> Kisspeptin is being studied as an alternative to traditional fertility medications for IVF stimulation. Early trials show it may trigger egg maturation with a lower risk of ovarian hyperstimulation syndrome (OHSS)  -  a serious complication that affects up to 10% of IVF patients <sup>[16]</sup>. It also shows promise for treating hypothalamic amenorrhea.</p>
   <p><strong>Dosing:</strong> Clinical doses range from 1.0–12.8 nmol/kg IV in research settings. This peptide should ONLY be used under direct medical supervision in a clinical fertility setting.</p>
   <p><strong>Cycle timing:</strong> Administered at specific points during IVF stimulation protocols, typically as an ovulation trigger.</p>
 </div>
@@ -241,7 +241,7 @@ author: "PeptideRundown Editorial"
 <div class="peptide-card">
   <span class="peptide-tag">Longevity</span>
   <h3>Epithalon (Epitalon)</h3>
-  <p>Epithalon is a synthetic tetrapeptide that activates telomerase — the enzyme responsible for maintaining telomere length. Telomere shortening is associated with cellular aging, and women's telomeres shorten at different rates than men's, with estrogen providing some protective effect prior to menopause <sup>[17]</sup>.</p>
+  <p>Epithalon is a synthetic tetrapeptide that activates telomerase  -  the enzyme responsible for maintaining telomere length. Telomere shortening is associated with cellular aging, and women's telomeres shorten at different rates than men's, with estrogen providing some protective effect prior to menopause <sup>[17]</sup>.</p>
   <p><strong>Why it matters for women:</strong> Post-menopausal women experience accelerated telomere shortening as estrogen's protective effect disappears. Epithalon may help offset this acceleration. It also regulates melatonin production through pineal gland activation, supporting the sleep disruption that commonly accompanies menopause.</p>
   <p><strong>Dosing:</strong> 5–10 mg subcutaneously daily for 10-20 day cycles, 2-3 times per year.</p>
   <p><strong>Cycle timing:</strong> Cycle-independent. Best initiated during low-stress periods.</p>
@@ -251,7 +251,7 @@ author: "PeptideRundown Editorial"
   <span class="peptide-tag">Cognitive</span>
   <h3>Selank</h3>
   <p>Selank is a synthetic analog of the immunomodulatory peptide tuftsin, developed at the Russian Academy of Sciences. It has anxiolytic properties comparable to benzodiazepines without sedation or cognitive impairment, working through modulation of GABA, serotonin, and BDNF pathways <sup>[18]</sup>.</p>
-  <p><strong>Why it matters for women:</strong> Women are 2× more likely to experience anxiety disorders than men, with symptoms often worsening during the premenstrual and perimenopausal periods. Selank offers anxiolytic support without the dependency risk of traditional medications. It also enhances memory consolidation and focus — useful for addressing the "brain fog" reported by many women during hormonal transitions.</p>
+  <p><strong>Why it matters for women:</strong> Women are 2× more likely to experience anxiety disorders than men, with symptoms often worsening during the premenstrual and perimenopausal periods. Selank offers anxiolytic support without the dependency risk of traditional medications. It also enhances memory consolidation and focus  -  useful for addressing the "brain fog" reported by many women during hormonal transitions.</p>
   <p><strong>Dosing:</strong> 250–500 mcg intranasally, 2-3× daily. Effects are typically felt within 10-15 minutes.</p>
   <p><strong>Cycle timing:</strong> Particularly valuable during the late luteal phase (days 22-28) when GABA sensitivity drops and anxiety often increases.</p>
 </div>
@@ -260,7 +260,7 @@ author: "PeptideRundown Editorial"
   <span class="peptide-tag">Metabolic</span>
   <h3><a href="/articles/tesamorelin-ipamorelin-stack-guide">Tesamorelin</a></h3>
   <p>Tesamorelin is an FDA-approved GHRH analog originally indicated for HIV-associated lipodystrophy. It produces a strong, sustained GH pulse and has been shown to reduce visceral adipose tissue by 15-18% in clinical trials <sup>[19]</sup>.</p>
-  <p><strong>Why it matters for women:</strong> Visceral fat accumulation accelerates during perimenopause and menopause as estrogen declines. Tesamorelin targets this specific fat depot while preserving subcutaneous fat distribution. It also improves cognitive function in studies — a relevant benefit for menopausal women experiencing cognitive decline.</p>
+  <p><strong>Why it matters for women:</strong> Visceral fat accumulation accelerates during perimenopause and menopause as estrogen declines. Tesamorelin targets this specific fat depot while preserving subcutaneous fat distribution. It also improves cognitive function in studies  -  a relevant benefit for menopausal women experiencing cognitive decline.</p>
   <p><strong>Dosing:</strong> 1–2 mg subcutaneously daily, administered in the evening. Women typically start at 1 mg.</p>
   <p><strong>Cycle timing:</strong> For premenopausal women, begin during the follicular phase. Post-menopausal women can start at any time.</p>
 </div>
@@ -275,13 +275,13 @@ author: "PeptideRundown Editorial"
 </div>
 
 <div class="expert-quote">
-  <div class="speaker">Dr. Michelle Torres, PharmD — Clinical Peptide Pharmacist</div>
-  <p>"Women consistently do better with lower starting doses and slower titration schedules. I see clinicians start women at male-equivalent doses and then manage side effects for weeks. Start low, increase gradually, and respect the cycle. The peptides work — you just have to give them the right environment."</p>
+  <div class="speaker">Dr. Michelle Torres, PharmD  -  Clinical Peptide Pharmacist</div>
+  <p>"Women consistently do better with lower starting doses and slower titration schedules. I see clinicians start women at male-equivalent doses and then manage side effects for weeks. Start low, increase gradually, and respect the cycle. The peptides work  -  you just have to give them the right environment."</p>
 </div>
 
 ## Female-Specific Protocols by Age
 
-<p>Peptide needs shift across a woman's life as hormonal profiles, metabolic priorities, and health goals change. These protocols serve as starting frameworks — individual adjustment with medical guidance is always necessary.</p>
+<p>Peptide needs shift across a woman's life as hormonal profiles, metabolic priorities, and health goals change. These protocols serve as starting frameworks  -  individual adjustment with medical guidance is always necessary.</p>
 
 ### Women in Their 20s: Foundation & Prevention
 
@@ -373,15 +373,15 @@ author: "PeptideRundown Editorial"
   </div>
   <div class="stack-card">
     <h4>Cognitive Shield</h4>
-    <p>Selank 500 mcg + DSIP 150 mcg nightly. Supports BDNF production and restorative sleep — both decline sharply without estrogen's neuroprotective effects.</p>
+    <p>Selank 500 mcg + DSIP 150 mcg nightly. Supports BDNF production and restorative sleep  -  both decline sharply without estrogen's neuroprotective effects.</p>
   </div>
 </div>
 
 <div class="callout">
   <h4>Cycle-Specific Timing Summary</h4>
-  <p><strong>Follicular phase (days 6-13):</strong> GH secretagogues, collagen peptides, fat-loss peptides — receptor sensitivity is at its highest.</p>
-  <p><strong>Luteal phase (days 15-28):</strong> Recovery peptides, sleep support, anti-anxiety peptides — the body shifts toward repair and rest.</p>
-  <p><strong>Menstrual phase (days 1-5):</strong> Anti-inflammatory peptides — address the inflammatory spike that accompanies menstruation.</p>
+  <p><strong>Follicular phase (days 6-13):</strong> GH secretagogues, collagen peptides, fat-loss peptides  -  receptor sensitivity is at its highest.</p>
+  <p><strong>Luteal phase (days 15-28):</strong> Recovery peptides, sleep support, anti-anxiety peptides  -  the body shifts toward repair and rest.</p>
+  <p><strong>Menstrual phase (days 1-5):</strong> Anti-inflammatory peptides  -  address the inflammatory spike that accompanies menstruation.</p>
   <p><strong>Post-menopause:</strong> Consistent daily dosing replaces cycle timing. Focus on longevity, cognitive support, and tissue maintenance.</p>
 </div>
 
@@ -400,7 +400,7 @@ author: "PeptideRundown Editorial"
 
 <ul class="benefit-list">
   <li><strong>Estrogen-sensitive cancers (breast, ovarian, endometrial):</strong> Avoid all GH secretagogues. GH/IGF-1 axis stimulation may accelerate tumor growth <sup>[21]</sup></li>
-  <li><strong>PCOS:</strong> Use Ipamorelin with caution — GH can worsen insulin resistance. Avoid kisspeptin outside clinical settings as it may dysregulate already-disrupted LH pulsatility</li>
+  <li><strong>PCOS:</strong> Use Ipamorelin with caution  -  GH can worsen insulin resistance. Avoid kisspeptin outside clinical settings as it may dysregulate already-disrupted LH pulsatility</li>
   <li><strong>Endometriosis:</strong> BPC-157's angiogenic properties could theoretically promote endometrial tissue growth. Discuss with your physician</li>
   <li><strong>Thyroid disorders:</strong> GH peptides can alter T4-to-T3 conversion. Monitor thyroid panels every 6-8 weeks when starting GH secretagogues</li>
   <li><strong>Autoimmune conditions:</strong> Thymosin-based peptides (TB-500) modulate immune function. Women with lupus, rheumatoid arthritis, or Hashimoto's should proceed with caution</li>
@@ -431,8 +431,8 @@ author: "PeptideRundown Editorial"
 </div>
 
 <div class="expert-quote">
-  <div class="speaker">Dr. Rachel Kim, DO — Women's Health Specialist</div>
-  <p>"I require baseline labs before starting any woman on peptide therapy, and I recheck at 6 weeks. The women who get the best results are the ones who commit to monitoring. Peptides are powerful — and that power demands respect and oversight."</p>
+  <div class="speaker">Dr. Rachel Kim, DO  -  Women's Health Specialist</div>
+  <p>"I require baseline labs before starting any woman on peptide therapy, and I recheck at 6 weeks. The women who get the best results are the ones who commit to monitoring. Peptides are powerful  -  and that power demands respect and oversight."</p>
 </div>
 
 ### Medical Supervision Requirements
@@ -469,9 +469,9 @@ author: "PeptideRundown Editorial"
 
 <div class="callout">
   <h4>Getting Started: Your Next Steps</h4>
-  <p><strong>Step 1:</strong> Get baseline bloodwork — IGF-1, complete metabolic panel, thyroid panel, and female hormone panel (drawn on day 3 of your cycle for premenopausal women).</p>
+  <p><strong>Step 1:</strong> Get baseline bloodwork  -  IGF-1, complete metabolic panel, thyroid panel, and female hormone panel (drawn on day 3 of your cycle for premenopausal women).</p>
   <p><strong>Step 2:</strong> Find a qualified provider. Look for physicians or nurse practitioners specializing in peptide therapy or functional medicine with peptide experience.</p>
-  <p><strong>Step 3:</strong> Start with a single peptide. Resist the urge to begin multiple peptides simultaneously — you won't know what's working or causing side effects.</p>
+  <p><strong>Step 3:</strong> Start with a single peptide. Resist the urge to begin multiple peptides simultaneously  -  you won't know what's working or causing side effects.</p>
   <p><strong>Step 4:</strong> Track your response. Keep a daily log of sleep quality, energy, mood, skin appearance, and menstrual cycle regularity for the first 8 weeks.</p>
 </div>
 

@@ -222,7 +222,7 @@ strong{color:var(--ink);}
 
 <h2>Peptides vs. Proteins vs. Small-Molecule Drugs</h2>
 
-<p>Understanding where peptides sit in the drug landscape helps explain why they are generating so much interest. They occupy a middle ground between traditional small-molecule drugs (like aspirin, ibuprofen, or metformin) and large biologic drugs (like monoclonal antibodies).</p>
+<p>Understanding where peptides sit in the drug ecosystem helps explain why they are generating so much interest. They occupy a middle ground between traditional small-molecule drugs (like aspirin, ibuprofen, or metformin) and large biologic drugs (like monoclonal antibodies).</p>
 
 <table class="tbl">
 <thead><tr><th>Property</th><th>Small Molecules</th><th>Peptides</th><th>Proteins / Biologics</th></tr></thead>
@@ -322,7 +322,7 @@ strong{color:var(--ink);}
 
 <h2>Categories of Peptides You Will Encounter</h2>
 
-<p>The peptide landscape is broad. Here is a practical map of the major categories you are most likely to encounter, organized by their primary function.</p>
+<p>The peptide ecosystem is broad. Here is a practical map of the major categories you are most likely to encounter, organized by their primary function.</p>
 
 <h3>Growth Hormone Secretagogues (GHS)</h3>
 
@@ -439,7 +439,7 @@ strong{color:var(--ink);}
 
 <div class="dv"></div>
 
-<h2>The Regulatory Landscape</h2>
+<h2>The Regulatory Overview</h2>
 
 <p>The peptide space exists across several regulatory categories, and understanding where a given compound sits is important for evaluating both its evidence base and its legal status.</p>
 

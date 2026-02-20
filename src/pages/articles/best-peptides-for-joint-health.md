@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Article.astro
 title: "The Best Peptides for Joint Health: What the Research Actually Shows"
-description: "A comprehensive review of the top peptides for joint repair and inflammation — BPC-157, TB-500, AOD-9604, and GHK-Cu — with evidence-based protocols and dosing guidance."
+description: "A in-depth review of the top peptides for joint repair and inflammation  -  BPC-157, TB-500, AOD-9604, and GHK-Cu  -  with evidence-based protocols and dosing guidance."
 image: /images/articles/best-peptides-for-joint-health.webp
 date: 2026-02-17
 category: "Peptide Research Review"
@@ -227,7 +227,7 @@ author: "PeptideRundown Team"
 
 <p>PRP is perhaps the most instructive comparison. Like peptides, PRP emerged from strong biological rationale and encouraging preclinical data. Unlike peptides, PRP has now been tested in numerous randomized controlled trials. The results have been genuinely encouraging for some conditions (particularly knee osteoarthritis and chronic tendinopathies) but inconsistent across studies, largely because PRP preparations vary widely in platelet concentration, leukocyte content, and activation method. Joint peptides may eventually follow a similar trajectory, but they are at least a decade behind PRP in clinical validation.</p>
 
-<!-- REGULATORY LANDSCAPE -->
+<!-- REGULATORY OVERVIEW -->
 <h2>Regulatory Status (2025-2026)</h2>
 
 <p>The regulatory environment for joint peptides is among the most restrictive categories in the peptide space, largely because the two most popular compounds (BPC-157 and TB-500) are both currently prohibited for compounding.</p>

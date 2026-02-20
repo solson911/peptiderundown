@@ -56,7 +56,7 @@ The evidence base for BPC-157 spans numerous tissue types and conditions, though
 
 ### Gastrointestinal Healing
 
-Given its origin from gastric juice, BPC-157's strongest evidence base involves gastrointestinal applications. Animal studies have demonstrated accelerated healing of gastric, duodenal, and colonic ulcers caused by NSAIDs, alcohol, stress, and surgical procedures [1, 9]. The peptide doesn't just promote healing—it appears to actively protect against damage while repair processes occur.
+Given its origin from gastric juice, BPC-157's strongest evidence base involves gastrointestinal applications. Animal studies have demonstrated accelerated healing of gastric, duodenal, and colonic ulcers caused by NSAIDs, alcohol, stress, and surgical procedures [1, 9]. The peptide doesn't just promote healing - it appears to actively protect against damage while repair processes occur.
 
 In inflammatory bowel disease models, BPC-157 reduced inflammation markers, promoted mucosal healing, and improved clinical scores at levels comparable to standard treatments [10]. Studies of surgical gut healing showed faster anastomosis recovery and reduced adhesion formation [11]. Perhaps most practically relevant, the peptide demonstrated protective effects against acid reflux-induced esophageal damage, suggesting potential applications for GERD and related conditions [9].
 
@@ -113,7 +113,7 @@ Start by gathering your materials: the BPC-157 vial, bacteriostatic water, insul
 
 For standard concentrations, draw the appropriate amount of bacteriostatic water into your syringe. Common ratios include 5 mg vial plus 2 mL BAC water, creating 2,500 mcg/mL concentration where each 0.1 mL equals 250 mcg. Alternatively, 5 mg vial plus 1 mL BAC water creates 5,000 mcg/mL concentration where each 0.1 mL equals 500 mcg.
 
-Inject the water slowly into the BPC-157 vial, directing the stream against the glass wall rather than directly onto the powder to avoid foaming. Swirl the vial gently until the powder fully dissolves—avoid vigorous shaking, which can damage the peptide structure.
+Inject the water slowly into the BPC-157 vial, directing the stream against the glass wall rather than directly onto the powder to avoid foaming. Swirl the vial gently until the powder fully dissolves - avoid vigorous shaking, which can damage the peptide structure.
 
 Store the reconstituted solution in the refrigerator at 2-8°C and avoid freezing once reconstituted. The solution should remain stable for 3-4 weeks when stored properly.
 
@@ -142,7 +142,7 @@ The legal environment for BPC-157 in the United States has become increasingly r
 
 Between 2022-2024, the FDA issued warning letters to companies marketing BPC-157 for human use, particularly targeting those making specific therapeutic claims. In late 2023 and continuing through 2024-2025, the FDA placed BPC-157 on its list of substances prohibited from use in compounding under sections 503A and 503B, citing insufficient safety and efficacy data for human use.
 
-The peptide remains available as a research chemical designated for in vitro research and non-human use only. Personal use exists in a regulatory gray area—purchasing research peptides isn't explicitly illegal, but self-administration falls outside FDA-sanctioned use patterns.
+The peptide remains available as a research chemical designated for in vitro research and non-human use only. Personal use exists in a regulatory gray area - purchasing research peptides isn't explicitly illegal, but self-administration falls outside FDA-sanctioned use patterns.
 
 International availability varies considerably by jurisdiction. Canada offers some access through compounding pharmacies operating under different regulatory frameworks than the US. The European Union hasn't approved BPC-157 as a pharmaceutical product, though it's available in some countries as a research compound. Australia regulates it under the TGA with prescription-level requirements.
 
@@ -170,7 +170,7 @@ This remains a subject of ongoing debate among practitioners and researchers. So
 
 ### Can BPC-157 be stacked with other peptides?
 
-BPC-157 is frequently discussed in combination with <a href="/articles/tb-500-complete-guide">TB-500 (Thymosin Beta-4 fragment)</a> for tissue healing applications. While both peptides promote healing through overlapping but distinct mechanisms—BPC-157 focusing on angiogenesis and growth factor upregulation, TB-500 emphasizing cell migration and tissue remodeling—no controlled studies have examined this combination in humans. The theoretical rationale appears sound, but evidence remains anecdotal.
+BPC-157 is frequently discussed in combination with <a href="/articles/tb-500-complete-guide">TB-500 (Thymosin Beta-4 fragment)</a> for tissue healing applications. While both peptides promote healing through overlapping but distinct mechanisms - BPC-157 focusing on angiogenesis and growth factor upregulation, TB-500 emphasizing cell migration and tissue remodeling - no controlled studies have examined this combination in humans. The theoretical rationale appears sound, but evidence remains anecdotal.
 
 ### Is BPC-157 safe for long-term use?
 
@@ -186,7 +186,7 @@ Several significant knowledge gaps remain in BPC-157 research that affect how we
 
 As of early 2026, no completed large-scale randomized controlled trials in humans exist. This represents the most critical limitation in translating promising animal research to human applications with confidence. Dose translation from rodent models to humans using allometric scaling is imperfect and may not account for species-specific differences in metabolism, receptor sensitivity, and pharmacokinetics.
 
-Long-term safety profiles in any species aren't well characterized, and the chronic effects of sustained BPC-157 administration remain unknown. The relative contribution of different mechanisms to observed effects isn't fully understood—while we know BPC-157 affects multiple pathways, we don't know which are most important for specific applications.
+Long-term safety profiles in any species aren't well characterized, and the chronic effects of sustained BPC-157 administration remain unknown. The relative contribution of different mechanisms to observed effects isn't fully understood - while we know BPC-157 affects multiple pathways, we don't know which are most important for specific applications.
 
 These gaps don't invalidate the existing research, which is substantial and generally well-conducted within its limitations. However, they underscore the importance of approaching BPC-157 with appropriate caution and intellectual honesty about what we do and don't know.
 
