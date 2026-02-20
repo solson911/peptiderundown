@@ -4,7 +4,7 @@ title: "What Are Peptides? A Beginner's Guide to Peptide Therapy"
 description: "Complete guide explaining what peptides are, how they work in your body, and why they're the fastest-growing category in pharmaceutical development."
 image: /images/articles/beginners-guide.webp
 date: 2026-02-17
-category: "Education"
+category: "Peptide Guides"
 tags: ["peptides", "beginners guide", "amino acids", "peptide therapy"]
 author: "PeptideRundown Team"
 ---

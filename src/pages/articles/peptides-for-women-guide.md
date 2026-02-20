@@ -4,7 +4,7 @@ title: "Peptides for Women: Complete Guide to Female-Specific Protocols"
 description: "Evidence-based guide to peptides for women's health, covering fertility, skin rejuvenation, fat loss, and hormone balance with protocols optimized for female physiology."
 image: /images/articles/peptides-for-women-guide.webp
 date: 2026-02-17
-category: "Women's Health"
+category: "Peptide Guides"
 tags: ["peptides", "women's health", "hormones", "fertility", "anti-aging"]
 author: "PeptideRundown Editorial"
 ---

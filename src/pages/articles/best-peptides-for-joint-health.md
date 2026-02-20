@@ -4,7 +4,7 @@ title: "The Best Peptides for Joint Health: What the Research Actually Shows"
 description: "A in-depth review of the top peptides for joint repair and inflammation  -  BPC-157, TB-500, AOD-9604, and GHK-Cu  -  with evidence-based protocols and dosing guidance."
 image: /images/articles/best-peptides-for-joint-health.webp
 date: 2026-02-17
-category: "Peptide Research Review"
+category: "Peptide Guides"
 tags: ["joint health", "peptides", "BPC-157", "TB-500", "AOD-9604", "GHK-Cu"]
 author: "PeptideRundown Team"
 ---

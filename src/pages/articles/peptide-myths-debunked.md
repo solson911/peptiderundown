@@ -4,7 +4,7 @@ title: "Peptide Myths Debunked: What Peptides Can and Can’t Do"
 description: "Peptides are often marketed with big promises. This myth-busting guide explains what peptides are, common misconceptions, how to evaluate claims, and safer ways to approach research compounds."
 image: /images/articles/peptide-myths-debunked.webp
 date: 2026-02-20
-category: "Peptide Basics"
+category: "Peptide Guides"
 tags: ["peptides", "myths", "research peptides", "safety", "education"]
 author: "PeptideRundown Team"
 ---
