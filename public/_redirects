@@ -1,0 +1,8 @@
+# Canonicalization redirects (SEO)
+# Duplicates / near-duplicates → canonical URLs
+
+/articles/cjc-1295-vs-sermorelin            /articles/cjc-1295-vs-sermorelin-comparison 301
+/articles/cjc1295-vs-sermorelin-comparison  /articles/cjc-1295-vs-sermorelin-comparison 301
+
+/articles/peptides-for-gut-health           /articles/best-peptides-for-gut-health 301
+/articles/peptides-gut-health               /articles/best-peptides-for-gut-health 301

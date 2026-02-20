@@ -2,7 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "Best Peptides for Gut Health: BPC-157, KPV, and LL-37 for Digestive Repair"
 description: "The best peptides for gut health including BPC-157, KPV, and LL-37. Learn how these peptides repair leaky gut, reduce IBS symptoms, and restore digestive function."
-image: /images/articles/peptides-gut-health.webp
+image: /images/articles/best-peptides-for-gut-health.webp
 date: 2026-02-15
 category: "Peptide Guides"
 tags: ["gut-health", "bpc-157", "kpv", "ll-37", "ibs", "leaky-gut", "digestive"]
