@@ -5,6 +5,7 @@ title: "How to Inject Peptides Subcutaneously: A First-Timer's Guide"
 date: 2026-02-14
 category: "How-To"
 author: "PeptideRundown Team"
+description: "Step-by-step subcutaneous injection guide for peptides: supplies, site selection, technique, dosing hygiene, pain minimization, and safe sharps disposal."
 ---
 
 # How to Inject Peptides Subcutaneously: A First-Timer's Guide

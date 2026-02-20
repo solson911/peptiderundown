@@ -1,7 +1,8 @@
 ---
 layout: ../../layouts/Article.astro
 image: /images/articles/legal-fda.webp
-title: "Are Peptides Legal? FDA Regulations Explained (2026 Update)"
+title: "Are Peptides Legal? FDA Regulations Explained (2026)"
+description: "Plain-English overview of peptide legality in the US: FDA rules, research-only language, compounding vs supplements, import risk, and what has changed in 2026."
 date: 2026-02-14
 category: "Safety"
 author: "PeptideRundown Team"

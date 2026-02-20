@@ -2,6 +2,7 @@
 layout: ../../layouts/Article.astro
 image: /images/articles/side-effects.webp
 title: "Peptide Side Effects: What to Know Before You Start"
+description: "Common peptide side effects explained: injection reactions, water retention, appetite changes, glucose issues, blood pressure shifts, and when to stop and talk to a clinician."
 date: 2026-02-14
 category: "Safety"
 author: "PeptideRundown Team"

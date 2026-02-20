@@ -2,6 +2,7 @@
 layout: ../../layouts/Article.astro
 image: /images/articles/storage.webp
 title: "How to Store Peptides: Lyophilized and Reconstituted"
+description: "Storage best practices for peptides before and after reconstitution: temperature ranges, light exposure, bacteriostatic water, shelf-life expectations, and travel tips."
 date: 2026-02-14
 category: "How-To"
 author: "PeptideRundown Team"
