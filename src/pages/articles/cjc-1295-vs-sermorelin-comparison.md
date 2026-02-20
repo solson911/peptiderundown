@@ -2,7 +2,7 @@
 layout: ../../layouts/Article.astro
 title: "CJC-1295 vs Sermorelin: Comparing Growth Hormone Peptides"
 description: "A detailed comparison of CJC-1295 and Sermorelin covering mechanisms, dosing, efficacy, side effects, and which growth hormone peptide suits your goals."
-image: /images/articles/cjc-1295-vs-sermorelin-comparison-comparison.webp
+image: /images/articles/cjc-1295-vs-sermorelin-comparison.webp
 date: 2026-02-17
 category: "Comparisons"
 tags: ["CJC-1295", "sermorelin", "growth hormone", "GHRH", "peptide comparison", "anti-aging"]

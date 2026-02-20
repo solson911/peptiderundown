@@ -174,7 +174,7 @@ CJC-1295 DAC is sold as a research chemical in many countries. It's not approved
 
 Test your IGF-1 before and 2-3 weeks after starting. Genuine CJC-1295 DAC should produce a measurable increase. Third-party testing services can also verify peptide identity and purity.
 
-### <a href="/articles/cjc-1295-vs-sermorelin-comparison-comparison">What's the difference between CJC-1295 DAC and sermorelin?</a>
+### <a href="/articles/cjc-1295-vs-sermorelin-comparison">What's the difference between CJC-1295 DAC and sermorelin?</a>
 
 Both are GHRH analogs, but sermorelin is the original with a very short half-life (about 10-20 minutes). It was FDA-approved for GH deficiency in children before being discontinued for commercial reasons.
 
