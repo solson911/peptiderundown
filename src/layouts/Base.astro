@@ -5,9 +5,25 @@ import Search from '../components/Search.astro';
 interface Props {
   title: string;
   description?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
 }
 
-const { title, description = 'Your science-based peptide guide. Independent, evidence-backed peptide education without the sales pitch.' } = Astro.props;
+const {
+  title,
+  description = 'Your science-based peptide guide. Independent, evidence-backed peptide education without the sales pitch.',
+  canonicalUrl,
+  ogImage = '/images/logo.png',
+  ogType = 'website'
+} = Astro.props;
+
+const origin = Astro.url.origin;
+const path = Astro.url.pathname;
+const normalizedPath = (path !== '/' && path.endsWith('/')) ? path.slice(0, -1) : path;
+const computedCanonical = canonicalUrl || (origin + normalizedPath);
+const fullTitle = `${title} | PeptideRundown`;
+const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage);
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -30,9 +46,14 @@ const { title, description = 'Your science-based peptide guide. Independent, evi
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta property="og:image" content="/images/logo.png" />
+  <link rel="canonical" href={computedCanonical} />
   <meta property="og:site_name" content="PeptideRundown" />
-  <title>{title} | PeptideRundown</title>
+  <meta property="og:type" content={ogType} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={computedCanonical} />
+  <meta property="og:image" content={absoluteOgImage} />
+  <title>{fullTitle}</title>
 </head>
 <body class="bg-surface text-text font-sans antialiased">
   <!-- Navigation -->
