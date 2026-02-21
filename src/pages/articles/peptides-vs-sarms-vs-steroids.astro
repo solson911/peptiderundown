@@ -1,0 +1,600 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptides vs. SARMs vs. Steroids: What's Actually Different — A No-BS Comparison",
+  description: "A detailed comparison of peptides, SARMs, and anabolic steroids, highlighting their chemical structures, mechanisms of action, risk profiles, legal statuses, and suitability for various goals like muscle building, healing, and anti-aging.",
+  image: "/images/articles/peptides-vs-sarms-vs-steroids.webp",
+  date: "2026-02-20",
+  category: "Education",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--body);line-height:1.78;font-size:16.5px;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#1A1A2E 0%,#16213E 40%,#0F3460 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 30 L30 55 L5 30Z' fill='none' stroke='%23ffffff' stroke-opacity='0.025' stroke-width='1'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'−';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Education · Compound Comparison</div>
+  <h1>Peptides vs. SARMs vs. Steroids: What's Actually Different</h1>
+  <p class="sub">Three fundamentally different classes of compounds that get lumped together constantly. How they work, what the evidence says, and which risks actually matter — explained without the sales pitch.</p>
+  <div class="pills">
+    <span class="pill">Peptides · Amino Acid Chains</span>
+    <span class="pill">SARMs · Androgen Modulators</span>
+    <span class="pill">Steroids · Hormone Derivatives</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">60+</div><div class="l">FDA-Approved<br>Peptide Drugs</div></div>
+  <div class="sb"><div class="v c2">0</div><div class="l">FDA-Approved<br>SARMs</div></div>
+  <div class="sb"><div class="v c3">~50%</div><div class="l">SARM Products<br>Mislabeled (JAMA)</div></div>
+  <div class="sb"><div class="v c4">III</div><div class="l">Schedule III<br>Steroid Classification</div></div>
+</div>
+
+<p>Walk into any fitness forum, peptide vendor site, or biohacking discussion, and you'll see peptides, SARMs, and steroids discussed as if they exist on a single spectrum — with steroids at the "dangerous" end, peptides at the "safe" end, and SARMs somewhere in between. This framing is wrong. These three classes of compounds are as different from each other as aspirin is from insulin. They have different chemical structures, work through entirely different biological mechanisms, target different receptor systems, carry different risk profiles, and occupy different regulatory categories.</p>
+
+<p>Understanding those differences isn't just academic. It determines whether a compound will suppress your testosterone (SARMs and steroids will; most peptides won't), whether it directly builds muscle tissue (steroids and SARMs do; peptides mostly don't), and whether you're breaking federal law by possessing it (steroids are Schedule III; peptides and SARMs generally aren't).</p>
+
+<div class="d-a">
+  <div class="s">What This Guide Is and Isn't</div>
+  <p>This is an educational comparison of three compound classes. It is <strong>not a recommendation to use any of them</strong>. Anabolic steroids are controlled substances requiring a prescription. SARMs are unapproved drugs that the FDA has explicitly warned against. Most research peptides are not FDA-approved for human use. This guide exists to help you understand what you're reading about — not to encourage you to use anything unsupervised.</p>
+</div>
+
+<!-- ========== THE 30-SECOND VERSION ========== -->
+<hr class="sep">
+<h2>The 30-Second Version</h2>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Peptides</th><th>SARMs</th><th>Anabolic Steroids</th></tr></thead>
+<tbody>
+<tr><td><strong>What they are</strong></td><td>Short chains of amino acids (2-50 AAs)</td><td>Non-steroidal small molecules</td><td>Synthetic derivatives of testosterone</td></tr>
+<tr><td><strong>Primary mechanism</strong></td><td>Stimulate natural hormone production, signaling, and repair</td><td>Selectively bind androgen receptors in muscle/bone</td><td>Activate androgen receptors body-wide</td></tr>
+<tr><td><strong>Muscle building</strong></td><td class="y">Indirect (via GH/IGF-1 axis)</td><td class="y">Moderate-Direct</td><td class="g">Strong-Direct</td></tr>
+<tr><td><strong>Testosterone suppression</strong></td><td class="g">Generally no</td><td class="r">Yes (dose-dependent)</td><td class="r">Yes (severe)</td></tr>
+<tr><td><strong>PCT required?</strong></td><td class="g">No (most peptides)</td><td class="r">Usually yes</td><td class="r">Yes (essential)</td></tr>
+<tr><td><strong>Liver toxicity</strong></td><td class="g">Very low risk</td><td class="y">Moderate risk (some compounds)</td><td class="r">Significant risk (oral steroids)</td></tr>
+<tr><td><strong>FDA-approved versions?</strong></td><td class="g">60+ approved peptide drugs</td><td class="r">Zero approved</td><td class="g">Several approved (medical use)</td></tr>
+<tr><td><strong>Legal status (US)</strong></td><td class="y">Gray area (research use)</td><td class="r">Unapproved drug; FDA warns against</td><td class="r">Schedule III controlled substance</td></tr>
+<tr><td><strong>WADA status</strong></td><td class="r">Most prohibited</td><td class="r">All prohibited</td><td class="r">All prohibited</td></tr>
+<tr><td><strong>Scope of applications</strong></td><td class="g">Healing, GH, sleep, gut, skin, cognition, immune</td><td class="y">Muscle, bone, some fat loss</td><td class="y">Muscle, strength, body composition</td></tr>
+<tr><td><strong>Quality control concerns</strong></td><td class="r">High (unregulated market)</td><td class="r">Very high (~50% mislabeled)</td><td class="y">Moderate (pharma-grade vs. UGL)</td></tr>
+</tbody>
+</table>
+
+<!-- ========== WHAT THEY ARE ========== -->
+<hr class="sep">
+<h2>What Each Class Actually Is</h2>
+
+<h3>Peptides: Amino Acid Messengers</h3>
+
+<div class="cd cb">
+  <div class="tg">Class Overview</div>
+  <h3>Peptides</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Structure:</strong> Short chains of 2-50 amino acids linked by peptide bonds &nbsp;|&nbsp; <strong>Origin:</strong> Found naturally throughout the human body; synthetic versions replicate or modify natural sequences &nbsp;|&nbsp; <strong>How they work:</strong> Bind to specific receptors to trigger targeted biological responses — hormonal signaling, tissue repair, immune modulation &nbsp;|&nbsp; <strong>Examples:</strong> BPC-157 (healing), CJC-1295/Ipamorelin (GH release), Semaglutide (GLP-1, weight loss), Semax (neuroprotection), TB-500 (tissue repair), GHK-Cu (skin/wound healing)</p>
+</div>
+
+<p>Peptides are fundamentally <strong>signaling molecules</strong>. They're the same class of compounds your body already uses by the thousands to coordinate biological processes — from insulin (a 51-amino-acid peptide that regulates blood sugar) to oxytocin (a 9-amino-acid peptide involved in bonding and labor). Synthetic therapeutic peptides are designed to mimic, enhance, or modulate these natural signals.</p>
+
+<p>The crucial distinction: most peptides don't directly cause muscle growth, fat loss, or any other outcome. Instead, they <strong>tell your body to do something it already knows how to do</strong> — like release more growth hormone (CJC-1295), repair damaged tissue (BPC-157), or regulate appetite (semaglutide). This "working with your body's existing systems" characteristic is what makes peptides pharmacologically different from SARMs and steroids, and generally (not always) safer.</p>
+
+<p>Peptides span an enormous range of applications: growth hormone secretagogues for body composition and anti-aging, healing peptides for injury recovery, antimicrobial peptides for infection, neuropeptides for cognitive function, and metabolic peptides like the GLP-1 agonists that have revolutionized obesity treatment. No other compound class discussed here comes close to this functional diversity.</p>
+
+<h3>SARMs: Selective Androgen Receptor Modulators</h3>
+
+<div class="cd cp">
+  <div class="tg">Class Overview</div>
+  <h3>SARMs</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Structure:</strong> Non-peptide small molecules; most are aryl-propionamide or quinolone-based scaffolds &nbsp;|&nbsp; <strong>Origin:</strong> Developed by pharmaceutical companies in the 1990s-2000s to treat muscle wasting and osteoporosis &nbsp;|&nbsp; <strong>How they work:</strong> Bind to androgen receptors with tissue selectivity — activating them in muscle/bone while theoretically sparing prostate, liver, and other tissues &nbsp;|&nbsp; <strong>Examples:</strong> Ostarine (MK-2866), Ligandrol (LGD-4033), RAD-140 (Testolone), Andarine (S-4), S-23 &nbsp;|&nbsp; <strong>FDA approval status:</strong> Zero SARMs are FDA-approved for any use</p>
+</div>
+
+<p>SARMs were designed with an appealing premise: what if you could get the muscle-building effects of testosterone without the side effects that make steroids dangerous? The answer was to engineer molecules that bind to androgen receptors <em>selectively</em> — preferentially activating them in muscle and bone tissue while minimizing activation in the prostate, skin, and liver. Testosterone activates androgen receptors everywhere indiscriminately; SARMs were supposed to be the precision-targeted alternative.</p>
+
+<p>The reality has been more complicated. While SARMs do show tissue selectivity in early research, they are <strong>not truly "selective" in the way marketing implies</strong>. Clinical trials have consistently shown that SARMs suppress natural testosterone production — the very side effect they were designed to avoid. A clinical trial of the SARM GSK2881078 demonstrated that all male participants experienced reversible testosterone reduction during treatment. This means SARMs still disrupt the HPG (hypothalamic-pituitary-gonadal) axis, require post-cycle therapy, and carry endocrine risks — just potentially less severe ones than full anabolic steroids.</p>
+
+<p>No SARM has successfully completed the FDA approval process. Ostarine (Enobosarm) advanced to Phase III trials for cancer-related muscle wasting but failed to meet its primary endpoints convincingly enough for approval. Other SARMs stalled due to safety signals, insufficient efficacy, or commercial viability problems. The FDA has issued explicit warnings stating that SARMs are unapproved drugs associated with potentially serious health risks.</p>
+
+<h3>Anabolic Steroids: Synthetic Testosterone</h3>
+
+<div class="cd cr">
+  <div class="tg">Class Overview</div>
+  <h3>Anabolic-Androgenic Steroids (AAS)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Structure:</strong> Synthetic derivatives of testosterone; four-ring cholesterol-derived steroidal structure &nbsp;|&nbsp; <strong>Origin:</strong> First synthesized in the 1930s; pharmaceutical development through the 1950s-80s &nbsp;|&nbsp; <strong>How they work:</strong> Bind to androgen receptors throughout the entire body, activating anabolic (muscle-building) and androgenic (masculinizing) pathways simultaneously &nbsp;|&nbsp; <strong>Examples:</strong> Testosterone (various esters), Nandrolone (Deca-Durabolin), Trenbolone, Oxandrolone (Anavar), Stanozolol (Winstrol), Boldenone (Equipoise) &nbsp;|&nbsp; <strong>Legal status:</strong> Schedule III controlled substance in the US; prescription-only in most countries</p>
+</div>
+
+<p>Anabolic steroids are the oldest and most well-studied performance-enhancement category. They work by directly flooding androgen receptors with synthetic testosterone analogs — and they are remarkably effective at building muscle. Decades of research (both clinical and observational) confirm that supraphysiological doses of testosterone and its derivatives produce significant increases in lean muscle mass, strength, and athletic performance.</p>
+
+<p>The problem is that androgen receptors exist everywhere — not just in muscle. When you activate them body-wide with exogenous steroids, you also get androgenic effects (hair loss, acne, prostate growth, virilization in women), hepatic stress (especially with oral 17-alpha-alkylated steroids), cardiovascular changes (LDL increase, HDL decrease, left ventricular hypertrophy), complete shutdown of natural testosterone production, testicular atrophy, potential mood disturbance, and the full cascade of estrogen-related side effects when testosterone aromatizes. These risks are dose-dependent and duration-dependent, but they are real and well-documented.</p>
+
+<p>Unlike peptides and SARMs, several anabolic steroids are legitimately FDA-approved for specific medical conditions: testosterone replacement therapy for hypogonadism, oxandrolone for burn recovery, and nandrolone for anemia. This means pharmaceutical-grade versions exist with verified purity — though the majority of non-medical steroid use relies on underground lab (UGL) products of variable quality.</p>
+
+<!-- ========== MECHANISM COMPARISON ========== -->
+<hr class="sep">
+<h2>How They Actually Work: The Mechanism Divide</h2>
+
+<div class="svg-box">
+  <div class="st">Three Fundamentally Different Mechanisms</div>
+  <div class="ss">Peptides stimulate natural systems · SARMs partially activate androgen receptors · Steroids fully activate androgen receptors</div>
+  <svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg">
+    <!-- Peptides Column -->
+    <rect x="15" y="10" width="210" height="310" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="120" y="40" text-anchor="middle" font-family="Lora,serif" font-size="16" font-weight="700" fill="#2956A6">Peptides</text>
+    <text x="120" y="60" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#2956A6" letter-spacing="1" font-weight="600">STIMULATE NATURAL SYSTEMS</text>
+    <line x1="40" y1="72" x2="200" y2="72" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="120" y="95" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">Peptide binds specific</text>
+    <text x="120" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">receptor (GHS-R, GLP-1R, etc.)</text>
+    <text x="120" y="136" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">&#8595;</text>
+    <text x="120" y="156" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">Body releases own</text>
+    <text x="120" y="173" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">hormones (GH, insulin, etc.)</text>
+    <text x="120" y="197" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">&#8595;</text>
+    <text x="120" y="217" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">Downstream effects via</text>
+    <text x="120" y="234" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">natural pathways</text>
+    <line x1="40" y1="252" x2="200" y2="252" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="120" y="275" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#2956A6" font-weight="600">KEY TRAIT</text>
+    <text x="120" y="296" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362" font-weight="500">Works WITH your body</text>
+
+    <!-- SARMs Column -->
+    <rect x="245" y="10" width="210" height="310" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="350" y="40" text-anchor="middle" font-family="Lora,serif" font-size="16" font-weight="700" fill="#6E3B8A">SARMs</text>
+    <text x="350" y="60" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#6E3B8A" letter-spacing="1" font-weight="600">SELECTIVE AR ACTIVATION</text>
+    <line x1="270" y1="72" x2="430" y2="72" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="350" y="95" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">SARM binds androgen</text>
+    <text x="350" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">receptors (muscle/bone focus)</text>
+    <text x="350" y="136" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">&#8595;</text>
+    <text x="350" y="156" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">Partial AR activation with</text>
+    <text x="350" y="173" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">tissue-specific cofactors</text>
+    <text x="350" y="197" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">&#8595;</text>
+    <text x="350" y="217" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">Still suppresses natural</text>
+    <text x="350" y="234" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">testosterone (HPG axis)</text>
+    <line x1="270" y1="252" x2="430" y2="252" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="350" y="275" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#6E3B8A" font-weight="600">KEY TRAIT</text>
+    <text x="350" y="296" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050" font-weight="500">Partially overrides your body</text>
+
+    <!-- Steroids Column -->
+    <rect x="475" y="10" width="210" height="310" rx="12" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="580" y="40" text-anchor="middle" font-family="Lora,serif" font-size="16" font-weight="700" fill="#B53A3A">Steroids</text>
+    <text x="580" y="60" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#B53A3A" letter-spacing="1" font-weight="600">FULL AR ACTIVATION</text>
+    <line x1="500" y1="72" x2="660" y2="72" stroke="#B53A3A" stroke-opacity=".2"/>
+    <text x="580" y="95" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">Exogenous hormone binds</text>
+    <text x="580" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">ARs throughout entire body</text>
+    <text x="580" y="136" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">&#8595;</text>
+    <text x="580" y="156" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">Full anabolic + androgenic</text>
+    <text x="580" y="173" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">activation everywhere</text>
+    <text x="580" y="197" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">&#8595;</text>
+    <text x="580" y="217" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">Complete shutdown of</text>
+    <text x="580" y="234" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">natural testosterone</text>
+    <line x1="500" y1="252" x2="660" y2="252" stroke="#B53A3A" stroke-opacity=".15"/>
+    <text x="580" y="275" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#B53A3A" font-weight="600">KEY TRAIT</text>
+    <text x="580" y="296" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020" font-weight="500">Fully overrides your body</text>
+  </svg>
+</div>
+
+<p>The mechanism distinction is the single most important thing to understand about these three classes. <strong>Peptides ask your body to do more of what it naturally does.</strong> SARMs and steroids both <em>directly activate</em> androgen receptors — SARMs try to do it selectively (with mixed success), while steroids activate them indiscriminately. This is why peptides generally don't suppress testosterone production while SARMs and steroids both do.</p>
+
+<p>There's a useful analogy here. Peptides are like turning up the thermostat — you're telling your existing heating system to work harder, within its design parameters. SARMs are like bypassing the thermostat and wiring some of the radiators directly — you get heat where you want it, but you've messed with the control system. Steroids are like setting the entire building on fire — maximum heat output, no selectivity, and good luck controlling the consequences.</p>
+
+<!-- ========== SAFETY COMPARISON ========== -->
+<hr class="sep">
+<h2>Safety Comparison: What Can Actually Go Wrong</h2>
+
+<table class="tbl">
+<thead><tr><th>Risk Category</th><th>Peptides</th><th>SARMs</th><th>Anabolic Steroids</th></tr></thead>
+<tbody>
+<tr><td><strong>Testosterone suppression</strong></td><td class="g">No (GH peptides, BPC-157, etc.)</td><td class="r">Yes — clinical studies confirm dose-dependent LH/testosterone suppression</td><td class="r">Yes — complete shutdown at supraphysiological doses; PCT essential</td></tr>
+<tr><td><strong>Liver toxicity</strong></td><td class="g">Negligible (amino acid-based)</td><td class="y">Moderate — liver enzyme elevations documented; rare hepatotoxicity cases</td><td class="r">High risk with oral 17&#945;-alkylated compounds (Winstrol, Dianabol); injectables less hepatotoxic</td></tr>
+<tr><td><strong>Cardiovascular</strong></td><td class="y">Some GH peptides affect glucose; GLP-1s may be cardioprotective</td><td class="y">Lipid changes documented (LDL&#8593;, HDL&#8595;); myopericarditis case reported after RAD-140</td><td class="r">Well-documented: HDL decrease, LDL increase, LVH, cardiomyopathy, increased stroke/MI risk</td></tr>
+<tr><td><strong>Estrogen-related</strong></td><td class="g">No aromatization</td><td class="g">No direct aromatization; hormonal suppression can cause indirect imbalances</td><td class="r">Many steroids aromatize &#8594; gynecomastia, water retention; AI management required</td></tr>
+<tr><td><strong>Hair loss</strong></td><td class="g">Not associated</td><td class="y">Possible with androgenic SARMs (S-23, RAD-140 in sensitive individuals)</td><td class="r">Common with DHT-derived steroids; accelerates male-pattern baldness</td></tr>
+<tr><td><strong>Fertility impact</strong></td><td class="g">Kisspeptin may support fertility</td><td class="r">Reversible suppression of spermatogenesis</td><td class="r">Severe suppression; months to years to recover; azoospermia possible</td></tr>
+<tr><td><strong>For women</strong></td><td class="g">Generally safe (no virilization)</td><td class="y">Low virilization risk at low doses; higher with potent SARMs</td><td class="r">Significant virilization: voice deepening, facial hair, clitoral enlargement (may be irreversible)</td></tr>
+<tr><td><strong>Product quality risk</strong></td><td class="r">High — unregulated research market</td><td class="r">Very high — ~50% mislabeled per JAMA analysis</td><td class="y">Moderate — pharma-grade exists; UGL quality variable</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">The Quality Control Problem Unites All Three</div>
+  <p>Whether you're looking at peptides, SARMs, or underground steroids, <strong>product quality is the single most underestimated risk</strong>. A 2017 JAMA study analyzed 44 SARM products and found only 52% actually contained SARMs, 39% contained unapproved drugs, and 25% contained substances not listed on the label. Research peptide testing shows similar contamination rates. When your "Ostarine" might actually contain a prohormone, or your "BPC-157" is 50% purity, the safety comparison between compound classes becomes secondary to the safety of what you're actually putting in your body.</p>
+</div>
+
+<h3>The Testosterone Suppression Question</h3>
+
+<p>This is the clearest dividing line between peptides and everything else on this page. Here's why it matters so much:</p>
+
+<p>When you introduce a compound that directly activates androgen receptors (SARMs or steroids), your hypothalamus detects the elevated androgenic signaling and responds by reducing GnRH output. This suppresses LH and FSH from the pituitary, which reduces your testes' production of testosterone. The result: while you're on the compound, your natural testosterone plummets. When you stop, it takes weeks to months for the HPG axis to recover — hence the need for post-cycle therapy (PCT).</p>
+
+<p>Peptides don't trigger this cascade because they don't activate androgen receptors. A GH-secretagogue peptide like Ipamorelin stimulates the GHS-R receptor, not the androgen receptor. BPC-157 interacts with growth factor pathways. Semaglutide binds GLP-1 receptors. None of these signal the hypothalamus to reduce testosterone production. This is why you can stop most peptides without an endocrine recovery period.</p>
+
+<div class="d">
+  <div class="s">Why This Matters Practically</div>
+  <p>Testosterone suppression isn't an abstract biochemistry concept. During suppression, users commonly experience reduced libido, fatigue, mood changes, muscle loss (especially post-cycle), joint pain, and potential fertility impairment. PCT drugs (Clomid, Nolvadex) carry their own side effects. And incomplete HPG recovery after aggressive cycles can lead to long-term hypogonadism requiring lifelong TRT. <strong>The decision to use a compound that suppresses testosterone is qualitatively different from using one that doesn't.</strong></p>
+</div>
+
+<!-- ========== MUSCLE BUILDING ========== -->
+<hr class="sep">
+<h2>For Muscle Building: How They Actually Compare</h2>
+
+<p>If your primary goal is building muscle, the three classes are not equal — and being honest about that matters.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Peptides</h4>
+    <p><strong>Mechanism:</strong> Indirect. GH peptides raise growth hormone and IGF-1, which supports protein synthesis and recovery. <strong>Magnitude:</strong> Modest. Best RCT data (MK-677, Nass et al.) shows +1.1 kg FFM over 12 months — with no strength improvement. <strong>Best for:</strong> Recovery, sleep quality, body composition support — not raw muscle gain.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">SARMs</h4>
+    <p><strong>Mechanism:</strong> Direct androgen receptor activation in muscle. <strong>Magnitude:</strong> Moderate. Ostarine Phase II showed ~1.3 kg lean mass in 12 weeks (elderly, 3 mg). User reports at higher doses suggest more dramatic results. <strong>Best for:</strong> Lean mass preservation during cuts, moderate recomposition.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Steroids</h4>
+    <p><strong>Mechanism:</strong> Full AR activation plus increased protein synthesis, nitrogen retention, satellite cell activation. <strong>Magnitude:</strong> Strong. Classic Bhasin et al. study: testosterone + exercise = +6.1 kg FFM in 10 weeks. <strong>Best for:</strong> Maximum hypertrophy and strength. Nothing else here comes close.</p>
+  </div>
+</div>
+
+<div class="d-t">
+  <div class="s">The Honest Take</div>
+  <p>If you want maximum muscle growth and are willing to accept the risks, steroids are objectively the most effective option — pretending otherwise is dishonest. But effectiveness and wisdom aren't the same thing. Most people pursuing better body composition don't need supraphysiological androgen receptor activation. They need better recovery, better sleep, less inflammation, and more consistent training — areas where peptides genuinely help without the endocrine disruption.</p>
+</div>
+
+<!-- ========== BEYOND MUSCLE ========== -->
+<hr class="sep">
+<h2>Beyond Muscle: Where Each Class Excels</h2>
+
+<p>The muscle-building comparison only tells part of the story. Peptides are uniquely capable in domains where SARMs and steroids have nothing to offer:</p>
+
+<table class="tbl">
+<thead><tr><th>Application</th><th>Peptides</th><th>SARMs</th><th>Steroids</th></tr></thead>
+<tbody>
+<tr><td><strong>Injury / tissue healing</strong></td><td class="g">BPC-157, TB-500, GHK-Cu — strong preclinical healing data</td><td class="r">No healing mechanism</td><td class="y">Mild anabolic support; nandrolone used medically for some conditions</td></tr>
+<tr><td><strong>Sleep improvement</strong></td><td class="g">MK-677 increases deep sleep +50%; DSIP for sleep regulation</td><td class="r">No sleep mechanism; may disrupt sleep</td><td class="r">Often worsens sleep (esp. trenbolone)</td></tr>
+<tr><td><strong>Gut health</strong></td><td class="g">BPC-157, KPV, LL-37 — targeted gut repair</td><td class="r">No application</td><td class="r">No application</td></tr>
+<tr><td><strong>Cognitive function</strong></td><td class="g">Semax, Selank, Dihexa — neuropeptide research</td><td class="r">No cognitive mechanism</td><td class="y">Testosterone improves cognition in deficient men</td></tr>
+<tr><td><strong>Skin and anti-aging</strong></td><td class="g">GHK-Cu, Epithalon — skin rejuvenation, telomere research</td><td class="r">No application</td><td class="r">Steroids accelerate skin aging</td></tr>
+<tr><td><strong>Immune modulation</strong></td><td class="g">Thymosin Alpha-1, LL-37, Selank</td><td class="r">No immune mechanism</td><td class="r">Steroids suppress immune function at high doses</td></tr>
+<tr><td><strong>Weight loss (metabolic)</strong></td><td class="g">Semaglutide, tirzepatide — FDA-approved, 15-25% weight loss</td><td class="y">Some fat loss via lean mass increase</td><td class="y">Body composition improvement; not weight loss agents</td></tr>
+<tr><td><strong>Bone density</strong></td><td class="y">GH peptides increase bone markers</td><td class="g">Ostarine shows bone density improvement in trials</td><td class="g">Testosterone, nandrolone improve BMD</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">The Peptide Advantage in Context</div>
+  <p>The table above illustrates why comparing these classes solely on muscle-building is misleading. Peptides address <strong>at least nine distinct therapeutic domains</strong> — healing, sleep, gut, brain, skin, immune, metabolic, hormonal, and musculoskeletal. SARMs address one (androgen-receptor-mediated muscle and bone). Steroids address one (androgen-receptor-mediated muscle and performance). If your goal begins and ends at "bigger muscles," peptides are the weakest option. If your goals include any combination of recovery, healing, sleep, cognitive function, immune support, or metabolic health, peptides are the only class that meaningfully serves those needs.</p>
+</div>
+
+<!-- ========== COMMON COMPOUNDS ========== -->
+<hr class="sep">
+<h2>Common Compounds in Each Class</h2>
+
+<h3>Peptides — By Application</h3>
+
+<table class="tbl">
+<thead><tr><th>Compound</th><th>Category</th><th>Key Mechanism</th><th>Notable Data</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>Healing</td><td>Upregulates growth factor expression; promotes angiogenesis</td><td>Extensive preclinical data for tendon, gut, and tissue repair; no human RCTs</td></tr>
+<tr><td><strong>CJC-1295 / Ipamorelin</strong></td><td>GH Secretagogue</td><td>GHRH + GHRP receptor activation; synergistic GH release</td><td>Most popular injectable GH peptide stack; minimal appetite stimulation</td></tr>
+<tr><td><strong>MK-677 (Ibutamoren)</strong></td><td>GH Secretagogue</td><td>Oral ghrelin mimetic; 24h half-life</td><td>Multi-year RCT data; +1.1 kg FFM; sleep improvement; insulin resistance concern</td></tr>
+<tr><td><strong>Semaglutide</strong></td><td>GLP-1 Agonist</td><td>Incretin signaling; appetite suppression; gastric slowing</td><td>FDA-approved (Wegovy/Ozempic); 15-17% body weight loss in trials</td></tr>
+<tr><td><strong>TB-500</strong></td><td>Healing</td><td>Thymosin Beta-4 fragment; cell migration and differentiation</td><td>Preclinical wound/cardiac repair data; popular in sports recovery</td></tr>
+<tr><td><strong>Semax / Selank</strong></td><td>Neuropeptide</td><td>BDNF/NGF modulation (Semax); GABA system (Selank)</td><td>Approved in Russia for neurological conditions; cognitive/anxiolytic research</td></tr>
+</tbody>
+</table>
+
+<h3>SARMs — Key Compounds</h3>
+
+<table class="tbl">
+<thead><tr><th>Compound</th><th>Relative Potency</th><th>Key Data</th><th>Notable Risks</th></tr></thead>
+<tbody>
+<tr><td><strong>Ostarine (MK-2866)</strong></td><td>Mild</td><td>Phase II: +1.3 kg lean mass (12 wks); Phase III for cachexia failed primary endpoint</td><td>Testosterone suppression; liver enzyme elevation; most studied SARM</td></tr>
+<tr><td><strong>Ligandrol (LGD-4033)</strong></td><td>Moderate</td><td>Phase I: dose-dependent lean mass increase; well-tolerated short-term</td><td>Significant testosterone suppression at all doses; HDL reduction</td></tr>
+<tr><td><strong>RAD-140 (Testolone)</strong></td><td>Strong</td><td>Preclinical neuroprotection data; high anabolic:androgenic ratio in animals</td><td>Case report: myopericarditis in 16-year-old; liver toxicity reports; very limited human data</td></tr>
+<tr><td><strong>S-23</strong></td><td>Very Strong</td><td>Animal data suggests male contraceptive potential (full spermatogenesis suppression)</td><td>Extremely suppressive; essentially steroid-like side effect profile; minimal human data</td></tr>
+<tr><td><strong>Andarine (S-4)</strong></td><td>Moderate</td><td>Muscle and bone anabolic in animal studies</td><td>Visual disturbance (yellow tint, night vision issues) at higher doses; unique among SARMs</td></tr>
+</tbody>
+</table>
+
+<h3>Anabolic Steroids — Key Compounds</h3>
+
+<table class="tbl">
+<thead><tr><th>Compound</th><th>Route</th><th>Relative Androgenicity</th><th>Notable Characteristics</th></tr></thead>
+<tbody>
+<tr><td><strong>Testosterone</strong></td><td>Injectable (various esters)</td><td>Moderate (baseline reference)</td><td>Gold standard; aromatizes to estrogen; FDA-approved for hypogonadism</td></tr>
+<tr><td><strong>Nandrolone (Deca)</strong></td><td>Injectable</td><td>Low androgenic</td><td>Joint relief; lower androgenic sides; 19-nor (progestogenic); FDA-approved for anemia</td></tr>
+<tr><td><strong>Oxandrolone (Anavar)</strong></td><td>Oral</td><td>Very low androgenic</td><td>FDA-approved for weight loss/burn recovery; mild but still hepatotoxic; popular with women</td></tr>
+<tr><td><strong>Trenbolone</strong></td><td>Injectable</td><td>Very high (both anabolic and androgenic)</td><td>Extremely potent; severe side effects (insomnia, cardio strain, aggression); not for human use</td></tr>
+<tr><td><strong>Stanozolol (Winstrol)</strong></td><td>Oral / Injectable</td><td>Moderate androgenic</td><td>Hepatotoxic (oral); joint drying; HDL devastation; detection times well-known</td></tr>
+</tbody>
+</table>
+
+<!-- ========== LEGAL ========== -->
+<hr class="sep">
+<h2>Legal and Regulatory Status (US, 2026)</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Peptides</h4>
+    <p><strong>60+ FDA-approved peptide drugs</strong> exist (insulin, semaglutide, tesamorelin, etc.). Research peptides like BPC-157 and TB-500 are sold as "research chemicals" — legal to purchase but not approved for human use. FDA restricted several peptides from compounding pharmacies (2024-2025). Not controlled substances. GLP-1 peptides require prescriptions.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">SARMs</h4>
+    <p><strong>Zero FDA-approved SARMs.</strong> FDA has issued multiple safety warnings that SARMs are unapproved drugs. Sold as "research chemicals." The SARMs Control Act (introduced but not passed as of 2025) would classify them as Schedule III. Currently not scheduled, but the FDA considers them illegal when marketed for human consumption.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Steroids</h4>
+    <p><strong>Schedule III controlled substances</strong> under the Anabolic Steroids Control Act of 1990. Possession without a prescription is a federal crime (up to 1 year prison, first offense). Several are legitimately prescribed for hypogonadism, wasting, and burn recovery. Pharmaceutical-grade versions available with valid prescriptions.</p>
+  </div>
+</div>
+
+<!-- ========== DRUG TESTING ========== -->
+<hr class="sep">
+<h2>Drug Testing and Detection</h2>
+
+<table class="tbl">
+<thead><tr><th>Class</th><th>Standard Workplace Drug Test</th><th>Sports Anti-Doping (WADA)</th><th>Detection Windows</th></tr></thead>
+<tbody>
+<tr><td><strong>Peptides</strong></td><td class="g">Not tested</td><td class="r">Most GH secretagogues prohibited; testing methods improving</td><td>Variable; GH peptides detectable for hours to days depending on compound and assay</td></tr>
+<tr><td><strong>SARMs</strong></td><td class="g">Not tested</td><td class="r">All prohibited (S1.2 category); well-established detection methods</td><td>Weeks to months depending on compound; Ostarine has very long detection window</td></tr>
+<tr><td><strong>Steroids</strong></td><td class="g">Not standard (unless specifically ordered)</td><td class="r">All prohibited; most advanced detection technology exists for AAS</td><td>Oral: days to weeks. Injectable esters: weeks to months. Nandrolone metabolites: up to 18 months</td></tr>
+</tbody>
+</table>
+
+<p>Important context: standard workplace drug panels (5-panel, 10-panel) test for drugs of abuse (marijuana, cocaine, opioids, etc.) — they do not screen for peptides, SARMs, or steroids. You would only be tested for these compounds in sports anti-doping contexts, military testing with expanded panels, or if a test was specifically ordered for performance-enhancing substances.</p>
+
+<!-- ========== DECISION FRAMEWORK ========== -->
+<hr class="sep">
+<h2>Choosing Based on Your Actual Goal</h2>
+
+<table class="tbl">
+<thead><tr><th>If Your Goal Is&#8230;</th><th>Best Class</th><th>Specific Options</th><th>Why Not the Others</th></tr></thead>
+<tbody>
+<tr><td><strong>Maximum muscle mass</strong></td><td>Steroids (with medical supervision)</td><td>Testosterone + exercise; medical TRT for deficient men</td><td>Peptides too indirect; SARMs moderate but unproven long-term</td></tr>
+<tr><td><strong>Injury recovery</strong></td><td>Peptides</td><td>BPC-157, TB-500, GHK-Cu</td><td>SARMs/steroids have no healing mechanism</td></tr>
+<tr><td><strong>Fat loss</strong></td><td>Peptides (GLP-1 class)</td><td>Semaglutide, tirzepatide (FDA-approved, Rx)</td><td>SARMs don't target fat; steroids change composition but aren't fat loss agents</td></tr>
+<tr><td><strong>Better sleep + recovery</strong></td><td>Peptides</td><td>MK-677, CJC-1295/Ipamorelin</td><td>SARMs don't improve sleep; steroids often worsen it</td></tr>
+<tr><td><strong>Anti-aging / longevity</strong></td><td>Peptides</td><td>Epithalon, GHK-Cu, MOTS-c, GH secretagogues</td><td>SARMs have no anti-aging data; chronic steroid use accelerates some aging processes</td></tr>
+<tr><td><strong>Lean mass during cutting</strong></td><td>SARMs or Peptides</td><td>Ostarine; or MK-677 + caloric deficit</td><td>Steroids work but are overpowered for this use case</td></tr>
+<tr><td><strong>Bone density</strong></td><td>SARMs or Peptides</td><td>Ostarine (clinical data); GH peptides (bone marker data)</td><td>Steroids carry excessive side effects for this goal alone</td></tr>
+<tr><td><strong>Cognitive enhancement</strong></td><td>Peptides</td><td>Semax, Selank, Dihexa</td><td>SARMs/steroids don't target cognition</td></tr>
+<tr><td><strong>Immune support</strong></td><td>Peptides</td><td>Thymosin Alpha-1, LL-37</td><td>SARMs irrelevant; steroids are immunosuppressive</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">The Bigger Picture</div>
+  <p>The question isn't really "which is best?" — it's "best for what?" Peptides win on versatility, safety profile, and breadth of application. Steroids win on raw muscle-building power. SARMs occupy an awkward middle ground: more directly anabolic than peptides but less effective than steroids, with a safety profile that's not as clean as initially promised and zero FDA approval. For the majority of people pursuing health optimization, recovery, body composition, and performance, <strong>peptides offer the best risk-to-benefit ratio</strong> — particularly when combined with the fundamentals that no compound can replace.</p>
+</div>
+
+<!-- ========== COMMON MISCONCEPTIONS ========== -->
+<hr class="sep">
+<h2>Common Misconceptions, Corrected</h2>
+
+<div class="cd ca">
+  <div class="tg">Myth vs. Reality</div>
+  <h3>"SARMs are basically safe steroids"</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Reality:</strong> SARMs are <em>less</em> dangerous than steroids in some respects (less aromatization, potentially less prostate impact), but they are not safe. They suppress testosterone, affect liver function, alter lipid profiles, and have essentially zero long-term safety data. The phrase "safe steroid" is an oxymoron — and calling SARMs that is marketing, not pharmacology. Every clinical trial that has measured testosterone during SARM use has found suppression.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Myth vs. Reality</div>
+  <h3>"Peptides don't really build muscle"</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Reality:</strong> Partly true, partly misleading. Peptides don't directly stimulate muscle protein synthesis the way androgens do. But GH-secretagogue peptides raise IGF-1, which supports satellite cell proliferation, protein synthesis, and nitrogen retention. The effects are more modest and slower than SARMs or steroids, but they are measurable in clinical trials. More importantly, peptides' greatest contribution to muscle growth may be indirect — through improved sleep (when most GH is secreted), faster recovery between sessions, and reduced injury downtime. Over months, these factors compound significantly.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Myth vs. Reality</div>
+  <h3>"You don't need PCT after SARMs because they're not steroids"</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Reality:</strong> Dangerous misconception. SARMs activate androgen receptors, which triggers the same HPG-axis negative feedback loop as steroids — just often to a lesser degree. The clinical data on this is unambiguous: Ligandrol suppresses testosterone at all tested doses. Ostarine shows dose-dependent suppression. S-23 is essentially fully suppressive. Skipping PCT after a SARM cycle because "it's not a steroid" can lead to prolonged hypogonadism, muscle loss, and hormonal misery.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Myth vs. Reality</div>
+  <h3>"Steroids are just testosterone — it's natural"</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Reality:</strong> Testosterone is indeed a natural hormone. But performance-enhancing steroid use involves supraphysiological doses (often 2-10x the natural range) of synthetic analogs, many of which (trenbolone, nandrolone, stanozolol) have been structurally modified in ways that change their receptor binding, metabolism, and side effect profiles compared to endogenous testosterone. "Natural" describes the molecule at replacement doses; nothing about injecting 500-1000 mg/week of synthetic testosterone esters is natural.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Are peptides steroids?</summary>
+    <div class="fa">No. Peptides are chains of amino acids — structurally and mechanistically unrelated to steroids. Steroids are cholesterol-derived molecules with a four-ring carbon structure that directly activate androgen receptors. Peptides work through entirely different receptor systems (GHS-R, GLP-1R, various growth factor receptors) and generally don't activate androgen receptors. They're as different as ibuprofen and insulin.</div>
+  </details>
+  <details>
+    <summary>Can I stack peptides with SARMs?</summary>
+    <div class="fa">Some people combine GH-secretagogue peptides (MK-677 or CJC-1295/Ipamorelin) with SARMs (Ostarine or LGD-4033), reasoning the peptide handles recovery/sleep/GH while the SARM handles direct muscle stimulation. The rationale is pharmacologically logical — they target different systems. However, this means accepting SARM-related risks (testosterone suppression, liver stress) alongside any peptide concerns. If you stack, introduce compounds separately, monitor bloodwork, and recognize you're combining two categories of unapproved compounds.</div>
+  </details>
+  <details>
+    <summary>Which is safest for a beginner?</summary>
+    <div class="fa">Peptides, by a significant margin. Most therapeutic peptides don't suppress testosterone, don't cause liver toxicity, and work with your body's natural systems. CJC-1295/Ipamorelin is among the most well-tolerated starting points. SARMs are riskier (testosterone suppression, liver concerns, quality control issues), and steroids should only be used under medical supervision for legitimate medical conditions.</div>
+  </details>
+  <details>
+    <summary>Do SARMs really have fewer side effects than steroids?</summary>
+    <div class="fa">Potentially fewer, but not zero. SARMs were designed to be tissue-selective, and early data suggests milder androgenic side effects than steroids (less hair loss, less prostate impact, less virilization). However, they still suppress testosterone, affect liver enzymes, and alter lipid profiles. Critically, they have far less long-term safety data than steroids, which have decades of use. "Fewer known side effects" partly reflects "less thoroughly studied."</div>
+  </details>
+  <details>
+    <summary>Why aren't any SARMs FDA-approved?</summary>
+    <div class="fa">Multiple SARMs entered clinical trials, but none completed approval. Ostarine (Enobosarm) reached Phase III for cancer-related muscle wasting but failed to meet primary endpoints. Other SARMs stalled due to safety signals, insufficient efficacy over existing treatments, or commercial viability concerns. The pharma industry has largely moved away from SARM development.</div>
+  </details>
+  <details>
+    <summary>Is TRT the same as "using steroids"?</summary>
+    <div class="fa">Pharmacologically yes — TRT uses the same molecule (testosterone). The difference is dose, intent, and supervision. TRT restores testosterone to normal physiological levels (400-700 ng/dL) in men with diagnosed hypogonadism, prescribed by a physician with regular monitoring. Performance-enhancing use involves supraphysiological doses (often 2-10x TRT range) to push muscle growth beyond natural limits. Same molecule, fundamentally different risk profiles.</div>
+  </details>
+  <details>
+    <summary>Can women use any of these safely?</summary>
+    <div class="fa">Peptides are generally safest for women — they don't activate androgen receptors, so there's no virilization risk. GH peptides, BPC-157, GLP-1 agonists, and neuropeptides are all used by women without sex-specific concerns. Some SARMs (Ostarine at very low doses) are used by women, but virilization risk exists with more potent compounds. Anabolic steroids carry significant virilization risk, and effects like voice deepening can be permanent.</div>
+  </details>
+  <details>
+    <summary>What about MK-677 — is it a peptide, SARM, or steroid?</summary>
+    <div class="fa">None of the above, technically. MK-677 (ibutamoren) is a non-peptide small molecule ghrelin receptor agonist. It's not an amino acid chain (not a peptide), doesn't bind androgen receptors (not a SARM), and isn't a cholesterol-derived hormone (not a steroid). It's categorized as a growth hormone secretagogue and is sold alongside SARMs by most vendors, which creates confusion. Functionally, it's closer to peptides in that it stimulates natural GH release rather than directly activating androgen receptors.</div>
+  </details>
+</div>
+
+<!-- ========== KEY TAKEAWAYS ========== -->
+<hr class="sep">
+<h2>Key Takeaways</h2>
+
+<div class="d-t">
+  <div class="s">Bottom Line</div>
+  <p>Peptides, SARMs, and steroids are three fundamentally different compound classes that work through different mechanisms, carry different risks, and serve different purposes. <strong>Peptides</strong> are the most versatile and generally safest — they work with your body's natural signaling systems across a huge range of applications from healing to sleep to metabolism. <strong>SARMs</strong> were promising in theory but have underdelivered in practice — they still suppress testosterone, have zero FDA approvals, and face the worst quality-control crisis of the three. <strong>Steroids</strong> are the most powerful muscle-builders but carry the most serious risks and the strictest legal status.</p>
+</div>
+
+<p>The smartest approach for most people: <strong>master the fundamentals first</strong> (progressive training, adequate protein, quality sleep, stress management), then consider peptides for specific goals (recovery, sleep, body composition support, healing). Reserve SARMs and steroids for situations where the risk-to-benefit calculation genuinely justifies it — and always with medical supervision, bloodwork monitoring, and honest self-assessment about why you're using them.</p>
+
+<p>And regardless of which class you're exploring: <strong>verify product quality.</strong> Third-party certificates of analysis, reputable vendors, and independent testing matter more than which compound you choose. A pure peptide from a tested source is safer than a mislabeled SARM that actually contains a prohormone. Quality control is the unsexy variable that determines real-world outcomes more than any mechanism-of-action diagram ever will.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and does not recommend the use of any compound discussed. Anabolic steroids are Schedule III controlled substances. SARMs are unapproved drugs with FDA safety warnings. Most research peptides are not approved for human use. All three classes are prohibited in competitive sport by WADA. Consult a qualified healthcare provider before considering any of these compounds. Individual responses vary, and quality control in unregulated markets poses significant risks regardless of compound class.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Bhasin S, Storer TW, Berman N, et al. The effects of supraphysiologic doses of testosterone on muscle size and strength in normal men. <em>N Engl J Med.</em> 1996;335(1):1-7.<br>
+Dalton JT, Barnette KG, Bohl CE, et al. The selective androgen receptor modulator GTx-024 (enobosarm) improves lean body mass and physical function in healthy elderly men and postmenopausal women: results of a double-blind, placebo-controlled phase II trial. <em>J Cachexia Sarcopenia Muscle.</em> 2011;2(3):153-161.<br>
+Van Wagoner RM, Eichner A, Bhasin S, Deuster PA, Eichner D. Chemical composition and labeling of substances marketed as selective androgen receptor modulators and sold via the internet. <em>JAMA.</em> 2017;318(20):2004-2010.<br>
+Clark RV, Walker AC, Andrews S, et al. Safety, pharmacokinetics and pharmacological effects of the selective androgen receptor modulator, GSK2881078, in healthy men and postmenopausal women. <em>Br J Clin Pharmacol.</em> 2017;83(10):2179-2194.<br>
+Nass R, Pezzoli SS, Oliveri MC, et al. Effects of an oral ghrelin mimetic on body composition and clinical outcomes in healthy older adults: a randomized trial. <em>Ann Intern Med.</em> 2008;149(9):601-611.<br>
+Basaria S, Collins L, Dillon EL, et al. The safety, pharmacokinetics, and effects of LGD-4033, a novel nonsteroidal oral, selective androgen receptor modulator, in healthy young men. <em>J Gerontol A Biol Sci Med Sci.</em> 2013;68(1):87-95.<br>
+Narayanan R, Coss CC, Dalton JT. Development of selective androgen receptor modulators (SARMs). <em>Mol Cell Endocrinol.</em> 2018;465:134-142.<br>
+U.S. Food and Drug Administration. FDA In Brief: FDA warns against using SARMs in body-building products. <em>FDA Safety Communication.</em> 2017 (updated 2024).<br>
+Wen J, Syed B, Leapart J, et al. Selective androgen receptor modulators (SARMs) effects on physical performance: a systematic review of randomized control trials. <em>Clin Endocrinol.</em> 2025;102(1):3-27.<br>
+World Anti-Doping Agency. The 2025 Prohibited List. WADA International Standard. 2025.
+</p>
+
+
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>•</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>⚠️ Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content" set:html={rawHTML} />
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">🔬 Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Popular Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides →</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
