@@ -3,9 +3,9 @@ import Base from '../../layouts/Base.astro';
 
 export const frontmatter = {
   title: "Peptides vs. SARMs vs. Steroids: What's Actually Different — A No-BS Comparison",
-  description: "A detailed comparison of peptides, SARMs, and anabolic steroids, highlighting their chemical structures, mechanisms of action, risk profiles, legal statuses, and suitability for various goals like muscle building, healing, and anti-aging.",
+  description: "A detailed comparison of peptides, SARMs, and anabolic steroids—mechanisms, risks, legality, and practical differences.",
   image: "/images/articles/peptides-vs-sarms-vs-steroids.webp",
-  date: "2026-02-20",
+  date: "2026-02-21",
   category: "Education",
   author: "PeptideRundown Team"
 };
@@ -13,8 +13,8 @@ const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { y
 
 const rawCSS = `
 :root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--body);line-height:1.78;font-size:16.5px;}
+
+
 .c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
 h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
 h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
@@ -73,8 +73,7 @@ a{color:var(--blue);}
 .faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
 .faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
 .faq details[open] summary::after{content:'−';}
-.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
-`;
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}`;
 
 const rawHTML = `
 <!-- Hero -->
@@ -527,7 +526,6 @@ U.S. Food and Drug Administration. FDA In Brief: FDA warns against using SARMs i
 Wen J, Syed B, Leapart J, et al. Selective androgen receptor modulators (SARMs) effects on physical performance: a systematic review of randomized control trials. <em>Clin Endocrinol.</em> 2025;102(1):3-27.<br>
 World Anti-Doping Agency. The 2025 Prohibited List. WADA International Standard. 2025.
 </p>
-
 
 `;
 ---
