@@ -1,0 +1,574 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Tesamorelin: The FDA-Approved Growth Hormone Peptide — Complete Guide",
+  description: "A detailed comparison of peptides, SARMs, and anabolic steroids—mechanisms, risks, legality, and practical differences.",
+  image: "/images/articles/tesamorelin-fda-approved-gh-peptide-guide.webp",
+  date: "2026-02-21",
+  category: "Education",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+
+
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0B2545 0%,#13315C 40%,#134074 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='20' y='20' width='40' height='40' rx='8' fill='none' stroke='%23ffffff' stroke-opacity='0.025' stroke-width='1'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'&#8722;';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}`;
+
+const rawHTML = `
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">GH Peptide Guide &middot; FDA-Approved</div>
+  <h1>Tesamorelin: The Only FDA-Approved Growth Hormone Peptide</h1>
+  <p class="sub">A 44-amino-acid GHRH analog with Phase III trial data, FDA approval, proven visceral fat reduction, and emerging evidence for liver protection and cognitive support. The legitimacy anchor in the GH peptide space.</p>
+  <div class="pills">
+    <span class="pill">GHRH Analog</span>
+    <span class="pill">FDA-Approved (Egrifta)</span>
+    <span class="pill">Visceral Fat Targeting</span>
+    <span class="pill">806+ Trial Participants</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">-18%</div><div class="l">Visceral Fat Reduction<br>in Phase III (26 wks)</div></div>
+  <div class="sb"><div class="v c2">+81%</div><div class="l">IGF-1 Increase<br>From Baseline</div></div>
+  <div class="sb"><div class="v c3">806</div><div class="l">Patients in Pivotal<br>Phase III Trials</div></div>
+  <div class="sb"><div class="v c4">2010</div><div class="l">Year of FDA<br>Approval</div></div>
+</div>
+
+<p>In a peptide landscape filled with "research-only" compounds and "buyer beware" disclaimers, tesamorelin stands alone. It's the <strong>only growth hormone peptide with full FDA approval</strong> — backed by two large Phase III randomized controlled trials, published in the <em>New England Journal of Medicine</em> and <em>The Lancet HIV</em>, with 806+ patients across the pivotal studies. That's not "promising preclinical data" or "interesting anecdotal reports." That's the gold standard of clinical evidence.</p>
+
+<p>And the results are genuinely impressive. Tesamorelin doesn't just raise growth hormone numbers on a lab report — it selectively reduces the most dangerous type of body fat (visceral adipose tissue), improves lipid profiles, protects the liver from fatty liver disease progression, and preserves lean muscle mass. It does all of this by restoring the body's own pulsatile GH rhythm rather than injecting exogenous hormone. For anyone interested in evidence-based GH optimization, tesamorelin is the compound that sets the standard.</p>
+
+<div class="d-t">
+  <div class="s">Why Tesamorelin Matters</div>
+  <p>FDA approval isn't just a regulatory checkbox — it means tesamorelin has survived the most rigorous safety and efficacy evaluation process in medicine. It means pharmaceutical-grade formulations exist (Egrifta/Egrifta WR). It means physicians can legally prescribe it. And it means the clinical data has been scrutinized by the FDA's reviewers, not just a vendor's marketing team. In a world where most peptides operate in regulatory gray zones, <strong>tesamorelin gives you something rare: confidence in the evidence.</strong></p>
+</div>
+
+<!-- ========== COMPOUND PROFILE ========== -->
+<hr class="sep">
+<h2>Compound Profile</h2>
+
+<div class="cd ct">
+  <div class="tg">Peptide Identity</div>
+  <h3>Tesamorelin Acetate</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic 44-amino-acid GHRH analog &nbsp;|&nbsp; <strong>Modification:</strong> Trans-3-hexenoic acid group at N-terminus (improves enzymatic stability) &nbsp;|&nbsp; <strong>Developer:</strong> Theratechnologies Inc. (Montreal, Canada) &nbsp;|&nbsp; <strong>Brand Names:</strong> Egrifta, Egrifta SV, Egrifta WR &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection (abdomen) &nbsp;|&nbsp; <strong>Dose:</strong> 1.4 mg (Egrifta SV) or 1.28 mg (Egrifta WR) daily &nbsp;|&nbsp; <strong>FDA Approval:</strong> November 2010 &nbsp;|&nbsp; <strong>Indication:</strong> Reduction of excess abdominal fat in HIV-infected adults with lipodystrophy &nbsp;|&nbsp; <strong>Off-Label Uses:</strong> General visceral fat reduction, NAFLD, anti-aging, body composition optimization</p>
+</div>
+
+<h3>How Tesamorelin Works</h3>
+
+<p>Tesamorelin is a synthetic version of your body's own growth hormone-releasing hormone (GHRH) — the 44-amino-acid signal peptide that tells the pituitary gland to produce and release growth hormone. What makes tesamorelin special is a clever structural modification: a trans-3-hexenoic acid group attached to the N-terminus that makes it resistant to DPP-4 enzymatic degradation. This means it lasts longer in the bloodstream than natural GHRH, giving the pituitary a stronger and more sustained "go" signal.</p>
+
+<div class="svg-box">
+  <div class="st">Tesamorelin's Mechanism of Action</div>
+  <div class="ss">GHRH analog &#8594; Pituitary stimulation &#8594; Pulsatile GH release &#8594; Selective visceral fat reduction</div>
+  <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="30" width="130" height="65" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="75" y="55" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#187A62">Tesamorelin</text>
+    <text x="75" y="73" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#14503E">Modified GHRH analog</text>
+    <line x1="140" y1="62" x2="170" y2="62" stroke="#86869A" stroke-width="1.5" marker-end="url(#arw)"/>
+
+    <rect x="170" y="30" width="130" height="65" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="235" y="55" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#2956A6">Pituitary</text>
+    <text x="235" y="73" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#1E3362">GHRH-R activation</text>
+    <line x1="300" y1="62" x2="330" y2="62" stroke="#86869A" stroke-width="1.5" marker-end="url(#arw)"/>
+
+    <rect x="330" y="30" width="130" height="65" rx="10" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="395" y="50" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#B48118">&#8593; GH Pulses</text>
+    <text x="395" y="67" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5A4010">Natural pulsatile</text>
+    <text x="395" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#5A4010">pattern preserved</text>
+    <line x1="460" y1="62" x2="490" y2="62" stroke="#86869A" stroke-width="1.5" marker-end="url(#arw)"/>
+
+    <rect x="490" y="30" width="130" height="65" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="555" y="50" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#6E3B8A">&#8593; IGF-1</text>
+    <text x="555" y="67" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#3E2050">+81% from baseline</text>
+    <text x="555" y="80" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#3E2050">Liver production</text>
+
+    <!-- Downstream effects -->
+    <line x1="395" y1="95" x2="395" y2="120" stroke="#86869A" stroke-width="1" stroke-dasharray="3,3"/>
+    <rect x="10" y="130" width="155" height="48" rx="8" fill="#E4F5EF" stroke="#187A62" stroke-width="1"/>
+    <text x="88" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#187A62">Visceral Fat &#8595; 15-20%</text>
+    <text x="88" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#14503E">Selective lipolysis</text>
+
+    <rect x="180" y="130" width="155" height="48" rx="8" fill="#E8EEF9" stroke="#2956A6" stroke-width="1"/>
+    <text x="258" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#2956A6">Triglycerides &#8595;</text>
+    <text x="258" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#1E3362">Lipid profile improvement</text>
+
+    <rect x="350" y="130" width="155" height="48" rx="8" fill="#FFF7E5" stroke="#B48118" stroke-width="1"/>
+    <text x="428" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#B48118">Liver Fat &#8595; 37%</text>
+    <text x="428" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#5A4010">NAFLD protection</text>
+
+    <rect x="520" y="130" width="155" height="48" rx="8" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1"/>
+    <text x="598" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="600" fill="#6E3B8A">Lean Mass Preserved</text>
+    <text x="598" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#3E2050">Muscle-sparing effect</text>
+
+    <line x1="395" y1="120" x2="88" y2="130" stroke="#86869A" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="395" y1="120" x2="258" y2="130" stroke="#86869A" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="395" y1="120" x2="428" y2="130" stroke="#86869A" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="555" y1="95" x2="598" y2="130" stroke="#86869A" stroke-width="1" stroke-dasharray="3,3"/>
+
+    <defs><marker id="arw" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#86869A" stroke-width="1"/></marker></defs>
+  </svg>
+</div>
+
+<p>The critical advantage of tesamorelin over exogenous GH injection: it <strong>preserves your body's natural feedback mechanisms</strong>. When you inject GH directly, you create artificial spikes that bypass the hypothalamic-pituitary axis. Tesamorelin works <em>through</em> that axis — stimulating your own pituitary to release GH in the pulsatile pattern your body evolved to use. This means more physiological GH exposure, reduced risk of overshooting into supraphysiological territory, and the body's own somatostatin feedback loop remains intact to prevent excessive GH production.</p>
+
+<p>This "working with your biology" approach also explains tesamorelin's remarkably favorable side effect profile. In the pivotal trials, side effects were mild and manageable — primarily injection site reactions, joint aches, and mild fluid retention. No clinically significant changes in glucose or insulin were observed in the primary efficacy analyses, which is a notable contrast to exogenous GH, which commonly impairs glucose tolerance.</p>
+
+<!-- ========== CLINICAL EVIDENCE ========== -->
+<hr class="sep">
+<h2>Clinical Evidence: What the Major Trials Found</h2>
+
+<p>Tesamorelin has one of the strongest clinical evidence bases of any peptide in use today. Here are the studies that earned it FDA approval — and the newer research that's expanding its applications.</p>
+
+<h3>1. Pivotal Phase III: LIPO-010 (Falutz et al., 2007 — NEJM)</h3>
+
+<p>The first pivotal trial, published in the <em>New England Journal of Medicine</em>, randomized <strong>412 HIV-infected patients</strong> with excess abdominal fat to receive 2 mg tesamorelin or placebo daily for 26 weeks.</p>
+
+<table class="tbl">
+<thead><tr><th>Endpoint</th><th>Tesamorelin</th><th>Placebo</th><th>Significance</th></tr></thead>
+<tbody>
+<tr><td><strong>Visceral adipose tissue (VAT)</strong></td><td class="g">&#8595; 15.2%</td><td>&#8593; 5.0%</td><td>P &lt; 0.001</td></tr>
+<tr><td><strong>IGF-1</strong></td><td class="g">&#8593; 81.0%</td><td>&#8595; 5.0%</td><td>P &lt; 0.001</td></tr>
+<tr><td><strong>Triglycerides</strong></td><td class="g">&#8595; 50 mg/dL</td><td>&#8593; 9 mg/dL</td><td>P &lt; 0.001</td></tr>
+<tr><td><strong>Total cholesterol:HDL ratio</strong></td><td class="g">&#8595; 0.31</td><td>&#8593; 0.21</td><td>P &lt; 0.001</td></tr>
+<tr><td><strong>Subcutaneous fat</strong></td><td>&#8593; 0.4% (preserved)</td><td>&#8593; 1.7%</td><td>Not significant</td></tr>
+<tr><td><strong>Limb fat</strong></td><td>&#8593; 0.6% (preserved)</td><td>&#8593; 3.8%</td><td>Not significant</td></tr>
+<tr><td><strong>Body image distress</strong></td><td class="g">Significantly improved</td><td>No change</td><td>P &lt; 0.05</td></tr>
+<tr><td><strong>Glucose / insulin</strong></td><td>No significant change</td><td>No significant change</td><td>Not significant</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Why These Results Are Exceptional</div>
+  <p>Look at what tesamorelin accomplished in just 26 weeks: a <strong>20% relative difference in visceral fat</strong> between groups, a massive improvement in triglycerides and cholesterol ratios, an 81% increase in IGF-1 — and <strong>it did this without reducing subcutaneous fat or limb fat</strong>. That selectivity is remarkable. Tesamorelin targets the dangerous visceral fat surrounding your organs while leaving the subcutaneous fat (which is relatively benign and contributes to healthy appearance) alone. No other GH peptide has demonstrated this kind of targeted action in a large controlled trial.</p>
+</div>
+
+<h3>2. Pivotal Phase III: CTR-1011 (Falutz et al., 2010 — JAIDS)</h3>
+
+<p>The second pivotal study enrolled <strong>404 patients</strong> with a similar design and confirmed the findings: visceral fat decreased by approximately 18% in the tesamorelin group compared to a 1% reduction in the placebo group (P &lt; 0.001). The concordance between both trials was a key factor in the FDA's approval decision. Importantly, this study included a 12-month extension phase that showed effects were maintained with continued treatment — and reversed when tesamorelin was stopped, confirming the drug's causal role.</p>
+
+<h3>3. NAFLD / Liver Fat (Stanley et al., 2019 — The Lancet HIV)</h3>
+
+<p>This is where tesamorelin's story gets even more exciting. A randomized, double-blind, placebo-controlled trial at Massachusetts General Hospital and the NIH enrolled <strong>61 people with HIV and non-alcoholic fatty liver disease</strong> (NAFLD) — a condition affecting 30-40% of the HIV-positive population and an increasingly common metabolic problem in the general population.</p>
+
+<div class="cd ct">
+  <div class="tg">Landmark NAFLD Data</div>
+  <h3>Tesamorelin for Liver Fat Reduction</h3>
+  <p style="font-size:14px;">Over 12 months, tesamorelin produced a <strong>37% relative reduction in liver fat</strong> compared to placebo (P = 0.02). Even more striking: 35% of tesamorelin patients had their liver fat drop below the 5% threshold — effectively resolving their NAFLD — compared to just 4% on placebo (P = 0.007). And perhaps the most clinically important finding: <strong>only 10% of tesamorelin patients experienced fibrosis progression, compared to 37% on placebo</strong> (P = 0.044).</p>
+  <p style="font-size:14px;margin-bottom:0;">Liver fibrosis stage is the strongest predictor of mortality in NAFLD patients. A peptide that slows fibrosis progression isn't just improving a lab number — it's potentially changing disease trajectory. The transcriptomic analysis showed that tesamorelin downregulated hepatic gene sets involved in inflammation, tissue repair, and cell division, suggesting a deep mechanistic benefit beyond simple fat reduction.</p>
+</div>
+
+<h3>4. Cognitive Function (Cognition Study, 2012)</h3>
+
+<p>A study published in <em>Archives of Neurology</em> investigated tesamorelin's effects on cognitive function and found evidence of neuroprotective benefits. The rationale: IGF-1 is a known neurotrophic factor that supports synaptic plasticity, neuronal survival, and memory consolidation. By raising IGF-1 levels through physiological GH stimulation, tesamorelin may support brain health — particularly relevant given that visceral fat itself produces inflammatory cytokines that contribute to cognitive decline. While this research is still developing, the early signal is promising and adds another dimension to tesamorelin's benefit profile.</p>
+
+<h3>5. Muscle Preservation and Body Composition</h3>
+
+<p>Across the Phase III trials, tesamorelin consistently preserved lean body mass while reducing visceral fat. A secondary analysis published in the <em>Journal of Frailty and Aging</em> found that tesamorelin decreased intramuscular fat (fat marbled within the muscle tissue) while increasing muscle cross-sectional area — a combination that reflects genuine improvement in muscle quality, not just size. For aging adults concerned about sarcopenic obesity (the simultaneous loss of muscle and gain of visceral fat), this is exactly the body composition shift you want to see.</p>
+
+<!-- ========== BENEFITS ========== -->
+<hr class="sep">
+<h2>Evidence-Graded Benefits</h2>
+
+<table class="tbl">
+<thead><tr><th>Benefit</th><th>Evidence Grade</th><th>What the Data Shows</th></tr></thead>
+<tbody>
+<tr><td><strong>Visceral fat reduction</strong></td><td class="g">Strong (two Phase III RCTs, NEJM)</td><td>15-20% VAT reduction in 26 weeks; highly selective for visceral over subcutaneous fat</td></tr>
+<tr><td><strong>IGF-1 elevation</strong></td><td class="g">Strong (consistent across all trials)</td><td>81% increase from baseline; levels sustained with continued treatment</td></tr>
+<tr><td><strong>Lipid profile improvement</strong></td><td class="g">Strong (Phase III data)</td><td>Triglycerides &#8595; 50 mg/dL; cholesterol:HDL ratio significantly improved</td></tr>
+<tr><td><strong>Liver fat reduction / NAFLD</strong></td><td class="g">Strong (RCT, Lancet HIV)</td><td>37% relative reduction; 35% achieved NAFLD resolution; fibrosis progression slowed</td></tr>
+<tr><td><strong>Lean mass preservation</strong></td><td class="g">Moderate-Strong (Phase III secondary)</td><td>Muscle area increased; intramuscular fat decreased; lean mass maintained while VAT dropped</td></tr>
+<tr><td><strong>Cognitive support</strong></td><td class="y">Emerging (pilot data)</td><td>IGF-1-mediated neuroprotection; improved cognitive scores in preliminary study</td></tr>
+<tr><td><strong>Body image / quality of life</strong></td><td class="g">Moderate (Phase III patient-reported)</td><td>Statistically significant improvement in body image distress scores</td></tr>
+<tr><td><strong>Anti-aging (GH restoration)</strong></td><td class="y">Plausible (mechanistic)</td><td>Restores youthful GH pulsatility; IGF-1 normalization; well-aligned with anti-aging rationale</td></tr>
+</tbody>
+</table>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>One of tesamorelin's genuine strengths is its favorable safety profile — a direct consequence of working through the body's own GHRH pathway rather than overriding it with exogenous GH.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Clinical Significance</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site reactions</strong></td><td>Common (~10-15%)</td><td>Redness, itching, mild swelling at injection site; rotating sites helps; generally mild and transient</td></tr>
+<tr><td><strong>Arthralgia (joint pain)</strong></td><td>Common (~10-13%)</td><td>Consistent with GH/IGF-1 effects; usually mild; tends to resolve or stabilize within first few weeks</td></tr>
+<tr><td><strong>Peripheral edema</strong></td><td>Occasional (~5-6%)</td><td>Mild fluid retention, typically ankles; dose-related; resolves with continued use for most people</td></tr>
+<tr><td><strong>Myalgia (muscle aches)</strong></td><td>Occasional (~4-5%)</td><td>Similar to onset of GH therapy; usually temporary as the body adjusts</td></tr>
+<tr><td><strong>Paresthesia (numbness/tingling)</strong></td><td>Occasional (~4-5%)</td><td>Carpal-tunnel-like symptoms from GH effects on soft tissue; generally mild</td></tr>
+<tr><td><strong>Nausea</strong></td><td>Occasional (~4%)</td><td>Usually transient; taking injection at bedtime can minimize</td></tr>
+<tr><td><strong>Elevated IGF-1</strong></td><td>Expected (therapeutic effect)</td><td>Requires monitoring; dose adjustment if persistently above 3 SDS for age; the whole point of the drug</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">A Balanced Perspective on Safety</div>
+  <p>In the Phase III trials involving 806+ patients, the overall adverse event profile was not significantly different between tesamorelin and placebo groups. That's an important finding — it means most side effects were comparable to what the placebo group experienced. The most common complaints (joint aches, injection site reactions) are well-recognized effects of GH-axis activation and are generally manageable. For most users, the adjustment period lasts 1-3 weeks, after which the body acclimates to the elevated GH/IGF-1 levels.</p>
+</div>
+
+<h3>Considerations Worth Noting</h3>
+
+<p><strong>IGF-1 monitoring:</strong> Because tesamorelin raises IGF-1, periodic blood testing is recommended. The FDA label advises considering discontinuation if IGF-1 levels persistently exceed 3 standard deviations above the mean for age — though this threshold is conservative and provides a wide margin. Most users at standard doses remain well within the normal young-adult IGF-1 range.</p>
+
+<p><strong>Glucose metabolism:</strong> One FDA briefing document noted a slightly higher rate of new diabetes diagnoses in the tesamorelin group compared to placebo. However, the primary efficacy analyses found no significant difference in fasting glucose or insulin. The clinical picture suggests that while GH-axis stimulation has inherent anti-insulin effects (as with any GH peptide), tesamorelin's impact on glucose is modest and manageable with monitoring — particularly compared to exogenous GH, where glucose disruption is a much bigger concern.</p>
+
+<p><strong>Active malignancy:</strong> Tesamorelin is contraindicated in patients with active cancer. Because IGF-1 is a growth factor, there's a theoretical concern about promoting tumor growth. This is a standard precaution for all GH-axis therapies, not specific to tesamorelin. For individuals without active malignancy who have completed cancer treatment, the prescribing information advises weighing risks and benefits — a decision best made with your physician.</p>
+
+<p><strong>Reversibility:</strong> Tesamorelin's effects on visceral fat and IGF-1 reverse when treatment is stopped. The Phase III extension data showed that patients switched from tesamorelin to placebo at week 26 saw their IGF-1 return to baseline and visceral fat begin re-accumulating. This means tesamorelin works as long as you take it — it's a sustained therapy, not a one-time treatment.</p>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing and Administration</h2>
+
+<h3>FDA-Approved Dosing (Egrifta)</h3>
+
+<table class="tbl">
+<thead><tr><th>Formulation</th><th>Dose</th><th>Route</th><th>Frequency</th><th>Storage</th></tr></thead>
+<tbody>
+<tr><td><strong>Egrifta SV</strong></td><td>1.4 mg (0.35 mL)</td><td>Subcutaneous (abdomen)</td><td>Once daily</td><td>Refrigerated; reconstitute with sterile water</td></tr>
+<tr><td><strong>Egrifta WR</strong></td><td>1.28 mg (0.16 mL)</td><td>Subcutaneous (abdomen)</td><td>Once daily</td><td>Improved formulation; different reconstitution</td></tr>
+</tbody>
+</table>
+
+<h3>Research / Off-Label Dosing</h3>
+
+<p>In the clinical trial context, the standard dose was <strong>2 mg subcutaneously once daily</strong>. For off-label anti-aging and body composition use, practitioners commonly use similar dosing, though some adjust based on IGF-1 response and individual tolerance. Key dosing principles:</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Injection Technique</h4>
+    <p>Inject subcutaneously into the abdominal area, rotating injection sites to prevent lipodystrophy at the injection site. Avoid scar tissue, bruises, and the navel area. Inject at roughly the same time each day — many users prefer bedtime to align with the body's natural nocturnal GH surge and to sleep through any transient side effects.</p>
+  </div>
+  <div class="mc">
+    <h4>Reconstitution</h4>
+    <p>Tesamorelin is supplied as a lyophilized (freeze-dried) powder that requires reconstitution with bacteriostatic water (for pharma formulations) or sterile water. Handle gently — don't shake. Standard peptide reconstitution and storage practices apply. Refrigerate after reconstitution and use within the timeframe specified for your formulation.</p>
+  </div>
+</div>
+
+<div class="d-t">
+  <div class="s">Timeline of Effects</div>
+  <p><strong>Weeks 1-2:</strong> IGF-1 levels begin rising; some users notice improved sleep quality and subtle energy changes. <strong>Weeks 2-6:</strong> IGF-1 typically plateaus at elevated levels; early body composition changes may become noticeable; initial side effects (joint aches, mild edema) tend to resolve. <strong>Months 2-4:</strong> Measurable visceral fat reduction begins; lipid changes become apparent on bloodwork; improvements in body composition become visible. <strong>Months 4-6:</strong> The Phase III trials measured their primary endpoints at 26 weeks — this is where the 15-20% VAT reduction was confirmed. Sustained use produces sustained results.</p>
+</div>
+
+<!-- ========== STACKING WITH IPAMORELIN ========== -->
+<hr class="sep">
+<h2>The Tesamorelin + Ipamorelin Stack</h2>
+
+<p>If there's a "dream team" in the GH-secretagogue world, it's the <strong>Tesamorelin + Ipamorelin combination</strong>. This stack is increasingly popular among anti-aging practitioners and peptide-savvy clinicians, and the pharmacological rationale is genuinely elegant.</p>
+
+<div class="svg-box">
+  <div class="st">Dual-Pathway GH Amplification</div>
+  <div class="ss">Tesamorelin (GHRH pathway) + Ipamorelin (GHRP pathway) = synergistic, amplified GH release</div>
+  <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Tesamorelin -->
+    <rect x="10" y="20" width="180" height="60" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="100" y="45" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#187A62">Tesamorelin</text>
+    <text x="100" y="63" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">GHRH receptor agonist</text>
+    <text x="100" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E" font-style="italic">"Initiates the GH pulse"</text>
+
+    <!-- Ipamorelin -->
+    <rect x="10" y="120" width="180" height="60" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="100" y="145" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#2956A6">Ipamorelin</text>
+    <text x="100" y="163" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">Ghrelin/GHRP receptor</text>
+
+    <!-- Plus -->
+    <text x="100" y="115" text-anchor="middle" font-family="Lora,serif" font-size="18" font-weight="700" fill="#86869A">+</text>
+
+    <!-- Arrow to synergy -->
+    <line x1="190" y1="100" x2="280" y2="100" stroke="#86869A" stroke-width="2" marker-end="url(#arw)"/>
+    <text x="235" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#86869A" font-weight="600">SYNERGY</text>
+
+    <!-- Amplified GH -->
+    <rect x="280" y="65" width="180" height="70" rx="10" fill="#FFF7E5" stroke="#B48118" stroke-width="2"/>
+    <text x="370" y="90" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Amplified GH</text>
+    <text x="370" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Greater than either alone</text>
+    <text x="370" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Natural pulsatile pattern</text>
+
+    <!-- Arrow to outcomes -->
+    <line x1="460" y1="100" x2="500" y2="100" stroke="#86869A" stroke-width="1.5" marker-end="url(#arw)"/>
+
+    <!-- Outcomes -->
+    <rect x="500" y="20" width="180" height="160" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="590" y="48" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#6E3B8A">Enhanced Outcomes</text>
+    <line x1="520" y1="58" x2="660" y2="58" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="590" y="78" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">&#10003; Greater VAT reduction</text>
+    <text x="590" y="96" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">&#10003; Enhanced IGF-1</text>
+    <text x="590" y="114" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">&#10003; Improved sleep</text>
+    <text x="590" y="132" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">&#10003; Better recovery</text>
+    <text x="590" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">&#10003; Lean mass support</text>
+    <text x="590" y="168" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">&#10003; Clean side effect profile</text>
+  </svg>
+</div>
+
+<h3>Why This Combination Works So Well</h3>
+
+<p>The magic of the Tesamorelin + Ipamorelin stack lies in <strong>dual-pathway stimulation</strong>. Growth hormone release from the pituitary is controlled by two opposing signals: GHRH (the "go" signal) and somatostatin (the "stop" signal). Tesamorelin amplifies the "go" signal by stimulating GHRH receptors. Ipamorelin — a selective growth hormone-releasing peptide — works through the ghrelin/GHS-R pathway, which both stimulates GH release <em>and</em> suppresses somatostatin's inhibitory tone.</p>
+
+<p>When you combine them, you're essentially hitting the gas pedal (tesamorelin) while also releasing the brake (ipamorelin's somatostatin suppression). The result is <strong>synergistic GH release that's greater than either peptide alone</strong>, while maintaining the natural pulsatile pattern. And because Ipamorelin is the most selective GHRP available (it doesn't significantly increase cortisol, prolactin, or appetite the way GHRP-6 or GHRP-2 do), the combination stays remarkably clean from a side-effect standpoint.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>What Tesamorelin Contributes</h4>
+    <p>FDA-level evidence for visceral fat reduction. Proven NAFLD protection. Lipid profile improvement. Strong, sustained IGF-1 elevation. The "legitimacy backbone" of the stack with the most clinical data of any GH peptide.</p>
+  </div>
+  <div class="mc">
+    <h4>What Ipamorelin Adds</h4>
+    <p>Somatostatin suppression (amplifies tesamorelin's pulse). Clean side-effect profile (no cortisol/prolactin spike). Additional GH pulse that stacks on top of tesamorelin's signal. Often reported to enhance sleep quality. Flexible dosing (2-3x daily or bedtime).</p>
+  </div>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Common Stack Protocol</div>
+  <h3>Tesamorelin + Ipamorelin Dosing</h3>
+  <p style="font-size:14px;"><strong>Tesamorelin:</strong> 1-2 mg subcutaneously once daily (typically bedtime). <strong>Ipamorelin:</strong> 200-300 mcg subcutaneously, 1-3 times daily (commonly at bedtime, or split AM + bedtime). <strong>Timing:</strong> Many practitioners recommend injecting both at bedtime, 30-60 minutes apart, to create a powerful synergistic GH pulse that aligns with the body's natural nocturnal GH surge. Some protocols add a morning Ipamorelin dose for an additional daytime pulse.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Duration:</strong> 3-6 month cycles are common, with IGF-1 monitoring at baseline, 4-6 weeks, and every 3 months thereafter. The combination can be cycled (12 weeks on / 4-8 weeks off) or used continuously at lower doses under medical supervision. Many users report this stack as the most effective GH protocol they've experienced — combining the proven visceral fat targeting of tesamorelin with the sleep and recovery enhancement of ipamorelin.</p>
+</div>
+
+<!-- ========== COMPARISONS ========== -->
+<hr class="sep">
+<h2>Tesamorelin vs. Other GH Peptides</h2>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Tesamorelin</th><th>CJC-1295 (no DAC)</th><th>Sermorelin</th><th>MK-677</th><th>Exogenous GH</th></tr></thead>
+<tbody>
+<tr><td><strong>Mechanism</strong></td><td>GHRH receptor agonist</td><td>GHRH receptor agonist</td><td>GHRH receptor agonist</td><td>Ghrelin receptor agonist</td><td>Direct GH replacement</td></tr>
+<tr><td><strong>FDA approved</strong></td><td class="g">Yes (lipodystrophy)</td><td class="r">No</td><td class="y">Previously approved (diagnostic); off-market</td><td class="r">No</td><td class="g">Yes (multiple indications)</td></tr>
+<tr><td><strong>Clinical data</strong></td><td class="g">Phase III RCTs (806+ patients, NEJM)</td><td class="y">Small trials only</td><td class="y">Moderate (diagnostic use data)</td><td class="g">Multiple RCTs (Nass, Copinschi)</td><td class="g">Extensive (decades)</td></tr>
+<tr><td><strong>Visceral fat reduction</strong></td><td class="g">15-20% (proven in RCT)</td><td class="y">Theoretical (no controlled data)</td><td class="y">Theoretical</td><td class="y">Not demonstrated in RCT</td><td class="g">Demonstrated</td></tr>
+<tr><td><strong>NAFLD protection</strong></td><td class="g">37% liver fat reduction (RCT)</td><td class="r">No data</td><td class="r">No data</td><td class="r">No data</td><td class="y">Some data</td></tr>
+<tr><td><strong>Appetite effect</strong></td><td class="g">Minimal</td><td class="g">Minimal</td><td class="g">Minimal</td><td class="r">Significant increase</td><td class="g">Minimal</td></tr>
+<tr><td><strong>Route</strong></td><td>Subcutaneous</td><td>Subcutaneous</td><td>Subcutaneous</td><td class="g">Oral</td><td>Subcutaneous</td></tr>
+<tr><td><strong>Insulin sensitivity</strong></td><td class="y">Mild concern (monitored in trials)</td><td class="y">Theoretical risk</td><td class="g">Minimal</td><td class="r">Impairs (documented)</td><td class="r">Impairs (well-documented)</td></tr>
+<tr><td><strong>Pulsatility preserved</strong></td><td class="g">Yes</td><td class="g">Yes</td><td class="g">Yes</td><td class="g">Yes</td><td class="r">No (artificial spike)</td></tr>
+<tr><td><strong>Cost (monthly)</strong></td><td class="r">$400-800+ (Rx); variable (research)</td><td class="g">$50-100 (research)</td><td class="y">$100-300</td><td class="g">$30-60 (research)</td><td class="r">$500-2,000+</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">Why Tesamorelin Is Worth the Premium</div>
+  <p>Yes, tesamorelin costs more than CJC-1295 or MK-677. But you're paying for something the others can't offer: <strong>FDA-level evidence that it actually does what it claims.</strong> The visceral fat reduction isn't theoretical — it's confirmed by CT scan in 806+ patients across two pivotal trials. The liver protection isn't anecdotal — it's demonstrated by biopsy-confirmed fibrosis prevention. The lipid improvement isn't speculative — it's measured in controlled conditions and published in the world's top medical journals. For many users, that certainty is worth the investment.</p>
+</div>
+
+<!-- ========== WHO IT'S FOR ========== -->
+<hr class="sep">
+<h2>Ideal Candidates for Tesamorelin</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Great Fit</h4>
+    <p><strong>Adults 35+ with increasing visceral fat</strong> — particularly the "I work out and eat well but my waistline keeps growing" population. <strong>Anyone concerned about metabolic health markers</strong> — triglycerides, cholesterol ratios, liver enzymes. <strong>People with early NAFLD or fatty liver findings.</strong> <strong>Anti-aging-focused individuals</strong> seeking evidence-based GH optimization. <strong>Current GH peptide users</strong> looking to upgrade to a more clinically validated option. <strong>Patients working with progressive physicians</strong> who can prescribe off-label and monitor bloodwork.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Considerations</h4>
+    <p><strong>Active malignancy</strong> — contraindicated (as with all GH-axis therapies). <strong>Pregnancy</strong> — contraindicated. <strong>Budget-constrained users</strong> — tesamorelin is pricier than alternatives; CJC-1295/Ipamorelin offers a more affordable GH pathway. <strong>Those seeking weight loss only</strong> — tesamorelin is weight-neutral (it redistributes composition, doesn't cause net weight loss). <strong>Needle-averse individuals</strong> — requires daily subcutaneous injection (MK-677 is the oral alternative, albeit with more side effects).</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can I get tesamorelin without an HIV diagnosis?</summary>
+    <div class="fa">Yes. While tesamorelin's FDA-approved indication is specifically for HIV-associated lipodystrophy, physicians can legally prescribe FDA-approved drugs off-label for other conditions at their clinical discretion. Many anti-aging and functional medicine practitioners prescribe tesamorelin off-label for visceral fat reduction, NAFLD concerns, and GH optimization. Additionally, tesamorelin is available through research peptide vendors, though pharmaceutical-grade (Egrifta) offers verified purity and standardized dosing.</div>
+  </details>
+  <details>
+    <summary>How quickly will I see results?</summary>
+    <div class="fa">IGF-1 levels begin rising within the first week and typically plateau within 2 weeks. Subjective improvements in sleep and energy are often noticed within the first 2-4 weeks. Measurable body composition changes — particularly visceral fat reduction visible on imaging or waist circumference changes — generally require 2-4 months of consistent use. The Phase III trials measured their primary endpoint at 26 weeks (6 months), which is a reasonable timeframe for expecting the full range of benefits.</div>
+  </details>
+  <details>
+    <summary>Does tesamorelin work for belly fat even without HIV?</summary>
+    <div class="fa">The clinical trials were conducted in HIV populations, so the direct evidence is in that population. However, the mechanism — stimulating GH to selectively target visceral fat — is not HIV-specific. Visceral fat accumulation is driven by hormonal and metabolic factors common to aging, metabolic syndrome, and central obesity regardless of HIV status. Many practitioners report excellent results in non-HIV patients with visceral fat concerns, and the physiological rationale strongly supports broader application. Off-label research in general populations is ongoing.</div>
+  </details>
+  <details>
+    <summary>Is tesamorelin better than exogenous GH injections?</summary>
+    <div class="fa">They serve different purposes. Exogenous GH produces higher peak GH levels and has broader FDA-approved indications. However, tesamorelin offers key advantages: it preserves natural pulsatile GH secretion (GH injection doesn't), it has proven selective visceral fat targeting (GH hasn't demonstrated this as clearly), and it maintains the body's feedback mechanisms. Tesamorelin also avoids some GH-specific risks like excessive IGF-1 elevation and more severe glucose disruption. For visceral fat reduction and metabolic optimization specifically, tesamorelin may be the superior choice.</div>
+  </details>
+  <details>
+    <summary>What happens when I stop taking tesamorelin?</summary>
+    <div class="fa">The Phase III extension data showed that effects are reversible — IGF-1 returns to baseline and visceral fat begins re-accumulating after discontinuation. This isn't a flaw; it reflects normal physiology. GH levels decline with age, and stopping a GHRH analog means returning to your baseline GH secretion. Many users plan for sustained use (continuous or cyclical) as part of an ongoing health optimization protocol, similar to how TRT is maintained long-term.</div>
+  </details>
+  <details>
+    <summary>Can women use tesamorelin?</summary>
+    <div class="fa">Yes. The Phase III trials included both men and women (though the majority were male due to the HIV population studied). Tesamorelin acts on the GHRH receptor, which functions identically in both sexes. There's no androgenic activity, no virilization risk, and no sex-specific contraindication. Women may benefit particularly from tesamorelin's visceral fat targeting, as post-menopausal visceral fat accumulation is a common concern. The same monitoring protocols (IGF-1, glucose, lipids) apply regardless of sex.</div>
+  </details>
+  <details>
+    <summary>Why does tesamorelin pair so well with Ipamorelin specifically?</summary>
+    <div class="fa">The synergy is pharmacological, not just additive. Tesamorelin activates the GHRH receptor (the "go" signal for GH release). Ipamorelin activates the ghrelin/GHS-R receptor, which both directly stimulates GH release AND suppresses somatostatin (the "stop" signal). By hitting both pathways simultaneously, you get amplified GH pulses. Ipamorelin is preferred over other GHRPs (like GHRP-6 or GHRP-2) because it's the most selective — it doesn't increase cortisol, prolactin, or appetite, keeping the combination clean. Think of it as tesamorelin providing the FDA-backed visceral fat reduction engine while Ipamorelin turbocharges the GH output and adds sleep/recovery benefits.</div>
+  </details>
+  <details>
+    <summary>How does sourcing work — prescription vs. research?</summary>
+    <div class="fa">Pharmaceutical-grade tesamorelin (Egrifta) is available by prescription through specialty pharmacies. This is the gold standard for purity and dose accuracy. Research-grade tesamorelin is available through peptide vendors and offers a more accessible price point. Many experienced users report excellent results from well-sourced research tesamorelin — the key is choosing vendors who provide third-party certificates of analysis (COAs) showing purity of 98%+ and accurate peptide content. Regardless of source, the same dosing, storage, and monitoring protocols apply.</div>
+  </details>
+</div>
+
+<!-- ========== KEY TAKEAWAYS ========== -->
+<hr class="sep">
+<h2>Key Takeaways</h2>
+
+<div class="d-t">
+  <div class="s">Bottom Line</div>
+  <p>Tesamorelin is the <strong>gold standard of growth hormone peptides</strong> — the only one with FDA approval, Phase III trial data published in the <em>New England Journal of Medicine</em>, and proven selective visceral fat reduction confirmed by CT imaging in 806+ patients. Its expanding evidence base in NAFLD (37% liver fat reduction, fibrosis prevention) and emerging cognitive data make it more relevant than ever. When stacked with Ipamorelin, it creates a dual-pathway GH optimization protocol that's both pharmacologically elegant and clinically well-supported.</p>
+</div>
+
+<p>For anyone serious about evidence-based GH optimization, tesamorelin should be at the top of your consideration list. It offers something no other GH peptide can: <strong>the confidence that comes from knowing the compound you're using has survived the most rigorous drug approval process in the world</strong>. The visceral fat reduction is proven. The lipid improvements are proven. The liver protection is demonstrated in a controlled trial. And the mechanism — restoring your own pulsatile GH rhythm rather than injecting synthetic hormone — aligns with the physiological approach that produces the best long-term outcomes.</p>
+
+<p>Whether you access tesamorelin through a physician prescription or a reputable research source, the fundamentals remain the same: get baseline bloodwork, monitor IGF-1 and metabolic markers, combine it with the lifestyle factors that amplify its effects (resistance training, protein adequacy, quality sleep), and give it the 3-6 months it needs to deliver its full range of benefits. This is one of those compounds where the science genuinely backs the enthusiasm.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice. Tesamorelin (Egrifta) is FDA-approved for the reduction of excess abdominal fat in HIV-infected adults with lipodystrophy. Off-label use for other indications should be discussed with a qualified healthcare provider. Tesamorelin is contraindicated in patients with active malignancy and during pregnancy. IGF-1 and metabolic markers should be monitored during use. Individual results vary. Always consult your physician before starting any peptide therapy.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Falutz J, Allas S, Blot K, et al. Metabolic effects of a growth hormone-releasing factor in patients with HIV. <em>N Engl J Med.</em> 2007;357(23):2359-2370.<br>
+Falutz J, Potvin D, Mamputu JC, et al. Effects of tesamorelin, a growth hormone-releasing factor, in HIV-infected patients with abdominal fat accumulation: a randomized placebo-controlled trial with a safety extension. <em>J Acquir Immune Defic Syndr.</em> 2010;53(3):311-322.<br>
+Stanley TL, Feldpausch MN, Oh J, et al. Effect of tesamorelin on visceral fat and liver fat in HIV-infected patients with abdominal fat accumulation: a randomized clinical trial. <em>JAMA.</em> 2014;312(4):380-389.<br>
+Stanley TL, Fourman LT, Feldpausch MN, et al. Effects of tesamorelin on nonalcoholic fatty liver disease in HIV: a randomized, double-blind, multicenter trial. <em>Lancet HIV.</em> 2019;6(12):e821-e830. PMC6981288.<br>
+Fourman LT, Stanley TL, Billingsley JM, et al. Delineating tesamorelin response pathways in HIV-associated NAFLD using a targeted proteomic and transcriptomic approach. <em>Sci Rep.</em> 2021;11:10485.<br>
+Adrian S, Scherzinger A, Sanyal A, et al. The growth hormone releasing hormone analogue, tesamorelin, decreases muscle fat and increases muscle area in adults with HIV. <em>J Frailty Aging.</em> 2019;8(3):154-159.<br>
+McLaughlin T, Grinspoon SK, Stanley T, Fourman L. Tesamorelin reduces visceral adipose tissue and liver fat in INSTI-treated persons with HIV. <em>Open Forum Infect Dis.</em> 2023;10(Suppl 2):ofad500.1334.<br>
+Fourman LT, Czerwonka N, Feldpausch MN, et al. Visceral fat reduction with tesamorelin is associated with improved liver enzymes in HIV. <em>AIDS.</em> 2017;31(16):2253-2259.<br>
+U.S. Food and Drug Administration. EGRIFTA WR Prescribing Information. NDA 22-505. Revised 2025.<br>
+Brown TT, Glesby MJ. Management of the metabolic effects of HIV and HIV drugs. <em>Nat Rev Endocrinol.</em> 2012;8(1):11-21.
+</p>
+
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>•</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>⚠️ Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">🔬 Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Popular Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides →</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
