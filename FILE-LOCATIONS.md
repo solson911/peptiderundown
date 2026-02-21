@@ -2,6 +2,23 @@
 
 ## 🎯 **CRITICAL: WHERE TO EDIT ARTICLES**
 
+## ✅ Source of Truth Repo (Deployment)
+
+Cloudflare builds from the git repo at:
+
+`/home/claw/.openclaw/workspace/projects/peptide-site/site`
+
+Remote:
+- `origin https://github.com/solson911/peptiderundown.git`
+
+**Do not commit publishable content or automation only in** `/home/claw/.openclaw/workspace` (that repo has no remote and is NOT deployed).
+
+Automation that must persist should be committed into the `site/` repo (for example: `site/scripts/inbox-processor.sh`).
+
+---
+
+
+
 ### ✅ **CORRECT LOCATION (ONLY ONE):**
 ```
 /home/claw/.openclaw/workspace/projects/peptide-site/site/src/pages/articles/
