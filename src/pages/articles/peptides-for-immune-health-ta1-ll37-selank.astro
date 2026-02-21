@@ -1,0 +1,602 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptides for Immune Health: Thymosin Alpha-1, LL-37, and Selank — Complete Guide",
+  description: "A detailed comparison of peptides, SARMs, and anabolic steroids—mechanisms, risks, legality, and practical differences.",
+  image: "/images/articles/peptides-for-immune-health-ta1-ll37-selank.webp",
+  date: "2026-02-21",
+  category: "Education",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+
+
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132F43 40%,#1B4D3E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='15' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.7rem,4.5vw,2.4rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'&#8722;';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}`;
+
+const rawHTML = `
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Immune Peptides &middot; Evidence-Based Guide</div>
+  <h1>Peptides for Immune Health: Thymosin Alpha-1, LL-37, and Selank</h1>
+  <p class="sub">Three peptides that support your immune system through fundamentally different mechanisms — from T-cell maturation to antimicrobial defense to stress-immune modulation. The science behind the most compelling immune peptides available today.</p>
+  <div class="pills">
+    <span class="pill">T&#945;1 &middot; T-Cell Commander</span>
+    <span class="pill">LL-37 &middot; Antimicrobial Shield</span>
+    <span class="pill">Selank &middot; Neuro-Immune Bridge</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">35+</div><div class="l">Countries Approve<br>Thymosin Alpha-1</div></div>
+  <div class="sb"><div class="v c2">37</div><div class="l">Amino Acids<br>in LL-37</div></div>
+  <div class="sb"><div class="v c3">3</div><div class="l">Distinct Immune<br>Mechanisms</div></div>
+  <div class="sb"><div class="v c4">0</div><div class="l">Immunosuppressive<br>Effects</div></div>
+</div>
+
+<p>When people think of peptides for health optimization, they typically think of GH secretagogues for body composition, BPC-157 for healing, or GLP-1 agonists for weight loss. But there's a category of peptides that may matter more than any of those — <strong>immune-modulating peptides</strong>. Your immune system is the master regulator of inflammation, infection defense, cancer surveillance, and tissue repair. When it works well, everything works better. When it falters — through aging (immunosenescence), chronic stress, or illness — the downstream effects touch every system in your body.</p>
+
+<p>Three peptides stand out in this space, each addressing immune function through a completely different pathway. <strong>Thymosin Alpha-1</strong> is the T-cell commander — approved in 35+ countries, with clinical trial data spanning hepatitis, cancer, sepsis, and COVID-19. <strong>LL-37</strong> is your body's own antimicrobial weapon — a broad-spectrum peptide that kills bacteria, destroys biofilms, and modulates inflammation simultaneously. <strong>Selank</strong> bridges the neuro-immune divide — a Russian-developed peptide that reduces anxiety while simultaneously regulating cytokine balance and immune function.</p>
+
+<p>Together, these three peptides represent the most evidence-supported approach to immune optimization available in the peptide space. Let's dig into each one.</p>
+
+<!-- ========== QUICK COMPARISON ========== -->
+<hr class="sep">
+<h2>Three Peptides, Three Mechanisms</h2>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Thymosin Alpha-1</th><th>LL-37</th><th>Selank</th></tr></thead>
+<tbody>
+<tr><td><strong>Amino acids</strong></td><td>28</td><td>37</td><td>7</td></tr>
+<tr><td><strong>Derived from</strong></td><td>Thymus gland (thymosin)</td><td>Cathelicidin (hCAP-18)</td><td>Tuftsin (IgG fragment)</td></tr>
+<tr><td><strong>Primary mechanism</strong></td><td>T-cell maturation and dendritic cell activation via TLR signaling</td><td>Direct antimicrobial action + immune cell recruitment</td><td>GABAergic anxiolysis + cytokine modulation</td></tr>
+<tr><td><strong>Immune role</strong></td><td class="g">Adaptive immunity commander</td><td class="g">Innate immunity first responder</td><td class="g">Neuro-immune stress modulator</td></tr>
+<tr><td><strong>Regulatory status</strong></td><td class="g">Approved in 35+ countries; FDA orphan drug designation</td><td class="y">Not approved; extensive preclinical/clinical research</td><td class="y">Approved in Russia; not approved in US/EU</td></tr>
+<tr><td><strong>Route</strong></td><td>Subcutaneous injection</td><td>Subcutaneous injection or topical/intranasal</td><td>Intranasal spray (preferred) or subcutaneous</td></tr>
+<tr><td><strong>Key strength</strong></td><td>Restoring compromised adaptive immunity</td><td>Killing pathogens + breaking biofilms</td><td>Calming stress-driven immune dysfunction</td></tr>
+<tr><td><strong>Safety profile</strong></td><td class="g">Excellent — extensive clinical data</td><td class="y">Good — preclinical; limited human dosing data</td><td class="g">Excellent — comparable to placebo in trials</td></tr>
+<tr><td><strong>Best for</strong></td><td>Immunosenescence, chronic infection, cancer adjunct, vaccine response</td><td>Chronic/biofilm infections, wound healing, antimicrobial support</td><td>Stress-related immune suppression, anxiety, cognitive-immune support</td></tr>
+</tbody>
+</table>
+
+<div class="svg-box">
+  <div class="st">How They Cover the Immune System</div>
+  <div class="ss">Each peptide addresses a different layer of immune defense — together they provide comprehensive coverage</div>
+  <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Layer 1: LL-37 -->
+    <rect x="10" y="10" width="220" height="75" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="120" y="35" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">LL-37</text>
+    <text x="120" y="52" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">INNATE IMMUNITY</text>
+    <text x="120" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#14503E">Kills pathogens &#8226; Breaks biofilms &#8226; Recruits immune cells</text>
+
+    <!-- Layer 2: Ta1 -->
+    <rect x="245" y="10" width="220" height="75" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="355" y="35" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Thymosin Alpha-1</text>
+    <text x="355" y="52" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">ADAPTIVE IMMUNITY</text>
+    <text x="355" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#1E3362">T-cell activation &#8226; Dendritic cells &#8226; Th1/Th2 balance</text>
+
+    <!-- Layer 3: Selank -->
+    <rect x="480" y="10" width="210" height="75" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="585" y="35" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Selank</text>
+    <text x="585" y="52" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">NEURO-IMMUNE AXIS</text>
+    <text x="585" y="70" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#3E2050">Cytokine balance &#8226; Stress resilience &#8226; IL-6 regulation</text>
+
+    <!-- Connecting bar -->
+    <rect x="10" y="100" width="680" height="40" rx="8" fill="#FFFFFF" stroke="#D9D6CE"/>
+    <text x="350" y="125" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="600" fill="#18182A">Comprehensive Immune Coverage: First Response &#8594; Targeted Defense &#8594; Stress-Immune Regulation</text>
+
+    <!-- Bottom note -->
+    <text x="350" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#86869A">These peptides are complementary, not competitive — they work through different receptors and signaling pathways</text>
+    <text x="350" y="185" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#86869A">and can be used individually or combined based on your specific immune health goals</text>
+  </svg>
+</div>
+
+<!-- ========== THYMOSIN ALPHA-1 ========== -->
+<hr class="sep">
+<h2>Thymosin Alpha-1: The Adaptive Immunity Commander</h2>
+
+<div class="cd cb">
+  <div class="tg">Peptide Profile</div>
+  <h3>Thymosin Alpha-1 (T&#945;1)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Structure:</strong> 28-amino-acid acetylated peptide (MW: 3,108 Da) &nbsp;|&nbsp; <strong>Origin:</strong> Naturally produced in the thymus gland; first isolated in the 1970s by Allan Goldstein at George Washington University &nbsp;|&nbsp; <strong>Synthetic form:</strong> Thymalfasin (brand name Zadaxin) &nbsp;|&nbsp; <strong>Regulatory status:</strong> FDA orphan drug designation (hepatitis B, DiGeorge syndrome); approved in 35+ countries for hepatitis B/C, vaccine adjuvant, immune deficiency &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>Standard dose:</strong> 1.6 mg twice weekly (clinical standard)</p>
+</div>
+
+<h3>Why the Thymus Matters</h3>
+
+<p>Your thymus gland is the "training academy" for T-cells — the adaptive immune system's soldiers. Immature immune cells travel to the thymus, where they learn to distinguish self from non-self, mature into functional T-cells (CD4+ helper, CD8+ killer, regulatory T-cells), and deploy throughout the body. The problem: <strong>the thymus starts shrinking after puberty</strong>, a process called thymic involution. By age 40, your thymus is producing a fraction of the T-cells it made at 20. By 65, it's largely replaced by fatty tissue.</p>
+
+<p>This isn't just abstract biology — it's the core mechanism behind immunosenescence (age-related immune decline). Reduced thymic output means fewer na&#239;ve T-cells to respond to new threats, weaker vaccine responses, increased susceptibility to infections, and impaired cancer surveillance. Thymosin Alpha-1 is the master peptide your thymus produces to drive T-cell maturation. Supplementing it essentially <strong>provides the signal your aging thymus can no longer produce adequately</strong>.</p>
+
+<h3>How T&#945;1 Works</h3>
+
+<p>Thymosin Alpha-1 has a remarkably sophisticated mechanism — it's not simply an "immune booster" that ramps everything up. It's an <strong>immune modulator</strong> that calibrates the immune response based on what the body needs:</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Activates When Needed</h4>
+    <p>T&#945;1 binds to Toll-like receptors (TLR2, TLR9) on dendritic cells, triggering activation and maturation of these critical antigen-presenting cells. This cascades into enhanced T-cell activation, increased CD4+/CD8+ ratios, stimulated NK (natural killer) cell activity, and upregulated production of IL-2, IFN-&#947;, and other Th1 cytokines that drive targeted pathogen elimination.</p>
+  </div>
+  <div class="mc">
+    <h4>Regulates When Needed</h4>
+    <p>Unlike crude immune stimulants, T&#945;1 also promotes regulatory T-cell function, helping prevent immune overactivation. It balances the Th1/Th2 immune response, reduces inflammatory cytokine storms, and does not overstimulate cytokine production. This bidirectional modulation is why it was investigated for COVID-19 — it could potentially boost the suppressed immune response while preventing the fatal cytokine storm.</p>
+  </div>
+</div>
+
+<div class="d-t">
+  <div class="s">The "Smart" Immune Peptide</div>
+  <p>What makes T&#945;1 special compared to other immune-stimulating compounds (like interferon or IL-2) is its <strong>excellent safety profile</strong>. In clinical studies across thousands of patients — including elderly, immunocompromised, and pediatric subjects — T&#945;1 has been consistently well-tolerated, with adverse events typically limited to mild injection site reactions. Unlike interferon, it doesn't cause flu-like symptoms. Unlike IL-2, it doesn't trigger dangerous systemic inflammation. It enhances immune function intelligently, not indiscriminately.</p>
+</div>
+
+<h3>Clinical Evidence</h3>
+
+<table class="tbl">
+<thead><tr><th>Indication</th><th>Evidence Level</th><th>Key Findings</th></tr></thead>
+<tbody>
+<tr><td><strong>Chronic Hepatitis B</strong></td><td class="g">Phase III (approved in 35+ countries)</td><td>Improved viral clearance, enhanced seroconversion rates when combined with interferon; consistent results across multiple large trials</td></tr>
+<tr><td><strong>Chronic Hepatitis C</strong></td><td class="g">Phase III (approved)</td><td>Improved virological response when added to peginterferon/ribavirin in non-responders; adjunctive benefit confirmed</td></tr>
+<tr><td><strong>Cancer adjunct therapy</strong></td><td class="g">Multiple clinical trials</td><td>Improved overall survival in NSCLC and hepatocellular carcinoma in adjuvant setting; reduced chemotherapy-induced lymphopenia; enhanced efficacy of conventional treatments</td></tr>
+<tr><td><strong>Sepsis</strong></td><td class="g">Meta-analyses (706+ patients in SAP alone)</td><td>Systematic reviews show reduced infection rates, improved immune markers (CD4+, CD8+), decreased mortality in severe infections; particularly strong data in severe acute pancreatitis</td></tr>
+<tr><td><strong>COVID-19</strong></td><td class="y">Multiple trials; mixed meta-analysis results</td><td>Reduced cytokine storms, increased lymphocytes, reversed T-cell exhaustion in severe cases; enhanced vaccine immunogenicity in elderly/immunocompromised; promising but heterogeneous study quality</td></tr>
+<tr><td><strong>Vaccine adjuvant</strong></td><td class="g">Multiple clinical studies</td><td>Enhanced antibody responses and seroconversion rates for influenza and hepatitis B vaccines, particularly in elderly and immunocompromised populations</td></tr>
+<tr><td><strong>DiGeorge syndrome</strong></td><td class="g">FDA orphan drug designation</td><td>Restores immune function in primary T-cell immunodeficiency caused by thymic hypoplasia</td></tr>
+<tr><td><strong>Immunosenescence / aging</strong></td><td class="y">Emerging (preclinical + clinical rationale)</td><td>T&#945;1 directly addresses age-related thymic decline; counters senescent cell accumulation; acts as senolytic and senomodulator agent</td></tr>
+</tbody>
+</table>
+
+<h3>Who Benefits Most from T&#945;1</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Strong Candidates</h4>
+    <p>Adults 40+ experiencing age-related immune decline. Anyone with chronic viral infections (hepatitis B/C). Cancer patients as adjunct to conventional treatment. Those with frequent infections or poor vaccine responses. Immunocompromised individuals. Pre/post-surgical immune support.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Interesting Use Cases</h4>
+    <p>Seasonal immune support (fall/winter). Travel immune preparation. Post-illness recovery acceleration. Chronic fatigue with immune dysfunction. Mold/biotoxin illness immune support. Lyme disease adjunctive therapy.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Dosing Protocols</h4>
+    <p><strong>Standard:</strong> 1.6 mg SC twice weekly. <strong>Acute infection:</strong> 1.6 mg daily for 7-14 days, then taper to twice weekly. <strong>Maintenance:</strong> 1.6 mg 1-2x weekly, ongoing or cycled (8-12 weeks on, 4 weeks off). <strong>Vaccine adjuvant:</strong> 1.6 mg on days surrounding vaccination.</p>
+  </div>
+</div>
+
+<!-- ========== LL-37 ========== -->
+<hr class="sep">
+<h2>LL-37: Your Body's Antimicrobial Weapon</h2>
+
+<div class="cd ct">
+  <div class="tg">Peptide Profile</div>
+  <h3>LL-37 (Human Cathelicidin)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Structure:</strong> 37-amino-acid cationic peptide (sequence: LLGDFFRKSKEKIGKEFKRIVQRIKDFLRNLVPRTES) &nbsp;|&nbsp; <strong>Origin:</strong> Derived from the precursor protein hCAP-18; the only cathelicidin in humans &nbsp;|&nbsp; <strong>Produced by:</strong> Epithelial cells, neutrophils, macrophages, NK cells, dendritic cells &nbsp;|&nbsp; <strong>Regulatory status:</strong> Not FDA-approved; under active clinical investigation &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection (systemic), topical, or intranasal &nbsp;|&nbsp; <strong>Typical research dose:</strong> 100-500 mcg SC daily</p>
+</div>
+
+<h3>Why LL-37 Is Unique</h3>
+
+<p>LL-37 is unlike any other peptide in the immune toolkit. Where Thymosin Alpha-1 orchestrates the adaptive immune response from above, LL-37 is the <strong>front-line soldier</strong> — the molecule that physically kills pathogens, punches holes in bacterial biofilms, and signals for immune reinforcements. It's part of your innate immune system's first wave of defense, produced by your body's epithelial surfaces (skin, lungs, gut) and immune cells whenever they detect a threat.</p>
+
+<p>What makes LL-37 extraordinary is that it's <strong>not an antibiotic in the traditional sense</strong> — bacteria can't easily develop resistance to it the way they do to conventional antibiotics. LL-37 kills bacteria by physically disrupting their cell membranes, a mechanism that's extremely difficult for microbes to evolve around. It's also one of the very few compounds that can effectively penetrate and destroy <strong>bacterial biofilms</strong> — the protective colonies that make chronic infections so stubbornly resistant to treatment.</p>
+
+<h3>Triple-Threat Mechanism</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">1. Direct Antimicrobial</h4>
+    <p>LL-37 is a positively charged (cationic) peptide that's attracted to negatively charged bacterial membranes. It integrates into the membrane, forms pore-like channels (tetrameric structures confirmed by crystallography), and causes bacterial cell death within minutes. Active against Gram-positive, Gram-negative, fungi, and enveloped viruses — including antibiotic-resistant strains like MRSA and <em>Pseudomonas aeruginosa</em>.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">2. Biofilm Destruction</h4>
+    <p>Bacterial biofilms are communities of bacteria encased in a protective matrix that antibiotics often can't penetrate. LL-37 disrupts these biofilms at concentrations well below its antimicrobial threshold. Studies show it can prevent biofilm formation by <em>P. aeruginosa</em>, <em>S. aureus</em>, <em>A. baumannii</em>, and other biofilm-forming pathogens, and can even disrupt established biofilms. This anti-biofilm activity is distinct from its direct killing action.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">3. Immune Modulation</h4>
+    <p>Beyond direct killing, LL-37 acts as a chemical signal (chemokine) that recruits monocytes, neutrophils, and T-cells to infection sites. It activates dendritic cells, modulates inflammatory cytokine production (dampening TNF-&#945; overexpression while maintaining immune surveillance), neutralizes bacterial endotoxin (LPS), and promotes wound healing through angiogenesis and keratinocyte migration.</p>
+  </div>
+</div>
+
+<div class="d">
+  <div class="s">The Biofilm Problem — And Why LL-37 Matters</div>
+  <p>An estimated 65-80% of human infections involve biofilms — from chronic sinusitis and UTIs to infected implants and Lyme disease co-infections. Biofilms are the reason some infections resist months of antibiotic treatment. LL-37 is one of very few compounds that can physically penetrate these biofilms while simultaneously killing the bacteria inside and recruiting immune cells to finish the job. For anyone dealing with chronic, antibiotic-resistant, or biofilm-associated infections, <strong>LL-37 addresses the problem at a level that conventional antibiotics simply cannot reach.</strong></p>
+</div>
+
+<h3>Research Evidence</h3>
+
+<table class="tbl">
+<thead><tr><th>Application</th><th>Evidence</th><th>Key Findings</th></tr></thead>
+<tbody>
+<tr><td><strong>Broad-spectrum antimicrobial</strong></td><td class="g">Extensive in vitro + in vivo</td><td>Effective against MRSA, <em>P. aeruginosa</em>, <em>E. coli</em>, <em>K. pneumoniae</em>, <em>A. baumannii</em>, <em>S. aureus</em>, and many others; rapid killing (>3-log reduction in 5 minutes against <em>S. aureus</em> biofilms)</td></tr>
+<tr><td><strong>Biofilm disruption</strong></td><td class="g">Extensive in vitro</td><td>Prevents biofilm formation and disrupts established biofilms; effective at sub-MIC concentrations; synergistic with beta-lactam antibiotics</td></tr>
+<tr><td><strong>Wound healing</strong></td><td class="g">In vitro + animal models</td><td>Promotes keratinocyte migration, angiogenesis, and re-epithelialization; murine wound models show faster closure with reduced infection</td></tr>
+<tr><td><strong>Antiviral activity</strong></td><td class="y">In vitro + mechanistic</td><td>Active against enveloped viruses including influenza, HIV, and HSV through membrane disruption; immune modulation may contribute to antiviral defense</td></tr>
+<tr><td><strong>Gut health</strong></td><td class="y">Mechanistic + emerging</td><td>Naturally expressed in GI epithelium; supports gut barrier integrity, regulates microbiome balance, reduces gut-derived inflammation</td></tr>
+<tr><td><strong>Synergy with antibiotics</strong></td><td class="g">In vitro</td><td>Synergistic with beta-lactams (nafcillin, meropenem), glycopeptides, and other membrane-active agents; may restore efficacy of antibiotics against resistant strains</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Important Context</div>
+  <p>LL-37's evidence base is robust in preclinical research (in vitro and animal studies), but human clinical trial data for supplemental LL-37 is still developing. The peptide faces challenges for pharmaceutical development including cost, proteolytic degradation in vivo, and some cytotoxicity at higher concentrations. Researchers are actively developing LL-37 derivatives and delivery systems to optimize its therapeutic potential. For current users, starting at lower doses and working with a knowledgeable practitioner is advisable.</p>
+</div>
+
+<h3>Who Benefits Most from LL-37</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Strong Candidates</h4>
+    <p>Those with chronic or recurrent infections (sinusitis, UTIs, skin infections). Biofilm-associated conditions (Lyme disease, chronic prostatitis, implant infections). Wound healing challenges (diabetic ulcers, post-surgical). Mold exposure and biotoxin illness. Anyone seeking broad-spectrum antimicrobial support during illness. Gut dysbiosis with pathogenic overgrowth.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Dosing Protocols</h4>
+    <p><strong>Systemic (SC):</strong> 100-500 mcg daily; start low and titrate. <strong>Intranasal:</strong> Commonly used for sinus infections and upper respiratory support. <strong>Topical:</strong> Compounded formulations for wound care and skin infections. <strong>Cycle:</strong> Often used in 4-8 week courses targeting specific infections, or pulsed protocols (5 days on, 2 off). Best combined with comprehensive antimicrobial strategies when treating chronic infections.</p>
+  </div>
+</div>
+
+<!-- ========== SELANK ========== -->
+<hr class="sep">
+<h2>Selank: The Neuro-Immune Bridge</h2>
+
+<div class="cd cp">
+  <div class="tg">Peptide Profile</div>
+  <h3>Selank (Thr-Lys-Pro-Arg-Pro-Gly-Pro)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Structure:</strong> Synthetic 7-amino-acid peptide (heptapeptide) &nbsp;|&nbsp; <strong>Origin:</strong> Synthetic analog of tuftsin, a naturally occurring immunomodulatory tetrapeptide found in the Fc region of immunoglobulin G &nbsp;|&nbsp; <strong>Developer:</strong> Institute of Molecular Genetics, Russian Academy of Sciences &nbsp;|&nbsp; <strong>Regulatory status:</strong> Approved in Russia and Ukraine for generalized anxiety disorder; not FDA-approved in the US &nbsp;|&nbsp; <strong>Route:</strong> Intranasal spray (preferred — rapid CNS access), subcutaneous injection &nbsp;|&nbsp; <strong>Available form:</strong> N-Acetyl Selank Amidate (enhanced stability version)</p>
+</div>
+
+<h3>Why Selank Belongs in an Immune Article</h3>
+
+<p>At first glance, Selank seems like it belongs in a nootropics or anxiety guide, not an immune health article. But Selank's story starts with the immune system, not the brain. It's derived from <strong>tuftsin</strong> — a tetrapeptide fragment of immunoglobulin G (your main antibody) that was first identified as an immune modulator. Tuftsin stimulates phagocytosis (immune cells eating pathogens), enhances NK cell activity, and modulates cytokine production. When Russian researchers modified tuftsin to create Selank, they designed it to be both an immune modulator <em>and</em> a neuropeptide — because they understood something Western medicine is only now catching up to: <strong>the immune system and the nervous system are deeply interconnected.</strong></p>
+
+<p>Chronic stress is one of the most potent immune suppressants known. When your HPA axis is in overdrive — pumping cortisol, dysregulating sleep, driving systemic inflammation — your immune system pays the price. Reduced NK cell activity, impaired T-cell function, elevated inflammatory cytokines (especially IL-6), and weakened mucosal immunity are all well-documented consequences of chronic stress. Selank addresses immune health at this critical intersection by <strong>simultaneously calming the stress response and directly modulating immune function</strong>.</p>
+
+<h3>Dual Mechanism: Brain + Immune</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--plum);">Neurological Effects</h4>
+    <p>Selank modulates GABA-A receptors (anxiolytic effect comparable to benzodiazepines, without sedation or dependence). Increases serotonin and dopamine in the hippocampus and frontal cortex. Elevates BDNF (brain-derived neurotrophic factor), supporting neuroplasticity and memory. Normalizes the HPA axis stress response. Clinical trials in GAD patients showed efficacy comparable to diazepam without cognitive impairment.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Immunological Effects</h4>
+    <p>Suppresses IL-6 gene expression in patients with depression (clinical study, 14 days). Modulates Th1/Th2 cytokine balance in patients with generalized anxiety disorder. Reduces pro-inflammatory cytokines (IL-1&#946;, IL-6, TGF-&#946;1) while restoring anti-inflammatory IL-4 in stressed animal models. Demonstrates antiviral properties (studied against influenza replication). Inherits tuftsin's phagocytosis-enhancing and NK cell-activating effects.</p>
+  </div>
+</div>
+
+<div class="d-p">
+  <div class="s">The Stress-Immunity Connection</div>
+  <p>Here's why Selank is genuinely exciting for immune health: it addresses the most common <em>cause</em> of immune dysfunction in modern life — chronic stress. You can take all the T&#945;1 and LL-37 you want, but if your cortisol is chronically elevated, your sleep is fragmented, and your nervous system is in constant fight-or-flight mode, your immune system will remain compromised. Selank doesn't just treat anxiety as a standalone symptom — <strong>it directly reverses the immune-suppressive effects of the stress state.</strong> The clinical finding that Selank suppressed IL-6 in depressed patients while leaving healthy controls unaffected demonstrates exactly the kind of intelligent, context-dependent immune modulation that makes this peptide special.</p>
+</div>
+
+<h3>Clinical Evidence</h3>
+
+<table class="tbl">
+<thead><tr><th>Indication</th><th>Evidence Level</th><th>Key Findings</th></tr></thead>
+<tbody>
+<tr><td><strong>Generalized anxiety disorder</strong></td><td class="g">Clinical trials (approved in Russia)</td><td>Anxiolytic effect comparable to benzodiazepines; 30-patient trial vs. diazepam showed equivalent efficacy without sedation or dependence; 60-patient study confirmed pronounced anxiolytic and mild nootropic effects</td></tr>
+<tr><td><strong>Immune modulation in mood disorders</strong></td><td class="g">Clinical study (human)</td><td>14 days of Selank suppressed IL-6 gene expression in depressed patients while leaving healthy controls unaffected; Th1/Th2 cytokine balance modulated in GAD patients</td></tr>
+<tr><td><strong>Stress-related immune suppression</strong></td><td class="y">Animal studies</td><td>Reduced IL-1&#946;, IL-6, TGF-&#946;1 in stressed animals; restored IL-4 levels; demonstrated stress-protective activity on immune parameters</td></tr>
+<tr><td><strong>Cognitive enhancement</strong></td><td class="y">Animal + limited human</td><td>Enhanced memory consolidation via serotonin increase; compensated for hypoxia-induced cognitive deficits; BDNF upregulation in hippocampus</td></tr>
+<tr><td><strong>Antiviral activity</strong></td><td class="y">Preclinical</td><td>Studied effects on influenza replication; antiviral properties proposed through immune modulation and potential direct antiviral mechanisms</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">A Note on the Evidence Base</div>
+  <p>Most Selank research originates from Russian institutions, and much of it is published in Russian-language journals. While the clinical trials supporting its approval in Russia include double-blind, placebo-controlled designs, the limited international validation is worth acknowledging. The mechanisms are well-characterized and the safety profile is excellent, but Western replication studies would strengthen the evidence further. For practical purposes, the abundant user experience and the strong mechanistic rationale from its tuftsin parentage provide good confidence in its effects.</p>
+</div>
+
+<h3>Who Benefits Most from Selank</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--plum);">Strong Candidates</h4>
+    <p>High-stress individuals with frequent illness. Anyone experiencing anxiety-driven immune suppression. People seeking a non-addictive alternative to benzodiazepines. Those with chronic fatigue and immune dysfunction. Stress-related gut issues (the gut-brain-immune axis). Students, executives, or athletes under cognitive and physical stress who get sick easily.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Dosing Protocols</h4>
+    <p><strong>Intranasal (preferred):</strong> 200-600 mcg daily, divided into 2-3 administrations (typically 1-2 sprays per nostril, 2-3x daily). <strong>Subcutaneous:</strong> 250-500 mcg daily. <strong>Duration:</strong> Commonly used in 2-4 week courses; can be cycled or used continuously at maintenance doses. <strong>N-Acetyl Selank Amidate:</strong> Enhanced stability form often preferred for its longer shelf life and potentially improved bioavailability.</p>
+  </div>
+</div>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Stacking Strategies: Using These Peptides Together</h2>
+
+<p>Because Thymosin Alpha-1, LL-37, and Selank work through completely different mechanisms and receptor systems, they can be combined strategically for comprehensive immune support. Here are practical stacking approaches based on specific goals:</p>
+
+<table class="tbl">
+<thead><tr><th>Goal</th><th>Stack</th><th>Rationale</th></tr></thead>
+<tbody>
+<tr><td><strong>General immune optimization (aging adults)</strong></td><td class="g">T&#945;1 + Selank</td><td>T&#945;1 addresses thymic decline and T-cell competence; Selank manages the stress-immune axis and cytokine balance. Together they cover adaptive immunity and neuro-immune regulation.</td></tr>
+<tr><td><strong>Active/chronic infection</strong></td><td class="g">T&#945;1 + LL-37</td><td>LL-37 provides direct pathogen killing and biofilm disruption; T&#945;1 mobilizes the adaptive immune response for targeted elimination. Complementary innate + adaptive coverage.</td></tr>
+<tr><td><strong>Biofilm / Lyme / mold illness</strong></td><td class="g">LL-37 + T&#945;1 (+ Selank optional)</td><td>LL-37 penetrates biofilms; T&#945;1 enhances the T-cell response against intracellular pathogens; Selank addresses the stress and fatigue component that often accompanies chronic illness.</td></tr>
+<tr><td><strong>Stress-driven immune suppression</strong></td><td class="g">Selank + T&#945;1</td><td>Selank calms the HPA axis and reduces inflammatory cytokines (IL-6); T&#945;1 directly restores the T-cell competence that chronic stress depletes. Addresses cause and effect simultaneously.</td></tr>
+<tr><td><strong>Pre-travel / seasonal illness prevention</strong></td><td class="g">T&#945;1 (primary) &#177; Selank</td><td>T&#945;1 primes adaptive immunity and enhances vaccine responses; Selank manages travel stress. Start 1-2 weeks before travel or flu season.</td></tr>
+<tr><td><strong>Post-illness recovery</strong></td><td class="g">T&#945;1 + Selank</td><td>T&#945;1 accelerates immune reconstitution; Selank supports the mood, energy, and cognitive recovery that often lags after illness; both reduce lingering inflammatory markers.</td></tr>
+<tr><td><strong>Comprehensive immune support</strong></td><td class="g">All three</td><td>For individuals with significant immune compromise, chronic complex illness, or aggressive health optimization goals. Cover innate defense (LL-37), adaptive immunity (T&#945;1), and neuro-immune regulation (Selank) simultaneously.</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Practical Stacking Note</div>
+  <p>If you're new to immune peptides, don't start all three simultaneously. Introduce one at a time — ideally starting with T&#945;1 as the foundation (it has the broadest evidence base and best-characterized safety profile), then adding LL-37 or Selank based on your specific needs after 2-4 weeks. This allows you to assess your response to each compound individually and identify any sensitivities before combining them.</p>
+</div>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety Comparison</h2>
+
+<table class="tbl">
+<thead><tr><th>Safety Aspect</th><th>Thymosin Alpha-1</th><th>LL-37</th><th>Selank</th></tr></thead>
+<tbody>
+<tr><td><strong>Common side effects</strong></td><td class="g">Mild injection site reactions; occasional erythema; generally indistinguishable from placebo</td><td class="y">Injection site irritation; possible transient redness; sinus irritation (intranasal)</td><td class="g">Rare — mild nasal irritation (intranasal); occasionally mild headache; comparable to placebo in trials</td></tr>
+<tr><td><strong>Serious adverse events</strong></td><td class="g">None reported across thousands of patients in clinical trials and decades of use</td><td class="y">Cytotoxicity at high concentrations in vitro; no systemic adverse events reported at research doses</td><td class="g">None reported; no sedation, no dependence, no withdrawal, no cognitive impairment</td></tr>
+<tr><td><strong>Drug interactions</strong></td><td class="g">No significant interactions documented; used safely in combination with interferon, chemotherapy, and antivirals</td><td class="y">May synergize with beta-lactam antibiotics; theoretical interaction with other membrane-active agents</td><td class="y">Caution with benzodiazepines (additive GABAergic effects); theoretical caution with SSRIs (serotonin modulation)</td></tr>
+<tr><td><strong>Contraindications</strong></td><td class="y">Active immunosuppression protocols (organ transplant); theoretical caution with autoimmune disease (may upregulate)</td><td class="y">Active autoimmune skin conditions (psoriasis — LL-37 may be elevated endogenously); known hypersensitivity</td><td class="y">Pregnancy/breastfeeding (insufficient data); severe psychiatric conditions without supervision</td></tr>
+<tr><td><strong>Long-term safety data</strong></td><td class="g">Decades of clinical use in 35+ countries; extensive long-term safety documentation</td><td class="y">Limited human supplementation data; naturally present in the body</td><td class="y">Limited to Russian clinical experience (years of use); no long-term Western studies</td></tr>
+<tr><td><strong>Immune overstimulation risk</strong></td><td class="g">Low — modulates rather than stimulates; does not overproduce cytokines</td><td class="y">Low at appropriate doses; immune activation is self-limiting</td><td class="g">Low — regulates cytokines toward balance; suppresses IL-6 when elevated, leaves it unchanged when normal</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">Overall Safety Assessment</div>
+  <p>All three peptides have favorable safety profiles, which is especially important for immune-modulating compounds (where you want enhancement without dangerous overstimulation). T&#945;1 has the strongest safety documentation — decades of global clinical use with an adverse event rate essentially indistinguishable from placebo. Selank has the best neurological safety profile — benzodiazepine-like efficacy with zero addictive potential or cognitive impairment. LL-37 has the most robust mechanistic safety data — it's your body's own molecule, and the main consideration is appropriate dosing to stay below cytotoxicity thresholds.</p>
+</div>
+
+<!-- ========== BEYOND IMMUNE ========== -->
+<hr class="sep">
+<h2>Beyond Immune Health: Additional Benefits</h2>
+
+<p>Each of these peptides offers benefits beyond pure immune function — which is part of what makes them so compelling for broad health optimization:</p>
+
+<table class="tbl">
+<thead><tr><th>Benefit Area</th><th>T&#945;1</th><th>LL-37</th><th>Selank</th></tr></thead>
+<tbody>
+<tr><td><strong>Anti-aging</strong></td><td class="g">Addresses immunosenescence; senolytic/senomodulator effects; restores youthful immune surveillance</td><td class="y">Promotes tissue repair and regeneration; wound healing</td><td class="y">BDNF upregulation supports brain aging; neuroprotection</td></tr>
+<tr><td><strong>Cognitive function</strong></td><td>Not a primary effect</td><td>Not a primary effect</td><td class="g">Nootropic effects; enhanced memory, focus, and learning; comparable to racetams</td></tr>
+<tr><td><strong>Mood / anxiety</strong></td><td>Not a primary effect</td><td>Not a primary effect</td><td class="g">Primary effect — clinical anxiolytic; GABA, serotonin, and dopamine modulation</td></tr>
+<tr><td><strong>Gut health</strong></td><td class="y">Indirect via immune modulation</td><td class="g">Expressed naturally in GI tract; supports barrier integrity; antimicrobial against gut pathogens</td><td class="y">Gut-brain axis support via stress reduction and cytokine modulation</td></tr>
+<tr><td><strong>Wound healing</strong></td><td>Not a primary effect</td><td class="g">Promotes angiogenesis, keratinocyte migration, re-epithelialization</td><td>Not a primary effect</td></tr>
+<tr><td><strong>Cancer support</strong></td><td class="g">Clinical adjunct — reduces chemo-induced lymphopenia; improves survival in NSCLC and liver cancer; may enhance checkpoint inhibitors</td><td class="y">Anticancer peptide derivatives under investigation</td><td>Not established</td></tr>
+</tbody>
+</table>
+
+<!-- ========== PRACTICAL GUIDE ========== -->
+<hr class="sep">
+<h2>Practical Guide: Getting Started</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Step 1: Baseline Assessment</h4>
+    <p>Before starting any immune peptide, get baseline bloodwork including a complete blood count with differential (CBC w/diff), comprehensive metabolic panel, inflammatory markers (CRP, ESR), and ideally a lymphocyte subset panel (CD4, CD8, NK cells). This gives you a reference point to measure immune changes and helps identify which peptide(s) address your specific needs.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 2: Choose Your Entry Point</h4>
+    <p><strong>General immune support / aging:</strong> Start with T&#945;1 — it has the broadest evidence and best safety data. <strong>Chronic/biofilm infections:</strong> Start with LL-37 — its antimicrobial and anti-biofilm action is the most direct intervention. <strong>Stress-related immune issues:</strong> Start with Selank — address the root cause (stress) before layering targeted immune peptides.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 3: Monitor and Adjust</h4>
+    <p>Reassess bloodwork at 6-8 weeks. Look for improvements in lymphocyte counts, CD4/CD8 ratios, inflammatory markers, and NK cell activity. Subjectively, track infection frequency, energy levels, recovery time, and general wellbeing. Add a second peptide after 2-4 weeks if your response is positive and your goals warrant it.</p>
+  </div>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Sourcing and Quality</div>
+  <h3>Quality Matters Even More for Immune Peptides</h3>
+  <p style="font-size:14px;margin-bottom:0;">Immune-modulating peptides are compounds you're specifically taking to influence your immune system — which means purity and accurate dosing are non-negotiable. <strong>Thymosin Alpha-1:</strong> Pharmaceutical-grade thymalfasin (Zadaxin) is the gold standard where available. Research-grade sources should provide COAs showing 98%+ purity and accurate amino acid content. <strong>LL-37:</strong> Purity is critical since the peptide's antimicrobial activity is sequence-dependent — even small contamination can alter its fold and function. <strong>Selank:</strong> The N-Acetyl Selank Amidate form offers improved stability and is generally preferred. Regardless of peptide, source from vendors who provide third-party testing with every batch.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can immune peptides be used during active illness (cold, flu)?</summary>
+    <div class="fa">Yes — and this is one of the most common use cases. T&#945;1 can be dosed daily (1.6 mg SC) during acute illness to accelerate immune response and recovery. LL-37 provides direct antimicrobial support. Selank helps manage the stress-immune impact of being sick and supports cognitive function during illness. Many practitioners recommend having T&#945;1 on hand for use at the first sign of illness, similar to how people stock vitamin C or zinc.</div>
+  </details>
+  <details>
+    <summary>Will these peptides cause immune overactivation or autoimmune flare-ups?</summary>
+    <div class="fa">This is the most important safety question, and the answer is nuanced. T&#945;1 is fundamentally an immune <em>modulator</em>, not a simple stimulant — it enhances immune function when suppressed and promotes regulatory T-cells that prevent overactivation. Its clinical safety record includes use in immunocompromised patients without autoimmune flares. However, for individuals with active autoimmune conditions, it's wise to work with a physician who can monitor immune markers. LL-37 is naturally produced by your body and works primarily on innate immunity and antimicrobial defense — it's unlikely to trigger autoimmune responses. Selank actually reduces inflammatory markers (IL-6), which could theoretically be beneficial in autoimmune-adjacent conditions.</div>
+  </details>
+  <details>
+    <summary>Can I use immune peptides alongside vaccines?</summary>
+    <div class="fa">T&#945;1 has been specifically studied as a vaccine adjuvant and shown to enhance antibody responses and seroconversion rates, particularly in elderly and immunocompromised populations. This is one of its most well-documented applications. The standard approach is to administer T&#945;1 around the time of vaccination. There's no established data on LL-37 or Selank as vaccine adjuvants specifically, but their mechanisms wouldn't be expected to interfere with vaccination.</div>
+  </details>
+  <details>
+    <summary>How do these compare to traditional immune supplements (vitamin C, zinc, elderberry)?</summary>
+    <div class="fa">They operate at completely different levels of the immune system. Vitamin C, zinc, and elderberry support general immune function through micronutrient optimization and antioxidant effects. Immune peptides directly modulate specific immune cell populations, signaling pathways, and antimicrobial defense mechanisms. Think of traditional supplements as maintaining the basics (nutrition for immune cells) while immune peptides are more like specialized directives (T&#945;1 tells your T-cells to mature, LL-37 kills pathogens directly, Selank resets stress-mediated immune suppression). They're complementary, not competitive — most users continue their foundational supplement stack alongside immune peptides.</div>
+  </details>
+  <details>
+    <summary>Are there any blood tests that can show if immune peptides are working?</summary>
+    <div class="fa">Yes, and tracking bloodwork is highly recommended. Key markers to monitor include: <strong>Lymphocyte subset panel</strong> (CD4+, CD8+, CD4/CD8 ratio, NK cell counts) — T&#945;1 should improve these. <strong>Inflammatory markers</strong> (CRP, IL-6, ESR) — Selank should reduce these. <strong>Complete blood count with differential</strong> — overall immune cell trends. <strong>Immunoglobulin levels</strong> (IgG, IgA, IgM) — may improve with T&#945;1. <strong>Infection markers</strong> specific to your condition (viral load, cultures, etc.). Baseline + 6-8 week follow-up gives the clearest picture.</div>
+  </details>
+  <details>
+    <summary>What's the difference between Selank and Semax?</summary>
+    <div class="fa">Both are Russian-developed peptides from the same research institute, but they work through different mechanisms and have different primary effects. Selank is derived from tuftsin (immune peptide) and primarily modulates GABA, providing anxiolytic + immune modulation effects. Semax is derived from ACTH (adrenocorticotropic hormone) and primarily modulates BDNF and NGF, providing cognitive enhancement + neuroprotection. Selank is better for anxiety, stress-immune issues, and mood. Semax is better for focus, memory, and neuroprotection. Some users combine both — they work through different pathways and don't compete.</div>
+  </details>
+  <details>
+    <summary>Can children or elderly use immune peptides?</summary>
+    <div class="fa">T&#945;1 has been studied in both pediatric (DiGeorge syndrome) and elderly populations with good safety profiles. It has FDA orphan drug designation specifically for pediatric use in DiGeorge syndrome. For elderly adults, T&#945;1's ability to counter immunosenescence makes it particularly relevant — this is arguably the demographic that benefits most. LL-37 and Selank have less pediatric data, and use in children should only be under direct physician supervision. For elderly adults, all three peptides are generally well-tolerated, though starting at lower doses and monitoring closely is standard practice.</div>
+  </details>
+  <details>
+    <summary>How long does it take to notice immune improvements?</summary>
+    <div class="fa">T&#945;1 may show measurable changes in immune markers (T-cell subsets, cytokine profiles) within 2-4 weeks, though clinical outcomes in hepatitis trials were assessed at 6-12 months. Selank's anxiolytic effects can be noticed within hours to days; its immune-modulatory effects on IL-6 were documented within 14 days. LL-37's antimicrobial effects are rapid (hours to days for acute infection support), while chronic biofilm-related improvements may take weeks. For general immune optimization, plan for at least 4-8 weeks of consistent use before evaluating results.</div>
+  </details>
+</div>
+
+<!-- ========== KEY TAKEAWAYS ========== -->
+<hr class="sep">
+<h2>Key Takeaways</h2>
+
+<div class="d-t">
+  <div class="s">Bottom Line</div>
+  <p>Your immune system isn't a single switch to flip — it's a layered, interconnected defense network that benefits from targeted support at multiple levels. <strong>Thymosin Alpha-1</strong> is the most clinically validated immune peptide available, with approval in 35+ countries and evidence spanning hepatitis, cancer, sepsis, and immunosenescence. <strong>LL-37</strong> is your body's own broad-spectrum antimicrobial with unique biofilm-disrupting capability that conventional antibiotics can't match. <strong>Selank</strong> addresses the most underappreciated cause of immune dysfunction — chronic stress — while simultaneously modulating cytokines and enhancing cognitive function. Together, they represent the most comprehensive peptide-based approach to immune health available today.</p>
+</div>
+
+<p>The beauty of this three-peptide framework is that each compound does something the others can't. T&#945;1 can't kill bacteria directly — LL-37 can. LL-37 can't restore T-cell maturation — T&#945;1 can. Neither can calm a chronically stressed nervous system that's suppressing the immune system from above — Selank can. Whether you use one, two, or all three depends on your specific immune challenges, but understanding what each brings to the table puts you in a position to make genuinely informed decisions about immune optimization.</p>
+
+<p>As always, immune peptides work best as part of a comprehensive health foundation: quality sleep (when most immune repair occurs), regular exercise (moderate intensity supports immune function), adequate nutrition (protein for immune cell production, micronutrients for enzyme function), stress management (where Selank directly contributes), and addressing any underlying infections or inflammatory conditions. The peptides amplify the benefit of these fundamentals — they don't replace them.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice. Thymosin Alpha-1 (thymalfasin/Zadaxin) is approved in 35+ countries with FDA orphan drug designation, but is not broadly FDA-approved for general immune use in the US. LL-37 is not FDA-approved and is available for research purposes. Selank is approved in Russia but not in the US or EU. None of these peptides should be used as a substitute for conventional medical treatment of infections, cancer, or immune disorders. Consult a qualified healthcare provider before beginning any peptide therapy. Individual results vary, and quality control in unregulated peptide markets poses risks regardless of compound.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+<strong>Thymosin Alpha-1</strong><br>
+Dominari A, Hathaway III D, Pandav K, et al. Thymosin alpha 1: A comprehensive review of the literature. <em>World J Virol.</em> 2020;9(5):67-78. PMID: 33362999.<br>
+King R, Tuthill C. Immune modulation with thymosin alpha 1 treatment. <em>Vitam Horm.</em> 2016;102:151-178. PMID: 27450734.<br>
+Tao N, Xu X, Ying Y, et al. Thymosin alpha 1 and its role in viral infectious diseases: the mechanism and clinical application. <em>Molecules.</em> 2023;28(8):3539.<br>
+Li C, Bo L, Liu Q, Jin F. Thymosin alpha1 based immunomodulatory therapy for sepsis: a systematic review and meta-analysis. <em>Int J Infect Dis.</em> 2015;33:90-96.<br>
+Tian Y, Yao J, Ma Y, et al. Thymosin alpha 1 alleviates inflammation and prevents infection in patients with severe acute pancreatitis. <em>Front Immunol.</em> 2025;16:1571456.<br>
+Tuthill CW, King RS. Thymosin alpha 1 — a peptide immune modulator with a broad range of clinical applications. <em>J Clin Exp Pharmacol.</em> 2013;3:1-17.<br>
+<br>
+<strong>LL-37</strong><br>
+Memariani M, Memariani H. Antibiofilm properties of cathelicidin LL-37: an in-depth review. <em>World J Microbiol Biotechnol.</em> 2023;39:34. PMID: 36781570.<br>
+Dean SN, Bishop BM, van Hoek ML. Natural and synthetic cathelicidin peptides with anti-microbial and anti-biofilm activity against <em>Staphylococcus aureus.</em> <em>BMC Microbiol.</em> 2011;11:114.<br>
+Dürr UH, Sudheendra US, Ramamoorthy A. LL-37, the only human member of the cathelicidin family of antimicrobial peptides. <em>Biochim Biophys Acta.</em> 2006;1758(9):1408-1425.<br>
+Vandamme D, Landuyt B, Luyten W, Schoofs L. A comprehensive summary of LL-37, the factotum human cathelicidin peptide. <em>Cell Immunol.</em> 2012;280(1):22-35.<br>
+Sancho-Vaello E, François P, Bonber EJ, et al. The structure of the antimicrobial human cathelicidin LL-37 shows oligomerization and channel formation. <em>Sci Rep.</em> 2020;10:17356.<br>
+<br>
+<strong>Selank</strong><br>
+Seredenin SB, Kozlovskaya MM, et al. The anxiolytic action of an analog of the endogenous peptide tuftsin on inbred mice. <em>Zh Vyssh Nerv Deiat.</em> 1998;48:153-160.<br>
+Kolomin T, Shadrina M, Slominsky P, et al. Changes in expression of the genes for chemokines, cytokines and their receptors in response to selank and its fragments. <em>Russ J Genet.</em> 2011;47(9):1025-1029.<br>
+Uchakina ON, Uchakin PN, Miasoedov NF, et al. Immunomodulatory effects of selank in patients with anxiety-depressive disorder. <em>Bull Exp Biol Med.</em> 2008;145(4):495-498.<br>
+Semenova TP, Kozlovskaya MM, et al. Use of Selank to correct measures of integrative brain activity and biogenic amine levels in adult rats. <em>Neurosci Behav Physiol.</em> 2008;38:203-207.<br>
+Zolotarev YA, Dadayan AK, Dolotov OV, et al. GABA, Selank, and olanzapine affect the expression of genes involved in GABAergic neurotransmission in IMR-32 cells. <em>Front Pharmacol.</em> 2017;8:89.
+</p>
+
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>•</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>⚠️ Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">🔬 Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Popular Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides →</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
