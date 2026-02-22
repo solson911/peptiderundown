@@ -55,6 +55,16 @@ for f in "${files[@]}"; do
 
   date=$(date +%F)
 
+  # If replacing an existing article, prefer keeping its existing hero image.
+  # This avoids generating a new image on updates when a good one already exists.
+  existing_image=""
+  if [ -f "$ARTICLES/$slug.astro" ]; then
+    existing_image=$(perl -0777 -ne 'if(/image:\s*\"([^\"]+)\"/){print $1; exit}' "$ARTICLES/$slug.astro" || true)
+  elif [ -f "$ARTICLES/$slug.md" ]; then
+    existing_image=$(perl -ne 'if(/^image:\s*(.+)\s*$/){print $1; exit}' "$ARTICLES/$slug.md" || true)
+  fi
+  image_path="${existing_image:-/images/articles/${slug}.webp}"
+
   if [ "$is_svg" = true ]; then
     out="$ARTICLES/$slug.astro"
 
@@ -79,7 +89,7 @@ import Base from '../../layouts/Base.astro';
 export const frontmatter = {
   title: "${title}",
   description: "A detailed comparison of peptides, SARMs, and anabolic steroids—mechanisms, risks, legality, and practical differences.",
-  image: "/images/articles/${slug}.webp",
+  image: "${image_path}",
   date: "${date}",
   category: "Education",
   author: "PeptideRundown Team"
@@ -180,7 +190,7 @@ EOF_B
 layout: ../../layouts/Article.astro
 title: "${title}"
 description: "A practical guide explaining ${title}."
-image: /images/articles/${slug}.webp
+image: ${image_path}
 date: "${date}"
 category: "Peptide Guides"
 tags: ["peptides"]
@@ -193,18 +203,22 @@ EOF_D
     rm -f "$ARTICLES/$slug.astro" || true
   fi
 
-  if [ ! -f "$IMGDIR/${slug}.webp" ]; then
+  img_file="$SITE/public${image_path}"
+  if [ ! -f "$img_file" ]; then
     echo "[inbox-processor] generating image for $slug"
     python3 "$ROOT/gen-image.py" \
       --slug "$slug" \
       --prompt "High-quality editorial hero image for a medical education article. Abstract scientific molecules on clean clinical gradient background. Modern semi-realistic 3D. No people. No logos. No text, no labels, no words." \
       || echo "[inbox-processor] WARNING: image generation failed for $slug"
+  else
+    echo "[inbox-processor] reusing existing image: ${image_path}"
   fi
 
   echo "[inbox-processor] build"
   npm run build --silent
 
-  git add "$ARTICLES/$slug."* "$IMGDIR/${slug}."* 2>/dev/null || true
+  # Stage both additions AND deletions (important when replacing .md with .astro or vice-versa)
+  git add -A "$ARTICLES/$slug."* "$IMGDIR/${slug}."* 2>/dev/null || true
   if git diff --cached --quiet; then
     echo "[inbox-processor] no changes staged; skipping commit"
   else
