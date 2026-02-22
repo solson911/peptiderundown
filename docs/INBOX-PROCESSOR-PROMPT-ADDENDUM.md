@@ -11,10 +11,16 @@ Do not commit changes only in `/home/claw/.openclaw/workspace` or `/home/claw/.o
 
 ## Automation
 
-Cron runs:
+Cron runs (currently every 10 minutes):
 
 - `inbox-selfheal.sh` (requeues stuck items)
 - `site/scripts/inbox-processor.sh` (real processor: pending HTML -> article+image -> commit/push -> verify -> delete inbox item)
+
+Guardrail:
+- Processor fails fast if both `{slug}.md` and `{slug}.astro` exist (route collision). Moves item to `inbox/failed/` with an `*.error.txt` explaining what to fix.
+
+Full documentation:
+- `site/docs/AUTO-DEPLOY.md`
 
 Logs:
 - `/tmp/openclaw/inbox-processor.log`

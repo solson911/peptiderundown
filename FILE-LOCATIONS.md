@@ -26,6 +26,13 @@ Automation that must persist should be committed into the `site/` repo (for exam
 
 **This is the ONLY place articles exist. Period.**
 
+### ✅ Allowed file types
+- `*.md` (standard articles using `layout: ../../layouts/Article.astro`)
+- `*.astro` ("rich" articles generated from HTML/SVG templates)
+
+### 🚫 Forbidden
+- Having BOTH `{slug}.md` and `{slug}.astro` for the same slug (route collision).
+
 ### ❌ **DO NOT EDIT (ELIMINATED):**
 ```
 /home/claw/.openclaw/workspace/projects/peptide-site/site/src/content/articles/  ❌ GONE
@@ -68,6 +75,8 @@ peptide-site/
 ```bash
 # Edit this file:
 /home/claw/.openclaw/workspace/projects/peptide-site/site/src/pages/articles/{article-slug}.md
+# or (for rich "HTML-in-Astro" articles):
+/home/claw/.openclaw/workspace/projects/peptide-site/site/src/pages/articles/{article-slug}.astro
 
 # Deploy:
 cd /home/claw/.openclaw/workspace/projects/peptide-site/site

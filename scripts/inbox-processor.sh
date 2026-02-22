@@ -43,6 +43,15 @@ for f in "${files[@]}"; do
   mv "$PENDING/$base" "$PROCESSING/$base"
   html_path="$PROCESSING/$base"
 
+  # Guardrail: never allow route-collisions where both .md and .astro exist for the same slug.
+  # If this happens, fail fast so we don't "deploy" but keep serving old content.
+  if [ -f "$ARTICLES/$slug.md" ] && [ -f "$ARTICLES/$slug.astro" ]; then
+    echo "[inbox-processor] ERROR: route collision for slug=$slug (both .md and .astro exist). Moving to failed."
+    mv "$html_path" "$FAILED/$base"
+    echo "Route collision: both $ARTICLES/$slug.md and $ARTICLES/$slug.astro exist. Remove one, then requeue." > "$FAILED/${slug}.error.txt"
+    continue
+  fi
+
   svg_count=$(grep -c '<svg' "$html_path" || true)
   is_svg=false
   if [ "$svg_count" -gt 0 ]; then is_svg=true; fi
