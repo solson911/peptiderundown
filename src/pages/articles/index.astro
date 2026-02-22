@@ -5,7 +5,22 @@ import PageSidebar from '../../components/PageSidebar.astro';
 const mdPosts = await Astro.glob('./*.md');
 const astroPosts = (await Astro.glob('./*.astro')).filter(p => p.frontmatter && p.url !== '/articles/');
 const allPosts = [...mdPosts, ...astroPosts];
-const posts = allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+
+// Dedupe by URL (prevents double listings if two files resolve to the same route)
+const dedupedByUrl = Object.values(allPosts.reduce((acc, p) => {
+  const key = p.url;
+  const prev = acc[key];
+  if (!prev) {
+    acc[key] = p;
+    return acc;
+  }
+  const prevDate = new Date(prev.frontmatter?.date || 0).getTime();
+  const nextDate = new Date(p.frontmatter?.date || 0).getTime();
+  if (nextDate >= prevDate) acc[key] = p;
+  return acc;
+}, /** @type {Record<string, any>} */ ({})));
+
+const posts = dedupedByUrl.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 
 const categories = [...new Set(posts.map(p => p.frontmatter.category).filter(Boolean))].sort();
 ---
