@@ -1,0 +1,691 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "CJC-1295, Ipamorelin & BPC-157: The Performance & Recovery Stack — PeptideRundown",
+  description: "A detailed comparison of peptides, SARMs, and anabolic steroids—mechanisms, risks, legality, and practical differences.",
+  image: "/images/articles/performance-stack-cjc1295-ipamorelin-bpc157.webp",
+  date: "2026-02-22",
+  category: "Education",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+
+
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+/* Hero */
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 Q55 25 40 40 Q25 55 40 70' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='1'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.8vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:580px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+/* Callout boxes */
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+/* Stats row */
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+/* Tables */
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+/* Cards */
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+/* SVG box */
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+/* Grids */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+/* Separator */
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+/* Disclaimer */
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+/* FAQ */
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'&#8722;';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+/* Timeline */
+.tl{position:relative;padding-left:28px;margin:24px 0;}
+.tl::before{content:'';position:absolute;left:8px;top:4px;bottom:4px;width:2px;background:var(--bdr);}
+.tl-i{position:relative;margin-bottom:20px;}
+.tl-i::before{content:'';position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid var(--teal);background:var(--card);}
+.tl-i .tl-t{font-weight:600;color:var(--ink);font-size:14px;}
+.tl-i .tl-d{font-size:13.5px;color:var(--body);margin-top:2px;}
+
+/* Additional styles for this article */
+.cmp-tbl td:first-child{font-weight:600;color:var(--ink);white-space:nowrap;}
+.proto-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:24px 0;}
+@media(max-width:700px){.proto-grid{grid-template-columns:1fr;}}
+.proto-card{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;text-align:center;}
+.proto-card .pc-name{font-family:'Lora',serif;font-size:1.1rem;color:var(--ink);margin-bottom:4px;}
+.proto-card .pc-role{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;}
+.proto-card .pc-dose{font-size:1.3rem;font-weight:700;margin-bottom:2px;}
+.proto-card .pc-freq{font-size:13px;color:var(--body);}
+.syn-arrow{display:flex;align-items:center;justify-content:center;gap:12px;margin:16px 0;flex-wrap:wrap;}
+.syn-arrow .sa-item{background:var(--card);border:1px solid var(--bdr);border-radius:8px;padding:10px 16px;font-size:13px;font-weight:600;color:var(--ink);text-align:center;}
+.syn-arrow .sa-plus{font-size:22px;color:var(--mut);font-weight:300;}
+.syn-arrow .sa-eq{font-size:14px;color:var(--teal);font-weight:700;}`;
+
+const rawHTML = `
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-k">Peptide Stack Guide &middot; Updated February 2026</div>
+  <h1>The Performance & Recovery Stack: CJC-1295, Ipamorelin & BPC-157</h1>
+  <p class="sub">The most widely prescribed peptide combination in anti-aging and performance medicine — combining two complementary growth hormone pathways with the most researched healing peptide available. Here's how the science works, how they synergize, and exactly how to use them.</p>
+  <div class="pills">
+    <span class="pill">Growth Hormone Optimization</span>
+    <span class="pill">Body Composition</span>
+    <span class="pill">Deep Sleep</span>
+    <span class="pill">Recovery &amp; Repair</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="sr">
+  <div class="sb"><div class="v c1">2&ndash;10x</div><div class="l">GH Increase<br>From CJC-1295</div></div>
+  <div class="sb"><div class="v c2">1st</div><div class="l">Selective GHS<br>Ipamorelin</div></div>
+  <div class="sb"><div class="v c3">100+</div><div class="l">Published Studies<br>on BPC-157</div></div>
+  <div class="sb"><div class="v c4">54x</div><div class="l">GH Pulse When<br>GHRH + GHRP Combined</div></div>
+</div>
+
+<p>If there's one peptide combination that has defined modern performance and anti-aging medicine, it's the CJC-1295 + Ipamorelin + BPC-157 stack. This isn't a random assortment of compounds — it's a pharmacologically rational combination where each peptide addresses a different piece of the optimization puzzle: <strong>CJC-1295 provides the sustained growth hormone signal, Ipamorelin amplifies it with clean pulsatile bursts, and BPC-157 puts that elevated growth hormone to work by accelerating tissue repair at the cellular level.</strong></p>
+
+<p>The popularity of this stack in clinical practice didn't happen by accident. Thousands of physicians worldwide prescribe some version of this combination because the components are well-characterized, the synergy mechanism is pharmacologically sound, and the safety profiles of all three compounds are excellent. Growth hormone optimization through GHRH/GHRP peptides represents a fundamentally different — and safer — approach than exogenous HGH, while BPC-157 adds a dimension of healing that HGH alone doesn't provide.</p>
+
+<div class="d-t">
+  <div class="s">Why This Stack Works: The 30-Second Version</div>
+  <p><strong>CJC-1295</strong> (a GHRH analog) tells your pituitary gland to produce growth hormone. <strong>Ipamorelin</strong> (a GHRP/ghrelin mimetic) suppresses the brake on that signal (somatostatin) and amplifies the pulse through a <em>different receptor</em>. Used together, they produce dramatically stronger GH pulses than either alone — a documented synergistic effect. <strong>BPC-157</strong> then leverages that elevated GH environment to orchestrate tissue repair through its own independent healing pathways. Three peptides, three mechanisms, one goal: optimize recovery and performance from the hormonal level down to the cellular level.</p>
+</div>
+
+<!-- THE THREE COMPOUNDS -->
+<hr class="sep">
+<h2>The Three Compounds: How Each One Works</h2>
+
+<p>Understanding <em>why</em> these three peptides belong together requires understanding what each one does individually — because the stack's power comes from hitting growth hormone physiology from three complementary angles simultaneously.</p>
+
+<!-- CJC-1295 SECTION -->
+<div class="cd cb">
+  <div class="tg">GHRH Analog &middot; The Foundation</div>
+  <h3>CJC-1295: Sustained Growth Hormone Release</h3>
+  <p style="font-size:14px;"><strong>What it is:</strong> A 30-amino-acid synthetic analog of growth hormone-releasing hormone (GHRH), with four amino acid substitutions that make it resistant to enzymatic breakdown by DPP-IV. Originally developed by ConjuChem Biotechnologies and studied in Phase II clinical trials.</p>
+  <p style="font-size:14px;"><strong>What it does:</strong> Binds to GHRH receptors on the anterior pituitary gland, signaling somatotroph cells to synthesize and release growth hormone. The amino acid modifications extend its biological activity far beyond natural GHRH (which has a half-life of just minutes).</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Key human data (Teichman et al., 2006 — JCEM):</strong> In randomized, placebo-controlled, double-blind trials in healthy adults, a single subcutaneous injection of CJC-1295 increased mean plasma GH levels by <strong>2- to 10-fold for 6+ days</strong> and IGF-1 levels by <strong>1.5- to 3-fold for 9-11 days</strong>. With repeated dosing, IGF-1 remained elevated above baseline for up to 28 days. No serious adverse reactions were reported. The study concluded that CJC-1295 demonstrated "sustained, dose-dependent increases in GH and IGF-I levels" with "evidence of a cumulative effect after multiple doses."</p>
+</div>
+
+<div class="d">
+  <div class="s">DAC vs. No-DAC: The Critical Distinction</div>
+  <p>CJC-1295 exists in two forms that behave very differently:</p>
+  <p><strong>CJC-1295 with DAC</strong> (Drug Affinity Complex) — A molecular linker allows the peptide to covalently bind to albumin in the bloodstream, extending its half-life to approximately <strong>6-8 days</strong>. This means one injection sustains elevated GH/IGF-1 for nearly a week. Convenient (1-2 injections per week), but produces a more continuous GH elevation rather than natural pulses. The published human clinical trial data comes from this version.</p>
+  <p><strong>CJC-1295 without DAC</strong> (also called Modified GRF 1-29 or Mod GRF) — No albumin binding, so half-life drops to approximately <strong>30 minutes</strong>. This produces a rapid GH pulse that closely mimics the body's natural pulsatile release pattern, then clears quickly. Requires more frequent dosing (1-3x daily) but is considered more physiological. This is the version most commonly paired with Ipamorelin in clinical practice because its short action creates distinct GH spikes — especially when timed around sleep.</p>
+  <p style="margin-bottom:0;"><strong>Which is better?</strong> For this stack, <strong>most practitioners prefer CJC-1295 without DAC (Mod GRF 1-29)</strong> because its pulsatile release pattern synergizes better with Ipamorelin. The body naturally releases GH in pulses (primarily during deep sleep), and mimicking that rhythm preserves receptor sensitivity and avoids the "always-on" stimulation that the DAC version provides. However, both versions work — the DAC version simply trades physiological rhythm for dosing convenience.</p>
+</div>
+
+<!-- IPAMORELIN SECTION -->
+<div class="cd ct">
+  <div class="tg">Growth Hormone Secretagogue &middot; The Amplifier</div>
+  <h3>Ipamorelin: The First Selective GH Secretagogue</h3>
+  <p style="font-size:14px;"><strong>What it is:</strong> A synthetic pentapeptide (Aib-His-D-2-Nal-D-Phe-Lys-NH2) that acts as a selective agonist of the ghrelin receptor (GHS-R1a). Developed by Novo Nordisk in the late 1990s. Studied in Phase II clinical trials for postoperative ileus.</p>
+  <p style="font-size:14px;"><strong>What it does:</strong> Binds to ghrelin receptors on the pituitary (a <em>completely different receptor</em> than CJC-1295 targets), triggering a rapid burst of GH release. Also acts at the hypothalamic level to suppress somatostatin — the hormone that normally puts the brakes on GH secretion.</p>
+  <p style="font-size:14px;"><strong>What makes it special:</strong> Ipamorelin was specifically identified in the landmark 1998 paper (Raun et al., European Journal of Endocrinology) as <strong>"the first selective growth hormone secretagogue."</strong> Unlike older GHRPs like GHRP-6 and GHRP-2, ipamorelin produces GH release <em>without</em> significantly increasing ACTH, cortisol, prolactin, FSH, LH, or TSH — even at doses 200-fold higher than the effective GH-releasing dose. This selectivity is what makes it the preferred GHRP for combination therapy.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Human data:</strong> PK/PD modeling in healthy volunteers (Gobburu et al., 1999) showed ipamorelin produces a single, clean GH peak approximately 40 minutes after administration, with a short terminal half-life of ~2 hours. A Phase II trial (Beck et al., 2014, n=117) for postoperative ileus confirmed excellent tolerability over 7 days of twice-daily IV dosing, with adverse event rates lower in the ipamorelin group (87.5%) than placebo (94.8%).</p>
+</div>
+
+<div class="d-t">
+  <div class="s">Why Selectivity Matters</div>
+  <p>Most growth hormone secretagogues (GHRP-6, GHRP-2, MK-677) increase not just GH but also cortisol, prolactin, and appetite-stimulating hormones. This creates a trade-off: more GH but also more side effects. Ipamorelin broke this pattern. By releasing GH with the same selectivity as natural GHRH itself — but through the ghrelin receptor pathway — it gives you <strong>amplified GH pulses without the hormonal noise.</strong> No cortisol spikes (which would undermine recovery). No prolactin elevation (which can affect libido and mood). No significant appetite increase (unlike MK-677's notorious hunger). This clean profile is why ipamorelin became the go-to GHRP in clinical peptide practice.</p>
+</div>
+
+<!-- BPC-157 SECTION -->
+<div class="cd cp">
+  <div class="tg">Healing Peptide &middot; The Repair Engine</div>
+  <h3>BPC-157: Accelerated Tissue Recovery</h3>
+  <p style="font-size:14px;"><strong>What it is:</strong> A 15-amino-acid peptide fragment derived from a protective protein found in human gastric juice (Body Protection Compound). Over 100 peer-reviewed studies published since the early 1990s. Three human studies published (all positive, zero adverse events).</p>
+  <p style="font-size:14px;"><strong>What it does:</strong> Orchestrates multi-pathway healing through VEGF-driven angiogenesis, nitric oxide modulation, growth factor cascade activation (VEGF, EGF, HGF, FGF), FAK-paxillin cell migration, and neuro-systemic protection across dopaminergic, serotonergic, and GABAergic systems.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Why it's in this stack:</strong> While CJC-1295 and Ipamorelin create an <em>environment</em> of elevated growth hormone (which broadly supports recovery), BPC-157 provides <em>targeted tissue repair</em> at the cellular level — working through entirely independent pathways. It's the difference between having more raw materials for healing (GH/IGF-1) and having a skilled contractor directing the repair work (BPC-157). For athletes and active individuals, this combination means faster recovery from training, faster resolution of nagging injuries, and protection of the gut lining (especially relevant if you use NSAIDs for pain management). For a comprehensive deep-dive, see our <a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a>.</p>
+</div>
+
+<!-- SYNERGY MECHANISM -->
+<hr class="sep">
+<h2>The Synergy: Why These Three Are Greater Than the Sum</h2>
+
+<p>The combination of a GHRH analog (like CJC-1295) with a GHRP (like Ipamorelin) isn't a theoretical concept — it's a documented pharmacological synergy. A key study by Veldhuis et al. measured the effect of GHRH and GHRP-2 (a less selective cousin of Ipamorelin) administered individually and together in healthy men:</p>
+
+<div class="sr">
+  <div class="sb"><div class="v c1">20x</div><div class="l">GH Pulse From<br>GHRH Alone</div></div>
+  <div class="sb"><div class="v c2">47x</div><div class="l">GH Pulse From<br>GHRP Alone</div></div>
+  <div class="sb"><div class="v c4">54x</div><div class="l">GH Pulse From<br>GHRH + GHRP Together</div></div>
+</div>
+
+<p>That's not additive — it's <strong>synergistic</strong>. The combined effect exceeds what you'd expect from simply adding the two individual effects. This happens because of a well-understood dual mechanism:</p>
+
+<div class="svg-box">
+  <div class="st">GHRH + GHRP: The Dual-Mechanism Synergy</div>
+  <div class="ss">CJC-1295 and Ipamorelin activate complementary pathways for amplified GH release</div>
+  <svg viewBox="0 0 740 340" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hypothalamus -->
+    <rect x="260" y="10" width="220" height="50" rx="25" fill="#132941" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="370" y="40" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#fff">Hypothalamus</text>
+
+    <!-- Somatostatin (brake) -->
+    <rect x="530" y="80" width="180" height="42" rx="8" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1"/>
+    <text x="620" y="97" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" font-weight="700" fill="#B53A3A">SOMATOSTATIN</text>
+    <text x="620" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A">&quot;The Brake&quot; on GH Release</text>
+
+    <!-- Arrow from hypothalamus to somatostatin -->
+    <line x1="480" y1="50" x2="530" y2="85" stroke="#B53A3A" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+    <!-- CJC-1295 (left path) -->
+    <rect x="30" y="105" width="200" height="70" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="130" y="127" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#2956A6">CJC-1295</text>
+    <text x="130" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#1E3362">Binds GHRH Receptor</text>
+    <text x="130" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#1E3362">&quot;Press the Gas Pedal&quot;</text>
+    <text x="130" y="168" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5A7AAA">Tells pituitary: &quot;Make more GH&quot;</text>
+
+    <!-- Ipamorelin (right path) -->
+    <rect x="510" y="145" width="200" height="70" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="610" y="167" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#187A62">Ipamorelin</text>
+    <text x="610" y="182" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#14503E">Binds Ghrelin Receptor</text>
+    <text x="610" y="195" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#14503E">&quot;Release the Brake&quot;</text>
+    <text x="610" y="208" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5A9A8A">Suppresses somatostatin inhibition</text>
+
+    <!-- Suppression X on brake -->
+    <line x1="610" y1="122" x2="625" y2="140" stroke="#187A62" stroke-width="2.5"/>
+    <line x1="625" y1="122" x2="610" y2="140" stroke="#187A62" stroke-width="2.5"/>
+
+    <!-- Pituitary -->
+    <rect x="250" y="200" width="240" height="55" rx="12" fill="#132941" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="370" y="222" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#fff">Anterior Pituitary</text>
+    <text x="370" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="rgba(255,255,255,.6)">Somatotroph Cells &rarr; GH Synthesis &amp; Release</text>
+
+    <!-- Arrows to pituitary -->
+    <path d="M230,160 Q250,195 280,210" fill="none" stroke="#2956A6" stroke-width="1.8" marker-end="url(#arrowBlue)"/>
+    <path d="M510,195 Q490,215 460,220" fill="none" stroke="#187A62" stroke-width="1.8" marker-end="url(#arrowTeal)"/>
+
+    <!-- GH Output -->
+    <rect x="270" y="285" width="200" height="45" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="370" y="305" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#6E3B8A">Amplified GH Pulse</text>
+    <text x="370" y="320" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#3E2050">Synergistic: greater than either alone</text>
+
+    <!-- Arrow from pituitary to GH -->
+    <line x1="370" y1="255" x2="370" y2="285" stroke="#6E3B8A" stroke-width="1.8" marker-end="url(#arrowPlum)"/>
+
+    <!-- BPC-157 side -->
+    <rect x="30" y="270" width="200" height="60" rx="10" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="130" y="290" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#B48118">BPC-157</text>
+    <text x="130" y="305" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#5A4010">Independent Repair Pathways</text>
+    <text x="130" y="318" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5A4010">VEGF &bull; NO &bull; Growth Factors &bull; Cell Migration</text>
+
+    <!-- Arrow from BPC to GH zone -->
+    <path d="M230,300 L270,305" fill="none" stroke="#B48118" stroke-width="1.2" stroke-dasharray="5,3"/>
+
+    <!-- Arrow markers -->
+    <defs>
+      <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#2956A6"/></marker>
+      <marker id="arrowTeal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#187A62"/></marker>
+      <marker id="arrowPlum" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#6E3B8A"/></marker>
+    </defs>
+  </svg>
+</div>
+
+<p>Think of it this way: <strong>CJC-1295 presses the gas pedal</strong> (directly stimulating GH production at the pituitary via GHRH receptors), while <strong>Ipamorelin releases the brake</strong> (suppressing somatostatin inhibition via ghrelin receptors and simultaneously stimulating GH through a completely independent receptor pathway). When you activate the gas and release the brake simultaneously, you get a dramatically more powerful response than either action alone.</p>
+
+<p><strong>BPC-157 adds a third dimension</strong> that growth hormone optimization alone can't provide. While elevated GH/IGF-1 creates a favorable systemic environment for recovery, BPC-157 works locally at the tissue level — promoting angiogenesis exactly where injured tissue needs new blood supply, modulating nitric oxide for optimal blood flow, and activating growth factor cascades that direct cellular repair. It's the difference between having excellent building materials delivered to a construction site (GH/IGF-1) and also having a skilled crew directing the actual construction (BPC-157).</p>
+
+<!-- COMPARISON TABLE -->
+<hr class="sep">
+<h2>Compound Comparison: CJC-1295 vs. Ipamorelin</h2>
+
+<table class="tbl cmp-tbl">
+<thead><tr><th>Property</th><th>CJC-1295 (Mod GRF 1-29)</th><th>CJC-1295 with DAC</th><th>Ipamorelin</th></tr></thead>
+<tbody>
+<tr><td>Peptide Class</td><td>GHRH analog</td><td>Long-acting GHRH analog</td><td>GHRP / Ghrelin mimetic</td></tr>
+<tr><td>Target Receptor</td><td>GHRH receptor (pituitary)</td><td>GHRH receptor (pituitary)</td><td>GHS-R1a / Ghrelin receptor</td></tr>
+<tr><td>Half-Life</td><td>~30 minutes</td><td>6&ndash;8 days</td><td>~2 hours</td></tr>
+<tr><td>GH Release Pattern</td><td>Rapid pulsatile (physiological)</td><td>Sustained elevation</td><td>Single clean pulse (~40 min peak)</td></tr>
+<tr><td>Injection Frequency</td><td>1&ndash;3x daily</td><td>1&ndash;2x weekly</td><td>1&ndash;3x daily</td></tr>
+<tr><td>Effect on Cortisol</td><td class="g">No increase</td><td class="g">No increase</td><td class="g">No increase</td></tr>
+<tr><td>Effect on Prolactin</td><td class="g">No increase</td><td class="g">No increase</td><td class="g">No increase</td></tr>
+<tr><td>Effect on Appetite</td><td class="g">Minimal</td><td class="g">Minimal</td><td class="g">Minimal</td></tr>
+<tr><td>Human Clinical Data</td><td>Mechanism well-studied via parent compound</td><td>Phase II trials (Teichman 2006)</td><td>Phase II trial (Beck 2014, n=117)</td></tr>
+<tr><td>Synergy with GHRP?</td><td class="g">Yes — preferred combo partner</td><td>Possible but less common</td><td class="g">Yes — preferred combo partner</td></tr>
+<tr><td>Best For</td><td>Pulsatile GH optimization</td><td>Convenience, sustained IGF-1</td><td>Clean GH amplification</td></tr>
+</tbody>
+</table>
+
+<!-- GH COMPARISON VS OTHER APPROACHES -->
+<hr class="sep">
+<h2>This Stack vs. Other GH Approaches</h2>
+
+<p>There are several ways to elevate growth hormone levels. Not all approaches are equal in safety, cost, effectiveness, or physiological compatibility. Here's how this stack compares:</p>
+
+<table class="tbl">
+<thead><tr><th>Approach</th><th>Mechanism</th><th>Preserves Natural Pulsatility?</th><th>Side Effect Profile</th><th>Cost</th><th>Self-Administrable?</th></tr></thead>
+<tbody>
+<tr><td><strong>CJC-1295 + Ipamorelin + BPC-157</strong></td><td>Stimulates endogenous GH production + tissue repair</td><td class="g">Yes — natural pulses amplified</td><td class="g">Excellent — minimal side effects</td><td>$150&ndash;300/month</td><td class="g">Yes</td></tr>
+<tr><td><strong>Exogenous HGH</strong></td><td>Direct GH injection (bypasses pituitary)</td><td class="r">No — suppresses natural production</td><td class="y">Moderate — insulin resistance, edema, joint pain</td><td>$500&ndash;2,000+/month</td><td class="g">Yes</td></tr>
+<tr><td><strong>MK-677 (Ibutamoren)</strong></td><td>Oral ghrelin mimetic</td><td class="y">Partially — continuous elevation</td><td class="y">Moderate — hunger, water retention, insulin resistance</td><td>$50&ndash;100/month</td><td class="g">Yes (oral)</td></tr>
+<tr><td><strong>Tesamorelin</strong></td><td>FDA-approved GHRH analog</td><td class="g">Yes — pulsatile</td><td class="g">Good — FDA-studied safety profile</td><td>$300&ndash;500/month</td><td class="g">Yes</td></tr>
+<tr><td><strong>Sermorelin</strong></td><td>Older GHRH analog (shorter half-life)</td><td class="g">Yes — pulsatile</td><td class="g">Good — well-tolerated</td><td>$100&ndash;250/month</td><td class="g">Yes</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">The Key Advantage of This Approach</div>
+  <p>Unlike exogenous HGH, which shuts down your pituitary's own GH production (creating dependency), the CJC-1295 + Ipamorelin approach <strong>works with your body's existing GH machinery</strong>. Your pituitary makes the growth hormone. Your feedback loops remain intact. Your natural pulsatile rhythm is preserved — in fact, it's enhanced. This means when you stop the peptides, your pituitary hasn't atrophied or downregulated. You return to your baseline, not below it. For most people seeking GH optimization, this represents a fundamentally smarter approach than flooding the body with exogenous hormone.</p>
+</div>
+
+<!-- BENEFITS -->
+<hr class="sep">
+<h2>What This Stack Does: Expected Benefits</h2>
+
+<p>The benefits of growth hormone optimization through this stack align with what decades of GH research have consistently shown, amplified by BPC-157's tissue-repair properties:</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Body Composition</h4>
+    <p>Elevated GH promotes lipolysis (fat breakdown) while preserving lean muscle mass. IGF-1 supports protein synthesis. Many users report reduced body fat and improved muscle tone within 6-8 weeks, particularly when combined with resistance training and adequate protein intake.</p>
+  </div>
+  <div class="mc">
+    <h4>Sleep Quality</h4>
+    <p>This is often the first benefit users notice — typically within 1-2 weeks. GH plays a critical role in deep (slow-wave) sleep, and GHRH analogs have been shown to promote non-REM sleep cycles. Deeper sleep creates a positive feedback loop: better sleep → more natural GH production → more recovery.</p>
+  </div>
+  <div class="mc">
+    <h4>Recovery &amp; Repair</h4>
+    <p>The combination of elevated GH/IGF-1 (promoting collagen synthesis, muscle protein synthesis, and tissue remodeling) with BPC-157's direct healing effects (angiogenesis, anti-inflammation, growth factor activation) creates the most comprehensive recovery protocol available. Reduced soreness, faster return to training, and accelerated resolution of injuries.</p>
+  </div>
+  <div class="mc">
+    <h4>Energy &amp; Vitality</h4>
+    <p>Improved sleep and elevated GH collectively enhance daytime energy, mental clarity, and physical stamina. Growth hormone influences mitochondrial function and energy substrate utilization, while better sleep improves every aspect of cognitive and physical performance.</p>
+  </div>
+  <div class="mc">
+    <h4>Skin, Hair &amp; Anti-Aging</h4>
+    <p>GH and IGF-1 drive collagen production and cellular turnover — the same mechanisms that decline with age. Users frequently report improved skin quality, reduced fine lines, and healthier hair growth. BPC-157's independent support for tissue repair and angiogenesis adds to these regenerative effects.</p>
+  </div>
+  <div class="mc">
+    <h4>Joint &amp; Connective Tissue Health</h4>
+    <p>This is where the stack truly shines for active individuals. GH increases collagen synthesis in tendons and ligaments, while BPC-157 independently accelerates repair of these exact tissues. The human pilot study on BPC-157 showed 87.5% significant improvement in knee pain from conditions including osteoarthritis, meniscus tears, and tendinosis.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Realistic Expectations</div>
+  <p>This stack is not magic — it's pharmacology. <strong>Weeks 1-2:</strong> Improved sleep quality, more vivid dreams, subtle energy increase. <strong>Weeks 2-4:</strong> Noticeable recovery improvement, reduced soreness between training sessions. <strong>Weeks 4-8:</strong> Body composition changes begin (visible with consistent training + nutrition). <strong>Months 2-3:</strong> Skin/hair improvements, sustained energy, measurable body composition changes. Results vary meaningfully based on age, baseline GH levels, training consistency, nutrition quality, and sleep habits. This stack amplifies good habits — it doesn't replace them.</p>
+</div>
+
+<!-- DOSING PROTOCOLS -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<p>The following represents the most widely used clinical protocols. Individual adjustment with a qualified provider is always recommended.</p>
+
+<div class="proto-grid">
+  <div class="proto-card" style="border-top:3px solid var(--blue);">
+    <div class="pc-name">CJC-1295 (no DAC)</div>
+    <div class="pc-role">Mod GRF 1-29</div>
+    <div class="pc-dose" style="color:var(--blue);">100 mcg</div>
+    <div class="pc-freq">1&ndash;2x daily, subcutaneous</div>
+    <p style="font-size:12px;margin-top:10px;margin-bottom:0;color:var(--mut);">Pre-bed dose most important. Optional morning dose. Empty stomach preferred.</p>
+  </div>
+  <div class="proto-card" style="border-top:3px solid var(--teal);">
+    <div class="pc-name">Ipamorelin</div>
+    <div class="pc-role">Selective GHRP</div>
+    <div class="pc-dose" style="color:var(--teal);">100&ndash;300 mcg</div>
+    <div class="pc-freq">1&ndash;2x daily, subcutaneous</div>
+    <p style="font-size:12px;margin-top:10px;margin-bottom:0;color:var(--mut);">Inject simultaneously with CJC-1295. Same syringe is common. Pre-bed timing aligns with natural GH surge.</p>
+  </div>
+  <div class="proto-card" style="border-top:3px solid var(--plum);">
+    <div class="pc-name">BPC-157</div>
+    <div class="pc-role">Healing Peptide</div>
+    <div class="pc-dose" style="color:var(--plum);">250&ndash;500 mcg</div>
+    <div class="pc-freq">1&ndash;2x daily, SC or oral</div>
+    <p style="font-size:12px;margin-top:10px;margin-bottom:0;color:var(--mut);">Oral for GI targets, SC injection for systemic/injury targets. Can be taken at any time; many prefer post-workout or morning.</p>
+  </div>
+</div>
+
+<h3>Protocol Options by Goal</h3>
+
+<table class="tbl">
+<thead><tr><th>Goal</th><th>CJC-1295 (no DAC)</th><th>Ipamorelin</th><th>BPC-157</th><th>Timing</th></tr></thead>
+<tbody>
+<tr><td><strong>General optimization</strong></td><td>100 mcg 1x/day</td><td>100 mcg 1x/day</td><td>250 mcg 1x/day</td><td>All before bed</td></tr>
+<tr><td><strong>Performance &amp; body comp</strong></td><td>100 mcg 2x/day</td><td>200 mcg 2x/day</td><td>250 mcg 2x/day</td><td>Morning + pre-bed</td></tr>
+<tr><td><strong>Active injury recovery</strong></td><td>100 mcg 1x/day</td><td>100 mcg 1x/day</td><td>500 mcg 2x/day</td><td>GH peptides pre-bed; BPC near injury</td></tr>
+<tr><td><strong>Anti-aging / longevity</strong></td><td>100 mcg 1x/day</td><td>100 mcg 1x/day</td><td>250 mcg 1x/day (oral)</td><td>Pre-bed; BPC oral AM</td></tr>
+<tr><td><strong>Post-surgical recovery</strong></td><td>100 mcg 2x/day</td><td>200 mcg 2x/day</td><td>500 mcg 2x/day</td><td>Maximize GH + healing</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">DAC Protocol Alternative</div>
+  <p>If using CJC-1295 <em>with</em> DAC instead: <strong>1&ndash;2 mg once or twice weekly</strong> (subcutaneous), with Ipamorelin 100&ndash;300 mcg daily at bedtime. The DAC version provides sustained baseline GH elevation, while the nightly Ipamorelin adds pulsatile peaks. BPC-157 dosing remains the same regardless of which CJC-1295 version you use.</p>
+</div>
+
+<h3>Timing Matters: The Pre-Bed Protocol</h3>
+
+<p>The single most important timing decision for this stack is <strong>injecting CJC-1295 + Ipamorelin 20-30 minutes before sleep, on an empty stomach</strong> (at least 2 hours after food). Here's why:</p>
+
+<p><strong>Natural GH physiology:</strong> Your body produces its largest growth hormone pulse during the first cycle of deep sleep (typically 60-90 minutes after falling asleep). By injecting GHRH + GHRP just before sleep, you're amplifying this natural peak rather than creating an artificial one. You're working <em>with</em> your circadian rhythm, not against it.</p>
+
+<p><strong>Empty stomach is critical:</strong> Insulin is a potent inhibitor of GH release. Food — especially carbohydrates and fats — elevates insulin, which blunts the GH pulse you're trying to amplify. Fasting for 2+ hours before your pre-bed injection maximizes the response.</p>
+
+<!-- CYCLE STRUCTURE -->
+<hr class="sep">
+<h2>Cycle Structure</h2>
+
+<table class="tbl">
+<thead><tr><th>Phase</th><th>Duration</th><th>CJC + Ipamorelin</th><th>BPC-157</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Ramp-up</strong></td><td>Week 1&ndash;2</td><td>Start at lower end of dose range</td><td>250 mcg/day</td><td>Assess tolerance; most people tolerate well from day one</td></tr>
+<tr><td><strong>Full protocol</strong></td><td>Weeks 3&ndash;10</td><td>Full dosing per goal</td><td>250&ndash;500 mcg/day</td><td>Where the majority of benefits accumulate</td></tr>
+<tr><td><strong>Wind-down</strong></td><td>Weeks 11&ndash;12</td><td>Optional gradual reduction</td><td>Can continue</td><td>Some practitioners prefer stopping abruptly — both approaches are fine</td></tr>
+<tr><td><strong>Break</strong></td><td>4&ndash;8 weeks</td><td>Off</td><td>Optional (can continue if treating active injury)</td><td>Allows IGF-1 to normalize; maintains pituitary sensitivity</td></tr>
+</tbody>
+</table>
+
+<p><strong>Common schedule within a cycle:</strong> 5 days on, 2 days off (weekdays on, weekends off). This provides periodic breaks that may help maintain receptor sensitivity while keeping the protocol manageable. Some practitioners prefer daily dosing throughout the cycle — both approaches have clinical support.</p>
+
+<!-- RECONSTITUTION -->
+<hr class="sep">
+<h2>Reconstitution Quick Reference</h2>
+
+<p>All three peptides arrive as lyophilized (freeze-dried) powder and need to be reconstituted with bacteriostatic water before use. For a detailed walkthrough, see our <a href="/articles/how-to-reconstitute-peptides">How to Reconstitute Peptides Guide</a>.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Typical Vial</th><th>Add BAC Water</th><th>Concentration</th><th>100 mcg =</th><th>250 mcg =</th><th>500 mcg =</th></tr></thead>
+<tbody>
+<tr><td><strong>CJC-1295 (no DAC)</strong></td><td>2 mg</td><td>2 mL</td><td>1 mg/mL</td><td>10 units (0.1 mL)</td><td>25 units</td><td>50 units</td></tr>
+<tr><td><strong>Ipamorelin</strong></td><td>5 mg</td><td>2.5 mL</td><td>2 mg/mL</td><td>5 units (0.05 mL)</td><td>12.5 units</td><td>25 units</td></tr>
+<tr><td><strong>BPC-157</strong></td><td>5 mg</td><td>2 mL</td><td>2.5 mg/mL</td><td>4 units</td><td>10 units (0.1 mL)</td><td>20 units</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Practical Tip: Same Syringe, Same Shot</div>
+  <p>CJC-1295 and Ipamorelin can be drawn into the same insulin syringe and injected together as a single subcutaneous injection. Draw the CJC-1295 first, then draw the Ipamorelin into the same syringe. This cuts the daily injection count in half. BPC-157 is typically injected separately (since the target site may differ), but can also be combined if all three are being injected systemically.</p>
+</div>
+
+<!-- SAFETY -->
+<hr class="sep">
+<h2>Safety Profile</h2>
+
+<p>One of the strongest arguments for this stack is its safety profile. All three compounds have demonstrated excellent tolerability in the data we have:</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">CJC-1295</h4>
+    <p><strong>Human trials:</strong> No serious adverse reactions in placebo-controlled studies at doses of 30-60 mcg/kg. <strong>Reported:</strong> Mild injection site reactions, transient flushing, occasional water retention. GH pulsatility preserved even during continuous stimulation.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Ipamorelin</h4>
+    <p><strong>Phase II trial:</strong> Adverse events <em>lower</em> in ipamorelin group (87.5%) than placebo (94.8%) over 7 days of IV dosing. <strong>Key advantage:</strong> No cortisol or prolactin increase even at 200x effective GH dose. No significant appetite stimulation.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">BPC-157</h4>
+    <p><strong>Three human studies:</strong> Zero adverse events across all three, including 20 mg IV dosing (40-80x typical SC doses). No LD1 established. No organ toxicity or mutagenicity in preclinical studies. 30+ year research history.</p>
+  </div>
+</div>
+
+<h3>Prudent Considerations</h3>
+
+<table class="tbl">
+<thead><tr><th>Consideration</th><th>Details</th><th>Risk Level</th></tr></thead>
+<tbody>
+<tr><td><strong>Active malignancy</strong></td><td>Elevated GH/IGF-1 could theoretically promote growth of existing tumors. Avoid this stack if you have active cancer or a recent history.</td><td class="r">Avoid</td></tr>
+<tr><td><strong>Diabetes / prediabetes</strong></td><td>GH can antagonize insulin and raise blood glucose. Monitor glucose if using this stack with metabolic conditions.</td><td class="y">Caution — monitor</td></tr>
+<tr><td><strong>Pregnancy / breastfeeding</strong></td><td>Insufficient data on safety during pregnancy or breastfeeding for any of these compounds.</td><td class="r">Avoid</td></tr>
+<tr><td><strong>Water retention</strong></td><td>Mild and transient in most users. More common with CJC-1295 DAC version. Usually resolves within 1-2 weeks or with dose adjustment.</td><td class="g">Mild — self-limiting</td></tr>
+<tr><td><strong>Tingling / numbness</strong></td><td>Occasional carpal-tunnel-like symptoms from GH elevation. Dose-dependent and reversible with dose reduction.</td><td class="g">Mild — dose-dependent</td></tr>
+<tr><td><strong>WADA / competitive sports</strong></td><td>All GH secretagogues and GHRPs are prohibited at all times under WADA rules. BPC-157 is classified under S0 (unapproved substances).</td><td class="r">Prohibited for tested athletes</td></tr>
+</tbody>
+</table>
+
+<!-- REGULATORY STATUS -->
+<hr class="sep">
+<h2>Regulatory &amp; Legal Status</h2>
+
+<p>The regulatory landscape for these peptides has been actively evolving:</p>
+
+<div class="cd ca">
+  <div class="tg">Regulatory Update &middot; 2024&ndash;2025</div>
+  <h3>Current Status</h3>
+  <p style="font-size:14px;">In September 2023, the FDA placed CJC-1295, Ipamorelin, and BPC-157 (among other peptides) on Category 2 of the interim 503A bulks list, effectively preventing compounding pharmacies from producing them. In September 2024, CJC-1295 and Ipamorelin were <strong>removed from Category 2</strong> after their nominators withdrew, and referred to the Pharmacy Compounding Advisory Committee (PCAC) for further review. This means they're currently in regulatory limbo — not approved for compounding, but no longer categorically prohibited either. PCAC reviewed Ipamorelin in October 2024 and CJC-1295 in December 2024. Final determinations are still pending as of early 2026.</p>
+  <p style="font-size:14px;margin-bottom:0;">BPC-157 remains in Category 2 (cannot be compounded) as of this writing. All three compounds are available as research chemicals for laboratory/in vitro use. Personal use occupies a legal gray area in the United States. International availability varies significantly — some countries have more permissive frameworks. See our <a href="/articles/peptide-legality-fda-rfk-guide">Peptide Legality &amp; FDA Guide</a> for comprehensive details.</p>
+</div>
+
+<div class="d">
+  <div class="s">The Structural Problem (Not a Safety Problem)</div>
+  <p>It's worth noting that the FDA's own adverse event database search for CJC-1295 through June 2024 found only two reports — both of which were excluded (one had insufficient information, one had no actual adverse event reported). The FDA briefing document for the December 2024 PCAC meeting also found <strong>zero relevant domestic case reports of adverse events</strong> in the published literature. The regulatory barriers these peptides face reflect pharmaceutical economics and compounding policy debates, not a pattern of safety concerns in the published data.</p>
+</div>
+
+<!-- STACKING ADDITIONS -->
+<hr class="sep">
+<h2>Expanding the Stack: Compatible Additions</h2>
+
+<table class="tbl">
+<thead><tr><th>Addition</th><th>Purpose</th><th>Compatibility</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>TB-500 (Thymosin Beta-4)</strong></td><td>Enhanced tissue repair, complementary to BPC-157</td><td class="g">Excellent</td><td>Creates the "Wolverine Stack" with BPC-157. Different repair mechanisms. See <a href="/articles/bpc-157-vs-tb-500-comparison">BPC-157 vs TB-500</a></td></tr>
+<tr><td><strong>GHK-Cu</strong></td><td>Collagen remodeling, skin quality, anti-aging</td><td class="g">Excellent</td><td>Complements GH-driven collagen synthesis. Popular for skin/hair goals</td></tr>
+<tr><td><strong>Thymosin Alpha-1</strong></td><td>Immune optimization</td><td class="g">Excellent</td><td>For those seeking immune support alongside recovery. See <a href="/articles/peptides-for-immune-health-ta1-ll37-selank">Immune Peptides Guide</a></td></tr>
+<tr><td><strong>Tesamorelin</strong></td><td>FDA-approved GHRH analog for visceral fat</td><td class="y">Replace CJC-1295, not stack</td><td>Can substitute for CJC-1295 in this stack. FDA-approved with strong safety data. See <a href="/articles/tesamorelin-fda-approved-gh-peptide-guide">Tesamorelin Guide</a></td></tr>
+<tr><td><strong>MK-677</strong></td><td>Oral GH secretagogue</td><td class="y">Generally not combined with this stack</td><td>Different mechanism but overlapping effects. May compound insulin resistance. See <a href="/articles/mk-677-ibutamoren-complete-guide">MK-677 Guide</a></td></tr>
+</tbody>
+</table>
+
+<!-- QUALITY SOURCING -->
+<hr class="sep">
+<h2>Quality &amp; Sourcing</h2>
+
+<p>With compounding pharmacy access restricted for these peptides, quality sourcing becomes especially important. Look for:</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Must-Haves</h4>
+    <p><strong>Third-party COAs</strong> (Certificates of Analysis) from independent labs — not just the vendor's own testing. <strong>HPLC purity &ge; 98%</strong> for all three peptides. <strong>Mass spectrometry verification</strong> confirming correct molecular identity. <strong>Endotoxin testing</strong> (especially for injectable peptides). For a detailed guide on evaluating quality, see our <a href="/articles/how-to-read-peptide-coa">How to Read a Peptide COA</a> article.</p>
+  </div>
+  <div class="mc">
+    <h4>Storage</h4>
+    <p><strong>Lyophilized (unreconstituted):</strong> Room temperature (short-term) or refrigerator (long-term). Freezer for storage beyond a few months. <strong>Reconstituted:</strong> Always refrigerate. Use within 4&ndash;6 weeks. Never freeze reconstituted peptides. <strong>Bacteriostatic water</strong> (not sterile water) for reconstitution — the benzyl alcohol preservative prevents bacterial growth. See our <a href="/articles/how-to-store-peptides">Peptide Storage Guide</a>.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details><summary>How soon will I notice effects from this stack?</summary>
+<div class="fa"><p>Sleep improvements are typically the first thing people notice — often within the first 1-2 weeks. Deeper, more restorative sleep with more vivid dreams. Recovery from workouts improves within 2-3 weeks. Body composition changes (visible fat loss, improved muscle tone) generally require 6-8 weeks of consistent use combined with proper training and nutrition. Skin and hair changes are the slowest to manifest, typically 2-3 months.</p></div>
+</details>
+
+<details><summary>Can I use CJC-1295 and Ipamorelin without BPC-157?</summary>
+<div class="fa"><p>Absolutely. CJC-1295 + Ipamorelin is a complete GH optimization stack on its own. BPC-157 adds a tissue-repair dimension that's especially valuable for active individuals, those recovering from injuries, or anyone who uses NSAIDs regularly. If your primary goals are body composition, sleep, and general anti-aging, CJC + Ipamorelin alone is an excellent protocol. If you have specific injuries or recovery needs, adding BPC-157 significantly enhances those outcomes.</p></div>
+</details>
+
+<details><summary>Do I need to cycle off, or can I run this continuously?</summary>
+<div class="fa"><p>Cycling is generally recommended — typically 8-12 weeks on, followed by 4-8 weeks off. This approach helps maintain pituitary sensitivity to the GHRH/GHRP stimulation and allows IGF-1 levels to normalize. Some practitioners use longer cycles (up to 6 months) with monitoring, but the 3-month cycle with 1-month break is the most common clinical approach. BPC-157 can often be continued during GH peptide breaks if you're treating an active injury.</p></div>
+</details>
+
+<details><summary>What's the difference between this and just taking HGH?</summary>
+<div class="fa"><p>Exogenous HGH floods your body with growth hormone from an external source. This bypasses your pituitary gland entirely, which means your natural GH production shuts down (negative feedback). When you stop HGH, you're below baseline until your pituitary recovers. The CJC-1295 + Ipamorelin approach stimulates your own pituitary to produce <em>your</em> growth hormone. Natural feedback loops remain intact. Pulsatile rhythm is preserved. And when you stop, your pituitary hasn't been suppressed — you simply return to baseline. The peptide approach is also dramatically less expensive, has fewer side effects, and doesn't require the same level of medical monitoring.</p></div>
+</details>
+
+<details><summary>Can I take this with food, or does it have to be on an empty stomach?</summary>
+<div class="fa"><p>For CJC-1295 + Ipamorelin: <strong>empty stomach is strongly preferred</strong> — wait at least 2 hours after eating, ideally longer. Insulin from food significantly blunts the GH response. This is why pre-bed dosing works so well (most people haven't eaten for hours before sleep). For BPC-157: food timing is less critical. It can be taken with or without food, though empty stomach is slightly preferred for absorption.</p></div>
+</details>
+
+<details><summary>How does this compare to MK-677?</summary>
+<div class="fa"><p>MK-677 (Ibutamoren) is an oral ghrelin mimetic that elevates GH for 24+ hours per dose. It's convenient (one pill daily) and effective at raising IGF-1. However, it's less selective than ipamorelin — it significantly increases appetite, can cause water retention, and may worsen insulin resistance over time (especially at higher doses). The CJC-1295 + Ipamorelin stack produces more physiological, pulsatile GH release with significantly fewer metabolic side effects. For a detailed comparison, see our <a href="/articles/mk-677-ibutamoren-complete-guide">MK-677 Complete Guide</a>.</p></div>
+</details>
+
+<details><summary>What bloodwork should I get before and during this stack?</summary>
+<div class="fa"><p><strong>Before starting:</strong> IGF-1, fasting insulin, fasting glucose, HbA1c, complete metabolic panel (CMP), CBC, thyroid panel. <strong>During cycle (6-8 weeks in):</strong> Repeat IGF-1 (to confirm elevation — typical target is upper-normal range, not supraphysiological), fasting insulin and glucose (to monitor for insulin resistance), and CMP. Some providers also check cortisol and prolactin at baseline and during cycle to document the clean hormonal profile of ipamorelin.</p></div>
+</details>
+
+<details><summary>Can women use this stack?</summary>
+<div class="fa"><p>Yes. GH physiology and the mechanisms of these peptides are not sex-specific. Women may start at the lower end of dosing ranges and titrate up based on response. The benefits (body composition, sleep, skin, recovery) are relevant across sexes. Growth hormone optimization may be particularly beneficial for women in perimenopause and postmenopause, as GH decline accelerates during this transition. As always, pregnancy and breastfeeding are contraindications.</p></div>
+</details>
+
+<details><summary>Is this stack legal for competitive athletes?</summary>
+<div class="fa"><p><strong>No.</strong> GH secretagogues (CJC-1295, Ipamorelin) and unapproved substances (BPC-157) are all prohibited at all times under WADA rules. The NCAA, NFL, MLB, NHL, and virtually all major sports organizations follow WADA's prohibited list. If you are subject to drug testing in any competitive sport, do not use this stack.</p></div>
+</details>
+
+</div>
+
+<!-- KEY TAKEAWAYS -->
+<div class="d-t">
+  <div class="s">Key Takeaways</div>
+  <p>The CJC-1295 + Ipamorelin + BPC-157 stack represents the most pharmacologically rational approach to peptide-based performance and recovery optimization available. CJC-1295 provides sustained GHRH receptor activation. Ipamorelin adds selective ghrelin-receptor stimulation without the cortisol, prolactin, or appetite side effects of less selective alternatives. Together they produce synergistic GH pulses that preserve natural pituitary function. And BPC-157 translates that elevated GH environment into accelerated tissue repair through its own independent healing pathways. All three compounds have demonstrated excellent safety profiles in the clinical data available. The combination works with your body's existing physiology — amplifying natural processes rather than overriding them.</p>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. The peptides discussed are not FDA-approved for the uses described. Always consult a qualified healthcare provider before starting any peptide protocol. Individual responses vary, and medical supervision including appropriate bloodwork is recommended.
+</div>
+
+<!-- REFERENCES -->
+<hr class="sep">
+<h2>References</h2>
+
+<p style="font-size:13px;color:var(--mut);line-height:1.8;">
+<strong>CJC-1295 Human Studies:</strong><br>
+Teichman SL, et al. Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295, a long-acting analog of GH-releasing hormone, in healthy adults. <em>J Clin Endocrinol Metab.</em> 2006;91(3):799-805.<br>
+Ionescu M, et al. Pulsatile secretion of growth hormone (GH) persists during continuous stimulation by CJC-1295, a long-acting GH-releasing hormone analog. <em>J Clin Endocrinol Metab.</em> 2006;91(12):4792-97.<br>
+Sackmann-Sala L, et al. Activation of the GH/IGF-1 axis by CJC-1295 results in serum protein profile changes in normal adult subjects. <em>Growth Horm IGF Res.</em> 2009;19(6):471-77.<br>
+<br>
+<strong>Ipamorelin Key Studies:</strong><br>
+Raun K, et al. Ipamorelin, the first selective growth hormone secretagogue. <em>Eur J Endocrinol.</em> 1998;139(5):552-61.<br>
+Gobburu JV, et al. Pharmacokinetic-pharmacodynamic modeling of ipamorelin, a growth hormone releasing peptide, in human volunteers. <em>Pharm Res.</em> 1999;16(9):1412-16.<br>
+Beck DE, et al. Prospective, randomized, controlled, proof-of-concept study of the ghrelin mimetic ipamorelin for the management of postoperative ileus in bowel resection patients. <em>Int J Colorectal Dis.</em> 2014;29(12):1527-34.<br>
+<br>
+<strong>GHRH/GHRP Synergy:</strong><br>
+Veldhuis JD, et al. Joint mechanisms of impaired growth-hormone (GH) pulse renewal in aging men. <em>J Clin Endocrinol Metab.</em> 2009;94(11):4223-32.<br>
+Ishida J, et al. Growth hormone secretagogues: history, mechanism of action, and clinical development. <em>JCSM Rapid Commun.</em> 2020;3(1):25-37.<br>
+Ghigo E, et al. Growth hormone-releasing peptides and their analogs. <em>Front Neuroendocrinol.</em> 1998;19(1):47-72.<br>
+<br>
+<strong>BPC-157 Human Studies:</strong><br>
+Lee SR, Padgett J. Clinical outcomes of a novel peptide-based treatment approach for knee pain: a retrospective review. 2021.<br>
+Lee SR, Walker D, Ayadi A. Intravesical BPC-157 for interstitial cystitis: a pilot study. 2024.<br>
+Lee SR, Burgess N. Intravenous BPC-157 safety and pharmacokinetics: a pilot study. 2025.<br>
+<br>
+<strong>CJC-1295 Preclinical:</strong><br>
+Jetté L, et al. hGRF1-29-albumin bioconjugates activate the GRF receptor on the anterior pituitary in rats: identification of CJC-1295 as a long-lasting GRF analog. <em>Endocrinology.</em> 2005;146(7):3052-58.<br>
+Alba M, et al. Once-daily administration of CJC-1295 normalizes growth in the GHRH knockout mouse. <em>Am J Physiol Endocrinol Metab.</em> 2006;291(6):E1290-94.<br>
+<br>
+<strong>Growth Hormone Physiology:</strong><br>
+Sinha DK, et al. Beyond the androgen receptor: the role of growth hormone secretagogues in the modern management of body composition in hypogonadal males. <em>Transl Androl Urol.</em> 2020;9(Suppl 2):S149-59.
+</p>
+
+`;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>•</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>⚠️ Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">🔬 Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">✓</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Popular Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides →</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
