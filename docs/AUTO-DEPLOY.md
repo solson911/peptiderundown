@@ -1,6 +1,18 @@
 # Auto Deploy (Inbox → Cloudflare)
 
-This doc explains the **automated deployment pipeline** that watches an “inbox”, converts files into published articles, commits to GitHub, and lets Cloudflare deploy.
+This doc explains the **automated deployment pipeline** that watches an “inbox”, converts files into published pages, commits to GitHub, and lets Cloudflare deploy.
+
+## Reuse across future sites
+
+This pipeline is intended to be **site-agnostic infrastructure**.
+
+Today it powers **PeptideRundown**, but the same design (inbox → processor → commit/push → Cloudflare) is meant to be reused as we stand up additional websites in the future.
+
+When cloning for a new site, the main things that typically change are:
+- the deploy repo path + Git remote
+- the content output path (e.g., `src/pages/...`)
+- the image generation prompt/style defaults
+- the cron schedule and inbox root
 
 ## Source of truth (what Cloudflare builds)
 
