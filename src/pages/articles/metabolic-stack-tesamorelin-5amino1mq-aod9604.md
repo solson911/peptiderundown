@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Article.astro
 title: "The Metabolic Stack: Tesamorelin + 5-Amino-1MQ + AOD-9604 for Fat Loss"
-description: "The Metabolic Stack combines Tesamorelin, 5-Amino-1MQ, and AOD-9604 for targeted fat loss through three distinct mechanisms. Full dosing and protocol guide."
+description: "A research-focused overview of combining tesamorelin, 5-amino-1MQ, and AOD-9604 for body recomposition - mechanisms, practical dosing structure, and safety monitoring."
 image: /images/articles/metabolic-stack.webp
 date: 2026-02-15
 category: "Peptide Stacks"
@@ -11,165 +11,169 @@ author: "PeptideRundown Team"
 
 # The Metabolic Stack: Tesamorelin + 5-Amino-1MQ + AOD-9604 for Fat Loss
 
-The Metabolic Stack is a powerful combination of three peptides - Tesamorelin, 5-Amino-1MQ, and AOD-9604 - designed to target fat loss and improve body composition through distinct yet complementary mechanisms. This article explores how each compound works, their synergy, dosing protocols, expected results, and more.
+If you look at most fat-loss protocols, they usually do one thing well.
+They reduce appetite, or they increase energy expenditure, or they improve nutrient partitioning.
 
-## What Each Compound Does Individually
+The idea behind the "Metabolic Stack" is to layer three different mechanisms.
+Tesamorelin pushes the growth-hormone axis, 5-amino-1MQ targets NNMT and NAD+ metabolism, and AOD-9604 is positioned as a GH-fragment that may bias toward lipolysis.
 
-### Tesamorelin
+This is not a prescription.
+It is a research-oriented framework, with practical notes on how people structure timing and what to monitor.
 
-Tesamorelin is a synthetic growth hormone-releasing hormone (GHRH) analog. It stimulates the pituitary gland to release growth hormone (GH), which in turn increases insulin-like growth factor 1 (IGF-1). This cascade promotes fat metabolism, particularly in visceral adipose tissue.
-
-> **Key Finding:** Tesamorelin has been shown to reduce visceral fat by up to 15% in clinical studies, making it a standout for targeting stubborn belly fat.
-
-### 5-Amino-1MQ
-
-5-Amino-1MQ is a small molecule inhibitor of nicotinamide N-methyltransferase (NNMT). NNMT is an enzyme that depletes nicotinamide adenine dinucleotide (NAD+), a critical cofactor for energy metabolism. By inhibiting NNMT, 5-Amino-1MQ boosts <a href="/articles/nad-peptides-cellular-energy-longevity">NAD+</a> levels, enhancing mitochondrial function and fat oxidation.
-
-> **Key Finding:** Research suggests that 5-Amino-1MQ can increase metabolic rate by up to 10%, making it a potent tool for fat loss.
-
-### AOD-9604
-
-AOD-9604 is a modified fragment of human growth hormone (hGH) that mimics the fat-burning properties of hGH without its anabolic or diabetogenic effects. It works by stimulating lipolysis (fat breakdown) and inhibiting lipogenesis (fat storage).
-
-> **Key Finding:** <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> has been shown to reduce body fat by up to 12% in studies, with minimal <a href="/articles/peptide-side-effects-what-to-know">side effects</a>.
-
-## How They Synergize Together
-
-The Metabolic Stack combines these three compounds to target fat loss from multiple angles:
-
-- **Tesamorelin** - Increases GH and IGF-1, promoting fat metabolism and muscle preservation.
-- **5-Amino-1MQ** - Boosts NAD+ levels, enhancing mitochondrial efficiency and fat oxidation.
-- **AOD-9604** - Directly stimulates lipolysis and inhibits fat storage.
-
-Together, they create a multi-pathway approach to fat loss that is more effective than any single compound alone.
-
-## Detailed Dosing Protocol with Timing
-
-Here's a recommended dosing protocol for the Metabolic Stack:
-
-| Compound       | Dosage       | Timing          | Duration |
-|----------------|--------------|-----------------|----------|
-| Tesamorelin    | 1 mg         | Before bedtime  | 8-12 weeks |
-| 5-Amino-1MQ    | 100 mg       | Morning         | 8-12 weeks |
-| AOD-9604       | 300 mcg      | Post-workout    | 8-12 weeks |
-
-### Notes:
-- **Tesamorelin** should be taken at night to align with the body's natural GH pulse.
-- **5-Amino-1MQ** is best taken in the morning to maximize its metabolic effects throughout the day.
-- **AOD-9604** is most effective post-workout when fat mobilization is already elevated.
-
-## Expected Results Timeline Week by Week
-
-| Week | Expected Changes |
-|------|------------------|
-| 1-2  | Increased energy, slight reduction in water retention |
-| 3-4  | Noticeable fat loss, especially in stubborn areas |
-| 5-6  | Improved muscle definition, continued fat loss |
-| 7-8  | Significant reduction in body fat, enhanced metabolic rate |
-| 9-12 | Peak results, optimal body composition |
-
-## Side Effects for Each Compound
+## What each compound is doing (in plain language)
 
 ### Tesamorelin
 
-| Side Effect | Frequency | Notes |
-|-------------|-----------|-------|
-| **Joint pain** | Common | Usually mild, resolves within days |
-| **Water retention** | Common | Temporary, subsides with continued use |
-| **Numbness or tingling** | Occasional | Related to GH elevation |
-| **Increased blood sugar** | Rare | Monitor if diabetic or prediabetic |
+Tesamorelin is a GHRH analog.
+Rather than acting like growth hormone itself, it signals the pituitary to release GH, which then increases IGF-1 downstream.
 
-### 5-Amino-1MQ
+In practice, tesamorelin is mainly discussed for body composition because GH signaling tends to shift fuel use, often with an effect on visceral fat in clinical contexts.
 
-| Side Effect | Frequency | Notes |
-|-------------|-----------|-------|
-| **GI discomfort** | Occasional | Take with food to minimize |
-| **Headache** | Occasional | Usually resolves within first week |
+If you want the bigger picture of GH-related peptides, start with [CJC-1295](/articles/cjc-1295-dac-guide) and [ipamorelin](/articles/ipamorelin-complete-guide).
+
+### 5-amino-1MQ
+
+5-amino-1MQ is usually described as an NNMT inhibitor.
+NNMT is involved in methylation of nicotinamide, and it is often discussed in the context of metabolic efficiency and NAD+ availability.
+
+The "why" for stacking is simple.
+If tesamorelin pushes the GH/IGF-1 axis, 5-amino-1MQ is aimed at cellular energy handling and metabolic signaling from a different angle.
+
+For related context, see our primer on [NAD and NAD-related peptides](/articles/nad-peptides-cellular-energy-longevity).
 
 ### AOD-9604
 
-| Side Effect | Frequency | Notes |
-|-------------|-----------|-------|
-| **Injection site reactions** | Common | Mild redness or swelling |
+AOD-9604 is a modified fragment of human growth hormone.
+It is marketed and discussed as a compound that may promote lipolysis without the broader systemic effects people associate with full GH signaling.
 
-Overall, this stack has a favorable safety profile compared to many alternatives. None of the three compounds carry the serious risks associated with full-dose growth hormone or stimulant-based fat burners.
+Evidence quality and outcomes are mixed depending on the population and endpoint.
+If you want compound-specific background, see [AOD-9604](/articles/aod-9604-fat-loss-peptide-guide).
 
-## Who This Stack Is For (And Who Should Avoid It)
+## Why people combine them
 
-### Ideal Candidates
+Stacking is an attempt to cover multiple bottlenecks at once.
+If you only raise GH signaling, you may see appetite changes, water shifts, and glucose effects that require management.
 
-- **Stubborn fat carriers** - Especially those with visceral fat that won't budge with diet alone
-- **Plateau breakers** - People who've stalled on traditional fat loss programs
-- **Muscle-conscious dieters** - Those who want fat loss without sacrificing lean mass
-- **Non-stimulant seekers** - Anyone who can't tolerate caffeine-heavy fat burners
+If you only use a metabolic small molecule, you might not get the same body recomposition "look" that some users chase.
+If you only use a lipolysis-leaning peptide fragment, you may not see meaningful changes unless training and diet are aligned.
 
-### Who Should Avoid
+In a best-case scenario, the stack is trying to:
 
-- **Pregnant or breastfeeding women** - insufficient safety data
-- **Active cancer patients** - GH-releasing compounds may promote tumor growth
-- **Uncontrolled diabetics** - Tesamorelin can affect blood sugar regulation
-- **Those with hormone-sensitive conditions** - consult an endocrinologist first
+- support fat mobilization and fuel switching
+- preserve training performance while dieting
+- reduce the odds that one pathway adaptation stalls progress
 
-## How It Compares to GLP-1 Agonists
+That said, stacks also increase complexity.
+More moving parts means more ways to misinterpret what is happening.
 
-| Feature          | Metabolic Stack | Semaglutide | Retatrutide |
-|------------------|-----------------|-------------|-------------|
-| **Mechanism** | Multi-targeted fat metabolism | GLP-1 appetite suppression | Triple agonist (GLP-1/GIP/glucagon) |
-| **Fat loss type** | Targeted, visceral focus | Generalized weight loss | Generalized + metabolic |
-| **Muscle preservation** | Yes | No (significant lean mass loss) | Moderate |
-| **Side effects** | Mild | GI issues common | GI issues common |
-| **Cost per month** | $200-400 | $800-1,200 (brand) | Limited availability |
-| **Administration** | Daily injections + oral | Weekly injection | Weekly injection |
+## A practical dosing structure (not medical advice)
 
-> **Key Finding:** The Metabolic Stack is ideal for those who want targeted fat loss without muscle loss, while GLP-1 agonists are better for appetite control and generalized weight loss. For a deeper look at retatrutide, see our [<a href="/articles/retatrutide-complete-guide">Retatrutide Complete Guide</a>](/articles/retatrutide-complete-guide).
+Dosing varies by formulation and by individual tolerance.
+People also differ in how aggressive they want to be with calorie deficits.
 
-## Bloodwork to Monitor
+A common "structure" looks like this:
 
-Before and during the stack, monitor these markers:
+| Compound | Typical timing approach | Why that timing is used |
+|---|---|---|
+| Tesamorelin | Evening / before bed | Aligns with the body's natural overnight GH pulse |
+| 5-amino-1MQ | Morning | Pairs with daytime activity and avoids late-day stimulation for some users |
+| AOD-9604 | Morning fasted or around training | Aims to pair with periods of higher fat mobilization |
 
-| Marker | Why It Matters | When to Test |
-|--------|---------------|--------------|
-| **IGF-1** | Tracks Tesamorelin's GH stimulation | Baseline + week 6 |
-| **Fasting glucose** | Tesamorelin can raise blood sugar | Baseline + monthly |
-| **Fasting insulin** | Metabolic health indicator | Baseline + week 8 |
-| **Lipid panel** | Tracks fat metabolism improvements | Baseline + week 12 |
-| **Liver enzymes (ALT/AST)** | General safety monitoring | Baseline + week 6 |
+If you are doing injections, make sure your technique is solid.
+Read [how to inject peptides subcutaneously](/articles/how-to-inject-peptides-subcutaneously) and [reconstitution basics](/articles/how-to-reconstitute-peptides).
 
-For a detailed guide on what to test and when, check out our [<a href="/articles/peptide-bloodwork-guide">Peptide Bloodwork Guide</a>](/articles/peptide-bloodwork-guide).
+## What results usually look like (and what confuses people)
 
-## Frequently Asked Questions
+The first 1 to 2 weeks can be noisy.
+Changes in water retention, sleep, hunger, and training output can mask real fat loss.
 
-### How long should I run the Metabolic Stack?
+Weeks 3 to 6 is where most people expect clearer signals.
+If diet and steps are consistent, you should be able to measure change in waist, weight trend, and gym performance.
 
-Most protocols run 8-12 weeks. Going beyond 12 weeks isn't necessarily dangerous, but the body can adapt to exogenous GH stimulation over time. A 4-week break between cycles helps maintain sensitivity. During the break, you can continue 5-Amino-1MQ if desired since it works through a different pathway.
+Weeks 8 to 12 is where diminishing returns often show up.
+If the stack is doing anything, it should be visible by then.
+If it is not, the most likely explanation is still energy balance, not the compound.
 
-### Can I stack this with other peptides?
+## Diet and training considerations
 
-You can, but be thoughtful about it. Avoid combining with other GH-releasing peptides like CJC-1295 or Ipamorelin, since Tesamorelin already covers that pathway. BPC-157 or TB-500 for recovery are fine additions. Some users add a GLP-1 agonist for appetite control, but that significantly increases cost and side effect burden.
+Stacks work best when they are supporting a consistent plan.
+Aim for adequate protein, a moderate calorie deficit, and a training routine you can repeat week after week.
 
-### Will I lose muscle on this stack?
+If your sleep is falling apart, fix that first.
+Poor sleep can flatten fat loss progress and worsen glucose control.
 
-No. One of the biggest advantages of this stack over GLP-1 agonists is muscle preservation. Tesamorelin's GH-stimulating effects actively support lean mass, while AOD-9604 targets fat specifically without the anabolic effects that might cause unwanted growth. Pair with resistance training for best results.
+## Safety and monitoring (the part people skip)
 
-### What's the best diet to pair with this stack?
+This stack touches glucose, hormones, and potentially blood pressure and fluid balance.
+If you are prediabetic or diabetic, you should not run a GH-axis protocol without clinician oversight.
 
-A high-protein diet (1g per pound of bodyweight) with moderate carbs and controlled fats works best. You don't need extreme caloric restriction - a modest 300-500 calorie deficit is enough. The stack handles the metabolic heavy lifting. Protein is non-negotiable though, since it supports muscle retention and thermogenesis.
+A reasonable monitoring setup includes:
 
-### Are there any drug interactions I should know about?
+- baseline labs before starting
+- mid-cycle labs at ~4 to 6 weeks
+- symptom-driven checks any time something feels off
 
-5-Amino-1MQ may interact with NAD+ precursors like NMN or NR - the combination could push NAD+ levels too high, though this is largely theoretical. Tesamorelin shouldn't be combined with exogenous GH. If you're on metformin or insulin, monitor glucose closely since Tesamorelin can affect blood sugar regulation.
+For a full lab checklist, use our [peptide bloodwork guide](/articles/peptide-bloodwork-guide).
 
-### How does this compare to traditional fat burners?
+### Markers to pay attention to
 
-Night and day difference. Stimulant-based fat burners work through adrenaline and thermogenesis, causing jitters, crashes, and tolerance buildup. The Metabolic Stack works through hormonal and enzymatic pathways that don't cause stimulant side effects. The trade-off is speed - stimulants work faster but aren't sustainable, while this stack produces steadier, more lasting results.
+IGF-1 is the most practical marker for tesamorelin-driven GH signaling.
+Fasting glucose and HbA1c help you see whether the protocol is pushing you toward insulin resistance.
 
-## The Bottom Line
+If you are using GLP-1 drugs in the same season of life as this stack, be cautious with interpretation.
+GLP-1s can change appetite and glucose control in ways that make "stack attribution" messy.
 
-The Metabolic Stack offers a multi-pathway approach to fat loss that targets visceral fat, boosts cellular metabolism, and directly stimulates fat breakdown - all while preserving muscle mass. It's not the cheapest option, and it requires commitment to a proper protocol. But for those who've hit a plateau or want targeted fat loss without the GI side effects of GLP-1 agonists, this stack delivers.
+## Side effects and common issues
+
+Tesamorelin and other GH-axis tools can cause water retention, tingling, and sleep changes in some users.
+They can also raise fasting glucose in susceptible people.
+
+5-amino-1MQ is often discussed as orally convenient, but oral convenience does not equal risk-free.
+Any compound that shifts metabolic signaling can interact with appetite, energy, and sleep.
+
+AOD-9604 is often described as well tolerated.
+In real-world use, the bigger issues tend to be inconsistent product quality and unrealistic expectations rather than dramatic acute reactions.
+
+If you want a general safety overview, start here: [peptide side effects](/articles/peptide-side-effects-what-to-know).
+
+## Who this stack is (and is not) for
+
+This is most often framed as a body-recomposition approach for people already training consistently.
+If training, sleep, and protein intake are not in place, a stack is usually a distraction.
+
+Avoid or get medical oversight if you have:
+
+- uncontrolled diabetes or recurrent hypoglycemia
+- active cancer or a history where IGF-1 elevation is a concern
+- significant kidney or liver disease
+- pregnancy or breastfeeding
+
+## Frequently asked questions
+
+### Can you run this stack without dieting?
+
+You can, but results are usually subtle.
+Stacks don't replace energy balance, they mainly influence how the body responds to it.
+
+### Do you need to cycle it?
+
+Many users structure stacks in 8 to 12 week blocks with breaks.
+The break is not just about tolerance, it's about re-evaluating whether the protocol is actually helping.
+
+### What should you track weekly?
+
+Pick boring metrics.
+Body weight trend, waist measurement, steps, sleep, and a few consistent gym lifts are usually enough.
+
+## The bottom line
+
+The metabolic stack is a "multi-pathway" idea.
+It tries to combine GH-axis signaling (tesamorelin), metabolic enzyme targeting (5-amino-1MQ), and a lipolysis-leaning peptide fragment (AOD-9604).
+
+If you run anything like this, treat monitoring as part of the plan.
+Get baseline labs, track glucose and IGF-1 trends, and be honest about whether diet and training are driving the outcome.
 
 **Related reading:**
-- [Best Peptides for Fat Loss](/articles/best-peptides-for-fat-loss)
-- [AOD-9604 Complete Guide](/articles/aod-9604-complete-guide)
-- [Retatrutide Complete Guide](/articles/retatrutide-complete-guide)
-- [Peptide Bloodwork Guide](/articles/peptide-bloodwork-guide)
-
+- [Best peptides for fat loss](/articles/best-peptides-for-fat-loss)
+- [AOD-9604 fat loss guide](/articles/aod-9604-fat-loss-peptide-guide)
+- [Peptide cycling guide](/articles/peptide-cycling-guide)
