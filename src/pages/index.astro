@@ -76,6 +76,10 @@ const compounds = [
   { title: "Cerebrolysin", href: "/articles/cerebrolysin-neuropeptide-guide", category: "Neuropeptide", image: "/images/articles/cerebrolysin.webp" },
   { title: "Methylene Blue", href: "/articles/methylene-blue-guide", category: "Mitochondrial", image: "/images/articles/methylene-blue.webp" },
 ];
+
+const latestNews = (await Astro.glob('./news/*.md'))
+  .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
+  .slice(0, 3);
 ---
 <Base title="Science-Based Peptide Education">
   <!-- Hero -->
@@ -138,6 +142,51 @@ const compounds = [
           <div class="text-sm font-bold text-text group-hover:text-primary transition-colors">Plain Language</div>
           <div class="text-xs text-text-muted">No jargon</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Today’s News Teaser -->
+  <section class="bg-gradient-to-b from-surface to-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <div class="flex items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="h-1 w-10 bg-gradient-to-r from-accent to-primary rounded-full"></div>
+            <span class="text-sm font-semibold text-accent uppercase tracking-wide">News</span>
+          </div>
+          <h2 class="text-3xl font-extrabold text-text">Today’s headlines</h2>
+          <p class="text-text-muted mt-2">Quick reads on what’s changing in peptides, compounding, and regulation.</p>
+        </div>
+        <a href="/news" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 hover:border-primary/30 hover:bg-primary/5 text-sm font-bold text-primary transition">
+          View all news
+          <span class="opacity-70">→</span>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        {latestNews.map((post) => (
+          <a href={post.url} class="group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
+            <div class="h-44 overflow-hidden">
+              <img src={post.frontmatter.image} alt={post.frontmatter.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between gap-3 mb-2">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{post.frontmatter.category}</span>
+                <span class="text-xs text-text-muted">{new Date(post.frontmatter.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+              </div>
+              <h3 class="text-lg font-bold text-text group-hover:text-primary transition-colors mb-2 line-clamp-2">{post.frontmatter.title}</h3>
+              <p class="text-text-muted text-sm leading-relaxed line-clamp-3">{post.frontmatter.description}</p>
+              <div class="mt-4 text-sm font-bold text-primary">Read →</div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="sm:hidden mt-8">
+        <a href="/news" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary/10 hover:bg-primary/15 text-sm font-bold text-primary transition">
+          View all news <span class="opacity-70">→</span>
+        </a>
       </div>
     </div>
   </section>
