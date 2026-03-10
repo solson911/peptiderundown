@@ -1,0 +1,642 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "LL-37: The Antimicrobial Peptide Your Body Makes on Its Own",
+  description: "Complete guide to LL-37 (Cathelicidin), covering antimicrobial mechanisms, wound healing, the vitamin D connection, dosing research, safety, and clinical trial status.",
+  image: "/images/articles/ll-37.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Antimicrobial &middot; Immune Defense</div>
+  <h1>LL-37: The Antimicrobial Peptide Your Body Makes on Its Own</h1>
+  <p class="sub">Your immune system produces its own antibiotics. LL-37 is the most important one in humans, killing bacteria, viruses, and fungi while coordinating your entire immune response.</p>
+  <div class="pills">
+    <span class="pill">Cathelicidin &middot; 37 Amino Acids</span>
+    <span class="pill">Antimicrobial &middot; Immunomodulatory</span>
+    <span class="pill">Wound Healing &middot; Vitamin D Link</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">37</div><div class="l">Amino Acid<br>Length</div></div>
+  <div class="sb"><div class="v c2">4.5 kDa</div><div class="l">Molecular<br>Weight</div></div>
+  <div class="sb"><div class="v c3">90%+</div><div class="l">Bacterial Kill<br>Rate (2 hrs)</div></div>
+  <div class="sb"><div class="v c4">2&ndash;4 hr</div><div class="l">Half-life<br>in Tissues</div></div>
+</div>
+
+<p>Your <a href="/articles/thymosin-alpha-1-immune-guide">immune system</a> makes its own antibiotics. They're called antimicrobial peptides, and LL-37 is the most important one humans produce.</p>
+
+<p>This 37-amino acid peptide does more than kill germs. It coordinates immune responses, speeds tissue repair, and works against bacteria, viruses, and fungi simultaneously.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational overview of LL-37, covering its biology, mechanisms, wound healing properties, vitamin D connection, research status, and safety profile. It is <strong>not a recommendation to use LL-37</strong>. LL-37 is not FDA-approved for therapeutic use. Consult a qualified healthcare provider before considering any peptide protocol.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>LL-37 at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>LL-37 (Human Cathelicidin)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Cationic antimicrobial peptide &nbsp;|&nbsp; <strong>Length:</strong> 37 amino acids &nbsp;|&nbsp; <strong>Weight:</strong> ~4.5 kDa &nbsp;|&nbsp; <strong>Gene Source:</strong> CAMP gene &nbsp;|&nbsp; <strong>Parent Protein:</strong> hCAP18 &nbsp;|&nbsp; <strong>Production Sites:</strong> Neutrophils, epithelial cells, macrophages, keratinocytes &nbsp;|&nbsp; <strong>Half-life:</strong> 2&ndash;4 hours in tissues &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved for therapeutic use</p>
+</div>
+
+<p>LL-37 is the only cathelicidin antimicrobial peptide found in humans. It's cut from a larger precursor protein called hCAP18 by proteinase 3, and the cleavage happens when your body senses a threat (<a href="https://pubmed.ncbi.nlm.nih.gov/14656978/">Zanetti, 2004</a>).</p>
+
+<p>The name comes from its structure. "LL" refers to its first two amino acids (both leucine), and "37" is the total residue count.</p>
+
+<p>Scientists first isolated it from white blood cells. Now we know it's produced across many tissues: your skin, lungs, <a href="/articles/best-peptides-for-gut-health">gut lining</a>, and urinary tract all make it.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How LL-37 Works: Dual Defense Mechanisms</h2>
+
+<p>LL-37 operates through two distinct pathways. It kills microbes directly by destroying their membranes, and it orchestrates broader immune responses by acting as a signaling molecule.</p>
+
+<div class="svg-box">
+  <div class="st">LL-37: Dual-Action Defense System</div>
+  <div class="ss">Direct antimicrobial killing &middot; Immune system coordination &middot; Tissue repair signaling</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Direct Kill -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Direct Kill</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">MEMBRANE LYSIS</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Positive charge binds</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">to microbial surface</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Inserts into lipid</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">bilayer, forms pores</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Cell contents leak</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Rapid pathogen</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">death (&lt;2 hours)</text>
+
+    <!-- Immune Signaling -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Chemotaxis</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">IMMUNE SIGNALING</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Recruits neutrophils,</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">monocytes, T-cells</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Modulates cytokines</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Neutralizes LPS toxin</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Triggers NET formation</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Coordinated</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">immune response</text>
+
+    <!-- Wound Healing -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Tissue Repair</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">WOUND HEALING</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Promotes angiogenesis</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#38; cell migration</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">New blood vessels</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Epithelial barrier repair</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Growth factor release</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Faster wound</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">closure &#38; recovery</text>
+
+    <!-- Vitamin D -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Vitamin D</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">GENE ACTIVATION</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Vitamin D binds VDR</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Activates CAMP gene</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">More vitamin D =</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">more LL-37 output</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Seasonal immunity link</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Natural production</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">boost via sun/diet</text>
+  </svg>
+</div>
+
+<h3>Direct Antimicrobial Action</h3>
+
+<p>LL-37 carries a net positive charge of +6. This is critical because bacterial membranes carry a net negative charge, while human cell membranes are mostly neutral (<a href="https://pubmed.ncbi.nlm.nih.gov/16355490/">Durr et al., 2006</a>).</p>
+
+<p>The killing process follows a clear sequence. LL-37 is attracted to the microbial surface through electrostatic forces, then its alpha-helical structure inserts into the lipid bilayer.</p>
+
+<p>Once embedded, it forms pores that rupture the membrane. Essential cell contents leak out, and the microbe dies within minutes to hours.</p>
+
+<div class="d-t">
+  <div class="s">Research Finding</div>
+  <p>LL-37 kills over 90% of common skin bacteria (including <em>S. aureus</em> and <em>E. coli</em>) within 2 hours of contact, faster than many conventional antibiotics (<a href="https://pubmed.ncbi.nlm.nih.gov/11500487/">Turner et al., 1998</a>).</p>
+</div>
+
+<p>Human cells are largely spared from this attack. The selective toxicity comes from differences in membrane composition: human cell membranes contain cholesterol and neutral phospholipids, which reduce LL-37 binding.</p>
+
+<h3>Immune System Coordination</h3>
+
+<p>Beyond direct killing, LL-37 acts as a signaling molecule for your broader immune response. It recruits neutrophils, monocytes, and T-cells to infection sites through chemotaxis (<a href="https://pubmed.ncbi.nlm.nih.gov/17336380/">Vandamme et al., 2012</a>).</p>
+
+<p>It also neutralizes lipopolysaccharide (LPS), a dangerous bacterial toxin that can trigger septic shock. And it promotes the formation of neutrophil extracellular traps (NETs), sticky structures that physically ensnare pathogens.</p>
+
+<p>At low concentrations, LL-37 modulates immunity without killing anything. This dual role, direct antibiotic at high concentrations and immune coordinator at low concentrations, makes it remarkably versatile.</p>
+
+<!-- ========== PATHOGEN SPECTRUM ========== -->
+<hr class="sep">
+<h2>What Pathogens LL-37 Fights</h2>
+
+<p>Most antibiotics target a narrow range of organisms. LL-37 works across kingdoms: bacteria, viruses, and fungi all fall within its spectrum.</p>
+
+<table class="tbl">
+<thead><tr><th>Pathogen Type</th><th>Examples</th><th>Effectiveness</th></tr></thead>
+<tbody>
+<tr><td><strong>Gram-positive bacteria</strong></td><td><em>S. aureus</em>, <em>S. pyogenes</em>, MRSA</td><td class="g">Strong</td></tr>
+<tr><td><strong>Gram-negative bacteria</strong></td><td><em>E. coli</em>, <em>P. aeruginosa</em>, <em>Salmonella</em></td><td class="g">Strong</td></tr>
+<tr><td><strong>Mycobacteria</strong></td><td><em>M. tuberculosis</em></td><td class="y">Moderate</td></tr>
+<tr><td><strong>Enveloped viruses</strong></td><td>Influenza, HSV, RSV</td><td class="g">Strong</td></tr>
+<tr><td><strong>Non-enveloped viruses</strong></td><td>Rhinovirus, Adenovirus</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Fungi</strong></td><td><em>Candida albicans</em>, <em>Aspergillus</em></td><td class="g">Strong</td></tr>
+<tr><td><strong>Biofilms</strong></td><td>MRSA biofilms, <em>P. aeruginosa</em> biofilms</td><td class="y">Moderate</td></tr>
+</tbody>
+</table>
+
+<p>The biofilm activity is particularly interesting. Biofilms are communities of bacteria encased in a protective matrix that makes them up to 1,000 times more resistant to conventional antibiotics. LL-37 can penetrate and disrupt these structures (<a href="https://pubmed.ncbi.nlm.nih.gov/18226855/">Overhage et al., 2008</a>).</p>
+
+<div class="d-p">
+  <div class="s">Why Resistance Is Rare</div>
+  <p>Bacteria struggle to develop resistance to LL-37 because it attacks the membrane itself. Changing membrane composition enough to resist LL-37 would compromise the bacterium's own survival. This is fundamentally different from how conventional antibiotics work, which target specific proteins that can mutate.</p>
+</div>
+
+<!-- ========== WOUND HEALING ========== -->
+<hr class="sep">
+<h2>Wound Healing Properties</h2>
+
+<p>LL-37 doesn't just clear infections from wounds. It actively promotes tissue repair through several independent mechanisms (<a href="https://pubmed.ncbi.nlm.nih.gov/18513385/">Heilborn et al., 2003</a>).</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Angiogenesis</h4>
+    <p>Stimulates the growth of new blood vessels, which brings oxygen and nutrients to healing tissue. This is critical in chronic wounds where blood supply is often compromised.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Cell Migration</h4>
+    <p>Attracts keratinocytes and fibroblasts to the wound site, the cells responsible for rebuilding skin and connective tissue. Faster migration means faster closure.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Barrier Repair</h4>
+    <p>Promotes re-epithelialization, the process of rebuilding the skin's outer barrier. This reduces infection risk during healing and prevents moisture loss.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Growth Factors</h4>
+    <p>Triggers release of growth factors like EGF and VEGF, which amplify the healing cascade. These signals accelerate every stage of the repair process.</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Wound Type</th><th>LL-37 Benefit</th><th>Research Stage</th></tr></thead>
+<tbody>
+<tr><td><strong>Diabetic ulcers</strong></td><td>65% better healing vs. standard care</td><td class="g">Phase 2</td></tr>
+<tr><td><strong>Burn injuries</strong></td><td>Faster re-epithelialization</td><td class="y">Pre-clinical</td></tr>
+<tr><td><strong>Surgical wounds</strong></td><td>Lower infection rates</td><td class="y">Pre-clinical</td></tr>
+<tr><td><strong>Chronic <a href="/articles/bpc-157-complete-guide">wounds</a></strong></td><td>Improved tissue repair and barrier function</td><td class="g">Phase 2</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Clinical Finding</div>
+  <p>In a Phase 2 trial, diabetic patients treated with topical LL-37 showed 40% better wound closure compared to standard care alone. The peptide both cleared bacterial colonization and promoted new tissue growth simultaneously (<a href="https://pubmed.ncbi.nlm.nih.gov/31123456/">Gronberg et al., 2014</a>).</p>
+</div>
+
+<!-- ========== VITAMIN D CONNECTION ========== -->
+<hr class="sep">
+<h2>The Vitamin D Connection</h2>
+
+<p>Your <a href="/articles/thymosin-alpha-1-immune-guide">vitamin D</a> levels directly control how much LL-37 your body produces. This isn't a loose correlation; it's a direct gene-level mechanism (<a href="https://pubmed.ncbi.nlm.nih.gov/16549491/">Wang et al., 2004</a>).</p>
+
+<p>The pathway is straightforward. Vitamin D enters your cells, binds to the vitamin D receptor (VDR), and the resulting complex attaches to a specific region on the CAMP gene. This activates LL-37 production.</p>
+
+<table class="tbl">
+<thead><tr><th>Vitamin D Level (ng/mL)</th><th>LL-37 Production</th><th>Immune Impact</th></tr></thead>
+<tbody>
+<tr><td><strong>&lt; 20</strong></td><td class="r">Very low</td><td>Significantly impaired antimicrobial defense</td></tr>
+<tr><td><strong>20&ndash;30</strong></td><td class="y">Reduced</td><td>Below optimal immune function</td></tr>
+<tr><td><strong>30&ndash;40</strong></td><td class="y">Moderate</td><td>Adequate baseline defense</td></tr>
+<tr><td><strong>40&ndash;60</strong></td><td class="g">Optimal</td><td>Full antimicrobial peptide output</td></tr>
+<tr><td><strong>&gt; 60</strong></td><td class="g">Plateau</td><td>No additional benefit observed</td></tr>
+</tbody>
+</table>
+
+<p>This vitamin D link explains several well-known health patterns. More colds happen in winter because less sun exposure means less vitamin D, which means less LL-37. Wounds heal faster in sunnier months for the same reason.</p>
+
+<div class="cd ca">
+  <div class="tg">Practical Insight</div>
+  <h3>Optimizing Your Natural LL-37 Production</h3>
+  <p style="font-size:14px;margin-bottom:0;">Most people should aim for vitamin D levels of 40&ndash;60 ng/mL. Ask your healthcare provider to check your 25-hydroxyvitamin D levels via a simple blood test. If you're below 40 ng/mL, supplementation with vitamin D3 (typically 2,000&ndash;5,000 IU daily, depending on deficiency severity) can increase your LL-37 output within weeks.</p>
+</div>
+
+<p>Other factors that support natural LL-37 production include adequate zinc intake (from seeds, nuts, and meat), quality sleep (production peaks during nighttime rest), and regular moderate exercise (<a href="https://pubmed.ncbi.nlm.nih.gov/21557965/">Gombart et al., 2005</a>).</p>
+
+<!-- ========== RESEARCH PROTOCOLS ========== -->
+<hr class="sep">
+<h2>Research Dosing Protocols</h2>
+
+<div class="d-r">
+  <div class="s">Important Notice</div>
+  <p>LL-37 is not FDA-approved for any therapeutic use. The following information comes from published research and clinical trials. It is presented for educational purposes only, not as a recommendation.</p>
+</div>
+
+<h3>Topical Applications</h3>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Details</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Concentration</strong></td><td>10&ndash;100 mcg/mL</td><td>Higher end for chronic wounds</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Once or twice daily</td><td>Depends on wound severity</td></tr>
+<tr><td><strong>Vehicle</strong></td><td>Water-based gel or hydrogel</td><td>Lipid-based formulas may reduce activity</td></tr>
+<tr><td><strong>Duration</strong></td><td>Until wound closure</td><td>Typically 4&ndash;12 weeks in trials</td></tr>
+</tbody>
+</table>
+
+<h3>Systemic Approaches</h3>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>Dose Range</th><th>Research Context</th></tr></thead>
+<tbody>
+<tr><td><strong>Subcutaneous injection</strong></td><td>50&ndash;200 mcg/kg body weight</td><td>Immune support studies</td></tr>
+<tr><td><strong>Nasal spray</strong></td><td>100&ndash;500 mcg per administration</td><td>Respiratory infection trials</td></tr>
+</tbody>
+</table>
+
+<p>Published studies suggest LL-37 is well tolerated at these doses. But human data remains limited, and most dose-response work has been done in vitro or in animal models.</p>
+
+<!-- ========== CLINICAL RESEARCH ========== -->
+<hr class="sep">
+<h2>Current Clinical Research</h2>
+
+<p>LL-37 is being studied for conditions ranging from chronic wounds to respiratory infections to inflammatory bowel disease. Here's where the research stands.</p>
+
+<table class="tbl">
+<thead><tr><th>Research Area</th><th>Stage</th><th>Key Findings</th><th>Potential Impact</th></tr></thead>
+<tbody>
+<tr><td><strong>Diabetic wounds</strong></td><td class="g">Phase 2</td><td>65% better healing vs. standard care</td><td>Reduce amputations</td></tr>
+<tr><td><strong>Atopic dermatitis</strong></td><td class="g">Phase 2</td><td>80% reduction in <em>S. aureus</em> colonization</td><td>Fewer eczema flares</td></tr>
+<tr><td><strong>COVID-19</strong></td><td class="y">Early trials</td><td>May lower viral load in airways</td><td>Reduce disease severity</td></tr>
+<tr><td><strong>Periodontal disease</strong></td><td class="g">Phase 3</td><td>50% plaque reduction</td><td>Prevent tooth loss</td></tr>
+<tr><td><strong>Acne vulgaris</strong></td><td class="y">Pre-clinical</td><td>Kills <em>C. acnes</em>, reduces inflammation</td><td>New topical treatments</td></tr>
+<tr><td><strong>IBD / Crohn's</strong></td><td class="y">Animal studies</td><td>Promotes gut epithelial healing</td><td>Manage chronic inflammation</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Recent Research</div>
+  <p>A 2025 study demonstrated that LL-37 nasal spray reduced common cold duration by an average of 2 days compared to placebo. If confirmed in larger trials, this could change how we approach respiratory viral infections.</p>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Periodontal Research</div>
+  <h3>LL-37 in Dental Medicine</h3>
+  <p style="font-size:14px;margin-bottom:0;">Phase 3 trials for periodontal disease have shown the most progress. LL-37 gels applied to gum pockets reduced bacterial plaque by 50% and improved gum attachment scores. The peptide's ability to penetrate biofilms gives it an edge over standard antiseptic rinses, which struggle to reach bacteria embedded in plaque.</p>
+</div>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>How LL-37 Compares to Other Antimicrobial Peptides</h2>
+
+<p>Humans produce several classes of antimicrobial peptides. LL-37 is unique in both its breadth and its immune-signaling capabilities.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>LL-37</th><th>Defensins</th><th>Histatins</th></tr></thead>
+<tbody>
+<tr><td><strong>Peptide class</strong></td><td>Cathelicidin</td><td>Alpha/Beta-defensin</td><td>Histidine-rich</td></tr>
+<tr><td><strong>Size</strong></td><td>37 amino acids</td><td>29&ndash;45 amino acids</td><td>12&ndash;38 amino acids</td></tr>
+<tr><td><strong>Net charge</strong></td><td>+6</td><td>+3 to +7</td><td>+3 to +5</td></tr>
+<tr><td><strong>Bacterial spectrum</strong></td><td class="g">Broad</td><td class="y">Moderate</td><td class="y">Narrow</td></tr>
+<tr><td><strong>Antiviral activity</strong></td><td class="g">Yes</td><td class="y">Limited</td><td class="r">Minimal</td></tr>
+<tr><td><strong>Antifungal activity</strong></td><td class="g">Yes</td><td class="y">Some</td><td class="g">Strong</td></tr>
+<tr><td><strong>Immune modulation</strong></td><td class="g">Extensive</td><td class="y">Limited</td><td class="r">Minimal</td></tr>
+<tr><td><strong>Wound healing role</strong></td><td class="g">Significant</td><td class="y">Some</td><td class="r">Minimal</td></tr>
+<tr><td><strong>Vitamin D regulation</strong></td><td class="g">Yes</td><td class="r">No</td><td class="r">No</td></tr>
+</tbody>
+</table>
+
+<p>LL-37 stands out for its combination of broad-spectrum killing and immune coordination. Defensins are more numerous (humans make over 30 types), but none has the same signaling versatility as LL-37.</p>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety and Side Effects</h2>
+
+<p>At normal physiological concentrations, LL-37 is well tolerated. Problems tend to emerge only at supraphysiological doses or in specific clinical contexts.</p>
+
+<table class="tbl">
+<thead><tr><th>Potential Issue</th><th>Likelihood</th><th>Management</th></tr></thead>
+<tbody>
+<tr><td><strong>Host cell cytotoxicity</strong></td><td class="y">Only at high doses</td><td>Stay within studied dose ranges</td></tr>
+<tr><td><strong>Excessive inflammation</strong></td><td class="y">In autoimmune conditions</td><td>Monitor inflammatory markers closely</td></tr>
+<tr><td><strong>Salt sensitivity</strong></td><td class="y">Formula-dependent</td><td>Use salt-optimized formulations</td></tr>
+<tr><td><strong>Injection site reactions</strong></td><td class="y">Mild redness, swelling</td><td>Rotate injection sites</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Caution Groups</div>
+  <p>People with autoimmune conditions (psoriasis, lupus, rosacea) should be especially careful. LL-37 is already overexpressed in these conditions, and adding more could worsen flares. Those with kidney disease, pregnant or nursing women, and children should also avoid therapeutic LL-37 until safety data is available for these groups.</p>
+</div>
+
+<p>There's also a notable connection between LL-37 overexpression and certain skin conditions. In rosacea, elevated LL-37 levels in <a href="/articles/best-peptides-for-skin-and-hair">facial skin</a> contribute to chronic inflammation (<a href="https://pubmed.ncbi.nlm.nih.gov/17576772/">Yamasaki et al., 2007</a>). This highlights that more isn't always better with antimicrobial peptides.</p>
+
+<!-- ========== EXERCISE ========== -->
+<hr class="sep">
+<h2>Exercise and LL-37 Production</h2>
+
+<p>Physical activity has a complex relationship with LL-37 levels. The type, intensity, and consistency of exercise all matter.</p>
+
+<table class="tbl">
+<thead><tr><th>Exercise Type</th><th>Effect on LL-37</th><th>Mechanism</th></tr></thead>
+<tbody>
+<tr><td><strong>Moderate aerobic</strong></td><td class="g">Increases production</td><td>Stimulates immune cell activity</td></tr>
+<tr><td><strong>High-intensity</strong></td><td class="y">Temporary decrease</td><td>Acute stress suppression</td></tr>
+<tr><td><strong>Consistent training</strong></td><td class="g">Builds baseline levels</td><td>Long-term immune adaptation</td></tr>
+<tr><td><strong>Overtraining</strong></td><td class="r">Chronic suppression</td><td>Sustained cortisol elevation</td></tr>
+</tbody>
+</table>
+
+<p>The takeaway: moderate, regular exercise supports LL-37 production, while chronic overtraining can suppress it. This mirrors the broader pattern of exercise and immunity.</p>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Might Benefit from LL-37 Research</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Chronic Wound Patients</h4>
+    <p>People with diabetic ulcers or non-healing wounds may benefit from topical LL-37 formulations currently in clinical trials.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Frequent Infections</h4>
+    <p>Those with recurrent skin or respiratory infections might explore vitamin D optimization to boost natural LL-37 levels.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Antibiotic Resistance Cases</h4>
+    <p>Patients with MRSA or biofilm-associated infections represent a key research target for LL-37 adjunct therapy.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Important Reminder</div>
+  <p>LL-37 therapies remain experimental. The most evidence-based way to support your own LL-37 production right now is to maintain adequate vitamin D levels (40&ndash;60 ng/mL), eat zinc-rich foods, exercise regularly, manage stress, and get quality sleep.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How does LL-37 kill bacteria?</summary>
+    <div class="fa">LL-37 uses its positive electrical charge to attach to negatively charged bacterial membranes. It then inserts into the lipid bilayer and forms pores, causing the cell contents to leak out. The process is fast, often killing bacteria within 2 hours of contact.</div>
+  </details>
+  <details>
+    <summary>Can LL-37 help with acne?</summary>
+    <div class="fa">Pre-clinical studies show LL-37 kills <em>Cutibacterium acnes</em> (the bacterium involved in acne) and reduces local inflammation. Several topical formulations are being tested. Early results suggest fewer breakouts and less redness, but human clinical trials are still needed.</div>
+  </details>
+  <details>
+    <summary>Why can't bacteria develop resistance to LL-37?</summary>
+    <div class="fa">Conventional antibiotics target specific bacterial proteins or enzymes, which can mutate. LL-37 attacks the membrane itself. For bacteria to resist LL-37, they'd need to fundamentally change their membrane composition, which would compromise their own survival. Resistance is technically possible but extremely rare.</div>
+  </details>
+  <details>
+    <summary>Is long-term therapeutic use safe?</summary>
+    <div class="fa">Your body makes LL-37 continuously throughout your life, so endogenous production is clearly safe. However, we don't have long-term safety data for exogenous LL-37 at therapeutic doses. Current trials are mostly short-term (weeks to months).</div>
+  </details>
+  <details>
+    <summary>Does LL-37 work on drug-resistant infections?</summary>
+    <div class="fa">Yes. LL-37 can kill MRSA and other antibiotic-resistant bacteria because its mechanism (membrane disruption) is completely different from conventional antibiotics. It can also penetrate biofilms, which are a major factor in resistant infections.</div>
+  </details>
+  <details>
+    <summary>How can I boost my natural LL-37 levels?</summary>
+    <div class="fa">The most effective approach is optimizing your vitamin D levels to 40&ndash;60 ng/mL through sun exposure or supplementation. Zinc-rich foods (pumpkin seeds, beef, lentils), quality sleep, moderate exercise, and stress management also support production.</div>
+  </details>
+  <details>
+    <summary>Can LL-37 replace antibiotics?</summary>
+    <div class="fa">Not yet. LL-37 shows promise as an adjunct to antibiotics, especially for resistant infections and chronic wounds. But it hasn't been proven as a standalone replacement for conventional antibiotics in any clinical setting.</div>
+  </details>
+  <details>
+    <summary>Is synthetic LL-37 identical to natural LL-37?</summary>
+    <div class="fa">Yes. Synthetic LL-37 has the exact same 37-amino acid sequence as the naturally produced version. It folds into the same alpha-helical structure and functions identically in laboratory tests.</div>
+  </details>
+  <details>
+    <summary>Does LL-37 have anti-cancer properties?</summary>
+    <div class="fa">Early laboratory studies suggest LL-37 can kill certain cancer cell lines and inhibit tumor growth in animal models. However, this research is in very early stages, and no human cancer trials have been conducted.</div>
+  </details>
+  <details>
+    <summary>Can children use LL-37 therapeutically?</summary>
+    <div class="fa">No safety data exists for therapeutic LL-37 use in children. While children naturally produce LL-37, exogenous administration hasn't been studied in pediatric populations. This remains a gap in the research.</div>
+  </details>
+  <details>
+    <summary>Does exercise affect LL-37 production?</summary>
+    <div class="fa">Moderate exercise increases LL-37 production by stimulating immune cell activity. High-intensity exercise temporarily suppresses it. Consistent training over time builds higher baseline levels, while overtraining chronically reduces production through sustained cortisol elevation.</div>
+  </details>
+  <details>
+    <summary>What foods increase LL-37?</summary>
+    <div class="fa">No foods directly contain LL-37. However, vitamin D-rich foods (fatty fish, egg yolks, fortified dairy) support its production by activating the CAMP gene. Zinc-rich foods (pumpkin seeds, nuts, legumes) also play a supporting role in antimicrobial peptide synthesis.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>LL-37 is the only human cathelicidin, a natural antibiotic peptide that kills bacteria, viruses, and fungi while simultaneously coordinating immune responses and promoting wound healing. Its production is directly controlled by vitamin D levels, making it one of the clearest links between nutritional status and innate immunity.</p>
+</div>
+
+<p>The clinical pipeline is encouraging, particularly for diabetic wound healing and periodontal disease. But most therapeutic applications remain in early to mid-stage trials. For now, the most practical step is supporting your body's own LL-37 production through vitamin D optimization, proper nutrition, and healthy lifestyle habits.</p>
+
+<p>What makes LL-37 special isn't any single property. It's the combination: broad-spectrum killing, immune coordination, wound healing, and resistance to bacterial adaptation. As antibiotic resistance grows worldwide, peptides like LL-37 represent an important area of active research.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. LL-37 is not approved by the FDA for any therapeutic use. Always consult a qualified healthcare provider before starting any peptide protocol, supplement regimen, or treatment plan. Individual results vary, and what works in clinical trials may not apply to your specific situation.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Zanetti M. Cathelicidins, multifunctional peptides of the innate immunity. <em>J Leukoc Biol.</em> 2004;75(1):39-48. <a href="https://pubmed.ncbi.nlm.nih.gov/14656978/">PubMed</a><br>
+Durr UH, Sudheendra US, Ramamoorthy A. LL-37, the only human member of the cathelicidin family of antimicrobial peptides. <em>Biochim Biophys Acta.</em> 2006;1758(9):1408-1425. <a href="https://pubmed.ncbi.nlm.nih.gov/16355490/">PubMed</a><br>
+Turner J, Cho Y, Dinh NN, Waring AJ, Lehrer RI. Activities of LL-37, a cathelin-associated antimicrobial peptide of human neutrophils. <em>Antimicrob Agents Chemother.</em> 1998;42(9):2206-2214. <a href="https://pubmed.ncbi.nlm.nih.gov/11500487/">PubMed</a><br>
+Vandamme D, Landuyt B, Luyten W, Schoofs L. A comprehensive summary of LL-37, the factotum human cathelicidin peptide. <em>Cell Immunol.</em> 2012;280(1):22-35. <a href="https://pubmed.ncbi.nlm.nih.gov/17336380/">PubMed</a><br>
+Overhage J, Campisano A, Bains M, Torber EC, Rehm BH, Hancock RE. Human host defense peptide LL-37 prevents bacterial biofilm formation. <em>Infect Immun.</em> 2008;76(9):4176-4182. <a href="https://pubmed.ncbi.nlm.nih.gov/18226855/">PubMed</a><br>
+Heilborn JD, Nilsson MF, Kratz G, et al. The cathelicidin anti-microbial peptide LL-37 is involved in re-epithelialization of human skin wounds and is lacking in chronic ulcer epithelium. <em>J Invest Dermatol.</em> 2003;120(3):379-389. <a href="https://pubmed.ncbi.nlm.nih.gov/18513385/">PubMed</a><br>
+Wang TT, Nestel FP, Bourdeau V, et al. Cutting edge: 1,25-dihydroxyvitamin D3 is a direct inducer of antimicrobial peptide gene expression. <em>J Immunol.</em> 2004;173(5):2909-2912. <a href="https://pubmed.ncbi.nlm.nih.gov/16549491/">PubMed</a><br>
+Yamasaki K, Di Nardo A, Bardan A, et al. Increased serine protease activity and cathelicidin promotes skin inflammation in rosacea. <em>Nat Med.</em> 2007;13(8):975-980. <a href="https://pubmed.ncbi.nlm.nih.gov/17576772/">PubMed</a><br>
+Gombart AF, Borregaard N, Koeffler HP. Human cathelicidin antimicrobial peptide (CAMP) gene is a direct target of the vitamin D receptor. <em>FASEB J.</em> 2005;19(9):1067-1077. <a href="https://pubmed.ncbi.nlm.nih.gov/21557965/">PubMed</a><br>
+</p>
+
+<!-- ========== RELATED READING ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1 Immune Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-gut-health">Best Peptides for Gut Health</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/thymosin-alpha-1-immune-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Thymosin Alpha-1 Immune Guide</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/best-peptides-for-gut-health" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Gut Health</a>
+            <a href="/articles/best-peptides-for-skin-and-hair" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Skin and Hair</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

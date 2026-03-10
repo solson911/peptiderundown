@@ -1,0 +1,611 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "DSIP: Understanding the Sleep-Regulating Peptide",
+  description: "Complete guide to delta sleep-inducing peptide (DSIP). What it is, how it may affect sleep architecture and stress signals, dosing themes, safety, and FAQs.",
+  image: "/images/articles/dsip.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1520 0%,#121E33 40%,#1A2D4A 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- GRADIENT HERO -->
+<div class="hero">
+  <div class="hero-k">Peptide Guides &middot; Sleep &amp; Recovery</div>
+  <h1>DSIP: Understanding the Sleep-Regulating Peptide</h1>
+  <p class="sub">Delta sleep-inducing peptide is discussed as a tool for sleep architecture and stress signaling, not simple sedation. Here's what the research says and what it doesn't.</p>
+  <div class="pills">
+    <span class="pill">DSIP</span>
+    <span class="pill">Sleep</span>
+    <span class="pill">Slow-Wave</span>
+    <span class="pill">Stress</span>
+    <span class="pill">Recovery</span>
+  </div>
+</div>
+
+<!-- STAT STRIPS -->
+<div class="sr">
+  <div class="sb"><div class="v c1">9</div><div class="l">Amino Acids<br>in Sequence</div></div>
+  <div class="sb"><div class="v c2">1970s</div><div class="l">First<br>Described</div></div>
+  <div class="sb"><div class="v c3">SWS</div><div class="l">Primary Target<br>Slow-Wave Sleep</div></div>
+  <div class="sb"><div class="v c4">HPA</div><div class="l">Axis<br>Modulation</div></div>
+</div>
+
+<!-- INTRO -->
+<p>Good sleep supports mood, metabolic health, recovery, and focus. When sleep gets shaky, many people reach for sedatives that knock them out but don't improve actual sleep quality.</p>
+
+<p>Delta sleep-inducing peptide (DSIP) is discussed differently. Instead of acting like a sedative, DSIP is framed as a peptide that may influence sleep architecture and stress signaling at a deeper level.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of DSIP covering its proposed mechanisms, research findings, dosing themes, and safety profile. It is <strong>not a recommendation to use DSIP</strong>. DSIP is not FDA-approved. If you're dealing with insomnia or any medical condition, consult a licensed healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>What Is DSIP?</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Delta Sleep-Inducing Peptide (DSIP)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Sequence:</strong> Trp-Ala-Gly-Gly-Asp-Ala-Ser-Gly-Glu &nbsp;|&nbsp; <strong>Type:</strong> Synthetic nonapeptide &nbsp;|&nbsp; <strong>Size:</strong> 9 amino acids &nbsp;|&nbsp; <strong>Origin:</strong> First described in 1970s sleep research &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection (most discussed) &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved; research compound in many regions &nbsp;|&nbsp; <strong>Primary Focus:</strong> Slow-wave sleep support, stress hormone regulation</p>
+</div>
+
+<p>DSIP was first identified in experiments that looked for blood-borne factors linked to sleep. Researchers were searching for a substance that could cross from one organism to another and promote sleep onset or depth.</p>
+
+<p>In most modern contexts, DSIP is discussed as a synthetic research peptide. It isn't available by prescription in the US or EU, and its regulatory status varies by country.</p>
+
+<p>If you're new to peptides, start with <a href="/articles/what-are-peptides-beginners-guide">What are peptides? Beginner's guide</a>. For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== SLEEP ARCHITECTURE ========== -->
+<hr class="sep">
+<h2>DSIP and Sleep Architecture</h2>
+
+<p>Sleep isn't one uniform state. It cycles through lighter non-REM stages, deep slow-wave sleep (stage 3 NREM), and REM sleep throughout the night.</p>
+
+<p>When DSIP is described as a "sleep peptide," the specific claim is usually that it may support slow-wave sleep quality and continuity. The goal isn't just falling asleep faster.</p>
+
+<div class="d-t">
+  <div class="s">Key Distinction</div>
+  <p>For many people, the real sleep problem isn't onset. It's fewer awakenings and more time spent in restorative deep sleep. That's where DSIP discussions tend to focus.</p>
+</div>
+
+<h3>Why Deep Sleep Matters for Recovery</h3>
+
+<p>Deep slow-wave sleep is the phase most associated with physical and cognitive recovery. Growth hormone pulses, memory consolidation, and immune regulation are all concentrated in this window.</p>
+
+<p>When slow-wave sleep gets fragmented by stress, alcohol, or age-related decline, recovery quality drops even if total sleep hours look acceptable on paper.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Physical Recovery</h4>
+    <p>Growth hormone release peaks during slow-wave sleep. Tissue repair, muscle protein synthesis, and metabolic regulation all depend on adequate time in this stage.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Cognitive Recovery</h4>
+    <p>Memory consolidation and synaptic pruning happen during deep sleep. Poor slow-wave sleep is linked with worse next-day focus and long-term cognitive decline.</p>
+  </div>
+</div>
+
+<p>If your sleep issue is primarily anxiety-driven rather than architecture-related, a different tool may be a better fit. See the <a href="/articles/selank-complete-guide">Selank complete guide</a> for an anxiolytic peptide approach.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How DSIP Might Work</h2>
+
+<p>The precise mechanism isn't fully settled. DSIP research touches several systems that overlap with sleep and stress, and the picture that emerges is more "modulator" than "sedative."</p>
+
+<div class="svg-box">
+  <div class="st">DSIP: Proposed Mechanisms of Action</div>
+  <div class="ss">HPA axis modulation &middot; Slow-wave support &middot; Stress buffering &middot; Pain signaling</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- HPA Axis -->
+    <rect x="15" y="10" width="160" height="240" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">HPA Axis</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">STRESS HORMONES</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Modulates ACTH</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#38; cortisol rhythms</text>
+    <text x="95" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Smoother stress</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">response at night</text>
+    <line x1="35" y1="175" x2="155" y2="175" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Fewer stress-driven</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">awakenings</text>
+
+    <!-- Slow-Wave -->
+    <rect x="190" y="10" width="160" height="240" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Delta Waves</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">SLOW-WAVE SLEEP</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Supports stage 3</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">NREM depth</text>
+    <text x="270" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">More restorative</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">deep sleep time</text>
+    <line x1="210" y1="175" x2="330" y2="175" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="270" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">GH pulses &#38;</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">recovery signals</text>
+
+    <!-- Neurotransmitters -->
+    <rect x="365" y="10" width="160" height="240" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Brain Rhythms</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">NEUROTRANSMITTER</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Influences GABA</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#38; serotonin balance</text>
+    <text x="445" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Supports transition</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">into sleep states</text>
+    <line x1="385" y1="175" x2="505" y2="175" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="445" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Smoother sleep</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">stage transitions</text>
+
+    <!-- Pain -->
+    <rect x="540" y="10" width="145" height="240" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Pain Signals</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">DISCOMFORT</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Discussed in</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">migraine &#38; pain</text>
+    <text x="612" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Less wakefulness</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">from discomfort</text>
+    <line x1="555" y1="175" x2="670" y2="175" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Better continuity</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">for pain sufferers</text>
+  </svg>
+</div>
+
+<h3>Stress Axis and Hormone Signaling</h3>
+
+<p>DSIP is often discussed in the context of HPA-axis signaling, the system where hormones like ACTH and cortisol regulate the stress response. Cortisol follows a circadian rhythm, and disruptions to that rhythm are one of the most common drivers of nighttime waking.</p>
+
+<p>Some research summaries suggest DSIP may help smooth stress responses at night, which could indirectly improve sleep continuity (<a href="https://pubmed.ncbi.nlm.nih.gov/6136327/">Graf &amp; Kastin, 1984</a>).</p>
+
+<div class="d-a">
+  <div class="s">Important Context</div>
+  <p>If your cortisol rhythm is off, the best first step is usually lifestyle and medical evaluation, not jumping straight to a research compound. Broken sleep from cortisol dysregulation can also signal conditions like Cushing's syndrome or chronic stress that need clinical attention.</p>
+</div>
+
+<h3>Neurotransmitters and Brain Rhythms</h3>
+
+<p>Sleep timing and depth depend on a balance of neurotransmitter systems and the brain's ability to settle into slow-wave patterns. DSIP is sometimes described as influencing those rhythms, particularly the transition from lighter sleep into deep stage 3 NREM.</p>
+
+<p>This is partly why DSIP is framed as a "quality" tool rather than a "knockout" tool. It's not suppressing wakefulness the way a sedative does. It may be supporting the brain's own sleep-staging machinery.</p>
+
+<table class="tbl">
+<thead><tr><th>Mechanism</th><th>What It's Linked With</th><th>Why It Could Matter</th></tr></thead>
+<tbody>
+<tr><td><strong>Slow-wave support</strong></td><td>Delta activity and stage 3 NREM</td><td class="g">Deeper sleep and recovery signals</td></tr>
+<tr><td><strong>Stress modulation</strong></td><td>Cortisol and ACTH regulation</td><td class="g">Fewer stress-driven awakenings</td></tr>
+<tr><td><strong>Pain signaling</strong></td><td>Migraine and pain model discussions</td><td class="y">Less wakefulness from discomfort</td></tr>
+<tr><td><strong>Neurotransmitter balance</strong></td><td>GABA and serotonin pathways</td><td class="y">Smoother transitions between sleep stages</td></tr>
+</tbody>
+</table>
+
+<!-- ========== RESEARCH ========== -->
+<hr class="sep">
+<h2>What the Research Says (and What It Doesn't)</h2>
+
+<p>DSIP research includes early human experiments, small observational reports, and animal work. The topic is interesting, but confidence should stay modest. There are no large randomized controlled trials by current standards.</p>
+
+<h3>Small Human Findings</h3>
+
+<p>Some older studies report improvements in slow-wave sleep metrics or subjective sleep quality. Sample sizes are often small and methods vary across studies (<a href="https://pubmed.ncbi.nlm.nih.gov/3923356/">Schneider-Helmert &amp; Schoenenberger, 1983</a>).</p>
+
+<table class="tbl">
+<thead><tr><th>Outcome</th><th>What's Been Reported</th><th>Limitations</th></tr></thead>
+<tbody>
+<tr><td><strong>Slow-wave sleep time</strong></td><td>Increases in some experiments</td><td class="y">Small cohorts, mixed protocols</td></tr>
+<tr><td><strong>Night awakenings</strong></td><td>Reductions reported</td><td class="y">Subjective measures vary</td></tr>
+<tr><td><strong>Morning alertness</strong></td><td>Improved in some reports</td><td class="y">Hard to separate from placebo</td></tr>
+<tr><td><strong>Sleep onset latency</strong></td><td>Some improvement noted</td><td class="r">Inconsistent across studies</td></tr>
+</tbody>
+</table>
+
+<h3>Pain and Stress-Related Sleep</h3>
+
+<p>A subset of DSIP discussion involves pain conditions, migraines, or stress-related sleep disruption. The interpretation is that if DSIP reduces stress signaling or improves deep sleep, secondary symptoms can feel more manageable.</p>
+
+<p>This isn't the same thing as DSIP being a proven treatment for any condition. The evidence is suggestive, not definitive.</p>
+
+<div class="d-p">
+  <div class="s">Research Context</div>
+  <p>Most DSIP human data comes from the 1980s and 1990s. Modern sleep research methodology has advanced significantly since then. These older findings are interesting starting points, not settled conclusions.</p>
+</div>
+
+<h3>Animal Research Highlights</h3>
+
+<p>Animal models have shown that DSIP administration can increase time spent in slow-wave sleep and modulate stress hormone levels. These findings support the general mechanistic picture but can't be directly translated to human outcomes (<a href="https://pubmed.ncbi.nlm.nih.gov/2872591/">Iyer et al., 1988</a>).</p>
+
+<p>Some preclinical work also suggests DSIP may have antioxidant properties and could influence body temperature regulation, both of which are relevant to sleep quality.</p>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing and Timing Themes</h2>
+
+<div class="d-r">
+  <div class="s">Important</div>
+  <p>This section is not medical advice. These are commonly discussed protocols from community and research contexts. <strong>Always work with a qualified healthcare provider</strong> before starting any peptide regimen.</p>
+</div>
+
+<p>DSIP is most commonly discussed as a once-daily, pre-bed subcutaneous injection. People usually time it so the peak effect aligns with the first part of the night, when slow-wave sleep tends to be highest.</p>
+
+<table class="tbl">
+<thead><tr><th>Factor</th><th>Common Theme</th><th>Practical Note</th></tr></thead>
+<tbody>
+<tr><td><strong>Timing</strong></td><td>30 to 60 minutes before bed</td><td>Avoid taking it too early if it causes drowsiness</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Once nightly</td><td>Consistency matters for sleep routines</td></tr>
+<tr><td><strong>Cycling</strong></td><td>Short blocks with breaks</td><td>Helps assess whether it's still contributing</td></tr>
+<tr><td><strong>Route</strong></td><td>Subcutaneous injection</td><td>Most discussed method in community reports</td></tr>
+</tbody>
+</table>
+
+<h3>Cycling Considerations</h3>
+
+<p>Because the long-term human dataset for DSIP is thin, most discussions recommend cycling rather than indefinite use. A common pattern mentioned is 2&ndash;4 weeks on, followed by a break of equal length.</p>
+
+<p>The break serves two purposes: it helps you assess whether DSIP was actually contributing to better sleep, and it avoids any potential for the body to adapt to exogenous peptide signals.</p>
+
+<table class="tbl">
+<thead><tr><th>Cycle Pattern</th><th>Duration On</th><th>Duration Off</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Conservative</strong></td><td>2 weeks</td><td>2 weeks</td><td class="g">Good for first-time assessment</td></tr>
+<tr><td><strong>Standard</strong></td><td>4 weeks</td><td>2&ndash;4 weeks</td><td class="y">Most commonly discussed pattern</td></tr>
+<tr><td><strong>Extended</strong></td><td>6&ndash;8 weeks</td><td>4 weeks</td><td class="r">Less data; discuss with provider</td></tr>
+</tbody>
+</table>
+
+<p>If you're handling injectable peptides, technique matters for both safety and effectiveness. See <a href="/articles/how-to-inject-peptides-subcutaneously">How to inject peptides subcutaneously</a> and <a href="/articles/how-to-store-peptides">How to store peptides</a>.</p>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>DSIP Compared to Common Sleep Aids</h2>
+
+<p>Many sleep aids increase sedation. DSIP is usually discussed as a sleep-architecture support tool, which makes it a fundamentally different category.</p>
+
+<p>Understanding where DSIP fits relative to more familiar options helps clarify what it is and what it isn't.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>DSIP (Research Framing)</th><th>Melatonin</th><th>Prescription Sedatives</th></tr></thead>
+<tbody>
+<tr><td><strong>Primary goal</strong></td><td>Deeper sleep and continuity</td><td>Circadian timing support</td><td>Sedation</td></tr>
+<tr><td><strong>Mechanism</strong></td><td>HPA modulation, SWS support</td><td>Melatonin receptor agonism</td><td>GABA enhancement</td></tr>
+<tr><td><strong>Next-day hangover</strong></td><td class="y">Sometimes</td><td class="y">Sometimes</td><td class="r">Common</td></tr>
+<tr><td><strong>Dependence risk</strong></td><td class="y">Not well established</td><td class="g">Low</td><td class="r">Higher</td></tr>
+<tr><td><strong>Best fit</strong></td><td>Sleep quality themes</td><td>Jet lag and schedule drift</td><td>Short-term severe insomnia</td></tr>
+<tr><td><strong>Evidence level</strong></td><td class="y">Limited human data</td><td class="g">Well-studied</td><td class="g">Extensive clinical trials</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Key Distinction</div>
+  <p>DSIP targets sleep quality and depth. Melatonin targets sleep timing. Sedatives target wakefulness suppression. These are three different problems with three different tools.</p>
+</div>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety, Side Effects, and Monitoring</h2>
+
+<p>DSIP is not an FDA-approved medication. Real-world safety depends on clinical oversight and product quality, both of which vary wildly in the peptide space.</p>
+
+<h3>Reported Side Effects</h3>
+
+<p>Side effect reports from community use tend to be mild. The most common complaints relate to timing errors (taking it too early) or product quality issues.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Mild grogginess</strong></td><td class="y">Occasional</td><td>Usually related to timing; resolves with adjustment</td></tr>
+<tr><td><strong>Vivid dreams</strong></td><td class="y">Occasional</td><td>Not always negative; some report it as a benefit</td></tr>
+<tr><td><strong>Headache</strong></td><td class="g">Rare</td><td>May relate to dehydration or product quality</td></tr>
+<tr><td><strong>Injection-site irritation</strong></td><td class="y">Occasional</td><td>Standard subcutaneous injection concern</td></tr>
+</tbody>
+</table>
+
+<h3>Safety Priorities</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--red);">Product Quality</h4>
+    <p>Contaminated products cause real harm. Third-party testing and clean injection technique are non-negotiable. If a product doesn't come with a certificate of analysis, don't use it.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Timing Discipline</h4>
+    <p>Taking a sleep-oriented peptide at inconsistent times undermines the very routine you're trying to build. Pair DSIP with a fixed bedtime schedule.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Medical Screening</h4>
+    <p>Depression, anxiety, and sleep apnea all cause poor sleep. A peptide won't fix a structural breathing problem or an untreated mood disorder. Get screened first.</p>
+  </div>
+</div>
+
+<div class="d-r">
+  <div class="s">Warning</div>
+  <p>If you snore heavily, stop breathing at night, or wake up gasping, prioritize a sleep apnea evaluation. Peptides won't fix obstructive breathing, and untreated sleep apnea carries serious cardiovascular risks.</p>
+</div>
+
+<!-- ========== WHO SHOULD CONSIDER ========== -->
+<hr class="sep">
+<h2>Who Might Consider DSIP (and Who Shouldn't)</h2>
+
+<p>Based on common discussion themes, DSIP tends to attract a specific type of sleep complaint. It's not positioned as a general-purpose sleep aid.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">May Be Worth Discussing</h4>
+    <p><strong>People who wake up frequently at night</strong> and feel like they never reach deep sleep. <strong>People who feel "tired but wired" at bedtime</strong>, suggesting a cortisol or HPA-axis component. <strong>People with stress-related sleep disruption</strong> who haven't responded to standard sleep hygiene changes.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Should Be Cautious</h4>
+    <p><strong>Pregnant or breastfeeding</strong> individuals. <strong>People with significant mental health conditions</strong> that affect sleep independently. <strong>Suspected or confirmed sleep apnea</strong> cases. <strong>Anyone taking sedating medications</strong> where interactions are unknown.</p>
+  </div>
+</div>
+
+<!-- ========== SLEEP PLAN ========== -->
+<hr class="sep">
+<h2>DSIP Works Best with a Basic Sleep Plan</h2>
+
+<p>If you're experimenting with any sleep tool, you'll get a cleaner read if the rest of your routine is stable. Even small changes in caffeine, bedtime, alcohol, or screen time can swamp the signal from a peptide.</p>
+
+<p>Here's a simple checklist people use to reduce noise while evaluating sleep changes.</p>
+
+<table class="tbl">
+<thead><tr><th>Habit</th><th>Target</th><th>Why It Helps</th></tr></thead>
+<tbody>
+<tr><td><strong>Consistent wake time</strong></td><td>Same time daily</td><td>Anchors circadian rhythm</td></tr>
+<tr><td><strong>Morning light</strong></td><td>5&ndash;15 minutes outside</td><td>Strengthens day-night signaling</td></tr>
+<tr><td><strong>Caffeine cutoff</strong></td><td>Early afternoon</td><td>Reduces late alertness</td></tr>
+<tr><td><strong>Bedroom temp</strong></td><td>Slightly cool (65&ndash;68&deg;F)</td><td>Supports deeper sleep</td></tr>
+<tr><td><strong>Wind-down routine</strong></td><td>20&ndash;40 minutes</td><td>Lowers stress activation before bed</td></tr>
+<tr><td><strong>Alcohol cutoff</strong></td><td>3+ hours before bed</td><td>Alcohol fragments slow-wave sleep</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Practical Advice</div>
+  <p>If you change five things at once, you can't tell what helped. Keep the plan boring while you collect data. A simple sleep diary (time to bed, time awake, subjective quality on a 1&ndash;10 scale) is usually enough to spot trends within 1&ndash;2 weeks.</p>
+</div>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Stacking Considerations</h2>
+
+<p>Some people discuss combining DSIP with other compounds that target related but distinct aspects of sleep and recovery. Any combination should be discussed with a healthcare provider.</p>
+
+<table class="tbl">
+<thead><tr><th>Stack Partner</th><th>Rationale</th><th>Evidence Level</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Melatonin</strong></td><td>DSIP for depth, melatonin for timing</td><td class="y">Anecdotal</td><td>Different targets; some pair them</td></tr>
+<tr><td><strong>Magnesium glycinate</strong></td><td>GABA support and muscle relaxation</td><td class="g">Well-studied independently</td><td>Low risk; common sleep supplement</td></tr>
+<tr><td><strong>Selank</strong></td><td>Anxiety reduction for stress-driven insomnia</td><td class="y">Peptide community reports</td><td>See <a href="/articles/selank-complete-guide">Selank guide</a></td></tr>
+<tr><td><strong>BPC-157</strong></td><td>Recovery support during sleep</td><td class="y">Different mechanism entirely</td><td>See <a href="/articles/bpc-157-complete-guide">BPC-157 guide</a></td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Caution</div>
+  <p>Combining multiple peptides without clinical oversight increases complexity and makes it harder to assess what's working. Start with one compound at a time and add slowly if needed.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How quickly does DSIP work?</summary>
+    <div class="fa">Some people report better sleep within a few nights, while others need a week or two to see a consistent pattern. Because sleep is sensitive to routine, it's worth keeping other variables stable while you assess. A sleep diary helps separate signal from noise.</div>
+  </details>
+  <details>
+    <summary>Does DSIP help you fall asleep?</summary>
+    <div class="fa">It's more often discussed for sleep continuity and depth than as a sleep-onset tool. If you can't fall asleep due to racing thoughts, addressing stress routines and light exposure often matters more than adding a peptide.</div>
+  </details>
+  <details>
+    <summary>Is DSIP habit-forming?</summary>
+    <div class="fa">There isn't strong evidence of dependency in the small studies that exist, but the human dataset is limited. That's one reason cycling and medical supervision are commonly recommended in community discussions.</div>
+  </details>
+  <details>
+    <summary>Can DSIP be combined with melatonin?</summary>
+    <div class="fa">Some people pair them because they target different parts of the sleep process: melatonin for circadian timing, DSIP for sleep depth. If you're taking other medications, consult a healthcare provider before combining sleep-related compounds.</div>
+  </details>
+  <details>
+    <summary>How should DSIP be stored?</summary>
+    <div class="fa">Storage depends on formulation. Most peptides are stored refrigerated after reconstitution and protected from light. Follow supplier guidance and keep handling sterile. See our full <a href="/articles/how-to-store-peptides">peptide storage guide</a> for details.</div>
+  </details>
+  <details>
+    <summary>What should I do before trying DSIP?</summary>
+    <div class="fa">Start with fundamentals: consistent sleep and wake times, morning light exposure, limited late caffeine, and a check for sleep apnea if symptoms fit. A healthcare provider can help rule out underlying causes before you consider a research peptide.</div>
+  </details>
+  <details>
+    <summary>Is DSIP legal?</summary>
+    <div class="fa">DSIP is classified as a research compound in most regions. It is not FDA-approved for any medical use. Legal status varies by country, so check your local regulations. It is not a controlled substance in most jurisdictions.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>DSIP is an interesting research peptide because it's discussed in terms of sleep architecture and stress signaling, not simple sedation. The evidence base includes small human findings and preclinical work, but it is not a proven treatment for any condition. If you're considering it, consult a healthcare provider, prioritize product quality, and measure outcomes honestly with a sleep log.</p>
+</div>
+
+<p>The core appeal of DSIP is its proposed specificity. Rather than suppressing wakefulness across the board, it's framed as targeting the parts of sleep that matter most for physical and cognitive recovery.</p>
+
+<p>Whether that framing holds up under more rigorous study remains to be seen. The existing data is promising enough to warrant continued research interest, but not strong enough to treat as settled science.</p>
+
+<!-- MEDICAL DISCLAIMER -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. DSIP is not FDA-approved for any medical use. Always consult with a qualified healthcare provider before starting any peptide protocol. Individual results vary, and self-experimentation with research compounds carries inherent risks. Never disregard professional medical advice because of something you've read online.
+</div>
+
+<!-- REFERENCES -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Graf MV, Kastin AJ. Delta sleep-inducing peptide (DSIP): a review. <em>Neurosci Biobehav Rev.</em> 1984;8(1):83-93. <a href="https://pubmed.ncbi.nlm.nih.gov/6136327/">PubMed</a><br>
+Schneider-Helmert D, Schoenenberger GA. Effects of DSIP in man: multifunctional psychophysiological properties. <em>Neuropsychobiology.</em> 1983;9(4):197-206. <a href="https://pubmed.ncbi.nlm.nih.gov/3923356/">PubMed</a><br>
+Iyer KS, et al. Delta sleep-inducing peptide (DSIP) and some of its analogues. <em>Peptides.</em> 1988;9(Suppl 1):193-197. <a href="https://pubmed.ncbi.nlm.nih.gov/2872591/">PubMed</a><br>
+Khvatova EM, et al. Delta sleep-inducing peptide: effect on the antioxidant defense system. <em>Bull Exp Biol Med.</em> 2003;135(5):453-455. <a href="https://pubmed.ncbi.nlm.nih.gov/12910275/">PubMed</a><br>
+Sudakov KV, et al. Delta sleep-inducing peptide and neuronal activity. <em>Neurosci Behav Physiol.</em> 2004;34(1):85-90. <a href="https://pubmed.ncbi.nlm.nih.gov/15032764/">PubMed</a><br>
+</p>
+
+<!-- RELATED READING -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/selank-complete-guide">Selank Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides?</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-inject-peptides-subcutaneously">How to Inject Peptides</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-store-peptides">How to Store Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/selank-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Selank: Anxiolytic Peptide Guide</a>
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+            <a href="/articles/how-to-inject-peptides-subcutaneously" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Inject Peptides</a>
+            <a href="/articles/how-to-store-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Store Peptides</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
