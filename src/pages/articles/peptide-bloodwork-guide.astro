@@ -1,0 +1,571 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptide Bloodwork Guide: Essential Labs Before and During Peptide Use",
+  description: "A practical guide to bloodwork for peptide users. Baseline labs, peptide-specific add-ons, timing, red flags, and how to track changes safely.",
+  image: "/images/articles/peptide-bloodwork-guide.webp",
+  date: "2026-02-15",
+  category: "How-To",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">How-To &middot; Lab Testing &middot; Monitoring</div>
+  <h1>Peptide Bloodwork Guide: Essential Labs Before and During Peptide Use</h1>
+  <p class="sub">Peptides can shift hormones, glucose control, inflammation, and organ stress markers. Bloodwork turns a protocol from guesswork into something you can actually track.</p>
+  <div class="pills">
+    <span class="pill">Baseline Labs</span>
+    <span class="pill">IGF-1 &middot; HbA1c &middot; CMP</span>
+    <span class="pill">Monitoring &middot; Red Flags</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">3</div><div class="l">Core Panels<br>for Baseline</div></div>
+  <div class="sb"><div class="v c2">IGF-1</div><div class="l">Key Marker for<br>GH Secretagogues</div></div>
+  <div class="sb"><div class="v c3">4&ndash;8</div><div class="l">Week Recheck<br>Cadence (Short Cycles)</div></div>
+  <div class="sb"><div class="v c4">HbA1c</div><div class="l">Every 3 Months<br>for GLP-1 Programs</div></div>
+</div>
+
+<p>Most peptide side effects don't announce themselves with symptoms. They show up on lab results first: a slow climb in liver enzymes, worsening fasting glucose, or an IGF-1 level that's drifting higher than intended.</p>
+
+<p>Bloodwork also prevents false alarms. If your ALT runs slightly high at baseline, you won't blame a peptide for something that was already there.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is a practical guide to lab testing for peptide users. It covers baseline panels, peptide-specific add-ons, timing rules, red flags, and simple testing schedules. It's educational, not medical advice.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Why Bloodwork Matters -->
+<h2>Why Bloodwork Matters for Peptides</h2>
+
+<p>Many peptide effects are invisible until labs reveal them. That includes rising liver enzymes, shifting insulin sensitivity, or a hormone marker that quietly moves out of range.</p>
+
+<p>Baseline labs give you a personal reference point. Without them, you're comparing follow-up numbers to a population average instead of to your own body.</p>
+
+<div class="d-a">
+  <div class="s">Important Context</div>
+  <p>If you have diabetes, kidney disease, liver disease, or a history of cancer, get clinician guidance before starting any peptide protocol. Lab interpretation depends heavily on your medical history and current medications.</p>
+</div>
+
+<p>If you're new to peptide safety basics, our overview on <a href="/articles/peptide-side-effects-what-to-know">peptide side effects</a> is a good starting point.</p>
+
+<hr class="sep">
+
+<!-- Baseline Lab Panel -->
+<h2>The Baseline Lab Panel</h2>
+
+<p>Aim to draw baseline labs 1 to 2 weeks before starting a protocol. Morning, fasted, and well-hydrated gives the most consistent results.</p>
+
+<p>This section covers what most people should get before running any systemic peptide.</p>
+
+<h3>Core Health Panel</h3>
+
+<p>These three tests create a safety foundation. They're not perfect, but they catch a lot.</p>
+
+<table class="tbl">
+<thead><tr><th>Test</th><th>What It Tells You</th><th>Why It Matters for Peptides</th></tr></thead>
+<tbody>
+<tr><td><strong>CMP</strong></td><td>Liver enzymes, kidney markers, electrolytes, fasting glucose</td><td>Screens for liver and kidney stress; provides a glucose snapshot</td></tr>
+<tr><td><strong>CBC</strong></td><td>Red cells, white cells, platelets</td><td>Flags anemia, infection signals, and platelet abnormalities</td></tr>
+<tr><td><strong>Lipid Panel</strong></td><td>LDL, HDL, triglycerides</td><td>Baseline for metabolic goals and GLP-1 programs</td></tr>
+</tbody>
+</table>
+
+<p>If your CMP doesn't include fasting glucose, add a standalone fasting glucose test. This one number matters more than people think.</p>
+
+<h3>Metabolic Risk Add-On (Highly Recommended)</h3>
+
+<p>If you're doing anything for fat loss, or you have a family history of diabetes, add these. They make GLP-1 and GH-secretagogue monitoring much clearer.</p>
+
+<table class="tbl">
+<thead><tr><th>Test</th><th>Why Add It</th></tr></thead>
+<tbody>
+<tr><td><strong>HbA1c</strong></td><td>2 to 3 month average glucose trend</td></tr>
+<tr><td><strong>Fasting Insulin</strong> (optional)</td><td>Helps estimate insulin resistance when paired with fasting glucose</td></tr>
+</tbody>
+</table>
+
+<p>For GLP-1 context, see our guides to <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> and <a href="/articles/tirzepatide-complete-guide">tirzepatide</a>.</p>
+
+<h3>Hormone Baseline (Depends on Your Goals)</h3>
+
+<p>If you're using growth hormone secretagogues or optimizing performance, hormone baselines are useful. If you're only using localized healing peptides, you can keep this smaller.</p>
+
+<p>At a minimum for GH secretagogues, get IGF-1.</p>
+
+<table class="tbl">
+<thead><tr><th>Test</th><th>When It Helps</th></tr></thead>
+<tbody>
+<tr><td><strong>IGF-1</strong></td><td>Any GH secretagogue protocol (ipamorelin, CJC-1295, and similar)</td></tr>
+<tr><td><strong>TSH</strong> (and free T4 if abnormal)</td><td>Fatigue, unexplained weight changes, or prior thyroid issues</td></tr>
+<tr><td><strong>Total Testosterone + SHBG</strong> (men) / <strong>Estradiol</strong> (as appropriate)</td><td>Tracking performance, libido, or TRT interactions</td></tr>
+</tbody>
+</table>
+
+<p>Related reading: <a href="/articles/ipamorelin-complete-guide">ipamorelin guide</a> and <a href="/articles/cjc-1295-dac-guide">CJC-1295 guide</a>.</p>
+
+<hr class="sep">
+
+<!-- Peptide-Specific Lab Add-Ons -->
+<h2>Peptide-Specific Lab Add-Ons</h2>
+
+<p>The goal isn't to order every test available. The goal is to monitor the few markers that reliably move with the protocol you're running.</p>
+
+<h3>GH Secretagogues (Ipamorelin, CJC-1295, and Similar)</h3>
+
+<div class="cd cb">
+  <div class="tg">GH Monitoring</div>
+  <h3>Why IGF-1 Is the Key Marker</h3>
+  <p style="font-size:14px;margin-bottom:12px;">A single GH blood draw is almost useless because GH is pulsatile. It spikes and drops throughout the day. IGF-1 reflects sustained GH signaling over time, making it far more practical for tracking.</p>
+  <p style="font-size:14px;margin-bottom:0;">GH can also worsen insulin sensitivity in some people (<a href="https://pubmed.ncbi.nlm.nih.gov/11701431/">Yuen et al., 2002</a>). That's why glucose markers belong on the same panel.</p>
+</div>
+
+<p>For GH secretagogue cycles, consider adding these to your baseline panel:</p>
+
+<table class="tbl">
+<thead><tr><th>Test</th><th>When to Draw</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><strong>IGF-1</strong></td><td>Baseline, mid-cycle, and after dose changes</td><td class="g">Primary safety marker for GH signaling</td></tr>
+<tr><td><strong>Fasting Glucose</strong></td><td>Baseline and mid-cycle</td><td class="y">Screens for glucose impairment</td></tr>
+<tr><td><strong>HbA1c</strong></td><td>Baseline and every 3 months</td><td class="y">Catches slow glucose drift</td></tr>
+<tr><td><strong>Fasting Insulin</strong></td><td>Optional, baseline and mid-cycle</td><td>Adds clarity on insulin resistance</td></tr>
+</tbody>
+</table>
+
+<p>If your goal is performance and recovery, also consider tracking lipids and blood pressure alongside labs.</p>
+
+<h3>GLP-1 Agonists and GLP-1/GIP Drugs</h3>
+
+<p>For most people, GLP-1 drugs improve glucose control. The question is how your dose, food intake, and weight loss rate are affecting your body over time.</p>
+
+<div class="cd ct">
+  <div class="tg">GLP-1 Monitoring</div>
+  <h3>Semaglutide and Tirzepatide Lab Priorities</h3>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>HbA1c every 3 months</strong> is the cornerstone. It tells you whether glucose control is improving, stable, or sliding backward.</p>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>Fasting glucose</strong> is useful more often early on, especially if you're titrating dose or experiencing symptoms like lightheadedness.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Lipids every 3 to 6 months</strong> track metabolic improvement. GLP-1 drugs often improve triglycerides and LDL over time (<a href="https://pubmed.ncbi.nlm.nih.gov/28930514/">Davies et al., 2017</a>).</p>
+</div>
+
+<div class="d-r">
+  <div class="s">Not a Lab Problem</div>
+  <p>Persistent abdominal pain, severe nausea/vomiting, or signs of dehydration are not things to monitor with labs. Those need a medical evaluation, not another blood draw.</p>
+</div>
+
+<h3>Healing and Inflammation-Modulating Peptides (BPC-157, TB-500)</h3>
+
+<p>Most people don't need elaborate lab monitoring for short healing cycles. What matters is that you're not missing an unrelated issue like infection, autoimmune flare, or uncontrolled metabolic disease.</p>
+
+<p>If you want to track inflammation or recovery trends, a simple approach works well.</p>
+
+<table class="tbl">
+<thead><tr><th>Test</th><th>When to Draw</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>CRP</strong></td><td>Baseline and mid-cycle</td><td>General inflammation marker</td></tr>
+<tr><td><strong>CBC</strong></td><td>Baseline and mid-cycle</td><td>Screens for infection and blood cell changes</td></tr>
+</tbody>
+</table>
+
+<p>For peptide-specific background: <a href="/articles/bpc-157-complete-guide">BPC-157 guide</a> and <a href="/articles/tb-500-complete-guide">TB-500 guide</a>.</p>
+
+<hr class="sep">
+
+<!-- Timing -->
+<h2>Timing: How to Make Your Labs Comparable</h2>
+
+<p>Changing the conditions of a blood draw can create noise that looks like a real change. Standardizing a few variables prevents this.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Fasted vs. Non-Fasted</h4>
+    <p>Do glucose and lipid markers fasted whenever possible. A consistent 8 to 12 hour fast is usually fine. CBC and CMP are often acceptable non-fasted, but doing them with the same fasted draw keeps things simpler.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Morning vs. Afternoon</h4>
+    <p>If you're checking hormones like testosterone and cortisol, morning draws are preferred. If you can't do morning, do the same time of day each time. Consistency matters more than the exact hour.</p>
+  </div>
+</div>
+
+<div class="d-p">
+  <div class="s">Post-Dose Testing</div>
+  <p>For most peptide programs, you don't need to chase peaks. A stable approach is better: baseline, mid-cycle, and after any major dose change. Don't time your blood draw around your last injection.</p>
+</div>
+
+<p>If you're unsure how to design a protocol, read our guides on <a href="/articles/peptide-cycling-guide">peptide cycling</a> and <a href="/articles/peptide-stacking-guide">peptide stacking</a>.</p>
+
+<hr class="sep">
+
+<!-- Interpreting Results -->
+<h2>How to Interpret Results (the Practical Way)</h2>
+
+<p>Reference ranges vary between labs. Your baseline and your trend line are usually more useful than a single number compared to a population range.</p>
+
+<p>Here are common examples where trends matter more than any individual value.</p>
+
+<div class="cd ca">
+  <div class="tg">Trend: Liver Enzymes</div>
+  <h3>Rising ALT/AST Over Multiple Draws</h3>
+  <p style="font-size:14px;margin-bottom:0;">This can signal liver stress, alcohol effects, supplements, fatty liver, or medication interactions. A single mildly elevated reading isn't an emergency. A consistent upward trend across 2 to 3 draws warrants attention and possibly imaging or a hepatology consult (<a href="https://pubmed.ncbi.nlm.nih.gov/17222024/">Giannini et al., 2005</a>).</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Trend: Glucose Control</div>
+  <h3>HbA1c Drifting Up During a GH Secretagogue Cycle</h3>
+  <p style="font-size:14px;margin-bottom:0;">GH can impair glucose metabolism. If your HbA1c rises 0.3% or more across a cycle, that's a signal to reassess dose, add glucose monitoring, or involve a clinician. Don't ignore a slow upward drift just because the number is still "in range."</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Trend: IGF-1</div>
+  <h3>IGF-1 Drifting Very High</h3>
+  <p style="font-size:14px;margin-bottom:0;">If IGF-1 climbs well above your age-adjusted range while you're still escalating dose, the protocol may be more aggressive than intended. Chronically elevated IGF-1 has been associated with increased cancer risk in epidemiological studies (<a href="https://pubmed.ncbi.nlm.nih.gov/19890056/">Renehan et al., 2004</a>). This is a marker worth taking seriously.</p>
+</div>
+
+<p>A simple rule: compare each new draw to your baseline. If something moves significantly, re-check under standardized conditions and involve a clinician.</p>
+
+<hr class="sep">
+
+<!-- Red Flags -->
+<h2>Red Flags That Should Pause a Protocol</h2>
+
+<p>This is not a substitute for medical care. It's a safety filter.</p>
+
+<div class="d-r">
+  <div class="s">Stop and Get Medical Input</div>
+  <p>Pause the protocol and seek medical evaluation if you see any of the patterns listed below. Don't try to "manage" these on your own.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Red Flag</th><th>What to Watch For</th><th>Urgency</th></tr></thead>
+<tbody>
+<tr><td><strong>Liver enzyme spike</strong></td><td>ALT/AST jumping dramatically vs. baseline, especially with dark urine, jaundice, or right upper abdominal pain</td><td class="r">High</td></tr>
+<tr><td><strong>Creatinine rise</strong></td><td>Significant increase vs. baseline, especially with dehydration or NSAID use</td><td class="r">High</td></tr>
+<tr><td><strong>Repeated hypoglycemia</strong></td><td>Sweats, shaking, confusion with low measured glucose</td><td class="r">High</td></tr>
+<tr><td><strong>IGF-1 far above range</strong></td><td>Climbing well past age-adjusted upper limit during dose escalation</td><td class="y">Moderate to High</td></tr>
+</tbody>
+</table>
+
+<p>If you have severe symptoms, treat that as urgent regardless of what labs show. Symptoms always take priority over numbers.</p>
+
+<hr class="sep">
+
+<!-- Testing Schedules -->
+<h2>How Often to Test (Simple Schedules)</h2>
+
+<p>Most people over-test early, then stop testing later. A steady schedule works better than panic-testing every two weeks at the start and then nothing for months.</p>
+
+<h3>Short Cycles (4 to 8 Weeks)</h3>
+
+<div class="svg-box">
+  <div class="st">Short Cycle Testing Timeline</div>
+  <div class="ss">Baseline, mid-cycle, and post-cycle draws</div>
+  <svg viewBox="0 0 700 100" xmlns="http://www.w3.org/2000/svg">
+    <line x1="60" y1="50" x2="640" y2="50" stroke="#D9D6CE" stroke-width="2"/>
+    <circle cx="100" cy="50" r="8" fill="#2956A6"/>
+    <text x="100" y="80" text-anchor="middle" font-size="11" fill="#3C3C52" font-family="sans-serif">Week &ndash;2 to &ndash;1</text>
+    <text x="100" y="30" text-anchor="middle" font-size="10" fill="#2956A6" font-weight="600" font-family="sans-serif">BASELINE</text>
+    <circle cx="370" cy="50" r="8" fill="#187A62"/>
+    <text x="370" y="80" text-anchor="middle" font-size="11" fill="#3C3C52" font-family="sans-serif">Week 4</text>
+    <text x="370" y="30" text-anchor="middle" font-size="10" fill="#187A62" font-weight="600" font-family="sans-serif">MID-CYCLE</text>
+    <circle cx="600" cy="50" r="8" fill="#6E3B8A"/>
+    <text x="600" y="80" text-anchor="middle" font-size="11" fill="#3C3C52" font-family="sans-serif">Week 10&ndash;12</text>
+    <text x="600" y="30" text-anchor="middle" font-size="10" fill="#6E3B8A" font-weight="600" font-family="sans-serif">POST-CYCLE</text>
+  </svg>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Timepoint</th><th>When</th><th>What to Draw</th></tr></thead>
+<tbody>
+<tr><td><strong>Baseline</strong></td><td>1 to 2 weeks before starting</td><td>Full panel (CMP, CBC, lipids, HbA1c, peptide-specific markers)</td></tr>
+<tr><td><strong>Mid-Cycle</strong></td><td>Around week 4</td><td>Core markers + peptide-specific add-ons</td></tr>
+<tr><td><strong>Post-Cycle</strong></td><td>2 to 4 weeks after stopping</td><td>Same as baseline to confirm return to normal</td></tr>
+</tbody>
+</table>
+
+<h3>Longer Protocols (12+ Weeks)</h3>
+
+<table class="tbl">
+<thead><tr><th>Timepoint</th><th>When</th><th>What to Draw</th></tr></thead>
+<tbody>
+<tr><td><strong>Baseline</strong></td><td>1 to 2 weeks before starting</td><td>Full panel</td></tr>
+<tr><td><strong>Regular Checks</strong></td><td>Every 6 to 8 weeks</td><td>Core markers + peptide-specific add-ons</td></tr>
+<tr><td><strong>After Dose Changes</strong></td><td>4 to 6 weeks after any major adjustment</td><td>Relevant markers for the changed variable</td></tr>
+</tbody>
+</table>
+
+<p>For GLP-1 programs, HbA1c every 3 months is a reasonable anchor schedule. Add fasting glucose more often if you're titrating dose.</p>
+
+<hr class="sep">
+
+<!-- Quick Reference by Peptide Class -->
+<h2>Quick Reference: Labs by Peptide Class</h2>
+
+<p>This table summarizes which labs matter most for the three major peptide categories.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide Class</th><th>Priority Labs</th><th>Optional Additions</th><th>Recheck Interval</th></tr></thead>
+<tbody>
+<tr><td><strong>GH Secretagogues</strong><br>(Ipamorelin, CJC-1295, MK-677)</td><td>IGF-1, fasting glucose, HbA1c</td><td>Fasting insulin, lipids</td><td>Every 4&ndash;8 weeks</td></tr>
+<tr><td><strong>GLP-1 Agonists</strong><br>(Semaglutide, Tirzepatide)</td><td>HbA1c, fasting glucose, lipids</td><td>Kidney panel, liver enzymes</td><td>HbA1c every 3 months</td></tr>
+<tr><td><strong>Healing Peptides</strong><br>(BPC-157, TB-500)</td><td>CMP, CBC</td><td>CRP if tracking inflammation</td><td>Baseline + mid-cycle</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Cost -->
+<h2>Cost: Insurance vs. Cash Pay</h2>
+
+<p>Pricing depends on your region and whether you're bundling tests. Cash-pay panels can sometimes be cheaper than an insurance copay, especially for straightforward panels like a CMP or lipid panel.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Insurance Route</h4>
+    <p>Your doctor orders the labs and insurance covers some or all of the cost. Works well if you have a clinician who understands peptide monitoring. May require a diagnostic code that justifies the tests.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Cash-Pay Route</h4>
+    <p>You order labs yourself through an online service that partners with Quest, Labcorp, or a similar draw site. No doctor visit required for ordering. Prices are transparent and often surprisingly affordable for basic panels.</p>
+  </div>
+</div>
+
+<p>If you're comparing peptide vendors, our <a href="/articles/peptide-vendor-red-flags">peptide vendor red flags</a> article covers what matters when sourcing.</p>
+
+<hr class="sep">
+
+<!-- Who Benefits Most -->
+<h2>Who Benefits Most from Lab Monitoring</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">GH Secretagogue Users</h4>
+    <p>IGF-1 and glucose markers are essential. GH affects insulin sensitivity and can push IGF-1 to levels associated with long-term risk if unmonitored.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">GLP-1 Program Users</h4>
+    <p>HbA1c and metabolic markers help confirm the drug is working as expected. Weight loss itself can shift liver enzymes and lipids in ways worth tracking.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Anyone Running 8+ Week Protocols</h4>
+    <p>The longer you run a systemic peptide, the more important it is to check that organ stress markers haven't shifted. Even "safe" compounds can interact with other variables in your life.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Do I need bloodwork for every peptide?</summary>
+    <div class="fa">Not always. But you should still have a baseline CMP, CBC, and metabolic markers if you're running anything systemic or long-term. Short topical or localized protocols may not require extensive monitoring.</div>
+  </details>
+  <details>
+    <summary>What is the most important lab for GH secretagogues?</summary>
+    <div class="fa">IGF-1 is the most useful single marker. It gives you a clearer signal than a random GH draw, which fluctuates throughout the day due to the pulsatile nature of GH secretion.</div>
+  </details>
+  <details>
+    <summary>Should I draw labs fasted?</summary>
+    <div class="fa">For glucose and lipids, yes. If you can, do your whole panel fasted (8 to 12 hours) to keep everything comparable across draws.</div>
+  </details>
+  <details>
+    <summary>What if my labs are "normal" but I feel bad?</summary>
+    <div class="fa">Symptoms matter. If you feel worse on a protocol, don't force it just because labs look okay. Normal ranges are population averages, not personal thresholds. Talk to a clinician.</div>
+  </details>
+  <details>
+    <summary>How much does basic peptide bloodwork cost out of pocket?</summary>
+    <div class="fa">A core panel (CMP, CBC, lipids) through a cash-pay service typically runs $30 to $80. Adding IGF-1 and HbA1c brings the total closer to $100 to $150. Prices vary by provider and region.</div>
+  </details>
+  <details>
+    <summary>Can I use the same labs for multiple peptide protocols?</summary>
+    <div class="fa">Yes, if you're running overlapping protocols, a single draw can cover shared markers. Just make sure you're also including any peptide-specific add-ons for each protocol you're running.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Bottom Line -->
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Peptide bloodwork isn't about chasing perfect numbers. It's about establishing a baseline, tracking trends, and catching problems early when fixing them is still simple.</p>
+</div>
+
+<p>If you're going to run a protocol, the labs are part of the protocol. That mindset is what separates a reckless approach from a safer, more informed one.</p>
+
+<p>Get your baseline. Match your labs to your peptide class. Standardize your draw conditions. And if something moves in a direction you don't expect, re-check it and involve a professional.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not replace consultation with a qualified healthcare provider. Peptides carry real risks, and lab interpretation depends on your individual history, medications, and clinical context. Always work with a licensed clinician before starting or modifying any peptide protocol.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Yuen KC, Dunger DB. Therapeutic aspects of growth hormone and insulin-like growth factor-I treatment on visceral fat and insulin sensitivity in adults. <em>Diabetes Obes Metab.</em> 2007;9(1):11&ndash;22. <a href="https://pubmed.ncbi.nlm.nih.gov/11701431/">PubMed</a><br>
+Davies MJ, et al. Efficacy of liraglutide for weight loss among patients with type 2 diabetes: the SCALE Diabetes randomized clinical trial. <em>JAMA.</em> 2017;314(7):687&ndash;699. <a href="https://pubmed.ncbi.nlm.nih.gov/28930514/">PubMed</a><br>
+Giannini EG, Testa R, Savarino V. Liver enzyme alteration: a guide for clinicians. <em>CMAJ.</em> 2005;172(3):367&ndash;379. <a href="https://pubmed.ncbi.nlm.nih.gov/17222024/">PubMed</a><br>
+Renehan AG, et al. Insulin-like growth factor (IGF)-I, IGF binding protein-3, and cancer risk: systematic review and meta-regression analysis. <em>Lancet.</em> 2004;363(9418):1346&ndash;1353. <a href="https://pubmed.ncbi.nlm.nih.gov/19890056/">PubMed</a><br>
+Johannsson G, et al. Growth hormone treatment of abdominally obese men reduces abdominal fat mass, improves glucose and lipoprotein metabolism, and reduces diastolic blood pressure. <em>J Clin Endocrinol Metab.</em> 1997;82(3):727&ndash;734. <a href="https://pubmed.ncbi.nlm.nih.gov/9062473/">PubMed</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semaglutide-weight-loss-guide">Semaglutide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/tirzepatide-complete-guide">Tirzepatide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ipamorelin-complete-guide">Ipamorelin Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-cycling-guide">Peptide Cycling</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects: What to Know</a>
+            <a href="/articles/semaglutide-weight-loss-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide Weight Loss Guide</a>
+            <a href="/articles/ipamorelin-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Ipamorelin Complete Guide</a>
+            <a href="/articles/peptide-cycling-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Cycling Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

@@ -1,0 +1,577 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "NAD+ and Peptides: Boosting Cellular Energy for Longevity",
+  description: "How NAD+ peptides like MOTS-c, 5-Amino-1MQ, and SS-31 support cellular energy production and combat age-related decline. Protocols, research, and safety explained.",
+  image: "/images/articles/nad-peptides-longevity.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Longevity &middot; Cellular Energy</div>
+  <h1>NAD+ and Peptides: Boosting Cellular Energy for Longevity</h1>
+  <p class="sub">NAD+ is the coenzyme your mitochondria need to produce energy. Three peptides can help restore it as you age: MOTS-c, 5-Amino-1MQ, and SS-31.</p>
+  <div class="pills">
+    <span class="pill">NAD+ &middot; Mitochondria</span>
+    <span class="pill">MOTS-c &middot; 5-Amino-1MQ &middot; SS-31</span>
+    <span class="pill">Anti-Aging &middot; Longevity</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">50%</div><div class="l">NAD+ Decline<br>by Middle Age</div></div>
+  <div class="sb"><div class="v c2">3</div><div class="l">Key Peptides<br>for NAD+ Support</div></div>
+  <div class="sb"><div class="v c3">ATP</div><div class="l">Cellular Energy<br>Currency</div></div>
+  <div class="sb"><div class="v c4">7+</div><div class="l">Sirtuin Proteins<br>Activated by NAD+</div></div>
+</div>
+
+<p>NAD+ (nicotinamide adenine dinucleotide) sits at the center of cellular energy production. Every living cell depends on it to convert nutrients into ATP, and without enough of it, mitochondria can't do their job (<a href="https://pubmed.ncbi.nlm.nih.gov/29514064/">Rajman et al., 2018</a>).</p>
+
+<p>The problem is that NAD+ levels drop steadily with age. By the time you hit your 40s or 50s, you may have half the NAD+ you had in your 20s, and that decline drives many of the symptoms we associate with getting older.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This article explains how three peptides (MOTS-c, 5-Amino-1MQ, and SS-31) support NAD+ levels and mitochondrial function. It's for educational purposes only and does not constitute medical advice.</p>
+</div>
+
+<hr class="sep">
+
+<h2>Why NAD+ Matters for Aging</h2>
+
+<p>NAD+ does more than power your mitochondria. It also activates sirtuins, a family of seven proteins that regulate DNA repair, inflammation, and stress resistance (<a href="https://pubmed.ncbi.nlm.nih.gov/24786309/">Imai &amp; Guarente, 2014</a>).</p>
+
+<p>Sirtuins can't function without NAD+. When NAD+ runs low, sirtuin activity drops, and the cellular repair processes they control slow down or stall entirely.</p>
+
+<p>NAD+ also serves as a signaling molecule that influences circadian rhythms, inflammatory responses, and metabolic flexibility. These aren't minor background functions; they're central to how well your cells perform under stress.</p>
+
+<div class="d-p">
+  <div class="s">Key Insight</div>
+  <p>NAD+ isn't just an energy molecule. It's the required cofactor for sirtuins, creating a direct link between NAD+ levels and the pace of cellular aging.</p>
+</div>
+
+<h3>What Causes NAD+ to Decline</h3>
+
+<p>Several factors work together to drain NAD+ as you age. Understanding them helps explain why simple supplementation alone often isn't enough.</p>
+
+<table class="tbl">
+<thead><tr><th>Factor</th><th>Mechanism</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td><strong>CD38 overactivity</strong></td><td>This enzyme consumes NAD+ and ramps up with chronic inflammation</td><td class="r">Major driver of age-related decline</td></tr>
+<tr><td><strong>Reduced NAMPT</strong></td><td>The key enzyme for NAD+ recycling drops 30&ndash;50% by age 50</td><td class="r">Limits the salvage pathway</td></tr>
+<tr><td><strong>DNA damage</strong></td><td>PARP enzymes consume NAD+ to repair accumulated DNA breaks</td><td class="y">Increases with age and UV exposure</td></tr>
+<tr><td><strong>Mitochondrial ROS</strong></td><td>Aging mitochondria leak more free radicals that destroy NAD+</td><td class="y">Creates a vicious cycle</td></tr>
+<tr><td><strong>Metabolic signaling shifts</strong></td><td>Changes in AMPK and mTOR pathways disrupt NAD+ balance</td><td class="y">Compounds other factors</td></tr>
+</tbody>
+</table>
+
+<p>Chronic inflammation and oxidative stress accelerate all of these processes. Lifestyle factors like poor diet, sedentary behavior, and chronic stress compound the damage further.</p>
+
+<hr class="sep">
+
+<h2>Three NAD+-Boosting Peptides</h2>
+
+<p>Traditional NAD+ precursors like NMN and NR supply raw materials. Peptides work differently: they target the enzymes and pathways that control how your body makes, uses, and preserves NAD+.</p>
+
+<p>Three peptides stand out for their distinct mechanisms of action.</p>
+
+<!-- MOTS-c Card -->
+<div class="cd cb">
+  <div class="tg">Metabolic Regulator</div>
+  <h3><a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a>: The Exercise Mimetic</h3>
+  <p style="font-size:14px;margin-bottom:10px;">MOTS-c is a 16-amino-acid peptide encoded by mitochondrial DNA. Your body naturally produces more of it during exercise, and it functions as a metabolic signaling molecule that crosses from mitochondria into the nucleus to influence gene expression (<a href="https://pubmed.ncbi.nlm.nih.gov/25738459/">Lee et al., 2015</a>).</p>
+  <p style="font-size:14px;margin-bottom:0;">It improves insulin sensitivity in muscle tissue, enhances glucose uptake during physical activity, and activates the AMPK pathway for cellular energy balance. A 2021 study found aged mice given MOTS-c showed 30% higher NAD+ levels and significantly improved endurance.</p>
+</div>
+
+<!-- 5-Amino-1MQ Card -->
+<div class="cd ct">
+  <div class="tg">Enzyme Inhibitor</div>
+  <h3><a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">5-Amino-1MQ</a>: The NNMT Blocker</h3>
+  <p style="font-size:14px;margin-bottom:10px;">5-Amino-1MQ takes a different approach than most NAD+ boosters. Instead of adding more raw material, it blocks NNMT, an enzyme that breaks down NAD+ precursors before they can be converted (<a href="https://pubmed.ncbi.nlm.nih.gov/32891536/">Neelakantan et al., 2021</a>).</p>
+  <p style="font-size:14px;margin-bottom:0;">By inhibiting NNMT, this peptide preserves the building blocks your cells need to synthesize NAD+. It amplifies the effects of NMN and NR supplements, improves metabolic flexibility during fasting, and supports healthy body composition.</p>
+</div>
+
+<!-- SS-31 Card -->
+<div class="cd cp">
+  <div class="tg">Mitochondrial Shield</div>
+  <h3><a href="/articles/ss-31-elamipretide-mitochondrial-guide">SS-31 (Elamipretide)</a>: The Inner Membrane Protector</h3>
+  <p style="font-size:14px;margin-bottom:10px;">SS-31 is a tetrapeptide that concentrates inside mitochondria, specifically at the inner membrane where electron transport happens. It binds to cardiolipin, a phospholipid essential for the structural integrity of the energy-producing machinery (<a href="https://pubmed.ncbi.nlm.nih.gov/24493033/">Birk et al., 2014</a>).</p>
+  <p style="font-size:14px;margin-bottom:0;">By stabilizing cardiolipin, SS-31 reduces electron leakage and oxidative damage. This protects NAD+ from destruction by free radicals and helps mitochondria produce ATP more efficiently. It's currently in Phase 3 clinical trials for certain mitochondrial diseases.</p>
+</div>
+
+<hr class="sep">
+
+<h2>Head-to-Head Comparison</h2>
+
+<p>Each of these peptides targets a different bottleneck in NAD+ metabolism. The table below shows how they compare across key dimensions.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>MOTS-c</th><th>5-Amino-1MQ</th><th>SS-31</th></tr></thead>
+<tbody>
+<tr><td><strong>Primary action</strong></td><td>Metabolic signaling</td><td>Enzyme inhibition</td><td>Mitochondrial protection</td></tr>
+<tr><td><strong>Mechanism</strong></td><td>Activates AMPK pathway</td><td>Inhibits NNMT enzyme</td><td>Stabilizes cardiolipin</td></tr>
+<tr><td><strong>Time to effect</strong></td><td>3&ndash;7 days</td><td>1&ndash;2 hours</td><td>30&ndash;60 minutes</td></tr>
+<tr><td><strong>Duration</strong></td><td>12&ndash;24 hours</td><td>6&ndash;8 hours</td><td>4&ndash;6 hours</td></tr>
+<tr><td><strong>Synergy with NMN</strong></td><td class="g">High</td><td class="g">Very high</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Best application</strong></td><td>Insulin resistance</td><td>Metabolic health</td><td>Neuroprotection</td></tr>
+<tr><td><strong>Research status</strong></td><td class="y">Human trials ongoing</td><td class="y">Promising preclinical</td><td class="g">Phase 3 trials</td></tr>
+<tr><td><strong>Administration</strong></td><td>Subcutaneous injection</td><td>Oral capsule</td><td>Subcutaneous injection</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<h2>How NAD+ Peptides Work Together</h2>
+
+<p>These three peptides aren't redundant. They target different steps in the NAD+ production and preservation chain, which means combining them can address the problem from multiple angles.</p>
+
+<div class="svg-box">
+  <div class="st">NAD+ Peptide Mechanism Map</div>
+  <div class="ss">Each peptide targets a different bottleneck in NAD+ metabolism</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- NAD+ Precursors -->
+    <rect x="20" y="100" width="130" height="60" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="85" y="125" text-anchor="middle" font-size="12" font-weight="600" fill="#2956A6">NAD+ Precursors</text>
+    <text x="85" y="142" text-anchor="middle" font-size="10" fill="#3C3C52">(NMN, NR, Trp)</text>
+
+    <!-- Arrow 1 -->
+    <line x1="150" y1="130" x2="210" y2="130" stroke="#D9D6CE" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- NNMT block -->
+    <rect x="155" y="20" width="100" height="50" rx="8" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="205" y="42" text-anchor="middle" font-size="11" font-weight="600" fill="#187A62">5-Amino-1MQ</text>
+    <text x="205" y="56" text-anchor="middle" font-size="9" fill="#14503E">Blocks NNMT</text>
+    <line x1="205" y1="70" x2="180" y2="98" stroke="#187A62" stroke-width="1.5" stroke-dasharray="4"/>
+    <text x="175" y="88" font-size="9" fill="#B53A3A" font-weight="600">BLOCKS</text>
+
+    <!-- NAD+ Synthesis -->
+    <rect x="215" y="100" width="130" height="60" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="280" y="125" text-anchor="middle" font-size="12" font-weight="600" fill="#2956A6">NAD+ Synthesis</text>
+    <text x="280" y="142" text-anchor="middle" font-size="10" fill="#3C3C52">(Salvage Pathway)</text>
+
+    <!-- Arrow 2 -->
+    <line x1="345" y1="130" x2="405" y2="130" stroke="#D9D6CE" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Cellular NAD+ -->
+    <rect x="410" y="100" width="120" height="60" rx="10" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="470" y="125" text-anchor="middle" font-size="12" font-weight="600" fill="#B48118">Cellular NAD+</text>
+    <text x="470" y="142" text-anchor="middle" font-size="10" fill="#3C3C52">(Sirtuin Fuel)</text>
+
+    <!-- Arrow 3 -->
+    <line x1="530" y1="130" x2="570" y2="130" stroke="#D9D6CE" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Mitochondria -->
+    <rect x="575" y="100" width="110" height="60" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="630" y="125" text-anchor="middle" font-size="12" font-weight="600" fill="#6E3B8A">Mitochondria</text>
+    <text x="630" y="142" text-anchor="middle" font-size="10" fill="#3C3C52">(ATP Output)</text>
+
+    <!-- SS-31 -->
+    <rect x="565" y="195" width="100" height="50" rx="8" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="615" y="217" text-anchor="middle" font-size="11" font-weight="600" fill="#6E3B8A">SS-31</text>
+    <text x="615" y="231" text-anchor="middle" font-size="9" fill="#3E2050">Protects Membrane</text>
+    <line x1="625" y1="195" x2="635" y2="162" stroke="#6E3B8A" stroke-width="1.5" stroke-dasharray="4"/>
+
+    <!-- MOTS-c -->
+    <rect x="370" y="195" width="100" height="50" rx="8" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="420" y="217" text-anchor="middle" font-size="11" font-weight="600" fill="#2956A6">MOTS-c</text>
+    <text x="420" y="231" text-anchor="middle" font-size="9" fill="#1E3362">Activates AMPK</text>
+    <line x1="440" y1="195" x2="460" y2="162" stroke="#2956A6" stroke-width="1.5" stroke-dasharray="4"/>
+
+    <defs>
+      <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#86869A"/>
+      </marker>
+    </defs>
+  </svg>
+</div>
+
+<p>5-Amino-1MQ protects NAD+ precursors from being destroyed before they're used. MOTS-c activates AMPK to boost the cell's demand-driven production of NAD+. SS-31 shields the mitochondria where NAD+ is consumed, reducing wasteful oxidative losses.</p>
+
+<p>Used together, they address the supply side, the demand side, and the protection side of NAD+ metabolism.</p>
+
+<hr class="sep">
+
+<h2>NAD+ Restoration Protocol</h2>
+
+<p>The following protocol combines peptides with NAD+ precursors and lifestyle interventions. It's a framework to discuss with your healthcare provider, not a prescription.</p>
+
+<div class="d-a">
+  <div class="s">Important Note</div>
+  <p>Always start with lower doses and consult a healthcare provider before beginning any new regimen. Individual needs vary significantly based on age, health status, and current medications.</p>
+</div>
+
+<h3>Supplement Timing</h3>
+
+<table class="tbl">
+<thead><tr><th>Time</th><th>Compound</th><th>Dose Range</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>7:00 AM</strong></td><td>5-Amino-1MQ + NMN</td><td>50&ndash;100mg + 250&ndash;500mg</td><td>Support morning energy metabolism</td></tr>
+<tr><td><strong>8:00 AM</strong></td><td>Morning walk or light exercise</td><td>20&ndash;30 minutes</td><td>Activate AMPK pathway naturally</td></tr>
+<tr><td><strong>12:00 PM</strong></td><td>First meal (after 16-hour fast)</td><td>N/A</td><td>Enhance cellular repair windows</td></tr>
+<tr><td><strong>4:00 PM</strong></td><td>MOTS-c (pre-workout)</td><td>5&ndash;10mg subcutaneous</td><td>Optimize exercise benefits</td></tr>
+<tr><td><strong>6:00 PM</strong></td><td>Strength or HIIT training</td><td>30&ndash;45 minutes</td><td>Boost mitochondrial biogenesis</td></tr>
+<tr><td><strong>9:00 PM</strong></td><td>SS-31</td><td>20&ndash;40mg subcutaneous</td><td>Support overnight cellular repair</td></tr>
+</tbody>
+</table>
+
+<h3>Lifestyle Factors That Support NAD+</h3>
+
+<p>Peptides work best when paired with behaviors that naturally support NAD+ production. These aren't optional extras; they're foundational.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Time-Restricted Eating</h4>
+    <p>14&ndash;16 hour daily fasts activate autophagy and boost NAD+ through the salvage pathway. Even a 12-hour overnight fast provides measurable benefits.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">High-Intensity Exercise</h4>
+    <p>Brief intense activity (HIIT, sprints, heavy resistance training) directly increases NAMPT expression and endogenous MOTS-c production.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Cold Exposure</h4>
+    <p>Mild cold stress (cold showers, 2&ndash;3 minutes) activates NAD+-dependent sirtuins and stimulates brown fat mitochondrial activity.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<h2>Monitoring Your NAD+ Status</h2>
+
+<p>You can't manage what you don't measure. Tracking biomarkers helps you personalize dosing and confirm that your protocol is actually working.</p>
+
+<table class="tbl">
+<thead><tr><th>Marker</th><th>Optimal Range</th><th>Significance</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td><strong>NAD+/NADH ratio</strong></td><td class="g">5:1 to 10:1</td><td>Cellular energy status</td><td>Baseline, then every 6 months</td></tr>
+<tr><td><strong>NMN levels</strong></td><td>40&ndash;80 ng/mL</td><td>NAD+ precursor availability</td><td>Before starting, then quarterly</td></tr>
+<tr><td><strong>hs-CRP</strong></td><td class="g">&lt;1.0 mg/L</td><td>Systemic inflammation control</td><td>Every 3&ndash;6 months</td></tr>
+<tr><td><strong>Fasting insulin</strong></td><td class="g">&lt;5 uIU/mL</td><td>Metabolic health indicator</td><td>Every 3&ndash;6 months</td></tr>
+<tr><td><strong>Mitochondrial DNA</strong></td><td>&gt;200 copies/cell</td><td>Mitochondrial density</td><td>Baseline and annually</td></tr>
+<tr><td><strong>Urinary 8-OHdG</strong></td><td>&lt;10 ng/mg creatinine</td><td>Oxidative stress marker</td><td>Annually</td></tr>
+</tbody>
+</table>
+
+<p>Work with a functional medicine practitioner who specializes in these advanced biomarkers. Many standard labs don't offer NAD+ or mitochondrial DNA testing.</p>
+
+<div class="d-t">
+  <div class="s">Practical Tip</div>
+  <p>Get baseline bloodwork before starting any protocol. Without a starting point, you won't know whether changes in how you feel reflect actual biochemical improvement or placebo.</p>
+</div>
+
+<hr class="sep">
+
+<h2>Who Might Benefit</h2>
+
+<p>NAD+ peptides aren't for everyone. They're most relevant for people experiencing specific signs of age-related mitochondrial decline.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Good Candidates</h4>
+    <p>Adults over 40 with persistent fatigue not relieved by sleep, reduced exercise tolerance, age-related metabolic changes, or family history of neurodegenerative conditions.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Contraindications</h4>
+    <p>Active cancer (NAD+ may fuel tumor growth), pregnancy or breastfeeding, severe kidney disease, or anyone on immunosuppressive therapy without physician approval.</p>
+  </div>
+</div>
+
+<h3>Benefits vs. Considerations</h3>
+
+<table class="tbl">
+<thead><tr><th>Potential Benefits</th><th>Important Considerations</th></tr></thead>
+<tbody>
+<tr><td class="g">Improved cellular energy production</td><td>Requires consistent, ongoing use</td></tr>
+<tr><td class="g">Enhanced exercise performance and recovery</td><td>Cycling (3 months on, 1 month off) prevents desensitization</td></tr>
+<tr><td class="g">Metabolic health and body composition support</td><td>Quality sourcing is essential for safety</td></tr>
+<tr><td class="g">Neuroprotective effects over time</td><td>Not a substitute for medical treatment</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Safety Warning</div>
+  <p>NAD+ optimization aims for balance, not maximum elevation. Excessive boosting can cause temporary flushing, jitteriness, or sleep disturbances. If you experience these, reduce your dosage immediately.</p>
+</div>
+
+<hr class="sep">
+
+<h2>Side Effects and Safety</h2>
+
+<p>NAD+ peptides are generally well-tolerated in research settings, but they aren't without risk. Here's what the data shows.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Common Side Effects</th><th>Rare Side Effects</th><th>Severity</th></tr></thead>
+<tbody>
+<tr><td><strong>MOTS-c</strong></td><td>Injection site redness, mild nausea</td><td>Temporary blood sugar fluctuations</td><td class="g">Mild</td></tr>
+<tr><td><strong>5-Amino-1MQ</strong></td><td>GI discomfort, headache</td><td>Sleep disruption at high doses</td><td class="g">Mild</td></tr>
+<tr><td><strong>SS-31</strong></td><td>Injection site discomfort, flushing</td><td>Dizziness, low blood pressure</td><td class="y">Mild to moderate</td></tr>
+</tbody>
+</table>
+
+<p>Most side effects resolve within hours of reducing dosage. Long-term safety data beyond 12 months is limited for all three peptides, which is something to weigh in your risk-benefit calculation.</p>
+
+<h3>Cycling Protocol</h3>
+
+<p>Cycling prevents receptor desensitization and maintains your body's natural NAD+ production capacity.</p>
+
+<table class="tbl">
+<thead><tr><th>Phase</th><th>Duration</th><th>Protocol</th></tr></thead>
+<tbody>
+<tr><td><strong>Loading</strong></td><td>Weeks 1&ndash;2</td><td>Start with lowest effective doses; assess tolerance</td></tr>
+<tr><td><strong>Active</strong></td><td>Weeks 3&ndash;12</td><td>Full protocol with all three peptides and NMN</td></tr>
+<tr><td><strong>Rest</strong></td><td>Weeks 13&ndash;16</td><td>Discontinue peptides; maintain lifestyle interventions only</td></tr>
+<tr><td><strong>Reassess</strong></td><td>Week 17</td><td>Repeat bloodwork; adjust doses based on biomarkers</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<h2>Complementary Longevity Approaches</h2>
+
+<p>NAD+ peptides work best as part of a broader longevity strategy. Several other interventions target overlapping but distinct aging pathways.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);"><a href="/articles/epithalon-anti-aging-guide">Epithalon</a></h4>
+    <p>Supports telomere maintenance through peptide signaling. Addresses the "cellular clock" aspect of aging that NAD+ peptides don't directly target.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);"><a href="/articles/thymosin-beta-4-complete-guide">Thymosin Beta-4</a></h4>
+    <p>Aids tissue repair by modulating cellular migration and differentiation. Complements NAD+ support by addressing structural damage.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Hyperbaric Oxygen</h4>
+    <p>Enhances mitochondrial function through oxygen saturation. Can amplify the benefits of SS-31 by improving the raw material supply for oxidative phosphorylation.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Red Light Therapy</h4>
+    <p>May boost cellular energy production through photon absorption at cytochrome c oxidase. A non-invasive complement to peptide-based mitochondrial support.</p>
+  </div>
+</div>
+
+<p>These combinations should be guided by a knowledgeable healthcare provider who can design a personalized protocol based on your health status and goals.</p>
+
+<hr class="sep">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How soon might I notice changes?</summary>
+    <div class="fa">Most people report increased energy within 1&ndash;2 weeks, often as better morning alertness and fewer afternoon energy dips. Full benefits typically develop over 2&ndash;3 months as cellular processes optimize, so consistency is important for lasting results.</div>
+  </details>
+  <details>
+    <summary>Can I use these with NR instead of NMN?</summary>
+    <div class="fa">Yes. NR converts to NMN, which then converts to NAD+. Equivalent doses are roughly 750mg NR to 500mg NMN. Some research suggests NMN may have better tissue bioavailability in muscle and brain, but both are effective options when combined with peptides.</div>
+  </details>
+  <details>
+    <summary>Are there food sources of NAD+?</summary>
+    <div class="fa">Foods like dairy, fish, mushrooms, green vegetables, and nutritional yeast contain NAD+ precursors. However, dietary amounts are typically too low to significantly impact cellular levels. Supplementation provides the therapeutic concentrations needed for measurable effects.</div>
+  </details>
+  <details>
+    <summary>What are signs I might be taking too much?</summary>
+    <div class="fa">Temporary flushing, jitteriness, and sleep disruption are the most common signals. If any of these occur, reduce your dosage and reassess with your healthcare provider. Most side effects resolve within hours of lowering the dose.</div>
+  </details>
+  <details>
+    <summary>How do peptides compare to IV NAD+?</summary>
+    <div class="fa">Peptides work through signaling pathways rather than direct replacement. This makes them more sustainable with potentially fewer side effects. IV NAD+ provides immediate but temporary elevation that requires frequent, expensive clinic visits to maintain.</div>
+  </details>
+  <details>
+    <summary>Should I take these continuously?</summary>
+    <div class="fa">Cycling is recommended: 3 months on, 1 month off. This prevents potential downregulation of natural NAD+ production pathways. Your healthcare provider can advise on your individual cycling schedule based on your biomarkers.</div>
+  </details>
+  <details>
+    <summary>Can NAD+ peptides help with neurological conditions?</summary>
+    <div class="fa">Early research suggests potential benefits for neurodegenerative conditions. SS-31 shows particular promise for protecting neurons from mitochondrial dysfunction. However, these should complement conventional treatments under medical supervision, not replace them.</div>
+  </details>
+  <details>
+    <summary>Are there genetic tests that predict NAD+ response?</summary>
+    <div class="fa">Certain genetic variations in NAD+ pathway genes (like NAMPT and CD38) may indicate who responds best to specific approaches. Genetic testing can provide personalized insights, but it isn't required for most people starting a basic NAD+ support protocol.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>NAD+ decline is one of the most well-documented features of aging. MOTS-c, 5-Amino-1MQ, and SS-31 each target different bottlenecks in NAD+ metabolism, and combining them with NMN and lifestyle interventions offers a multi-angle approach to supporting cellular energy and longevity. Work with a qualified provider to build a protocol that fits your individual biology.</p>
+</div>
+
+<p>The science of NAD+ restoration is still evolving, but the foundational research is strong. Mitochondrial decline drives much of what we experience as aging, and these peptides offer targeted tools to address it.</p>
+
+<p>Start with bloodwork. Build your protocol around data, not guesswork. And remember that peptides are one piece of a larger puzzle that includes exercise, nutrition, sleep, and stress management.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not substitute for professional medical consultation, diagnosis, or treatment. Always consult a qualified healthcare provider before starting any peptide protocol or making changes to your health regimen. Individual results vary, and the compounds discussed here are not FDA-approved for the uses described.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Rajman L, Chwalek K, Sinclair DA. Therapeutic Potential of NAD-Boosting Molecules: The In Vivo Evidence. <em>Cell Metab.</em> 2018;27(3):529&ndash;547. <a href="https://pubmed.ncbi.nlm.nih.gov/29514064/">PubMed</a><br>
+Imai SI, Guarente L. NAD+ and sirtuins in aging and disease. <em>Trends Cell Biol.</em> 2014;24(8):464&ndash;471. <a href="https://pubmed.ncbi.nlm.nih.gov/24786309/">PubMed</a><br>
+Lee C, Zeng J, Drew BG, et al. The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance. <em>Cell Metab.</em> 2015;21(3):443&ndash;454. <a href="https://pubmed.ncbi.nlm.nih.gov/25738459/">PubMed</a><br>
+Neelakantan H, et al. Selective and membrane-permeable small molecule inhibitors of nicotinamide N-methyltransferase reverse high fat diet-induced obesity in mice. <em>Biochem Pharmacol.</em> 2021;147:141&ndash;152. <a href="https://pubmed.ncbi.nlm.nih.gov/32891536/">PubMed</a><br>
+Birk AV, et al. The mitochondrial-targeted compound SS-31 re-energizes ischemic mitochondria by interacting with cardiolipin. <em>J Am Soc Nephrol.</em> 2014;24(8):1250&ndash;1261. <a href="https://pubmed.ncbi.nlm.nih.gov/24493033/">PubMed</a><br>
+Yoshino J, Baur JA, Imai SI. NAD+ Intermediates: The Biology and Therapeutic Potential of NMN and NR. <em>Cell Metab.</em> 2018;27(3):513&ndash;528. <a href="https://pubmed.ncbi.nlm.nih.gov/29249689/">PubMed</a><br>
+Camacho-Pereira J, et al. CD38 Dictates Age-Related NAD Decline and Mitochondrial Dysfunction through an SIRT3-Dependent Mechanism. <em>Cell Metab.</em> 2016;23(6):1127&ndash;1139. <a href="https://pubmed.ncbi.nlm.nih.gov/27304511/">PubMed</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/ss-31-elamipretide-mitochondrial-guide">SS-31 Elamipretide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/mots-c-mitochondrial-peptide">MOTS-c Mitochondrial Peptide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-bloodwork-guide">Peptide Bloodwork Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/longevity-stack-epithalon-nmn-thymosin">Longevity Stack Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/ss-31-elamipretide-mitochondrial-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">SS-31 Elamipretide Guide</a>
+            <a href="/articles/mots-c-mitochondrial-peptide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">MOTS-c Mitochondrial Peptide</a>
+            <a href="/articles/longevity-stack-epithalon-nmn-thymosin" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Longevity Stack Guide</a>
+            <a href="/articles/epithalon-anti-aging-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Epithalon Anti-Aging Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
