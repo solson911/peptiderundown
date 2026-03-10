@@ -1,0 +1,570 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "How to Inject Peptides Subcutaneously: A First-Timer's Guide",
+  description: "Step-by-step subcutaneous injection guide for peptides covering supplies, site selection, technique, dosing hygiene, pain minimization, and safe sharps disposal.",
+  image: "/images/articles/injection-guide.webp",
+  date: "2026-02-14",
+  category: "How-To",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">How-To &middot; Injection Technique &middot; First-Timer</div>
+  <h1>How to Inject Peptides Subcutaneously</h1>
+  <p class="sub">A plain-language, step-by-step guide to your first subcutaneous peptide injection. Supplies, site selection, technique, pain tips, and safe sharps disposal.</p>
+  <div class="pills">
+    <span class="pill">SubQ Technique</span>
+    <span class="pill">Supplies &middot; Site Rotation</span>
+    <span class="pill">Sharps Safety</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">29&ndash;31G</div><div class="l">Recommended<br>Needle Gauge</div></div>
+  <div class="sb"><div class="v c2">45&ndash;90&deg;</div><div class="l">Insertion<br>Angle</div></div>
+  <div class="sb"><div class="v c3">3</div><div class="l">Primary<br>Injection Sites</div></div>
+  <div class="sb"><div class="v c4">5&ndash;10s</div><div class="l">Hold Time<br>After Injection</div></div>
+</div>
+
+<p>Your first self-injection can feel intimidating. That's normal, and there is no way to shortcut the nerves entirely.</p>
+
+<p>But subcutaneous (subQ) <a href="/articles/what-are-peptides-beginners-guide">injections</a> are one of the simplest medical procedures you can learn at home. Millions of people do them every day for insulin, blood thinners, and peptides. After two or three injections, most people say it becomes completely routine.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This guide walks through everything from gathering supplies to disposing of sharps safely. It is <strong>not a substitute for medical advice</strong>. Always consult a qualified healthcare provider before beginning any injection-based peptide regimen.</p>
+</div>
+
+<!-- ========== WHAT IS SUBQ ========== -->
+<hr class="sep">
+<h2>What Does "Subcutaneous" Actually Mean?</h2>
+
+<p>Subcutaneous means "under the skin." You are depositing the solution into the fatty tissue layer between your skin and the muscle beneath it. This layer is rich in small blood vessels, so the peptide absorbs gradually into your bloodstream.</p>
+
+<p>It's different from intramuscular (IM) injections, which go deeper into muscle, and intravenous (IV) injections, which go directly into a vein. SubQ injections are the shallowest of the three, which is exactly why they're the easiest to perform at home.</p>
+
+<div class="cd ct">
+  <div class="tg">Key Research</div>
+  <h3>Why SubQ Works for Peptides</h3>
+  <p style="font-size:14px;margin-bottom:0;">Most peptides are administered subcutaneously because the absorption rate from fatty tissue matches their pharmacokinetic profiles. A 2015 study confirmed that subcutaneous delivery provides reliable bioavailability for a wide range of peptide compounds (<a href="https://pubmed.ncbi.nlm.nih.gov/26093058/">PubMed: 26093058</a>).</p>
+</div>
+
+<!-- SVG Diagram: Injection Depth -->
+<div class="svg-box">
+  <div class="st">Injection Depth Comparison</div>
+  <div class="ss">SubQ targets the fat layer between skin and muscle</div>
+  <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Skin layer -->
+    <rect x="50" y="20" width="600" height="30" rx="4" fill="#F5D6B8" stroke="#D4A574" stroke-width="1"/>
+    <text x="350" y="40" text-anchor="middle" font-size="12" font-weight="600" fill="#8B5E3C">Epidermis + Dermis</text>
+    <!-- Fat layer -->
+    <rect x="50" y="50" width="600" height="60" rx="4" fill="#FFF3CD" stroke="#E0C97A" stroke-width="1"/>
+    <text x="350" y="85" text-anchor="middle" font-size="12" font-weight="600" fill="#7A6520">Subcutaneous Fat (Target)</text>
+    <!-- Muscle layer -->
+    <rect x="50" y="110" width="600" height="50" rx="4" fill="#F0C4C4" stroke="#C99090" stroke-width="1"/>
+    <text x="350" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#8B4040">Muscle</text>
+    <!-- SubQ needle -->
+    <line x1="180" y1="5" x2="200" y2="75" stroke="#2956A6" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="140" y="12" font-size="11" font-weight="600" fill="#2956A6">SubQ (45-90&#176;)</text>
+    <circle cx="200" cy="75" r="3" fill="#2956A6"/>
+    <!-- IM needle -->
+    <line x1="480" y1="5" x2="490" y2="130" stroke="#B53A3A" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="500" y="12" font-size="11" font-weight="600" fill="#B53A3A">IM (90&#176;)</text>
+    <circle cx="490" cy="130" r="3" fill="#B53A3A"/>
+    <!-- Labels -->
+    <text x="350" y="185" text-anchor="middle" font-size="11" fill="#86869A">SubQ needles (4-8 mm) stop in the fat layer. IM needles reach muscle.</text>
+  </svg>
+</div>
+
+<!-- ========== INJECTION TYPES ========== -->
+<hr class="sep">
+<h2>SubQ vs. IM vs. IV: Quick Comparison</h2>
+
+<p>Understanding the differences between injection types helps you appreciate why subcutaneous is the go-to route for most peptides at home.</p>
+
+<table class="tbl">
+  <thead><tr><th>Feature</th><th>Subcutaneous (SubQ)</th><th>Intramuscular (IM)</th><th>Intravenous (IV)</th></tr></thead>
+  <tbody>
+    <tr><td>Depth</td><td class="g">4-8 mm (fat layer)</td><td>25-38 mm (muscle)</td><td>Into vein</td></tr>
+    <tr><td>Needle gauge</td><td class="g">29-31G (thin)</td><td>22-25G (thicker)</td><td>18-22G</td></tr>
+    <tr><td>Pain level</td><td class="g">Minimal pinch</td><td class="y">Moderate</td><td class="y">Variable</td></tr>
+    <tr><td>Absorption speed</td><td>Gradual (minutes to hours)</td><td>Moderate (minutes)</td><td class="r">Immediate</td></tr>
+    <tr><td>Home-friendly</td><td class="g">Yes</td><td class="y">Sometimes</td><td class="r">No (clinical setting)</td></tr>
+    <tr><td>Training needed</td><td class="g">Minimal</td><td class="y">Some</td><td class="r">Extensive</td></tr>
+  </tbody>
+</table>
+
+<p>For the vast majority of research peptides, subcutaneous delivery is the standard. It matches the pharmacokinetic profile most peptides were designed around, and the technique is straightforward enough to learn from a single demonstration.</p>
+
+<!-- ========== SYRINGE SELECTION ========== -->
+<hr class="sep">
+<h2>Choosing the Right Syringe</h2>
+
+<p>The syringe you pick affects comfort, accuracy, and waste. This is one area where small details matter.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Gauge (Needle Thickness)</h4>
+    <p><strong>29G:</strong> Slightly thicker, easier to draw viscous solutions. <strong>30G:</strong> The sweet spot for most users. <strong>31G:</strong> Thinnest, least painful, but slower to draw.</p>
+  </div>
+  <div class="mc">
+    <h4>Volume (Barrel Size)</h4>
+    <p><strong>0.3 mL:</strong> Best precision for small doses under 30 units. <strong>0.5 mL:</strong> Good all-around. <strong>1 mL:</strong> Needed for larger volumes but harder to read small doses accurately.</p>
+  </div>
+</div>
+
+<div class="d-a d">
+  <div class="s">Practical Tip</div>
+  <p>If your typical dose is under 20 units (0.2 mL), buy 0.3 mL or 0.5 mL insulin syringes. The graduation marks are more precise than on 1 mL syringes, and dosing accuracy matters more than most people think.</p>
+</div>
+
+<p>Needle length for subQ is typically 6 mm (1/4 inch) or 8 mm (5/16 inch). Both work well. If you have very little body fat at your injection sites, the shorter 6 mm needle reduces any risk of accidentally hitting muscle.</p>
+
+<!-- ========== SUPPLIES ========== -->
+<hr class="sep">
+<h2>Supplies You'll Need</h2>
+
+<p>Gather everything before you start. Hunting for supplies mid-injection is a recipe for contamination or frustration.</p>
+
+<table class="tbl">
+  <thead><tr><th>Item</th><th>Purpose</th><th>Priority</th></tr></thead>
+  <tbody>
+    <tr><td>Insulin syringes (29-31 gauge, 0.5 or 1 mL)</td><td>Standard for subQ peptide injections</td><td class="g">Essential</td></tr>
+    <tr><td>Alcohol swabs (70% isopropyl)</td><td>Cleaning injection site and vial stopper</td><td class="g">Essential</td></tr>
+    <tr><td>Reconstituted peptide vial</td><td>Your prepared peptide (<a href="/articles/how-to-store-peptides">storage guide</a>)</td><td class="g">Essential</td></tr>
+    <tr><td>Bacteriostatic water</td><td>For <a href="/articles/how-to-reconstitute-peptides">reconstitution if needed</a> (0.9% benzyl alcohol)</td><td class="g">Essential</td></tr>
+    <tr><td>Sharps container</td><td>Safe needle disposal</td><td class="g">Essential</td></tr>
+    <tr><td>Clean, flat surface</td><td>Laying out supplies</td><td class="g">Essential</td></tr>
+    <tr><td>Small ice pack</td><td>Numbing the site beforehand</td><td class="y">Optional</td></tr>
+    <tr><td>Cotton balls or gauze pads</td><td>Post-injection pressure</td><td class="y">Optional</td></tr>
+    <tr><td>Bandages</td><td>Rarely needed, but reassuring for first-timers</td><td class="y">Optional</td></tr>
+    <tr><td>Notebook or app</td><td>Tracking injection sites and doses</td><td class="y">Optional</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== INJECTION SITES ========== -->
+<hr class="sep">
+<h2>Choosing Your Injection Site</h2>
+
+<p>You have three primary options. Each works well, and the "best" site mostly comes down to personal preference.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Abdomen (Belly)</h4>
+    <p>Most popular site. Large surface area for rotation, easy to see what you're doing. Stay at least two inches from the navel. Can be more sensitive on very lean midsections.</p>
+  </div>
+  <div class="mc">
+    <h4>Outer Thigh</h4>
+    <p>Front or outer aspect, middle third between hip and knee. Good tissue depth, and you can sit while injecting. Avoid the inner thigh. Some people find slightly more nerve sensitivity here.</p>
+  </div>
+  <div class="mc">
+    <h4>Upper Arm</h4>
+    <p>Fatty area on the back of the arm, halfway between shoulder and elbow. Good absorption and relatively painless. Hard to reach on your own, so this one usually requires a partner.</p>
+  </div>
+</div>
+
+<div class="d-t d">
+  <div class="s">Research Note</div>
+  <p>A study in <em>Diabetes Technology &amp; Therapeutics</em> found no clinically significant differences in absorption rates between abdominal and thigh injection sites (<a href="https://pubmed.ncbi.nlm.nih.gov/19459763/">PubMed: 19459763</a>). Pick the site that feels most comfortable.</p>
+</div>
+
+<!-- ========== STEP BY STEP ========== -->
+<hr class="sep">
+<h2>Step-by-Step Injection Process</h2>
+
+<p>Read through this section once completely before you begin. Familiarity with the full process reduces hesitation and mistakes.</p>
+
+<div class="cd cb">
+  <div class="tg">Step 1</div>
+  <h3>Wash Your Hands</h3>
+  <p style="font-size:14px;margin-bottom:0;">Soap and warm water for at least 20 seconds. Dry with a clean towel. This is non-negotiable. Contamination from unwashed hands is the most preventable cause of injection-site infections.</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Step 2</div>
+  <h3>Prepare Your Workspace</h3>
+  <p style="font-size:14px;margin-bottom:0;">Lay out supplies on a clean surface. Open alcohol swab packets but leave the swabs inside. Remove the cap from your syringe but don't touch the needle.</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Step 3</div>
+  <h3>Clean the Vial Stopper</h3>
+  <p style="font-size:14px;margin-bottom:0;">Wipe the rubber stopper on your peptide vial with an alcohol swab using a firm, circular motion. Let it air dry for about 10 seconds. Don't blow on it.</p>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Step 4</div>
+  <h3>Draw the Peptide Into the Syringe</h3>
+  <p style="font-size:14px;margin-bottom:8px;">Pull back the plunger to the mark matching your desired dose, filling the barrel with air. Insert the needle through the center of the rubber stopper.</p>
+  <p style="font-size:14px;margin-bottom:8px;">Push the plunger to inject air into the vial (this equalizes pressure). Turn the vial upside down so the needle tip is submerged.</p>
+  <p style="font-size:14px;margin-bottom:8px;">Slowly pull the plunger to your desired dose marking. Check for air bubbles. Tap the barrel to move them up, then push the plunger slightly to expel them.</p>
+  <p style="font-size:14px;margin-bottom:0;">Confirm your dose, then withdraw the needle from the vial.</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Step 5</div>
+  <h3>Clean the Injection Site</h3>
+  <p style="font-size:14px;margin-bottom:0;">Swab your chosen site with a fresh alcohol pad using a circular motion, working outward. Let it air dry completely. Injecting through wet alcohol stings, so just wait the extra 10 seconds.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Step 6 - The Main Event</div>
+  <h3>Pinch and Inject</h3>
+  <p style="font-size:14px;margin-bottom:8px;">With your non-dominant hand, pinch up a fold of skin about one to two inches wide. Hold the syringe like a dart at <strong>45 to 90 degrees</strong> to the skin. Use 90 degrees for most body compositions, 45 degrees if you're very lean.</p>
+  <p style="font-size:14px;margin-bottom:8px;">Insert the needle in one smooth, steady motion. Release the skin pinch. Push the plunger down slowly over 5 to 10 seconds.</p>
+  <p style="font-size:14px;margin-bottom:0;">Wait 5 to 10 seconds before withdrawing. This ensures the full dose is deposited. Pull the needle out at the same angle you inserted it.</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Step 7</div>
+  <h3>Post-Injection</h3>
+  <p style="font-size:14px;margin-bottom:0;">Apply gentle pressure with a cotton ball for a few seconds. Don't rub the area. A tiny drop of blood is totally normal. A small welt or bump is just the fluid sitting in tissue before it absorbs.</p>
+</div>
+
+<div class="cd cr">
+  <div class="tg">Step 8 - Critical</div>
+  <h3>Dispose of the Syringe</h3>
+  <p style="font-size:14px;margin-bottom:0;">Immediately place the used syringe into your sharps container. <strong>Do not recap the needle.</strong> Recapping is the number one cause of accidental needlesticks at home.</p>
+</div>
+
+<!-- ========== SITE ROTATION ========== -->
+<hr class="sep">
+<h2>Injection Site Rotation</h2>
+
+<p>Rotating sites matters more than most first-timers realize. Repeated injections in the same spot can cause <strong>lipohypertrophy</strong>, which is a buildup of fatty lumps under the skin. These lumps alter absorption and lead to inconsistent dosing.</p>
+
+<p>Research in <em>Diabetes Care</em> showed that patients who rotated sites had fewer complications and more consistent drug absorption (<a href="https://pubmed.ncbi.nlm.nih.gov/26740633/">PubMed: 26740633</a>).</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Once Daily</h4>
+    <p>Rotate between four abdominal quadrants (upper left, upper right, lower left, lower right), moving clockwise through each day.</p>
+  </div>
+  <div class="mc">
+    <h4>Twice Daily</h4>
+    <p>Add thighs to the rotation. Morning in abdomen, evening in thigh, switching sides each day.</p>
+  </div>
+  <div class="mc">
+    <h4>Clock Method</h4>
+    <p>Imagine a clock face around your navel. Each injection moves to the next "hour" position. Simple and systematic.</p>
+  </div>
+</div>
+
+<p>Keep a simple log. Even just jotting "left belly" or "right thigh" on your phone is enough to prevent hitting the same spot twice in a row.</p>
+
+<!-- ========== PAIN TIPS ========== -->
+<hr class="sep">
+<h2>Pain Minimization Tips</h2>
+
+<p>SubQ injections with insulin needles are not very painful. Most people describe a brief pinch that lasts about one second. But if you're needle-sensitive, these strategies help considerably.</p>
+
+<table class="tbl">
+  <thead><tr><th>Technique</th><th>Why It Works</th><th>Impact</th></tr></thead>
+  <tbody>
+    <tr><td>Fresh needle every time</td><td>Needles dull after a single use, increasing tissue drag</td><td class="g">High</td></tr>
+    <tr><td>Let alcohol dry completely</td><td>Wet alcohol causes stinging on contact</td><td class="g">High</td></tr>
+    <tr><td>Ice the site for 30-60 seconds</td><td>Cold numbs local nerve endings</td><td class="g">High</td></tr>
+    <tr><td>Inject at room temperature</td><td>Cold solutions cause more discomfort</td><td class="y">Medium</td></tr>
+    <tr><td>Relax the muscle underneath</td><td>Tension increases pain perception</td><td class="y">Medium</td></tr>
+    <tr><td>Go at a steady speed</td><td>Hesitating mid-insertion makes it worse</td><td class="y">Medium</td></tr>
+    <tr><td>Breathe out as you insert</td><td>Activates parasympathetic relaxation</td><td class="y">Medium</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== TIMING ========== -->
+<hr class="sep">
+<h2>Timing and Frequency</h2>
+
+<p>Different peptides have different timing requirements. Some are taken once daily, others twice. Some work best on an empty stomach, others don't care. Always follow the specific protocol for your peptide.</p>
+
+<div class="cd cp">
+  <div class="tg">General Timing Guidelines</div>
+  <h3>When to Inject</h3>
+  <p style="font-size:14px;margin-bottom:8px;"><strong>Growth hormone secretagogues</strong> (like <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> or CJC-1295): Typically taken on an empty stomach, 30 minutes before eating or 2 hours after. Many users prefer a pre-bedtime injection to align with natural GH pulses.</p>
+  <p style="font-size:14px;margin-bottom:8px;"><strong>Healing peptides</strong> (like <a href="/articles/bpc-157-complete-guide">BPC-157</a> or TB-500): Often taken twice daily, morning and evening. Can be taken regardless of meals. Injecting near the injury site may be more effective, though systemic effects occur either way.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Consistency matters more than perfection.</strong> The same time each day, give or take an hour, is better than obsessing over exact-to-the-minute scheduling.</p>
+</div>
+
+<!-- ========== BUILDING ROUTINE ========== -->
+<hr class="sep">
+<h2>Building Your Injection Routine</h2>
+
+<p>The first week is the hardest. After that, it becomes as automatic as brushing your teeth. Here's what a sustainable routine looks like.</p>
+
+<div class="sr">
+  <div class="sb"><div class="v c1">1-3</div><div class="l">Injections Until<br>It Feels Normal</div></div>
+  <div class="sb"><div class="v c2">2-3 min</div><div class="l">Total Time<br>Per Injection</div></div>
+  <div class="sb"><div class="v c3">4+</div><div class="l">Sites in Your<br>Rotation Plan</div></div>
+  <div class="sb"><div class="v c4">30s</div><div class="l">Actual Needle<br>Contact Time</div></div>
+</div>
+
+<p>Set a daily alarm on your phone. Keep your supplies in one designated spot. Log each injection with the site you used. After one week, you won't even think about it.</p>
+
+<p>If anxiety is still high after several attempts, consider asking your prescribing provider or a local nurse to walk you through your first injection in person. One supervised session is often all it takes to build lasting confidence.</p>
+
+<!-- ========== SHARPS DISPOSAL ========== -->
+<hr class="sep">
+<h2>Proper Sharps Disposal</h2>
+
+<p>Used syringes are biohazardous sharps. Throwing them in regular trash is illegal in many states and dangerous for sanitation workers.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Commercial Containers</h4>
+    <p>Available at any pharmacy. Many pharmacies accept them back when full for proper disposal.</p>
+  </div>
+  <div class="mc">
+    <h4>Mail-Back Programs</h4>
+    <p>Companies like Stericycle sell prepaid disposal kits. Fill the container, drop it in the mail.</p>
+  </div>
+  <div class="mc">
+    <h4>Community Drop-Off</h4>
+    <p>Hospitals, fire stations, and health departments often accept sharps. See <a href="https://safeneedledisposal.org">safeneedledisposal.org</a>.</p>
+  </div>
+  <div class="mc">
+    <h4>DIY Containers</h4>
+    <p>Thick plastic container with a screw cap, labeled "SHARPS - DO NOT RECYCLE." Not ideal, but better than loose needles in the trash.</p>
+  </div>
+</div>
+
+<div class="d-r d">
+  <div class="s">Safety Warning</div>
+  <p>Never put loose needles in the trash, recycling, or toilet. This puts sanitation workers and family members at risk of accidental needlestick injuries.</p>
+</div>
+
+<!-- ========== COMMON MISTAKES ========== -->
+<hr class="sep">
+<h2>Common Mistakes to Avoid</h2>
+
+<table class="tbl">
+  <thead><tr><th>Mistake</th><th>Why It Matters</th><th>Severity</th></tr></thead>
+  <tbody>
+    <tr><td>Reusing syringes</td><td>Contamination risk is not worth the savings</td><td class="r">Serious</td></tr>
+    <tr><td>Injecting through clothing</td><td>Infection risk from bacteria on fabric</td><td class="r">Serious</td></tr>
+    <tr><td>Recapping the needle</td><td>Number one cause of accidental needlesticks</td><td class="r">Serious</td></tr>
+    <tr><td>Injecting too shallow</td><td>Fluid pooling on skin means you went intradermal</td><td class="y">Moderate</td></tr>
+    <tr><td>Injecting too deep</td><td>Lean people at 90 degrees may hit muscle. Use short needles (6-8 mm)</td><td class="y">Moderate</td></tr>
+    <tr><td>Skipping the air bubble step</td><td>Not injecting air into the vial first makes drawing much harder</td><td class="y">Moderate</td></tr>
+    <tr><td>Not checking for air in syringe</td><td>Bubbles displace volume, giving you a smaller dose</td><td class="y">Moderate</td></tr>
+    <tr><td>Rushing the injection</td><td>Too fast causes more soreness and a larger welt</td><td class="y">Moderate</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== WHEN TO SEEK HELP ========== -->
+<hr class="sep">
+<h2>When to Seek Medical Help</h2>
+
+<p>Most injection-site reactions are minor and resolve on their own within a day. But some signs warrant a call to your healthcare provider.</p>
+
+<div class="cd cr">
+  <div class="tg">Emergency Signs</div>
+  <h3>Call 911 Immediately</h3>
+  <p style="font-size:14px;margin-bottom:0;">Difficulty breathing, swelling of the tongue or throat, or feeling faint after an injection. These are signs of anaphylaxis and require immediate emergency care.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Contact Your Provider</div>
+  <h3>Non-Emergency Warning Signs</h3>
+  <p style="font-size:14px;margin-bottom:8px;"><strong>Signs of infection:</strong> Increasing redness, warmth, swelling, or pus over 24 to 48 hours at the injection site.</p>
+  <p style="font-size:14px;margin-bottom:8px;"><strong>Persistent lumps:</strong> Hard lumps that don't resolve within a week may indicate tissue reaction.</p>
+  <p style="font-size:14px;margin-bottom:8px;"><strong>Fever:</strong> Post-injection fever you can't attribute to another cause.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Unusual bleeding:</strong> Bleeding that doesn't stop with gentle pressure within a few minutes.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How deep does the needle go?</summary>
+    <div class="fa">Typically 4 to 8 mm, which is the length of most insulin syringe needles. You're just passing through the skin into the fat layer beneath it.</div>
+  </details>
+  <details>
+    <summary>Can I inject with the same syringe I used to draw from the vial?</summary>
+    <div class="fa">Yes, most people do. For the sharpest possible needle at the injection site, you can draw with one syringe and transfer to a fresh one. This is called the "two-needle technique" and is entirely optional.</div>
+  </details>
+  <details>
+    <summary>What if I see blood when I pull the needle out?</summary>
+    <div class="fa">A small drop is completely normal. You nicked a tiny capillary. Apply gentle pressure and it will stop within a minute.</div>
+  </details>
+  <details>
+    <summary>What if I see a bump or welt after injecting?</summary>
+    <div class="fa">That's just the fluid sitting in subcutaneous tissue. It will absorb over the next several minutes to hours. Don't massage it aggressively.</div>
+  </details>
+  <details>
+    <summary>Do I need to aspirate before injecting?</summary>
+    <div class="fa">For subcutaneous injections, no. The CDC and WHO both recommend against aspiration for subQ delivery (<a href="https://pubmed.ncbi.nlm.nih.gov/20648481/">PubMed: 20648481</a>).</div>
+  </details>
+  <details>
+    <summary>Can I use the same injection site every day?</summary>
+    <div class="fa">You can, but you shouldn't. Repeated trauma leads to tissue changes over time. <a href="/articles/peptide-cycling-guide">Rotate consistently</a> to maintain healthy tissue and consistent absorption.</div>
+  </details>
+  <details>
+    <summary>What gauge needle is best?</summary>
+    <div class="fa"><strong>29 to 31 gauge</strong> insulin needles are the standard for subQ peptide injections. <strong>30 gauge</strong> is the sweet spot for most people, balancing flow rate with comfort.</div>
+  </details>
+  <details>
+    <summary>Is it normal to feel nervous?</summary>
+    <div class="fa">Absolutely. The anticipation is always worse than the actual needle. After two or three injections, it becomes routine for the vast majority of people.</div>
+  </details>
+  <details>
+    <summary>How long after reconstitution should I use my peptide?</summary>
+    <div class="fa">With bacteriostatic water, <strong>3 to 4 weeks</strong> refrigerated. With sterile water, use within a few days. See our <a href="/articles/how-to-store-peptides">peptide storage guide</a> for detailed timelines.</div>
+  </details>
+</div>
+
+<!-- ========== DISCLAIMER ========== -->
+<hr class="sep">
+
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational purposes only and does not constitute medical advice. Subcutaneous injection technique should ideally be demonstrated by a qualified healthcare provider before self-administration. Always consult with a licensed medical professional before beginning any peptide regimen. Never share needles or syringes with another person.
+</div>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/how-to-store-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Storage Guide</a>
+            <a href="/articles/peptide-cycling-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Cycling Guide</a>
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides?</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

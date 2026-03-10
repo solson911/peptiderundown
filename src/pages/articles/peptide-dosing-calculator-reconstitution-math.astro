@@ -1,0 +1,563 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptide Dosing Calculator: Reconstitution Math Made Simple",
+  description: "Learn how to calculate peptide doses, reconstitution volumes, and read insulin syringes. Step-by-step math with worked examples for BPC-157, semaglutide, ipamorelin, and more.",
+  image: "/images/articles/peptide-dosing-calculator.webp",
+  date: "2026-02-15",
+  category: "How-To",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">How-To &middot; Dosing &middot; Reconstitution</div>
+  <h1>Peptide Dosing Calculator: Reconstitution Math Made Simple</h1>
+  <p class="sub">The formulas, worked examples, and syringe-reading skills you need to calculate any peptide dose accurately. No guesswork, no apps required.</p>
+  <div class="pills">
+    <span class="pill">Concentration Formula</span>
+    <span class="pill">Insulin Syringe &middot; U-100</span>
+    <span class="pill">Worked Examples &middot; 6 Peptides</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">2</div><div class="l">Core Formulas<br>You Need</div></div>
+  <div class="sb"><div class="v c2">U-100</div><div class="l">Standard Syringe<br>Type</div></div>
+  <div class="sb"><div class="v c3">6</div><div class="l">Worked Examples<br>Included</div></div>
+  <div class="sb"><div class="v c4">1000</div><div class="l">mcg per mg<br>Conversion</div></div>
+</div>
+
+<p>Peptide dosing math trips up almost everyone at first. You are staring at a tiny vial of freeze-dried powder, an insulin syringe with cryptic markings, and instructions that say "inject 250 mcg." Bridging the gap between those three things is straightforward once you understand two formulas.</p>
+
+<p>This guide walks through both formulas step by step, then applies them to six popular peptides so you can see the math in action. Bookmark it and come back whenever you reconstitute a new vial.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational reference for understanding peptide reconstitution math and syringe measurement. It is <strong>not a recommendation to use any peptide</strong>. Always consult a qualified healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<!-- ========== VIALS AND DILUENTS ========== -->
+<hr class="sep">
+<h2>Understanding Peptide Vials and Diluents</h2>
+
+<p>Peptides arrive as lyophilized (freeze-dried) powder sealed inside small glass vials. You cannot inject powder. You need to dissolve it in a liquid first, and the liquid you choose matters.</p>
+
+<p>Bacteriostatic water (BAC water) is the standard choice for multi-dose vials. It contains 0.9% benzyl alcohol, which prevents bacterial growth over the days or weeks you draw from the same vial. Plain sterile water lacks this preservative and should only be used for single-dose immediate injections.</p>
+
+<div class="d-t">
+  <div class="s">Key Point</div>
+  <p>Always use bacteriostatic water for any vial you plan to draw from more than once. Sterile water without preservative becomes a contamination risk after the first needle puncture.</p>
+</div>
+
+<p>Common vial sizes are 2 mg, 5 mg, and 10 mg. The amount of water you add determines the concentration, and concentration determines how much liquid you draw for each dose. More water means a more dilute solution and larger, easier-to-measure volumes.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Bacteriostatic Water</h4>
+    <p><strong>Contains:</strong> 0.9% benzyl alcohol &nbsp;|&nbsp; <strong>Use for:</strong> Multi-dose vials &nbsp;|&nbsp; <strong>Shelf life once opened:</strong> 28 days &nbsp;|&nbsp; <strong>Storage:</strong> Room temperature or refrigerated</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Sterile Water</h4>
+    <p><strong>Contains:</strong> No preservatives &nbsp;|&nbsp; <strong>Use for:</strong> Single immediate injection only &nbsp;|&nbsp; <strong>Shelf life once opened:</strong> Use immediately &nbsp;|&nbsp; <strong>Storage:</strong> Room temperature</p>
+  </div>
+</div>
+
+<!-- ========== CORE FORMULAS ========== -->
+<hr class="sep">
+<h2>The Two Formulas You Need</h2>
+
+<p>Every peptide dose calculation comes down to two steps. First you find the concentration. Then you find the injection volume. That is it.</p>
+
+<!-- SVG Diagram -->
+<div class="svg-box">
+  <div class="st">Peptide Dose Calculation Flow</div>
+  <div class="ss">Two formulas, applied in sequence, give you the syringe units for any peptide</div>
+  <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Step 1 -->
+    <rect x="10" y="20" width="200" height="160" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="110" y="48" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">STEP 1</text>
+    <text x="110" y="70" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Find Concentration</text>
+    <line x1="30" y1="80" x2="190" y2="80" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="110" y="105" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">Peptide (mg)</text>
+    <text x="110" y="125" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#2956A6" font-weight="700">&#247;</text>
+    <text x="110" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362">Water added (mL)</text>
+    <text x="110" y="168" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#2956A6" font-weight="600">= mg/mL</text>
+
+    <!-- Arrow -->
+    <line x1="220" y1="100" x2="250" y2="100" stroke="#86869A" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#86869A"/></marker></defs>
+
+    <!-- Step 2 -->
+    <rect x="260" y="20" width="200" height="160" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="360" y="48" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">STEP 2</text>
+    <text x="360" y="70" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Find Dose Volume</text>
+    <line x1="280" y1="80" x2="440" y2="80" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="360" y="105" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">Desired dose (mg)</text>
+    <text x="360" y="125" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#6E3B8A" font-weight="700">&#247;</text>
+    <text x="360" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050">Concentration (mg/mL)</text>
+    <text x="360" y="168" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#6E3B8A" font-weight="600">= mL to inject</text>
+
+    <!-- Arrow -->
+    <line x1="470" y1="100" x2="500" y2="100" stroke="#86869A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- Step 3 -->
+    <rect x="510" y="20" width="180" height="160" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="600" y="48" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">CONVERT</text>
+    <text x="600" y="70" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Syringe Units</text>
+    <line x1="530" y1="80" x2="670" y2="80" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="600" y="105" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#14503E">Volume (mL)</text>
+    <text x="600" y="125" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" fill="#187A62" font-weight="700">&#215;</text>
+    <text x="600" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#14503E">100 (for U-100)</text>
+    <text x="600" y="168" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#187A62" font-weight="600">= IU on syringe</text>
+  </svg>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Formula 1</div>
+  <h3>Concentration = Peptide (mg) / Water (mL)</h3>
+  <p style="font-size:14px;margin-bottom:0;">This tells you how many milligrams of peptide are dissolved in each milliliter of liquid. A 5 mg vial reconstituted with 2 mL of BAC water gives a concentration of 2.5 mg/mL. Simple division.</p>
+</div>
+
+<div class="cd cp">
+  <div class="tg">Formula 2</div>
+  <h3>Dose Volume (mL) = Desired Dose (mg) / Concentration (mg/mL)</h3>
+  <p style="font-size:14px;margin-bottom:0;">Once you know the concentration, divide your target dose by it to find the volume you need to draw. Then multiply by 100 to convert mL to units on a U-100 insulin syringe.</p>
+</div>
+
+<div class="d-a">
+  <div class="s">Unit Conversion</div>
+  <p>Always convert micrograms to milligrams before plugging numbers into the formulas. <strong>1 mg = 1000 mcg.</strong> So 500 mcg becomes 0.5 mg, and 250 mcg becomes 0.25 mg. Mixing units is the most common source of dosing errors.</p>
+</div>
+
+<!-- ========== INSULIN SYRINGES ========== -->
+<hr class="sep">
+<h2>Insulin Syringes: Reading the Markings</h2>
+
+<p>Most peptide users measure doses with U-100 insulin syringes. The "U-100" means the syringe is calibrated so that 100 units equals 1 mL. Each single unit mark on the barrel represents 0.01 mL (10 microliters).</p>
+
+<table class="tbl">
+<thead><tr><th>Syringe Type</th><th>Total Units</th><th>Volume</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>U-100 (1 mL)</strong></td><td class="g">100 units</td><td>1 mL</td><td>Standard peptide dosing; most common choice</td></tr>
+<tr><td><strong>U-100 (0.5 mL)</strong></td><td class="g">50 units</td><td>0.5 mL</td><td>Smaller doses with finer markings</td></tr>
+<tr><td><strong>U-100 (0.3 mL)</strong></td><td class="g">30 units</td><td>0.3 mL</td><td>Micro-doses under 10 units; best precision</td></tr>
+</tbody>
+</table>
+
+<p>When reading the syringe, look at where the flat edge of the rubber plunger tip meets the barrel wall. That is your measurement line. Hold the syringe at eye level for the most accurate reading.</p>
+
+<div class="d-t">
+  <div class="s">Precision Tip</div>
+  <p>For doses under 10 units, switch to a 0.3 mL syringe. The markings are spaced further apart, and many 0.3 mL syringes include half-unit lines. This makes a real difference when your dose is 4 or 6 units.</p>
+</div>
+
+<!-- ========== RECONSTITUTION TABLE ========== -->
+<hr class="sep">
+<h2>Reconstitution Quick-Reference Table</h2>
+
+<p>This table shows concentrations for the most common vial-size and water-volume combinations. Find your vial size in the left column, pick a water volume, and read off the resulting concentration.</p>
+
+<table class="tbl">
+<thead><tr><th>Vial Size</th><th>BAC Water</th><th>Concentration</th><th>0.5 mg Dose =</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>2 mg</strong></td><td>1 mL</td><td class="g">2 mg/mL</td><td>25 units</td><td>Good for semaglutide starter doses</td></tr>
+<tr><td><strong>5 mg</strong></td><td>1 mL</td><td class="y">5 mg/mL</td><td>10 units</td><td>Concentrated; best for experienced users</td></tr>
+<tr><td><strong>5 mg</strong></td><td>2 mL</td><td class="g">2.5 mg/mL</td><td>20 units</td><td>Popular for BPC-157 and TB-500</td></tr>
+<tr><td><strong>10 mg</strong></td><td>1 mL</td><td class="r">10 mg/mL</td><td>5 units</td><td>Very concentrated; hard to measure small doses</td></tr>
+<tr><td><strong>10 mg</strong></td><td>2 mL</td><td class="y">5 mg/mL</td><td>10 units</td><td>Reasonable for larger-dose peptides</td></tr>
+<tr><td><strong>15 mg</strong></td><td>3 mL</td><td class="y">5 mg/mL</td><td>10 units</td><td>Common for tirzepatide vials</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">Beginner Recommendation</div>
+  <p>If you are new to peptides, add <strong>more water rather than less</strong>. A more dilute solution means larger injection volumes, and larger volumes are much easier to measure accurately. The trade-off is a slightly larger injection, which is barely noticeable subcutaneously.</p>
+</div>
+
+<!-- ========== WORKED EXAMPLES ========== -->
+<hr class="sep">
+<h2>Worked Examples: Six Popular Peptides</h2>
+
+<p>Theory is useful, but seeing the math applied to real peptides is what makes it stick. Each example below follows the same two-step process.</p>
+
+<h3><a href="/articles/bpc-157-complete-guide">BPC-157</a> at 500 mcg</h3>
+
+<div class="cd ct">
+  <div class="tg">Worked Example</div>
+  <h3>BPC-157: 500 mcg from a 5 mg Vial</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Vial:</strong> 5 mg &nbsp;|&nbsp; <strong>Water added:</strong> 2 mL BAC water &nbsp;|&nbsp; <strong>Concentration:</strong> 5 mg / 2 mL = 2.5 mg/mL &nbsp;|&nbsp; <strong>Dose conversion:</strong> 500 mcg = 0.5 mg &nbsp;|&nbsp; <strong>Volume:</strong> 0.5 mg / 2.5 mg/mL = 0.2 mL &nbsp;|&nbsp; <strong>Syringe units:</strong> 0.2 x 100 = <strong>20 units</strong></p>
+</div>
+
+<p>BPC-157 is one of the most commonly dosed peptides, and 500 mcg is the standard amount per injection. At 20 units on a 1 mL syringe, the marking is easy to read. This vial gives you 10 doses total (5 mg / 0.5 mg per dose). Research on BPC-157 and gastric healing is reviewed in <a href="https://pubmed.ncbi.nlm.nih.gov/30915550/">Sikiric et al., 2018</a>.</p>
+
+<h3><a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> Starter Dose</h3>
+
+<div class="cd cb">
+  <div class="tg">Worked Example</div>
+  <h3>Semaglutide: 0.25 mg from a 2 mg Vial</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Vial:</strong> 2 mg &nbsp;|&nbsp; <strong>Water added:</strong> 1 mL BAC water &nbsp;|&nbsp; <strong>Concentration:</strong> 2 mg / 1 mL = 2 mg/mL &nbsp;|&nbsp; <strong>Dose:</strong> 0.25 mg &nbsp;|&nbsp; <strong>Volume:</strong> 0.25 mg / 2 mg/mL = 0.125 mL &nbsp;|&nbsp; <strong>Syringe units:</strong> 0.125 x 100 = <strong>12.5 units</strong></p>
+</div>
+
+<p>The 0.25 mg starter dose lands at 12.5 units, which falls between the 12 and 13 unit marks. Use a syringe with half-unit markings for accuracy here. This vial gives you 8 weekly doses at the starter level. As the dose escalates to 0.5 mg and eventually 1 mg, you would draw 25 and 50 units respectively.</p>
+
+<h3><a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> at 200 mcg</h3>
+
+<div class="cd ca">
+  <div class="tg">Worked Example</div>
+  <h3>Ipamorelin: 200 mcg from a 5 mg Vial</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Vial:</strong> 5 mg &nbsp;|&nbsp; <strong>Water added:</strong> 1 mL BAC water &nbsp;|&nbsp; <strong>Concentration:</strong> 5 mg / 1 mL = 5 mg/mL &nbsp;|&nbsp; <strong>Dose conversion:</strong> 200 mcg = 0.2 mg &nbsp;|&nbsp; <strong>Volume:</strong> 0.2 mg / 5 mg/mL = 0.04 mL &nbsp;|&nbsp; <strong>Syringe units:</strong> 0.04 x 100 = <strong>4 units</strong></p>
+</div>
+
+<p>Four units is a very small draw. At this volume, even a one-unit error represents a 25% dosing mistake. You have two options: use a 0.3 mL syringe with finer markings, or add more water to dilute the solution. Adding 2.5 mL instead of 1 mL gives a concentration of 2 mg/mL, making the dose 10 units, which is much easier to read accurately.</p>
+
+<div class="d-r">
+  <div class="s">Important</div>
+  <p>For any dose that works out to fewer than 10 syringe units, strongly consider using more water. Precision drops off rapidly at very low volumes, and the difference between 3 and 5 units on a standard 1 mL syringe is hard to distinguish by eye.</p>
+</div>
+
+<h3><a href="/articles/tb-500-complete-guide">TB-500</a> at 2 mg</h3>
+
+<div class="cd cp">
+  <div class="tg">Worked Example</div>
+  <h3>TB-500: 2 mg from a 10 mg Vial</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Vial:</strong> 10 mg &nbsp;|&nbsp; <strong>Water added:</strong> 1 mL BAC water &nbsp;|&nbsp; <strong>Concentration:</strong> 10 mg / 1 mL = 10 mg/mL &nbsp;|&nbsp; <strong>Dose:</strong> 2 mg &nbsp;|&nbsp; <strong>Volume:</strong> 2 mg / 10 mg/mL = 0.2 mL &nbsp;|&nbsp; <strong>Syringe units:</strong> 0.2 x 100 = <strong>20 units</strong></p>
+</div>
+
+<p>TB-500 doses are relatively large in milligram terms, so even at 10 mg/mL concentration the draw volume is comfortable. This vial gives you 5 doses of 2 mg each. TB-500 and BPC-157 are commonly stacked for tissue repair protocols. See our <a href="/articles/bpc-157-vs-tb-500-comparison">BPC-157 vs. TB-500 comparison</a> for details on how they differ.</p>
+
+<h3><a href="/articles/cjc-1295-dac-guide">CJC-1295</a> at 1 mg</h3>
+
+<div class="cd ct">
+  <div class="tg">Worked Example</div>
+  <h3>CJC-1295: 1 mg from a 5 mg Vial</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Vial:</strong> 5 mg &nbsp;|&nbsp; <strong>Water added:</strong> 1 mL BAC water &nbsp;|&nbsp; <strong>Concentration:</strong> 5 mg / 1 mL = 5 mg/mL &nbsp;|&nbsp; <strong>Dose:</strong> 1 mg &nbsp;|&nbsp; <strong>Volume:</strong> 1 mg / 5 mg/mL = 0.2 mL &nbsp;|&nbsp; <strong>Syringe units:</strong> 0.2 x 100 = <strong>20 units</strong></p>
+</div>
+
+<p>CJC-1295 is a growth hormone releasing hormone analog typically dosed at 1 mg per injection. At 5 mg/mL, the math is clean. Five doses per vial. If you pair it with ipamorelin, you can draw both into the same syringe (they are compatible), but always load the ipamorelin first to avoid cross-contamination between vials.</p>
+
+<h3>GHRP-2 at 150 mcg</h3>
+
+<div class="cd ca">
+  <div class="tg">Worked Example</div>
+  <h3>GHRP-2: 150 mcg from a 5 mg Vial</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Vial:</strong> 5 mg &nbsp;|&nbsp; <strong>Water added:</strong> 2 mL BAC water &nbsp;|&nbsp; <strong>Concentration:</strong> 5 mg / 2 mL = 2.5 mg/mL &nbsp;|&nbsp; <strong>Dose conversion:</strong> 150 mcg = 0.15 mg &nbsp;|&nbsp; <strong>Volume:</strong> 0.15 mg / 2.5 mg/mL = 0.06 mL &nbsp;|&nbsp; <strong>Syringe units:</strong> 0.06 x 100 = <strong>6 units</strong></p>
+</div>
+
+<p>Six units is manageable on a 0.3 mL syringe but borderline on a full 1 mL barrel. Adding 2 mL of water (rather than 1 mL) already helps here. If you want even more room, 2.5 mL of water gives 2 mg/mL, making the dose 7.5 units. Growth hormone secretagogue research is discussed in <a href="https://pubmed.ncbi.nlm.nih.gov/9849822/">Bowers et al., 1998</a>.</p>
+
+<!-- ========== DOSING REFERENCE TABLE ========== -->
+<hr class="sep">
+<h2>Complete Dosing Reference Table</h2>
+
+<p>This table pulls together common peptides, their typical doses, recommended reconstitution volumes, and the resulting syringe units. Use it as a quick cheat sheet.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Typical Dose</th><th>Vial</th><th>Water</th><th>Conc.</th><th>Units</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/bpc-157-complete-guide">BPC-157</a></strong></td><td>500 mcg</td><td>5 mg</td><td>2 mL</td><td class="g">2.5 mg/mL</td><td>20</td></tr>
+<tr><td><strong><a href="/articles/tb-500-complete-guide">TB-500</a></strong></td><td>2 mg</td><td>10 mg</td><td>1 mL</td><td class="y">10 mg/mL</td><td>20</td></tr>
+<tr><td><strong><a href="/articles/ipamorelin-complete-guide">Ipamorelin</a></strong></td><td>200 mcg</td><td>5 mg</td><td>2.5 mL</td><td class="g">2 mg/mL</td><td>10</td></tr>
+<tr><td><strong><a href="/articles/cjc-1295-dac-guide">CJC-1295</a></strong></td><td>1 mg</td><td>5 mg</td><td>1 mL</td><td class="y">5 mg/mL</td><td>20</td></tr>
+<tr><td><strong>GHRP-2</strong></td><td>150 mcg</td><td>5 mg</td><td>2 mL</td><td class="g">2.5 mg/mL</td><td>6</td></tr>
+<tr><td><strong><a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a></strong></td><td>0.25 mg</td><td>2 mg</td><td>1 mL</td><td class="g">2 mg/mL</td><td>12.5</td></tr>
+<tr><td><strong>PT-141</strong></td><td>1.75 mg</td><td>10 mg</td><td>2 mL</td><td class="y">5 mg/mL</td><td>35</td></tr>
+<tr><td><strong>Epitalon</strong></td><td>5 mg</td><td>10 mg</td><td>2 mL</td><td class="y">5 mg/mL</td><td>100</td></tr>
+<tr><td><strong>Thymosin Alpha-1</strong></td><td>1.5 mg</td><td>6 mg</td><td>2 mL</td><td class="g">3 mg/mL</td><td>50</td></tr>
+</tbody>
+</table>
+
+<!-- ========== ADVANCED TECHNIQUES ========== -->
+<hr class="sep">
+<h2>Advanced Measurement Techniques</h2>
+
+<p>Getting the math right is the first step. Getting the physical measurement right is the second. Air bubbles, poor technique, and sloppy syringe reading can undermine even perfect calculations.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Remove Air Bubbles</h4>
+    <p>After drawing your dose, flick the barrel gently to float bubbles to the top. Push the plunger up slowly until the air escapes. Air displaces liquid and reduces your actual dose.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Read at Eye Level</h4>
+    <p>Hold the syringe horizontally at eye height. Looking down at an angle creates parallax error. The difference can be 1 to 2 units, which matters at low volumes.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Use the Plunger Tip</h4>
+    <p>Read from where the flat rubber end of the plunger aligns with the barrel markings. Not the top of the rubber, not the bottom of the rubber. The flat edge is your reference.</p>
+  </div>
+</div>
+
+<h3>Reconstitution Technique</h3>
+
+<p>When adding water to the vial, aim the stream down the glass wall rather than directly onto the powder cake. Let gravity carry the water across the lyophilized peptide. Swirl gently. Never shake. Vigorous agitation can denature fragile peptide bonds.</p>
+
+<p>The solution should turn completely clear within 1 to 3 minutes. If particles remain after five minutes of gentle swirling, the peptide may be damaged or the water volume may be too low. Do not inject a cloudy solution.</p>
+
+<!-- ========== COMMON MISTAKES ========== -->
+<hr class="sep">
+<h2>Common Dosing Mistakes</h2>
+
+<table class="tbl">
+<thead><tr><th>Mistake</th><th>What Happens</th><th>How to Avoid It</th></tr></thead>
+<tbody>
+<tr><td><strong>Mixing up mcg and mg</strong></td><td class="r">10x overdose or underdose</td><td>Always convert to mg before calculating. 1 mg = 1000 mcg.</td></tr>
+<tr><td><strong>Wrong syringe type</strong></td><td class="r">Volume mismatch</td><td>Use U-100 syringes only. U-40 markings produce incorrect volumes.</td></tr>
+<tr><td><strong>Forgetting to convert units</strong></td><td class="y">Drawing wrong volume</td><td>After dividing, multiply by 100 to convert mL to syringe units.</td></tr>
+<tr><td><strong>Using sterile water for multi-dose</strong></td><td class="r">Contamination risk</td><td>BAC water only for vials that will be punctured more than once.</td></tr>
+<tr><td><strong>Reusing needles</strong></td><td class="r">Infection risk, dull needle</td><td>Fresh sterile needle for every injection. No exceptions.</td></tr>
+<tr><td><strong>Not labeling vials</strong></td><td class="y">Mix-ups between peptides</td><td>Write peptide name, concentration, and reconstitution date on every vial.</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Safety Note</div>
+  <p>If you realize you have drawn too much solution into the syringe, <strong>do not inject the excess</strong>. Eject the full amount back into the vial and redraw carefully. It is always better to waste a small amount than to administer an incorrect dose.</p>
+</div>
+
+<!-- ========== BEST PRACTICES ========== -->
+<hr class="sep">
+<h2>Storage and Best Practices</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Label Everything</h4>
+    <p>Write the peptide name, concentration (mg/mL), and date of reconstitution on every vial. Use medical tape and a fine-point marker. This prevents mix-ups when you have multiple vials in the fridge.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Refrigerate Promptly</h4>
+    <p>Once reconstituted, peptides need refrigeration at 2 to 8 degrees Celsius. Most stay stable for 4 to 6 weeks. Unreconstituted powder can be stored longer, often at room temperature or frozen depending on the peptide.</p>
+  </div>
+</div>
+
+<p>Keep a simple dosing log. Record the date, peptide, dose in mcg, syringe units drawn, and any notes. A spreadsheet or notebook works. This habit catches mistakes early and helps you track how many doses remain in each vial.</p>
+
+<p>Rotate injection sites between the abdomen, thigh, and upper arm. Repeated injections in the same spot can cause tissue irritation or lipodystrophy. Clean the vial stopper and injection site with an alcohol swab before every draw and every injection. For a full walkthrough, see our <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous injection guide</a>.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How long do reconstituted peptides last?</summary>
+    <div class="fa">Most reconstituted peptides stay stable for 4 to 6 weeks when refrigerated at 2 to 8 degrees Celsius. Some peptides degrade faster. Always check the manufacturer's guidance. If the solution turns cloudy or develops visible particles, discard it immediately.</div>
+  </details>
+  <details>
+    <summary>Can I use sterile water instead of bacteriostatic water?</summary>
+    <div class="fa">Only for single-use immediate injection. Sterile water lacks preservatives, so bacteria can colonize the vial after the first needle puncture. For any multi-dose vial, bacteriostatic water is required.</div>
+  </details>
+  <details>
+    <summary>Why are my dose volumes so small?</summary>
+    <div class="fa">Peptides are extremely potent. Many doses are measured in micrograms, which produces tiny injection volumes. The fix is simple: add more water when reconstituting. This dilutes the solution and makes each dose a larger, easier-to-measure volume.</div>
+  </details>
+  <details>
+    <summary>How do I measure half units on a syringe?</summary>
+    <div class="fa">Use insulin syringes with half-unit markings, typically available in the 0.3 mL size. These have visible lines between each full unit. Without half-unit markings, you are estimating, and at low volumes that estimation error becomes significant.</div>
+  </details>
+  <details>
+    <summary>Can I mix two peptides in the same syringe?</summary>
+    <div class="fa">Some peptides are compatible for same-syringe injection. CJC-1295 and ipamorelin are a common example. However, not all peptides play well together. When in doubt, use separate syringes. Consult reliable compatibility references before combining.</div>
+  </details>
+  <details>
+    <summary>What if I accidentally draw too much?</summary>
+    <div class="fa">Do not inject excess solution. Push the plunger back to return the liquid to the vial, then carefully redraw the correct amount. Wasting a fraction of a dose is far better than an accidental overdose.</div>
+  </details>
+  <details>
+    <summary>How should I store unreconstituted peptide vials?</summary>
+    <div class="fa">Most lyophilized peptides store well refrigerated or frozen. Some are stable at room temperature for shorter periods. Check the supplier's guidance. Once reconstituted, always refrigerate and use within the recommended window.</div>
+  </details>
+  <details>
+    <summary>Can I reuse needles between draws?</summary>
+    <div class="fa">Never. Used needles carry contamination risk and become dull after a single use. Dull needles cause more tissue damage and injection-site pain. Use a fresh sterile needle every time you draw from a vial and every time you inject.</div>
+  </details>
+  <details>
+    <summary>How do I prevent wasting peptide?</summary>
+    <div class="fa">Choose a vial size that matches your protocol length. If you take 500 mcg daily, a 5 mg vial gives 10 doses, roughly a week and a half. Smaller vials reduce the chance of peptide degrading before you finish it. Proper refrigeration also extends usable life.</div>
+  </details>
+  <details>
+    <summary>How do I know if my peptide has gone bad?</summary>
+    <div class="fa">Reconstituted peptides should be perfectly clear and colorless. Cloudiness, floating particles, color changes, or unusual smell all indicate degradation or contamination. Discard the vial and start fresh.</div>
+  </details>
+  <details>
+    <summary>What is the best source for bacteriostatic water?</summary>
+    <div class="fa">Use pharmaceutical-grade bacteriostatic water from a licensed supplier. Avoid products without clear labeling of the benzyl alcohol concentration (should be 0.9%). Quality and sterility matter. A contaminated diluent defeats the purpose of careful reconstitution.</div>
+  </details>
+</div>
+
+<!-- ========== WHEN TO SEEK HELP ========== -->
+<hr class="sep">
+<h2>When to Seek Professional Guidance</h2>
+
+<p>Consult a healthcare provider before starting any peptide regimen. This is especially important if you take prescription medications, have chronic health conditions, or are managing hormonal imbalances. Peptides can interact with existing treatments in ways that are not always predictable.</p>
+
+<p>If you experience unexpected reactions after injection, such as significant swelling, breathing difficulty, or systemic symptoms, seek medical attention immediately. Regular blood work helps monitor relevant biomarkers and catch issues early. Children and pregnant or nursing women should avoid peptide use entirely, as safety data in these populations does not exist.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and does not recommend the use of any peptide. Dosing information is provided for reference only. Always consult a qualified healthcare provider before starting any peptide protocol. Individual responses vary, and quality control in unregulated markets poses real risks.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Sikiric P, Seiwerth S, Rucman R, et al. Brain-gut axis and pentadecapeptide BPC 157: theoretical and practical implications. <em>Curr Neuropharmacol.</em> 2016;14(8):857-865. <a href="https://pubmed.ncbi.nlm.nih.gov/30915550/">PubMed</a><br>
+Bowers CY. Growth hormone-releasing peptide (GHRP). <em>Cell Mol Life Sci.</em> 1998;54(12):1316-1329. <a href="https://pubmed.ncbi.nlm.nih.gov/9849822/">PubMed</a><br>
+Teichman SL, Neale A, Lawrence B, et al. Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295, a long-acting analog of GH-releasing hormone, in healthy adults. <em>J Clin Endocrinol Metab.</em> 2006;91(3):799-805. <a href="https://pubmed.ncbi.nlm.nih.gov/16352683/">PubMed</a><br>
+Wilkinson DJ, Franchi MV, Brook MS, et al. A validation of the application of D2O stable isotope tracer techniques for monitoring day-to-day changes in muscle protein subfraction synthesis in humans. <em>Am J Physiol Endocrinol Metab.</em> 2014;306(5):E571-E579. <a href="https://pubmed.ncbi.nlm.nih.gov/24381002/">PubMed</a>
+</p>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/how-to-reconstitute-peptides">How to Reconstitute Peptides</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-inject-peptides-subcutaneously">How to Inject Peptides Subcutaneously</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-storage-handling-guide">Peptide Storage and Handling Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/common-peptide-side-effects-solutions">Common Peptide Side Effects and Solutions</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/how-to-inject-peptides-subcutaneously" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Inject Subcutaneously</a>
+            <a href="/articles/peptide-storage-handling-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Storage Guide</a>
+            <a href="/articles/common-peptide-side-effects-solutions" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Side Effects and Solutions</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
