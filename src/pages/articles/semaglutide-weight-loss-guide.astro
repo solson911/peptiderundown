@@ -1,0 +1,672 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Semaglutide for Weight Loss: An Evidence-Based Guide",
+  description: "Everything you need to know about semaglutide (Ozempic, Wegovy, Rybelsus) for weight loss: mechanisms, clinical trial data, dosing, side effects, costs, and who qualifies.",
+  image: "/images/articles/semaglutide.webp",
+  date: "2026-02-13",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Weight Management &middot; GLP-1</div>
+  <h1>Semaglutide for Weight Loss: An Evidence-Based Guide</h1>
+  <p class="sub">The most extensively studied anti-obesity medication in modern pharmacology. Mechanisms, STEP trial data, dosing protocols, side effects, costs, and the compounding controversy, all without the hype.</p>
+  <div class="pills">
+    <span class="pill">GLP-1 Receptor Agonist</span>
+    <span class="pill">Ozempic &middot; Wegovy &middot; Rybelsus</span>
+    <span class="pill">FDA-Approved</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">~15%</div><div class="l">Mean Weight Loss<br>in STEP 1 (68 wk)</div></div>
+  <div class="sb"><div class="v c2">20%</div><div class="l">Cardiovascular Risk<br>Reduction (SELECT)</div></div>
+  <div class="sb"><div class="v c3">7 days</div><div class="l">Half-Life<br>(Once-Weekly Dosing)</div></div>
+  <div class="sb"><div class="v c4">2021</div><div class="l">Wegovy FDA<br>Approval Year</div></div>
+</div>
+
+<p>Semaglutide has become the most widely discussed anti-obesity medication in modern pharmacology. Originally developed for <a href="/articles/tirzepatide-complete-guide">type 2 diabetes</a>, its <a href="/articles/best-peptides-for-fat-loss">weight loss</a> effects were so striking in clinical trials that it was reformulated and FDA-approved specifically for chronic weight management.</p>
+
+<p>This guide covers the science, the clinical data, the practical considerations, and the controversies. No hype, no overselling. Just the evidence and what it means for people considering treatment.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of semaglutide for weight loss, covering its mechanisms, clinical research, dosing, side effects, costs, and legal status. It is <strong>not a recommendation to use semaglutide</strong> without medical supervision. Semaglutide is a prescription medication. Consult a qualified healthcare provider before starting treatment.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>What Is Semaglutide?</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Semaglutide (GLP-1 Receptor Agonist)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Class:</strong> GLP-1 receptor agonist (incretin mimetic) &nbsp;|&nbsp; <strong>Type:</strong> Synthetic analog of human GLP-1 &nbsp;|&nbsp; <strong>Half-Life:</strong> ~7 days &nbsp;|&nbsp; <strong>Modification:</strong> C18 fatty acid acylation + amino acid substitutions &nbsp;|&nbsp; <strong>Routes:</strong> Subcutaneous injection (Ozempic, Wegovy), oral tablet (Rybelsus) &nbsp;|&nbsp; <strong>FDA Status:</strong> Approved for T2D (2017) and chronic weight management (2021) &nbsp;|&nbsp; <strong>Primary Actions:</strong> Appetite suppression, delayed gastric emptying, improved glycemic control, cardiovascular risk reduction</p>
+</div>
+
+<p>Semaglutide is a <strong>glucagon-like peptide-1 (GLP-1) receptor agonist</strong>, a synthetic analog of the human incretin hormone GLP-1. Native GLP-1 is released by intestinal L-cells after eating and has a half-life of roughly 2 minutes.</p>
+
+<p>Semaglutide was engineered with structural modifications (specifically, acylation with a C18 fatty acid chain and amino acid substitutions) that extend its half-life to approximately <strong>7 days</strong>. That enables once-weekly dosing.</p>
+
+<p>It was first approved by the FDA in 2017 as <strong>Ozempic</strong> (injectable) for type 2 diabetes, followed by <strong>Rybelsus</strong> (oral) in 2019. In June 2021, the FDA approved <strong>Wegovy</strong>, semaglutide at a higher dose (2.4 mg weekly), specifically for chronic weight management.</p>
+
+<h3>Brand Names and Key Differences</h3>
+
+<table class="tbl">
+<thead><tr><th>Brand</th><th>Form</th><th>Dose</th><th>Indication</th><th>FDA Approval</th></tr></thead>
+<tbody>
+<tr><td><strong>Ozempic</strong></td><td>SC injection</td><td>0.5, 1, or 2 mg weekly</td><td>Type 2 diabetes</td><td class="g">Dec 2017</td></tr>
+<tr><td><strong>Rybelsus</strong></td><td>Oral tablet</td><td>7 or 14 mg daily</td><td>Type 2 diabetes</td><td class="g">Sep 2019</td></tr>
+<tr><td><strong>Wegovy</strong></td><td>SC injection</td><td>2.4 mg weekly (after titration)</td><td>Chronic weight management</td><td class="g">Jun 2021</td></tr>
+</tbody>
+</table>
+
+<p>All three contain the same active molecule. The differences are formulation, dose, and approved indication.</p>
+
+<p>Ozempic and Wegovy use the same injectable delivery (prefilled pen), but Wegovy's maximum dose is higher (2.4 mg vs. 2 mg). Rybelsus uses salcaprozate sodium (SNAC) to enhance oral absorption in the stomach, but bioavailability is low (~1%), requiring specific fasting instructions.</p>
+
+<div class="d-a">
+  <div class="s">Important Distinction</div>
+  <p>While Ozempic is frequently prescribed off-label for weight loss, it is <strong>not FDA-approved</strong> for that purpose. Wegovy is the designated weight-management formulation.</p>
+</div>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How Semaglutide Causes Weight Loss: Four Mechanisms</h2>
+
+<p>Semaglutide attacks weight from multiple angles simultaneously. Understanding these mechanisms explains why it produces more consistent weight loss than older anti-obesity drugs that targeted only one pathway.</p>
+
+<div class="svg-box">
+  <div class="st">Semaglutide: Multi-Pathway Weight Loss Mechanism</div>
+  <div class="ss">Central appetite suppression &middot; Gastric emptying &middot; Caloric reduction &middot; Metabolic improvement</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Central Appetite -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Brain (CNS)</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">APPETITE CONTROL</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Acts on hypothalamus</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#38; brainstem GLP-1R</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Reduced hunger</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Dampened food cues</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Fewer cravings</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Sustained appetite</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">suppression</text>
+
+    <!-- Gastric Emptying -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Stomach</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">GASTRIC EMPTYING</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Slows gastric</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">emptying rate</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Prolonged fullness</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Smaller portions</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Attenuates over time</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Early satiety</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">&#38; reduced intake</text>
+
+    <!-- Caloric Reduction -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Energy Intake</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">CALORIC REDUCTION</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">24&ndash;35% fewer</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">calories consumed</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Less fat &#38; processed</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">food preference</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Greater eating control</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Significant caloric</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">deficit</text>
+
+    <!-- Metabolic -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Metabolism</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">METABOLIC EFFECTS</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Improved insulin</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">sensitivity</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Reduced liver fat</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Better lipid profiles</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Less metabolic adapt.</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Cardiometabolic</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">improvement</text>
+  </svg>
+</div>
+
+<h3>1. Central Appetite Suppression</h3>
+
+<p>GLP-1 receptors are expressed in the hypothalamus and brainstem, regions critical for appetite regulation. Semaglutide crosses the blood-brain barrier and acts on these receptors to reduce hunger and increase satiety.</p>
+
+<p>Neuroimaging studies show that semaglutide dampens neural responses to food cues in reward-associated brain regions, reducing cravings and the hedonic drive to eat (<a href="https://pubmed.ncbi.nlm.nih.gov/33269530/">Friedrichsen et al., 2021</a>).</p>
+
+<h3>2. Delayed Gastric Emptying</h3>
+
+<p>Semaglutide slows the rate at which food leaves the stomach, prolonging feelings of fullness after meals. This effect is most prominent during the early weeks of treatment.</p>
+
+<p>It partially attenuates over time, though appetite suppression persists through central mechanisms.</p>
+
+<h3>3. Reduced Energy Intake</h3>
+
+<p>In controlled feeding studies, participants on semaglutide consumed approximately <strong>24&ndash;35% fewer calories</strong> compared to placebo. Reductions in fat and ultra-processed food intake were especially notable.</p>
+
+<p>Participants reported less hunger, fewer cravings, and greater control over eating (<a href="https://pubmed.ncbi.nlm.nih.gov/28371441/">Blundell et al., 2017</a>).</p>
+
+<h3>4. Metabolic Effects</h3>
+
+<p>Some evidence suggests semaglutide may modestly improve energy expenditure relative to the degree of weight lost. It partially attenuates the metabolic adaptation that normally accompanies caloric restriction, though this remains an area of active research.</p>
+
+<p>It also improves insulin sensitivity, reduces hepatic fat, and favorably modifies lipid profiles. These effects are partly weight-dependent and partly direct.</p>
+
+<!-- ========== STEP TRIALS ========== -->
+<hr class="sep">
+<h2>The STEP Trials: What the Clinical Data Shows</h2>
+
+<p>The <strong>Semaglutide Treatment Effect in People with obesity (STEP)</strong> trial program is the largest body of evidence supporting semaglutide for weight management. These were randomized, double-blind, placebo-controlled trials involving thousands of participants.</p>
+
+<div class="cd ct">
+  <div class="tg">Landmark Trial</div>
+  <h3>STEP 1: Semaglutide in Adults Without Diabetes</h3>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>Population:</strong> 1,961 adults with BMI of 30 or higher (or 27+ with comorbidity), without diabetes. <strong>Duration:</strong> 68 weeks. <strong>Design:</strong> Semaglutide 2.4 mg weekly + lifestyle intervention vs. placebo + lifestyle intervention.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Results:</strong> Mean weight loss of <strong>14.9%</strong> with semaglutide vs. <strong>2.4%</strong> with placebo. 86.4% of participants lost 5% or more of body weight; 69.1% lost 10% or more; 50.5% lost 15% or more (<a href="https://pubmed.ncbi.nlm.nih.gov/33567185/">Wilding et al., 2021</a>).</p>
+</div>
+
+<h3>STEP Trial Results Summary</h3>
+
+<table class="tbl">
+<thead><tr><th>Trial</th><th>Population</th><th>Duration</th><th>Semaglutide Result</th><th>Placebo</th></tr></thead>
+<tbody>
+<tr><td><strong>STEP 1</strong></td><td>Non-diabetic, BMI 30+</td><td>68 wk</td><td class="g">-14.9% body weight</td><td>-2.4%</td></tr>
+<tr><td><strong>STEP 2</strong></td><td>T2D, BMI 27+</td><td>68 wk</td><td class="g">-9.6% body weight</td><td>-3.4%</td></tr>
+<tr><td><strong>STEP 3</strong></td><td>Non-diabetic + IBT</td><td>68 wk</td><td class="g">-16.0% body weight</td><td>-5.7%</td></tr>
+<tr><td><strong>STEP 4</strong></td><td>Withdrawal study</td><td>68 wk</td><td class="g">-7.9% additional</td><td class="r">+6.9% regain</td></tr>
+<tr><td><strong>STEP 5</strong></td><td>2-year follow-up</td><td>104 wk</td><td class="g">-15.2% body weight</td><td>N/A</td></tr>
+</tbody>
+</table>
+
+<p>STEP 2 showed lower weight loss than STEP 1, which is consistent with the known blunting effect of diabetes and insulin resistance on GLP-1-mediated weight loss (<a href="https://pubmed.ncbi.nlm.nih.gov/33667417/">Davies et al., 2021</a>).</p>
+
+<p>STEP 3 combined semaglutide with intensive behavioral therapy (30 sessions), suggesting additive effects of pharmacotherapy and structured behavioral support (<a href="https://pubmed.ncbi.nlm.nih.gov/33625476/">Wadden et al., 2021</a>).</p>
+
+<div class="d-r">
+  <div class="s">Critical Finding: Weight Regain</div>
+  <p>STEP 4 clearly demonstrated that semaglutide-induced weight loss requires ongoing treatment. Those who switched to placebo regained an average of 6.9% of body weight within one year. Stopping leads to significant regain (<a href="https://pubmed.ncbi.nlm.nih.gov/33625477/">Rubino et al., 2021</a>).</p>
+</div>
+
+<p>STEP 5 showed weight loss of <strong>15.2%</strong> at 2 years, demonstrating durability with continued treatment (<a href="https://pubmed.ncbi.nlm.nih.gov/36216945/">Garvey et al., 2022</a>).</p>
+
+<h3>SELECT Trial: Cardiovascular Outcomes</h3>
+
+<div class="cd cb">
+  <div class="tg">Cardiovascular Landmark</div>
+  <h3>SELECT: First Anti-Obesity Drug to Show CV Benefit</h3>
+  <p style="font-size:14px;margin-bottom:0;">The SELECT trial enrolled 17,604 participants with established cardiovascular disease and overweight/obesity, without diabetes. Semaglutide 2.4 mg reduced the risk of major adverse cardiovascular events (MACE) by <strong>20%</strong> compared to placebo over a median follow-up of ~40 months. This was the first time an anti-obesity medication showed cardiovascular benefit in a dedicated outcomes trial (<a href="https://pubmed.ncbi.nlm.nih.gov/37952131/">Lincoff et al., 2023</a>).</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Schedule and Titration</h2>
+
+<p>Semaglutide for weight management (Wegovy) follows a <strong>gradual titration</strong> to minimize gastrointestinal side effects. Rushing the titration is the most common mistake, and it leads to more nausea and higher dropout rates.</p>
+
+<table class="tbl">
+<thead><tr><th>Weeks</th><th>Weekly Dose</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>1&ndash;4</strong></td><td>0.25 mg</td><td class="y">Starting dose; GI adjustment</td></tr>
+<tr><td><strong>5&ndash;8</strong></td><td>0.5 mg</td><td class="y">First escalation</td></tr>
+<tr><td><strong>9&ndash;12</strong></td><td>1.0 mg</td><td class="y">Most begin noticing weight loss</td></tr>
+<tr><td><strong>13&ndash;16</strong></td><td>1.7 mg</td><td class="y">Approaching maintenance</td></tr>
+<tr><td><strong>17+</strong></td><td>2.4 mg</td><td class="g">Maintenance dose</td></tr>
+</tbody>
+</table>
+
+<p>Each escalation step lasts 4 weeks. The full titration takes <strong>16 weeks</strong> to reach the maintenance dose of 2.4 mg.</p>
+
+<p>The injection is administered <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneously</a> once weekly in the abdomen, thigh, or upper arm. The day of the week can be consistent but doesn't need to align with meals.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Practical Tips</h4>
+    <p>If a dose is poorly tolerated, clinicians may extend the titration period (8 weeks at a given dose instead of 4) before escalating. Some patients achieve meaningful weight loss at 1.0 or 1.7 mg and may stay there if side effects are limiting.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Missed Dose Protocol</h4>
+    <p>If fewer than 5 days since the missed dose, take it as soon as possible. If 5 or more days have passed, skip it and resume on the next scheduled day. Don't double up.</p>
+  </div>
+</div>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects: What to Expect</h2>
+
+<p>GI effects dominate, particularly during dose escalation. The good news: most people tolerate treatment long-term. In STEP 1, only <strong>7%</strong> of semaglutide participants discontinued due to adverse events vs. 3.1% on placebo.</p>
+
+<h3>Common Side Effects (Over 10% Incidence)</h3>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Incidence</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Nausea</strong></td><td class="r">44%</td><td>Most common; peaks during titration, improves over weeks</td></tr>
+<tr><td><strong>Diarrhea</strong></td><td class="r">30%</td><td>Usually mild to moderate</td></tr>
+<tr><td><strong>Vomiting</strong></td><td class="y">24%</td><td>More common at higher doses</td></tr>
+<tr><td><strong>Constipation</strong></td><td class="y">24%</td><td>Can alternate with diarrhea</td></tr>
+<tr><td><strong>Abdominal pain</strong></td><td class="y">20%</td><td>Usually improves with time</td></tr>
+</tbody>
+</table>
+
+<h3>Less Common but Notable Risks</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Gallbladder Events</h4>
+    <p>Cholelithiasis (gallstones) occurred at higher rates with semaglutide (~2.6% vs. 1.2% placebo). Rapid weight loss is an independent risk factor for gallstones regardless of the method used.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Pancreatitis</h4>
+    <p>Acute pancreatitis has been reported in GLP-1 RA users, though a causal link remains debated. In the STEP trials, events were rare and not statistically different from placebo. It remains a labeled warning.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Increased Heart Rate</h4>
+    <p>A small mean increase of 1&ndash;4 beats per minute has been observed. Clinical significance is unclear, but the SELECT trial's cardiovascular benefit is reassuring on this front.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Hypoglycemia</h4>
+    <p>Rare when used without sulfonylureas or insulin. Semaglutide's glucose-lowering effect is glucose-dependent, meaning it primarily acts when blood sugar is elevated.</p>
+  </div>
+</div>
+
+<div class="d-r">
+  <div class="s">Boxed Warning: Thyroid C-Cell Tumors</div>
+  <p>Semaglutide carries a boxed warning based on rodent studies showing dose-dependent thyroid C-cell tumors (medullary thyroid carcinoma). This hasn't been confirmed in humans, and the relevance is debated (rodent thyroid C-cells have far greater GLP-1 receptor density). However, semaglutide is <strong>contraindicated</strong> in patients with a personal or family history of medullary thyroid carcinoma (MTC) or Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).</p>
+</div>
+
+<h3>Muscle Loss Concerns</h3>
+
+<p>Weight lost with semaglutide is approximately <strong>60&ndash;75% fat mass</strong> and <strong>25&ndash;40% lean mass</strong>. That's broadly consistent with the composition of weight loss seen with caloric restriction alone.</p>
+
+<div class="d-t">
+  <div class="s">Practical Advice</div>
+  <p>Resistance training and high protein intake (<strong>1.2&ndash;1.6 g/kg/day</strong>) are critical to preserve muscle while on semaglutide. Don't skip the weights.</p>
+</div>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>Semaglutide vs. Tirzepatide: Head-to-Head</h2>
+
+<p><strong><a href="/articles/tirzepatide-complete-guide">Tirzepatide</a></strong> (Mounjaro for diabetes, Zepbound for weight management) is a dual GIP/GLP-1 receptor agonist. In cross-trial comparisons, tirzepatide has shown greater weight loss than semaglutide.</p>
+
+<table class="tbl">
+<thead><tr><th>Factor</th><th>Semaglutide (Wegovy)</th><th>Tirzepatide (Zepbound)</th></tr></thead>
+<tbody>
+<tr><td><strong>Mechanism</strong></td><td>GLP-1 agonist (single)</td><td class="g">Dual GIP/GLP-1 agonist</td></tr>
+<tr><td><strong>Max Weight Loss</strong></td><td>~15% (STEP 1, 68 wk)</td><td class="g">~22.5% (SURMOUNT-1, 72 wk)</td></tr>
+<tr><td><strong>CV Outcomes Trial</strong></td><td class="g">SELECT: 20% MACE reduction</td><td class="y">Pending (SURPASS-CVOT)</td></tr>
+<tr><td><strong>FDA Approval (Obesity)</strong></td><td>Jun 2021</td><td>Nov 2023</td></tr>
+<tr><td><strong>Long-Term Safety Data</strong></td><td class="g">More extensive</td><td class="y">Less (newer drug)</td></tr>
+<tr><td><strong>GI Side Effects</strong></td><td>Similar</td><td>Similar</td></tr>
+<tr><td><strong>Cost</strong></td><td>~$1,300&ndash;$1,400/mo</td><td>~$1,000&ndash;$1,100/mo</td></tr>
+</tbody>
+</table>
+
+<p>The SURMOUNT-1 trial showed tirzepatide 15 mg produced mean weight loss of <strong>22.5%</strong> at 72 weeks (<a href="https://pubmed.ncbi.nlm.nih.gov/35658024/">Jastreboff et al., 2022</a>). Cross-trial comparisons are imperfect (different populations, durations, endpoints), but the magnitude of difference is clinically meaningful.</p>
+
+<div class="d-p">
+  <div class="s">Choosing Between Them</div>
+  <p>Tirzepatide is newer with less long-term safety data. GI side effects are broadly similar, and cost is comparable. The choice often comes down to availability, insurance coverage, and individual clinical response. Read our full <a href="/articles/semaglutide-vs-tirzepatide-comparison">semaglutide vs. tirzepatide comparison</a> for more detail.</p>
+</div>
+
+<!-- ========== COST ========== -->
+<hr class="sep">
+<h2>How Much Does Semaglutide Cost?</h2>
+
+<h3>Brand-Name Pricing (Early 2026)</h3>
+
+<table class="tbl">
+<thead><tr><th>Brand</th><th>Monthly Cost</th><th>Insurance Coverage</th></tr></thead>
+<tbody>
+<tr><td><strong>Wegovy</strong></td><td class="r">~$1,300&ndash;$1,400</td><td class="y">Varies; prior auth common</td></tr>
+<tr><td><strong>Ozempic</strong></td><td class="r">~$900&ndash;$1,000</td><td class="g">Better for T2D patients</td></tr>
+<tr><td><strong>Rybelsus</strong></td><td class="r">~$900&ndash;$1,000</td><td class="y">Varies</td></tr>
+<tr><td><strong>Compounded</strong></td><td class="g">~$100&ndash;$400</td><td class="r">Legally contested (see below)</td></tr>
+</tbody>
+</table>
+
+<p>Insurance coverage varies widely. Many commercial insurers cover Wegovy, particularly with documented BMI criteria and comorbidities.</p>
+
+<p>Medicare began covering anti-obesity medications for eligible beneficiaries following the TREAT and STOP Obesity Act provisions. Prior authorization requirements are common and denials frequent.</p>
+
+<!-- ========== COMPOUNDING CONTROVERSY ========== -->
+<hr class="sep">
+<h2>The Compounding Controversy (2025&ndash;2026)</h2>
+
+<p>Compounded semaglutide has been one of the most contentious regulatory issues in recent pharmaceutical history. Here's the timeline.</p>
+
+<div class="cd ca">
+  <div class="tg">Regulatory Timeline</div>
+  <h3>How We Got Here</h3>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>2022&ndash;2023:</strong> Severe Wegovy and Ozempic shortages placed semaglutide on the FDA's Drug Shortage List, which permits compounding pharmacies to produce copies of shortage-listed drugs under Section 503A and 503B.</p>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>2023&ndash;2024:</strong> Hundreds of compounding pharmacies and telehealth platforms began offering compounded semaglutide at a fraction of brand cost. The market grew rapidly.</p>
+  <p style="font-size:14px;margin-bottom:12px;"><strong>October 2024:</strong> The FDA removed semaglutide from the shortage list, asserting that Novo Nordisk had resolved supply constraints. This triggered the legal basis for prohibiting compounding.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>2025&ndash;2026:</strong> Legal battles continue. Courts have issued mixed rulings, with some temporary injunctions allowing continued compounding. Some pharmacies have reformulated using semaglutide salt forms (e.g., semaglutide sodium), arguing these are distinct. The FDA disagrees.</p>
+</div>
+
+<div class="d-a">
+  <div class="s">Current Status (February 2026)</div>
+  <p>The legality of compounded semaglutide is actively contested. Patients using compounded products should be aware of the uncertain regulatory future, the lack of FDA oversight on compounded formulations (no standardized potency testing; sterility standards vary by pharmacy), and the potential for supply disruptions due to enforcement actions.</p>
+</div>
+
+<h3>Safety Concerns with Compounded Products</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--red);">Risks</h4>
+    <p>Compounded injectables carry inherent sterility and potency risks. Several adverse events have been reported to the FDA. Dosing accuracy varies between pharmacies. No requirement for clinical trials or bioequivalence testing.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Counterpoint</h4>
+    <p>503B outsourcing facilities operate under cGMP (current Good Manufacturing Practices) and FDA inspection, providing a higher standard than traditional 503A pharmacies. Not all compounders are equal.</p>
+  </div>
+</div>
+
+<!-- ========== WHO QUALIFIES ========== -->
+<hr class="sep">
+<h2>Who Should (and Shouldn't) Take Semaglutide</h2>
+
+<h3>FDA-Approved Criteria for Wegovy</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Adults: BMI 30+</h4>
+    <p>Adults with a BMI of 30 or higher (obesity) qualify without additional criteria.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Adults: BMI 27+</h4>
+    <p>Adults with a BMI of 27 or higher (overweight) qualify with at least one weight-related comorbidity: hypertension, T2D, dyslipidemia, or sleep apnea.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Adolescents (12+)</h4>
+    <p>Adolescents aged 12 and older with BMI at the 95th percentile or greater for age and sex.</p>
+  </div>
+</div>
+
+<h3>Contraindications</h3>
+
+<div class="cd cr">
+  <div class="tg">Do Not Use If</div>
+  <h3>Absolute Contraindications</h3>
+  <p style="font-size:14px;margin-bottom:0;">Personal or family history of <strong>medullary thyroid carcinoma</strong> or <strong>MEN 2</strong> &nbsp;|&nbsp; Known hypersensitivity to semaglutide or any excipients &nbsp;|&nbsp; Concurrent use with other GLP-1 receptor agonists &nbsp;|&nbsp; <strong>Type 1 diabetes</strong> (not indicated; risk of hypoglycemia with insulin, no evidence of benefit) &nbsp;|&nbsp; <strong>Pregnancy</strong> or planned pregnancy (discontinue 2+ months before conception due to the long half-life)</p>
+</div>
+
+<h3>Clinical Considerations</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Eating Disorders</h4>
+    <p>GLP-1 RAs alter appetite and food-related reward signaling. There's limited data on effects in patients with active eating disorders. Clinical judgment is essential.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Gastroparesis</h4>
+    <p>Semaglutide further delays gastric emptying and may worsen symptoms in patients with existing gastroparesis.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Surgical Patients</h4>
+    <p>Some anesthesiologists have raised concerns about aspiration risk due to delayed gastric emptying. The American Society of Anesthesiologists has suggested holding GLP-1 RAs before elective procedures requiring anesthesia.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Gallbladder Disease</h4>
+    <p>Increased risk of gallstones with rapid weight loss. Patients with existing gallbladder disease should be monitored closely.</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How quickly does semaglutide work for weight loss?</summary>
+    <div class="fa">Most patients notice reduced appetite within the first 1&ndash;2 weeks. Measurable weight loss typically becomes apparent by weeks 4&ndash;8. However, peak efficacy isn't reached until the maintenance dose (2.4 mg) has been sustained for several months. In STEP 1, weight loss continued to accrue through approximately week 60 before plateauing.</div>
+  </details>
+  <details>
+    <summary>Is the weight loss permanent?</summary>
+    <div class="fa">Not without ongoing treatment. STEP 4 demonstrated that weight regain begins within weeks of discontinuation and averages roughly two-thirds of lost weight within one year off the drug. This is consistent with obesity being a chronic, relapsing condition, similar to how blood pressure rises when antihypertensives are stopped. Long-term (potentially indefinite) treatment may be necessary.</div>
+  </details>
+  <details>
+    <summary>Can I use Ozempic instead of Wegovy for weight loss?</summary>
+    <div class="fa">Ozempic is frequently prescribed off-label for weight loss. The maximum Ozempic dose (2 mg) is close to but not identical to Wegovy's maintenance dose (2.4 mg). From a pharmacological standpoint, the difference is modest. From a practical standpoint, insurance is more likely to cover Ozempic for patients with type 2 diabetes, and Wegovy for weight management without diabetes.</div>
+  </details>
+  <details>
+    <summary>Does semaglutide work without diet and exercise?</summary>
+    <div class="fa">Yes. Participants in the STEP trials received lifestyle counseling but were not placed on highly restrictive diets or intensive exercise programs. The 15% weight loss occurred largely through pharmacologically mediated appetite reduction. That said, combining semaglutide with structured nutrition and exercise (especially resistance training) improves outcomes, preserves lean mass, and supports long-term health beyond what the scale shows.</div>
+  </details>
+  <details>
+    <summary>What about "Ozempic face" and loose skin?</summary>
+    <div class="fa">Significant weight loss from any cause (surgery, medication, diet) can result in facial volume loss and excess skin. "Ozempic face" is a colloquial term, not a medical one. These are consequences of fat loss, not unique pharmacological effects of semaglutide. The risk correlates with the amount of weight lost, age, and skin elasticity.</div>
+  </details>
+  <details>
+    <summary>Is compounded semaglutide safe?</summary>
+    <div class="fa">This depends heavily on the source. Products from FDA-registered 503B outsourcing facilities operating under cGMP standards are generally held to higher quality standards. Products from less-regulated sources carry greater risk. As of 2026, the regulatory environment for compounded semaglutide is uncertain, and patients should discuss the risks and benefits with their healthcare provider.</div>
+  </details>
+  <details>
+    <summary>Can I drink alcohol while on semaglutide?</summary>
+    <div class="fa">There's no absolute contraindication, but many patients report reduced alcohol tolerance and increased nausea when combining semaglutide with alcohol. Alcohol also provides empty calories that counteract weight loss goals. Moderation is advised.</div>
+  </details>
+  <details>
+    <summary>How does semaglutide compare to bariatric surgery?</summary>
+    <div class="fa">Bariatric surgery (gastric bypass, sleeve gastrectomy) typically produces greater weight loss (20&ndash;35% of body weight) and may result in more durable weight loss than pharmacotherapy. However, surgery carries procedural risks and is irreversible. Semaglutide offers a non-surgical alternative with meaningful but generally smaller effect sizes. For some patients, the two approaches may be complementary.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Semaglutide represents a genuine shift in obesity pharmacotherapy. The ~15% mean weight loss observed in the STEP trials, the cardiovascular benefit demonstrated in SELECT, and the relatively manageable side effect profile make it the most effective and well-studied anti-obesity medication available as a single agent.</p>
+</div>
+
+<p>It's not a magic bullet. It requires ongoing use for weight maintenance, carries real (if mostly manageable) side effects, and remains expensive for many patients.</p>
+
+<p>The compounding market has democratized access but introduced regulatory and safety uncertainties that patients need to understand.</p>
+
+<p>The evidence supports semaglutide as a powerful tool within a broader framework of chronic obesity management. That framework ideally includes nutritional optimization, physical activity, behavioral support, and ongoing medical supervision.</p>
+
+<p>Want to see how semaglutide compares to the next generation? Read our <a href="/articles/retatrutide-complete-guide">retatrutide guide</a> for the latest on triple-agonist therapy. Or check out the full <a href="/articles/best-peptides-for-fat-loss">best peptides for fat loss</a> roundup.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment recommendations. Semaglutide is a prescription medication that requires medical supervision. Consult a qualified healthcare provider before starting, stopping, or changing any medication. Individual results vary. Never self-prescribe based on internet content.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Wilding JPH et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity. <em>NEJM.</em> 2021;384(11):989-1002. <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/">PubMed</a><br>
+Davies M et al. Semaglutide 2.4 mg once a week in adults with overweight or obesity, and type 2 diabetes (STEP 2). <em>Lancet.</em> 2021;397(10278):971-984. <a href="https://pubmed.ncbi.nlm.nih.gov/33667417/">PubMed</a><br>
+Wadden TA et al. Effect of Subcutaneous Semaglutide vs Placebo as an Adjunct to Intensive Behavioral Therapy (STEP 3). <em>JAMA.</em> 2021;325(14):1403-1413. <a href="https://pubmed.ncbi.nlm.nih.gov/33625476/">PubMed</a><br>
+Rubino D et al. Effect of Continued Weekly Subcutaneous Semaglutide vs Placebo on Weight Loss Maintenance (STEP 4). <em>JAMA.</em> 2021;325(14):1414-1425. <a href="https://pubmed.ncbi.nlm.nih.gov/33625477/">PubMed</a><br>
+Garvey WT et al. Two-year effects of semaglutide in adults with overweight or obesity: the STEP 5 trial. <em>Nat Med.</em> 2022;28:2083-2091. <a href="https://pubmed.ncbi.nlm.nih.gov/36216945/">PubMed</a><br>
+Lincoff AM et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. <em>NEJM.</em> 2023;389(24):2221-2232. <a href="https://pubmed.ncbi.nlm.nih.gov/37952131/">PubMed</a><br>
+Jastreboff AM et al. Tirzepatide Once Weekly for the Treatment of Obesity. <em>NEJM.</em> 2022;387(4):327-340. <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/">PubMed</a><br>
+Blundell J et al. Effects of once-weekly semaglutide on appetite, energy intake, control of eating, food preference and body weight in subjects with obesity. <em>Diabetes Obes Metab.</em> 2017;19(9):1242-1251. <a href="https://pubmed.ncbi.nlm.nih.gov/28371441/">PubMed</a><br>
+Friedrichsen MH et al. The effect of semaglutide 2.4 mg once weekly on energy intake, appetite, control of eating, and gastric emptying in adults with obesity. <em>Diabetes Obes Metab.</em> 2021;23(3):754-762. <a href="https://pubmed.ncbi.nlm.nih.gov/33269530/">PubMed</a>
+</p>
+
+<!-- ========== RELATED ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/tirzepatide-complete-guide">Tirzepatide Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-fat-loss">Best Peptides for Fat Loss</a> &nbsp;&middot;&nbsp;
+<a href="/articles/retatrutide-complete-guide">Retatrutide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semaglutide-vs-tirzepatide-comparison">Semaglutide vs. Tirzepatide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/tirzepatide-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Tirzepatide Complete Guide</a>
+            <a href="/articles/best-peptides-for-fat-loss" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Fat Loss</a>
+            <a href="/articles/retatrutide-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Retatrutide Complete Guide</a>
+            <a href="/articles/semaglutide-vs-tirzepatide-comparison" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide vs. Tirzepatide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

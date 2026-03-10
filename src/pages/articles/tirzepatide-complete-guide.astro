@@ -1,0 +1,677 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Tirzepatide: The Dual-Action GLP-1/GIP Agonist Behind Mounjaro and Zepbound",
+  description: "A complete guide to tirzepatide covering mechanism, weight loss data, dosing, side effects, semaglutide comparison, FDA status, and FAQs.",
+  image: "/images/articles/tirzepatide.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Weight Management &middot; Metabolic Health</div>
+  <h1>Tirzepatide: The Dual-Action GLP-1/GIP Agonist Behind Mounjaro and Zepbound</h1>
+  <p class="sub">The first dual incretin receptor agonist to receive FDA approval. How it works, what the clinical trials actually show, and how it compares to semaglutide.</p>
+  <div class="pills">
+    <span class="pill">GLP-1 + GIP Dual Agonist</span>
+    <span class="pill">FDA-Approved</span>
+    <span class="pill">Once-Weekly Injection</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">22.5%</div><div class="l">Average Weight Loss<br>at 15 mg (SURMOUNT-1)</div></div>
+  <div class="sb"><div class="v c2">2</div><div class="l">FDA Approvals<br>Mounjaro + Zepbound</div></div>
+  <div class="sb"><div class="v c3">Dual</div><div class="l">Receptor Target<br>GLP-1 &amp; GIP</div></div>
+  <div class="sb"><div class="v c4">1x/wk</div><div class="l">Dosing Frequency<br>Subcutaneous</div></div>
+</div>
+
+<p><a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> changed the obesity treatment world. Tirzepatide raised the bar.</p>
+
+<p>Developed by Eli Lilly, tirzepatide is the first <strong>dual GLP-1/GIP receptor agonist</strong> to receive FDA approval. It targets two incretin hormones instead of one, and the results speak for themselves: up to <strong>22.5% body weight loss</strong> in clinical trials.</p>
+
+<p>It's sold as <strong>Mounjaro</strong> for type 2 diabetes and <strong>Zepbound</strong> for weight management. Both names, same molecule.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of tirzepatide, covering its mechanisms, clinical trial data, dosing protocols, side effects, and comparison to semaglutide. It is <strong>not a recommendation to use tirzepatide</strong>. Always consult a qualified healthcare provider before starting any medication.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>Tirzepatide at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Tirzepatide (Dual Incretin Receptor Agonist)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic dual incretin receptor agonist &nbsp;|&nbsp; <strong>Molecular Weight:</strong> ~4,813.45 Da &nbsp;|&nbsp; <strong>Developer:</strong> Eli Lilly and Company &nbsp;|&nbsp; <strong>Brand Names:</strong> Mounjaro (T2D), Zepbound (obesity) &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection, once weekly &nbsp;|&nbsp; <strong>FDA Status:</strong> Approved for T2D (May 2022) and chronic weight management (Nov 2023) &nbsp;|&nbsp; <strong>Primary Actions:</strong> Appetite suppression, insulin sensitization, glucose regulation, fat metabolism</p>
+</div>
+
+<p>Unlike semaglutide, which only hits the GLP-1 receptor, tirzepatide was designed from the ground up as a <strong>twincretin</strong>. The GIP component isn't an afterthought. It's baked into the molecule's structure.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How Tirzepatide Works: Dual Incretin Agonism</h2>
+
+<p>Both GLP-1 and GIP are <strong>incretin hormones</strong> released by your gut after eating. They regulate insulin, appetite, and energy balance. Tirzepatide mimics both of them at the same time.</p>
+
+<div class="svg-box">
+  <div class="st">Tirzepatide: Dual-Pathway Mechanism of Action</div>
+  <div class="ss">GLP-1 receptor activation &middot; GIP receptor activation &middot; Combined metabolic effects</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- GLP-1 Pathway -->
+    <rect x="15" y="10" width="200" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="115" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">GLP-1 Receptor</text>
+    <text x="115" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">INCRETIN PATHWAY 1</text>
+    <line x1="35" y1="65" x2="195" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="115" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Suppresses appetite</text>
+    <text x="115" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">(brain hunger centers)</text>
+    <text x="115" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Slows gastric emptying</text>
+    <text x="115" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Stimulates insulin</text>
+    <text x="115" y="162" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Reduces glucagon</text>
+    <line x1="35" y1="180" x2="195" y2="180" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="115" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">SHARED WITH SEMAGLUTIDE</text>
+    <text x="115" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Blood sugar control</text>
+    <text x="115" y="248" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">&#38; satiety signaling</text>
+
+    <!-- GIP Pathway -->
+    <rect x="245" y="10" width="200" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="345" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">GIP Receptor</text>
+    <text x="345" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">INCRETIN PATHWAY 2</text>
+    <line x1="265" y1="65" x2="425" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="345" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Amplifies GLP-1</text>
+    <text x="345" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">appetite effects</text>
+    <text x="345" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Improves insulin</text>
+    <text x="345" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">sensitivity</text>
+    <text x="345" y="162" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Enhances fat metabolism</text>
+    <line x1="265" y1="180" x2="425" y2="180" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="345" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">UNIQUE TO TIRZEPATIDE</text>
+    <text x="345" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Adipose regulation</text>
+    <text x="345" y="248" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">&#38; beta-cell protection</text>
+
+    <!-- Combined Effect -->
+    <rect x="475" y="10" width="210" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="580" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Combined Effect</text>
+    <text x="580" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">DUAL AGONISM</text>
+    <line x1="495" y1="65" x2="665" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="580" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Superior weight loss</text>
+    <text x="580" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">vs. GLP-1 alone</text>
+    <text x="580" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Better glucose control</text>
+    <text x="580" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Improved tolerability</text>
+    <text x="580" y="162" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">at matched efficacy</text>
+    <line x1="495" y1="180" x2="665" y2="180" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="580" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">CLINICAL RESULT</text>
+    <text x="580" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">22.5% body weight</text>
+    <text x="580" y="248" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">loss at highest dose</text>
+  </svg>
+</div>
+
+<h3>GLP-1 Receptor Activation</h3>
+
+<p>This is the mechanism shared with drugs like Ozempic and Wegovy. GLP-1 agonism suppresses appetite by acting on hunger centers in the brain, slows gastric emptying so food stays in the stomach longer, and stimulates insulin secretion in a glucose-dependent manner.</p>
+
+<p>These effects alone produce meaningful weight loss and blood sugar control. But tirzepatide doesn't stop here.</p>
+
+<h3>GIP Receptor Activation</h3>
+
+<p>GIP was controversial for years. Some researchers thought blocking it would help with weight loss. Others thought activating it would. Tirzepatide settled the debate in favor of activation.</p>
+
+<div class="cd ct">
+  <div class="tg">GIP-Specific Effects</div>
+  <h3>What the Second Receptor Adds</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Appetite amplification:</strong> Complements GLP-1's satiety signals through different brain pathways. <strong>Insulin sensitivity:</strong> Improves how peripheral tissues respond to insulin. <strong>Fat metabolism:</strong> Directly influences adipose tissue regulation. <strong>Beta-cell protection:</strong> May protect pancreatic beta cells from dysfunction over time (<a href="https://pubmed.ncbi.nlm.nih.gov/32866435/">Samms et al., 2020</a>).</p>
+</div>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>The combination of GLP-1 and GIP produces greater weight loss and glucose control than either pathway alone. That's the entire thesis behind tirzepatide.</p>
+</div>
+
+<h3>The Combined Effect</h3>
+
+<table class="tbl">
+<thead><tr><th>Mechanism</th><th>Driven By</th></tr></thead>
+<tbody>
+<tr><td><strong>Appetite suppression</strong></td><td class="g">GLP-1 + GIP</td></tr>
+<tr><td><strong>Blood sugar control</strong></td><td class="g">GLP-1 + GIP</td></tr>
+<tr><td><strong>Slower gastric emptying</strong></td><td>GLP-1</td></tr>
+<tr><td><strong>Insulin sensitivity</strong></td><td>GIP</td></tr>
+<tr><td><strong>Fat tissue regulation</strong></td><td>GIP</td></tr>
+<tr><td><strong>Glucagon suppression</strong></td><td>GLP-1</td></tr>
+</tbody>
+</table>
+
+<p>The two pathways overlap in some areas and complement each other in others. The result is a drug that consistently beats single-target GLP-1 agonists in clinical trials.</p>
+
+<!-- ========== WEIGHT LOSS RESULTS ========== -->
+<hr class="sep">
+<h2>Weight Loss Results: The SURMOUNT Program</h2>
+
+<h3>SURMOUNT-1: The Headline Trial</h3>
+
+<p>This was the trial that made tirzepatide famous for weight loss. Published in the <em>New England Journal of Medicine</em> (<a href="https://pubmed.ncbi.nlm.nih.gov/35658024/">Jastreboff et al., 2022</a>).</p>
+
+<div class="cd cb">
+  <div class="tg">Trial Design</div>
+  <h3>SURMOUNT-1 Parameters</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Participants:</strong> 2,539 adults with obesity (BMI 30+) or overweight (BMI 27+) with comorbidity &nbsp;|&nbsp; <strong>Duration:</strong> 72 weeks &nbsp;|&nbsp; <strong>Design:</strong> Randomized, double-blind, placebo-controlled &nbsp;|&nbsp; <strong>Key exclusion:</strong> No diabetes</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Dose (Weekly)</th><th>Average Weight Loss</th><th>Pounds Lost (at 240 lb)</th></tr></thead>
+<tbody>
+<tr><td><strong>5 mg</strong></td><td class="g">15.0%</td><td>~36 lb</td></tr>
+<tr><td><strong>10 mg</strong></td><td class="g">19.5%</td><td>~47 lb</td></tr>
+<tr><td><strong>15 mg</strong></td><td class="g">22.5%</td><td>~54 lb</td></tr>
+<tr><td><strong>Placebo</strong></td><td>3.1%</td><td>~7 lb</td></tr>
+</tbody>
+</table>
+
+<p>At the 15 mg dose, <strong>over one-third of participants lost 25% or more</strong> of their body weight. And <strong>63%</strong> lost at least 20%.</p>
+
+<div class="d-p">
+  <div class="s">Perspective</div>
+  <p>Bariatric surgery typically produces 25&ndash;30% weight loss. Tirzepatide at 15 mg comes remarkably close to that, without the operating room.</p>
+</div>
+
+<h3>SURMOUNT-2: Obesity With Type 2 Diabetes</h3>
+
+<p>Weight loss is harder when you have diabetes. Insulin resistance, medications that promote weight gain, and metabolic dysfunction all work against you (<a href="https://pubmed.ncbi.nlm.nih.gov/37385275/">Garvey et al., 2023</a>).</p>
+
+<table class="tbl">
+<thead><tr><th>Dose</th><th>Weight Loss</th><th>HbA1c Reduction</th></tr></thead>
+<tbody>
+<tr><td><strong>10 mg</strong></td><td class="g">12.8%</td><td class="g">2.1 percentage points</td></tr>
+<tr><td><strong>15 mg</strong></td><td class="g">14.7%</td><td class="g">2.2 percentage points</td></tr>
+<tr><td><strong>Placebo</strong></td><td>3.2%</td><td>0.5 percentage points</td></tr>
+</tbody>
+</table>
+
+<p>Even in a harder-to-treat population, tirzepatide delivered double-digit weight loss.</p>
+
+<h3>SURMOUNT-3 and SURMOUNT-4</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">SURMOUNT-3</h4>
+    <p>Tested tirzepatide after an initial 12-week intensive lifestyle intervention. Combined weight loss reached <strong>26.6%</strong> at 15 mg (<a href="https://pubmed.ncbi.nlm.nih.gov/37840095/">Wadden et al., 2023</a>).</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">SURMOUNT-4</h4>
+    <p>Studied what happens when you stop. Participants who switched to placebo <strong>regained about half the weight</strong> over 52 weeks. Those who continued lost more (<a href="https://pubmed.ncbi.nlm.nih.gov/38587238/">Aronne et al., 2024</a>).</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Important Note</div>
+  <p>Tirzepatide works best as a long-term treatment. Stopping it leads to significant weight regain, consistent with every other obesity medication studied to date.</p>
+</div>
+
+<!-- ========== SURPASS TRIALS ========== -->
+<hr class="sep">
+<h2>SURPASS Trials: Diabetes Data</h2>
+
+<p>Before it was a weight loss drug, tirzepatide proved itself for type 2 diabetes through the <strong>SURPASS</strong> program.</p>
+
+<table class="tbl">
+<thead><tr><th>Trial</th><th>Comparator</th><th>HbA1c Result</th></tr></thead>
+<tbody>
+<tr><td><strong>SURPASS-1</strong></td><td>Placebo</td><td class="g">Up to 2.07% reduction</td></tr>
+<tr><td><strong>SURPASS-2</strong></td><td>Semaglutide 1 mg</td><td class="g">Tirzepatide superior at all doses</td></tr>
+<tr><td><strong>SURPASS-3</strong></td><td>Insulin degludec</td><td class="g">Tirzepatide superior</td></tr>
+<tr><td><strong>SURPASS-4</strong></td><td>Insulin glargine</td><td class="g">Tirzepatide superior</td></tr>
+<tr><td><strong>SURPASS-5</strong></td><td>Placebo (add-on to insulin)</td><td class="g">Significant additional reduction</td></tr>
+</tbody>
+</table>
+
+<p>(<a href="https://pubmed.ncbi.nlm.nih.gov/34186022/">Del Prato et al., 2021</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/34170647/">Frias et al., 2021</a>)</p>
+
+<p>The SURPASS-2 result stands out. It's the only head-to-head trial against semaglutide, and <strong>tirzepatide won at every dose</strong> for both HbA1c and weight loss.</p>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing: Standard Escalation Schedule</h2>
+
+<p>Tirzepatide uses a gradual dose escalation to reduce gastrointestinal side effects. You don't jump to the full dose on day one.</p>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>These are the FDA-approved dosing schedules. Always follow your prescriber's instructions.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Week</th><th>Dose</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Weeks 1&ndash;4</strong></td><td>2.5 mg</td><td class="y">Starting dose (not a maintenance dose)</td></tr>
+<tr><td><strong>Weeks 5&ndash;8</strong></td><td>5 mg</td><td class="g">First potential maintenance dose</td></tr>
+<tr><td><strong>Weeks 9&ndash;12</strong></td><td>7.5 mg</td><td class="y">Intermediate step</td></tr>
+<tr><td><strong>Weeks 13&ndash;16</strong></td><td>10 mg</td><td class="g">Second maintenance option</td></tr>
+<tr><td><strong>Weeks 17&ndash;20</strong></td><td>12.5 mg</td><td class="y">Intermediate step</td></tr>
+<tr><td><strong>Week 20+</strong></td><td>15 mg</td><td class="g">Maximum dose</td></tr>
+</tbody>
+</table>
+
+<p>Each increase happens every 4 weeks. Some prescribers slow this down if side effects are significant.</p>
+
+<h3>Practical Details</h3>
+
+<div class="cd ca">
+  <div class="tg">Administration</div>
+  <h3>How to Take Tirzepatide</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Route:</strong> <a href="/articles/how-to-inject-peptides-subcutaneously">Subcutaneous injection</a> (abdomen, thigh, or upper arm) &nbsp;|&nbsp; <strong>Frequency:</strong> Once weekly, same day each week &nbsp;|&nbsp; <strong>Timing:</strong> Any time of day, with or without food &nbsp;|&nbsp; <strong>Missed dose:</strong> Take within 4 days of missed day; if longer, skip and resume schedule &nbsp;|&nbsp; <strong>Storage:</strong> Refrigerated (36&ndash;46&deg;F); room temperature up to 21 days &nbsp;|&nbsp; <strong>Device:</strong> Pre-filled single-dose pen (no <a href="/articles/how-to-reconstitute-peptides">reconstitution</a> required)</p>
+</div>
+
+<h3>Finding the Right Dose</h3>
+
+<p>Not everyone needs 15 mg. Many patients find their sweet spot at 10 mg or even 7.5 mg with acceptable weight loss and manageable side effects.</p>
+
+<p>The clinical data shows diminishing returns between doses. Going from 5 mg to 10 mg adds about 4.5 percentage points of weight loss. Going from 10 mg to 15 mg adds about 3 more.</p>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>The side effect profile is dominated by gastrointestinal symptoms, especially during dose escalation.</p>
+
+<h3>Common Side Effects</h3>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Nausea</strong></td><td class="y">24&ndash;33%</td><td>Most common; usually improves after 2&ndash;3 weeks at each dose</td></tr>
+<tr><td><strong>Diarrhea</strong></td><td class="y">17&ndash;23%</td><td>More prevalent at higher doses</td></tr>
+<tr><td><strong>Decreased appetite</strong></td><td class="y">15&ndash;20%</td><td>Therapeutic effect, but can be excessive</td></tr>
+<tr><td><strong>Constipation</strong></td><td class="y">11&ndash;17%</td><td>Can alternate with diarrhea</td></tr>
+<tr><td><strong>Vomiting</strong></td><td class="y">6&ndash;12%</td><td>Typically during escalation phases</td></tr>
+<tr><td><strong>Dyspepsia</strong></td><td class="y">8&ndash;13%</td><td>Indigestion, heartburn</td></tr>
+<tr><td><strong>Abdominal pain</strong></td><td>5&ndash;10%</td><td>Usually mild to moderate</td></tr>
+</tbody>
+</table>
+
+<p>(<a href="https://pubmed.ncbi.nlm.nih.gov/36356072/">Sattar et al., 2022</a>)</p>
+
+<h3>Less Common but Notable</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Occasional Reports</h4>
+    <p><strong>Injection site reactions</strong> in about 3&ndash;5% of patients. <strong>Hair thinning</strong> reported anecdotally, likely related to rapid weight loss, not the drug itself. <strong>Slight heart rate increase</strong> of 2&ndash;4 bpm on average.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Gallbladder Events</h4>
+    <p><strong>Gallstones</strong> are more common with rapid weight loss, which tirzepatide can certainly cause. Risk increases with higher doses and faster weight loss trajectories.</p>
+  </div>
+</div>
+
+<div class="d-r">
+  <div class="s">When to Seek Medical Attention</div>
+  <p><strong>Severe abdominal pain</strong> that doesn't resolve (could signal pancreatitis). <strong>Allergic reactions</strong> such as facial swelling, difficulty breathing, or severe rash. <strong>Vision changes</strong> in people with diabetes. <strong>Persistent vomiting</strong> leading to dehydration.</p>
+</div>
+
+<h3>Dropout Rates</h3>
+
+<p>In SURMOUNT-1, discontinuation due to adverse events was <strong>4.3% (5 mg), 7.1% (10 mg), and 6.2% (15 mg)</strong> compared to 2.6% for placebo. Most patients tolerate the drug well once they get through escalation.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>The slow dose escalation is critical. Patients who rush through it experience significantly more nausea and vomiting.</p>
+</div>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>Tirzepatide vs. Semaglutide</h2>
+
+<p>This is the comparison everyone wants. Both are GLP-1 receptor agonists. Both produce significant weight loss. But they're not identical. For a full breakdown, see our <a href="/articles/semaglutide-vs-tirzepatide-comparison">semaglutide vs. tirzepatide comparison</a>.</p>
+
+<h3>Head-to-Head: SURPASS-2</h3>
+
+<p>The only direct comparison trial pitted tirzepatide against semaglutide 1 mg (the diabetes dose, not the 2.4 mg weight loss dose) in type 2 diabetes patients (<a href="https://pubmed.ncbi.nlm.nih.gov/34170647/">Frias et al., 2021</a>).</p>
+
+<table class="tbl">
+<thead><tr><th>Metric</th><th>Semaglutide 1 mg</th><th>Tirzepatide 5 mg</th><th>Tirzepatide 10 mg</th><th>Tirzepatide 15 mg</th></tr></thead>
+<tbody>
+<tr><td><strong>HbA1c reduction</strong></td><td>1.86%</td><td class="g">2.01%</td><td class="g">2.24%</td><td class="g">2.30%</td></tr>
+<tr><td><strong>Weight loss</strong></td><td>5.7 kg</td><td class="g">7.6 kg</td><td class="g">9.3 kg</td><td class="g">11.2 kg</td></tr>
+</tbody>
+</table>
+
+<p>Tirzepatide outperformed semaglutide on both measures at all three doses.</p>
+
+<h3>Cross-Trial Comparison</h3>
+
+<div class="d-a">
+  <div class="s">Caveat</div>
+  <p>Cross-trial comparisons have real limitations. Patient populations, study designs, and placebo responses differ. The SURPASS-2 head-to-head is the only fair direct comparison, and it used the diabetes dose of semaglutide.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Semaglutide 2.4 mg (Wegovy)</th><th>Tirzepatide 15 mg (Zepbound)</th></tr></thead>
+<tbody>
+<tr><td><strong>Targets</strong></td><td>GLP-1 only</td><td class="g">GLP-1 + GIP</td></tr>
+<tr><td><strong>Max weight loss (non-diabetic)</strong></td><td>~16.0% (STEP 1)</td><td class="g">~22.5% (SURMOUNT-1)</td></tr>
+<tr><td><strong>Trial duration</strong></td><td>68 weeks</td><td>72 weeks</td></tr>
+<tr><td><strong>Nausea rate</strong></td><td class="r">~44%</td><td class="y">~31%</td></tr>
+<tr><td><strong>FDA approved (obesity)</strong></td><td>June 2021</td><td>November 2023</td></tr>
+<tr><td><strong>Administration</strong></td><td>Weekly injection</td><td>Weekly injection</td></tr>
+<tr><td><strong>Oral option</strong></td><td class="g">Yes (Rybelsus)</td><td class="r">Not yet</td></tr>
+<tr><td><strong>Cost (list price)</strong></td><td>~$1,300/month</td><td class="g">~$1,060/month</td></tr>
+</tbody>
+</table>
+
+<h3>Which One Is "Better"?</h3>
+
+<p>It depends on what you're optimizing for.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Tirzepatide Advantages</h4>
+    <p><strong>Maximum weight loss</strong> based on available data. <strong>GI tolerability</strong> may slightly favor tirzepatide at equivalent efficacy. <strong>Lower list price</strong> than semaglutide.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Semaglutide Advantages</h4>
+    <p><strong>Longest safety track record</strong> (approved earlier, more real-world data). <strong>Proven cardiovascular benefit</strong> from the SELECT trial. <strong>Oral availability</strong> through Rybelsus.</p>
+  </div>
+</div>
+
+<!-- ========== FDA STATUS ========== -->
+<hr class="sep">
+<h2>FDA Status and Availability</h2>
+
+<p>Tirzepatide has full FDA approval under two brand names.</p>
+
+<table class="tbl">
+<thead><tr><th>Brand</th><th>Indication</th><th>Approval Date</th><th>Doses Available</th></tr></thead>
+<tbody>
+<tr><td><strong>Mounjaro</strong></td><td>Type 2 diabetes</td><td class="g">May 2022</td><td>2.5, 5, 7.5, 10, 12.5, 15 mg</td></tr>
+<tr><td><strong>Zepbound</strong></td><td>Chronic weight management</td><td class="g">November 2023</td><td>2.5, 5, 7.5, 10, 12.5, 15 mg</td></tr>
+</tbody>
+</table>
+
+<h3>Global Status</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">United States</h4>
+    <p>Approved (Mounjaro and Zepbound)</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">European Union</h4>
+    <p>Approved as Mounjaro for T2D (2022); obesity indication approved 2024</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">United Kingdom</h4>
+    <p>Approved for T2D and weight management</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Australia</h4>
+    <p>Approved for T2D</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Japan</h4>
+    <p>Approved for T2D</p>
+  </div>
+</div>
+
+<h3>Supply and Access</h3>
+
+<p>Tirzepatide experienced significant supply constraints through 2023 and into 2024 due to overwhelming demand. Supply has improved substantially in 2025, though some doses can still be intermittently limited.</p>
+
+<p><strong>Compounded versions</strong> were available during the FDA-declared shortage. As Eli Lilly has challenged compounding pharmacies legally, the availability of compounded tirzepatide is shifting. Check current regulations in your area.</p>
+
+<h3>Insurance Coverage</h3>
+
+<p>Coverage remains inconsistent. Many insurers cover Mounjaro for diabetes but not Zepbound for weight loss. Out-of-pocket costs without insurance run <strong>$1,000&ndash;1,100 per month</strong> at list price, though manufacturer savings programs can reduce this significantly for eligible patients.</p>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Might Benefit</h2>
+
+<p>Based on the clinical evidence and FDA-approved indications:</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Primary Candidates</h4>
+    <p><strong>Adults with BMI 30 or higher</strong> seeking pharmaceutical weight management. <strong>Adults with BMI 27+ and at least one weight-related condition</strong> such as hypertension, dyslipidemia, or sleep apnea.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Also Consider</h4>
+    <p><strong>People with type 2 diabetes</strong> who need better glucose control and would benefit from weight loss. <strong>Patients who haven't responded adequately to semaglutide</strong> and want to try a dual-agonist approach.</p>
+  </div>
+</div>
+
+<div class="d-r">
+  <div class="s">Contraindications</div>
+  <p>Tirzepatide is <strong>not recommended</strong> during pregnancy, in people with a personal or family history of medullary thyroid carcinoma, or in those with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What is tirzepatide?</summary>
+    <div class="fa">Tirzepatide is a once-weekly injectable peptide that activates both GLP-1 and GIP receptors. It's sold as <strong>Mounjaro</strong> for type 2 diabetes and <strong>Zepbound</strong> for chronic weight management. Both are made by Eli Lilly.</div>
+  </details>
+  <details>
+    <summary>How much weight can you lose on tirzepatide?</summary>
+    <div class="fa">In the SURMOUNT-1 trial, participants on the 15 mg dose lost an average of <strong>22.5% of their body weight</strong> over 72 weeks. That's about 54 pounds for someone starting at 240 pounds. Individual results vary widely.</div>
+  </details>
+  <details>
+    <summary>How long does tirzepatide take to work?</summary>
+    <div class="fa">Most people notice reduced appetite within the first 1&ndash;2 weeks. Meaningful weight loss typically becomes apparent by weeks 4&ndash;8. The full effect builds gradually over several months as the dose escalates.</div>
+  </details>
+  <details>
+    <summary>Is tirzepatide better than semaglutide?</summary>
+    <div class="fa">In the only head-to-head trial (SURPASS-2), tirzepatide produced greater HbA1c reductions and more weight loss than semaglutide 1 mg at all doses tested. Cross-trial comparisons also favor tirzepatide for weight loss. But semaglutide has a longer track record and proven cardiovascular benefits. See our <a href="/articles/semaglutide-vs-tirzepatide-comparison">full comparison</a>.</div>
+  </details>
+  <details>
+    <summary>What happens when you stop taking tirzepatide?</summary>
+    <div class="fa">Weight regain. The SURMOUNT-4 trial showed that participants who switched to placebo regained roughly half the weight they had lost over the following year. This is consistent with all obesity medications studied to date. Most experts consider obesity a chronic condition requiring ongoing treatment.</div>
+  </details>
+  <details>
+    <summary>Can you drink alcohol on tirzepatide?</summary>
+    <div class="fa">There's no absolute contraindication, but alcohol can worsen nausea and GI side effects. It also adds empty calories that work against weight loss goals. Most prescribers recommend limiting alcohol intake.</div>
+  </details>
+  <details>
+    <summary>Does tirzepatide cause hair loss?</summary>
+    <div class="fa">Hair thinning has been reported by some users. This is most likely a consequence of <strong>rapid, significant weight loss</strong> (telogen effluvium) rather than a direct drug effect. It's typically temporary and resolves as weight stabilizes.</div>
+  </details>
+  <details>
+    <summary>How do you inject tirzepatide?</summary>
+    <div class="fa">Tirzepatide comes in a pre-filled pen. No mixing or <a href="/articles/how-to-reconstitute-peptides">reconstitution</a> needed. Inject <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneously</a> into the abdomen, thigh, or upper arm. Rotate injection sites each week. The pen has a hidden needle and is designed for ease of use.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Tirzepatide is the most effective FDA-approved medication for weight loss available today. The dual GLP-1/GIP mechanism produces consistently better results than single-target GLP-1 drugs, with <strong>22.5% average weight loss</strong> at the highest dose.</p>
+</div>
+
+<p>It's not without limitations. GI side effects are common during escalation, long-term cardiovascular outcome data is still pending, and stopping the drug leads to weight regain. Cost and insurance coverage remain barriers for many patients.</p>
+
+<p>But the data is strong, the FDA approvals are in hand, and millions of patients are already using it. For people with obesity or type 2 diabetes who need more than lifestyle changes alone can offer, tirzepatide represents a genuine step forward in treatment options.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. Tirzepatide is a prescription medication with real risks and side effects. Always consult a qualified healthcare provider before starting, changing, or stopping any medication. Do not use this article as a substitute for professional medical guidance.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Samms RJ et al. How May GIP Enhance the Therapeutic Efficacy of GLP-1? <em>Trends Endocrinol Metab.</em> 2020;31(6):410-421. <a href="https://pubmed.ncbi.nlm.nih.gov/32866435/">PubMed</a><br>
+Jastreboff AM et al. Tirzepatide Once Weekly for the Treatment of Obesity. <em>N Engl J Med.</em> 2022;387(3):205-216. <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/">PubMed</a><br>
+Garvey WT et al. Tirzepatide once weekly for the treatment of obesity in people with type 2 diabetes (SURMOUNT-2). <em>Lancet.</em> 2023;402(10402):613-626. <a href="https://pubmed.ncbi.nlm.nih.gov/37385275/">PubMed</a><br>
+Wadden TA et al. Tirzepatide after intensive lifestyle intervention in adults with overweight or obesity (SURMOUNT-3). <em>Lancet.</em> 2023;402(10418):S3. <a href="https://pubmed.ncbi.nlm.nih.gov/37840095/">PubMed</a><br>
+Aronne LJ et al. Continued treatment with tirzepatide for maintenance of weight reduction (SURMOUNT-4). <em>JAMA.</em> 2024;331(1):38-48. <a href="https://pubmed.ncbi.nlm.nih.gov/38587238/">PubMed</a><br>
+Del Prato S et al. Tirzepatide versus insulin glargine in type 2 diabetes and increased cardiovascular risk (SURPASS-4). <em>Lancet.</em> 2021;398(10313):1811-1824. <a href="https://pubmed.ncbi.nlm.nih.gov/34186022/">PubMed</a><br>
+Frias JP et al. Tirzepatide versus semaglutide once weekly in patients with type 2 diabetes. <em>N Engl J Med.</em> 2021;385(6):503-515. <a href="https://pubmed.ncbi.nlm.nih.gov/34170647/">PubMed</a><br>
+Sattar N et al. Tirzepatide cardiovascular event risk assessment. <em>Nat Med.</em> 2022;28(11):2392-2400. <a href="https://pubmed.ncbi.nlm.nih.gov/36356072/">PubMed</a>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semaglutide-weight-loss-guide">Semaglutide: Complete Weight Loss Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/retatrutide-complete-guide">Retatrutide: The Triple-Action GLP-1 Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semaglutide-vs-tirzepatide-comparison">Semaglutide vs. Tirzepatide Comparison</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/semaglutide-weight-loss-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide: Complete Weight Loss Guide</a>
+            <a href="/articles/semaglutide-vs-tirzepatide-comparison" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide vs. Tirzepatide Comparison</a>
+            <a href="/articles/retatrutide-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Retatrutide: Triple-Action GLP-1 Guide</a>
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
