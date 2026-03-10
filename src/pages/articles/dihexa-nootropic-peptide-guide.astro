@@ -1,0 +1,598 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Dihexa: The Nootropic Peptide 10 Million Times Stronger Than BDNF",
+  description: "A complete guide to Dihexa (N-hexanoic-Tyr-Ile-(6) aminohexanoic amide), the angiotensin IV analog studied for cognitive enhancement via the HGF/c-Met pathway.",
+  image: "/images/articles/dihexa.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Nootropic &middot; Synaptogenesis</div>
+  <h1>Dihexa: The Nootropic Peptide 10 Million Times Stronger Than BDNF</h1>
+  <p class="sub">A synthetic angiotensin IV analog that drives synapse formation through the HGF/c-Met pathway. The preclinical potency data is striking, but zero human trials exist. Here's what we actually know.</p>
+  <div class="pills">
+    <span class="pill">HGF/c-Met &middot; Synaptogenesis</span>
+    <span class="pill">Oral Bioavailability</span>
+    <span class="pill">Preclinical Only</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">10M&times;</div><div class="l">More Potent Than<br>BDNF (In Vitro)</div></div>
+  <div class="sb"><div class="v c2">~507</div><div class="l">Molecular Weight<br>(Daltons)</div></div>
+  <div class="sb"><div class="v c3">0</div><div class="l">Human Clinical<br>Trials Completed</div></div>
+  <div class="sb"><div class="v c4">Oral</div><div class="l">Bioavailable<br>Route (Rare for Peptides)</div></div>
+</div>
+
+<p>A single claim put Dihexa on the map: it's <strong>10 million times more potent</strong> than brain-derived neurotrophic factor at forming new synapses. That number comes from peer-reviewed research at Washington State University, not internet speculation.</p>
+
+<p>Whether that in vitro potency translates to real-world cognitive gains is a different question entirely. Every piece of Dihexa data comes from rats or cell cultures, and the pathway it activates has serious implications that deserve honest discussion.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of Dihexa, covering its mechanism, preclinical research, dosing reports, safety concerns, and how it compares to other nootropic peptides. It is <strong>not a recommendation to use Dihexa</strong>. Dihexa is not FDA-approved for any indication. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>Dihexa at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Dihexa (N-hexanoic-Tyr-Ile-(6) aminohexanoic amide)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Modified dipeptide (angiotensin IV analog) &nbsp;|&nbsp; <strong>Molecular Weight:</strong> ~507 Da &nbsp;|&nbsp; <strong>Origin:</strong> Washington State University (Dr. Joseph Harding, Dr. John Wright) &nbsp;|&nbsp; <strong>Routes:</strong> Oral, <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a>, intranasal &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved for any indication &nbsp;|&nbsp; <strong>Primary Actions:</strong> HGF/c-Met allosteric modulation, synaptogenesis, cognitive enhancement (preclinical)</p>
+</div>
+
+<p>Dihexa was specifically engineered to resist enzymatic breakdown, giving it a much longer half-life than natural angiotensin IV. The <strong>N-hexanoic acid modification</strong> and the <strong>aminohexanoic amide C-terminus</strong> protect the core structure from peptidases.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISM ========== -->
+<hr class="sep">
+<h2>How Dihexa Works: The HGF/c-Met Pathway</h2>
+
+<p>Understanding Dihexa requires a detour through an unexpected pathway: the one connecting blood pressure regulation to memory formation. Angiotensin II is best known for raising blood pressure, but when enzymes break it down further, a fragment called <strong>angiotensin IV</strong> is produced.</p>
+
+<p>In the 1990s, Harding and Wright discovered that angiotensin IV enhanced memory and learning in animal models. But angiotensin IV itself is fragile and gets chewed up by peptidases within minutes (<a href="https://pubmed.ncbi.nlm.nih.gov/21530510/">Wright &amp; Harding, 2011</a>).</p>
+
+<div class="svg-box">
+  <div class="st">Dihexa: HGF/c-Met Synaptogenesis Pathway</div>
+  <div class="ss">From angiotensin fragment to new synapse formation</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Step 1: Angiotensin IV -->
+    <rect x="15" y="10" width="155" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="92" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#2956A6">Angiotensin IV</text>
+    <text x="92" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">ORIGIN</text>
+    <line x1="35" y1="65" x2="150" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="92" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Angiotensin II</text>
+    <text x="92" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">breaks down into</text>
+    <text x="92" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Angiotensin IV</text>
+    <text x="92" y="137" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="92" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Binds AT4 receptors</text>
+    <text x="92" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">(now identified as</text>
+    <text x="92" y="187" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">HGF/c-Met)</text>
+    <line x1="35" y1="207" x2="150" y2="207" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="92" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">LIMITATION</text>
+    <text x="92" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Degraded in minutes</text>
+
+    <!-- Step 2: Dihexa -->
+    <rect x="185" y="10" width="155" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="262" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#6E3B8A">Dihexa</text>
+    <text x="262" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">ALLOSTERIC MODULATOR</text>
+    <line x1="205" y1="65" x2="320" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="262" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Stabilized analog</text>
+    <text x="262" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">resists peptidases</text>
+    <text x="262" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="262" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Enhances HGF binding</text>
+    <text x="262" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">to c-Met receptor</text>
+    <text x="262" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">(does not replace HGF)</text>
+    <line x1="205" y1="207" x2="320" y2="207" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="262" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY ADVANTAGE</text>
+    <text x="262" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Orally bioavailable</text>
+
+    <!-- Step 3: c-Met Cascade -->
+    <rect x="355" y="10" width="155" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="432" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#187A62">c-Met Cascade</text>
+    <text x="432" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">SIGNALING</text>
+    <line x1="375" y1="65" x2="490" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="432" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">HGF/c-Met activation</text>
+    <text x="432" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">triggers downstream</text>
+    <text x="432" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">phosphorylation</text>
+    <text x="432" y="137" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="432" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Dendritic spine</text>
+    <text x="432" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">growth promoted</text>
+    <text x="432" y="187" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">in hippocampus</text>
+    <line x1="375" y1="207" x2="490" y2="207" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="432" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">CONFIRMED</text>
+    <text x="432" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Blocked by c-Met inhibitor</text>
+
+    <!-- Step 4: Synaptogenesis -->
+    <rect x="525" y="10" width="160" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="605" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#B48118">Synaptogenesis</text>
+    <text x="605" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">OUTCOME</text>
+    <line x1="545" y1="65" x2="665" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="605" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">New functional</text>
+    <text x="605" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">synapses formed</text>
+    <text x="605" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="605" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">More mushroom-shaped</text>
+    <text x="605" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">(mature) spines</text>
+    <text x="605" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Improved connectivity</text>
+    <line x1="545" y1="207" x2="665" y2="207" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="605" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">POTENCY</text>
+    <text x="605" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">10M&times; lower dose vs BDNF</text>
+  </svg>
+</div>
+
+<h3>Why Synaptogenesis Matters</h3>
+
+<p>Synaptic density correlates with cognitive function across species. Neurodegenerative diseases like Alzheimer's are fundamentally diseases of <strong>synapse loss</strong>.</p>
+
+<p>The theory behind Dihexa is straightforward: if you can rebuild lost synapses or create new ones, you can restore or enhance cognitive function. That's a big "if" in practice, but the biological logic is sound.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>In cell culture, Dihexa drove new synapse formation at picomolar concentrations, roughly <strong>10 million times lower</strong> than the concentration of BDNF needed for the same effect (<a href="https://pubmed.ncbi.nlm.nih.gov/23303057/">McCoy et al., 2013</a>).</p>
+</div>
+
+<!-- ========== PRECLINICAL RESEARCH ========== -->
+<hr class="sep">
+<h2>Preclinical Research</h2>
+
+<p>Nearly everything we know about Dihexa traces back to the lab at Washington State University. The core studies are methodologically solid, but they're all animal or in vitro work.</p>
+
+<h3>Scopolamine-Impaired Rat Model (2013)</h3>
+
+<p>The landmark paper in the <em>Journal of Pharmacology and Experimental Therapeutics</em> used scopolamine to impair memory in rats, then tested whether Dihexa could restore performance on the Morris water maze.</p>
+
+<table class="tbl">
+<thead><tr><th>Condition</th><th>Spatial Memory Performance</th><th>Significance</th></tr></thead>
+<tbody>
+<tr><td><strong>Normal rats</strong></td><td>Baseline learning speed</td><td class="y">Control</td></tr>
+<tr><td><strong>Scopolamine-impaired (no treatment)</strong></td><td>Severely impaired</td><td class="r">Negative control</td></tr>
+<tr><td><strong>Scopolamine + Dihexa (oral)</strong></td><td>Restored to near-normal</td><td class="g">Rescued</td></tr>
+<tr><td><strong>Scopolamine + Dihexa (subcutaneous)</strong></td><td>Restored to near-normal</td><td class="g">Rescued</td></tr>
+</tbody>
+</table>
+
+<p>The fact that oral dosing worked is significant. Most peptides are destroyed in the gut before reaching the bloodstream (<a href="https://pubmed.ncbi.nlm.nih.gov/23303057/">McCoy et al., 2013</a>).</p>
+
+<h3>Aged Rat Cognition Study</h3>
+
+<p>A separate experiment looked at naturally aged rats, not chemically impaired ones. Old rats given Dihexa performed significantly better on spatial memory tasks than untreated aged controls (<a href="https://pubmed.ncbi.nlm.nih.gov/22044908/">Benoist et al., 2011</a>).</p>
+
+<div class="cd ct">
+  <div class="tg">Aged Rat Results</div>
+  <h3>Reversal of Age-Related Cognitive Decline</h3>
+  <p style="font-size:14px;margin-bottom:0;">Rats aged 24+ months showed marked cognitive decline at baseline. After Dihexa treatment, spatial navigation improved substantially and their performance approached that of young adult rats. <strong>Hippocampal spine density increased</strong>, suggesting real structural changes in the brain.</p>
+</div>
+
+<h3>Synaptogenesis Confirmation</h3>
+
+<p>Using organotypic hippocampal slice cultures, the Wright lab demonstrated that Dihexa directly increased the number of functional synapses.</p>
+
+<table class="tbl">
+<thead><tr><th>Measurement</th><th>Dihexa vs. Control</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong>Dendritic spine density</strong></td><td>Significantly increased</td><td class="g">Confirmed</td></tr>
+<tr><td><strong>Spine morphology</strong></td><td>More mushroom-shaped (mature) spines</td><td class="g">Confirmed</td></tr>
+<tr><td><strong>HGF/c-Met activation</strong></td><td>Confirmed via phosphorylation assays</td><td class="g">Confirmed</td></tr>
+<tr><td><strong>Effect blocked by c-Met inhibitor</strong></td><td>Yes</td><td class="g">Mechanism validated</td></tr>
+</tbody>
+</table>
+
+<p>That last row is important. When researchers blocked c-Met with a specific inhibitor, Dihexa's effects disappeared. That confirms HGF/c-Met is the actual pathway, not some off-target effect (<a href="https://pubmed.ncbi.nlm.nih.gov/23303057/">McCoy et al., 2013</a>).</p>
+
+<!-- ========== ORAL BIOAVAILABILITY ========== -->
+<hr class="sep">
+<h2>Oral Bioavailability</h2>
+
+<p>This is one of Dihexa's most interesting properties. Most peptides have terrible oral bioavailability because stomach acid and digestive enzymes break them apart before they reach the bloodstream.</p>
+
+<p>That's why peptides like <a href="/articles/bpc-157-complete-guide">BPC-157</a> and most growth hormone secretagogues are typically injected. Dihexa was specifically designed to resist this degradation.</p>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>Effectiveness in Animal Studies</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Oral</strong></td><td class="g">Active at low doses; crossed BBB</td><td>Primary route in research</td></tr>
+<tr><td><strong>Subcutaneous</strong></td><td class="g">Active; comparable to oral</td><td>Standard peptide route</td></tr>
+<tr><td><strong>Intranasal</strong></td><td class="y">Limited formal data</td><td>Reported anecdotally</td></tr>
+<tr><td><strong>Intravenous</strong></td><td class="y">Used in early experiments</td><td>Not practical for users</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Important Caveat</div>
+  <p>All bioavailability data comes from rodent studies. Human pharmacokinetics remain completely unknown. Oral absorption rates can differ dramatically between species.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Information</h2>
+
+<div class="d-r">
+  <div class="s">Warning</div>
+  <p>No human clinical trials exist for Dihexa. All dosing information below comes from animal research and anecdotal user reports. This is <strong>not medical advice</strong>.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Reported Range</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td><strong>Sublingual/oral dose</strong></td><td>5&ndash;30 mg/day</td><td class="y">Anecdotal</td></tr>
+<tr><td><strong>Subcutaneous dose</strong></td><td>1&ndash;10 mg/day</td><td class="y">Anecdotal</td></tr>
+<tr><td><strong>Intranasal</strong></td><td>Variable; no standardized protocol</td><td class="y">Anecdotal</td></tr>
+<tr><td><strong>Cycle length</strong></td><td>2&ndash;4 weeks on, 2&ndash;4 weeks off</td><td class="y">Anecdotal</td></tr>
+<tr><td><strong>Timing</strong></td><td>Morning, often on an empty stomach</td><td class="y">Anecdotal</td></tr>
+</tbody>
+</table>
+
+<h3>What Users Report</h3>
+
+<p>Anecdotal reports from <a href="/articles/cerebrolysin-neuropeptide-guide">nootropic</a> communities describe improved verbal fluency within days, better recall and working memory during the cycle, and enhanced dream vividness as a common early sign.</p>
+
+<p>Tolerance development after 2&ndash;3 weeks of continuous use is frequently mentioned. These are self-reports with all the usual caveats: no controls, placebo effects, selection bias, and variable compound quality.</p>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety Concerns</h2>
+
+<p>This is where caution becomes critical. Dihexa has <strong>zero human safety data</strong>. The theoretical risk profile is uniquely concerning among nootropic peptides because of the pathway it targets.</p>
+
+<table class="tbl">
+<thead><tr><th>Concern</th><th>Explanation</th><th>Severity</th></tr></thead>
+<tbody>
+<tr><td><strong>No human trials</strong></td><td>Therapeutic window, toxicity profile, and drug interactions are unknown</td><td class="r">High</td></tr>
+<tr><td><strong>HGF/c-Met and cancer</strong></td><td>This pathway is overactive in many cancers; upregulating it raises oncology concerns</td><td class="r">High (theoretical)</td></tr>
+<tr><td><strong>Blood pressure effects</strong></td><td>As an angiotensin derivative, cardiovascular interactions are plausible</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Unknown long-term effects</strong></td><td>Chronic synaptogenesis modulation could have unpredictable neurological consequences</td><td class="y">Unknown</td></tr>
+<tr><td><strong>Compound purity</strong></td><td>No pharmaceutical-grade Dihexa exists; research chemical quality varies</td><td class="r">High</td></tr>
+</tbody>
+</table>
+
+<h3>The HGF/c-Met Cancer Question</h3>
+
+<p>This deserves its own section because it's the most serious concern. HGF/c-Met signaling is a known driver of tumor growth, metastasis, and angiogenesis in multiple cancer types. Pharmaceutical companies have spent billions developing c-Met <strong>inhibitors</strong> as cancer drugs.</p>
+
+<p>Dihexa does the opposite. It <strong>enhances</strong> HGF/c-Met signaling (<a href="https://pubmed.ncbi.nlm.nih.gov/12778124/">Birchmeier et al., 2003</a>).</p>
+
+<div class="cd cr">
+  <div class="tg">Cancer Pathway Concern</div>
+  <h3>HGF/c-Met is a Known Oncogenic Pathway</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>c-Met overexpression</strong> is found in lung, breast, colon, kidney, and liver cancers. <strong>HGF promotes tumor cell migration</strong> and invasion in vitro. <strong>No studies have evaluated</strong> whether Dihexa promotes or accelerates tumor growth. This doesn't mean Dihexa causes cancer. It means the pathway it activates is one that cancer researchers are actively trying to suppress. The risk is theoretical but not trivial.</p>
+</div>
+
+<h3>Who Should Avoid Dihexa</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--red);">Cancer History</h4>
+    <p>Anyone with a personal or family history of cancer should exercise extreme caution due to HGF/c-Met concerns.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Blood Pressure Medications</h4>
+    <p>People on antihypertensives should be cautious due to angiotensin pathway interactions.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Pregnant or Nursing</h4>
+    <p>Zero safety data is available for pregnant or nursing women.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Under 25</h4>
+    <p>Anyone whose brain is still developing should avoid modulating synaptogenesis pathways.</p>
+  </div>
+</div>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>Dihexa vs. Other Nootropic Peptides</h2>
+
+<p>Several other peptides are used for cognitive enhancement. Here's how the three most popular options compare on the metrics that matter.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Dihexa</th><th><a href="/articles/selank-complete-guide">Selank</a></th><th><a href="/articles/semax-complete-guide">Semax</a></th></tr></thead>
+<tbody>
+<tr><td><strong>Type</strong></td><td>Angiotensin IV analog</td><td>Tuftsin analog</td><td>ACTH(4&ndash;10) analog</td></tr>
+<tr><td><strong>Primary mechanism</strong></td><td>HGF/c-Met synaptogenesis</td><td>GABA modulation, BDNF</td><td>BDNF, NGF upregulation</td></tr>
+<tr><td><strong>Main effects</strong></td><td>Memory, synapse formation</td><td>Anxiety reduction, focus</td><td>Focus, neuroprotection</td></tr>
+<tr><td><strong>Oral bioavailability</strong></td><td class="g">Yes</td><td class="r">Poor (intranasal preferred)</td><td class="r">Poor (intranasal preferred)</td></tr>
+<tr><td><strong>Human clinical data</strong></td><td class="r">None</td><td class="y">Limited (Russia)</td><td class="y">Limited (Russia)</td></tr>
+<tr><td><strong>Cancer pathway concern</strong></td><td class="r">Yes (HGF/c-Met)</td><td class="g">No</td><td class="g">No</td></tr>
+<tr><td><strong>Primary research country</strong></td><td>United States</td><td>Russia</td><td>Russia</td></tr>
+<tr><td><strong>Typical route</strong></td><td>Oral/sublingual</td><td>Intranasal</td><td>Intranasal</td></tr>
+</tbody>
+</table>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Dihexa</h4>
+    <p>Most potent synaptogenic compound of the three. Also carries the most uncertainty and the highest theoretical risk profile.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Selank</h4>
+    <p>Best for anxiety relief with mild cognitive benefits. Lower risk profile, no known oncology concerns. The more conservative choice.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Semax</h4>
+    <p>Stimulating focus and neuroprotection. More human data available than Dihexa, particularly from Russian clinical practice.</p>
+  </div>
+</div>
+
+<!-- ========== POTENTIAL APPLICATIONS ========== -->
+<hr class="sep">
+<h2>Potential Applications Under Investigation</h2>
+
+<p>Researchers have proposed Dihexa as a candidate for several conditions, though none have progressed to human trials.</p>
+
+<table class="tbl">
+<thead><tr><th>Condition</th><th>Rationale</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong>Alzheimer's disease</strong></td><td>Synapse loss is the core pathology; Dihexa rebuilds synapses</td><td class="y">Preclinical</td></tr>
+<tr><td><strong>Age-related cognitive decline</strong></td><td>Demonstrated reversal in aged rat models</td><td class="y">Preclinical</td></tr>
+<tr><td><strong>Traumatic brain injury</strong></td><td>HGF promotes neural repair and regeneration</td><td class="y">Theoretical</td></tr>
+<tr><td><strong>Parkinson's disease</strong></td><td>c-Met signaling supports dopaminergic neuron survival</td><td class="y">Theoretical</td></tr>
+<tr><td><strong>Stroke recovery</strong></td><td>HGF is neuroprotective in ischemia models</td><td class="y">Theoretical</td></tr>
+</tbody>
+</table>
+
+<p>The Alzheimer's application is the most discussed. Current Alzheimer's drugs target amyloid plaques or acetylcholinesterase. Dihexa takes a fundamentally different approach: instead of removing what's damaging synapses, it builds new ones.</p>
+
+<p>Whether that strategy works in the complex environment of an Alzheimer's brain, where ongoing neuroinflammation and protein aggregation continue, remains unknown.</p>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Legal Status and Availability</h2>
+
+<p>Dihexa exists in a regulatory gray area in most countries. It's not a controlled substance anywhere, but it's also not approved for human use anywhere.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">United States</h4>
+    <p>Not scheduled. Sold as a "research chemical" with "not for human consumption" labels. No quality standards enforced.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">European Union</h4>
+    <p>Varies by country. Generally unregulated but not approved for medical use.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Australia</h4>
+    <p>Not listed on TGA schedules. Legal status is ambiguous.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Canada</h4>
+    <p>Not approved. Available through research chemical suppliers.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Self-Experimentation Risk</div>
+  <p>Buying Dihexa as a research chemical and self-administering it means you are your own test subject. There are no guaranteed purity standards, no dosing guidelines validated in humans, and no safety monitoring.</p>
+</div>
+
+<p>Check our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for full details.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What does Dihexa actually do?</summary>
+    <div class="fa">Dihexa activates the HGF/c-Met signaling pathway in the brain, which drives the formation of new synapses between neurons. In animal studies, this translated to improved spatial memory, faster learning, and reversal of age-related cognitive decline. Users in nootropic communities report improvements in verbal fluency, working memory, and mental clarity, but these are anecdotal reports without controlled conditions.</div>
+  </details>
+  <details>
+    <summary>How long does Dihexa take to work?</summary>
+    <div class="fa">Anecdotal reports suggest noticeable effects within 3&ndash;7 days, with peak benefits around 2&ndash;3 weeks of use. Some users describe vivid dreams as the earliest sign. Structural changes like new synapse formation would take longer to develop fully. In animal studies, cognitive improvements were measured after 1&ndash;2 weeks of dosing.</div>
+  </details>
+  <details>
+    <summary>Is Dihexa safe?</summary>
+    <div class="fa">Unknown. There are no human safety studies. The animal data doesn't show obvious acute toxicity, but the theoretical concern about HGF/c-Met and cancer risk is real and unstudied. Anyone using Dihexa is accepting unknown risks. That's a personal decision, but it should be made with full awareness of what "no human data" actually means.</div>
+  </details>
+  <details>
+    <summary>Can Dihexa cause cancer?</summary>
+    <div class="fa">There is no evidence that Dihexa causes cancer. But there is also no evidence that it doesn't. The HGF/c-Met pathway it activates is a well-documented oncogenic pathway. Major pharmaceutical companies are developing c-Met inhibitors specifically to fight cancer. Activating this same pathway for cognitive benefit creates a theoretical tension that hasn't been resolved by research.</div>
+  </details>
+  <details>
+    <summary>Can I stack Dihexa with other nootropics?</summary>
+    <div class="fa">Some users combine Dihexa with racetams, Selank, or other cognitive enhancers. No interaction studies exist. If you choose to stack, starting with one compound at a time and adding others gradually is the most cautious approach.</div>
+  </details>
+  <details>
+    <summary>Is Dihexa better than Semax or Selank?</summary>
+    <div class="fa">"Better" depends on your goals. For raw synaptogenic potency, Dihexa is in a class of its own. For anxiolytic effects with mild cognition boost, Selank is more appropriate. For stimulating focus and neuroprotection, Semax has more supporting data. For lower risk, Selank and Semax are considerably safer choices.</div>
+  </details>
+  <details>
+    <summary>Why hasn't Dihexa gone to human trials?</summary>
+    <div class="fa">Several possible reasons. The HGF/c-Met cancer concern makes FDA approval of human trials more complex. Funding for nootropic peptides is limited compared to obesity or cancer drugs. The original researchers at WSU may lack the commercial partnerships needed to fund expensive clinical programs. It's also worth noting that "10 million times more potent" is an in vitro comparison. Regulators care about in vivo efficacy and safety in humans.</div>
+  </details>
+  <details>
+    <summary>Is Dihexa orally bioavailable?</summary>
+    <div class="fa">In rodent studies, yes. Oral dosing produced cognitive improvements comparable to subcutaneous injection. Dihexa was specifically engineered with chemical modifications to resist degradation by stomach acid and peptidases. However, all bioavailability data comes from rats. Human pharmacokinetics are completely unstudied.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Dihexa is one of the most fascinating peptides in nootropic research. The science behind it is real: HGF/c-Met-driven synaptogenesis is a legitimate biological mechanism, and the potency data from the Wright/Harding lab is striking. But fascinating science doesn't equal a safe or effective drug.</p>
+</div>
+
+<p>Every piece of Dihexa data comes from rats or cell cultures. No one knows the right dose for humans, the long-term risks, or whether the cognitive benefits seen in rodents translate to people.</p>
+
+<p>The HGF/c-Met cancer concern isn't something to brush off. It may turn out to be a non-issue at the doses used for cognition, or it may not. Without human data, we're guessing.</p>
+
+<p>If you're considering Dihexa, understand what you're signing up for: a genuinely promising compound with genuinely unknown risks. For most people seeking cognitive enhancement, peptides with more safety data like <a href="/articles/selank-complete-guide">Selank</a> or <a href="/articles/semax-complete-guide">Semax</a> are the more reasonable starting point.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only and does not constitute medical advice. Dihexa is not FDA-approved for any human use. All data discussed is preclinical (animal and in vitro studies). The safety profile in humans is completely unknown. Always consult a licensed healthcare provider before starting any peptide protocol.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+McCoy AT et al. Evaluation of metabolically stabilized angiotensin IV analogs as procognitive/antidementia agents. <em>J Pharmacol Exp Ther.</em> 2013;344(1):141&ndash;154. <a href="https://pubmed.ncbi.nlm.nih.gov/23303057/">PubMed</a><br>
+Benoist CC et al. Facilitation of hippocampal synaptogenesis and spatial memory by C-terminal truncated Nle1-angiotensin IV analogs. <em>J Pharmacol Exp Ther.</em> 2011;339(1):35&ndash;44. <a href="https://pubmed.ncbi.nlm.nih.gov/22044908/">PubMed</a><br>
+Wright JW, Harding JW. Brain renin-angiotensin: a new look at an old system. <em>Prog Neurobiol.</em> 2011;95(1):49&ndash;67. <a href="https://pubmed.ncbi.nlm.nih.gov/21530510/">PubMed</a><br>
+Birchmeier C et al. Met, metastasis, motility and more. <em>Nat Rev Mol Cell Biol.</em> 2003;4(12):915&ndash;925. <a href="https://pubmed.ncbi.nlm.nih.gov/12778124/">PubMed</a>
+</p>
+
+<!-- ========== RELATED ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semax-complete-guide">Semax: Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/selank-complete-guide">Selank: Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects</a> &nbsp;&middot;&nbsp;
+<a href="/articles/are-peptides-legal-fda-regulations-2026">Are Peptides Legal? FDA Regulations 2026</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/semax-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semax: Complete Guide</a>
+            <a href="/articles/selank-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Selank: Complete Guide</a>
+            <a href="/articles/cerebrolysin-neuropeptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Cerebrolysin: Neuropeptide Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects: What to Know</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

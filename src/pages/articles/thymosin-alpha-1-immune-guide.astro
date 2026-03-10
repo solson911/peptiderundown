@@ -1,0 +1,696 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Thymosin Alpha-1: The Immune-Boosting Peptide Approved in 35+ Countries",
+  description: "A complete guide to thymosin alpha-1 (Zadaxin), the immune-modulating peptide used for hepatitis, cancer support, and infections. Mechanism, dosing, research, and legal status.",
+  image: "/images/articles/thymosin-alpha-1.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Immune Modulation &middot; Clinical Use</div>
+  <h1>Thymosin Alpha-1: The Immune-Boosting Peptide Approved in 35+ Countries</h1>
+  <p class="sub">A 28-amino acid peptide from the thymus gland that restores T-cell function, enhances dendritic cell activity, and has been used clinically for hepatitis, cancer support, and critical infections for over two decades.</p>
+  <div class="pills">
+    <span class="pill">T-Cell Activation</span>
+    <span class="pill">Dendritic Cell Priming</span>
+    <span class="pill">Approved as Zadaxin</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">35+</div><div class="l">Countries with<br>Regulatory Approval</div></div>
+  <div class="sb"><div class="v c2">28</div><div class="l">Amino Acids<br>in Sequence</div></div>
+  <div class="sb"><div class="v c3">4,400+</div><div class="l">Patients in<br>Clinical Trials</div></div>
+  <div class="sb"><div class="v c4">1.6 mg</div><div class="l">Standard Dose<br>Across All Studies</div></div>
+</div>
+
+<p>Your thymus gland starts shrinking after puberty. By age 50, it's mostly fat.</p>
+
+<p>That matters because the thymus is where your T-cells learn to fight. When it deteriorates, your immune system gets slower, weaker, and less precise. Thymosin alpha-1 is the peptide your thymus naturally produces to keep that process running. And it turns out, you can inject it.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational overview of thymosin alpha-1 based on published clinical research and approved prescribing information. It is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Compound Overview -->
+<h2>What Is Thymosin Alpha-1?</h2>
+
+<p>Thymosin alpha-1 (Ta1) is a <strong>28-amino acid peptide</strong> originally isolated from thymic tissue in the 1970s by Allan Goldstein at George Washington University. It's the primary active fraction of a crude preparation called thymosin fraction 5.</p>
+
+<p>Researchers had already shown that thymosin fraction 5 could restore immune function in animals that had their thymus removed. Ta1 turned out to be the reason why.</p>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Thymosin Alpha-1 (Thymalfasin)</h3>
+  <table class="tbl">
+  <thead><tr><th>Feature</th><th>Detail</th></tr></thead>
+  <tbody>
+  <tr><td><strong>Type</strong></td><td>Endogenous immunomodulatory peptide</td></tr>
+  <tr><td><strong>Amino Acids</strong></td><td>28</td></tr>
+  <tr><td><strong>Molecular Weight</strong></td><td>3,108 Da</td></tr>
+  <tr><td><strong>Origin</strong></td><td>Human thymus gland (synthetic versions used clinically)</td></tr>
+  <tr><td><strong>Brand Name</strong></td><td>Zadaxin (thymalfasin)</td></tr>
+  <tr><td><strong>Approved In</strong></td><td class="g">35+ countries (not the US)</td></tr>
+  </tbody>
+  </table>
+</div>
+
+<p>The synthetic version is called <strong>thymalfasin</strong>. It's identical to the naturally occurring peptide and has been manufactured by SciClone Pharmaceuticals (now part of Pharmanovia) since the 1990s.</p>
+
+<hr class="sep">
+
+<!-- Mechanism of Action -->
+<h2>How Thymosin Alpha-1 Works</h2>
+
+<p>Ta1 doesn't jack up your immune system the way a stimulant would. It's a modulator, not an accelerator. That distinction is critical.</p>
+
+<p>It works across three main immune pathways simultaneously.</p>
+
+<!-- SVG Diagram -->
+<div class="svg-box">
+  <div class="st">Thymosin Alpha-1 Immune Modulation Pathway</div>
+  <div class="ss">How Ta1 coordinates dendritic cells, T-cells, and NK cells to restore immune balance</div>
+  <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="700" height="320" rx="8" fill="#F8F9FA"/>
+
+    <!-- Ta1 Central Node -->
+    <rect x="270" y="10" width="160" height="50" rx="25" fill="#2956A6" stroke="#1E3F7A" stroke-width="1.5"/>
+    <text x="350" y="40" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">Thymosin Alpha-1</text>
+
+    <!-- Arrows from center -->
+    <line x1="310" y1="60" x2="140" y2="110" stroke="#2956A6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <line x1="350" y1="60" x2="350" y2="110" stroke="#187A62" stroke-width="2" marker-end="url(#arrowTeal)"/>
+    <line x1="390" y1="60" x2="560" y2="110" stroke="#6E3B8A" stroke-width="2" marker-end="url(#arrowPlum)"/>
+
+    <!-- Dendritic Cell Box -->
+    <rect x="40" y="110" width="200" height="60" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="140" y="135" text-anchor="middle" fill="#2956A6" font-size="13" font-weight="600">Dendritic Cells</text>
+    <text x="140" y="155" text-anchor="middle" fill="#3C3C52" font-size="11">TLR2/TLR9 activation</text>
+
+    <!-- T-Cell Box -->
+    <rect x="250" y="110" width="200" height="60" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="350" y="135" text-anchor="middle" fill="#187A62" font-size="13" font-weight="600">T-Cell Maturation</text>
+    <text x="350" y="155" text-anchor="middle" fill="#3C3C52" font-size="11">CD4+ and CD8+ expansion</text>
+
+    <!-- NK Cell Box -->
+    <rect x="460" y="110" width="200" height="60" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="560" y="135" text-anchor="middle" fill="#6E3B8A" font-size="13" font-weight="600">NK Cell Enhancement</text>
+    <text x="560" y="155" text-anchor="middle" fill="#3C3C52" font-size="11">Cytotoxicity increase</text>
+
+    <!-- Second-level arrows -->
+    <line x1="140" y1="170" x2="140" y2="210" stroke="#2956A6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+    <line x1="350" y1="170" x2="350" y2="210" stroke="#187A62" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+    <line x1="560" y1="170" x2="560" y2="210" stroke="#6E3B8A" stroke-width="1.5" marker-end="url(#arrowPlum)"/>
+
+    <!-- Output boxes -->
+    <rect x="30" y="210" width="220" height="50" rx="8" fill="#fff" stroke="#D9D6CE" stroke-width="1"/>
+    <text x="140" y="232" text-anchor="middle" fill="#3C3C52" font-size="11">Antigen presentation</text>
+    <text x="140" y="248" text-anchor="middle" fill="#3C3C52" font-size="11">IL-12 &amp; IFN-alpha release</text>
+
+    <rect x="240" y="210" width="220" height="50" rx="8" fill="#fff" stroke="#D9D6CE" stroke-width="1"/>
+    <text x="350" y="232" text-anchor="middle" fill="#3C3C52" font-size="11">Adaptive immunity restored</text>
+    <text x="350" y="248" text-anchor="middle" fill="#3C3C52" font-size="11">30&ndash;60% T-cell count increase</text>
+
+    <rect x="450" y="210" width="220" height="50" rx="8" fill="#fff" stroke="#D9D6CE" stroke-width="1"/>
+    <text x="560" y="232" text-anchor="middle" fill="#3C3C52" font-size="11">Virus &amp; tumor cell killing</text>
+    <text x="560" y="248" text-anchor="middle" fill="#3C3C52" font-size="11">Synergy with interferon</text>
+
+    <!-- Result bar -->
+    <rect x="100" y="280" width="500" height="34" rx="17" fill="#187A62"/>
+    <text x="350" y="302" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">Normalized Immune Surveillance (Bidirectional Modulation)</text>
+
+    <!-- Arrow markers -->
+    <defs>
+      <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#2956A6"/></marker>
+      <marker id="arrowTeal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#187A62"/></marker>
+      <marker id="arrowPlum" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E3B8A"/></marker>
+    </defs>
+  </svg>
+</div>
+
+<h3>Dendritic Cell Activation</h3>
+
+<p>Dendritic cells are the scouts of your immune system. They detect threats, process them, and present the information to T-cells so the right response gets launched.</p>
+
+<p>Ta1 acts on <strong>toll-like receptors (TLR2 and TLR9)</strong> on dendritic cells, priming them to recognize pathogens more effectively (<a href="https://pubmed.ncbi.nlm.nih.gov/17052970/">Romani et al., 2006</a>).</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Antigen Presentation</h4>
+    <p>Dendritic cells become better at flagging threats for T-cell response.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">DC Maturation</h4>
+    <p>Immature dendritic cells develop into fully functional immune sentinels.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Cytokine Signaling</h4>
+    <p>IL-12 and IFN-alpha production increases, directing the downstream immune response.</p>
+  </div>
+</div>
+
+<h3>T-Cell Differentiation and Activation</h3>
+
+<p>This is where Ta1 earned its name. It pushes immature T-cell precursors toward becoming functional, mature T-cells.</p>
+
+<p>Specifically, it increases CD4+ and CD8+ counts, upregulates maturation markers (CD2, CD3, CD4, CD8), and restores T-cell function in immunocompromised patients (<a href="https://pubmed.ncbi.nlm.nih.gov/20590374/">Tuthill et al., 2010</a>).</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>In patients with depressed immune function, Ta1 can increase T-cell counts by 30&ndash;60% within weeks of starting treatment.</p>
+</div>
+
+<h3>NK Cell Enhancement</h3>
+
+<p>Natural killer (NK) cells handle the first line of defense against viruses and tumor cells. Ta1 boosts their activity without requiring antigen-specific activation.</p>
+
+<p>It increases NK cell cytotoxicity, upregulates CD56 and CD16 expression, and synergizes with interferon for stronger combined effects.</p>
+
+<h3>The Modulation Difference</h3>
+
+<p>Here's what sets Ta1 apart from drugs that simply crank up immune activity. It tends to normalize rather than push in one direction.</p>
+
+<table class="tbl">
+<thead><tr><th>Immune State</th><th>Ta1's Effect</th><th>Clinical Relevance</th></tr></thead>
+<tbody>
+<tr><td><strong>Suppressed immunity</strong></td><td class="g">Boosts T-cell counts, restores function</td><td>Chemo patients, elderly, HIV</td></tr>
+<tr><td><strong>Normal immunity</strong></td><td class="y">Minimal change, mild enhancement</td><td>Healthy adults see little effect</td></tr>
+<tr><td><strong>Overactive immunity</strong></td><td class="g">Can reduce inflammatory cytokines</td><td>Studied in autoimmune contexts</td></tr>
+</tbody>
+</table>
+
+<p>This bidirectional activity is why researchers have studied it in both immunodeficiency and autoimmune settings (<a href="https://pubmed.ncbi.nlm.nih.gov/17267044/">Garaci, 2007</a>).</p>
+
+<hr class="sep">
+
+<!-- Approved Uses -->
+<h2>Approved Uses: Zadaxin Around the World</h2>
+
+<p>Zadaxin (thymalfasin) has been approved in <strong>over 35 countries</strong>, primarily in Asia, Latin America, and parts of Europe. That makes it one of the most widely approved peptide drugs on the planet.</p>
+
+<h3>Hepatitis B</h3>
+
+<p>This is the primary approved indication. Chronic hepatitis B affects roughly <strong>296 million people worldwide</strong> (WHO, 2024), and standard interferon therapy works in only a subset of patients.</p>
+
+<table class="tbl">
+<thead><tr><th>Treatment</th><th>Sustained Viral Response</th><th>Assessment</th></tr></thead>
+<tbody>
+<tr><td><strong>Ta1 alone</strong></td><td>26&ndash;36%</td><td class="g">Outperforms placebo</td></tr>
+<tr><td><strong>Interferon-alpha alone</strong></td><td>20&ndash;28%</td><td class="y">Standard of care</td></tr>
+<tr><td><strong>Ta1 + Interferon-alpha</strong></td><td>40&ndash;50%</td><td class="g">Best combination result</td></tr>
+<tr><td><strong>Placebo</strong></td><td>10&ndash;15%</td><td class="r">Baseline reference</td></tr>
+</tbody>
+</table>
+
+<p>The combination with interferon consistently outperformed either agent alone across multiple randomized trials involving 435 chronic HBV carriers (<a href="https://pubmed.ncbi.nlm.nih.gov/15826557/">Iino et al., 2005</a>).</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Ta1's sustained response rates continued to improve even after treatment ended. Viral clearance rates increased at 12-month follow-up compared to end-of-treatment measurements.</p>
+</div>
+
+<h3>Hepatitis C</h3>
+
+<p>Before direct-acting antivirals (DAAs) changed treatment, Ta1 was studied as an adjunct to interferon and ribavirin therapy. It improved sustained virological response in combination regimens and was particularly effective in prior non-responders (<a href="https://pubmed.ncbi.nlm.nih.gov/11509370/">Kullavanuava et al., 2001</a>).</p>
+
+<p>With modern DAAs achieving 95%+ cure rates, Ta1's role in hepatitis C has diminished. But it remains relevant in resource-limited settings where DAAs aren't available.</p>
+
+<h3>Immune Adjuvant for Vaccines</h3>
+
+<p>Several countries approve Ta1 as a vaccine adjuvant. It improves seroconversion rates in elderly patients receiving influenza vaccines and helps immunocompromised patients (including dialysis patients) respond to hepatitis B vaccination (<a href="https://pubmed.ncbi.nlm.nih.gov/19651075/">Gravenstein et al., 2009</a>).</p>
+
+<hr class="sep">
+
+<!-- Cancer Research -->
+<h2>Cancer Research</h2>
+
+<p>Ta1 has been studied extensively as an <strong>adjunct to chemotherapy and immunotherapy</strong>, not as a standalone cancer treatment. The rationale is straightforward: chemotherapy suppresses the immune system. Ta1 may help restore immune function during and after treatment.</p>
+
+<div class="cd ct">
+  <div class="tg">Clinical Evidence</div>
+  <h3>Cancer Adjuvant Trials</h3>
+  <table class="tbl">
+  <thead><tr><th>Cancer Type</th><th>Intervention</th><th>Finding</th></tr></thead>
+  <tbody>
+  <tr><td><strong>Hepatocellular carcinoma</strong></td><td>Ta1 + TACE</td><td class="g">Improved 1-year survival vs TACE alone</td></tr>
+  <tr><td><strong>Non-small cell lung cancer</strong></td><td>Ta1 + chemotherapy</td><td class="g">Improved T-cell counts, reduced infections</td></tr>
+  <tr><td><strong>Melanoma</strong></td><td>Ta1 + interferon + dacarbazine</td><td class="g">Higher response rates vs chemo alone</td></tr>
+  <tr><td><strong>Gastric cancer</strong></td><td>Ta1 + chemotherapy</td><td class="y">Reduced immunosuppression post-chemo</td></tr>
+  </tbody>
+  </table>
+</div>
+
+<p>The strongest cancer data comes from liver cancer studies. A meta-analysis of <strong>seven randomized trials</strong> found that Ta1 combined with transarterial chemoembolization (TACE) significantly improved overall survival at 1 and 2 years, recurrence-free survival, and CD4+/CD8+ T-cell ratios during treatment (<a href="https://pubmed.ncbi.nlm.nih.gov/27524894/">Liu et al., 2016</a>).</p>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>Ta1 is not a cancer treatment on its own. The evidence supports it as a supportive agent that helps maintain immune function during conventional cancer therapy.</p>
+</div>
+
+<hr class="sep">
+
+<!-- COVID-19 Applications -->
+<h2>COVID-19 Applications</h2>
+
+<p>When SARS-CoV-2 emerged, researchers noticed that severe COVID patients had dramatically reduced T-cell counts. That observation made Ta1 an obvious candidate for study.</p>
+
+<p>A retrospective study from Wuhan examined <strong>76 severe COVID-19 patients</strong> and found significant differences in the Ta1 group (<a href="https://pubmed.ncbi.nlm.nih.gov/32425645/">Liu et al., 2020</a>).</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Mortality Reduction</h4>
+    <p>11.1% mortality in the Ta1 group vs 30.0% in controls (63% relative reduction).</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">T-Cell Recovery</h4>
+    <p>Restored CD4+ and CD8+ T-cell counts alongside reduced markers of organ damage.</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Patients</th><th>Key Finding</th></tr></thead>
+<tbody>
+<tr><td><strong>Wuhan retrospective</strong></td><td>76 severe cases</td><td class="g">63% relative mortality reduction</td></tr>
+<tr><td><strong>Italian compassionate use</strong></td><td>12 patients</td><td class="g">T-cell count recovery within 7 days</td></tr>
+<tr><td><strong>Multi-center Chinese</strong></td><td>334 critical cases</td><td class="g">Improved 28-day survival with Ta1</td></tr>
+</tbody>
+</table>
+
+<p>The data is encouraging but largely retrospective. No large randomized controlled trial of Ta1 in COVID-19 has been completed as of early 2026 (<a href="https://pubmed.ncbi.nlm.nih.gov/33052324/">Wu et al., 2020</a>).</p>
+
+<div class="d-p">
+  <div class="s">Context</div>
+  <p>Ta1 appeared most effective in COVID patients with baseline lymphocyte counts below 0.5 x 10^9/L, suggesting its greatest benefit is in those with the most suppressed immune function.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Sepsis -->
+<h2>Sepsis and Critical Care</h2>
+
+<p>Beyond viral infections, Ta1 has shown promise in <strong>sepsis</strong>, where immune paralysis is a major driver of late-stage mortality. This is one of the larger and better-designed trials of Ta1 in any condition.</p>
+
+<p>A randomized trial of <strong>361 patients with severe sepsis</strong> found that Ta1 reduced 28-day mortality from 35.0% to 26.0%, improved HLA-DR expression on monocytes, and decreased secondary infections in the ICU setting (<a href="https://pubmed.ncbi.nlm.nih.gov/23787399/">Wu et al., 2013</a>).</p>
+
+<hr class="sep">
+
+<!-- Dosing -->
+<h2>Dosing Protocols</h2>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>These are research-based protocols from clinical trials and approved prescribing information (Zadaxin). Always work with a qualified provider.</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Standard Protocol</div>
+  <h3>Zadaxin Dosing Overview</h3>
+  <table class="tbl">
+  <thead><tr><th>Parameter</th><th>Detail</th></tr></thead>
+  <tbody>
+  <tr><td><strong>Standard dose</strong></td><td>1.6 mg <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a> injection</td></tr>
+  <tr><td><strong>Frequency</strong></td><td>Twice weekly (typically Mon/Thu or Tue/Fri)</td></tr>
+  <tr><td><strong>Route</strong></td><td>Subcutaneous (upper arm, abdomen, or thigh)</td></tr>
+  <tr><td><strong>Hepatitis B cycle</strong></td><td>6 months (approved use)</td></tr>
+  <tr><td><strong>Cancer adjuvant</strong></td><td>Variable; typically throughout chemo cycles</td></tr>
+  <tr><td><strong>Immune support</strong></td><td>2&ndash;3 months in most research protocols</td></tr>
+  </tbody>
+  </table>
+</div>
+
+<h3>Dosing Variations in Research</h3>
+
+<table class="tbl">
+<thead><tr><th>Application</th><th>Dose</th><th>Schedule</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>Hepatitis B (approved)</strong></td><td>1.6 mg</td><td>Twice weekly</td><td>6&ndash;12 months</td></tr>
+<tr><td><strong>Cancer adjuvant</strong></td><td>1.6 mg</td><td>Twice weekly</td><td>Duration of chemo</td></tr>
+<tr><td><strong>Sepsis (clinical trial)</strong></td><td>1.6 mg</td><td>Daily x 7 days</td><td>Acute phase</td></tr>
+<tr><td><strong>COVID-19 (research)</strong></td><td>1.6 mg</td><td>Daily x 5&ndash;7 days</td><td>Acute phase</td></tr>
+<tr><td><strong>General immune support</strong></td><td>1.6 mg</td><td>2&ndash;3x per week</td><td>8&ndash;12 weeks</td></tr>
+</tbody>
+</table>
+
+<p>The <strong>1.6 mg dose is remarkably consistent</strong> across nearly all studies. Unlike many peptides where dose-finding is ongoing, Ta1 dosing has been standardized for decades.</p>
+
+<p>Ta1 typically comes as a lyophilized powder. For reconstitution instructions, see our <a href="/articles/how-to-reconstitute-peptides">guide to reconstituting peptides</a>.</p>
+
+<hr class="sep">
+
+<!-- Side Effects -->
+<h2>Side Effects and Safety</h2>
+
+<p>Ta1 has one of the cleanest safety profiles of any injectable peptide in clinical use. Decades of data across thousands of patients support this.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site discomfort</strong></td><td class="y">Occasional</td><td>Mild redness or irritation, resolves quickly</td></tr>
+<tr><td><strong>Mild fatigue</strong></td><td class="y">Uncommon</td><td>Usually first few doses only</td></tr>
+<tr><td><strong>Low-grade fever</strong></td><td class="y">Rare</td><td>Sign of immune activation, typically transient</td></tr>
+<tr><td><strong>Muscle aches</strong></td><td class="y">Rare</td><td>Flu-like symptoms in first week</td></tr>
+<tr><td><strong>Nausea</strong></td><td class="y">Very rare</td><td>Typically mild</td></tr>
+<tr><td><strong>Allergic reaction</strong></td><td class="r">Extremely rare</td><td>Fewer than 1% across all trials</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Safety Data</div>
+  <p>In a pooled safety analysis of over 4,400 patients across clinical trials, Ta1 showed no significant difference in adverse events compared to placebo (<a href="https://pubmed.ncbi.nlm.nih.gov/20590374/">Tuthill et al., 2010</a>).</p>
+</div>
+
+<div class="d-r">
+  <div class="s">When to Stop</div>
+  <p>Discontinue and seek medical attention for: severe allergic reaction (swelling, difficulty breathing), autoimmune flare in patients with existing conditions, or persistent fever above 101F that may indicate infection rather than immune activation.</p>
+</div>
+
+<p>For a broader overview, see our <a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>.</p>
+
+<hr class="sep">
+
+<!-- Comparison -->
+<h2>Thymosin Alpha-1 vs. Other Immune Peptides</h2>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Thymosin Alpha-1</th><th><a href="/articles/bpc-157-complete-guide">BPC-157</a></th><th>Thymosin Beta-4</th></tr></thead>
+<tbody>
+<tr><td><strong>Primary action</strong></td><td>Immune modulation</td><td>Tissue repair / gut healing</td><td>Tissue repair / anti-inflammatory</td></tr>
+<tr><td><strong>Immune effects</strong></td><td class="g">Direct T-cell activation</td><td class="y">Indirect (via gut health)</td><td class="y">Mild anti-inflammatory</td></tr>
+<tr><td><strong>Approved anywhere</strong></td><td class="g">Yes (35+ countries)</td><td class="r">No</td><td class="r">No</td></tr>
+<tr><td><strong>Clinical trial data</strong></td><td class="g">Extensive (thousands of patients)</td><td class="r">Limited (mostly animal)</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Safety data</strong></td><td class="g">Decades of human use</td><td class="y">Limited human data</td><td class="y">Moderate human data</td></tr>
+<tr><td><strong>Best for</strong></td><td>Immune deficiency, infections, cancer support</td><td>Gut issues, injury healing</td><td>Wound healing, recovery</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Who Might Benefit -->
+<h2>Who Might Benefit</h2>
+
+<p>Based on existing clinical data and approved uses, certain populations show the clearest benefit from Ta1 therapy.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Chronic Hepatitis B</h4>
+    <p>The primary approved indication worldwide, supported by multiple randomized trials.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Cancer Patients on Chemo</h4>
+    <p>Maintains immune function during treatment, reduces infection risk.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Elderly with Immunosenescence</h4>
+    <p>Declining immune function with age is a core target of Ta1 therapy.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Recurrent Infections</h4>
+    <p>Patients with documented low T-cell counts and frequent infections.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>Ta1 is not recommended as a casual immune booster for healthy individuals. Its greatest benefit appears in people with measurably compromised immune function.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Legal Status -->
+<h2>Legal Status and Availability</h2>
+
+<p>The regulatory status of Ta1 varies significantly by region.</p>
+
+<table class="tbl">
+<thead><tr><th>Region</th><th>Status</th><th>Access</th></tr></thead>
+<tbody>
+<tr><td><strong>United States</strong></td><td class="r">Not FDA-approved</td><td>Compounding pharmacies with Rx; research suppliers</td></tr>
+<tr><td><strong>China</strong></td><td class="g">Approved (Zadaxin)</td><td>Widely used in hospitals</td></tr>
+<tr><td><strong>Italy</strong></td><td class="g">Approved</td><td>Compassionate use in certain conditions</td></tr>
+<tr><td><strong>India</strong></td><td class="g">Approved</td><td>Manufactured by multiple companies</td></tr>
+<tr><td><strong>Australia</strong></td><td class="y">Not TGA-approved</td><td>Special Access Scheme</td></tr>
+<tr><td><strong>35+ countries</strong></td><td class="g">Approved as Zadaxin</td><td>Hepatitis B and/or immune support</td></tr>
+</tbody>
+</table>
+
+<h3>Why Isn't It FDA-Approved?</h3>
+
+<p>The FDA requires large, well-controlled phase 3 trials conducted under US regulatory standards. SciClone Pharmaceuticals pursued most of its clinical development in Asia, where regulatory pathways differ.</p>
+
+<p>The company reportedly explored FDA approval but determined the cost of US-specific trials (estimated at $100M+) wasn't justified given the relatively low price point of the drug. Generic competition in Asia further reduced the financial incentive.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Compounding Pharmacies</h4>
+    <p>With a physician's prescription, US patients can access Ta1 from licensed compounding pharmacies.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Research Suppliers</h4>
+    <p>Available for research use only through peptide suppliers.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Clinical Trials</h4>
+    <p>Limited availability through active studies (check ClinicalTrials.gov).</p>
+  </div>
+</div>
+
+<p>Check our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for full details.</p>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What does thymosin alpha-1 do?</summary>
+    <div class="fa">Ta1 modulates your immune system by activating dendritic cells and promoting T-cell maturation. It increases CD4+ and CD8+ T-cell counts, enhances NK cell activity, and improves the body's ability to fight viral infections and detect cancerous cells. It's not an immune stimulant in the traditional sense. It restores and optimizes immune function rather than simply ramping everything up.</div>
+  </details>
+  <details>
+    <summary>How long does it take to work?</summary>
+    <div class="fa">Most clinical trials show measurable changes in T-cell counts within 1&ndash;2 weeks of starting treatment. Viral load reductions in hepatitis patients typically appear by 4&ndash;8 weeks, with full response assessed at 6 months. For general immune support, most practitioners recommend a minimum 8-week course to evaluate response.</div>
+  </details>
+  <details>
+    <summary>Is thymosin alpha-1 safe?</summary>
+    <div class="fa">By injectable peptide standards, Ta1 has an exceptionally strong safety record. Over 4,400 patients in clinical trials showed adverse event rates comparable to placebo. It's been used clinically for over 25 years in dozens of countries. Anyone with an active autoimmune condition should use caution, since enhanced immune function could theoretically worsen autoimmune flares.</div>
+  </details>
+  <details>
+    <summary>Can I combine thymosin alpha-1 with other peptides?</summary>
+    <div class="fa">Ta1 is commonly combined with <a href="/articles/tb-500-complete-guide">thymosin beta-4 (TB-500)</a> for combined immune and tissue repair benefits, <a href="/articles/bpc-157-complete-guide">BPC-157</a> for gut healing alongside immune support, and interferon-alpha in approved hepatitis treatment protocols. Always discuss combinations with a healthcare provider, particularly if you're on immunosuppressive medications.</div>
+  </details>
+  <details>
+    <summary>Is thymosin alpha-1 the same as thymosin beta-4?</summary>
+    <div class="fa">No. They're completely different peptides with different functions. Thymosin alpha-1 (28 amino acids) is primarily an immune modulator. Thymosin beta-4 (43 amino acids) is primarily involved in tissue repair and wound healing. Both were originally isolated from thymic tissue, but they act through entirely different mechanisms.</div>
+  </details>
+  <details>
+    <summary>Can thymosin alpha-1 help with long COVID?</summary>
+    <div class="fa">Some practitioners are using Ta1 off-label for long COVID, based on the hypothesis that persistent immune dysregulation drives ongoing symptoms. A few small case series have reported improvement in fatigue and cognitive symptoms. But no controlled trials exist for this indication. The evidence is anecdotal at this point.</div>
+  </details>
+  <details>
+    <summary>Does thymosin alpha-1 have anti-aging effects?</summary>
+    <div class="fa">The thymus shrinks with age (a process called thymic involution), and T-cell production declines accordingly. Ta1 can partially compensate for this decline by promoting T-cell maturation through alternative pathways. Whether this translates to meaningful anti-aging benefits is speculative. Long-term studies in healthy elderly populations haven't been conducted.</div>
+  </details>
+  <details>
+    <summary>Why isn't thymosin alpha-1 FDA-approved if it works?</summary>
+    <div class="fa">FDA approval requires US-specific phase 3 trials that can cost $100M or more. SciClone Pharmaceuticals focused clinical development in Asia where regulatory pathways are different. The relatively low price point of the drug and generic competition in Asia reduced the financial incentive to pursue the costly US approval process. It's a regulatory and economic issue, not a scientific one.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Bottom Line -->
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Thymosin alpha-1 is one of the few peptides with genuine, large-scale clinical evidence behind it. Approved in over 35 countries, studied in thousands of patients, and used clinically for over two decades, it has a track record that most peptides can only dream of.</p>
+</div>
+
+<p>Its strongest applications remain in hepatitis B treatment, cancer immunotherapy support, and acute immune restoration in critically ill patients. The COVID-19 data added another layer of interest, though randomized trials are still needed.</p>
+
+<p>For healthy individuals, Ta1 is probably unnecessary. But for those with documented immune deficiency, chronic infections, or treatments that suppress immune function, it's one of the best-supported options available.</p>
+
+<p>The biggest limitation? It's not FDA-approved, which limits access in the US and means insurance won't cover it. That's a regulatory and economic problem, not a scientific one.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. Always consult a qualified healthcare provider before starting any peptide protocol. The information presented here is based on published research and does not constitute an endorsement of any specific product or treatment.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Romani L, et al. Thymosin alpha 1 activates dendritic cell tryptophan catabolism and establishes a regulatory environment for balance of inflammation and tolerance. <em>Blood.</em> 2006;108(7):2265&ndash;2274. <a href="https://pubmed.ncbi.nlm.nih.gov/17052970/">PubMed</a><br>
+Tuthill C, et al. Thymalfasin: biological properties and clinical applications. <em>Int Immunopharmacol.</em> 2010;10(10):1225&ndash;1229. <a href="https://pubmed.ncbi.nlm.nih.gov/20590374/">PubMed</a><br>
+Garaci E. Thymosin alpha 1: a historical overview. <em>Ann N Y Acad Sci.</em> 2007;1112:329&ndash;338. <a href="https://pubmed.ncbi.nlm.nih.gov/17267044/">PubMed</a><br>
+Iino S, et al. Thymosin alpha 1 for the treatment of hepatitis B virus infection. <em>Expert Opin Biol Ther.</em> 2005;5 Suppl 1:S121&ndash;S126. <a href="https://pubmed.ncbi.nlm.nih.gov/15826557/">PubMed</a><br>
+Kullavanuava P, et al. Pilot study of thymalfasin in the treatment of chronic hepatitis C genotype 3a in Thailand. <em>Hepatogastroenterology.</em> 2001;48(41):1283&ndash;1285. <a href="https://pubmed.ncbi.nlm.nih.gov/11509370/">PubMed</a><br>
+Gravenstein S, et al. Efficacy of an influenza vaccine supplemented with thymalfasin in the elderly. <em>J Am Geriatr Soc.</em> 2009;57(3):478&ndash;482. <a href="https://pubmed.ncbi.nlm.nih.gov/19651075/">PubMed</a><br>
+Garaci E, et al. Thymosin alpha 1: from bench to bedside. <em>Ann N Y Acad Sci.</em> 2012;1270:56&ndash;64. <a href="https://pubmed.ncbi.nlm.nih.gov/22316459/">PubMed</a><br>
+Liu Y, et al. Thymosin alpha 1 combined with TACE for hepatocellular carcinoma: a systematic review and meta-analysis. <em>Drug Des Devel Ther.</em> 2016;10:2537&ndash;2552. <a href="https://pubmed.ncbi.nlm.nih.gov/27524894/">PubMed</a><br>
+Liu Y, et al. Thymosin alpha 1 (Ta1) reduces the mortality of severe COVID-19 by restoration of lymphocytopenia and reversion of exhausted T cells. <em>Clin Infect Dis.</em> 2020;71(16):2150&ndash;2157. <a href="https://pubmed.ncbi.nlm.nih.gov/32425645/">PubMed</a><br>
+Wu M, et al. Thymosin alpha 1 treatment of immunosuppressed patients with COVID-19. <em>Expert Opin Biol Ther.</em> 2020;21(4):453&ndash;459. <a href="https://pubmed.ncbi.nlm.nih.gov/33052324/">PubMed</a><br>
+Wu J, et al. Thymosin alpha 1 for severe sepsis: a randomized controlled trial. <em>Crit Care.</em> 2013;17(1):R8. <a href="https://pubmed.ncbi.nlm.nih.gov/23787399/">PubMed</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a> &nbsp;&middot;&nbsp;
+<a href="/articles/are-peptides-legal-fda-regulations-2026">Are Peptides Legal? FDA Regulations in 2026</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/tb-500-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">TB-500 (Thymosin Beta-4) Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects Guide</a>
+            <a href="/articles/are-peptides-legal-fda-regulations-2026" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Legality Guide 2026</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

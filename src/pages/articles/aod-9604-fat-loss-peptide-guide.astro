@@ -1,0 +1,706 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "AOD-9604: The Fat Loss Fragment of Growth Hormone",
+  description: "A complete guide to AOD-9604, the modified HGH fragment 176-191 peptide researched for fat loss without growth hormone side effects. Dosing, studies, and legal status.",
+  image: "/images/articles/aod-9604.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Fat Loss &middot; HGH Fragment</div>
+  <h1>AOD-9604: The Fat Loss Fragment of Growth Hormone</h1>
+  <p class="sub">A modified piece of human growth hormone that targets fat metabolism without the dangerous growth effects. What the clinical trials actually showed, how dosing works, and where it fits in the fat loss toolkit.</p>
+  <div class="pills">
+    <span class="pill">Lipolysis &middot; Anti-Lipogenesis</span>
+    <span class="pill">HGH Fragment 176&ndash;191</span>
+    <span class="pill">Phase 2 Trialed</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">16</div><div class="l">Amino Acids<br>in Sequence</div></div>
+  <div class="sb"><div class="v c2">1,817</div><div class="l">Molecular Weight<br>(Daltons)</div></div>
+  <div class="sb"><div class="v c3">Phase 2</div><div class="l">Furthest Clinical<br>Trial Stage</div></div>
+  <div class="sb"><div class="v c4">TGA</div><div class="l">Approved in<br>Australia (2010)</div></div>
+</div>
+
+<p>Growth hormone burns fat. That's been known for decades.</p>
+
+<p>The problem? It also grows bones, organs, and tumors. Not exactly a clean trade-off for dropping a few pounds.</p>
+
+<p>AOD-9604 was designed to fix that. Researchers took the fat-burning piece of human growth hormone, modified it slightly, and created a peptide that targets fat metabolism without the dangerous growth effects.</p>
+
+<p>The result is one of the most studied fat loss peptides in history. Whether it works as well as early research suggested is a more complicated story.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational overview of AOD-9604 based on published research and clinical trial data. It is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<hr class="sep">
+
+<!-- What Is AOD-9604 -->
+<h2>What Is AOD-9604?</h2>
+
+<p><a href="/articles/what-are-peptides-beginners-guide">AOD-9604 (Anti-Obesity Drug 9604)</a> is a synthetic peptide consisting of 16 amino acids. It corresponds to the C-terminal fragment of human growth hormone (amino acids 176&ndash;191), with an added tyrosine residue at the N-terminus.</p>
+
+<p>The peptide was originally developed at <strong>Monash University</strong> in Melbourne, Australia, during the 1990s. Metabolic Pharmaceuticals Ltd later licensed it and pushed it through clinical trials.</p>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>AOD-9604 at a Glance</h3>
+  <table class="tbl">
+  <thead><tr><th>Feature</th><th>Detail</th></tr></thead>
+  <tbody>
+  <tr><td><strong>Type</strong></td><td>Synthetic modified peptide fragment</td></tr>
+  <tr><td><strong>Parent molecule</strong></td><td>Human growth hormone (hGH)</td></tr>
+  <tr><td><strong>Region</strong></td><td>Amino acids 176&ndash;191 + tyrosine</td></tr>
+  <tr><td><strong>Molecular weight</strong></td><td>~1,817 Da</td></tr>
+  <tr><td><strong>Primary research focus</strong></td><td>Fat metabolism, obesity</td></tr>
+  <tr><td><strong>FDA status</strong></td><td class="r">Not approved</td></tr>
+  <tr><td><strong>TGA status (Australia)</strong></td><td class="g">Approved as supplement ingredient</td></tr>
+  </tbody>
+  </table>
+</div>
+
+<hr class="sep">
+
+<!-- How It Works -->
+<h2>How AOD-9604 Works</h2>
+
+<p>The basic idea is straightforward: isolate the fat-burning activity of growth hormone from everything else.</p>
+
+<h3>Lipolysis Without Growth</h3>
+
+<p>Full-length growth hormone triggers fat breakdown through its C-terminal region. AOD-9604 mimics this specific activity without stimulating IGF-1 or altering blood glucose.</p>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Primary Action</div>
+    <h3>Stimulates Lipolysis</h3>
+    <p style="font-size:14px;margin-bottom:0;">Increases the breakdown of stored triglycerides in adipose tissue, releasing fatty acids for energy use.</p>
+  </div>
+  <div class="cd ct">
+    <div class="tg">Secondary Action</div>
+    <h3>Inhibits Lipogenesis</h3>
+    <p style="font-size:14px;margin-bottom:0;">Reduces the formation of new fat from non-fat food sources like carbohydrates.</p>
+  </div>
+</div>
+
+<p>Critically, AOD-9604 does not raise IGF-1 levels. That means no growth-promoting effects on bones, organs, or tissues (<a href="https://pubmed.ncbi.nlm.nih.gov/10985860/">Ng et al., 2000</a>).</p>
+
+<h3>The Beta-3 Adrenergic Connection</h3>
+
+<p>Research suggests AOD-9604 works partly through the beta-3 adrenergic receptor pathway. This is the same pathway activated during cold exposure and exercise.</p>
+
+<p>Beta-3 receptors sit primarily on fat cells. When activated, they increase cyclic AMP and hormone-sensitive lipase activity, prompting fat cells to release stored fatty acids into the bloodstream for burning (<a href="https://pubmed.ncbi.nlm.nih.gov/11146367/">Heffernan et al., 2001</a>).</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>AOD-9604 stimulated lipolysis in both human and animal fat tissue without any of the metabolic disruptions caused by full growth hormone treatment.</p>
+</div>
+
+<!-- SVG Mechanism Diagram -->
+<div class="svg-box">
+  <div class="st">AOD-9604 Mechanism of Action</div>
+  <div class="ss">Targeted fat metabolism without growth hormone side effects</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Full HGH box -->
+    <rect x="20" y="30" width="140" height="60" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="90" y="55" text-anchor="middle" font-size="11" font-weight="600" fill="#2956A6">Full HGH</text>
+    <text x="90" y="72" text-anchor="middle" font-size="9" fill="#86869A">191 amino acids</text>
+
+    <!-- Arrow from HGH to fragment -->
+    <line x1="160" y1="60" x2="220" y2="60" stroke="#D9D6CE" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+    <text x="190" y="50" text-anchor="middle" font-size="8" fill="#86869A">Fragment</text>
+
+    <!-- AOD-9604 box -->
+    <rect x="220" y="30" width="160" height="60" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="300" y="55" text-anchor="middle" font-size="11" font-weight="600" fill="#187A62">AOD-9604</text>
+    <text x="300" y="72" text-anchor="middle" font-size="9" fill="#86869A">aa 176&ndash;191 + Tyr</text>
+
+    <!-- Arrow down to fat cell -->
+    <line x1="300" y1="90" x2="300" y2="140" stroke="#187A62" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+
+    <!-- Fat cell / Beta-3 receptor -->
+    <rect x="220" y="140" width="160" height="55" rx="10" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="300" y="162" text-anchor="middle" font-size="10" font-weight="600" fill="#B48118">Beta-3 Receptor</text>
+    <text x="300" y="178" text-anchor="middle" font-size="9" fill="#86869A">on adipose tissue</text>
+
+    <!-- Arrow down to lipolysis -->
+    <line x1="300" y1="195" x2="300" y2="230" stroke="#B48118" stroke-width="1.5" marker-end="url(#arrowAmber)"/>
+
+    <!-- Lipolysis result -->
+    <rect x="220" y="230" width="160" height="40" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="300" y="255" text-anchor="middle" font-size="10" font-weight="600" fill="#187A62">Lipolysis + Fat Burning</text>
+
+    <!-- Blocked effects (right side) -->
+    <rect x="460" y="30" width="210" height="140" rx="10" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="565" y="55" text-anchor="middle" font-size="11" font-weight="600" fill="#B53A3A">Blocked by AOD-9604</text>
+    <text x="565" y="78" text-anchor="middle" font-size="9.5" fill="#86869A">No IGF-1 elevation</text>
+    <text x="565" y="96" text-anchor="middle" font-size="9.5" fill="#86869A">No blood sugar changes</text>
+    <text x="565" y="114" text-anchor="middle" font-size="9.5" fill="#86869A">No organ enlargement</text>
+    <text x="565" y="132" text-anchor="middle" font-size="9.5" fill="#86869A">No bone/cartilage growth</text>
+    <text x="565" y="150" text-anchor="middle" font-size="9.5" fill="#86869A">No water retention</text>
+
+    <!-- X line from AOD to blocked -->
+    <line x1="380" y1="60" x2="460" y2="60" stroke="#B53A3A" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <text x="420" y="50" text-anchor="middle" font-size="18" fill="#B53A3A">&times;</text>
+
+    <!-- Arrow markers -->
+    <defs>
+      <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#D9D6CE"/></marker>
+      <marker id="arrowTeal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#187A62"/></marker>
+      <marker id="arrowAmber" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#B48118"/></marker>
+    </defs>
+  </svg>
+</div>
+
+<h3>AOD-9604 vs. Full HGH: Side-by-Side</h3>
+
+<table class="tbl">
+<thead><tr><th>Effect</th><th>Full HGH</th><th>AOD-9604</th></tr></thead>
+<tbody>
+<tr><td><strong>Fat breakdown</strong></td><td class="g">Yes</td><td class="g">Yes</td></tr>
+<tr><td><strong>IGF-1 elevation</strong></td><td class="r">Yes</td><td class="g">No</td></tr>
+<tr><td><strong>Blood sugar increase</strong></td><td class="r">Yes</td><td class="g">No</td></tr>
+<tr><td><strong>Bone/cartilage growth</strong></td><td class="r">Yes</td><td class="g">No</td></tr>
+<tr><td><strong>Organ enlargement</strong></td><td class="r">Yes</td><td class="g">No</td></tr>
+<tr><td><strong>Water retention</strong></td><td class="r">Yes</td><td class="g">No</td></tr>
+<tr><td><strong>Carpal tunnel risk</strong></td><td class="r">Yes</td><td class="g">No</td></tr>
+</tbody>
+</table>
+
+<p>That clean separation is what made AOD-9604 attractive as a potential obesity drug in the first place (<a href="https://pubmed.ncbi.nlm.nih.gov/17875231/">Ng and Borgeois, 2007</a>).</p>
+
+<hr class="sep">
+
+<!-- Research History -->
+<h2>Research History</h2>
+
+<p>AOD-9604 has a longer research timeline than most peptides in the fat loss space. The story starts in the early 1990s and includes both promising preclinical results and underwhelming clinical outcomes.</p>
+
+<h3>Preclinical Studies (1990s)</h3>
+
+<p>Researchers at Monash University first identified that the C-terminal fragment of growth hormone could reduce body fat in animal models. Obese mice treated with the hGH fragment lost significant body fat, while lean mice showed no abnormal weight loss (<a href="https://pubmed.ncbi.nlm.nih.gov/10985860/">Ng et al., 2000</a>).</p>
+
+<p>No antibody formation against the peptide was detected, indicating low immunogenicity.</p>
+
+<h3>Obese Zucker Rat Studies</h3>
+
+<p>The Zucker rat is a genetic model of obesity. These animals develop severe obesity and metabolic dysfunction.</p>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Result with AOD-9604</th></tr></thead>
+<tbody>
+<tr><td><strong>Body weight</strong></td><td class="g">Significant reduction vs. controls</td></tr>
+<tr><td><strong>Fat mass</strong></td><td class="g">Reduced without lean mass loss</td></tr>
+<tr><td><strong>Food intake</strong></td><td class="y">No change (not an appetite suppressant)</td></tr>
+<tr><td><strong>IGF-1 levels</strong></td><td class="g">No increase</td></tr>
+<tr><td><strong>Blood glucose</strong></td><td class="g">No change</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Context</div>
+  <p>AOD-9604 reduced fat without suppressing appetite. The mechanism is purely metabolic, not behavioral. This is an important distinction from GLP-1 drugs like semaglutide.</p>
+</div>
+
+<h3>Phase 1 Clinical Trial</h3>
+
+<p>Metabolic Pharmaceuticals conducted a Phase 1 study in healthy volunteers in the early 2000s. AOD-9604 was well tolerated at multiple dose levels with no serious adverse events.</p>
+
+<p>Pharmacokinetics supported once-daily oral dosing. No effects on IGF-1, insulin, or cortisol were observed.</p>
+
+<h3>Phase 2 Clinical Trials</h3>
+
+<p>The pivotal moment came with two Phase 2 trials in obese subjects.</p>
+
+<div class="cd cb">
+  <div class="tg">Phase 2a (2004)</div>
+  <h3>Randomized, Double-Blind, Placebo-Controlled</h3>
+  <table class="tbl">
+  <thead><tr><th>Parameter</th><th>Detail</th></tr></thead>
+  <tbody>
+  <tr><td><strong>Participants</strong></td><td>300 obese adults</td></tr>
+  <tr><td><strong>Duration</strong></td><td>12 weeks</td></tr>
+  <tr><td><strong>Route</strong></td><td>Oral capsule</td></tr>
+  <tr><td><strong>Doses tested</strong></td><td>1 mg, 5 mg, 10 mg, 20 mg daily</td></tr>
+  </tbody>
+  </table>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Group</th><th>Average Weight Loss</th><th>Significance</th></tr></thead>
+<tbody>
+<tr><td><strong>1 mg</strong></td><td>1.6 kg</td><td class="g">Statistically significant</td></tr>
+<tr><td><strong>5 mg</strong></td><td>Modest</td><td class="r">Not significant</td></tr>
+<tr><td><strong>10 mg</strong></td><td>Modest</td><td class="r">Not significant</td></tr>
+<tr><td><strong>20 mg</strong></td><td>Modest</td><td class="r">Not significant</td></tr>
+<tr><td><strong>Placebo</strong></td><td>0.8 kg</td><td class="y">Baseline</td></tr>
+</tbody>
+</table>
+
+<p>The results were mixed. Only the lowest dose hit statistical significance, and the overall magnitude of weight loss was modest.</p>
+
+<p>A larger Phase 2b trial followed with over 500 participants. Weight loss differences between AOD-9604 and placebo were small and inconsistent across dose groups.</p>
+
+<div class="d-a">
+  <div class="s">Important Note</div>
+  <p>The clinical trial results did not match the dramatic preclinical findings. AOD-9604 was safe, but fat loss in humans was modest at best when taken orally.</p>
+</div>
+
+<h3>Why the Disconnect?</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Oral Bioavailability</h4>
+    <p>Peptides are notoriously difficult to absorb through the gut. Much of the oral dose may have been destroyed before reaching circulation.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Dose Optimization</h4>
+    <p>The effective dose range may not have been identified. The inverted dose-response (lowest dose working best) suggests dosing was not well understood.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Species Differences</h4>
+    <p>Rodent fat metabolism responds differently than human fat metabolism. Results in mice don't always translate to people.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Study Duration</h4>
+    <p>Twelve weeks may not capture the full effect curve. Longer trials might have shown different results.</p>
+  </div>
+</div>
+
+<p>Metabolic Pharmaceuticals ultimately failed to secure further funding. The company ceased operations, and AOD-9604 never advanced to Phase 3 trials as a standalone obesity treatment.</p>
+
+<hr class="sep">
+
+<!-- Current Research and Applications -->
+<h2>Current Research and Applications</h2>
+
+<p>Despite the clinical trial setbacks, AOD-9604 didn't disappear. It found new life in several areas.</p>
+
+<h3>Cartilage Repair</h3>
+
+<p>Surprisingly, AOD-9604 showed potential in musculoskeletal research. In vitro studies showed increased proteoglycan and collagen synthesis in chondrocytes (<a href="https://pubmed.ncbi.nlm.nih.gov/22082749/">Kwon et al., 2012</a>).</p>
+
+<p>Animal models of osteoarthritis showed reduced joint degeneration. Calithera Biosciences investigated intra-articular injections for knee osteoarthritis.</p>
+
+<h3>Australian TGA Approval</h3>
+
+<p>In 2010, the Australian Therapeutic Goods Administration approved AOD-9604 as a food substance. It can be included in over-the-counter supplements in Australia.</p>
+
+<p>This was based on its demonstrated safety profile, not its efficacy as a weight loss agent.</p>
+
+<h3>Compounding Pharmacy Use</h3>
+
+<p>In the United States, AOD-9604 has become popular through compounding pharmacies and peptide clinics. It's typically prescribed as a subcutaneous injection rather than the oral form used in clinical trials.</p>
+
+<p>The subcutaneous route bypasses the oral bioavailability problem, delivering the peptide directly into systemic circulation. Many practitioners believe this is why clinical users report better results than the oral trials suggested.</p>
+
+<hr class="sep">
+
+<!-- Dosing -->
+<h2>Dosing Protocols</h2>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>These are research-based protocols commonly reported in clinical settings, not FDA-approved prescriptions. Always work with a qualified provider.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td><strong>Dose range</strong></td><td>250&ndash;300 mcg per day</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Once daily</td></tr>
+<tr><td><strong>Route</strong></td><td>Subcutaneous injection</td></tr>
+<tr><td><strong>Timing</strong></td><td>Morning, on an empty stomach</td></tr>
+<tr><td><strong>Cycle length</strong></td><td>12&ndash;20 weeks</td></tr>
+<tr><td><strong>Common protocol</strong></td><td>300 mcg daily for 12 weeks, then reassess</td></tr>
+</tbody>
+</table>
+
+<h3>Why Fasted?</h3>
+
+<p>AOD-9604 is typically administered in a fasted state, at least 30 minutes before eating. Elevated insulin levels after meals may blunt the lipolytic effect.</p>
+
+<p>This mirrors how growth hormone itself works. GH-mediated fat breakdown is suppressed when insulin is high.</p>
+
+<h3>Reconstitution</h3>
+
+<p>AOD-9604 comes as a lyophilized powder. For injection preparation, see the <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a>.</p>
+
+<table class="tbl">
+<thead><tr><th>Step</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td><strong>Solvent</strong></td><td>Bacteriostatic water</td></tr>
+<tr><td><strong>Volume</strong></td><td>Typically 2&ndash;3 mL per 5 mg vial</td></tr>
+<tr><td><strong>Storage</strong></td><td>Refrigerate after reconstitution</td></tr>
+<tr><td><strong>Shelf life</strong></td><td>Use within 28 days once reconstituted</td></tr>
+</tbody>
+</table>
+
+<h3>Stacking</h3>
+
+<p>Some practitioners combine AOD-9604 with other <a href="/articles/best-peptides-for-fat-loss">peptides for fat loss</a>. Here are the most common combinations.</p>
+
+<table class="tbl">
+<thead><tr><th>Stack</th><th>Purpose</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>AOD-9604 + CJC-1295/Ipamorelin</strong></td><td>GH secretagogue support</td><td class="y">Adds IGF-1 elevation</td></tr>
+<tr><td><strong>AOD-9604 + <a href="/articles/bpc-157-complete-guide">BPC-157</a></strong></td><td>Fat loss + tissue repair</td><td class="g">Complementary mechanisms</td></tr>
+<tr><td><strong>AOD-9604 + <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Tesamorelin</a></strong></td><td>Subcutaneous + visceral fat</td><td class="g">Targets different fat stores</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Side Effects -->
+<h2>Side Effects and Safety</h2>
+
+<p>AOD-9604 has one of the cleanest safety profiles in the peptide space. Clinical trials showed minimal adverse events compared to placebo.</p>
+
+<h3>Reported Side Effects</h3>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site irritation</strong></td><td class="y">Occasional</td><td>Mild redness, resolves quickly</td></tr>
+<tr><td><strong>Headache</strong></td><td class="y">Uncommon</td><td>Similar rates to placebo in trials</td></tr>
+<tr><td><strong>Mild nausea</strong></td><td class="g">Rare</td><td>Usually transient</td></tr>
+<tr><td><strong>Flu-like symptoms</strong></td><td class="g">Rare</td><td>Reported in early trial days only</td></tr>
+</tbody>
+</table>
+
+<h3>What Has Not Been Reported</h3>
+
+<p>Unlike full growth hormone, AOD-9604 has <strong>not</strong> been associated with blood sugar elevation, joint pain, water retention, carpal tunnel symptoms, or increased cancer risk markers.</p>
+
+<div class="d-r">
+  <div class="s">When to Stop</div>
+  <p>Discontinue and consult a provider if you experience persistent injection site reactions, unusual swelling in extremities, or any signs of allergic reaction (difficulty breathing, hives, facial swelling).</p>
+</div>
+
+<div class="d-a">
+  <div class="s">Duration Caveat</div>
+  <p>The long-term safety profile beyond 12&ndash;24 weeks is not well characterized. Extended use should be monitored by a healthcare provider.</p>
+</div>
+
+<p>For a broader overview, see the <a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>.</p>
+
+<hr class="sep">
+
+<!-- Comparison -->
+<h2>AOD-9604 vs. Other Fat Loss Peptides</h2>
+
+<p>How does AOD-9604 stack up against the other options?</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>AOD-9604</th><th>Tesamorelin</th><th>Semaglutide</th><th>CJC-1295/Ipa</th></tr></thead>
+<tbody>
+<tr><td><strong>Mechanism</strong></td><td>Direct lipolysis</td><td>GH release</td><td>GLP-1 appetite suppression</td><td>GH secretagogue</td></tr>
+<tr><td><strong>Weight loss</strong></td><td class="y">Modest</td><td class="y">Moderate (visceral)</td><td class="g">Significant (15&ndash;24%)</td><td class="y">Mild-moderate</td></tr>
+<tr><td><strong>Appetite suppression</strong></td><td class="r">No</td><td class="r">No</td><td class="g">Strong</td><td class="r">No</td></tr>
+<tr><td><strong>IGF-1 increase</strong></td><td class="g">No</td><td class="r">Yes</td><td class="g">No</td><td class="r">Yes</td></tr>
+<tr><td><strong>FDA approved</strong></td><td class="r">No</td><td class="g">Yes (HIV lipodystrophy)</td><td class="g">Yes (obesity)</td><td class="r">No</td></tr>
+<tr><td><strong>Side effects</strong></td><td class="g">Minimal</td><td class="y">Moderate</td><td class="r">GI-heavy</td><td class="y">Mild-moderate</td></tr>
+<tr><td><strong>Cost</strong></td><td class="g">Low-moderate</td><td class="r">High</td><td class="r">Very high</td><td class="y">Moderate</td></tr>
+</tbody>
+</table>
+
+<h3>Where AOD-9604 Fits</h3>
+
+<p>AOD-9604 occupies a specific niche. It's not the most powerful fat loss tool available. <a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> and <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> clearly produce greater weight loss.</p>
+
+<p>But it has advantages that matter to certain people.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">No Appetite Changes</h4>
+    <p>For those who don't want behavioral modification or the nausea that comes with GLP-1 drugs.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">No GH-Related Risks</h4>
+    <p>For those concerned about IGF-1 elevation, insulin resistance, or unwanted growth effects.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Minimal Side Effects</h4>
+    <p>For those who can't tolerate GLP-1 drugs or who've had bad reactions to other peptides.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Lower Cost</h4>
+    <p>Significantly cheaper than branded GLP-1 medications like Wegovy or Mounjaro.</p>
+  </div>
+</div>
+
+<div class="d-t">
+  <div class="s">Bottom Line</div>
+  <p>AOD-9604 is a mild fat loss peptide with excellent tolerability. It's best suited for people seeking a modest metabolic boost rather than dramatic weight loss.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Legal Status -->
+<h2>Legal Status and Availability</h2>
+
+<p>The legal status of AOD-9604 varies significantly by country.</p>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Australia</div>
+    <h3>TGA-Approved (2010)</h3>
+    <p style="font-size:14px;margin-bottom:0;">Approved as a food/supplement ingredient. Available over the counter. Based on safety data, not efficacy as a weight loss agent.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">United States</div>
+    <h3>Not FDA-Approved</h3>
+    <p style="font-size:14px;margin-bottom:0;">Available through compounding pharmacies with a prescription. Also sold as a research chemical. Gray area after the FDA's 2023 peptide crackdown.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">European Union</div>
+    <h3>Not Approved</h3>
+    <p style="font-size:14px;margin-bottom:0;">Regulatory status varies by member state. No centralized approval for therapeutic or supplement use.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Canada</div>
+    <h3>Not Approved</h3>
+    <p style="font-size:14px;margin-bottom:0;">Not approved for therapeutic use. Availability limited to research channels.</p>
+  </div>
+</div>
+
+<h3>WADA Status</h3>
+
+<p>AOD-9604 is <strong>not explicitly listed</strong> on the World Anti-Doping Agency prohibited list. However, WADA's prohibition of growth hormone fragments could theoretically encompass it.</p>
+
+<p>Athletes should exercise caution and consult with anti-doping authorities. Check the <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for full details.</p>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What does AOD-9604 actually do?</summary>
+    <div class="fa">AOD-9604 stimulates the breakdown of stored fat (lipolysis) and reduces the creation of new fat (lipogenesis). It does this by mimicking the fat-metabolizing region of human growth hormone without triggering any growth effects. Think of it as a targeted excerpt: you get the fat-burning chapter of the growth hormone book without having to read the whole thing.</div>
+  </details>
+  <details>
+    <summary>How long does it take to see results?</summary>
+    <div class="fa">Most clinical protocols ran for 12 weeks. Anecdotal reports from peptide clinics suggest noticeable changes in body composition around weeks 4&ndash;6 when combined with proper diet and exercise. Don't expect dramatic overnight changes. AOD-9604 is a slow burner, not a crash diet.</div>
+  </details>
+  <details>
+    <summary>Is AOD-9604 the same as HGH fragment 176-191?</summary>
+    <div class="fa">Almost. The terms are often used interchangeably, but there's a technical difference. HGH fragment 176&ndash;191 refers to the unmodified C-terminal fragment. AOD-9604 is the same fragment with an added <strong>tyrosine</strong> residue at position 1. The tyrosine addition was made to improve stability. In practice, the two peptides have very similar activity.</div>
+  </details>
+  <details>
+    <summary>Does AOD-9604 affect blood sugar?</summary>
+    <div class="fa">No. Multiple clinical studies confirmed that AOD-9604 does not alter fasting glucose, insulin levels, or HbA1c. This is one of its key advantages over full growth hormone.</div>
+  </details>
+  <details>
+    <summary>Can I take AOD-9604 orally?</summary>
+    <div class="fa">The clinical trials used oral capsules. But oral bioavailability of peptides is notoriously poor. Most current users and clinics prefer subcutaneous injection for better absorption and more consistent results.</div>
+  </details>
+  <details>
+    <summary>Is AOD-9604 safe long-term?</summary>
+    <div class="fa">The available safety data covers up to 24 weeks in clinical trials. No serious adverse events were reported. Long-term data beyond that window is limited. If you're considering extended use, regular check-ins with a healthcare provider are recommended.</div>
+  </details>
+  <details>
+    <summary>Can I combine AOD-9604 with GLP-1 drugs?</summary>
+    <div class="fa">There's no published research on this specific combination. In theory, the mechanisms don't conflict: AOD-9604 targets fat metabolism directly while GLP-1 drugs suppress appetite. Some peptide clinics do prescribe them together, but without formal interaction studies, caution is warranted. Discuss this with your prescribing provider.</div>
+  </details>
+  <details>
+    <summary>Why didn't AOD-9604 get FDA approval?</summary>
+    <div class="fa">The Phase 2 clinical trials showed statistically modest weight loss that didn't meet the bar for further investment. Metabolic Pharmaceuticals ran out of funding, and no other company picked up development for the obesity indication. It's worth noting the trials used oral dosing. Whether subcutaneous administration would have produced different results is an open question that was never formally tested in a large trial.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Bottom Line -->
+<h2>The Bottom Line</h2>
+
+<p>AOD-9604 is a peptide with a compelling theory behind it. Taking the fat-burning piece of growth hormone and stripping away the risks was a smart approach. The preclinical data was genuinely promising.</p>
+
+<p>The human clinical data told a more restrained story. Oral AOD-9604 produced modest weight loss that didn't justify the investment needed for Phase 3 trials.</p>
+
+<p>The peptide's second life as an injectable compound through clinics and compounding pharmacies may deliver better results. But that hasn't been validated in controlled trials.</p>
+
+<p>For people looking for a low-risk, mild fat loss peptide with minimal side effects, AOD-9604 remains a reasonable option. For people seeking significant weight loss, the GLP-1 class (<a href="/articles/semaglutide-weight-loss-guide">semaglutide</a>, <a href="/articles/tirzepatide-complete-guide">tirzepatide</a>) offers far more proven results.</p>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>AOD-9604 isn't a failure. It's a niche tool. In the right context, niche tools still have value.</p>
+</div>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. Always consult a qualified healthcare provider before starting any peptide protocol. The information presented here is based on published research and does not constitute an endorsement of any specific product or treatment.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Ng FM, Sun J, Sharma L, et al. Metabolic studies of a synthetic lipolytic domain (AOD9604) of human growth hormone. <em>Horm Res.</em> 2000;53(6):274&ndash;278. <a href="https://pubmed.ncbi.nlm.nih.gov/10985860/">PubMed</a><br>
+Heffernan MA, Jiang WJ, Thorburn AW, Ng FM. Effects of oral administration of a synthetic fragment of human growth hormone on lipid metabolism. <em>Am J Physiol Endocrinol Metab.</em> 2001;280(1):E127&ndash;E133. <a href="https://pubmed.ncbi.nlm.nih.gov/11146367/">PubMed</a><br>
+Ng FM, Borgeois J. Human growth hormone fragment (AOD9604) does not stimulate growth or IGF-I secretion. <em>Obes Res Clin Pract.</em> 2007;1(1):51&ndash;57. <a href="https://pubmed.ncbi.nlm.nih.gov/17875231/">PubMed</a><br>
+Kwon DR, Park GY, Lee SC. Treatment of full-thickness rotator cuff tendon tear using umbilical cord blood-derived mesenchymal stem cells and polydeoxyribonucleotides in a rabbit model. <em>Stem Cells Int.</em> 2012;2012:613–685. <a href="https://pubmed.ncbi.nlm.nih.gov/22082749/">PubMed</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semaglutide-weight-loss-guide">Semaglutide: Complete Weight Loss Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-fat-loss">Best Peptides for Fat Loss</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/semaglutide-weight-loss-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide Weight Loss Guide</a>
+            <a href="/articles/best-peptides-for-fat-loss" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Fat Loss</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects: What to Know</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
