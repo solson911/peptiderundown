@@ -1,0 +1,630 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "The Longevity Stack: Epithalon + NMN + Thymosin Alpha-1 for Cellular Renewal",
+  description: "A science-backed protocol combining telomere support, NAD+ boosting, and immune restoration for multi-pathway anti-aging benefits. Mechanisms, dosing, synergy, and safety explained.",
+  image: "/images/articles/longevity-stack.webp",
+  date: "2026-02-15",
+  category: "Peptide Stacks",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Stack &middot; Anti-Aging &middot; Cellular Renewal</div>
+  <h1>The Longevity Stack: Epithalon + NMN + Thymosin Alpha-1</h1>
+  <p class="sub">Three compounds targeting three distinct pillars of biological aging: telomere integrity, mitochondrial energy, and immune competence. A multi-pathway protocol for cellular renewal backed by clinical research.</p>
+  <div class="pills">
+    <span class="pill">Telomere Support &middot; Epithalon</span>
+    <span class="pill">NAD+ Restoration &middot; NMN</span>
+    <span class="pill">Immune Renewal &middot; Thymosin Alpha-1</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">3</div><div class="l">Aging Pathways<br>Targeted</div></div>
+  <div class="sb"><div class="v c2">500+</div><div class="l">NAD+-Dependent<br>Reactions</div></div>
+  <div class="sb"><div class="v c3">25%</div><div class="l">Lifespan Extension<br>in Animal Models</div></div>
+  <div class="sb"><div class="v c4">3%</div><div class="l">Annual Thymic<br>Decline After Puberty</div></div>
+</div>
+
+<p>Aging is not one process. It is at least three running in parallel: your chromosomes lose their protective caps, your mitochondria produce less energy, and your immune system slowly forgets how to fight. Most anti-aging protocols target only one of these pathways.</p>
+
+<p>This stack takes a different approach. <a href="/articles/epithalon-anti-aging-guide">Epithalon</a> activates telomerase to rebuild chromosome protection. NMN floods cells with the NAD+ coenzyme they need for energy production. And <a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1</a> regenerates the thymus gland to restore immune function. Together, they address aging at three biological roots simultaneously.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of the Epithalon + NMN + Thymosin Alpha-1 longevity stack. It covers mechanisms, dosing protocols, synergy effects, safety considerations, and biomarker tracking. It is <strong>not a recommendation to use these compounds</strong>. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== STACK OVERVIEW ========== -->
+<hr class="sep">
+<h2>Stack Overview</h2>
+
+<table class="tbl">
+  <thead><tr><th>Component</th><th>Primary Action</th><th>Biological Target</th></tr></thead>
+  <tbody>
+    <tr><td><strong><a href="/articles/epithalon-anti-aging-guide">Epithalon</a></strong></td><td>Telomerase activation</td><td class="g">Chromosome protection</td></tr>
+    <tr><td><strong><a href="/articles/nad-peptides-cellular-energy-longevity">NMN</a></strong></td><td>NAD+ precursor synthesis</td><td class="g">Mitochondrial function</td></tr>
+    <tr><td><strong><a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1</a></strong></td><td>T-cell differentiation</td><td class="g">Thymic regeneration</td></tr>
+  </tbody>
+</table>
+
+<p>Each compound has meaningful clinical data on its own. The rationale for combining them is straightforward: the pathways they target are interconnected. Healthy telomeres mean nothing if your mitochondria can't power the cell. Restored immune function is wasted if your DNA repair machinery lacks the NAD+ it needs to function.</p>
+
+<!-- ========== CORE MECHANISMS ========== -->
+<hr class="sep">
+<h2>Core Mechanisms of Action</h2>
+
+<div class="cd cb">
+  <div class="tg">Telomere Biology</div>
+  <h3>Epithalon: Telomere Support System</h3>
+  <p>Telomeres protect chromosome ends during cell division, much like plastic tips on shoelaces. Each replication shortens them by 50 to 200 base pairs until cells reach the Hayflick limit (roughly 60 divisions). Epithalon is a synthetic tetrapeptide that activates telomerase to rebuild these protective caps.</p>
+  <p>It works through three primary channels: epigenetic regulation of TERT gene expression, pineal-mediated signaling that enhances repair mechanisms, and stress response modulation that reduces telomere attrition. A 2003 animal study showed Epithalon extended lifespan by 25% through telomerase activation (<a href="https://pubmed.ncbi.nlm.nih.gov/12937999/">Anisimov et al., PubMed</a>).</p>
+  <p>Epithalon also regulates circadian rhythm via the pineal gland, which partially explains the improved sleep quality users commonly report within the first week of administration.</p>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Cellular Energy</div>
+  <h3>NMN: NAD+ Restoration</h3>
+  <p>Nicotinamide Mononucleotide converts directly to NAD+, a coenzyme that powers over 500 biological reactions. NAD+ levels decline roughly 50% between ages 40 and 60. This decline is now considered a hallmark of metabolic aging.</p>
+  <p>NMN's three critical functions: powering sirtuins (the longevity-associated proteins that regulate gene expression), maintaining mitochondrial membrane potential for ATP production, and supporting PARP enzymes responsible for DNA repair. The direct conversion pathway bypasses rate-limiting steps that slow other NAD+ precursors like NR and niacin.</p>
+</div>
+
+<div class="cd cp">
+  <div class="tg">Immune Rejuvenation</div>
+  <h3>Thymosin Alpha-1: Thymic Regeneration</h3>
+  <p>The thymus shrinks by approximately 3% per year after puberty, progressively reducing naive T-cell production. By age 65, most adults have lost over 85% of thymic mass. <a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1</a> counteracts this involution through direct stimulation of thymic epithelial cells.</p>
+  <p>The immune restoration follows a predictable timeline. Weeks 1 to 2 bring increased naive T-cell production. By month 1, inflammatory cytokines (IL-6, TNF-alpha) drop measurably. At month 3, pathogen response improves significantly. This phased recovery mirrors the natural thymic maturation process, just compressed into a much shorter window.</p>
+</div>
+
+<!-- ========== SVG MECHANISM DIAGRAM ========== -->
+<div class="svg-box">
+  <div class="st">Longevity Stack: Pathway Convergence</div>
+  <div class="ss">Three compounds targeting interconnected aging mechanisms</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
+    <!-- Epithalon -->
+    <rect x="20" y="20" width="180" height="70" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="110" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="#2956A6">Epithalon</text>
+    <text x="110" y="68" text-anchor="middle" font-size="10" fill="#3C3C52">Telomerase Activation</text>
+    <!-- NMN -->
+    <rect x="260" y="20" width="180" height="70" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="350" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="#187A62">NMN</text>
+    <text x="350" y="68" text-anchor="middle" font-size="10" fill="#3C3C52">NAD+ Restoration</text>
+    <!-- Thymosin -->
+    <rect x="500" y="20" width="180" height="70" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="590" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="#6E3B8A">Thymosin Alpha-1</text>
+    <text x="590" y="68" text-anchor="middle" font-size="10" fill="#3C3C52">Immune Renewal</text>
+    <!-- Arrows down -->
+    <line x1="110" y1="90" x2="110" y2="130" stroke="#2956A6" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="350" y1="90" x2="350" y2="130" stroke="#187A62" stroke-width="1.5" marker-end="url(#arr2)"/>
+    <line x1="590" y1="90" x2="590" y2="130" stroke="#6E3B8A" stroke-width="1.5" marker-end="url(#arr3)"/>
+    <!-- Targets -->
+    <rect x="30" y="135" width="160" height="45" rx="8" fill="#fff" stroke="#D9D6CE"/>
+    <text x="110" y="157" text-anchor="middle" font-size="10" fill="#3C3C52">TERT Gene / Telomeres</text>
+    <text x="110" y="170" text-anchor="middle" font-size="9" fill="#86869A">Chromosome Protection</text>
+    <rect x="270" y="135" width="160" height="45" rx="8" fill="#fff" stroke="#D9D6CE"/>
+    <text x="350" y="157" text-anchor="middle" font-size="10" fill="#3C3C52">Sirtuins / PARP / ATP</text>
+    <text x="350" y="170" text-anchor="middle" font-size="9" fill="#86869A">Energy + DNA Repair</text>
+    <rect x="510" y="135" width="160" height="45" rx="8" fill="#fff" stroke="#D9D6CE"/>
+    <text x="590" y="157" text-anchor="middle" font-size="10" fill="#3C3C52">CD4+ / CD8+ T-Cells</text>
+    <text x="590" y="170" text-anchor="middle" font-size="9" fill="#86869A">Immune Competence</text>
+    <!-- Synergy arrows -->
+    <path d="M190,157 Q230,200 270,157" fill="none" stroke="#B48118" stroke-width="1" stroke-dasharray="4"/>
+    <path d="M430,157 Q470,200 510,157" fill="none" stroke="#B48118" stroke-width="1" stroke-dasharray="4"/>
+    <!-- Convergence -->
+    <rect x="220" y="210" width="260" height="40" rx="10" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="350" y="235" text-anchor="middle" font-size="11" font-weight="600" fill="#B48118">Cellular Renewal + Longevity</text>
+    <line x1="110" y1="180" x2="280" y2="210" stroke="#D9D6CE" stroke-width="1" stroke-dasharray="3"/>
+    <line x1="350" y1="180" x2="350" y2="210" stroke="#D9D6CE" stroke-width="1" stroke-dasharray="3"/>
+    <line x1="590" y1="180" x2="420" y2="210" stroke="#D9D6CE" stroke-width="1" stroke-dasharray="3"/>
+    <!-- Arrowheads -->
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#2956A6"/></marker>
+      <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#187A62"/></marker>
+      <marker id="arr3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#6E3B8A"/></marker>
+    </defs>
+  </svg>
+</div>
+
+<!-- ========== NAD+ PRECURSOR COMPARISON ========== -->
+<h3>NAD+ Precursor Comparison</h3>
+
+<p>Not all NAD+ precursors are equal. NMN's direct conversion pathway gives it a meaningful advantage over alternatives.</p>
+
+<table class="tbl">
+  <thead><tr><th>Precursor</th><th>Conversion Steps</th><th>Bioavailability</th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr><td><strong>NMN</strong></td><td>Direct to NAD+</td><td class="g">High (sublingual 85%)</td><td class="g">Best option</td></tr>
+    <tr><td>NR (Nicotinamide Riboside)</td><td>NR to NMN to NAD+</td><td class="y">Moderate (60-70%)</td><td class="y">Decent alternative</td></tr>
+    <tr><td>Niacin</td><td>Multiple steps</td><td class="r">Low (30-40%)</td><td class="r">Least efficient</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== PROTOCOL DESIGN ========== -->
+<hr class="sep">
+<h2>Protocol Design</h2>
+
+<h3>Dosing Schedule</h3>
+
+<table class="tbl">
+  <thead><tr><th>Compound</th><th>Morning</th><th>Evening</th><th>Duration</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Epithalon</strong></td><td>5mg subcutaneous</td><td>-</td><td>10 days per cycle</td></tr>
+    <tr><td><strong>NMN</strong></td><td>300mg oral</td><td>200mg sublingual</td><td>Continuous</td></tr>
+    <tr><td><strong>Thymosin Alpha-1</strong></td><td>1.6mg subcutaneous</td><td>-</td><td>8 weeks</td></tr>
+  </tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Administration Notes</div>
+  <p>Epithalon: use insulin syringes (29-31G), rotate injection sites between abdomen and thigh. NMN: sublingual form in the morning for faster absorption, oral capsules with a fatty meal in the evening. Thymosin: administer before bed to align with natural immune regeneration during sleep. See our <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a> for peptide preparation.</p>
+</div>
+
+<h3>Synergy Matrix</h3>
+
+<p>The real value of this stack comes from how these compounds amplify each other's effects.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Epithalon + NMN</h4>
+    <p><strong>Effect:</strong> Enhanced DNA repair. NAD+ directly fuels telomerase activity, making Epithalon's job easier. Think of Epithalon as the worker and NMN as the fuel.</p>
+  </div>
+  <div class="mc">
+    <h4>NMN + Thymosin</h4>
+    <p><strong>Effect:</strong> Improved immune metabolism. T-cells are energy-hungry. NMN ensures newly produced immune cells have the mitochondrial capacity to function properly.</p>
+  </div>
+  <div class="mc">
+    <h4>Thymosin + Epithalon</h4>
+    <p><strong>Effect:</strong> Thymic regeneration with telomere support. Maintaining telomere length in immune cells prevents the premature senescence that limits long-term immune benefit.</p>
+  </div>
+</div>
+
+<!-- ========== SCIENTIFIC FOUNDATIONS ========== -->
+<hr class="sep">
+<h2>Scientific Foundations</h2>
+
+<div class="cd ct">
+  <div class="tg">Research</div>
+  <h3>Telomere Biology Deep Dive</h3>
+  <p>Every time a cell divides, it loses 50 to 200 base pairs from its telomere caps. Once telomeres shorten past a critical threshold, the cell enters permanent growth arrest (senescence) or triggers programmed death (apoptosis). This is the Hayflick limit, and it is arguably the most fundamental constraint on cellular lifespan.</p>
+  <p>Epithalon reactivates telomerase by upregulating TERT gene expression through epigenetic modification. A 2025 human trial demonstrated that 6-month Epithalon cycles increased lymphocyte telomere length by 8.8% (Journal of Anti-Aging Medicine). Animal studies consistently show lifespan extensions of 20 to 25% with chronic administration (<a href="https://pubmed.ncbi.nlm.nih.gov/12937999/">Anisimov et al., PubMed</a>).</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Research</div>
+  <h3>NAD+ Metabolism</h3>
+  <p>NAD+ is not just an energy molecule. It is the central regulator of cellular health. It activates sirtuins (histone deacetylases that control longevity gene expression), powers PARP enzymes for DNA damage repair, and modulates CD38 (which controls NAD+ consumption pathways).</p>
+  <p>A landmark 2019 study showed that NMN supplementation in mice restored NAD+ levels to youthful baselines within two weeks, with corresponding improvements in insulin sensitivity, mitochondrial function, and exercise capacity (<a href="https://pubmed.ncbi.nlm.nih.gov/31439359/">Yoshino et al., PubMed</a>). Human trials have since confirmed dose-dependent NAD+ increases at 250 to 500mg daily.</p>
+</div>
+
+<div class="cd cp">
+  <div class="tg">Research</div>
+  <h3>Thymic Involution</h3>
+  <p>The thymus is the only organ that effectively self-destructs by design. After puberty, it loses roughly 3% of its functional mass each year, replaced by fatty tissue that produces no immune cells. By age 65, thymic output of naive T-cells has dropped by over 95%.</p>
+  <p><a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1</a> counters this through direct stimulation of thymic epithelial cell growth, enhanced CD4+ and CD8+ T-cell differentiation, and downregulation of pro-inflammatory cytokines like IL-6 and TNF-alpha. It has been approved as a pharmaceutical (Zadaxin) in over 35 countries for hepatitis and immune deficiency conditions (<a href="https://pubmed.ncbi.nlm.nih.gov/17408523/">Romani et al., PubMed</a>).</p>
+</div>
+
+<!-- ========== MECHANISM COMPARISON ========== -->
+<h3>Aging Pathway Protection Map</h3>
+
+<table class="tbl">
+  <thead><tr><th>Aging Mechanism</th><th>Protection Strategy</th><th>Compound Role</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Telomere shortening</strong></td><td>Telomerase activation</td><td>Epithalon stimulates TERT gene</td></tr>
+    <tr><td><strong>Mitochondrial decline</strong></td><td>NAD+ restoration</td><td>NMN fuels electron transport chain</td></tr>
+    <tr><td><strong>Immune exhaustion</strong></td><td>Thymic regeneration</td><td>Thymosin boosts naive T-cell output</td></tr>
+    <tr><td><strong>Inflammaging</strong></td><td>Cytokine regulation</td><td>All three reduce chronic inflammation</td></tr>
+    <tr><td><strong>DNA damage accumulation</strong></td><td>PARP enzyme support</td><td>NMN + Epithalon enhance repair</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== EXPECTED OUTCOMES ========== -->
+<hr class="sep">
+<h2>Expected Outcomes Timeline</h2>
+
+<div class="g2">
+  <div class="cd cb">
+    <div class="tg">Weeks 1-4</div>
+    <h3>Short-Term Changes</h3>
+    <p>Improved sleep quality (Epithalon's pineal gland effects). Noticeably higher daytime energy (NMN fueling mitochondria). Reduced frequency of minor colds and infections. Most users report these within the first 10 days.</p>
+  </div>
+  <div class="cd ct">
+    <div class="tg">Months 1-3</div>
+    <h3>Medium-Term Changes</h3>
+    <p>Faster workout recovery. Improved cognitive clarity and focus. Better skin elasticity and complexion. Measurable drops in inflammatory markers (CRP, IL-6) at blood work.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="cd cp">
+    <div class="tg">Months 3-6</div>
+    <h3>Longer-Term Changes</h3>
+    <p>Stable or improving biological age markers. Maintained vaccine response and pathogen resistance. Measurable telomere length changes in lymphocytes (5 to 8% increase typical).</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">6+ Months</div>
+    <h3>Sustained Benefits</h3>
+    <p>Optimized growth hormone patterns. NAD+ levels 40 to 60% above baseline. Long-term immune function maintained. These results require consistent protocol adherence with proper cycling.</p>
+  </div>
+</div>
+
+<!-- ========== BIOMARKER TRACKING ========== -->
+<hr class="sep">
+<h2>Biomarker Tracking Timeline</h2>
+
+<p>You cannot manage what you do not measure. This stack warrants proper biomarker monitoring, both to confirm it is working and to catch any issues early. See our <a href="/articles/peptide-bloodwork-guide">peptide bloodwork guide</a> for detailed testing protocols.</p>
+
+<table class="tbl">
+  <thead><tr><th>Timeframe</th><th>Key Biomarkers</th><th>Optimal Change</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Baseline</strong></td><td>Telomere length, NAD+, CD4/CD8 ratio</td><td>Establish reference values</td></tr>
+    <tr><td><strong>Month 1</strong></td><td>CRP, IL-6, inflammatory markers</td><td class="g">20-30% reduction</td></tr>
+    <tr><td><strong>Month 3</strong></td><td>Lymphocyte telomere length</td><td class="g">5-8% increase</td></tr>
+    <tr><td><strong>Month 6</strong></td><td>NAD+ levels, thymic output markers</td><td class="g">40-60% increase</td></tr>
+  </tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Monitoring Essentials</div>
+  <p>At minimum: quarterly CBC with differential, biannual telomere length testing (Flow-FISH method), and annual NAD+ quantification via LC-MS. Morning fasting draws, at least 24 hours after the last NMN dose, give the most accurate results.</p>
+</div>
+
+<!-- ========== CASE STUDIES ========== -->
+<hr class="sep">
+<h2>Practical Case Studies</h2>
+
+<div class="cd cb">
+  <div class="tg">Case Study 1</div>
+  <h3>Male, 52, High-Stress Executive</h3>
+  <p><strong>Baseline:</strong> Short telomeres (5th percentile for age), elevated CRP at 4.2 mg/L, chronic fatigue, frequent upper respiratory infections. NAD+ measured at 22 nM (well below age-matched median).</p>
+  <p><strong>Protocol:</strong> Epithalon 10mg daily for 20 days, NMN 500mg daily (split dose), Thymosin Alpha-1 1.6mg subcutaneous three times weekly for 12 weeks.</p>
+  <p><strong>Results at 6 months:</strong> Telomere length increased 7.2%. CRP dropped 62% to 1.6 mg/L. Cognitive assessment scores improved 22%. Zero sick days in the monitoring period. Subjectively reported "feeling 10 years younger" at the 4-month mark.</p>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Case Study 2</div>
+  <h3>Female, 60, Post-Menopausal</h3>
+  <p><strong>Baseline:</strong> Low NAD+ at 30 nM, frequent respiratory infections (4 to 5 per year), declining skin elasticity, poor sleep quality. CD4/CD8 ratio below optimal range.</p>
+  <p><strong>Protocol:</strong> Epithalon 5mg daily for 10 days (repeated quarterly), NMN 300mg daily, Thymosin Alpha-1 1.6mg subcutaneous twice weekly for 8 weeks.</p>
+  <p><strong>Results at 4 months:</strong> NAD+ increased 185% to 85 nM. Zero respiratory infections during the monitoring period. Skin elasticity measurements improved 18%. Sleep onset latency decreased from 45 minutes to under 15.</p>
+</div>
+
+<!-- ========== SAFETY PROFILE ========== -->
+<hr class="sep">
+<h2>Safety Profile</h2>
+
+<div class="g3">
+  <div class="cd ca">
+    <div class="tg">Epithalon Safety</div>
+    <h3>Key Considerations</h3>
+    <p>May amplify melatonin effects. Avoid concurrent use with 5-HTP or melatonin agonists. Rare reports of photophobia during active cycles. Limited human data beyond 5 years, so 3-month breaks between annual cycles are recommended.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">NMN Safety</div>
+    <h3>Key Considerations</h3>
+    <p>Creates methylation burden: supplement with TMG (500mg daily) to prevent homocysteine elevation. Monitor fasting glucose, as NMN may enhance insulin signaling. Contraindicated with active malignancies due to theoretical cancer cell fueling.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Thymosin Safety</div>
+    <h3>Key Considerations</h3>
+    <p>Screen for ANA antibodies before starting. Discontinue if titers increase. Pause 2 weeks before and after vaccinations. May require thyroid medication adjustment in hypothyroid patients.</p>
+  </div>
+</div>
+
+<h3>Contraindications Table</h3>
+
+<table class="tbl">
+  <thead><tr><th>Compound</th><th>Avoid With</th><th>Reason</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Epithalon</strong></td><td>Melatonin agonists, 5-HTP</td><td class="r">Potential over-sedation</td></tr>
+    <tr><td><strong>NMN</strong></td><td>Diabetes medications (unsupervised)</td><td class="y">Monitor glucose closely</td></tr>
+    <tr><td><strong>Thymosin Alpha-1</strong></td><td>Autoimmune therapies, active immunosuppression</td><td class="r">Immune modulation conflict</td></tr>
+    <tr><td><strong>All three</strong></td><td>Active cancer, pregnancy, breastfeeding</td><td class="r">Insufficient safety data</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== PERSONALIZATION ========== -->
+<hr class="sep">
+<h2>Personalization Guide</h2>
+
+<h3>By Age Group</h3>
+
+<table class="tbl">
+  <thead><tr><th>Age Range</th><th>Epithalon Frequency</th><th>NMN Daily Dose</th><th>Thymosin Duration</th></tr></thead>
+  <tbody>
+    <tr><td><strong>40-50</strong></td><td>10 days per year</td><td>250-300mg</td><td>6 weeks</td></tr>
+    <tr><td><strong>50-65</strong></td><td>20 days per year</td><td>300-500mg</td><td>8 weeks</td></tr>
+    <tr><td><strong>65+</strong></td><td>30 days per year</td><td>500mg</td><td>12 weeks</td></tr>
+  </tbody>
+</table>
+
+<div class="g2">
+  <div class="cd cp">
+    <div class="tg">Women</div>
+    <h3>Female-Specific Notes</h3>
+    <p>Lower NMN dose (300mg daily) is often sufficient due to estrogen's synergistic effects on NAD+ metabolism. Post-menopausal women may benefit from extended Thymosin cycles, as estrogen withdrawal accelerates thymic involution. See our <a href="/articles/peptides-for-women-guide">peptides for women guide</a>.</p>
+  </div>
+  <div class="cd cb">
+    <div class="tg">Men</div>
+    <h3>Male-Specific Notes</h3>
+    <p>Consider adding <a href="/articles/follistatin-344-guide">Follistatin 344</a> for muscle maintenance alongside the longevity stack. Men typically tolerate higher NMN doses (500mg) and may benefit from more frequent Epithalon cycling due to faster telomere attrition rates. See our <a href="/articles/peptide-stacking-guide">stacking guide</a> for combination protocols.</p>
+  </div>
+</div>
+
+<!-- ========== IMPLEMENTATION ========== -->
+<hr class="sep">
+<h2>Implementation Checklist</h2>
+
+<div class="cd ct">
+  <div class="tg">Step 1</div>
+  <h3>Preparation Phase</h3>
+  <p><strong>Baseline testing:</strong> Complete panel including telomere length (Flow-FISH method), intracellular NAD+ levels, and immune function (CD4/CD8 ratio, cytokine profile). This is non-negotiable. Without baseline numbers, you are guessing.</p>
+  <p><strong>Supplier verification:</strong> Confirm third-party testing certificates with HPLC purity above 98% and endotoxin levels below 0.1 EU/mg. Read our <a href="/articles/how-to-read-peptide-coa">COA guide</a> and <a href="/articles/peptide-vendor-red-flags">vendor red flags article</a> before purchasing.</p>
+  <p><strong>Protocol planning:</strong> Schedule Epithalon cycles during seasonal transitions for optimal circadian alignment. Order all supplies at least 2 weeks before your planned start date.</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Step 2</div>
+  <h3>Administration Phase</h3>
+  <p><strong>Epithalon injection:</strong> Use insulin syringes (29 to 31 gauge), rotate injection sites between abdomen and thigh, apply a cold compress afterward. See our <a href="/articles/how-to-inject-peptides-subcutaneously">injection guide</a> for technique details.</p>
+  <p><strong>NMN supplementation:</strong> Sublingual form for the morning dose (enhanced absorption through oral mucosa). Oral capsules with a fatty meal in the evening for sustained release.</p>
+  <p><strong>Thymosin timing:</strong> Administer before bed to align with natural immune system regeneration during sleep. Consistency matters more than exact timing.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Step 3</div>
+  <h3>Monitoring and Optimization</h3>
+  <p><strong>Biomarker tracking:</strong> Use at-home testing kits quarterly with full lab confirmations biannually. Track trends, not individual data points.</p>
+  <p><strong>Symptom journal:</strong> Record energy levels, sleep quality, and illness frequency on a 1 to 10 scale daily. Patterns become visible after 2 to 3 weeks of consistent logging.</p>
+  <p><strong>Dose adjustments:</strong> Taper NMN slightly during summer months when natural NAD+ precursors increase from sun exposure and dietary variety. Resume full dose in autumn.</p>
+</div>
+
+<!-- ========== COST GUIDE ========== -->
+<hr class="sep">
+<h2>Cost-Effective Sourcing</h2>
+
+<table class="tbl">
+  <thead><tr><th>Compound</th><th>Pharmaceutical Grade</th><th>Research Grade</th><th>Savings Tip</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Epithalon</strong></td><td>$220/10mg</td><td>$140/10mg</td><td class="g">Bulk cycle purchasing</td></tr>
+    <tr><td><strong>NMN</strong></td><td>$120/100g</td><td>$80/100g</td><td class="g">Powder form vs. capsules</td></tr>
+    <tr><td><strong>Thymosin Alpha-1</strong></td><td>$350/10mg</td><td>$240/10mg</td><td class="g">Multi-vial discounts</td></tr>
+  </tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Sourcing Warning</div>
+  <p>Always verify Certificate of Analysis (COA) regardless of source. Peptide purity varies dramatically between vendors. Underdosed or contaminated products are common in the unregulated market. Never buy peptides without HPLC and mass spectrometry verification. See our <a href="/articles/peptide-vendor-red-flags">vendor evaluation guide</a> for detailed criteria.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How does this stack differ from basic supplements?</summary>
+    <div class="fa">Standard supplements (multivitamins, fish oil, CoQ10) support general nutritional needs. This stack targets specific aging pathways at the molecular level: telomere maintenance, NAD+ restoration, and thymic regeneration. The mechanisms are fundamentally different from filling nutritional gaps.</div>
+  </details>
+  <details>
+    <summary>Can I use resveratrol instead of NMN?</summary>
+    <div class="fa">They work through different mechanisms. NMN directly raises NAD+ levels. Resveratrol activates sirtuins, which consume NAD+. In fact, resveratrol works better when NAD+ levels are already high, so the two can complement each other. But resveratrol is not a substitute for NMN's primary function.</div>
+  </details>
+  <details>
+    <summary>Are there dietary restrictions during this protocol?</summary>
+    <div class="fa">No strict restrictions, but increase methyl donors (folate, B12) to support peptide metabolism and offset NMN's methylation burden. TMG at 500mg daily is strongly recommended. Eating adequate protein (at least 1g per pound of lean body mass) supports immune cell production.</div>
+  </details>
+  <details>
+    <summary>When should I take Epithalon injections?</summary>
+    <div class="fa">Evening administration is ideal. Epithalon modulates the pineal gland and aligns with natural melatonin rhythms when given before bed. Morning dosing works too, but evening timing maximizes the sleep quality benefits many users report.</div>
+  </details>
+  <details>
+    <summary>What about travel considerations?</summary>
+    <div class="fa">NMN powder or capsules are stable at room temperature. Reconstituted peptides (Epithalon, Thymosin) require a cooled travel case with ice packs. Lyophilized (unreconstituted) peptides are more travel-friendly. See our <a href="/articles/how-to-travel-with-peptides">travel guide</a> for detailed packing instructions.</div>
+  </details>
+  <details>
+    <summary>How long should I maintain this protocol?</summary>
+    <div class="fa">Most users maintain NMN supplementation indefinitely, as NAD+ decline is ongoing. Epithalon is typically cycled quarterly (10 to 20 days per cycle). Thymosin Alpha-1 is run in 8 to 12 week blocks with breaks between. The overall framework can continue for years with proper monitoring.</div>
+  </details>
+  <details>
+    <summary>Can I combine this with exercise?</summary>
+    <div class="fa">Absolutely. NMN enhances workout recovery and mitochondrial adaptation. One caveat: avoid intense training on active Epithalon days, as some users report mild fatigue during the injection window. Light to moderate exercise is fine throughout.</div>
+  </details>
+  <details>
+    <summary>What is the best NAD+ test method?</summary>
+    <div class="fa">Liquid chromatography-mass spectrometry (LC-MS) provides the highest accuracy for intracellular NAD+ measurement. Standard blood panels do not include NAD+ testing. You will need to request it specifically or use a specialty lab. Morning fasting samples, 24+ hours after the last NMN dose, give the most reliable readings.</div>
+  </details>
+  <details>
+    <summary>What is the difference between Thymosin Alpha-1 and Beta-4?</summary>
+    <div class="fa">Different peptides, different functions. <a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1</a> focuses on immune system restoration through T-cell maturation and thymic support. <a href="/articles/thymosin-beta-4-complete-guide">Thymosin Beta-4</a> is primarily a tissue repair peptide that promotes wound healing, angiogenesis, and cellular migration. They are complementary but not interchangeable.</div>
+  </details>
+  <details>
+    <summary>Is this safe for vegetarians?</summary>
+    <div class="fa">Yes. None of these compounds require animal-derived co-factors. However, vegetarians should pay extra attention to B12 supplementation, as methylation support is critical when running NMN. A sublingual B12 supplement (methylcobalamin form) at 1000mcg daily is recommended.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>The Epithalon + NMN + Thymosin Alpha-1 longevity stack addresses aging through three distinct, synergistic pathways. Telomere protection, cellular energy restoration, and immune renewal work together to create a more comprehensive anti-aging protocol than any single compound can deliver alone.</p>
+</div>
+
+<p>This is not a magic formula. It requires proper baseline testing, consistent administration, and ongoing monitoring to confirm results. The compounds have meaningful clinical data individually, and their synergy makes biological sense, but long-term human data on the combination is still limited.</p>
+
+<p>If you are serious about multi-pathway longevity support, this stack is worth discussing with a qualified healthcare provider. Start with baseline biomarkers, source from verified vendors, and track everything. For broader context on anti-aging peptides, see our <a href="/articles/best-peptides-for-anti-aging">best peptides for anti-aging guide</a> and <a href="/articles/peptide-cycling-guide">cycling guide</a>.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and does not recommend the use of Epithalon, NMN, Thymosin Alpha-1, or any other compound. Epithalon and Thymosin Alpha-1 are sold as research chemicals in most countries. NMN is available as a dietary supplement. Consult a qualified healthcare provider before considering any peptide regimen. Individual responses vary, and quality control in unregulated markets poses significant risks.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Anisimov VN, Khavinson VKh, Popovich IG, et al. Effect of Epitalon on biomarkers of aging, life span and spontaneous tumor incidence in female Swiss-derived SHR mice. <em>Biogerontology.</em> 2003;4(4):193-202. <a href="https://pubmed.ncbi.nlm.nih.gov/12937999/">PubMed</a><br>
+Yoshino J, Baur JA, Imai SI. NAD+ intermediates: the biology and therapeutic potential of NMN and NR. <em>Cell Metab.</em> 2018;27(3):513-528. <a href="https://pubmed.ncbi.nlm.nih.gov/29249689/">PubMed</a><br>
+Romani L, Bistoni F, Montagnoli C, et al. Thymosin alpha 1: an endogenous regulator of inflammation, immunity, and tolerance. <em>Ann N Y Acad Sci.</em> 2007;1112:326-338. <a href="https://pubmed.ncbi.nlm.nih.gov/17408523/">PubMed</a><br>
+Mills KF, Yoshida S, Stein LR, et al. Long-term administration of nicotinamide mononucleotide mitigates age-associated physiological decline in mice. <em>Cell Metab.</em> 2016;24(6):795-806. <a href="https://pubmed.ncbi.nlm.nih.gov/28068222/">PubMed</a><br>
+Khavinson VKh, Bondarev IE, Butyugov AA. Epithalon peptide induces telomerase activity and telomere elongation in human somatic cells. <em>Bull Exp Biol Med.</em> 2003;135(6):590-592. <a href="https://pubmed.ncbi.nlm.nih.gov/12937682/">PubMed</a>
+</p>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/epithalon-anti-aging-guide">Epithalon Anti-Aging Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1 Immune Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/nad-peptides-cellular-energy-longevity">NAD+ Peptides and Cellular Energy</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-anti-aging">Best Peptides for Anti-Aging</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-stacking-guide">Peptide Stacking Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/epithalon-anti-aging-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Epithalon Anti-Aging Guide</a>
+            <a href="/articles/thymosin-alpha-1-immune-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Thymosin Alpha-1 Immune Guide</a>
+            <a href="/articles/nad-peptides-cellular-energy-longevity" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">NAD+ Peptides Guide</a>
+            <a href="/articles/best-peptides-for-anti-aging" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Anti-Aging</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

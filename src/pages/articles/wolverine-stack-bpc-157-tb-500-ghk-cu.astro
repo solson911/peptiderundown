@@ -1,0 +1,566 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "The Wolverine Stack: BPC-157, TB-500, and GHK-Cu for Healing",
+  description: "The Wolverine Stack combines BPC-157, TB-500, and GHK-Cu to target multiple healing pathways at once. Mechanisms, dosing protocols, recovery timelines, and safety explained.",
+  image: "/images/articles/wolverine-stack.webp",
+  date: "2026-02-15",
+  category: "Peptide Stacks",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Stack &middot; Healing &middot; Recovery</div>
+  <h1>The Wolverine Stack: BPC-157, TB-500, and GHK-Cu</h1>
+  <p class="sub">Three peptides targeting different stages of tissue repair, combined into one protocol. How the synergy works, what the research supports, and how to think about dosing and cycling.</p>
+  <div class="pills">
+    <span class="pill">Tissue Repair &middot; Angiogenesis</span>
+    <span class="pill">Cell Migration &middot; Anti-Fibrotic</span>
+    <span class="pill">Collagen &middot; Connective Tissue</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">3</div><div class="l">Peptides<br>Combined</div></div>
+  <div class="sb"><div class="v c2">30%</div><div class="l">Faster Tendon<br>Healing (BPC-157)</div></div>
+  <div class="sb"><div class="v c3">70%</div><div class="l">Collagen Boost<br>(GHK-Cu)</div></div>
+  <div class="sb"><div class="v c4">40%</div><div class="l">Faster Muscle<br>Recovery (TB-500)</div></div>
+</div>
+
+<p>The name comes from Wolverine's regenerative abilities in the X-Men universe. The comparison is exaggerated, obviously. But the concept behind this stack is real: by combining <a href="/articles/bpc-157-complete-guide">BPC-157</a>, <a href="/articles/tb-500-complete-guide">TB-500</a>, and <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a>, you target multiple healing pathways simultaneously rather than relying on a single compound.</p>
+
+<p>Each peptide addresses a different bottleneck in the repair process. BPC-157 drives angiogenesis and local tissue repair. TB-500 promotes cell migration and reduces scar tissue. GHK-Cu stimulates collagen synthesis and structural protein production. Together, they cover the full arc of recovery from the initial inflammatory phase through long-term tissue remodeling.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of the Wolverine Stack, covering mechanisms, dosing protocols, recovery timelines, and safety considerations. It is <strong>not a recommendation to use these peptides</strong>. None of these compounds are FDA-approved for human therapeutic use. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>What's in the Wolverine Stack?</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>The Three Peptides at a Glance</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>BPC-157:</strong> 15 amino acids, derived from human gastric juice, targets local tissue repair &nbsp;|&nbsp; <strong>TB-500:</strong> 43 amino acids (Thymosin Beta-4 fragment), promotes systemic cell migration &nbsp;|&nbsp; <strong>GHK-Cu:</strong> Copper-binding tripeptide (Gly-His-Lys), stimulates collagen and elastin synthesis &nbsp;|&nbsp; <strong>Combined Target:</strong> Full-spectrum tissue healing from acute injury through structural remodeling</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Core Function</th><th>Primary Targets</th><th>Evidence Level</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>Local tissue repair, angiogenesis</td><td>Tendons, gut lining, ligaments</td><td class="g">Strong preclinical</td></tr>
+<tr><td><strong>TB-500</strong></td><td>Cell migration, anti-fibrotic action</td><td>Muscle, connective tissue, wounds</td><td class="g">Strong preclinical</td></tr>
+<tr><td><strong>GHK-Cu</strong></td><td>Collagen synthesis, gene modulation</td><td>Skin, cartilage, vascular tissue</td><td class="y">Moderate (in vitro + animal)</td></tr>
+</tbody>
+</table>
+
+<p>The logic here is straightforward. No single peptide covers every stage of healing. BPC-157 excels at the early inflammatory and vascular phases. TB-500 handles mid-stage cell recruitment and scar prevention. GHK-Cu finishes the job with structural protein production and tissue remodeling.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How Each Peptide Works</h2>
+
+<h3>BPC-157: The Local Healer</h3>
+
+<p>BPC-157 is a 15-amino-acid peptide originally isolated from human gastric juice. It accelerates healing primarily through angiogenesis, the formation of new blood vessels around injured tissue. More blood vessels mean more oxygen and nutrients delivered to the repair site.</p>
+
+<p>It upregulates vascular endothelial growth factor (VEGF) and other repair signals while simultaneously reducing inflammatory cytokines like TNF-alpha (<a href="https://pubmed.ncbi.nlm.nih.gov/21030672/">Sikiric et al., 2010</a>). Research in animal models shows tendon-to-bone injuries heal roughly 30% faster with BPC-157 administration. It is particularly effective for rotator cuff injuries, tennis elbow, and Achilles tendon problems.</p>
+
+<p>For gut health, BPC-157 repairs intestinal lining damage caused by NSAIDs or inflammatory conditions. This is where its gastric origin becomes relevant: the peptide appears to have a natural affinity for digestive tissue repair. See our <a href="/articles/best-peptides-for-gut-health">gut health peptide guide</a> for more on this application.</p>
+
+<div class="d-t">
+  <div class="s">Why BPC-157 Matters in This Stack</div>
+  <p>BPC-157 is the first responder. It works locally at the injury site, building the vascular infrastructure that the other two peptides need to do their jobs. Without adequate blood supply, TB-500's cell migration signals and GHK-Cu's collagen production both stall. BPC-157 lays the groundwork.</p>
+</div>
+
+<h3>TB-500: The Systemic Mobilizer</h3>
+
+<p>TB-500 is a synthetic version of the active region of Thymosin Beta-4, a 43-amino-acid peptide found naturally in the thymus gland. Its primary mechanism is actin sequestration. By binding to actin monomers, it helps cells become more mobile and migrate toward injury sites.</p>
+
+<p>This cell migration effect is what separates TB-500 from BPC-157. Where BPC-157 works locally, TB-500 sends a systemic signal that draws repair cells from throughout the body. Studies in animal models show it reduces muscle recovery time by approximately 40% (<a href="https://pubmed.ncbi.nlm.nih.gov/20951130/">Crockford, 2007</a>).</p>
+
+<p>TB-500 also has significant anti-fibrotic properties. It reduces scar tissue formation by reorganizing collagen fibers during the healing process. This is critical for chronic injuries where accumulated scar tissue has restricted mobility. For a deeper comparison, see <a href="/articles/bpc-157-vs-tb-500-comparison">BPC-157 vs. TB-500</a>.</p>
+
+<h3>GHK-Cu: The Structural Architect</h3>
+
+<p>GHK-Cu (Glycyl-L-Histidyl-L-Lysine with bound copper) is a naturally occurring tripeptide that declines significantly with age. By age 60, circulating GHK-Cu levels drop to roughly 40% of what they were at age 20. This decline correlates closely with reduced wound healing capacity and skin elasticity loss.</p>
+
+<p>Research shows GHK-Cu can increase collagen production by up to 70% in skin fibroblasts (<a href="https://pubmed.ncbi.nlm.nih.gov/18498710/">Pickart et al., 2008</a>). It also stimulates elastin synthesis, glycosaminoglycan production, and the expression of repair-related genes. Studies on diabetic wounds show 30% faster closure times with GHK-Cu treatment.</p>
+
+<p>Beyond skin, GHK-Cu supports connective tissue throughout the body: cartilage, tendons, vascular walls. Its antioxidant properties (through copper chelation) reduce oxidative stress at injury sites, and it suppresses NF-kB activation to limit excessive inflammation. Our <a href="/articles/ghk-cu-copper-peptide-guide">complete GHK-Cu guide</a> covers this compound in full detail.</p>
+
+<!-- ========== SVG MECHANISM ========== -->
+<div class="svg-box">
+  <div class="st">Wolverine Stack: Three-Phase Healing Model</div>
+  <div class="ss">Vascular repair &middot; Cell migration &middot; Structural remodeling</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- BPC-157 -->
+    <rect x="15" y="10" width="210" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="120" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">BPC-157</text>
+    <text x="120" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">PHASE 1: VASCULAR</text>
+    <line x1="35" y1="65" x2="205" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="120" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Upregulates VEGF</text>
+    <text x="120" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">New blood vessel formation</text>
+    <text x="120" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="120" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Reduces TNF-alpha</text>
+    <text x="120" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Tendon-to-bone repair</text>
+    <text x="120" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Gut lining restoration</text>
+    <line x1="35" y1="190" x2="205" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="120" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="120" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Local tissue repair</text>
+    <text x="120" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">&#38; vascular support</text>
+
+    <!-- TB-500 -->
+    <rect x="245" y="10" width="210" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="350" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">TB-500</text>
+    <text x="350" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">PHASE 2: MIGRATION</text>
+    <line x1="265" y1="65" x2="435" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="350" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Actin sequestration</text>
+    <text x="350" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Cell migration to injury</text>
+    <text x="350" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="350" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Reduces IL-1B, IL-6</text>
+    <text x="350" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Anti-fibrotic action</text>
+    <text x="350" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Collagen reorganization</text>
+    <line x1="265" y1="190" x2="435" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="350" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="350" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Systemic repair</text>
+    <text x="350" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">&#38; scar prevention</text>
+
+    <!-- GHK-Cu -->
+    <rect x="475" y="10" width="210" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="580" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">GHK-Cu</text>
+    <text x="580" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">PHASE 3: REMODELING</text>
+    <line x1="495" y1="65" x2="665" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="580" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Collagen &#38; elastin</text>
+    <text x="580" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">synthesis stimulation</text>
+    <text x="580" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="580" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Gene expression reset</text>
+    <text x="580" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Antioxidant copper chelation</text>
+    <text x="580" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">NF-kB suppression</text>
+    <line x1="495" y1="190" x2="665" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="580" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="580" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Structural protein</text>
+    <text x="580" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">&#38; tissue quality</text>
+  </svg>
+</div>
+
+<!-- ========== SYNERGY ========== -->
+<hr class="sep">
+<h2>How the Three Peptides Work Together</h2>
+
+<p>The synergy here is not just marketing language. Each peptide addresses a genuine bottleneck in the healing cascade, and the combination covers gaps that any single compound leaves open.</p>
+
+<table class="tbl">
+<thead><tr><th>Healing Stage</th><th>BPC-157</th><th>TB-500</th><th>GHK-Cu</th></tr></thead>
+<tbody>
+<tr><td><strong>Hours 0-72</strong></td><td class="g">Reduces inflammation, initiates angiogenesis</td><td class="g">Begins cell migration signaling</td><td class="y">Protects cells from oxidative damage</td></tr>
+<tr><td><strong>Days 3-14</strong></td><td class="g">New blood vessels forming</td><td class="g">Repair cells arriving at injury</td><td class="g">Collagen production ramping up</td></tr>
+<tr><td><strong>Weeks 2-6</strong></td><td class="y">Tendon/ligament strengthening</td><td class="g">Scar tissue reduction</td><td class="g">Structural remodeling underway</td></tr>
+<tr><td><strong>Weeks 6+</strong></td><td class="y">Maintenance support</td><td class="y">Flexibility improvement</td><td class="g">Tissue maturation and quality</td></tr>
+</tbody>
+</table>
+
+<p>BPC-157 works locally, concentrating its effects near the injection site. TB-500 works systemically, sending repair signals throughout the body. GHK-Cu focuses on the structural endgame, ensuring that new tissue is strong and properly organized rather than weak scar tissue.</p>
+
+<div class="d-p">
+  <div class="s">Why Stacking Outperforms Single Peptides</div>
+  <p>Think of it like a construction project. BPC-157 builds the roads (blood vessels). TB-500 brings in the workers (cell migration). GHK-Cu provides the building materials (collagen, elastin). Skip any one of these and the project slows down. Together, they create a more complete repair response than any single peptide can achieve alone.</p>
+</div>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">BPC-157's Role</h4>
+    <p><strong>Primary:</strong> Vascular repair and local inflammation control. <strong>Strength:</strong> Targeted healing at specific injury sites. <strong>Limitation:</strong> Does not address systemic repair or collagen quality.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">TB-500's Role</h4>
+    <p><strong>Primary:</strong> Cell recruitment and anti-fibrotic activity. <strong>Strength:</strong> Systemic reach, reduces scar tissue. <strong>Limitation:</strong> Does not directly stimulate collagen synthesis.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">GHK-Cu's Role</h4>
+    <p><strong>Primary:</strong> Structural protein production and tissue remodeling. <strong>Strength:</strong> Long-term tissue quality. <strong>Limitation:</strong> Slower onset, needs existing repair infrastructure.</p>
+  </div>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing and Administration</h2>
+
+<div class="d-r">
+  <div class="s">Important</div>
+  <p>These are research-based protocols, not medical prescriptions. <strong>Always work with a qualified healthcare provider</strong> before starting any peptide regimen. Start with conservative doses and adjust based on your response and tolerance.</p>
+</div>
+
+<h3>Standard Dosing Protocol</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Dose</th><th>Frequency</th><th>Method</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>250-500 mcg</td><td>1-2x daily</td><td>Subcutaneous (near injury)</td><td>Inject close to the affected area for best results</td></tr>
+<tr><td><strong>TB-500</strong></td><td>2.5-5 mg</td><td>2x weekly</td><td>Subcutaneous (any site)</td><td>Systemic peptide, injection site less critical</td></tr>
+<tr><td><strong>GHK-Cu</strong></td><td>1-2 mg</td><td>Daily</td><td>Subcutaneous or topical</td><td>Topical works well for skin; SubQ for systemic effects</td></tr>
+</tbody>
+</table>
+
+<h3>Adjusting by Injury Type</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Tendon/Ligament Focus</h4>
+    <p><strong>BPC-157:</strong> 500 mcg 2x daily near the tendon. <strong>TB-500:</strong> 5 mg 2x weekly. <strong>GHK-Cu:</strong> 1 mg daily SubQ. Emphasize BPC-157 here because tendon injuries respond strongly to localized angiogenesis.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Muscle Injury Focus</h4>
+    <p><strong>BPC-157:</strong> 250 mcg daily. <strong>TB-500:</strong> 5 mg 2x weekly. <strong>GHK-Cu:</strong> 1 mg daily SubQ. Emphasize TB-500 here because muscle recovery depends heavily on cell migration and anti-fibrotic effects.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Post-Surgical Recovery</h4>
+    <p><strong>BPC-157:</strong> 500 mcg daily (start after wound closure). <strong>TB-500:</strong> 2.5 mg 2x weekly. <strong>GHK-Cu:</strong> 2 mg daily. Increase GHK-Cu dose to support collagen deposition in healing surgical sites.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Skin and Wound Healing</h4>
+    <p><strong>BPC-157:</strong> 250 mcg daily. <strong>TB-500:</strong> 2.5 mg 2x weekly. <strong>GHK-Cu:</strong> 2 mg daily (topical + SubQ). The <a href="/articles/glow-stack-ghk-cu-bpc-157-epithalon">Glow Stack</a> shares some overlap with this approach.</p>
+  </div>
+</div>
+
+<h3>Cycling Recommendations</h3>
+
+<p>Run the Wolverine Stack in 4 to 8 week cycles. Most users follow a pattern of 6 weeks on, 4 weeks off. This allows the body's own repair systems to consolidate the healing gains without developing tolerance. For more on cycling strategy, see our <a href="/articles/peptide-cycling-guide">peptide cycling guide</a>.</p>
+
+<p>During the off period, continue supporting recovery with proper nutrition, sleep optimization, and appropriate physical therapy. The peptides initiate repair processes that continue running after you stop dosing.</p>
+
+<div class="d-a">
+  <div class="s">Practical Tips</div>
+  <p>Rotate injection sites regularly to prevent irritation. Follow sterile reconstitution techniques (see our <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a>). Store peptides refrigerated after mixing and use within 30 days. BPC-157 and TB-500 can be combined in the same syringe. GHK-Cu should be injected separately.</p>
+</div>
+
+<!-- ========== RECOVERY TIMELINES ========== -->
+<hr class="sep">
+<h2>Recovery Timelines and Expectations</h2>
+
+<p>Healing follows a predictable sequence when using this stack, but individual timelines vary based on injury severity, age, nutrition, and compliance. Here is what the general arc looks like.</p>
+
+<table class="tbl">
+<thead><tr><th>Injury Type</th><th>Weeks 1-4</th><th>Weeks 4-8</th><th>Weeks 8+</th></tr></thead>
+<tbody>
+<tr><td><strong>Tendonitis</strong></td><td>Pain reduction, decreased stiffness</td><td>Improved strength, better function</td><td class="g">Full strength, minimal pain</td></tr>
+<tr><td><strong>Muscle strain</strong></td><td>Swelling down, pain decreasing</td><td>Regained strength, normal movement</td><td class="g">Full power, no restrictions</td></tr>
+<tr><td><strong>Post-surgical</strong></td><td>Faster wound closure, less inflammation</td><td>Tissue remodeling, increased strength</td><td class="g">Complete healing, mature scar</td></tr>
+<tr><td><strong>Chronic injuries</strong></td><td>Reduced discomfort, better mobility</td><td>Increased function, fewer flare-ups</td><td class="y">Sustained improvement (ongoing)</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Setting Realistic Expectations</div>
+  <p>Healing is not linear. Progress comes in bursts, and plateaus are normal. The body repairs tissue in layers. Some weeks you will notice significant improvement, and other weeks will feel like nothing is happening. Track pain levels, mobility, and function weekly rather than daily to get an accurate picture of your trajectory.</p>
+</div>
+
+<h3>Factors That Affect Your Results</h3>
+
+<div class="sr">
+  <div class="sb"><div class="v c1">Age</div><div class="l">Younger Tissues<br>Heal Faster</div></div>
+  <div class="sb"><div class="v c2">Protein</div><div class="l">Nutrition Status<br>Matters Greatly</div></div>
+  <div class="sb"><div class="v c3">Sleep</div><div class="l">GH Peaks During<br>Deep Sleep</div></div>
+  <div class="sb"><div class="v c4">Rehab</div><div class="l">Appropriate Loading<br>Accelerates Repair</div></div>
+</div>
+
+<p>Compliance is the factor that people underestimate most. Consistent dosing at the right frequency matters more than occasional high doses. Missing TB-500 injections, for example, interrupts the cell migration signaling that takes days to build up.</p>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety and Side Effects</h2>
+
+<p>The Wolverine Stack is generally well-tolerated when used at recommended doses with proper technique. Most reported side effects are minor and resolve quickly.</p>
+
+<table class="tbl">
+<thead><tr><th>Potential Issue</th><th>Frequency</th><th>Which Peptide</th><th>Management</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site reactions</strong></td><td class="y">Common</td><td>All three</td><td>Rotate sites, use 29-31 gauge needles</td></tr>
+<tr><td><strong>Mild fatigue</strong></td><td class="y">Occasional</td><td>TB-500</td><td>Dose in the evening, stay well hydrated</td></tr>
+<tr><td><strong>Headaches</strong></td><td class="y">Rare</td><td>BPC-157</td><td>Check hydration, reduce dose temporarily</td></tr>
+<tr><td><strong>Copper overload</strong></td><td class="g">Very rare</td><td>GHK-Cu</td><td>Monitor total copper intake, check serum levels</td></tr>
+<tr><td><strong>Nausea</strong></td><td class="y">Rare</td><td>BPC-157 (oral)</td><td>Take with food, split into smaller doses</td></tr>
+</tbody>
+</table>
+
+<div class="cd cr">
+  <div class="tg">Contraindications</div>
+  <h3>Who Should Not Use This Stack</h3>
+  <p>Do not use if pregnant or breastfeeding. Individuals with Wilson's disease or copper metabolism disorders should avoid GHK-Cu entirely. Those with active cancer should avoid peptides that promote angiogenesis (BPC-157) or cell proliferation (TB-500) unless cleared by an oncologist. Stop immediately and consult your provider if you notice persistent unusual reactions.</p>
+</div>
+
+<div class="d">
+  <div class="s">Monitoring Recommendations</div>
+  <p>Track blood pressure weekly. Note energy levels, sleep quality, and any unusual bruising. If running cycles longer than 6 weeks, consider basic bloodwork including copper levels and inflammatory markers (CRP, ESR). For a complete monitoring protocol, see our <a href="/articles/peptide-bloodwork-guide">peptide bloodwork guide</a>. Report any persistent <a href="/articles/peptide-side-effects-what-to-know">side effects</a> to your healthcare provider promptly.</p>
+</div>
+
+<!-- ========== WHO BENEFITS ========== -->
+<hr class="sep">
+<h2>Who Might Benefit from the Wolverine Stack</h2>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Good Candidates</div>
+    <h3>Situations Where This Stack Fits</h3>
+    <p><strong>Athletes and active individuals</strong> recovering from sports injuries. <strong>Post-surgical patients</strong> looking to support wound healing (with physician clearance). <strong>People with chronic tendon or <a href="/articles/best-peptides-for-joint-health">joint issues</a></strong> that have not responded to conventional treatment. <strong>Those with skin healing concerns</strong> including slow wound closure or poor scar quality.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Manage Expectations</div>
+    <h3>What This Stack Cannot Do</h3>
+    <p>This is not a substitute for surgery when surgery is indicated. It will not fix structural problems like a fully torn ACL or a displaced fracture. It does not replace physical therapy, proper nutrition, or adequate rest. Think of it as an accelerator for your body's existing repair systems, not a replacement for them.</p>
+  </div>
+</div>
+
+<p>For athletes specifically, the Wolverine Stack pairs well with proper rehabilitation protocols. Our <a href="/articles/peptides-for-athletes-guide">peptides for athletes guide</a> covers broader applications. If your primary interest is stacking strategy rather than this specific combo, see the <a href="/articles/peptide-stacking-guide">general peptide stacking guide</a>.</p>
+
+<!-- ========== COST ========== -->
+<hr class="sep">
+<h2>Cost Considerations</h2>
+
+<table class="tbl">
+<thead><tr><th>Component</th><th>Monthly Cost Range</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>$50-$100</td><td>Varies by dose and source quality</td></tr>
+<tr><td><strong>TB-500</strong></td><td>$100-$200</td><td>Higher cost due to larger molecular weight</td></tr>
+<tr><td><strong>GHK-Cu</strong></td><td>$50-$150</td><td>Topical forms are generally cheaper</td></tr>
+<tr><td><strong>Supplies</strong></td><td>$15-$30</td><td>Syringes, bacteriostatic water, alcohol swabs</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>$215-$480</strong></td><td>Per 4-week cycle</td></tr>
+</tbody>
+</table>
+
+<p>Some people start with a two-peptide approach (BPC-157 + TB-500 is the most common pairing) and add GHK-Cu later if they want additional collagen and structural support. This can reduce initial costs by $50 to $150 per month while still covering the core healing mechanisms.</p>
+
+<p>Source quality matters significantly. Third-party tested peptides from reputable suppliers cost more but provide consistent results. Our <a href="/articles/peptide-vendor-red-flags">vendor red flags guide</a> and <a href="/articles/how-to-read-peptide-coa">COA reading guide</a> can help you evaluate suppliers.</p>
+
+<!-- ========== COMPLEMENTARY ========== -->
+<hr class="sep">
+<h2>Complementary Approaches</h2>
+
+<p>Peptides work best when combined with fundamentals that support healing. None of these compounds replace the basics.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Nutrition</h4>
+    <p>Adequate protein (1.6-2.2 g/kg bodyweight), vitamin C for collagen synthesis, zinc for immune function, and copper-rich foods. Collagen peptides as a supplement can provide additional building blocks.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Physical Therapy</h4>
+    <p>Appropriate mechanical loading stimulates healing. Isometric exercises for tendons, progressive resistance for muscles. Too much rest is as problematic as too much activity during recovery.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Sleep and Recovery</h4>
+    <p>Growth hormone peaks during deep sleep. Aim for 7-9 hours. If sleep is an issue, see our <a href="/articles/best-peptides-for-sleep">sleep peptide guide</a>. Red light therapy and intermittent compression can also support circulation to injured areas.</p>
+  </div>
+</div>
+
+<div class="d-t">
+  <div class="s">The Bottom Line on Integration</div>
+  <p>Peptides support healing but do not replace fundamentals. Movement, nutrition, and rest remain essential. The best results come from combining the Wolverine Stack with a structured rehabilitation program rather than relying on the peptides alone.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How soon might I notice changes?</summary>
+    <div class="fa">Most people report some improvement in pain and mobility within 2 to 4 weeks. Full benefits typically take 6 to 8 weeks to materialize. Healing is a process with a biological timeline that peptides can accelerate but not eliminate.</div>
+  </details>
+  <details>
+    <summary>Can I use this stack for joint pain?</summary>
+    <div class="fa">Yes. The stack supports connective tissue repair and reduces inflammation in joints. BPC-157 is particularly relevant for joint capsule and ligament issues, while GHK-Cu supports cartilage health. See our <a href="/articles/best-peptides-for-joint-health">joint health peptide guide</a> for additional options.</div>
+  </details>
+  <details>
+    <summary>Are there medication interactions I should know about?</summary>
+    <div class="fa">No major drug interactions have been documented in the literature. However, always disclose all supplements and peptides to your physician. Those on blood thinners should be aware that BPC-157 promotes angiogenesis, which could theoretically interact with anticoagulant therapy.</div>
+  </details>
+  <details>
+    <summary>Can I add other peptides to this stack?</summary>
+    <div class="fa">Some people add growth hormone secretagogues like <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> or <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> for additional recovery support. Others include <a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1</a> for immune modulation. Start with the core three before adding complexity.</div>
+  </details>
+  <details>
+    <summary>Is long-term use safe?</summary>
+    <div class="fa">Short cycles of 4 to 8 weeks are the most studied approach. Long-term continuous use has not been well studied in humans. Take 4-week breaks between cycles. This allows your body to consolidate repair gains and prevents potential tolerance development.</div>
+  </details>
+  <details>
+    <summary>How should I store these peptides?</summary>
+    <div class="fa">Keep unreconstituted (lyophilized) peptides in the freezer for long-term storage. After reconstituting with bacteriostatic water, refrigerate between 2-8 degrees Celsius and use within 30 days. See our <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a> for step-by-step instructions.</div>
+  </details>
+  <details>
+    <summary>Can GHK-Cu be applied topically instead of injected?</summary>
+    <div class="fa">Yes. Topical GHK-Cu is effective for skin-specific benefits like wound healing, scar improvement, and general skin quality. For systemic connective tissue support (cartilage, tendons, internal tissues), subcutaneous injection is the preferred route. Some people use both simultaneously.</div>
+  </details>
+  <details>
+    <summary>Where should I inject BPC-157 for tendon injuries?</summary>
+    <div class="fa">Inject subcutaneously as close to the affected tendon as possible, but not directly into the tendon itself. Rotate between 2 to 3 spots within a few centimeters of the injury site. Use an insulin syringe (29-31 gauge) for minimal discomfort. Our <a href="/articles/how-to-inject-peptides-subcutaneously">injection guide</a> covers technique in detail.</div>
+  </details>
+</div>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. The peptides discussed here are not FDA-approved for human therapeutic use in the United States. Always consult a qualified healthcare provider before starting any peptide protocol. Individual results vary. Do not use peptides to self-treat serious medical conditions without professional supervision.
+</div>
+
+<hr class="sep">
+
+<p style="font-size:14px;color:var(--mut);">
+<strong>Related reading:</strong>
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/tb-500-complete-guide">TB-500 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Copper Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-vs-tb-500-comparison">BPC-157 vs. TB-500 Comparison</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-stacking-guide">Peptide Stacking Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/tb-500-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">TB-500 Complete Guide</a>
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Copper Peptide Guide</a>
+            <a href="/articles/bpc-157-vs-tb-500-comparison" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 vs. TB-500 Comparison</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

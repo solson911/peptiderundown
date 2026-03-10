@@ -1,0 +1,568 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Advanced Fat Burning Stack: Retatrutide + 5-Amino-1MQ + Cardarine",
+  description: "A deep look at the research stack combining Retatrutide's triple-receptor appetite control, 5-Amino-1MQ's fat cell reprogramming, and Cardarine's PPAR-delta fat oxidation for advanced metabolic studies.",
+  image: "/images/articles/fat-burning-stack.webp",
+  date: "2026-02-15",
+  category: "Peptide Stacks",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Stack &middot; Fat Loss &middot; Metabolic Research</div>
+  <h1>Advanced Fat Burning Stack: Retatrutide + 5-Amino-1MQ + Cardarine</h1>
+  <p class="sub">Three compounds targeting three distinct metabolic pathways: appetite regulation, fat cell reprogramming, and fatty acid oxidation. A research stack designed for multi-angle fat loss investigation.</p>
+  <div class="pills">
+    <span class="pill">Triple GIP/GLP-1/Glucagon Agonist</span>
+    <span class="pill">NNMT Inhibitor</span>
+    <span class="pill">PPAR-Delta Agonist</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">3</div><div class="l">Distinct Metabolic<br>Pathways Targeted</div></div>
+  <div class="sb"><div class="v c2">15%</div><div class="l">Avg Weight Loss<br>Retatrutide (24 wk)</div></div>
+  <div class="sb"><div class="v c3">NNMT</div><div class="l">Enzyme Target<br>of 5-Amino-1MQ</div></div>
+  <div class="sb"><div class="v c4">50%</div><div class="l">Fat Oxidation Boost<br>Cardarine (Primate)</div></div>
+</div>
+
+<p>Most fat loss compounds target a single pathway. You suppress appetite, or you increase energy expenditure, or you shift fuel partitioning. This stack takes a different approach by hitting all three simultaneously.</p>
+
+<p><a href="/articles/retatrutide-complete-guide">Retatrutide</a> controls the intake side through triple-receptor agonism. 5-Amino-1MQ reprograms how fat cells store and release energy at the enzymatic level. Cardarine flips a metabolic switch that tells muscles to prefer burning fat over glucose.</p>
+
+<div class="d d-r">
+  <div class="s">Research Only</div>
+  <p>None of these compounds are FDA-approved for human use. This article covers research findings for educational purposes only. Consult a qualified healthcare provider before considering any compound regimen.</p>
+</div>
+
+<!-- ========== STACK OVERVIEW ========== -->
+<hr class="sep">
+<h2>What Is in This Stack?</h2>
+
+<p>Each compound in this combination addresses a different bottleneck in fat metabolism. The idea is straightforward: reduce energy coming in, make stored fat easier to access, then burn that fat more efficiently.</p>
+
+<table class="tbl">
+<thead><tr><th>Compound</th><th>Type</th><th>Primary Target</th><th>Mechanism</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/retatrutide-complete-guide">Retatrutide</a></strong></td><td>Peptide</td><td>Appetite regulation</td><td class="g">Triple GIP/GLP-1/Glucagon agonist</td></tr>
+<tr><td><strong>5-Amino-1MQ</strong></td><td>Small molecule</td><td>Fat cell reprogramming</td><td class="g">NNMT enzyme inhibitor</td></tr>
+<tr><td><strong>Cardarine (GW501516)</strong></td><td>PPAR agonist</td><td>Fat oxidation</td><td class="g">PPAR-delta receptor activation</td></tr>
+</tbody>
+</table>
+
+<p>The synergy is theoretical but mechanistically logical. Retatrutide reduces caloric intake while boosting hepatic energy expenditure. 5-Amino-1MQ makes adipocytes release their stored triglycerides more readily. Cardarine tells skeletal muscle to oxidize those newly liberated fatty acids.</p>
+
+<div class="d d-t">
+  <div class="s">Why Three Pathways Matter</div>
+  <p>Single-target approaches often hit a ceiling. The body compensates for appetite suppression by downregulating metabolic rate. It compensates for increased oxidation by upregulating hunger signals. Targeting all three pathways simultaneously may reduce compensatory resistance, though this remains an active area of investigation.</p>
+</div>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How Each Compound Works</h2>
+
+<!-- Retatrutide Card -->
+<div class="cd cb">
+  <div class="tg">Compound 1: Appetite and Metabolism</div>
+  <h3>Retatrutide: Triple-Receptor Agonist</h3>
+  <p>Retatrutide is the first triple agonist to hit clinical trials, binding GIP, GLP-1, and glucagon receptors simultaneously. That three-pronged action separates it from <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> (GLP-1 only) and <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> (GIP/GLP-1 dual).</p>
+  <p>GLP-1 activation slows gastric emptying and suppresses appetite at the hypothalamic level. GIP receptor engagement amplifies the GLP-1 signal and may improve insulin sensitivity independently. The glucagon component is what makes Retatrutide unique: it drives hepatic energy expenditure, forcing the liver to burn more calories even at rest (<a href="https://pubmed.ncbi.nlm.nih.gov/37385275/" target="_blank">Jastreboff et al., NEJM 2023</a>).</p>
+</div>
+
+<!-- SVG Mechanism Diagram -->
+<div class="svg-box">
+  <div class="st">Triple-Pathway Fat Loss Mechanism</div>
+  <div class="ss">How each compound targets a different metabolic bottleneck</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="ah" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#2956A6"/></marker>
+      <marker id="ah2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#187A62"/></marker>
+      <marker id="ah3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E3B8A"/></marker>
+    </defs>
+    <!-- Compound boxes -->
+    <rect x="10" y="20" width="150" height="60" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="85" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#2956A6">Retatrutide</text>
+    <text x="85" y="62" text-anchor="middle" font-size="9" fill="#3C3C52">GIP / GLP-1 / Glucagon</text>
+    <rect x="10" y="100" width="150" height="60" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="85" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#187A62">5-Amino-1MQ</text>
+    <text x="85" y="142" text-anchor="middle" font-size="9" fill="#3C3C52">NNMT Inhibitor</text>
+    <rect x="10" y="180" width="150" height="60" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="85" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#6E3B8A">Cardarine</text>
+    <text x="85" y="222" text-anchor="middle" font-size="9" fill="#3C3C52">PPAR-Delta Agonist</text>
+    <!-- Arrows -->
+    <line x1="160" y1="50" x2="270" y2="50" stroke="#2956A6" stroke-width="1.5" marker-end="url(#ah)"/>
+    <line x1="160" y1="130" x2="270" y2="130" stroke="#187A62" stroke-width="1.5" marker-end="url(#ah2)"/>
+    <line x1="160" y1="210" x2="270" y2="210" stroke="#6E3B8A" stroke-width="1.5" marker-end="url(#ah3)"/>
+    <!-- Target boxes -->
+    <rect x="275" y="20" width="160" height="60" rx="10" fill="#fff" stroke="#D9D6CE" stroke-width="1"/>
+    <text x="355" y="43" text-anchor="middle" font-size="11" font-weight="600" fill="#18182A">Appetite + Liver</text>
+    <text x="355" y="60" text-anchor="middle" font-size="9" fill="#86869A">Caloric intake down, hepatic burn up</text>
+    <rect x="275" y="100" width="160" height="60" rx="10" fill="#fff" stroke="#D9D6CE" stroke-width="1"/>
+    <text x="355" y="123" text-anchor="middle" font-size="11" font-weight="600" fill="#18182A">Fat Cell Biology</text>
+    <text x="355" y="140" text-anchor="middle" font-size="9" fill="#86869A">Adipocyte lipolysis increased</text>
+    <rect x="275" y="180" width="160" height="60" rx="10" fill="#fff" stroke="#D9D6CE" stroke-width="1"/>
+    <text x="355" y="203" text-anchor="middle" font-size="11" font-weight="600" fill="#18182A">Muscle Fuel Use</text>
+    <text x="355" y="220" text-anchor="middle" font-size="9" fill="#86869A">Fatty acid oxidation preferred</text>
+    <!-- Convergence arrows -->
+    <line x1="435" y1="50" x2="520" y2="120" stroke="#D9D6CE" stroke-width="1.2"/>
+    <line x1="435" y1="130" x2="520" y2="130" stroke="#D9D6CE" stroke-width="1.2"/>
+    <line x1="435" y1="210" x2="520" y2="140" stroke="#D9D6CE" stroke-width="1.2"/>
+    <!-- Result -->
+    <rect x="525" y="95" width="160" height="70" rx="12" fill="#18182A" stroke="none"/>
+    <text x="605" y="123" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Multi-Angle</text>
+    <text x="605" y="142" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Fat Loss</text>
+  </svg>
+</div>
+
+<!-- 5-Amino-1MQ Card -->
+<div class="cd ct">
+  <div class="tg">Compound 2: Fat Cell Reprogramming</div>
+  <h3>5-Amino-1MQ: NNMT Enzyme Inhibitor</h3>
+  <p>Nicotinamide N-methyltransferase (NNMT) is an enzyme highly expressed in adipose tissue. It regulates the NAD+ salvage pathway and controls how fat cells manage energy. When NNMT activity is high, fat cells become metabolically sluggish. They store more and release less.</p>
+  <p>5-Amino-1MQ blocks NNMT selectively. In mouse models, this inhibition reduced fat mass by 25 to 30 percent without changes to food intake or activity levels (<a href="https://pubmed.ncbi.nlm.nih.gov/32034098/" target="_blank">Neelakantan et al., BBRC 2020</a>). The compound effectively "wakes up" dormant adipocytes, increasing their mitochondrial activity and lipolytic output.</p>
+</div>
+
+<!-- Cardarine Card -->
+<div class="cd cp">
+  <div class="tg">Compound 3: Fat Oxidation Switch</div>
+  <h3>Cardarine (GW501516): PPAR-Delta Agonist</h3>
+  <p>Cardarine is not a peptide. It is a synthetic peroxisome proliferator-activated receptor delta (PPAR-delta) agonist developed originally by GlaxoSmithKline for metabolic and cardiovascular indications. It was abandoned before approval.</p>
+  <p>PPAR-delta activation reprograms gene expression in skeletal muscle, upregulating enzymes involved in fatty acid transport and beta-oxidation. In primate studies, Cardarine increased fat oxidation by roughly 50 percent during exercise (<a href="https://pubmed.ncbi.nlm.nih.gov/15184668/" target="_blank">Tanaka et al., PNAS 2003</a>). It also improved lipid panels, raising HDL and lowering triglycerides.</p>
+</div>
+
+<div class="d d-a">
+  <div class="s">Cardarine Safety Concern</div>
+  <p>Long-term rodent studies showed tumor development at high doses. The relevance of this finding to short-duration human-equivalent dosing remains debated in the research community. Any protocol involving Cardarine should include additional safety monitoring.</p>
+</div>
+
+<!-- ========== SYNERGY ========== -->
+<hr class="sep">
+<h2>How the Synergy Works</h2>
+
+<p>The logic of this stack comes down to bottleneck removal. Each compound clears a different obstacle in the fat loss process, and the result is potentially greater than the sum of individual effects.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Step 1: Reduce Input</h4>
+    <p>Retatrutide suppresses appetite and slows digestion, cutting total caloric intake by 25 to 35 percent in clinical trials.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 2: Unlock Stores</h4>
+    <p>5-Amino-1MQ inhibits NNMT, making adipocytes release stored triglycerides more freely and increasing their own energy expenditure.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 3: Burn Fat</h4>
+    <p>Cardarine activates PPAR-delta in skeletal muscle, telling cells to preferentially oxidize the fatty acids now flooding the bloodstream.</p>
+  </div>
+</div>
+
+<p>Without Cardarine, the liberated fatty acids from 5-Amino-1MQ's action might simply get re-esterified back into storage. Without 5-Amino-1MQ, Cardarine would only oxidize whatever fat the body was already mobilizing. Without Retatrutide, incoming calories could offset the metabolic advantages entirely.</p>
+
+<p>That interconnection is what makes the three-compound approach worth studying. Each one enables the others.</p>
+
+<p>Think of it like a relay race. Retatrutide fires the starting gun by creating an energy deficit. 5-Amino-1MQ carries the baton by freeing stored fat into circulation. Cardarine crosses the finish line by burning those fatty acids in muscle mitochondria. Remove any leg of the relay and the overall result suffers.</p>
+
+<div class="d d-p">
+  <div class="s">Compensatory Adaptation</div>
+  <p>The human body resists fat loss through powerful feedback mechanisms. Leptin drops, ghrelin rises, thyroid output decreases, and non-exercise activity thermogenesis (NEAT) falls. Multi-pathway stacks are designed to overwhelm these compensatory responses by attacking the problem from angles the body cannot simultaneously defend.</p>
+</div>
+
+<!-- ========== RESEARCH DATA ========== -->
+<hr class="sep">
+<h2>Research Findings by Compound</h2>
+
+<h3>Retatrutide Clinical Data</h3>
+
+<p>Phase 2 trial results published in the New England Journal of Medicine showed impressive weight reduction across dose groups over 48 weeks.</p>
+
+<table class="tbl">
+<thead><tr><th>Study Duration</th><th>Metric</th><th>Result</th><th>Population</th></tr></thead>
+<tbody>
+<tr><td>24 weeks</td><td>Body weight change</td><td class="g">Average 15% loss</td><td>Adults with obesity</td></tr>
+<tr><td>12 weeks</td><td>Liver fat reduction</td><td class="g">Up to 70% decrease</td><td>NAFLD patients</td></tr>
+<tr><td>48 weeks</td><td>HbA1c improvement</td><td class="g">Significant reduction</td><td>Type 2 diabetes</td></tr>
+<tr><td>48 weeks</td><td>Muscle mass retention</td><td class="g">Superior to GLP-1 only</td><td>All dose groups</td></tr>
+</tbody>
+</table>
+
+<p>The muscle-sparing effect is particularly relevant for this stack. Most weight loss interventions cause significant lean mass loss, sometimes 30 to 40 percent of total weight lost. Retatrutide's glucagon component appears to shift the ratio toward fat loss specifically.</p>
+
+<h3>5-Amino-1MQ Preclinical Data</h3>
+
+<p>Human clinical data remains limited. Most findings come from animal models and cell culture work, but the results are consistent and mechanistically clear.</p>
+
+<table class="tbl">
+<thead><tr><th>Model</th><th>Observation</th><th>Magnitude</th><th>Mechanism</th></tr></thead>
+<tbody>
+<tr><td>Diet-induced obese mice</td><td>Fat mass reduction</td><td class="g">25 to 30%</td><td>NNMT inhibition</td></tr>
+<tr><td>Human adipocyte culture</td><td>Lipolysis increase</td><td class="g">2 to 3x baseline</td><td>Mitochondrial upregulation</td></tr>
+<tr><td>Mouse metabolic rate</td><td>Energy expenditure</td><td class="g">10 to 15% increase</td><td>AMPK pathway activation</td></tr>
+<tr><td>Insulin sensitivity assay</td><td>Glucose uptake</td><td class="g">Improved</td><td>NAD+ salvage pathway</td></tr>
+</tbody>
+</table>
+
+<p>The mouse data is notable because fat loss occurred without caloric restriction or increased exercise. The compound changed how fat cells functioned at a fundamental level. Whether these findings translate to humans at practical doses remains an open question.</p>
+
+<h3>Cardarine Research Data</h3>
+
+<table class="tbl">
+<thead><tr><th>Study Model</th><th>Endpoint</th><th>Result</th><th>Context</th></tr></thead>
+<tbody>
+<tr><td>Primate exercise study</td><td>Fat oxidation rate</td><td class="g">~50% increase</td><td>During moderate activity</td></tr>
+<tr><td>Human cell lines</td><td>Mitochondrial density</td><td class="g">Increased</td><td>Skeletal muscle tissue</td></tr>
+<tr><td>Clinical lipid panels</td><td>HDL cholesterol</td><td class="g">Improved ratio</td><td>HDL up, LDL stable</td></tr>
+<tr><td>Rodent longevity study</td><td>Tumor incidence</td><td class="r">Increased at high doses</td><td>2-year exposure</td></tr>
+</tbody>
+</table>
+
+<p>The last row in that table is the reason Cardarine never reached market approval. Rodent carcinogenicity data, while debated regarding dose extrapolation, ended the clinical development program. Researchers who include Cardarine in any protocol should weigh this finding seriously.</p>
+
+<h3>What the Combined Data Suggests</h3>
+
+<p>Looking across all three compounds, a pattern emerges. Retatrutide has the strongest clinical evidence base, with Phase 2 human trials demonstrating consistent and significant effects. 5-Amino-1MQ has compelling preclinical data but limited human validation. Cardarine has mixed data: strong metabolic effects paired with concerning long-term safety signals.</p>
+
+<p>This creates an uneven evidence pyramid. The stack's theoretical appeal is strong, but its practical evidence base is only as solid as its weakest component. That distinction matters for anyone designing a research protocol.</p>
+
+<!-- ========== METABOLIC PATHWAYS ========== -->
+<hr class="sep">
+<h2>Metabolic Pathways Explained</h2>
+
+<p>Understanding why these three compounds complement each other requires a closer look at the metabolic systems they affect.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Appetite Signaling</h4>
+    <p>GLP-1 and GIP receptors in the hypothalamus regulate satiety. Retatrutide's triple agonism creates stronger appetite suppression than any single-receptor approach.</p>
+  </div>
+  <div class="mc">
+    <h4>Hepatic Thermogenesis</h4>
+    <p>Glucagon receptor activation in the liver increases energy expenditure through futile cycling. This burns calories even without physical activity.</p>
+  </div>
+  <div class="mc">
+    <h4>NAD+ and Fat Storage</h4>
+    <p>NNMT consumes NAD+ precursors, reducing cellular energy metabolism. Blocking NNMT with 5-Amino-1MQ restores NAD+ levels and reactivates dormant metabolic pathways in adipocytes.</p>
+  </div>
+  <div class="mc">
+    <h4>Fatty Acid Beta-Oxidation</h4>
+    <p>PPAR-delta upregulates CPT1 and other transport enzymes that shuttle fatty acids into mitochondria. Cardarine turns this pathway on at the genetic level.</p>
+  </div>
+</div>
+
+<p>The body normally maintains tight feedback loops between these systems. Increased fat mobilization triggers compensatory appetite increases. Appetite suppression triggers metabolic slowdown. By hitting all three nodes, this stack may disrupt those feedback loops more effectively than any single compound.</p>
+
+<!-- ========== RESEARCH PROTOCOL ========== -->
+<hr class="sep">
+<h2>Research Protocol Considerations</h2>
+
+<p>These are investigational guidelines based on published literature, not treatment recommendations.</p>
+
+<div class="cd ca">
+  <div class="tg">Dosing Overview</div>
+  <h3>Reported Research Ranges</h3>
+  <table class="tbl">
+  <thead><tr><th>Compound</th><th>Study Range</th><th>Frequency</th><th>Route</th><th>Notes</th></tr></thead>
+  <tbody>
+  <tr><td><strong>Retatrutide</strong></td><td>4 to 8 mg</td><td>Once weekly</td><td>Subcutaneous</td><td class="y">Titrate slowly over weeks</td></tr>
+  <tr><td><strong>5-Amino-1MQ</strong></td><td>100 to 200 mg</td><td>Daily</td><td>Oral</td><td class="y">Taken with meals</td></tr>
+  <tr><td><strong>Cardarine</strong></td><td>10 to 20 mg</td><td>Daily</td><td>Oral</td><td class="y">Morning administration</td></tr>
+  </tbody>
+  </table>
+</div>
+
+<h3>Suggested Research Timeline</h3>
+
+<table class="tbl">
+<thead><tr><th>Phase</th><th>Duration</th><th>Focus</th><th>Key Measurements</th></tr></thead>
+<tbody>
+<tr><td><strong>Baseline</strong></td><td>2 weeks</td><td>Pre-protocol data</td><td>Body composition, bloodwork, metabolic rate</td></tr>
+<tr><td><strong>Introduction</strong></td><td>4 weeks</td><td>Gradual titration</td><td><a href="/articles/peptide-side-effects-what-to-know">Side effect</a> monitoring, tolerance assessment</td></tr>
+<tr><td><strong>Full Protocol</strong></td><td>8 to 12 weeks</td><td>All compounds at target</td><td>Weekly metrics, activity logs, <a href="/articles/peptide-bloodwork-guide">bloodwork</a></td></tr>
+<tr><td><strong>Washout</strong></td><td>4 weeks</td><td>Post-protocol</td><td>Rebound assessment, long-term effect tracking</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">Study Design Essentials</div>
+  <p>Proper experimental design requires a control group, consistent dietary conditions, fixed activity protocols, and regular blood panels (pre, mid, and post). All research protocols should undergo ethical review. Animal studies need proper oversight. Human trials require strict regulatory compliance.</p>
+</div>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Potential Side Effects</h2>
+
+<p>Each compound carries its own side effect profile. Combining them does not necessarily multiply risks, but it does add complexity to monitoring.</p>
+
+<div class="cd cr">
+  <div class="tg">Retatrutide</div>
+  <h3>Gastrointestinal Effects Dominate</h3>
+  <p>Nausea is the most commonly reported side effect, especially during dose escalation. Reduced gastric motility can cause fullness, bloating, and occasional constipation. Most subjects report symptom reduction after 4 to 6 weeks at a stable dose. Blood sugar improvements are generally positive but require monitoring for hypoglycemia risk in diabetic populations.</p>
+</div>
+
+<div class="cd ct">
+  <div class="tg">5-Amino-1MQ</div>
+  <h3>Generally Well Tolerated</h3>
+  <p>Published reports describe a mild side effect profile. Occasional headaches and transient flushing have been noted. Some users report minor digestive discomfort that resolves without intervention. The compound's mechanism (NNMT inhibition) does not directly affect major organ systems, which may explain the favorable tolerability data.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Cardarine</div>
+  <h3>Requires Extra Caution</h3>
+  <p>The primary concern is not acute side effects but long-term safety signals. The rodent carcinogenicity data, while involving supraphysiological doses over extended periods, remains a legitimate concern. Any protocol should include additional safeguards: shorter durations, lower doses, and more frequent health monitoring.</p>
+</div>
+
+<!-- ========== PAIRWISE COMBOS ========== -->
+<hr class="sep">
+<h2>Pairwise Combinations</h2>
+
+<p>Not every researcher wants to run all three compounds simultaneously. Studying pairwise combinations first can help isolate which interactions produce the strongest effects.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Retatrutide + 5-Amino-1MQ</h4>
+    <p>Targets intake reduction and fat cell reprogramming. Skips the oxidation enhancer. Good for researchers focused on body composition without the safety questions around Cardarine.</p>
+  </div>
+  <div class="mc">
+    <h4>Retatrutide + Cardarine</h4>
+    <p>Combines appetite suppression with enhanced fat burning. Skips the NNMT pathway. Mechanistically simpler, potentially easier to interpret in study results.</p>
+  </div>
+  <div class="mc">
+    <h4>5-Amino-1MQ + Cardarine</h4>
+    <p>Fat cell reprogramming meets enhanced oxidation. No appetite suppression component. Interesting for studying metabolic effects independent of caloric intake changes.</p>
+  </div>
+</div>
+
+<p>Pairwise studies also help researchers identify which two-compound combination produces the most synergy. That information can guide whether adding the third compound provides enough additional benefit to justify the added complexity and cost.</p>
+
+<!-- ========== COST ========== -->
+<hr class="sep">
+<h2>Research Cost Considerations</h2>
+
+<table class="tbl">
+<thead><tr><th>Compound</th><th>Approx. Monthly Cost</th><th>Primary Cost Drivers</th></tr></thead>
+<tbody>
+<tr><td><strong>Retatrutide</strong></td><td class="y">$800 to $1,200</td><td>Production complexity, purity requirements</td></tr>
+<tr><td><strong>5-Amino-1MQ</strong></td><td class="y">$300 to $500</td><td>Synthesis difficulty, research demand</td></tr>
+<tr><td><strong>Cardarine</strong></td><td>$100 to $200</td><td>Higher availability, simpler molecule</td></tr>
+<tr><td><strong>Total Stack</strong></td><td class="r">$1,200 to $1,900</td><td>Combined monthly research budget</td></tr>
+</tbody>
+</table>
+
+<p>Bulk purchasing and longer-term supply agreements with reputable vendors can reduce costs significantly. Always verify purity through third-party testing. <a href="/articles/how-to-read-peptide-coa">Reading a Certificate of Analysis</a> is essential for any research compound, especially when stacking multiple substances.</p>
+
+<!-- ========== DIET AND LIFESTYLE ========== -->
+<hr class="sep">
+<h2>Supporting Nutrition and Activity</h2>
+
+<p>Compounds do not operate in a vacuum. The metabolic environment created by diet and exercise dramatically influences how each substance performs.</p>
+
+<div class="cd cb">
+  <div class="tg">Nutrition Framework</div>
+  <h3>Dietary Considerations for Metabolic Research</h3>
+  <p><strong>Protein:</strong> 1.6 to 2.2 g/kg of lean body mass. Adequate protein preserves muscle during caloric deficit and supports the muscle-sparing effects of Retatrutide.</p>
+  <p><strong>Carbohydrates:</strong> Moderate intake from low-glycemic sources. This complements Cardarine's fuel-switching effect by not overwhelming the system with easy glucose.</p>
+  <p><strong>Fats:</strong> Emphasis on omega-3s, MCTs, and monounsaturated sources. These provide the substrates that Cardarine's PPAR-delta activation is designed to oxidize.</p>
+  <p><strong>Fiber:</strong> High-fiber vegetables support gut health, which matters when Retatrutide is slowing gastric motility.</p>
+</div>
+
+<p>Dietary consistency is critical for valid research. Any changes to nutrition should be documented. <a href="/articles/peptides-and-fasting-guide">Fasting protocols</a> may interact with these compounds in ways that complicate data interpretation.</p>
+
+<h3>Exercise Considerations</h3>
+
+<p>Cardarine's fat oxidation effects are amplified during physical activity. Moderate-intensity steady-state cardio (Zone 2 heart rate) maximizes the fat-burning window that PPAR-delta activation creates. High-intensity work still has value for overall metabolic health, but the compound's primary benefit shines during sustained aerobic effort.</p>
+
+<p>Resistance training matters too. Retatrutide's muscle-sparing properties work best when muscle tissue receives an anabolic stimulus. Researchers studying body composition should include some form of progressive resistance exercise in their protocol to maintain lean mass during the caloric deficit that Retatrutide creates.</p>
+
+<p>The combination of Zone 2 cardio (for Cardarine synergy) and resistance training (for Retatrutide synergy) creates a well-matched activity protocol for this particular stack.</p>
+
+<!-- ========== ALTERNATIVES ========== -->
+<hr class="sep">
+<h2>Alternative Compounds</h2>
+
+<p>Researchers sometimes substitute individual components based on availability, safety concerns, or specific research questions.</p>
+
+<table class="tbl">
+<thead><tr><th>Replacing</th><th>Alternative</th><th>Trade-Off</th></tr></thead>
+<tbody>
+<tr><td>Retatrutide</td><td><a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a></td><td class="y">GLP-1 only (no glucagon or GIP component)</td></tr>
+<tr><td>Retatrutide</td><td><a href="/articles/tirzepatide-complete-guide">Tirzepatide</a></td><td class="y">Dual agonist (no glucagon component)</td></tr>
+<tr><td>5-Amino-1MQ</td><td><a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a></td><td class="y">Different mechanism, targets lipolysis directly</td></tr>
+<tr><td>Cardarine</td><td>SR9009 (Stenabolic)</td><td class="y">Rev-ErbA agonist, circadian metabolism focus</td></tr>
+<tr><td>Cardarine</td><td><a href="/articles/tesamorelin-ipamorelin-stack-guide">Tesamorelin</a></td><td class="y">GH-mediated fat loss, FDA-approved for lipodystrophy</td></tr>
+</tbody>
+</table>
+
+<p>Each substitution changes the stack's profile. <a href="/articles/semaglutide-vs-tirzepatide-comparison">Comparing GLP-1 receptor agonists</a> is a good starting point for understanding how Retatrutide alternatives differ mechanistically.</p>
+
+<div class="d d-t">
+  <div class="s">Vendor Quality Matters</div>
+  <p>When sourcing research compounds, purity is non-negotiable. Contaminated or underdosed products invalidate research data entirely. Request third-party HPLC and mass spectrometry results for every batch. Watch for <a href="/articles/peptide-vendor-red-flags">common vendor red flags</a> and never assume quality based on price alone.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+  <summary>Who studies these combinations?</summary>
+  <div class="fa">Metabolic researchers, sports scientists studying body composition, biochemists investigating enzyme pathways, and endocrinologists exploring multi-receptor pharmacology. The stack spans several disciplines because each compound comes from a different area of research.</div>
+</details>
+
+<details>
+  <summary>Can you run just two of the three compounds?</summary>
+  <div class="fa">Yes. Many researchers start with pairwise combinations to isolate interactions before adding the third compound. Retatrutide plus 5-Amino-1MQ is a common starting point because it avoids the Cardarine safety questions. See the <a href="/articles/peptide-stacking-guide">peptide stacking guide</a> for general principles on combining compounds.</div>
+</details>
+
+<details>
+  <summary>How soon do effects typically appear?</summary>
+  <div class="fa">Appetite changes from Retatrutide can start within the first week. Metabolic shifts from 5-Amino-1MQ and Cardarine generally take 2 to 4 weeks to become measurable. Visible body composition changes usually require at least 4 to 6 weeks. Full effects of the complete stack may take 8 to 12 weeks to manifest.</div>
+</details>
+
+<details>
+  <summary>What about Cardarine's cancer risk?</summary>
+  <div class="fa">The rodent carcinogenicity data involved high doses over the animals' full lifespan (2 years). Whether this translates to risk at lower doses over shorter durations in humans is genuinely unknown. GlaxoSmithKline terminated development based on this data. Researchers should factor this uncertainty into their risk assessment and consider shorter protocol durations with enhanced monitoring.</div>
+</details>
+
+<details>
+  <summary>Is this stack appropriate for women?</summary>
+  <div class="fa">There is no mechanistic reason these compounds would work differently based on sex. However, hormonal differences affect fat metabolism significantly, and dosing may need adjustment. <a href="/articles/peptides-for-women-guide">Peptides for women</a> covers sex-specific considerations in more detail. Any protocol should account for menstrual cycle phase as a variable.</div>
+</details>
+
+<details>
+  <summary>What bloodwork should be monitored?</summary>
+  <div class="fa">At minimum: comprehensive metabolic panel, lipid panel, fasting insulin and glucose, HbA1c, liver enzymes (ALT, AST, GGT), CBC, and thyroid panel. Retatrutide's effects on blood sugar and Cardarine's effects on lipids make these markers especially important. <a href="/articles/peptide-bloodwork-guide">The bloodwork guide</a> covers optimal testing timing and interpretation.</div>
+</details>
+
+<details>
+  <summary>What alternatives exist for the full stack?</summary>
+  <div class="fa">The <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Tesamorelin + 5-Amino-1MQ + AOD-9604 stack</a> is a common alternative that avoids both Cardarine's safety questions and Retatrutide's limited availability. It targets GH-mediated lipolysis, NNMT inhibition, and direct fat fragment signaling through different but complementary pathways.</div>
+</details>
+
+<details>
+  <summary>How should side effects be managed?</summary>
+  <div class="fa">Document everything. For mild effects (nausea, headaches), observe and continue. For moderate effects (persistent GI distress, unusual fatigue), reduce the dose of the suspected compound or pause it temporarily. For severe effects (chest pain, severe abdominal pain, allergic reactions), stop all compounds immediately and seek medical evaluation. Never ignore safety signals.</div>
+</details>
+
+</div>
+
+<!-- ========== SUMMARY ========== -->
+<hr class="sep">
+<h2>Summary</h2>
+
+<p>This three-compound stack represents one of the most comprehensive approaches to metabolic fat loss research currently being discussed. Retatrutide handles the intake side through triple-receptor appetite suppression and hepatic thermogenesis. 5-Amino-1MQ reprograms fat cells at the enzymatic level, making stored energy more accessible. Cardarine tells skeletal muscle to prefer burning fat as fuel.</p>
+
+<p>The theoretical synergy is compelling. Each compound clears a different metabolic bottleneck, potentially reducing the compensatory adaptations that limit single-compound approaches.</p>
+
+<p>The practical reality is more nuanced. Cardarine carries unresolved safety questions. 5-Amino-1MQ lacks human clinical trial data. Retatrutide is still in clinical development and not yet approved anywhere. Combining three investigational substances multiplies unknowns.</p>
+
+<p>For researchers interested in <a href="/articles/best-peptides-for-fat-loss">peptide-based fat loss</a>, this stack is worth understanding mechanistically even if running the full protocol is not feasible. The principles of multi-pathway targeting, reducing compensatory adaptation, and matching compound mechanisms to metabolic bottlenecks apply to any combination approach.</p>
+
+<h3>Related Reading</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Fat Loss Peptides</h4>
+    <p><a href="/articles/best-peptides-for-fat-loss">Best peptides for fat loss</a> covers the full spectrum of compounds being studied for body composition, from GLP-1 agonists to growth hormone secretagogues.</p>
+  </div>
+  <div class="mc">
+    <h4>Metabolic Stack Alternative</h4>
+    <p>The <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Tesamorelin + 5-Amino-1MQ + AOD-9604 stack</a> offers a different three-compound approach without Cardarine's safety concerns or Retatrutide's limited availability.</p>
+  </div>
+  <div class="mc">
+    <h4>Stacking Principles</h4>
+    <p><a href="/articles/peptide-stacking-guide">The peptide stacking guide</a> explains the core principles behind combining compounds: complementary mechanisms, timing considerations, and safety monitoring frameworks.</p>
+  </div>
+  <div class="mc">
+    <h4>Cycling Protocols</h4>
+    <p><a href="/articles/peptide-cycling-guide">The cycling guide</a> covers when to take breaks, how to structure on/off periods, and why continuous use of some compounds may reduce effectiveness over time.</p>
+  </div>
+</div>
+
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment recommendations. The compounds discussed are investigational research substances not approved by the FDA for human use. Cardarine (GW501516) has known preclinical safety concerns. Never self-administer research compounds. Always consult a qualified healthcare provider before considering any peptide or research compound protocol. Individual results and risks vary. The authors and PeptideRundown assume no liability for actions taken based on this content.
+</div>
+
+<p style="text-align:center;color:var(--mut);font-size:13px;margin-top:40px;">Last updated: ${formattedDate}</p>
+
+</div>
+`;
+---
+<Base frontmatter={frontmatter}>
+  <Fragment slot="head">
+    <style set:html={rawCSS}></style>
+  </Fragment>
+  <div set:html={rawHTML}></div>
+</Base>
