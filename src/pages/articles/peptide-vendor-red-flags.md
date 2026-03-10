@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Article.astro
-title: "Peptide Vendor Red Flags: How to Spot Fake or Low-Quality Peptides — PeptideRundown"
-description: "A practical guide explaining Peptide Vendor Red Flags: How to Spot Fake or Low-Quality Peptides — PeptideRundown."
+title: "Peptide Vendor Red Flags: How to Spot Fake or Low-Quality Peptides | PeptideRundown"
+description: "A practical guide explaining Peptide Vendor Red Flags: How to Spot Fake or Low-Quality Peptides | PeptideRundown."
 image: /images/articles/peptide-vendor-red-flags.webp
 date: "2026-02-28"
 category: "Peptide Guides"
@@ -15,7 +15,7 @@ author: "PeptideRundown Team"
 <div class="hero">
   <div class="hero-k">How-To Guide &middot; Updated February 2026</div>
   <h1>Peptide Vendor Red Flags: How to Spot Fake or Low-Quality Peptides Before You Buy</h1>
-  <p class="sub">Up to 23% of online peptide products are contaminated or mislabeled. One study found semaglutide vials at 7–14% purity — labeled as 99%. Here's how to protect yourself with a systematic verification process that takes less than 10 minutes.</p>
+  <p class="sub">Up to 23% of online peptide products are contaminated or mislabeled. One study found semaglutide vials at 7–14% purity, labeled as 99%. Here's how to protect yourself with a systematic verification process that takes less than 10 minutes.</p>
   <div class="pills">
     <span class="pill">COA Verification</span>
     <span class="pill">Third-Party Testing</span>
@@ -33,13 +33,13 @@ author: "PeptideRundown Team"
 </div>
 
 <div class="disc">
-<strong>⚠️ Medical Disclaimer</strong><br>
+<strong>Medical Disclaimer</strong><br>
 This article is for educational purposes only and is not medical advice. Peptides sold as "research use only" (RUO) are not FDA-approved for human use. Always consult a qualified healthcare provider before starting any peptide protocol. For background on the current regulatory environment, see our guide on <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality in 2026</a>.
 </div>
 
-<p>The peptide market is the Wild West of biochemistry. No FDA oversight for RUO products. No required quality standards. No mandatory testing. The entire burden of verification falls on you — and the consequences of getting it wrong range from wasted money to genuine health risks.</p>
+<p>The peptide market is the Wild West of biochemistry. No FDA oversight for RUO products. No required quality standards. No mandatory testing. The entire burden of verification falls on you, and the consequences of getting it wrong range from wasted money to genuine health risks.</p>
 
-<p>This isn't theoretical. A peer-reviewed 2024 study published in the <em>Journal of Medical Internet Research</em> purchased semaglutide from six online vendors. Three of the orders never arrived (straight-up scams). The three that did arrive contained endotoxins in every sample, and actual purity ranged from just 7.7% to 14.37% — despite labels claiming 99%. A UC Davis cellular biologist has noted that research-grade peptides often contain residual purification chemicals and unwanted peptide fragments.</p>
+<p>This isn't theoretical. A peer-reviewed 2024 study published in the <em>Journal of Medical Internet Research</em> purchased semaglutide from six online vendors. Three of the orders never arrived (straight-up scams). The three that did arrive contained endotoxins in every sample, and actual purity ranged from just 7.7% to 14.37%, despite labels claiming 99%. A UC Davis cellular biologist has noted that research-grade peptides often contain residual purification chemicals and unwanted peptide fragments.</p>
 
 <p>That same environment also contains legitimate, transparency-first vendors producing genuinely high-quality products. The challenge is telling them apart. This guide gives you a systematic process to do exactly that.</p>
 
@@ -54,9 +54,9 @@ This article is for educational purposes only and is not medical advice. Peptide
 <p>No single red flag is a guaranteed indicator of fraud. But when two or more show up together, walk away. When three or more appear, run.</p>
 
 <!-- RED FLAG 1 -->
-<h3>🚩 1. No Batch-Specific COA — or a COA That Never Changes</h3>
+<h3>1. No Batch-Specific COA, or a COA That Never Changes</h3>
 
-<p>A Certificate of Analysis is the absolute minimum documentation a vendor should provide. Not a generic document that covers their entire product line — a COA tied to the specific batch/lot you're purchasing.</p>
+<p>A Certificate of Analysis is the absolute minimum documentation a vendor should provide. Not a generic document that covers their entire product line; it should be a COA tied to the specific batch/lot you're purchasing.</p>
 
 <p>The most common trick in the low-quality vendor playbook is reusing the same COA for months (or years) of production. If a vendor shows you a single beautiful COA from 2024 for a product they're still shipping in 2026, that document tells you nothing about the vial in your hand.</p>
 
@@ -71,30 +71,30 @@ This article is for educational purposes only and is not medical advice. Peptide
 <tr><td><strong>Batch/Lot Number</strong></td><td>Unique ID matching the vial label exactly</td><td class="r">Missing, generic, or same across all products</td></tr>
 <tr><td><strong>Test Date</strong></td><td>Recent, plausible timeline relative to manufacture</td><td class="r">Identical date on every COA, or suspiciously old</td></tr>
 <tr><td><strong>HPLC Purity</strong></td><td>Specific percentage (e.g., 98.7%) with chromatogram</td><td class="r">Round number (99.0%) with no supporting data</td></tr>
-<tr><td><strong>MS Identity</strong></td><td>Observed vs. theoretical mass within instrument tolerance</td><td class="r">No MS data at all — only HPLC purity claimed</td></tr>
+<tr><td><strong>MS Identity</strong></td><td>Observed vs. theoretical mass within instrument tolerance</td><td class="r">No MS data at all; only HPLC purity claimed</td></tr>
 <tr><td><strong>Method Details</strong></td><td>"RP-HPLC, C18 column, water/acetonitrile gradient, UV 220nm"</td><td class="r">"Tested by HPLC" with no further detail</td></tr>
 <tr><td><strong>Lab Information</strong></td><td>Named lab, contact info, report ID or verification code</td><td class="r">No lab identified, or "in-house testing" only</td></tr>
 </tbody>
 </table>
 
-<p><strong>The purity vs. identity trap:</strong> HPLC measures what percentage of the sample is a single compound — but it can't confirm <em>which</em> compound. A peptide missing one amino acid might still read as 99% pure on HPLC. That's why mass spectrometry (MS) confirmation is non-negotiable. Without MS data, you know a sample is pure, but you don't know pure <em>what</em>.</p>
+<p><strong>The purity vs. identity trap:</strong> HPLC measures what percentage of the sample is a single compound, but it can't confirm <em>which</em> compound. A peptide missing one amino acid might still read as 99% pure on HPLC. That's why mass spectrometry (MS) confirmation is non-negotiable. Without MS data, you know a sample is pure, but you don't know pure <em>what</em>.</p>
 
 <!-- RED FLAG 2 -->
-<h3>🚩 2. "Too Good to Be True" Pricing</h3>
+<h3>2. "Too Good to Be True" Pricing</h3>
 
-<p>Peptide synthesis, purification, lyophilization, sterility testing, and third-party verification all cost money. When a vendor's price is dramatically below the market — especially for complex or long-chain peptides — something was skipped.</p>
+<p>Peptide synthesis, purification, lyophilization, sterility testing, and third-party verification all cost money. When a vendor's price is dramatically below the market, especially for complex or long-chain peptides — something was skipped.</p>
 
-<p>The most common cost-cutting measures in order of frequency: reduced HPLC purification cycles (yielding lower true purity), skipped third-party testing (in-house COA only), smaller actual fill weight than labeled, and no endotoxin or sterility screening. On platforms like TikTok, sellers based in China offer peptide vials for as little as $5 — with zero documentation and unknown contents.</p>
+<p>The most common cost-cutting measures in order of frequency: reduced HPLC purification cycles (yielding lower true purity), skipped third-party testing (in-house COA only), smaller actual fill weight than labeled, and no endotoxin or sterility screening. On platforms like TikTok, sellers based in China offer peptide vials for as little as $5, with zero documentation and unknown contents.</p>
 
 <div class="d-a">
 <div class="s">Price Floor Reality Check</div>
-<p>For common peptides like BPC-157 (5mg) or TB-500 (5mg), legitimate vendors with third-party testing typically charge $25–$65 per vial. Prices below $15 for these products should trigger immediate scrutiny of what testing was performed (if any). Unusual or complex peptides (semaglutide, retatrutide, tirzepatide) cost significantly more to synthesize — bargain prices here are even more suspicious.</p>
+<p>For common peptides like BPC-157 (5mg) or TB-500 (5mg), legitimate vendors with third-party testing typically charge $25–$65 per vial. Prices below $15 for these products should trigger immediate scrutiny of what testing was performed (if any). Unusual or complex peptides (semaglutide, retatrutide, tirzepatide) cost significantly more to synthesize, so bargain prices here are even more suspicious.</p>
 </div>
 
 <!-- RED FLAG 3 -->
-<h3>🚩 3. No Credible Third-Party Testing</h3>
+<h3>3. No Credible Third-Party Testing</h3>
 
-<p>In-house testing is a starting point, not proof. When the vendor who profits from selling you a product is also the one telling you it's pure, you have a conflict of interest — not verification.</p>
+<p>In-house testing is a starting point, not proof. When the vendor who profits from selling you a product is also the one telling you it's pure, you have a conflict of interest, not verification.</p>
 
 <p>Third-party testing from an independent lab is the single strongest quality signal in the RUO peptide market. But not all third-party claims are equal. The key difference is <strong>verifiability</strong>.</p>
 
@@ -111,18 +111,18 @@ This article is for educational purposes only and is not medical advice. Peptide
 
 <div class="d-t">
 <div class="s">Verification Is Everything</div>
-<p>Any vendor can photoshop a COA. That's why verification capability matters more than the document itself. If the testing lab offers QR codes, online report lookups, or verifiable report IDs — <strong>use them</strong>. Go to the lab's official website (not a link the vendor gave you) and confirm the results match. This single step eliminates the majority of fraudulent documentation.</p>
+<p>Any vendor can photoshop a COA. That's why verification capability matters more than the document itself. If the testing lab offers QR codes, online report lookups, or verifiable report IDs, <strong>use them</strong>. Go to the lab's official website (not a link the vendor gave you) and confirm the results match. This single step eliminates the majority of fraudulent documentation.</p>
 </div>
 
 <!-- RED FLAG 4 -->
-<h3>🚩 4. Fabricated or Doctored COA Documents</h3>
+<h3>4. Fabricated or Doctored COA Documents</h3>
 
-<p>Counterfeit COAs are more common than most buyers realize — and they're getting more sophisticated. In 2026, a fake vendor can produce professional-looking documentation that fools casual inspection. You need to know what to look for.</p>
+<p>Counterfeit COAs are more common than most buyers realize, and they're getting more sophisticated. In 2026, a fake vendor can produce professional-looking documentation that fools casual inspection. You need to know what to look for.</p>
 
 <div class="g2">
 <div class="mc">
 <h4>Signs of a Fake COA</h4>
-<p>Misaligned text or inconsistent fonts within sections. Graphics that appear cut and pasted. Scanned or photographed paper documents instead of clean PDFs. Round purity numbers that never vary (99.0% every single batch). No chromatogram image — just a purity number. Method descriptions that are vague or absent.</p>
+<p>Misaligned text or inconsistent fonts within sections. Graphics that appear cut and pasted. Scanned or photographed paper documents instead of clean PDFs. Round purity numbers that never vary (99.0% every single batch). No chromatogram image, just a purity number. Method descriptions that are vague or absent.</p>
 </div>
 <div class="mc">
 <h4>Signs of a Real COA</h4>
@@ -133,9 +133,9 @@ This article is for educational purposes only and is not medical advice. Peptide
 <p>One well-documented pattern: vendors using a legitimate COA header from a known lab, then modifying the results underneath. This is why you always verify through the lab's own website, not through documents the vendor provides. If a vendor refuses to give you a report ID or verification code, that's your answer.</p>
 
 <!-- RED FLAG 5 -->
-<h3>🚩 5. Vague Identity and Zero Accountability</h3>
+<h3>5. Vague Identity and Zero Accountability</h3>
 
-<p>If you can't figure out who is behind a peptide company, you have no recourse when something goes wrong. That doesn't mean every vendor needs a public storefront — plenty of legitimate operations run lean. But basic business indicators should be present.</p>
+<p>If you can't figure out who is behind a peptide company, you have no recourse when something goes wrong. That doesn't mean every vendor needs a public storefront; plenty of legitimate operations run lean. But basic business indicators should be present.</p>
 
 <div class="d-r">
 <div class="s">Accountability Red Flags</div>
@@ -143,39 +143,39 @@ This article is for educational purposes only and is not medical advice. Peptide
 </div>
 
 <!-- RED FLAG 6 -->
-<h3>🚩 6. Documentation That Doesn't Match the Product</h3>
+<h3>6. Documentation That Doesn't Match the Product</h3>
 
 <p>This happens more often than people expect. You receive a vial, you request the COA, and something doesn't line up. Before trusting any document, verify these specifics:</p>
 
-<p><strong>Batch number on vial vs. batch number on COA</strong> — must be an exact match. <strong>Peptide name and salt form</strong> (acetate vs. TFA salt vs. free base) — when relevant, this affects reconstitution math. <strong>Fill weight</strong> — a COA showing 10mg tested on a 5mg vial is a mismatch. <strong>Timeline logic</strong> — the test date should fall after manufacture and before the expiration date. Testing that occurs after the stated expiration is a serious red flag.</p>
+<p><strong>Batch number on vial vs. batch number on COA</strong>: must be an exact match. <strong>Peptide name and salt form</strong> (acetate vs. TFA salt vs. free base): when relevant, this affects reconstitution math. <strong>Fill weight</strong>: a COA showing 10mg tested on a 5mg vial is a mismatch. <strong>Timeline logic</strong>: the test date should fall after manufacture and before the expiration date. Testing that occurs after the stated expiration is a serious red flag.</p>
 
 <!-- RED FLAG 7 -->
-<h3>🚩 7. Therapeutic Claims and Human-Use Marketing</h3>
+<h3>7. Therapeutic Claims and Human-Use Marketing</h3>
 
-<p>This one is both a quality signal and a legal signal. RUO peptides are, by definition, not approved for human use. When a vendor markets them with weight loss testimonials, before-and-after photos, dosing guides for injection, or language like "anti-aging," "fat loss," or "muscle building" — they're violating federal law and telling you something about their relationship with compliance.</p>
+<p>This one is both a quality signal and a legal signal. RUO peptides are, by definition, not approved for human use. When a vendor markets them with weight loss testimonials, before-and-after photos, dosing guides for injection, or language like "anti-aging," "fat loss," or "muscle building," they're violating federal law and telling you something about their relationship with compliance.</p>
 
 <p>The FDA has made this extremely clear through enforcement. In late 2024, the agency issued warning letters to vendors specifically because "research use only" disclaimers were contradicted by obvious human-use marketing. In September 2025, the FDA sent over 50 warning letters in a single month to peptide vendors and compounders. The agency has explicitly stated that it considers RUO disclaimers a "ruse" when accompanied by dosing instructions, syringes, bacteriostatic water bundles, or social media showing transformation results.</p>
 
 <div class="d-a">
 <div class="s">Why This Matters for Quality</div>
-<p>Vendors who are willing to ignore FDA marketing rules are also statistically more likely to cut corners on testing and documentation. Compliance isn't a personality trait — it's a system. When a vendor's marketing tells you they don't care about one set of rules, their QC practices are probably consistent with that attitude.</p>
+<p>Vendors who are willing to ignore FDA marketing rules are also statistically more likely to cut corners on testing and documentation. Compliance isn't a personality trait; it's a system. When a vendor's marketing tells you they don't care about one set of rules, their QC practices are probably consistent with that attitude.</p>
 </div>
 
 <!-- RED FLAG 8 -->
-<h3>🚩 8. No Endotoxin or Sterility Testing</h3>
+<h3>8. No Endotoxin or Sterility Testing</h3>
 
-<p>Most COA conversations focus on purity and identity — and those matter. But for injectable peptides, endotoxin and sterility testing are arguably more immediately dangerous when missing.</p>
+<p>Most COA conversations focus on purity and identity, and those matter. But for injectable peptides, endotoxin and sterility testing are arguably more immediately dangerous when missing.</p>
 
-<p>Endotoxins are fragments of bacterial cell walls that trigger inflammatory immune responses. They can be present even in samples that are "sterile" (no live bacteria). The 2024 JMIR semaglutide study found endotoxins in all three vials tested, with one sample containing levels high enough to suggest production contamination. Standard HPLC and MS testing do not detect endotoxins — separate LAL (Limulus Amebocyte Lysate) testing is required.</p>
+<p>Endotoxins are fragments of bacterial cell walls that trigger inflammatory immune responses. They can be present even in samples that are "sterile" (no live bacteria). The 2024 JMIR semaglutide study found endotoxins in all three vials tested, with one sample containing levels high enough to suggest production contamination. Standard HPLC and MS testing do not detect endotoxins. Separate LAL (Limulus Amebocyte Lysate) testing is required.</p>
 
 <table class="tbl">
 <thead><tr><th>Test Type</th><th>What It Detects</th><th>Why It Matters</th><th>Included in Standard COA?</th></tr></thead>
 <tbody>
 <tr><td><strong>HPLC</strong></td><td>Purity (% target peptide vs. peptide impurities)</td><td>Tells you how clean the synthesis was</td><td class="g">Usually yes</td></tr>
 <tr><td><strong>Mass Spectrometry</strong></td><td>Molecular identity (correct peptide sequence)</td><td>Confirms you have the right compound</td><td class="g">Often included</td></tr>
-<tr><td><strong>Endotoxin (LAL)</strong></td><td>Bacterial cell wall fragments</td><td>Prevents inflammatory/immune reactions</td><td class="r">Usually separate — ask for it</td></tr>
-<tr><td><strong>Sterility</strong></td><td>Live microorganisms</td><td>Prevents infection from injectable products</td><td class="r">Rarely included — premium vendors only</td></tr>
-<tr><td><strong>Heavy Metals</strong></td><td>Lead, arsenic, mercury, cadmium</td><td>Prevents chronic toxicity</td><td class="r">Rarely included — ask if concerned</td></tr>
+<tr><td><strong>Endotoxin (LAL)</strong></td><td>Bacterial cell wall fragments</td><td>Prevents inflammatory/immune reactions</td><td class="r">Usually separate; ask for it</td></tr>
+<tr><td><strong>Sterility</strong></td><td>Live microorganisms</td><td>Prevents infection from injectable products</td><td class="r">Rarely included; premium vendors only</td></tr>
+<tr><td><strong>Heavy Metals</strong></td><td>Lead, arsenic, mercury, cadmium</td><td>Prevents chronic toxicity</td><td class="r">Rarely included; ask if concerned</td></tr>
 <tr><td><strong>Residual Solvents</strong></td><td>TFA, acetonitrile, DCM from synthesis</td><td>Prevents chemical toxicity</td><td class="y">Sometimes in GMP COAs</td></tr>
 </tbody>
 </table>
@@ -183,9 +183,9 @@ This article is for educational purposes only and is not medical advice. Peptide
 <p>The best vendors provide at minimum HPLC + MS + endotoxin testing. Heavy metals and sterility testing are additional confidence builders, particularly for injectable products.</p>
 
 <!-- RED FLAG 9 -->
-<h3>🚩 9. Artificial Scarcity, Hype Language, and Influencer-Driven Marketing</h3>
+<h3>9. Artificial Scarcity, Hype Language, and Influencer-Driven Marketing</h3>
 
-<p>Flash sales with countdown timers. "Only 12 vials left!" urgency messaging. Influencer discount codes from fitness personalities with no scientific background. These are e-commerce tactics, not quality indicators — and they correlate strongly with vendors who prioritize conversion over compliance.</p>
+<p>Flash sales with countdown timers. "Only 12 vials left!" urgency messaging. Influencer discount codes from fitness personalities with no scientific background. These are e-commerce tactics, not quality indicators, and they correlate strongly with vendors who prioritize conversion over compliance.</p>
 
 <p>The peptide market has become increasingly influenced by social media promotion, with vendors cultivating relationships with influencers who provide subjective reviews without any analytical verification. A positive YouTube review or Reddit endorsement, no matter how detailed, is not a substitute for batch-specific lab data.</p>
 
@@ -205,7 +205,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 <div class="cd cb">
 <span class="tg">Strong Signal</span>
 <h3>Published HPLC Chromatograms and MS Data</h3>
-<p>Not just a purity percentage — the actual raw data. A chromatogram should show a clean, dominant peak. MS data should show observed mass matching theoretical mass within instrument tolerance. Vendors who share this data proactively (without being asked) are demonstrating confidence in their product.</p>
+<p>Not just a purity percentage, but the actual raw data. A chromatogram should show a clean, dominant peak. MS data should show observed mass matching theoretical mass within instrument tolerance. Vendors who share this data proactively (without being asked) are demonstrating confidence in their product.</p>
 </div>
 
 <div class="cd cp">
@@ -223,7 +223,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 <div class="cd ct">
 <span class="tg">Bonus Points</span>
 <h3>Customer-Funded Independent Testing Programs</h3>
-<p>Some vendors actively encourage customers to send their products for independent testing, and offer store credit for the testing cost. This is a strong confidence signal — a vendor who invites external scrutiny has nothing to hide.</p>
+<p>Some vendors actively encourage customers to send their products for independent testing, and offer store credit for the testing cost. This is a strong confidence signal. A vendor who invites external scrutiny has nothing to hide.</p>
 </div>
 
 <hr class="sep">
@@ -262,7 +262,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 
 <div class="step">
 <h4>Confirm MS Identity</h4>
-<p>The mass spectrometry data should show an observed molecular weight within a few daltons of the theoretical mass. A large discrepancy means you may have the wrong peptide entirely — regardless of what the purity reads.</p>
+<p>The mass spectrometry data should show an observed molecular weight within a few daltons of the theoretical mass. A large discrepancy means you may have the wrong peptide entirely, regardless of what the purity reads.</p>
 </div>
 
 <div class="step">
@@ -282,7 +282,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 <!-- ===== UNDERSTANDING PURITY ===== -->
 <h2>Understanding Purity: What the Numbers Actually Mean</h2>
 
-<p>Purity is the most-cited number on any COA and the most misunderstood metric in peptide quality control. Here's what the numbers tell you — and what they don't.</p>
+<p>Purity is the most-cited number on any COA and the most misunderstood metric in peptide quality control. Here's what the numbers tell you, and what they don't.</p>
 
 <table class="tbl">
 <thead><tr><th>Purity Level</th><th>What It Means</th><th>Suitable For</th></tr></thead>
@@ -294,9 +294,9 @@ This article is for educational purposes only and is not medical advice. Peptide
 </tbody>
 </table>
 
-<p><strong>Critical distinction:</strong> HPLC purity measures only UV-absorbing peptide-related impurities. It does not detect water content, salts, non-chromophore contaminants, endotoxins, heavy metals, or residual solvents. A peptide can read 99% pure by HPLC and still contain dangerous levels of non-peptide contaminants. This is why purity alone is never enough — identity confirmation (MS), endotoxin testing, and ideally sterility testing are all separate and necessary data points.</p>
+<p><strong>Critical distinction:</strong> HPLC purity measures only UV-absorbing peptide-related impurities. It does not detect water content, salts, non-chromophore contaminants, endotoxins, heavy metals, or residual solvents. A peptide can read 99% pure by HPLC and still contain dangerous levels of non-peptide contaminants. This is why purity alone is never enough. Identity confirmation (MS), endotoxin testing, and ideally sterility testing are all separate and necessary data points.</p>
 
-<p>Also watch for the distinction between <strong>HPLC purity</strong> and <strong>net peptide content</strong>. A vial labeled "5mg BPC-157" with 98% HPLC purity might contain only 3.5–4mg of actual peptide after accounting for water, counter-ions (acetate/TFA), and salts. This is normal and expected — but it's a different number than purity, and dishonest vendors sometimes blur the distinction.</p>
+<p>Also watch for the distinction between <strong>HPLC purity</strong> and <strong>net peptide content</strong>. A vial labeled "5mg BPC-157" with 98% HPLC purity might contain only 3.5–4mg of actual peptide after accounting for water, counter-ions (acetate/TFA), and salts. This is normal and expected, but it's a different number than purity, and dishonest vendors sometimes blur the distinction.</p>
 
 <hr class="sep">
 
@@ -306,7 +306,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 <div class="cd cr">
 <span class="tg">Case Study: Semaglutide</span>
 <h3>The 2024 JMIR Online Pharmacy Study</h3>
-<p>Researchers purchased semaglutide from six online vendors found through standard search engines. Three orders (Ozempic prefilled pens) never arrived — they were nondelivery scams requesting additional "customs fees" of $650–$1,200. The three lyophilized vial orders that did arrive were tested by liquid chromatography-mass spectrometry. Every sample contained endotoxins. Actual purity ranged from 7.7% to 14.37% despite label claims of 99%. The semaglutide content exceeded labeled amounts by 29–39% — meaning even the dose was wrong. None of the vendors required a prescription or any health information.</p>
+<p>Researchers purchased semaglutide from six online vendors found through standard search engines. Three orders (Ozempic prefilled pens) never arrived; they were nondelivery scams requesting additional "customs fees" of $650–$1,200. The three lyophilized vial orders that did arrive were tested by liquid chromatography-mass spectrometry. Every sample contained endotoxins. Actual purity ranged from 7.7% to 14.37% despite label claims of 99%. The semaglutide content exceeded labeled amounts by 29–39%, meaning even the dose was wrong. None of the vendors required a prescription or any health information.</p>
 <p style="font-size:13px;color:var(--mut);margin-top:12px;">Source: Ashraf et al., <em>J Med Internet Res</em> 2024;26:e65440</p>
 </div>
 
@@ -341,19 +341,19 @@ This article is for educational purposes only and is not medical advice. Peptide
 <p>Print this out or screenshot it. Use it every time you evaluate a new vendor.</p>
 
 <div class="cl">
-<div class="cl-i"><div class="ck">☐</div><div>Provides batch-specific COAs (not generic documents)</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>Uses a named, independent third-party testing lab</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>COAs include both HPLC purity and MS identity confirmation</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>COA verification is possible through the lab's own website</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>HPLC chromatograms are available (not just a percentage)</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>Endotoxin testing is performed (especially for injectable products)</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>Batch numbers rotate over time (new batches = new test data)</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>Pricing is within market range (not suspiciously cheap)</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>Clear storage and shipping protocols are documented</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>Customer support can answer technical questions about their products</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>Refund or reship policy exists for documentation mismatches</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>No therapeutic claims, dosing guides, or human-use marketing</div></div>
-<div class="cl-i"><div class="ck">☐</div><div>Identifiable business entity with stable domain and contact information</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>Provides batch-specific COAs (not generic documents)</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>Uses a named, independent third-party testing lab</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>COAs include both HPLC purity and MS identity confirmation</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>COA verification is possible through the lab's own website</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>HPLC chromatograms are available (not just a percentage)</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>Endotoxin testing is performed (especially for injectable products)</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>Batch numbers rotate over time (new batches = new test data)</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>Pricing is within market range (not suspiciously cheap)</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>Clear storage and shipping protocols are documented</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>Customer support can answer technical questions about their products</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>Refund or reship policy exists for documentation mismatches</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>No therapeutic claims, dosing guides, or human-use marketing</div></div>
+<div class="cl-i"><div class="ck">[ ]</div><div>Identifiable business entity with stable domain and contact information</div></div>
 </div>
 
 <p><strong>Scoring:</strong> 11–13 checks = high confidence. 8–10 = acceptable with caveats. Below 8 = proceed with extreme caution or find a different vendor.</p>
@@ -367,7 +367,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 
 <details>
 <summary>What purity level should I look for?</summary>
-<div class="fa">For most research contexts, 95%+ by HPLC is the standard floor. However, purity alone doesn't tell the whole story — you also need identity confirmation (MS), and ideally endotoxin testing for injectable products. A 97% pure peptide with confirmed identity and clean endotoxin results is a better product than a 99% pure peptide with no MS data and no contamination screening.</div>
+<div class="fa">For most research contexts, 95%+ by HPLC is the standard floor. However, purity alone doesn't tell the whole story. You also need identity confirmation (MS), and ideally endotoxin testing for injectable products. A 97% pure peptide with confirmed identity and clean endotoxin results is a better product than a 99% pure peptide with no MS data and no contamination screening.</div>
 </details>
 
 <details>
@@ -377,7 +377,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 
 <details>
 <summary>Is Janoshik testing the "gold standard"?</summary>
-<div class="fa">Janoshik is the most widely used independent testing lab in the RUO peptide community, and their QR-code verification system is a genuine trust advantage. However, they are not ISO 17025 accredited, and some critics note limitations in their methodology (single HPLC run, no blind testing for most products). They're a strong signal when present — but not the only reputable lab. Vanguard Laboratory (ISO 17025 accredited), Chromate, MZ Biolabs, and Colmaric Analyticals are also credible independent options.</div>
+<div class="fa">Janoshik is the most widely used independent testing lab in the RUO peptide community, and their QR-code verification system is a genuine trust advantage. However, they are not ISO 17025 accredited, and some critics note limitations in their methodology (single HPLC run, no blind testing for most products). They're a strong signal when present, but not the only reputable lab. Vanguard Laboratory (ISO 17025 accredited), Chromate, MZ Biolabs, and Colmaric Analyticals are also credible independent options.</div>
 </details>
 
 <details>
@@ -387,12 +387,12 @@ This article is for educational purposes only and is not medical advice. Peptide
 
 <details>
 <summary>How should peptides be stored?</summary>
-<div class="fa">Lyophilized (freeze-dried) peptides should be stored at -8°C to -20°C (freezer) for long-term stability of 1–2+ years. Reconstituted peptides should be refrigerated at 2–8°C (36–46°F) and used within 1–2 months. Avoid repeated freeze-thaw cycles with reconstituted solutions — aliquot into single-use portions when possible. For a complete storage walkthrough, see our guide on <a href="/articles/how-to-store-peptides">how to store peptides</a>.</div>
+<div class="fa">Lyophilized (freeze-dried) peptides should be stored at -8°C to -20°C (freezer) for long-term stability of 1–2+ years. Reconstituted peptides should be refrigerated at 2–8°C (36–46°F) and used within 1–2 months. Avoid repeated freeze-thaw cycles with reconstituted solutions. Aliquot into single-use portions when possible. For a complete storage walkthrough, see our guide on <a href="/articles/how-to-store-peptides">how to store peptides</a>.</div>
 </details>
 
 <details>
 <summary>What does "pharmaceutical grade" vs. "research grade" mean?</summary>
-<div class="fa">Pharmaceutical-grade peptides are produced in GMP (Good Manufacturing Practice) facilities with validated processes, environmental controls, documented procedures, and extensive contamination screening including endotoxin, sterility, residual solvents, and heavy metals. Research-grade (RUO) peptides are produced with fewer regulatory requirements — testing is at the manufacturer's discretion. "Pharmaceutical grade" is a marketing claim unless backed by specific GMP documentation — evaluate the evidence, not the label.</div>
+<div class="fa">Pharmaceutical-grade peptides are produced in GMP (Good Manufacturing Practice) facilities with validated processes, environmental controls, documented procedures, and extensive contamination screening including endotoxin, sterility, residual solvents, and heavy metals. Research-grade (RUO) peptides are produced with fewer regulatory requirements, and testing is at the manufacturer's discretion. "Pharmaceutical grade" is a marketing claim unless backed by specific GMP documentation. Evaluate the evidence, not the label.</div>
 </details>
 
 <details>
@@ -402,7 +402,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 
 <details>
 <summary>Should I send my peptides for independent testing myself?</summary>
-<div class="fa">If you're using peptides regularly and want maximum confidence, yes. Services like Janoshik allow individual consumers to submit samples for testing. The cost is typically $50–$150 per test depending on the panel. Some vendors even offer store credit if you independently test their products — a sign of confidence in their supply chain. At minimum, consider testing your first order from any new vendor.</div>
+<div class="fa">If you're using peptides regularly and want maximum confidence, yes. Services like Janoshik allow individual consumers to submit samples for testing. The cost is typically $50–$150 per test depending on the panel. Some vendors even offer store credit if you independently test their products, a sign of confidence in their supply chain. At minimum, consider testing your first order from any new vendor.</div>
 </details>
 
 </div>
@@ -412,7 +412,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 <!-- ===== BOTTOM LINE ===== -->
 <h2>The Bottom Line</h2>
 
-<p>The peptide market operates in a regulatory gray zone, and that's unlikely to change soon. The burden of quality verification falls on you — and that's actually fine, because the tools to verify are available if you use them.</p>
+<p>The peptide market operates in a regulatory gray zone, and that's unlikely to change soon. The burden of quality verification falls on you, and that's actually fine, because the tools to verify are available if you use them.</p>
 
 <p>The entire process comes down to three questions: <strong>Can I confirm what's in this vial (identity)?</strong> <strong>Can I confirm how pure it is (purity)?</strong> <strong>Can I confirm it's safe to use (contaminants)?</strong> If you can't answer all three with independently verifiable documentation, you don't actually know what you're working with.</p>
 
@@ -420,7 +420,7 @@ This article is for educational purposes only and is not medical advice. Peptide
 
 <div class="disc">
 <strong>Educational Disclaimer</strong><br>
-This article is for educational and informational purposes only. It does not constitute medical, legal, or professional advice. Peptides labeled "for research use only" are not approved by the FDA for human use. Any decision to purchase or use peptides is made at your own risk. Always consult a qualified healthcare provider. For more on the legal landscape, see our complete guide to <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality and FDA regulations in 2026</a>.
+This article is for educational and informational purposes only. It does not constitute medical, legal, or professional advice. Peptides labeled "for research use only" are not approved by the FDA for human use. Any decision to purchase or use peptides is made at your own risk. Always consult a qualified healthcare provider. For more on the legal environment, see our complete guide to <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality and FDA regulations in 2026</a>.
 </div>
 
 <!-- REFERENCES -->
