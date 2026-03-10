@@ -60,13 +60,13 @@ Cost-effectiveness analysis reveals:
 
 | Peptide | Primary Mechanism | Key Benefits | Timeline | Cost/Mo | Safety |
 |---------|-------------------|--------------|----------|---------|--------|
-| **Epithalon** | Telomerase activation | Cellular longevity, DNA protection | 6-12 mo | $200-400 | ★★★★☆ |
-| **GHK-Cu** | Gene expression reset | Skin rejuvenation, tissue repair | 1-3 mo | $50-300 | ★★★★★ |
-| **BPC-157** | Angiogenesis | Systemic healing, gut repair | 2-8 wk | $50-100 | ★★★★★ |
-| **Thymosin α1** | Immune modulation | Infection resistance, inflammation | 4-12 wk | $150-250 | ★★★☆☆ |
-| **CJC-1295** | GH secretion | Body composition, sleep, recovery | 4-12 wk | $100-200 | ★★★★☆ |
-| **Ipamorelin** | GH secretion | Metabolic health, cognition | 4-12 wk | $100-150 | ★★★★☆ |
-| **NAD+** | Sirtuin activation | Energy, DNA repair, longevity | 2-8 wk | $100-200 | ★★★★☆ |
+| **Epithalon** | Telomerase activation | Cellular longevity, DNA protection | 6-12 mo | $200-400 | 4/5 |
+| **GHK-Cu** | Gene expression reset | Skin rejuvenation, tissue repair | 1-3 mo | $50-300 | 5/5 |
+| **BPC-157** | Angiogenesis | Systemic healing, gut repair | 2-8 wk | $50-100 | 5/5 |
+| **Thymosin α1** | Immune modulation | Infection resistance, inflammation | 4-12 wk | $150-250 | 3/5 |
+| **CJC-1295** | GH secretion | Body composition, sleep, recovery | 4-12 wk | $100-200 | 4/5 |
+| **Ipamorelin** | GH secretion | Metabolic health, cognition | 4-12 wk | $100-150 | 4/5 |
+| **NAD+** | Sirtuin activation | Energy, DNA repair, longevity | 2-8 wk | $100-200 | 4/5 |
 
 ## Integrated Protocol Strategies
 
@@ -104,10 +104,10 @@ For more significant results, this protocol adds additional therapeutic layers: 
 
 | Approach | Annual Cost | Benefit Rating | Time Investment |
 |----------|-------------|----------------|-----------------|
-| **Basic Topicals** | $300-500 | ★★☆☆☆ | Low |
-| **Oral NAD+ Only** | $800-1200 | ★★★☆☆ | Low |
-| **Injectable Peptides** | $2000-4000 | ★★★★☆ | Medium |
-| **thorough Program** | $5000-8000 | ★★★★★ | High |
+| **Basic Topicals** | $300-500 | 2/5 | Low |
+| **Oral NAD+ Only** | $800-1200 | 3/5 | Low |
+| **Injectable Peptides** | $2000-4000 | 4/5 | Medium |
+| **thorough Program** | $5000-8000 | 5/5 | High |
 
 *Benefit Rating considers epigenetic age reduction, functional improvements, and biomarker optimization*
 
