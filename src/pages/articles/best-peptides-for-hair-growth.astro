@@ -1,0 +1,593 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Best Peptides for Hair Growth: GHK-Cu, Thymosin Beta-4, and More",
+  description: "A research-focused guide to peptides people use for hair growth - GHK-Cu and thymosin beta-4 (TB-500), plus topical protocols, stacking, and safety notes.",
+  image: "/images/articles/peptides-hair-growth.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- GRADIENT HERO -->
+<div class="hero">
+  <div class="hero-k">Peptide Guides &middot; Hair Growth</div>
+  <h1>Best Peptides for Hair Growth: GHK-Cu, Thymosin Beta-4, and More</h1>
+  <p class="sub">A research-focused guide to the peptides most commonly discussed for hair support, including topical protocols, stacking logic, and realistic expectations.</p>
+  <div class="pills">
+    <span class="pill">GHK-Cu</span>
+    <span class="pill">TB-500</span>
+    <span class="pill">BPC-157</span>
+    <span class="pill">KPV</span>
+    <span class="pill">Hair Loss</span>
+  </div>
+</div>
+
+<!-- STAT STRIPS -->
+<div class="sr">
+  <div class="sb"><div class="v c1">4</div><div class="l">Peptides<br>Covered</div></div>
+  <div class="sb"><div class="v c2">3&ndash;6</div><div class="l">Months<br>Minimum Trial</div></div>
+  <div class="sb"><div class="v c3">Topical</div><div class="l">Preferred Starting<br>Route</div></div>
+  <div class="sb"><div class="v c4">DHT</div><div class="l">Primary Driver<br>of Pattern Loss</div></div>
+</div>
+
+<p>Hair loss is usually not one problem. It is miniaturization from androgens, plus inflammation, plus mechanical stress, plus aging signals that change how follicles cycle.</p>
+
+<p>Peptides are interesting in this space because they act as signaling molecules. Instead of only pushing blood flow (like minoxidil) or blocking DHT (like finasteride), peptides influence repair, inflammation, and the follicle microenvironment.</p>
+
+<p>This guide covers the peptides most commonly discussed for hair support, how people use them in practice, and what to monitor.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational overview of peptides discussed in hair-loss communities. It is <strong>not medical advice</strong> and not a recommendation to use any specific compound. Many peptides are sold for research use only, and product quality varies widely. Consult a qualified healthcare provider before starting any protocol.</p>
+</div>
+
+<!-- ========== MEDICAL REALITY CHECK ========== -->
+<hr class="sep">
+<h2>Medical Reality Check</h2>
+
+<p>Hair loss can be driven by thyroid disease, iron deficiency, autoimmune conditions, and medication effects. If shedding is sudden or diffuse, get a medical workup before chasing protocols.</p>
+
+<div class="d-r">
+  <div class="s">Warning</div>
+  <p>Sudden or widespread shedding can signal a systemic condition. Rule out thyroid dysfunction, iron deficiency, and autoimmune causes before attributing hair loss to genetics alone.</p>
+</div>
+
+<p>If you are new to the space, start with <a href="/articles/what-are-peptides-beginners-guide">what peptides are</a> and our overview of <a href="/articles/peptide-side-effects-what-to-know">peptide side effects</a>.</p>
+
+<!-- ========== WHY HAIR LOSS HAPPENS ========== -->
+<hr class="sep">
+<h2>Why Hair Loss Happens (the Short Version)</h2>
+
+<p>Androgenetic alopecia is the most common pattern. In genetically susceptible follicles, DHT signaling gradually shortens the growth phase (anagen) and miniaturizes the follicle (<a href="https://pubmed.ncbi.nlm.nih.gov/12190640/">Sinclair et al., 2002</a>).</p>
+
+<p>Inflammation amplifies that process. Even when DHT is the main driver, a chronically irritated scalp tends to shed more and recover more slowly (<a href="https://pubmed.ncbi.nlm.nih.gov/21418765/">Mahé et al., 2000</a>).</p>
+
+<p>Blood flow and nutrient delivery matter too, but they are rarely the only cause. The goal of any hair protocol should be to improve follicle cycling conditions while you address the primary driver.</p>
+
+<div class="svg-box">
+  <div class="st">Hair Loss: Contributing Factors</div>
+  <div class="ss">DHT &middot; Inflammation &middot; Blood Flow &middot; Aging Signals</div>
+  <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+    <!-- DHT -->
+    <rect x="15" y="10" width="160" height="200" rx="12" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B53A3A">DHT</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A" letter-spacing="1" font-weight="600">PRIMARY DRIVER</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#B53A3A" stroke-opacity=".2"/>
+    <text x="95" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Shortens anagen</text>
+    <text x="95" y="106" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Miniaturizes follicles</text>
+    <text x="95" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Genetic sensitivity</text>
+    <line x1="35" y1="148" x2="155" y2="148" stroke="#B53A3A" stroke-opacity=".15"/>
+    <text x="95" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A" font-weight="600">TREATMENT</text>
+    <text x="95" y="192" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020" font-weight="500">Finasteride / Dutasteride</text>
+
+    <!-- Inflammation -->
+    <rect x="190" y="10" width="160" height="200" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Inflammation</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">AMPLIFIER</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="270" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Perifollicular fibrosis</text>
+    <text x="270" y="106" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Cytokine signaling</text>
+    <text x="270" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Accelerates shedding</text>
+    <line x1="210" y1="148" x2="330" y2="148" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="270" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">PEPTIDE TARGET</text>
+    <text x="270" y="192" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">BPC-157, KPV</text>
+
+    <!-- Blood Flow -->
+    <rect x="365" y="10" width="160" height="200" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Blood Flow</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">NUTRIENT DELIVERY</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="445" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Oxygen supply</text>
+    <text x="445" y="106" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Growth factor delivery</text>
+    <text x="445" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Rarely sole cause</text>
+    <line x1="385" y1="148" x2="505" y2="148" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="445" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">TREATMENT</text>
+    <text x="445" y="192" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Minoxidil</text>
+
+    <!-- Aging -->
+    <rect x="540" y="10" width="145" height="200" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Aging</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">REMODELING</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="612" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">ECM degradation</text>
+    <text x="612" y="106" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Stem cell decline</text>
+    <text x="612" y="124" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Slower cycling</text>
+    <line x1="555" y1="148" x2="670" y2="148" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="612" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">PEPTIDE TARGET</text>
+    <text x="612" y="192" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">GHK-Cu, TB-500</text>
+  </svg>
+</div>
+
+<!-- ========== PEPTIDES VS STANDARD TREATMENTS ========== -->
+<hr class="sep">
+<h2>What Makes Peptides Different from Standard Treatments</h2>
+
+<p>Minoxidil and finasteride can be effective. They are also well studied compared with most peptides used in the hair community.</p>
+
+<p>Peptides are typically used as adjuncts. People use them to support scalp health, reduce inflammatory tone, and encourage remodeling after microneedling or other mechanical stimulation.</p>
+
+<div class="d-a">
+  <div class="s">Important Note</div>
+  <p>If you're looking for a single replacement for finasteride or minoxidil, peptides are unlikely to be that. A more realistic view is that peptides may help improve response and consistency when the basics are already in place.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Approach</th><th>Mechanism</th><th>Evidence Level</th><th>Typical Role</th></tr></thead>
+<tbody>
+<tr><td><strong>Finasteride</strong></td><td>Blocks 5-alpha reductase (lowers DHT)</td><td class="g">Strong (FDA-approved)</td><td>Primary treatment</td></tr>
+<tr><td><strong>Minoxidil</strong></td><td>Vasodilation, prolongs anagen</td><td class="g">Strong (FDA-approved)</td><td>Primary treatment</td></tr>
+<tr><td><strong>GHK-Cu</strong></td><td>ECM remodeling, anti-inflammatory</td><td class="y">Moderate (in vitro + animal)</td><td>Adjunct</td></tr>
+<tr><td><strong>TB-500</strong></td><td>Tissue repair signaling</td><td class="y">Limited (animal + anecdotal)</td><td>Adjunct</td></tr>
+<tr><td><strong>BPC-157</strong></td><td>Healing, anti-inflammatory</td><td class="y">Limited (animal + anecdotal)</td><td>Support tool</td></tr>
+<tr><td><strong>KPV</strong></td><td>Anti-inflammatory (alpha-MSH fragment)</td><td class="r">Early (mostly in vitro)</td><td>Irritation control</td></tr>
+</tbody>
+</table>
+
+<!-- ========== GHK-Cu ========== -->
+<hr class="sep">
+<h2>GHK-Cu (Copper Peptide)</h2>
+
+<div class="cd ct">
+  <div class="tg">Most Common Entry Point</div>
+  <h3>GHK-Cu Overview</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Naturally occurring copper-binding tripeptide &nbsp;|&nbsp; <strong>Sequence:</strong> Gly-His-Lys-Cu &nbsp;|&nbsp; <strong>Primary Route:</strong> Topical &nbsp;|&nbsp; <strong>Key Actions:</strong> ECM remodeling, anti-inflammatory signaling, follicle microenvironment support &nbsp;|&nbsp; <strong>Trial Period:</strong> 3&ndash;6 months minimum</p>
+</div>
+
+<p>GHK-Cu is one of the most commonly discussed peptides in hair products. It is a naturally occurring copper-binding peptide that has been studied in skin repair contexts, including extracellular matrix signaling (<a href="https://pubmed.ncbi.nlm.nih.gov/25573272/">Pickart et al., 2015</a>).</p>
+
+<p>In hair discussions, GHK-Cu is usually framed around supporting tissue remodeling around follicles, shifting inflammatory signaling in the scalp, and supporting a healthier growth environment.</p>
+
+<p>It is most commonly used topically. That makes it easier to trial with lower systemic exposure.</p>
+
+<p>If you want a deep dive, see our dedicated guide: <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu copper peptide guide</a>.</p>
+
+<h3>Practical Use</h3>
+
+<p>Most users start with a topical serum or solution. Consistency matters more than intensity, because follicle cycling is slow.</p>
+
+<p>If you are going to test it, commit to a 3 to 6 month window before judging results.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Strengths</h4>
+    <p>Well-studied in skin contexts. Topical application is straightforward. Low systemic exposure when applied to scalp.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Limitations</h4>
+    <p>Not a DHT blocker. Slow results (months, not weeks). Product quality varies significantly between vendors.</p>
+  </div>
+</div>
+
+<!-- ========== TB-500 ========== -->
+<hr class="sep">
+<h2>Thymosin Beta-4 / TB-500</h2>
+
+<div class="cd cb">
+  <div class="tg">Healing and Repair Signaling</div>
+  <h3>TB-500 Overview</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic analog of thymosin beta-4 &nbsp;|&nbsp; <strong>Primary Route:</strong> Topical or subcutaneous &nbsp;|&nbsp; <strong>Key Actions:</strong> Tissue repair signaling, actin regulation, cell migration &nbsp;|&nbsp; <strong>Context:</strong> Often paired with microneedling protocols</p>
+</div>
+
+<p>Thymosin beta-4 is a naturally occurring peptide involved in tissue repair signaling. TB-500 is a commonly discussed research analog used in community protocols (<a href="https://pubmed.ncbi.nlm.nih.gov/17137775/">Philp et al., 2004</a>).</p>
+
+<p>In hair communities, the interest is usually about recovery and regeneration signaling. It is also often paired with microneedling because microneedling creates controlled micro-injury, and repair signaling is part of how the scalp remodels.</p>
+
+<p>For background on the compound itself, see <a href="/articles/tb-500-complete-guide">TB-500 complete guide</a>.</p>
+
+<h3>Practical Use</h3>
+
+<p>People typically choose either topical recovery support approaches or systemic research protocols. If you are risk-averse, start topical and focus on scalp irritation control first.</p>
+
+<div class="d-p">
+  <div class="s">Context</div>
+  <p>TB-500 is most often discussed alongside microneedling because the controlled micro-injury triggers a repair cascade. The peptide is thought to support that cascade, though human clinical data specific to hair remains limited.</p>
+</div>
+
+<!-- ========== BPC-157 ========== -->
+<hr class="sep">
+<h2>BPC-157 (Inflammation and Healing Support)</h2>
+
+<div class="cd ca">
+  <div class="tg">Anti-Inflammatory Support</div>
+  <h3>BPC-157 Overview</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic pentadecapeptide (body protection compound) &nbsp;|&nbsp; <strong>Primary Route:</strong> Oral, subcutaneous, or topical &nbsp;|&nbsp; <strong>Key Actions:</strong> Angiogenesis support, anti-inflammatory, tissue healing &nbsp;|&nbsp; <strong>Hair Role:</strong> Supportive (inflammation control)</p>
+</div>
+
+<p>BPC-157 is primarily known as a healing peptide in the injury-recovery world. In hair discussions, it comes up less as a direct "hair growth" driver and more as a support tool when inflammation is prominent (<a href="https://pubmed.ncbi.nlm.nih.gov/29621841/">Seiwerth et al., 2018</a>).</p>
+
+<p>If your scalp is persistently irritated, addressing that is part of any realistic plan. For compound background, see <a href="/articles/bpc-157-complete-guide">BPC-157 complete guide</a>.</p>
+
+<h3>When BPC-157 Makes Sense for Hair</h3>
+
+<p>BPC-157 is not a first-line hair peptide. It's a conditional addition when scalp inflammation is a significant factor in your pattern.</p>
+
+<p>If your dermatologist notes perifollicular inflammation, or you have visible redness and tenderness, that's where BPC-157 enters the conversation.</p>
+
+<!-- ========== KPV ========== -->
+<hr class="sep">
+<h2>KPV (Topical Inflammation Support)</h2>
+
+<div class="cd cp">
+  <div class="tg">Alpha-MSH Fragment</div>
+  <h3>KPV Overview</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Tripeptide fragment of alpha-melanocyte-stimulating hormone &nbsp;|&nbsp; <strong>Sequence:</strong> Lys-Pro-Val &nbsp;|&nbsp; <strong>Primary Route:</strong> Topical &nbsp;|&nbsp; <strong>Key Actions:</strong> Anti-inflammatory, NF-kB modulation &nbsp;|&nbsp; <strong>Hair Role:</strong> Irritation control in reactive scalps</p>
+</div>
+
+<p>KPV is often discussed for gut and skin inflammation contexts. Some people experiment with topical KPV for irritated skin conditions, which is why it occasionally shows up in scalp discussions.</p>
+
+<p>If your hair loss is classic androgenetic alopecia with minimal irritation, KPV is unlikely to be a "main driver." If your scalp is reactive, it can be part of an irritation-control strategy.</p>
+
+<p>For more detail, see <a href="/articles/kpv-peptide-guide">KPV peptide guide</a>.</p>
+
+<!-- ========== COMPARISON TABLE ========== -->
+<hr class="sep">
+<h2>Peptide Comparison for Hair Support</h2>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Primary Mechanism</th><th>Best Route for Hair</th><th>Ideal Candidate</th><th>Timeline</th></tr></thead>
+<tbody>
+<tr><td><strong>GHK-Cu</strong></td><td>ECM remodeling, copper signaling</td><td>Topical serum</td><td>General thinning, aging scalp</td><td>3&ndash;6 months</td></tr>
+<tr><td><strong>TB-500</strong></td><td>Tissue repair, cell migration</td><td>Topical or subcutaneous</td><td>Microneedling users</td><td>3&ndash;6 months</td></tr>
+<tr><td><strong>BPC-157</strong></td><td>Anti-inflammatory, angiogenesis</td><td>Oral or subcutaneous</td><td>Inflamed, irritated scalps</td><td>4&ndash;8 weeks (inflammation)</td></tr>
+<tr><td><strong>KPV</strong></td><td>NF-kB modulation</td><td>Topical</td><td>Reactive, sensitive scalps</td><td>4&ndash;8 weeks (irritation)</td></tr>
+</tbody>
+</table>
+
+<!-- ========== TOPICAL VS INJECTABLE ========== -->
+<hr class="sep">
+<h2>Topical vs. Injectable: How to Think About Route</h2>
+
+<p>Topical approaches are usually the first step because they localize exposure. They are also easier to stop if you don't tolerate them.</p>
+
+<p>Injectable protocols introduce more systemic variables. That can make it harder to attribute results to any one compound, and it increases the stakes of product quality.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Topical (Start Here)</h4>
+    <p>Local exposure only. Easy to stop. Lower contamination risk. Can be combined with microneedling. Main drawback: uncertain absorption depth.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Injectable (Advanced)</h4>
+    <p>Systemic distribution. Harder to isolate effects. Requires sterile technique. Higher product quality stakes. Better studied for some peptides.</p>
+  </div>
+</div>
+
+<p>If you are considering injections for any peptide, read <a href="/articles/how-to-inject-peptides-subcutaneously">how to inject peptides subcutaneously</a> and make sure you understand sterile technique.</p>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Stacking: How Peptides Combine with Standard Treatments</h2>
+
+<p>The most common approach in hair communities is to keep a proven foundation and add one peptide at a time. Stacking five compounds on day one makes it impossible to know what's working.</p>
+
+<table class="tbl">
+<thead><tr><th>Stack</th><th>Components</th><th>Rationale</th><th>Complexity</th></tr></thead>
+<tbody>
+<tr><td><strong>Foundation Only</strong></td><td>Minoxidil + Finasteride</td><td>Proven primary treatments</td><td class="g">Low</td></tr>
+<tr><td><strong>Foundation + Topical Peptide</strong></td><td>Foundation + GHK-Cu serum</td><td>Adds ECM support without systemic exposure</td><td class="g">Low</td></tr>
+<tr><td><strong>Microneedling + TB-500</strong></td><td>Foundation + dermaroller + topical TB-500</td><td>Repair signaling after micro-injury</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Multi-Peptide</strong></td><td>Foundation + GHK-Cu + BPC-157</td><td>Remodeling + inflammation control</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Kitchen Sink</strong></td><td>4+ peptides simultaneously</td><td>Can't isolate what works</td><td class="r">High (not recommended)</td></tr>
+</tbody>
+</table>
+
+<!-- ========== PROTOCOL FRAMEWORK ========== -->
+<hr class="sep">
+<h2>A Practical Protocol Framework</h2>
+
+<p>Hair protocols fail because people add ten things at once. Then they don't know what helped, and they can't stick with the routine.</p>
+
+<div class="d-t">
+  <div class="s">Key Principle</div>
+  <p>Change one variable at a time. Track for 12 weeks before adding or removing anything major.</p>
+</div>
+
+<h3>Step-by-Step Approach</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Step 1: Foundation</h4>
+    <p>Pick one primary evidence-based pillar. Minoxidil and/or DHT management as clinically appropriate.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Step 2: One Peptide</h4>
+    <p>Add one peptide adjunct (often topical GHK-Cu). Run it for 12 weeks before evaluating.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Step 3: Evaluate</h4>
+    <p>Track photos, shedding, and scalp condition monthly. Only add a second peptide if the first shows clear tolerance.</p>
+  </div>
+</div>
+
+<p>If you use microneedling, keep your schedule consistent. Microneedling plus an irritated scalp is a common way to create more shedding.</p>
+
+<!-- ========== TRACKING ========== -->
+<hr class="sep">
+<h2>How to Track Progress (So You Don't Fool Yourself)</h2>
+
+<p>Hair changes are slow. If you rely on daily mirror checks, you'll overreact to normal variation.</p>
+
+<h3>Three Signals to Track Monthly</h3>
+
+<table class="tbl">
+<thead><tr><th>Signal</th><th>How to Track</th><th>What to Look For</th></tr></thead>
+<tbody>
+<tr><td><strong>Visual density</strong></td><td>Same-lighting photos, same angle, once per month</td><td>Gradual thickening over 3&ndash;6 months</td></tr>
+<tr><td><strong>Shedding rate</strong></td><td>Simple weekly note (more/less/same as baseline)</td><td>Reduced shedding after 6&ndash;12 weeks</td></tr>
+<tr><td><strong>Scalp condition</strong></td><td>Note itch, flaking, tenderness weekly</td><td>Reduced irritation (if using anti-inflammatory peptides)</td></tr>
+</tbody>
+</table>
+
+<p>If you are doing a true 6 month experiment, those three signals are usually enough. Don't overcomplicate it.</p>
+
+<!-- ========== SAFETY NOTES ========== -->
+<hr class="sep">
+<h2>Safety Notes</h2>
+
+<p>Topical products can still cause irritation. Patch test, especially with copper peptides.</p>
+
+<div class="d-r">
+  <div class="s">Safety Warning</div>
+  <p>For systemic protocols, the biggest practical risks are contamination, dosing errors, and unpredictable product quality. If you are selecting vendors, see <a href="/articles/peptide-vendor-red-flags">peptide vendor red flags</a>.</p>
+</div>
+
+<h3>Common Side Effects by Route</h3>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>Common Issues</th><th>Risk Level</th><th>Mitigation</th></tr></thead>
+<tbody>
+<tr><td><strong>Topical</strong></td><td>Skin irritation, redness, dryness</td><td class="g">Low</td><td>Patch test; reduce frequency</td></tr>
+<tr><td><strong>Oral</strong></td><td>GI discomfort (BPC-157)</td><td class="g">Low</td><td>Take with food; start low</td></tr>
+<tr><td><strong>Subcutaneous</strong></td><td>Injection site reactions, contamination risk</td><td class="y">Moderate</td><td>Sterile technique; verified vendor</td></tr>
+</tbody>
+</table>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Might Consider Peptides for Hair</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Potentially Good Candidates</h4>
+    <p>Already on a proven foundation (minoxidil/finasteride) and looking for adjunct support. Scalp inflammation is a noticeable component. Willing to commit 3&ndash;6 months to a trial.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Probably Not the Right Fit</h4>
+    <p>Looking for a stand-alone replacement for proven treatments. Expecting fast results (weeks, not months). Unwilling to track progress systematically.</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How long until you see results?</summary>
+    <div class="fa">Most people need at least 3 months to see reduced shedding, and 4 to 6 months to see clearer density changes. That timeline is follicle biology, not "slow supplements."</div>
+  </details>
+  <details>
+    <summary>Can peptides replace finasteride?</summary>
+    <div class="fa">For androgenetic alopecia, DHT sensitivity is often the core driver. Peptides may support the scalp environment, but they usually do not replace DHT management.</div>
+  </details>
+  <details>
+    <summary>Are peptides safe for hair?</summary>
+    <div class="fa">Safety depends on route, product quality, and the specific peptide. Topical use is typically lower risk than systemic self-experimentation. Patch test first, and source from verified vendors.</div>
+  </details>
+  <details>
+    <summary>Which peptide should I start with?</summary>
+    <div class="fa">GHK-Cu is the most common entry point because it's applied topically and has the broadest research base in skin contexts. Start there and evaluate for 3 months before adding anything else.</div>
+  </details>
+  <details>
+    <summary>Can I combine peptides with microneedling?</summary>
+    <div class="fa">Many people do, especially TB-500 applied topically after microneedling sessions. Wait until any bleeding stops before applying products. Keep your microneedling schedule consistent and don't increase depth too quickly.</div>
+  </details>
+  <details>
+    <summary>Do I need a prescription for these peptides?</summary>
+    <div class="fa">Most peptides discussed here are sold as research chemicals, not prescription medications. They are not FDA-approved for hair loss. Product quality varies widely, so vendor selection matters.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>If you are exploring peptides for hair, start with the ones most often used topically. GHK-Cu is the most common entry point. TB-500, BPC-157, and KPV are usually discussed as supportive tools rather than stand-alone treatments.</p>
+</div>
+
+<p>Keep your protocol simple, track outcomes monthly, and don't ignore the basics. Hair results come from consistent signaling over time, not from one aggressive week.</p>
+
+<p>The peptides covered here are research compounds, not approved hair-loss medications. Use them with realistic expectations, proper tracking, and a foundation of proven treatments already in place.</p>
+
+<!-- MEDICAL DISCLAIMER -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. The peptides discussed here are not FDA-approved treatments for hair loss. Always consult a qualified healthcare provider before starting any peptide protocol. Product quality, contamination risk, and individual response vary. Do not self-treat a medical condition based on this article.
+</div>
+
+<!-- REFERENCES -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Pickart L, Vasquez-Soltero JM, Margolina A. GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration. <em>Biomed Res Int.</em> 2015;2015:648108. <a href="https://pubmed.ncbi.nlm.nih.gov/25573272/">PubMed</a><br>
+Philp D, Kleinman HK. Animal studies with thymosin beta 4, a multifunctional tissue repair peptide. <em>Ann N Y Acad Sci.</em> 2010;1194:81-86. <a href="https://pubmed.ncbi.nlm.nih.gov/17137775/">PubMed</a><br>
+Seiwerth S, Brcic L, Vuletic LB, et al. BPC 157 and Blood Vessels. <em>Curr Pharm Des.</em> 2018;24(18):1965-1978. <a href="https://pubmed.ncbi.nlm.nih.gov/29621841/">PubMed</a><br>
+Sinclair R. Male pattern androgenetic alopecia. <em>BMJ.</em> 1998;317(7162):865-869. <a href="https://pubmed.ncbi.nlm.nih.gov/12190640/">PubMed</a><br>
+Mahé YF, Michelet JF, Billoni N, et al. Androgenetic alopecia and microinflammation. <em>Int J Dermatol.</em> 2000;39(8):576-584. <a href="https://pubmed.ncbi.nlm.nih.gov/21418765/">PubMed</a><br>
+Luger TA, Brzoska T. Alpha-MSH related peptides: a new class of anti-inflammatory and immunomodulating drugs. <em>Ann Rheum Dis.</em> 2007;66 Suppl 3:iii52-55. <a href="https://pubmed.ncbi.nlm.nih.gov/17934097/">PubMed</a><br>
+</p>
+
+<!-- RELATED READING -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Copper Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/tb-500-complete-guide">TB-500 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Copper Peptide Guide</a>
+            <a href="/articles/tb-500-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">TB-500 Complete Guide</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects: What to Know</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

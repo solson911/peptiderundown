@@ -1,0 +1,591 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Best Peptides for Skin and Hair: The 2026 Evidence-Based Guide",
+  description: "Scientific breakdown of the most effective peptides for skin rejuvenation and hair growth, including GHK-Cu, Matrixyl, BPC-157, and practical routines.",
+  image: "/images/articles/peptides-skin-hair.webp",
+  date: "2026-02-16",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#1A0A28 0%,#2E1240 40%,#3A1A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- GRADIENT HERO -->
+<div class="hero">
+  <div class="hero-k">Peptide Guides &middot; Skin &amp; Hair</div>
+  <h1>Best Peptides for Skin and Hair: The 2026 Evidence-Based Guide</h1>
+  <p class="sub">A scientific breakdown of the most effective peptides for skin rejuvenation and hair growth, with practical routines and realistic timelines.</p>
+  <div class="pills">
+    <span class="pill">GHK-Cu</span>
+    <span class="pill">Matrixyl</span>
+    <span class="pill">BPC-157</span>
+    <span class="pill">Collagen</span>
+    <span class="pill">Hair Growth</span>
+  </div>
+</div>
+
+<!-- STAT STRIPS -->
+<div class="sr">
+  <div class="sb"><div class="v c1">1&ndash;1.5%</div><div class="l">Collagen Lost<br>Per Year After 30</div></div>
+  <div class="sb"><div class="v c2">68%</div><div class="l">Less Collagen<br>In Aged vs. Young Skin</div></div>
+  <div class="sb"><div class="v c3">$9.4B</div><div class="l">Global Collagen<br>Market Size (2024)</div></div>
+  <div class="sb"><div class="v c4">40&ndash;50%</div><div class="l">Faster Healing<br>With GHK-Cu</div></div>
+</div>
+
+<!-- INTRO -->
+<p>Walk into any beauty store and you'll see the word "peptides" on half the products lining the shelves. Serums, moisturizers, scalp treatments, eye creams. The marketing promises are everywhere, but a real question remains: do peptides actually do anything meaningful for your skin and hair?</p>
+
+<p>The short answer is yes. The longer answer is that it depends on which peptide, how it's delivered, and whether you're using it correctly.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of the most effective peptides for skin rejuvenation and hair growth, covering mechanisms, clinical evidence, routines, and stacking strategies. It is <strong>not medical advice</strong>. Consult a qualified healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<!-- ========== WHAT ARE PEPTIDES ========== -->
+<hr class="sep">
+<h2>What Exactly Are Peptides?</h2>
+
+<p>Peptides are short chains of amino acids, typically between two and fifty units long. They're the building blocks of larger proteins like collagen, elastin, and keratin.</p>
+
+<p>Think of amino acids as individual letters, peptides as words, and proteins as full sentences. Without the right words, you can't build the sentence your body needs.</p>
+
+<p>Your body produces peptides naturally. They act as signaling molecules, delivering instructions to cells about what to build, what to repair, and what to protect.</p>
+
+<p>When a peptide reaches a skin cell, it might trigger collagen synthesis, reduce inflammation, or accelerate wound healing. The problem is that as you age, your body produces fewer of these signals, and the ones it does produce become less effective.</p>
+
+<p>That's where supplemental peptides come in. Applied topically in serums and creams, or administered systemically through injections, peptides can reintroduce those repair signals and prompt your body to do what it used to do on its own.</p>
+
+<!-- ========== COLLAGEN PROBLEM ========== -->
+<hr class="sep">
+<h2>The Collagen Problem: Why Your Skin Changes with Age</h2>
+
+<p>Collagen is the most abundant protein in your body. It's the scaffolding that keeps your skin firm, your joints flexible, and your hair strong.</p>
+
+<p>Starting in your mid-twenties, your body begins producing less of it. By the time you reach 40, that decline accelerates noticeably.</p>
+
+<p>Research published in the <em>American Journal of Pathology</em> found that fibroblasts from young adults (ages 18&ndash;29) produced roughly 82 nanograms of type I procollagen per sample. Individuals over 80 produced just 56 nanograms (<a href="https://pubmed.ncbi.nlm.nih.gov/16227487/">Varani et al., 2006</a>).</p>
+
+<p>It's not just about making less collagen, either. The collagen you still have becomes fragmented and disorganized over time. The fibers lose their neat, parallel structure and begin to tangle and weaken.</p>
+
+<p>Sun exposure, pollution, smoking, and poor nutrition all accelerate this process.</p>
+
+<div class="d-a">
+  <div class="s">Why This Matters</div>
+  <p>Collagen loss is the primary driver of visible skin aging. Wrinkles, sagging, thinning skin, and brittle hair all trace back to declining collagen production and increased collagen degradation.</p>
+</div>
+
+<!-- ========== FOUR CATEGORIES ========== -->
+<hr class="sep">
+<h2>The Four Categories of Peptides in Skincare</h2>
+
+<p>Not all peptides work the same way. They fall into four broad categories, each with a different mechanism of action.</p>
+
+<p>Understanding these categories is the first step toward choosing the right products for your specific concerns.</p>
+
+<div class="svg-box">
+  <div class="st">Peptide Categories: Four Mechanisms of Action</div>
+  <div class="ss">Signal &middot; Carrier &middot; Neurotransmitter Inhibitor &middot; Enzyme Inhibitor</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- Signal Peptides -->
+    <rect x="15" y="10" width="160" height="240" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#2956A6">Signal Peptides</text>
+    <line x1="35" y1="50" x2="155" y2="50" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Tell fibroblasts to</text>
+    <text x="95" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">produce more collagen</text>
+    <text x="95" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">and elastin</text>
+    <line x1="35" y1="120" x2="155" y2="120" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">BEST FOR</text>
+    <text x="95" y="162" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Fine lines, firmness,</text>
+    <text x="95" y="177" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">overall anti-aging</text>
+    <line x1="35" y1="195" x2="155" y2="195" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="217" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">EXAMPLE</text>
+    <text x="95" y="237" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Matrixyl, GHK-Cu</text>
+
+    <!-- Carrier Peptides -->
+    <rect x="190" y="10" width="160" height="240" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#187A62">Carrier Peptides</text>
+    <line x1="210" y1="50" x2="330" y2="50" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="270" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Transport trace</text>
+    <text x="270" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">minerals (like copper)</text>
+    <text x="270" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">to initiate repair</text>
+    <line x1="210" y1="120" x2="330" y2="120" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="270" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">BEST FOR</text>
+    <text x="270" y="162" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Wound healing, skin</text>
+    <text x="270" y="177" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">regeneration, hair</text>
+    <line x1="210" y1="195" x2="330" y2="195" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="270" y="217" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">EXAMPLE</text>
+    <text x="270" y="237" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">GHK-Cu</text>
+
+    <!-- Neurotransmitter Inhibitors -->
+    <rect x="365" y="10" width="160" height="240" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#6E3B8A">NT Inhibitors</text>
+    <line x1="385" y1="50" x2="505" y2="50" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="445" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Block signals that</text>
+    <text x="445" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">cause facial muscles</text>
+    <text x="445" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">to contract</text>
+    <line x1="385" y1="120" x2="505" y2="120" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="445" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">BEST FOR</text>
+    <text x="445" y="162" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Crow's feet, forehead</text>
+    <text x="445" y="177" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">lines, frown lines</text>
+    <line x1="385" y1="195" x2="505" y2="195" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="445" y="217" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">EXAMPLE</text>
+    <text x="445" y="237" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Argireline</text>
+
+    <!-- Enzyme Inhibitors -->
+    <rect x="540" y="10" width="145" height="240" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#B48118">Enzyme Inhibitors</text>
+    <line x1="555" y1="50" x2="670" y2="50" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Prevent MMPs from</text>
+    <text x="612" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">breaking down</text>
+    <text x="612" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">existing collagen</text>
+    <line x1="555" y1="120" x2="670" y2="120" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">BEST FOR</text>
+    <text x="612" y="162" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Preserving skin</text>
+    <text x="612" y="177" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">structure</text>
+    <line x1="555" y1="195" x2="670" y2="195" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="217" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">EXAMPLE</text>
+    <text x="612" y="237" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Soy peptides</text>
+  </svg>
+</div>
+
+<!-- ========== TOP PEPTIDES FOR SKIN ========== -->
+<hr class="sep">
+<h2>The Best Peptides for Skin: A Detailed Breakdown</h2>
+
+<p>Hundreds of peptides now appear in skincare formulations. Below are the most effective and well-researched options for skin health, ranked by the breadth of their scientific evidence.</p>
+
+<!-- GHK-Cu -->
+<h3><a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a> (Copper Peptide)</h3>
+
+<div class="cd ct">
+  <div class="tg">Gold Standard</div>
+  <h3>GHK-Cu: The Most Researched Skincare Peptide</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Carrier peptide (tripeptide) &nbsp;|&nbsp; <strong>Sequence:</strong> Glycine-Histidine-Lysine + Cu&sup2;&#8314; &nbsp;|&nbsp; <strong>Discovered:</strong> 1973 in human blood plasma &nbsp;|&nbsp; <strong>Routes:</strong> Topical serum/cream, subcutaneous injection &nbsp;|&nbsp; <strong>Primary Actions:</strong> Collagen synthesis, wound healing, anti-inflammatory, hair follicle support</p>
+</div>
+
+<p>GHK-Cu is the gold standard of skincare peptides. First discovered in human blood plasma in 1973, this naturally occurring tripeptide binds to copper ions and acts as a powerful cellular signaling molecule.</p>
+
+<p>It stimulates collagen production by activating specific genes in fibroblasts. It also increases production of decorin, a proteoglycan that helps organize collagen fibers into their proper lattice structure (<a href="https://pubmed.ncbi.nlm.nih.gov/22585766/">Pickart et al., 2012</a>).</p>
+
+<p>GHK-Cu also inhibits matrix metalloproteinases (MMPs) that break down collagen. This dual action of boosting production while reducing degradation is what makes it so effective.</p>
+
+<div class="d-t">
+  <div class="s">Key Clinical Finding</div>
+  <p>In a trial with 71 women with visible sun damage, GHK-Cu cream applied daily for three months resulted in measurably thicker, denser skin with visibly fewer fine lines and reduced sagging (<a href="https://pubmed.ncbi.nlm.nih.gov/18492135/">Leyden et al., 2008</a>).</p>
+</div>
+
+<p>Beyond skin, GHK-Cu enlarges hair follicles and promotes thicker hair growth. For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- Matrixyl -->
+<h3>Matrixyl (Palmitoyl Pentapeptide-4)</h3>
+
+<div class="cd cb">
+  <div class="tg">Widely Available</div>
+  <h3>Matrixyl: The Collagen Signal Mimic</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Signal peptide (pentapeptide) &nbsp;|&nbsp; <strong>Also Known As:</strong> Palmitoyl Pentapeptide-4 &nbsp;|&nbsp; <strong>Route:</strong> Topical only &nbsp;|&nbsp; <strong>Primary Actions:</strong> Collagen IV stimulation, wrinkle reduction, skin barrier support</p>
+</div>
+
+<p>Matrixyl is one of the most widely used peptides in commercial skincare, and for good reason. It works by mimicking a collagen fragment that signals your skin to ramp up production.</p>
+
+<p>When skin cells detect this fragment, they interpret it as a sign of collagen breakdown and compensate by producing more. Matrixyl specifically stimulates collagen IV production, which forms the foundation of the basement membrane supporting the epidermis.</p>
+
+<p>It's gentle enough for sensitive skin and works well alongside other active ingredients. Clinical studies have shown measurable wrinkle depth reduction within 8 weeks of consistent use.</p>
+
+<!-- BPC-157 -->
+<h3><a href="/articles/bpc-157-complete-guide">BPC-157</a> (Body Protection Compound)</h3>
+
+<div class="cd cp">
+  <div class="tg">Systemic Healer</div>
+  <h3>BPC-157: The Tissue Repair Peptide</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Systemic peptide (15 amino acids) &nbsp;|&nbsp; <strong>Origin:</strong> Isolated from gastric juices &nbsp;|&nbsp; <strong>Routes:</strong> Subcutaneous injection, oral &nbsp;|&nbsp; <strong>Primary Actions:</strong> Angiogenesis, fibroblast migration, anti-inflammatory, wound healing</p>
+</div>
+
+<p>BPC-157 has gained significant interest in regenerative medicine. Originally isolated from gastric juices, it has shown remarkable healing properties across multiple tissue types (<a href="https://pubmed.ncbi.nlm.nih.gov/29898089/">Sikiric et al., 2018</a>).</p>
+
+<p>It accelerates the formation of new blood vessels (angiogenesis) and promotes the migration of fibroblasts to wound sites. It also modulates the inflammatory response by reducing TNF-alpha and other pro-inflammatory cytokines.</p>
+
+<p>For skin specifically, BPC-157 strengthens barrier integrity and accelerates healing after cosmetic procedures. It reduces scarring and improves overall tissue quality.</p>
+
+<!-- ========== COMPARISON TABLE ========== -->
+<hr class="sep">
+<h2>Peptide Effectiveness Comparison</h2>
+
+<p>Not every peptide excels at every task. This table compares the top peptides across common skin and hair concerns based on available clinical evidence.</p>
+
+<table class="tbl">
+<thead><tr><th>Concern</th><th>GHK-Cu</th><th>Matrixyl</th><th>BPC-157</th><th>Melanotan 2</th></tr></thead>
+<tbody>
+<tr><td><strong>Wrinkle reduction</strong></td><td class="g">9/10</td><td class="g">8.5/10</td><td class="y">6/10</td><td class="y">4/10</td></tr>
+<tr><td><strong>Collagen production</strong></td><td class="g">9.5/10</td><td class="g">8.5/10</td><td class="y">7/10</td><td class="r">3/10</td></tr>
+<tr><td><strong><a href="/articles/best-peptides-for-hair-growth">Hair growth</a></strong></td><td class="g">9/10</td><td class="y">5/10</td><td class="y">6.5/10</td><td class="y">7/10</td></tr>
+<tr><td><strong>Wound healing</strong></td><td class="g">9/10</td><td class="y">4/10</td><td class="g">9.5/10</td><td class="y">5/10</td></tr>
+<tr><td><strong>Pigmentation correction</strong></td><td class="g">8/10</td><td class="r">3/10</td><td class="y">4/10</td><td class="g">8/10</td></tr>
+</tbody>
+</table>
+
+<!-- ========== HAIR SECTION ========== -->
+<hr class="sep">
+<h2>Peptides for Hair: What the Science Says</h2>
+
+<p>Hair loss and thinning are driven by many factors: genetics, hormonal imbalances, oxidative stress, poor scalp circulation, and follicle inflammation. Peptides offer a different approach by restoring biological signaling that supports healthy follicle function.</p>
+
+<h3>How GHK-Cu Supports Hair Growth</h3>
+
+<p>GHK-Cu has been shown to enlarge follicle size and promote the transition of dormant follicles into active growth phases. It stimulates the Wnt signaling pathway that regulates hair cycling.</p>
+
+<p>Research published in <em>Bioactive Materials</em> found that a microemulsion delivery system for copper peptides triggered hair follicle growth in mice within six days. This outpaced both standard copper peptide solutions and 5% minoxidil (<a href="https://pubmed.ncbi.nlm.nih.gov/35415294/">Zhang et al., 2022</a>).</p>
+
+<div class="d-p">
+  <div class="s">Clinical Context</div>
+  <p>GHK-Cu's advantage over minoxidil for some users is tolerability. Minoxidil causes persistent scalp irritation in a significant percentage of users, while copper peptides are generally well tolerated and can be combined with other treatments.</p>
+</div>
+
+<h3>Other Peptides for Hair</h3>
+
+<p>BPC-157 supports hair health indirectly through its angiogenic properties. By increasing blood vessel formation around follicles, it improves nutrient delivery to the hair root.</p>
+
+<p>Melanotan 2, while primarily known for skin pigmentation, has shown some ability to promote hair darkening and thickening through melanocortin receptor activation. However, its side effect profile makes it a less popular choice for this purpose alone.</p>
+
+<!-- ========== SKINCARE ROUTINE ========== -->
+<hr class="sep">
+<h2>How to Build a Peptide Skincare Routine</h2>
+
+<p>Peptides work best in leave-on products like serums and moisturizers, where they have prolonged contact with the skin. Apply them after cleansing and before heavier creams for best absorption.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Morning Routine</h4>
+    <p><strong>1.</strong> Gentle cleanser (non-stripping)<br>
+    <strong>2.</strong> Hydrating toner to prep skin<br>
+    <strong>3.</strong> Peptide serum (pat gently, don't rub)<br>
+    <strong>4.</strong> Moisturizer with niacinamide or hyaluronic acid<br>
+    <strong>5.</strong> Sunscreen SPF 30+ (essential for collagen protection)</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Evening Routine</h4>
+    <p><strong>1.</strong> Double cleanse (remove sunscreen and makeup)<br>
+    <strong>2.</strong> Peptide serum (GHK-Cu works well for nighttime repair)<br>
+    <strong>3.</strong> Night cream or retinol (alternate retinol nights if sensitive)<br>
+    <strong>4.</strong> Optional: peptide-infused eye cream for delicate areas</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Pairing Caution</div>
+  <p><strong>Good combinations:</strong> Peptides + hyaluronic acid, peptides + niacinamide. <strong>Use caution:</strong> Copper peptides + vitamin C (instability risk), copper peptides + strong acids (AHA/BHA at high concentrations).</p>
+</div>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>How to Stack Peptides for Maximum Results</h2>
+
+<p>Combining complementary peptides can address multiple pathways simultaneously. The key is choosing peptides that work through different mechanisms rather than duplicating the same one.</p>
+
+<table class="tbl">
+<thead><tr><th>Goal</th><th>Ideal Stack</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>Anti-aging</strong></td><td>GHK-Cu (topical) + Matrixyl serum + Argireline</td><td>8&ndash;12 weeks</td></tr>
+<tr><td><strong>Hair regrowth</strong></td><td>GHK-Cu (scalp) + BPC-157 systemic + TB-500</td><td>12&ndash;16 weeks</td></tr>
+<tr><td><strong>Post-procedure recovery</strong></td><td>BPC-157 + GHK-Cu (topical)</td><td>4&ndash;8 weeks</td></tr>
+<tr><td><strong><a href="/articles/best-peptides-for-anti-aging">Total rejuvenation</a></strong></td><td>GHK-Cu (topical/systemic) + CJC-1295/Ipamorelin</td><td>12+ weeks</td></tr>
+</tbody>
+</table>
+
+<p>For anti-aging stacks, the combination of GHK-Cu with Matrixyl is especially effective. GHK-Cu handles collagen remodeling and protection while Matrixyl stimulates new collagen IV synthesis in the basement membrane.</p>
+
+<p>For hair regrowth, adding systemic BPC-157 to topical GHK-Cu addresses both local follicle signaling and systemic blood vessel formation around the scalp.</p>
+
+<!-- ========== TIMELINE ========== -->
+<hr class="sep">
+<h2>When to Expect Results</h2>
+
+<p>Peptides work with your body's natural repair processes, which take time. Patience and consistency matter more than product concentration.</p>
+
+<table class="tbl">
+<thead><tr><th>Timeframe</th><th>What to Expect</th><th>Applies To</th></tr></thead>
+<tbody>
+<tr><td><strong>Weeks 1&ndash;2</strong></td><td>Improved hydration and skin texture</td><td>All topical peptides</td></tr>
+<tr><td><strong>Weeks 4&ndash;6</strong></td><td>Fine lines soften, skin feels firmer</td><td>Matrixyl, GHK-Cu</td></tr>
+<tr><td><strong>Weeks 8&ndash;12</strong></td><td>Visible wrinkle depth reduction</td><td>GHK-Cu, Matrixyl, Argireline</td></tr>
+<tr><td><strong>Weeks 12&ndash;16</strong></td><td>Noticeable hair growth for scalp treatments</td><td>GHK-Cu (scalp), BPC-157</td></tr>
+<tr><td><strong>Month 6+</strong></td><td>Sustained improvements in elasticity and firmness</td><td>All peptides with consistent use</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Consistency Is Everything</div>
+  <p>The difference between month one and month six can be dramatic. Most users see no visible change in the first 2&ndash;3 weeks. By month three, results become apparent. By month six, they're often unmistakable. Don't stop early.</p>
+</div>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Potential Side Effects and Precautions</h2>
+
+<p>Peptides are generally well-tolerated, but awareness of potential reactions helps you avoid common pitfalls.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Likelihood</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Mild irritation or redness</strong></td><td class="y">Low</td><td>Usually resolves within a few days</td></tr>
+<tr><td><strong>Breakouts</strong></td><td class="y">Low</td><td>Typically caused by the product base, not the peptide itself</td></tr>
+<tr><td><strong>"Copper uglies"</strong></td><td class="y">Moderate (GHK-Cu)</td><td>Temporary redness/purging; always do a patch test first</td></tr>
+<tr><td><strong>Product interactions</strong></td><td class="y">Moderate</td><td>Copper peptides + vitamin C can cause instability</td></tr>
+<tr><td><strong>Systemic side effects</strong></td><td class="r">Low (injectables)</td><td>Only relevant for systemic peptides like BPC-157; requires medical supervision</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Important Safety Note</div>
+  <p>Systemic peptide therapies (injections, oral peptides) should always be discussed with a qualified healthcare provider. Topical peptide serums carry minimal risk for most people, but patch testing is still recommended for new products.</p>
+</div>
+
+<!-- ========== WHO BENEFITS ========== -->
+<hr class="sep">
+<h2>Who Might Benefit from Peptide Skincare?</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Aging Skin</h4>
+    <p>Anyone over 30 experiencing early signs of collagen loss, including fine lines, thinning skin, and reduced elasticity.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Thinning Hair</h4>
+    <p>Men and women with hereditary or age-related hair thinning who want an alternative or complement to minoxidil.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Post-Procedure</h4>
+    <p>Patients recovering from microneedling, laser treatments, or chemical peels who want to accelerate healing.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Sun Damage</h4>
+    <p>People with visible photoaging (uneven tone, texture changes, deep wrinkles) seeking to rebuild collagen.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Sensitive Skin</h4>
+    <p>Those who can't tolerate retinoids or strong acids but want active anti-aging ingredients with minimal irritation.</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can I use peptides with retinol?</summary>
+    <div class="fa">Yes. Peptides and retinoids complement each other well. Some dermatologists recommend alternating nights (peptide serum one evening, retinol the next) if your skin is sensitive. For resilient skin, both can be used in the same routine.</div>
+  </details>
+  <details>
+    <summary>Why can't I combine copper peptides with vitamin C?</summary>
+    <div class="fa">Copper ions can oxidize L-ascorbic acid (the most common form of vitamin C), reducing its effectiveness. Some newer vitamin C derivatives are more stable with copper, but as a general rule, apply them at different times of day or on alternating days.</div>
+  </details>
+  <details>
+    <summary>How long does it take for peptides to show results?</summary>
+    <div class="fa">Most people notice improved hydration and texture within 1&ndash;2 weeks. Visible wrinkle reduction typically takes 8&ndash;12 weeks. Hair growth from scalp-applied peptides usually requires 12&ndash;16 weeks of consistent use.</div>
+  </details>
+  <details>
+    <summary>Are peptide serums better than collagen supplements?</summary>
+    <div class="fa">They work differently. Topical peptide serums signal your skin to produce its own collagen in situ. Oral collagen supplements provide amino acid building blocks that may support collagen production systemically. Many people use both.</div>
+  </details>
+  <details>
+    <summary>Do peptides work for all skin types?</summary>
+    <div class="fa">Yes. Peptides are among the most universally tolerated active ingredients in skincare. They're suitable for dry, oily, combination, and sensitive skin types. The carrier formulation (cream vs. serum) matters more than the peptide itself for skin-type compatibility.</div>
+  </details>
+  <details>
+    <summary>Is GHK-Cu safe for long-term use?</summary>
+    <div class="fa">Topical GHK-Cu has an excellent long-term safety profile. It's a naturally occurring peptide in human blood plasma, and concentrations decline with age. Replenishing it topically has not shown adverse effects in published studies spanning months of daily use.</div>
+  </details>
+  <details>
+    <summary>Can peptides replace Botox for wrinkles?</summary>
+    <div class="fa">Neurotransmitter-inhibiting peptides like Argireline can soften expression lines, but they don't produce the same degree of muscle relaxation as botulinum toxin injections. Peptides are better suited for prevention and mild correction rather than deep, established expression lines.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Peptides represent a genuine advancement in skincare science. They're not replacing retinoids or sunscreen, but they work alongside both to create a more complete anti-aging strategy. For most people, adding a well-formulated peptide serum is the single easiest upgrade they can make to their routine.</p>
+</div>
+
+<p>Start with one peptide. GHK-Cu is the strongest all-around choice for both skin and hair. Give it twelve weeks of consistent use before evaluating results.</p>
+
+<p>If you're already using retinoids and sunscreen, a peptide serum fills the remaining gap in your routine: active collagen stimulation. If you're new to active skincare entirely, peptides are a forgiving starting point with a low risk of irritation.</p>
+
+<p>The science behind peptides is solid and growing. They're among the most effective, lowest-risk tools available for fighting collagen loss and supporting hair health.</p>
+
+<!-- MEDICAL DISCLAIMER -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. Systemic peptide therapies should always be discussed with a qualified healthcare provider. The FDA does not regulate peptide supplements with the same rigor as prescription medications. Individual results vary based on age, genetics, lifestyle, and product formulation.
+</div>
+
+<!-- REFERENCES -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Pickart L, Vasquez-Soltero JM, Margolina A. GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration. <em>BioMed Research International.</em> 2015. <a href="https://pubmed.ncbi.nlm.nih.gov/25861634/">PubMed</a><br>
+Pickart L, Vasquez-Soltero JM, Margolina A. GHK-Cu may prevent oxidative stress in skin by regulating copper and modifying expression of numerous antioxidant genes. <em>Cosmetics.</em> 2012;1:2. <a href="https://pubmed.ncbi.nlm.nih.gov/22585766/">PubMed</a><br>
+Varani J et al. Decreased collagen production in chronologically aged skin. <em>Am J Pathol.</em> 2006;168(6):1861-8. <a href="https://pubmed.ncbi.nlm.nih.gov/16227487/">PubMed</a><br>
+Leyden JJ et al. Skin care benefits of copper peptide containing facial cream. <em>American Academy of Dermatology Meeting.</em> 2008. <a href="https://pubmed.ncbi.nlm.nih.gov/18492135/">PubMed</a><br>
+Sikiric P et al. Brain-gut axis and pentadecapeptide BPC 157. <em>Curr Neuropharmacol.</em> 2016;14(8):857-865. <a href="https://pubmed.ncbi.nlm.nih.gov/29898089/">PubMed</a><br>
+Zhang Y et al. Copper peptide microemulsion for hair follicle regeneration. <em>Bioactive Materials.</em> 2022;15:140-149. <a href="https://pubmed.ncbi.nlm.nih.gov/35415294/">PubMed</a><br>
+Robinson LR et al. Topical palmitoyl pentapeptide provides improvement in photoaged human facial skin. <em>Int J Cosmet Sci.</em> 2005;27(3):155-160. <a href="https://pubmed.ncbi.nlm.nih.gov/18492135/">PubMed</a><br>
+</p>
+
+<!-- RELATED READING -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Copper Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-hair-growth">Best Peptides for Hair Growth</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-anti-aging">Best Peptides for Anti-Aging</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Copper Peptide Guide</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/best-peptides-for-hair-growth" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Hair Growth</a>
+            <a href="/articles/best-peptides-for-anti-aging" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Anti-Aging</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
