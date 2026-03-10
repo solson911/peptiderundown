@@ -1,0 +1,557 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Semax: Complete Guide to the Nootropic Neuropeptide",
+  description: "Semax is a synthetic ACTH-derived peptide with powerful nootropic and neuroprotective effects. Mechanisms, variants, dosing, clinical research, and safety — explained without the hype.",
+  image: "/images/articles/semax-complete-guide.webp",
+  date: "2026-03-09",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Nootropic &middot; Neuroprotection</div>
+  <h1>Semax: Complete Guide to the Nootropic Neuropeptide</h1>
+  <p class="sub">A synthetic ACTH fragment that upregulates BDNF and NGF, used as a registered pharmaceutical in Russia for over two decades. How it works, what the research actually shows, and how to think about dosing and safety.</p>
+  <div class="pills">
+    <span class="pill">BDNF &middot; Neurotrophic Growth</span>
+    <span class="pill">Intranasal &middot; Subcutaneous</span>
+    <span class="pill">Nootropic &middot; Neuroprotective</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">20+</div><div class="l">Years of Clinical<br>Use in Russia</div></div>
+  <div class="sb"><div class="v c2">BDNF</div><div class="l">Primary<br>Mechanism</div></div>
+  <div class="sb"><div class="v c3">3</div><div class="l">Variants Available<br>(Standard &middot; NA &middot; NASA)</div></div>
+  <div class="sb"><div class="v c4">751.8</div><div class="l">Molecular Weight<br>(g/mol)</div></div>
+</div>
+
+<p>Semax is one of the most extensively studied nootropic peptides in the world, yet most people outside of Russia have never heard of it. Developed at Moscow's Institute of Molecular Genetics in the 1980s, it's been a registered pharmaceutical there since the early 2000s &mdash; prescribed for stroke recovery, cognitive disorders, and optic nerve conditions.</p>
+
+<p>The peptide is a synthetic fragment of adrenocorticotropic hormone (ACTH), specifically the 4&ndash;7 amino acid sequence with an added proline-glycine-proline tail for enzymatic stability. Unlike its parent hormone, Semax doesn't affect cortisol or adrenal function. Its effects are concentrated entirely on the brain &mdash; enhancing neurotrophic factor expression, modulating neurotransmitter activity, and improving cerebral blood flow.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of Semax &mdash; its mechanisms, clinical research, dosing protocols, variants, and safety profile. It is <strong>not a recommendation to use Semax</strong>. Semax is not FDA-approved in the United States. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>Semax at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Semax (ACTH 4&ndash;7 Analog)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Sequence:</strong> Met-Glu-His-Phe-Pro-Gly-Pro (MEHFPGP) &nbsp;|&nbsp; <strong>Type:</strong> Synthetic heptapeptide &nbsp;|&nbsp; <strong>Molecular Weight:</strong> 751.84 g/mol &nbsp;|&nbsp; <strong>Origin:</strong> Institute of Molecular Genetics, Moscow &nbsp;|&nbsp; <strong>Routes:</strong> Intranasal spray (preferred), subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved in the US; registered pharmaceutical in Russia &nbsp;|&nbsp; <strong>Primary Actions:</strong> Nootropic, neuroprotective, neurogenic, immunomodulatory</p>
+</div>
+
+<p>Semax was originally developed as a treatment for stroke and cognitive disorders &mdash; conditions where its ability to protect and regenerate neurons had clear clinical value. Over time, its nootropic properties attracted attention from researchers and biohackers worldwide. Today it occupies a unique position: a peptide with genuine pharmaceutical credentials in one country and research-chemical status everywhere else.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How Semax Works: Four Core Mechanisms</h2>
+
+<p>Semax acts on multiple neurobiological pathways simultaneously, which is partly why it produces such a broad range of cognitive and neuroprotective effects. Understanding these mechanisms helps explain why it's useful for both acute cognitive enhancement and long-term brain health.</p>
+
+<div class="svg-box">
+  <div class="st">Semax: Multi-Pathway Mechanism of Action</div>
+  <div class="ss">Neurotrophic growth &middot; Neurotransmitter modulation &middot; Stress buffering &middot; Cerebral blood flow</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- BDNF/NGF -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">BDNF / NGF</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">NEUROTROPHIC</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Upregulates BDNF</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#38; NGF expression</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">New synapses</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Dendrite branching</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Neuronal survival</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Long-term brain</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">plasticity</text>
+
+    <!-- Neurotransmitters -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">DA / 5-HT / NE</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">NEUROTRANSMITTER</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Modulates dopamine,</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">serotonin, norepinephrine</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Improved motivation</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Mood stability</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Mental alertness</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Balanced cognitive</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">&#38; emotional tone</text>
+
+    <!-- Enkephalins -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Enkephalins</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">STRESS BUFFERING</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Inhibits enkephalin-</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">degrading enzymes</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Preserved natural</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">opioid buffering</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">No sedation or euphoria</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Stress resilience</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">without dependence</text>
+
+    <!-- Blood Flow -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Blood Flow</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">CEREBROVASCULAR</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Improves cerebral</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">circulation &#38; O&#8322;</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Better nutrient</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">delivery to neurons</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Reduced ischemic risk</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Processing speed</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">&#38; sustained attention</text>
+  </svg>
+</div>
+
+<h3>BDNF and NGF Upregulation</h3>
+
+<p>This is the mechanism that defines Semax. Brain-Derived Neurotrophic Factor (BDNF) drives the growth of new neurons, strengthens existing synaptic connections, and supports long-term memory formation. Nerve Growth Factor (NGF) is critical for the survival and maintenance of cholinergic neurons &mdash; the cells most directly involved in memory and learning.</p>
+
+<p>Studies show Semax can increase BDNF mRNA expression by several fold in the hippocampus and cortex, the brain regions responsible for memory consolidation and executive function (<a href="https://pubmed.ncbi.nlm.nih.gov/16996037/">Dolotov et al., 2006</a>). What makes this particularly compelling is that the neurotrophic effects persist beyond the dosing period. This suggests Semax triggers lasting structural changes in brain circuitry rather than just temporary chemical shifts.</p>
+
+<div class="d-t">
+  <div class="s">Why BDNF Matters</div>
+  <p>BDNF is sometimes called "fertilizer for the brain." Low BDNF levels are associated with depression, cognitive decline, and neurodegenerative disease. Exercise is the most well-established natural BDNF booster. Semax appears to work through a complementary pathway &mdash; making it one of the few compounds that can upregulate BDNF pharmacologically without the side effects associated with antidepressants or stimulants.</p>
+</div>
+
+<h3>Neurotransmitter Modulation</h3>
+
+<p>Semax influences dopamine, serotonin, and norepinephrine activity in the brain. This triple-neurotransmitter effect contributes to the improved motivation, mood stability, and mental alertness that users commonly report. It doesn't flood the brain with any single neurotransmitter the way stimulants do. Instead, it modulates receptor sensitivity and turnover rates, producing a more balanced and sustainable effect.</p>
+
+<h3>Enkephalinase Inhibition</h3>
+
+<p>The peptide temporarily inhibits enzymes that break down enkephalins &mdash; the body's natural stress-buffering opioids. By preserving endogenous enkephalins, Semax enhances stress resilience without producing sedation or euphoria. This mechanism is distinct from the way benzodiazepines or SSRIs work, and it carries no known dependence risk (<a href="https://pubmed.ncbi.nlm.nih.gov/7770188/">Ashmarin et al., 1995</a>).</p>
+
+<h3>Cerebral Blood Flow</h3>
+
+<p>Semax improves circulation and oxygen delivery to brain tissue. Neurons are metabolically demanding cells, and even small improvements in blood supply can translate to meaningful gains in processing speed and sustained attention. This vascular effect is one reason it was originally developed for stroke recovery.</p>
+
+<!-- ========== BENEFITS ========== -->
+<hr class="sep">
+<h2>What Semax Actually Does: Benefits by Evidence Level</h2>
+
+<table class="tbl">
+<thead><tr><th>Benefit</th><th>Mechanism</th><th>Evidence</th><th>User Reports</th></tr></thead>
+<tbody>
+<tr><td><strong>Cognitive enhancement</strong></td><td>BDNF/NGF upregulation, neurotransmitter modulation</td><td class="g">High &mdash; clinical trials + pharmaceutical use</td><td>Sharper focus, faster processing, improved attention span</td></tr>
+<tr><td><strong>Memory and learning</strong></td><td>Hippocampal neuroplasticity, cholinergic neuron support</td><td class="g">High &mdash; consistent preclinical and clinical data</td><td>Better recall, faster acquisition of new information</td></tr>
+<tr><td><strong>Neuroprotection</strong></td><td>Anti-oxidant, anti-inflammatory, neurotrophic</td><td class="g">High &mdash; stroke recovery trials</td><td>Clearer thinking under stress, faster recovery from brain fog</td></tr>
+<tr><td><strong>Mood and stress</strong></td><td>Serotonin/dopamine modulation, enkephalinase inhibition</td><td class="y">Moderate &mdash; clinical observations + user data</td><td>Reduced anxiety, improved emotional resilience, less procrastination</td></tr>
+<tr><td><strong>Motivation and drive</strong></td><td>Dopaminergic pathway modulation</td><td class="y">Moderate &mdash; mechanistic + anecdotal</td><td>Increased initiative, tasks feel less effortful</td></tr>
+<tr><td><strong>Immune modulation</strong></td><td>Cytokine and immune pathway influence</td><td class="y">Low-Moderate &mdash; early research</td><td>Less frequently reported by nootropic users</td></tr>
+<tr><td><strong>Visual function</strong></td><td>NGF-mediated optic nerve support</td><td class="y">Low-Moderate &mdash; Russian clinical studies</td><td>Niche application; primarily studied in optic nerve conditions</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">An Important Distinction</div>
+  <p>Semax isn't a stimulant. It doesn't produce the jitteriness, crash, or tolerance escalation associated with caffeine, amphetamines, or modafinil. The cognitive effects come from <strong>structural improvements in brain function</strong> &mdash; more BDNF, more synaptic connections, better neurotransmitter balance &mdash; rather than simply masking fatigue. This means the benefits tend to build over a cycle rather than spike and fade within hours.</p>
+</div>
+
+<!-- ========== VARIANTS ========== -->
+<hr class="sep">
+<h2>Semax Variants: Standard vs. N-Acetyl vs. NASA</h2>
+
+<p>Three variants exist, each with different potency and stability profiles. The chemical modifications affect how quickly the peptide is broken down by enzymes, which determines how long it remains active in the body.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Standard Semax</h4>
+    <p><strong>Modification:</strong> Unmodified heptapeptide. <strong>Potency:</strong> 1x (baseline). <strong>Duration:</strong> Shortest. <strong>Research:</strong> Most extensively studied in Russian clinical trials. <strong>Best for:</strong> General cognitive support, beginners, those who want the most evidence-backed form.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">N-Acetyl Semax</h4>
+    <p><strong>Modification:</strong> Acetyl group on N-terminus. <strong>Potency:</strong> 1.5&ndash;2x standard. <strong>Duration:</strong> Moderate. <strong>Research:</strong> Limited direct studies. <strong>Best for:</strong> Users seeking enhanced effects with longer duration than standard form.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">NASA Semax (N-Acetyl Semax Amidate)</h4>
+    <p><strong>Modification:</strong> Acetyl + C-terminus amidation. <strong>Potency:</strong> 2&ndash;4x standard. <strong>Duration:</strong> Longest. <strong>Research:</strong> Least clinical data; popular in nootropic community. <strong>Best for:</strong> Experienced users seeking maximum potency for demanding cognitive tasks.</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Standard Semax</th><th>N-Acetyl Semax</th><th>NASA Semax</th></tr></thead>
+<tbody>
+<tr><td><strong>Enzymatic stability</strong></td><td class="y">Moderate</td><td class="g">Improved</td><td class="g">Highest</td></tr>
+<tr><td><strong>Bioavailability</strong></td><td class="y">Good (shorter half-life)</td><td class="g">Better</td><td class="g">Best</td></tr>
+<tr><td><strong>Clinical evidence</strong></td><td class="g">Extensive (Russian trials)</td><td class="y">Limited</td><td class="r">Minimal</td></tr>
+<tr><td><strong>Typical nasal dose</strong></td><td>300&ndash;600 mcg/day</td><td>600&ndash;1200 mcg/day</td><td>1.5&ndash;3 mg/day</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Choosing a Variant</div>
+  <p>If you're new to Semax, <strong>start with the standard form</strong>. It has the deepest evidence base and is the version used in all Russian pharmaceutical studies. The modified variants are more potent per milligram, but potency without clinical data is a trade-off, not an upgrade. Graduate to N-Acetyl or NASA only after establishing your response to standard Semax.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<div class="d-r">
+  <div class="s">Important</div>
+  <p>These are research-based protocols, not medical prescriptions. <strong>Always work with a qualified healthcare provider</strong> before starting any peptide regimen. Start with the lowest effective dose and increase gradually while monitoring your response.</p>
+</div>
+
+<h3>Intranasal Dosing (Preferred Route)</h3>
+
+<p>The intranasal route is preferred because the nasal mucosa provides a relatively direct pathway to the brain, bypassing the blood-brain barrier. Split your daily dose between both nostrils. Tilt your head slightly forward when spraying &mdash; not backward &mdash; so the solution contacts the nasal lining rather than dripping down your throat.</p>
+
+<table class="tbl">
+<thead><tr><th>Variant</th><th>Daily Dose</th><th>Split Doses</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Standard Semax</strong></td><td>300&ndash;600 mcg</td><td>150&ndash;300 mcg per nostril, 1&ndash;2x/day</td><td>Best starting point; most evidence</td></tr>
+<tr><td><strong>N-Acetyl Semax</strong></td><td>600&ndash;1200 mcg</td><td>300&ndash;600 mcg per nostril, 1&ndash;2x/day</td><td>For enhanced effects beyond standard</td></tr>
+<tr><td><strong>NASA Semax</strong></td><td>1.5&ndash;3 mg</td><td>750&ndash;1500 mcg per nostril, 1&ndash;2x/day</td><td>Most potent; start low</td></tr>
+</tbody>
+</table>
+
+<h3>Subcutaneous Dosing</h3>
+
+<table class="tbl">
+<thead><tr><th>Variant</th><th>Daily Dose</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Standard Semax</strong></td><td>500&ndash;1500 mcg</td><td>Once daily or split into two doses; systemic absorption</td></tr>
+<tr><td><strong>N-Acetyl / NASA</strong></td><td>Not commonly used SubQ</td><td>Intranasal preferred for these variants</td></tr>
+</tbody>
+</table>
+
+<p><strong>Timing:</strong> Morning and early afternoon doses align with peak cognitive demands. Avoid evening dosing if sleep interference is a concern. Semax typically comes as lyophilized powder requiring reconstitution with bacteriostatic water. See our <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a> for instructions.</p>
+
+<!-- ========== CLINICAL RESEARCH ========== -->
+<hr class="sep">
+<h2>Clinical Research: What the Evidence Actually Shows</h2>
+
+<p>Semax has been the subject of extensive research, primarily in Russia, where it holds pharmaceutical status. The clinical applications go well beyond general cognitive enhancement.</p>
+
+<h3>Stroke Recovery</h3>
+
+<div class="cd ct">
+  <div class="tg">Clinical Evidence</div>
+  <h3>Acute Ischemic Stroke</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Setting:</strong> Multiple controlled trials in Russian clinical settings &nbsp;|&nbsp; <strong>Population:</strong> Acute ischemic stroke patients &nbsp;|&nbsp; <strong>Route:</strong> Intranasal Semax alongside standard stroke care &nbsp;|&nbsp; <strong>Key Findings:</strong> Reduced infarct volume, faster neurological recovery, improved motor function, speech, and cognition compared to controls &nbsp;|&nbsp; <strong>Mechanism:</strong> Combined neuroprotection via BDNF, improved cerebral blood flow, and anti-inflammatory action</p>
+</div>
+
+<p>Patients receiving intranasal Semax showed faster recovery of motor function, speech, and cognitive ability compared to control groups. The neuroprotective effects are attributed to its combined action on BDNF, blood flow, and inflammatory pathways (<a href="https://pubmed.ncbi.nlm.nih.gov/9378658/">Gusev et al., 1997</a>).</p>
+
+<h3>Cognitive Disorders</h3>
+
+<p>Clinical studies have explored Semax in patients with cognitive impairment and early-stage dementia. Results indicate improvements in attention, working memory, and executive function. These benefits align with what healthy users report anecdotally, though the magnitude of effect tends to be more pronounced in cognitively impaired populations.</p>
+
+<h3>Optic Nerve Conditions</h3>
+
+<p>One of the more surprising research findings involves Semax's effects on visual function. Studies in patients with optic nerve atrophy showed improvements in visual acuity and visual field, likely driven by NGF-mediated support of optic nerve neurons (<a href="https://pubmed.ncbi.nlm.nih.gov/11109528/">Polunin et al., 2000</a>).</p>
+
+<div class="d-a">
+  <div class="s">Research Limitation</div>
+  <p>The majority of Semax research comes from Russian institutions and is published in Russian-language journals. Large-scale Western randomized controlled trials are lacking. The existing evidence is consistent and the mechanisms are well-understood, but the research base doesn't meet the same methodological standards that Western regulators require for drug approval. This is an important caveat when evaluating the strength of evidence.</p>
+</div>
+
+<!-- ========== SEMAX VS SELANK ========== -->
+<hr class="sep">
+<h2>Semax vs. Selank: The Classic Comparison</h2>
+
+<p>These two Russian nootropic peptides are frequently discussed together, and for good reason. They complement each other well but serve fundamentally different primary purposes.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Semax</th><th>Selank</th></tr></thead>
+<tbody>
+<tr><td><strong>Primary focus</strong></td><td>Cognitive enhancement, focus, neuroprotection</td><td>Anxiolytic, mood stabilization, stress reduction</td></tr>
+<tr><td><strong>Derived from</strong></td><td>ACTH (adrenocorticotropic hormone)</td><td>Tuftsin (immune peptide)</td></tr>
+<tr><td><strong>Core mechanism</strong></td><td>BDNF/NGF upregulation, dopamine modulation</td><td>GABA modulation, serotonin metabolism</td></tr>
+<tr><td><strong>Energy impact</strong></td><td class="g">Increases mental energy and alertness</td><td class="y">Promotes calm focus without stimulation</td></tr>
+<tr><td><strong>Anxiety reduction</strong></td><td class="y">Moderate (via enkephalinase inhibition)</td><td class="g">Strong (primary effect)</td></tr>
+<tr><td><strong>Cognitive boost</strong></td><td class="g">Direct (primary effect)</td><td class="y">Indirect (via anxiety reduction)</td></tr>
+<tr><td><strong>Best for</strong></td><td>Demanding study, high-stress work, neurorecovery</td><td>Generalized anxiety, chronic stress, emotional balance</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">The Stack That Works</div>
+  <p>Many users combine both peptides. Semax provides the raw cognitive horsepower while <a href="/articles/selank-complete-guide">Selank</a> removes the anxiety and mental noise that can undermine focus. The combination produces a state of calm clarity that neither peptide achieves as effectively on its own. For a detailed guide on this pairing, see our <a href="/articles/cognition-stack-semax-selank-dihexa">cognition stack guide</a>.</p>
+</div>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Stacking Semax With Other Compounds</h2>
+
+<p>Semax's mechanisms make it a strong candidate for stacking &mdash; the goal is choosing compounds that complement its action or address areas it doesn't primarily cover.</p>
+
+<table class="tbl">
+<thead><tr><th>Stack Partner</th><th>Why It Works</th><th>Primary Benefit</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/selank-complete-guide">Selank</a></strong></td><td>Anxiolytic + cognitive = calm focus</td><td class="g">Synergistic cognition + anxiety reduction</td></tr>
+<tr><td><strong>Noopept</strong></td><td>Enhances memory consolidation alongside BDNF</td><td class="g">Accelerated learning and recall</td></tr>
+<tr><td><strong>Lion's Mane</strong></td><td>Natural NGF booster; dual NGF stimulation</td><td class="g">Enhanced neurogenesis, long-term brain health</td></tr>
+<tr><td><strong>Alpha-GPC / Citicoline</strong></td><td>Choline supply for acetylcholine synthesis</td><td class="y">Improved memory, focus, verbal fluency</td></tr>
+<tr><td><strong>Rhodiola Rosea</strong></td><td>Adaptogenic stress buffer; anti-fatigue</td><td class="y">Enhanced stress resilience, sustained energy</td></tr>
+<tr><td><strong><a href="/articles/cerebrolysin-neuropeptide-guide">Cerebrolysin</a></strong></td><td>Potent neurotrophic agent for neurorecovery</td><td class="y">Advanced neuroprotection (use with caution)</td></tr>
+</tbody>
+</table>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>Semax has a favorable safety profile backed by decades of clinical use in Russia. Most users experience no side effects at recommended doses. When side effects do occur, they tend to be mild and transient.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Nasal irritation</strong></td><td class="y">Common</td><td>Mild stinging or dryness with intranasal use; usually resolves quickly</td></tr>
+<tr><td><strong>Mild headache</strong></td><td class="y">Occasional</td><td>More likely at higher doses or during initial use</td></tr>
+<tr><td><strong>Fatigue</strong></td><td class="g">Rare</td><td>Paradoxical drowsiness in a small percentage of users</td></tr>
+<tr><td><strong>Blood pressure changes</strong></td><td class="g">Rare</td><td>Minor, temporary fluctuations; limited clinical data</td></tr>
+<tr><td><strong>Allergic reaction</strong></td><td class="g">Exceedingly rare</td><td>Rash, swelling, breathing difficulty &mdash; seek immediate medical attention</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Contraindications</div>
+  <p><strong>Not recommended</strong> during pregnancy or breastfeeding (insufficient safety data). Use in children requires strict medical supervision. Individuals with pre-existing neurological, cardiovascular, or psychiatric conditions should consult a healthcare professional. Caution when combining with CNS-active medications. For a broader overview, see our <a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>.</p>
+</div>
+
+<!-- ========== CYCLING ========== -->
+<hr class="sep">
+<h2>Cycling Protocols</h2>
+
+<p>Semax doesn't produce tolerance in the traditional sense, but cycling is recommended to maintain peak responsiveness and allow natural neurochemistry to recalibrate between periods of use.</p>
+
+<table class="tbl">
+<thead><tr><th>Cycle Type</th><th>On Period</th><th>Off Period</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>Standard</strong></td><td>1&ndash;2 weeks</td><td>1&ndash;2 weeks</td><td>Most common; intense cognitive work followed by reset</td></tr>
+<tr><td><strong>Extended</strong></td><td>3 weeks</td><td>2&ndash;3 weeks</td><td>Prolonged demanding periods (exam prep, project deadlines)</td></tr>
+<tr><td><strong>Pulse</strong></td><td>5 days on</td><td>2 days off</td><td>Work-week rhythm; consistent daily focus</td></tr>
+<tr><td><strong>As-needed</strong></td><td>On-demand</td><td>1&ndash;3 days between</td><td>Occasional high-demand tasks; maintains acute responsiveness</td></tr>
+</tbody>
+</table>
+
+<p>If you notice effects diminishing at your usual dose, that's a signal to initiate a break rather than increase the dose. For broader cycling strategies, see our <a href="/articles/peptide-cycling-guide">peptide cycling guide</a>.</p>
+
+<!-- ========== WHO BENEFITS ========== -->
+<hr class="sep">
+<h2>Who Might Benefit</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Students and Knowledge Workers</h4>
+    <p>Semax improves sustained attention, memory encoding, and information processing speed. Useful during exam preparation, research, or any period requiring extended cognitive output.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Neurological Recovery</h4>
+    <p>Clinical evidence supports its use alongside standard treatment for stroke and TBI recovery. The neurotrophic mechanisms make it relevant for any condition involving neuronal damage or degeneration.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Chronic Stress</h4>
+    <p>The enkephalinase inhibition pathway provides stress resilience without sedation or cognitive impairment &mdash; a combination that most anxiolytic compounds can't offer.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Early Cognitive Decline</h4>
+    <p>Neurotrophic effects may help maintain or improve cognitive function in aging populations. BDNF naturally declines with age, and Semax directly counteracts this decline.</p>
+  </div>
+</div>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Legal Status and Sourcing</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Russia</h4>
+    <p>Registered pharmaceutical. Available by prescription. The most established and well-regulated source.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">United States</h4>
+    <p>Not FDA-approved. Available as a research chemical. Legal to purchase but not approved for human use.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">EU / Australia</h4>
+    <p>Not approved in EU. Australia requires prescription under TGA. Grey-area availability in most countries.</p>
+  </div>
+</div>
+
+<p>When sourcing Semax, look for vendors who provide third-party testing with HPLC and mass spectrometry verification. Purity matters significantly with peptides &mdash; low-quality products can be ineffective or contaminated. Check our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for full details and our <a href="/articles/peptide-vendor-red-flags">vendor red flags guide</a> for sourcing tips.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Is Semax a stimulant?</summary>
+    <div class="fa">No. Semax enhances cognitive function through neurotrophic and neuromodulatory pathways, not through the catecholamine surge that stimulants produce. Users typically describe the effect as clean mental clarity without jitteriness or a crash. It works by improving how the brain functions structurally, not by temporarily overriding fatigue signals.</div>
+  </details>
+  <details>
+    <summary>How quickly does Semax work?</summary>
+    <div class="fa">Most users notice improved focus and mental clarity within hours of the first intranasal dose. Full benefits &mdash; particularly mood and memory improvements &mdash; typically develop over the first week of consistent use. The neurotrophic effects (BDNF upregulation, synaptogenesis) take longer to fully manifest but contribute to cumulative improvement over a cycle.</div>
+  </details>
+  <details>
+    <summary>Does Semax cause withdrawal?</summary>
+    <div class="fa">No physical withdrawal symptoms have been reported. Some users notice a return to their baseline cognitive state after stopping, but this isn't withdrawal &mdash; it's simply the absence of the peptide's active effects. There's no known dependence risk, which is consistent with its mechanism (neurotrophic support rather than receptor agonism).</div>
+  </details>
+  <details>
+    <summary>Which variant should I start with?</summary>
+    <div class="fa">Standard Semax. It has the most clinical data, the mildest effect profile, and the longest track record. The modified variants (N-Acetyl, NASA) are more potent but have less research backing their safety and efficacy. Establish your response with the standard form before considering an upgrade.</div>
+  </details>
+  <details>
+    <summary>Can I combine Semax with Selank?</summary>
+    <div class="fa">Yes &mdash; this is one of the most popular and well-regarded nootropic peptide stacks. Semax provides direct cognitive enhancement while <a href="/articles/selank-complete-guide">Selank</a> provides anxiolytic effects, creating a complementary "calm focus" state. They work through different pathways (BDNF/dopamine vs. GABA/serotonin) and don't interfere with each other. See our <a href="/articles/cognition-stack-semax-selank-dihexa">cognition stack guide</a> for protocols.</div>
+  </details>
+  <details>
+    <summary>Is Semax safe long-term?</summary>
+    <div class="fa">Semax has been used clinically in Russia for over 20 years with a favorable safety profile. However, most studies are short-to-medium term (weeks to months). Cycling protocols (1&ndash;3 weeks on, 1&ndash;2 weeks off) are recommended both to maintain efficacy and as a precaution. Long-term continuous use data in healthy populations is limited.</div>
+  </details>
+  <details>
+    <summary>Can women use Semax?</summary>
+    <div class="fa">Yes. Semax does not interact with androgen receptors or affect sex hormones. There are no sex-specific contraindications beyond the general recommendation to avoid use during pregnancy and breastfeeding (due to insufficient safety data in those populations).</div>
+  </details>
+  <details>
+    <summary>Where can I buy high-quality Semax?</summary>
+    <div class="fa">Due to its regulatory status outside Russia, sourcing requires careful vendor selection. Look for suppliers who provide third-party certificates of analysis with HPLC purity testing and mass spectrometry identity verification. Avoid vendors who don't publish testing results. See our <a href="/articles/peptide-vendor-red-flags">vendor red flags guide</a> and <a href="/articles/how-to-read-peptide-coa">how to read a peptide COA</a> for detailed sourcing guidance.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Semax is one of the few nootropic peptides with genuine clinical backing &mdash; not just anecdotal hype. Decades of Russian research and pharmaceutical use support its effectiveness for cognitive enhancement, neuroprotection, and stress resilience. Its safety profile is clean, side effects are rare and mild, and it doesn't carry the dependence risks associated with stimulants or benzodiazepines.</p>
+</div>
+
+<p>The main limitation is that most research comes from Russian institutions, and large-scale Western clinical trials are lacking. That said, the existing evidence is consistent and the mechanism of action &mdash; primarily BDNF and NGF upregulation &mdash; is well-understood and biologically plausible. For anyone serious about nootropic peptides, Semax deserves serious consideration.</p>
+
+<p>Start with the standard form intranasally. Cycle responsibly. Source from a reputable vendor with third-party testing. And if you want the full nootropic peptide experience, consider pairing it with <a href="/articles/selank-complete-guide">Selank</a> for a cognitive profile that's hard to match with any other compound class.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and does not recommend the use of Semax or any other peptide. Semax is not FDA-approved in the United States and is sold as a research chemical. It is a registered pharmaceutical in Russia. Consult a qualified healthcare provider before considering any peptide regimen. Individual responses vary, and quality control in unregulated markets poses significant risks.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Dolotov OV, Karpenko EA, Inozemtseva LS, et al. Semax, an analog of ACTH(4-10) with cognitive effects, regulates BDNF and trkB expression in the rat hippocampus. <em>Brain Res.</em> 2006;1117(1):54-60. <a href="https://pubmed.ncbi.nlm.nih.gov/16996037/">PubMed</a><br>
+Ashmarin IP, Nezavibatko VN, Levitskaya NG, et al. Design and investigation of an ACTH(4-10) analogue lacking D-amino acids and glycine, and possessing nootropic properties. <em>Neurosci Res Commun.</em> 1995;16(2):105-112. <a href="https://pubmed.ncbi.nlm.nih.gov/7770188/">PubMed</a><br>
+Gusev EI, Skvortsova VI, Miasoedov NF, et al. Effectiveness of semax in acute period of hemispheric ischemic stroke (a clinical and electrophysiological study). <em>Zh Nevrol Psikhiatr Im S S Korsakova.</em> 1997;97(6):26-34. <a href="https://pubmed.ncbi.nlm.nih.gov/9378658/">PubMed</a><br>
+Polunin GS, Nurieva SM, Baiandin DL, et al. Evaluation of therapeutic effect of new Russian drug semax in optic nerve disease. <em>Vestn Oftalmol.</em> 2000;116(1):15-18. <a href="https://pubmed.ncbi.nlm.nih.gov/11109528/">PubMed</a><br>
+Eremin KO, Kudrin VS, Saransaari P, et al. Semax, an ACTH(4-10) analogue with nootropic properties, activates dopaminergic and serotoninergic brain systems in rodents. <em>Neurochem Res.</em> 2005;30(12):1493-1500. <a href="https://pubmed.ncbi.nlm.nih.gov/16362768/">PubMed</a>
+</p>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/selank-complete-guide">Selank: The Anxiolytic Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cognition-stack-semax-selank-dihexa">Cognition Stack: Semax, Selank, and Dihexa</a> &nbsp;&middot;&nbsp;
+<a href="/articles/dihexa-nootropic-peptide-guide">Dihexa Nootropic Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cerebrolysin-neuropeptide-guide">Cerebrolysin Neuropeptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} image={frontmatter.image}>
+  <style set:html={rawCSS} />
+  <article>
+    <Fragment set:html={rawHTML} />
+  </article>
+</Base>
