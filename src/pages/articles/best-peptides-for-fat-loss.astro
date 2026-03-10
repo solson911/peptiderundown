@@ -1,0 +1,649 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Best Peptides for Fat Loss: The 2026 Guide",
+  description: "The most effective peptides for fat loss in 2026 including retatrutide, tirzepatide, semaglutide, AOD-9604, and tesamorelin. Evidence-based comparison with dosing protocols.",
+  image: "/images/articles/fat-loss-peptides.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Fat Loss &middot; Metabolic Health</div>
+  <h1>Best Peptides for Fat Loss: The 2026 Guide</h1>
+  <p class="sub">An evidence-based comparison of the most effective fat-loss peptides available today. Mechanisms, dosing, stacking strategies, and realistic expectations covered without the hype.</p>
+  <div class="pills">
+    <span class="pill">GLP-1 Agonists</span>
+    <span class="pill">GH Secretagogues</span>
+    <span class="pill">Lipolysis &middot; Metabolism</span>
+    <span class="pill">Comparison Guide</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">24%</div><div class="l">Max Body Weight<br>Loss (Retatrutide)</div></div>
+  <div class="sb"><div class="v c2">7</div><div class="l">Peptides<br>Compared</div></div>
+  <div class="sb"><div class="v c3">60+</div><div class="l">Compounds in<br>Clinical Trials</div></div>
+  <div class="sb"><div class="v c4">4</div><div class="l">Distinct Fat-Loss<br>Pathways</div></div>
+</div>
+
+<p>For decades, weight loss meant choosing between grueling diets that rarely lasted or risky surgeries with painful recoveries. The emergence of <a href="/articles/what-are-peptides-beginners-guide">peptide therapeutics</a> has fundamentally changed that equation.</p>
+
+<p>Unlike older weight loss drugs that often caused jitters or heart strain, peptides work with your body's own regulatory systems. The result isn't temporary water weight loss. It's actual fat reduction that holds when protocols are properly followed.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational comparison of the top fat-loss peptides in 2026, including mechanisms, dosing, stacking, and clinical evidence. It is <strong>not a recommendation to use any of these compounds</strong>. Always consult a qualified healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<!-- ========== HOW PEPTIDES BURN FAT ========== -->
+<hr class="sep">
+<h2>How Peptides Burn Fat: Four Core Pathways</h2>
+
+<p>Fat-loss peptides don't all work the same way. Each compound targets one or more specific biological pathways, which is why stacking different types can produce better results than any single peptide alone.</p>
+
+<p>Understanding these four mechanisms will help you match the right peptide to your goals.</p>
+
+<div class="svg-box">
+  <div class="st">Fat-Loss Peptide Pathways</div>
+  <div class="ss">Appetite regulation &middot; Direct lipolysis &middot; GH-mediated metabolism &middot; Mitochondrial optimization</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Appetite Regulation -->
+    <rect x="10" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="90" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#2956A6">GLP-1 / GIP</text>
+    <text x="90" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">APPETITE</text>
+    <line x1="30" y1="65" x2="150" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="90" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Slows gastric</text>
+    <text x="90" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">emptying rate</text>
+    <text x="90" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="90" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Reduced cravings</text>
+    <text x="90" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Earlier satiety</text>
+    <text x="90" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Food noise silenced</text>
+    <line x1="30" y1="190" x2="150" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="90" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="90" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Caloric deficit</text>
+    <text x="90" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">without willpower</text>
+
+    <!-- Direct Lipolysis -->
+    <rect x="183" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="263" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#6E3B8A">AOD-9604</text>
+    <text x="263" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">DIRECT LIPOLYSIS</text>
+    <line x1="203" y1="65" x2="323" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="263" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">GH fragment signals</text>
+    <text x="263" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">fat cell receptors</text>
+    <text x="263" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="263" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Triglyceride release</text>
+    <text x="263" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Stubborn fat targeted</text>
+    <text x="263" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">No GH side effects</text>
+    <line x1="203" y1="190" x2="323" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="263" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="263" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Localized fat</text>
+    <text x="263" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">cell breakdown</text>
+
+    <!-- GH Secretagogues -->
+    <rect x="356" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="436" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#187A62">GH Release</text>
+    <text x="436" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">SECRETAGOGUE</text>
+    <line x1="376" y1="65" x2="496" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="436" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Amplifies natural</text>
+    <text x="436" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">GH pulsatility</text>
+    <text x="436" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="436" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Basal metabolic rise</text>
+    <text x="436" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Visceral fat targeted</text>
+    <text x="436" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Muscle preservation</text>
+    <line x1="376" y1="190" x2="496" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="436" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="436" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Body recomposition</text>
+    <text x="436" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">over time</text>
+
+    <!-- Mitochondrial -->
+    <rect x="529" y="10" width="160" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="609" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#B48118">MOTS-c</text>
+    <text x="609" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">MITOCHONDRIAL</text>
+    <line x1="549" y1="65" x2="669" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="609" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Reprograms cellular</text>
+    <text x="609" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">fuel sourcing</text>
+    <text x="609" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="609" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">AMPK activation</text>
+    <text x="609" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Fat as primary fuel</text>
+    <text x="609" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Exercise-mimicking</text>
+    <line x1="549" y1="190" x2="669" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="609" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="609" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Metabolic efficiency</text>
+    <text x="609" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">at the cellular level</text>
+  </svg>
+</div>
+
+<p>The most powerful protocols combine peptides from different columns. For example, pairing a GLP-1 agonist (appetite) with a GH secretagogue (metabolism) attacks fat from two independent angles.</p>
+
+<!-- ========== HEAD-TO-HEAD COMPARISON ========== -->
+<hr class="sep">
+<h2>Head-to-Head: All 7 Peptides Compared</h2>
+
+<p>This table gives you the full picture at a glance. Each peptide brings a different combination of potency, mechanism, and side-effect profile to the table.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Mechanism</th><th>Weight Loss</th><th>Route</th><th>Frequency</th><th>Side Effects</th></tr></thead>
+<tbody>
+<tr><td><strong>Retatrutide</strong></td><td>GLP-1 + GIP + Glucagon</td><td class="g">~24% in 48 wks</td><td>Subcutaneous</td><td>Weekly</td><td class="y">Moderate nausea</td></tr>
+<tr><td><strong>Tirzepatide</strong></td><td>GLP-1 + GIP</td><td class="g">~22% in 72 wks</td><td>Subcutaneous</td><td>Weekly</td><td class="y">Moderate nausea</td></tr>
+<tr><td><strong>Semaglutide</strong></td><td>GLP-1</td><td class="g">~15% in 68 wks</td><td>SC or Oral</td><td>Weekly</td><td class="y">Nausea, GI upset</td></tr>
+<tr><td><strong>AOD-9604</strong></td><td>GH fragment lipolysis</td><td class="y">Moderate</td><td>Subcutaneous</td><td>Daily</td><td class="g">Minimal</td></tr>
+<tr><td><strong>Tesamorelin</strong></td><td>GHRH agonist</td><td class="y">15&ndash;18% visceral</td><td>Subcutaneous</td><td>Daily</td><td class="g">Mild</td></tr>
+<tr><td><strong>CJC/Ipamorelin</strong></td><td>GH secretagogue</td><td class="y">Gradual (1&ndash;2 lb/wk)</td><td>Subcutaneous</td><td>Daily (PM)</td><td class="g">Minimal</td></tr>
+<tr><td><strong>MOTS-c</strong></td><td>Mitochondrial signaling</td><td class="y">Moderate (research)</td><td>Subcutaneous</td><td>3x/week</td><td class="g">Very mild</td></tr>
+</tbody>
+</table>
+
+<!-- ========== RETATRUTIDE ========== -->
+<hr class="sep">
+<h2>Retatrutide: The Triple-Action Leader</h2>
+
+<div class="cd cb">
+  <div class="tg">Top Pick</div>
+  <h3>Retatrutide (LY-3437943)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Triple receptor agonist (GLP-1, GIP, Glucagon) &nbsp;|&nbsp; <strong>Dose Range:</strong> 2&ndash;12 mg weekly &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>Developer:</strong> Eli Lilly &nbsp;|&nbsp; <strong>Stage:</strong> Phase 3 clinical trials &nbsp;|&nbsp; <strong>Best For:</strong> Maximum fat loss with muscle preservation</p>
+</div>
+
+<p>When researchers at Eli Lilly set out to improve on tirzepatide, they aimed for something unprecedented: a single molecule that hits three key metabolic receptors at once. The result was <a href="/articles/retatrutide-complete-guide">retatrutide</a>, which engages GLP-1, GIP, and glucagon receptors in one package.</p>
+
+<p>Clinical trial participants averaged 24% body weight reduction over 48 weeks (<a href="https://pubmed.ncbi.nlm.nih.gov/37385275/">Jastreboff et al., 2023</a>). That's a number that was unimaginable five years ago.</p>
+
+<p>What makes retatrutide stand apart isn't just the weight loss numbers. The glucagon component provides a metabolic boost that prevents the metabolic slowdown often seen with pure appetite suppressants.</p>
+
+<p>The GIP activity also helps maintain lean muscle mass during weight loss. It's this balanced approach that has made retatrutide the preferred choice among metabolic specialists for patients needing significant transformation.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Retatrutide's triple-agonist mechanism produced greater weight loss than tirzepatide (dual) or semaglutide (single) in matched populations. The glucagon receptor activation drives additional energy expenditure beyond appetite suppression alone.</p>
+</div>
+
+<!-- ========== TIRZEPATIDE ========== -->
+<hr class="sep">
+<h2>Tirzepatide: The Dual-Path Pioneer</h2>
+
+<div class="cd cp">
+  <div class="tg">Strong Contender</div>
+  <h3>Tirzepatide (Mounjaro / Zepbound)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Dual GIP/GLP-1 receptor agonist &nbsp;|&nbsp; <strong>Dose Range:</strong> 2.5&ndash;15 mg weekly &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>Developer:</strong> Eli Lilly &nbsp;|&nbsp; <strong>Status:</strong> FDA-approved for weight management &nbsp;|&nbsp; <strong>Best For:</strong> Proven efficacy with regulatory approval</p>
+</div>
+
+<p>Before retatrutide existed, tirzepatide broke new ground as the first dual GIP/GLP-1 receptor agonist approved for weight loss. Patients consistently lost 20&ndash;22% of body weight in the SURMOUNT trials (<a href="https://pubmed.ncbi.nlm.nih.gov/35658024/">Jastreboff et al., 2022</a>).</p>
+
+<p>The innovation wasn't just in combining mechanisms. GIP receptor activation appears to enhance GLP-1's effects while reducing digestive side effects, making higher doses tolerable where previous GLP-1 drugs caused significant nausea.</p>
+
+<p>Tirzepatide's success paved the way for the triple-action retatrutide and demonstrated that multi-receptor targeting was the future of metabolic medicine.</p>
+
+<!-- ========== SEMAGLUTIDE ========== -->
+<hr class="sep">
+<h2>Semaglutide: The Proven Foundation</h2>
+
+<div class="cd ct">
+  <div class="tg">Most Studied</div>
+  <h3>Semaglutide (Wegovy / Ozempic)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> GLP-1 receptor agonist &nbsp;|&nbsp; <strong>Dose Range:</strong> 0.25&ndash;2.4 mg weekly &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous or oral &nbsp;|&nbsp; <strong>Developer:</strong> Novo Nordisk &nbsp;|&nbsp; <strong>Status:</strong> FDA-approved &nbsp;|&nbsp; <strong>Best For:</strong> First-line option with largest evidence base</p>
+</div>
+
+<p>No peptide has done more to change weight loss medicine than <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a>. Originally developed for type 2 diabetes, researchers noticed an unexpected benefit: patients kept losing weight well beyond glucose control.</p>
+
+<p>What many don't realize is that semaglutide's effects go beyond appetite suppression. It actually changes food preferences by reducing cravings for high-fat, high-sugar foods at the brain level (<a href="https://pubmed.ncbi.nlm.nih.gov/35441470/">Blundell et al., 2023</a>). Functional MRI studies show it dampens reward-center activity when viewing hyperpalatable foods.</p>
+
+<p>The secret is semaglutide's exceptional half-life, which allows once-weekly dosing that maintains constant GLP-1 receptor activation. This neurobiological impact helps explain why it succeeds where willpower-based approaches fail.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Advantages</h4>
+    <p>Largest clinical evidence base of any weight-loss peptide. Available in oral form (Rybelsus). FDA-approved with well-characterized safety profile. Proven cardiovascular benefits in SELECT trial.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Limitations</h4>
+    <p>Lower total weight loss than dual or triple agonists. GI side effects common during titration. Weight regain after discontinuation without behavioral changes. Supply constraints ongoing.</p>
+  </div>
+</div>
+
+<!-- ========== AOD-9604 ========== -->
+<hr class="sep">
+<h2>AOD-9604: The Direct Fat Signal</h2>
+
+<div class="cd ca">
+  <div class="tg">Targeted Lipolysis</div>
+  <h3>AOD-9604 (Anti-Obesity Drug Fragment)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Growth hormone fragment (aa 177&ndash;191) &nbsp;|&nbsp; <strong>Typical Dose:</strong> 300 mcg daily &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>Origin:</strong> Monash University, Australia &nbsp;|&nbsp; <strong>Status:</strong> Research compound &nbsp;|&nbsp; <strong>Best For:</strong> Stubborn localized fat deposits</p>
+</div>
+
+<p>While most weight loss peptides work through appetite or metabolism, <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> takes a radically different approach. Developed from the C-terminus of human growth hormone, this fragment directly signals fat cells to release stored triglycerides without growth hormone's side effects.</p>
+
+<p>Researchers spent years trying to isolate growth hormone's metabolic benefits from its growth-promoting effects. The breakthrough came when they discovered that just a small fragment (amino acids 177&ndash;191) could activate fat metabolism specifically.</p>
+
+<p>Unlike systemic metabolism boosters, AOD-9604 works locally at fat deposits. This makes it particularly interesting for stubborn areas that resist diet and exercise.</p>
+
+<!-- ========== TESAMORELIN ========== -->
+<hr class="sep">
+<h2>Tesamorelin: The Belly Fat Specialist</h2>
+
+<div class="cd cr">
+  <div class="tg">Visceral Fat Focus</div>
+  <h3>Tesamorelin (Egrifta)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> GHRH analog &nbsp;|&nbsp; <strong>Typical Dose:</strong> 1&ndash;2 mg daily &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>Developer:</strong> Theratechnologies &nbsp;|&nbsp; <strong>Status:</strong> FDA-approved (lipodystrophy) &nbsp;|&nbsp; <strong>Best For:</strong> Visceral abdominal fat reduction</p>
+</div>
+
+<p>Visceral fat (the dangerous abdominal fat surrounding organs) responds poorly to most weight loss approaches. Tesamorelin changes that by specifically targeting growth hormone releasing hormone receptors.</p>
+
+<p>Originally developed for HIV-related lipodystrophy, researchers discovered it had remarkable precision for reducing waist circumference. Clinical data shows 15&ndash;18% visceral fat reduction in just 6 months (<a href="https://pubmed.ncbi.nlm.nih.gov/20829745/">Falutz et al., 2010</a>).</p>
+
+<p>The key to tesamorelin lies in its pulsatile delivery. By mimicking the body's natural growth hormone pulses, it avoids the insulin resistance issues seen with constant GH exposure. This makes it uniquely suited for <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">metabolic syndrome</a> patients who need abdominal fat reduction but can't risk worsening glucose control.</p>
+
+<!-- ========== CJC/IPAMORELIN ========== -->
+<hr class="sep">
+<h2>CJC-1295/Ipamorelin: The Natural Amplifier</h2>
+
+<div class="cd cp">
+  <div class="tg">GH Secretagogue Stack</div>
+  <h3>CJC-1295 + Ipamorelin Combination</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> GHRH analog + GH secretagogue &nbsp;|&nbsp; <strong>Typical Dose:</strong> 300 mcg each, evening &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>Status:</strong> Research compounds &nbsp;|&nbsp; <strong>Best For:</strong> Gradual recomposition with wellness benefits</p>
+</div>
+
+<p>This combination represents a different philosophy. Instead of introducing new signals, it amplifies your body's own growth hormone production. CJC-1295 extends GH release duration while ipamorelin boosts pulse amplitude.</p>
+
+<p>The result is a natural rhythm enhancement that improves fat metabolism without the supraphysiological peaks of direct GH injection. Unlike synthetic GH, this stack preferentially targets fat cells over growth plates, making it safer for adults.</p>
+
+<p>The gradual fat loss it produces (1&ndash;2 pounds weekly) comes with valuable side benefits: better sleep, improved skin quality, and faster recovery from exercise. It's the slower, steadier option with broader wellness upside.</p>
+
+<!-- ========== MOTS-c ========== -->
+<hr class="sep">
+<h2>MOTS-c: The Mitochondrial Optimizer</h2>
+
+<div class="cd cb">
+  <div class="tg">Emerging Research</div>
+  <h3>MOTS-c (Mitochondrial Open Reading Frame)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Mitochondrial-derived peptide &nbsp;|&nbsp; <strong>Typical Dose:</strong> 5 mg, 3x/week &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>Discovery:</strong> 2015, USC &nbsp;|&nbsp; <strong>Status:</strong> Research compound &nbsp;|&nbsp; <strong>Best For:</strong> Metabolic optimization, exercise mimicking</p>
+</div>
+
+<p>Discovered in 2015, <a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a> represents an entirely new class of metabolic regulators. This mitochondrial-derived peptide communicates between the cell's energy factories and nucleus, reprogramming how cells source their fuel.</p>
+
+<p>The most exciting aspect is its exercise-mimicking effects. MOTS-c activates AMPK pathways normally triggered only by intense physical activity. This makes it particularly valuable for those who can't exercise vigorously due to joint issues or time constraints.</p>
+
+<p>Animal studies show it prevents diet-induced obesity even with high fat intake. During calorie restriction, it shifts energy sourcing toward fat while preserving glucose for the brain.</p>
+
+<!-- ========== DOSING COMPARISON ========== -->
+<hr class="sep">
+<h2>Dosing Protocols Compared</h2>
+
+<p>Every peptide in this guide follows a different dosing schedule. This table summarizes the key parameters for each compound.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Starting Dose</th><th>Maintenance Dose</th><th>Frequency</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>Retatrutide</strong></td><td>2 mg</td><td>8&ndash;12 mg</td><td>Weekly</td><td>48+ weeks</td></tr>
+<tr><td><strong>Tirzepatide</strong></td><td>2.5 mg</td><td>10&ndash;15 mg</td><td>Weekly</td><td>72+ weeks</td></tr>
+<tr><td><strong>Semaglutide</strong></td><td>0.25 mg</td><td>1.7&ndash;2.4 mg</td><td>Weekly</td><td>Ongoing</td></tr>
+<tr><td><strong>AOD-9604</strong></td><td>250 mcg</td><td>300 mcg</td><td>Daily (AM fasted)</td><td>12&ndash;16 weeks</td></tr>
+<tr><td><strong>Tesamorelin</strong></td><td>1 mg</td><td>2 mg</td><td>Daily</td><td>24+ weeks</td></tr>
+<tr><td><strong>CJC/Ipamorelin</strong></td><td>100/100 mcg</td><td>300/300 mcg</td><td>Daily (PM)</td><td>12&ndash;16 weeks</td></tr>
+<tr><td><strong>MOTS-c</strong></td><td>5 mg</td><td>5&ndash;10 mg</td><td>3x/week</td><td>8&ndash;12 weeks</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Important Note</div>
+  <p>GLP-1 agonists (retatrutide, tirzepatide, semaglutide) require slow upward titration over 4&ndash;8 weeks. Starting at full dose causes severe nausea and vomiting. Follow the titration schedule precisely.</p>
+</div>
+
+<!-- ========== STACKING STRATEGIES ========== -->
+<hr class="sep">
+<h2>Strategic Peptide Stacking</h2>
+
+<p>Combining peptides from different pathways can produce better results than any single compound. The key is selecting compounds that complement each other without overlapping mechanisms.</p>
+
+<h3>Morning Metabolic Stack</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Tesamorelin</h4>
+    <p>1 mg subcutaneous. Targets visceral fat through pulsatile GH release. Best on an empty stomach.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">AOD-9604</h4>
+    <p>300 mcg subcutaneous. Directly signals fat cells to release stored triglycerides. Works at the fat deposit level.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">MOTS-c</h4>
+    <p>5 mg subcutaneous (3x/week). Enhances mitochondrial fat oxidation. Activates AMPK pathways.</p>
+  </div>
+</div>
+
+<div class="d-p">
+  <div class="s">Why This Stack Works</div>
+  <p>This combination capitalizes on natural morning cortisol rhythms that make fat burning more efficient. Tesamorelin's GH release primes fat cells for AOD-9604's direct action, while MOTS-c enhances how those cells process energy.</p>
+</div>
+
+<h3>Evening Appetite Control Stack</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Retatrutide</h4>
+    <p>4&ndash;8 mg weekly injection. Controls evening cravings when most overeating occurs. Triple receptor coverage.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">CJC/Ipamorelin</h4>
+    <p>300 mcg each, evening injection. Works with natural nocturnal GH pulses to burn fat during sleep.</p>
+  </div>
+</div>
+
+<!-- ========== REALISTIC EXPECTATIONS ========== -->
+<hr class="sep">
+<h2>What to Realistically Expect</h2>
+
+<p>Peptide fat loss isn't magic. Results vary based on your starting point, metabolic health, and consistency with the protocol.</p>
+
+<table class="tbl">
+<thead><tr><th>Factor</th><th>Impact</th><th>Timeline</th></tr></thead>
+<tbody>
+<tr><td><strong>Starting BMI</strong></td><td>Higher BMI = faster initial loss</td><td class="g">First 3 months</td></tr>
+<tr><td><strong>Insulin resistance</strong></td><td>More resistance = slower start</td><td class="y">First 8 weeks</td></tr>
+<tr><td><strong>Age</strong></td><td>Younger = faster response</td><td class="y">Entire course</td></tr>
+<tr><td><strong>Consistency</strong></td><td>Missed doses slow progress</td><td class="r">Throughout</td></tr>
+<tr><td><strong>Exercise</strong></td><td>38% more fat loss with training</td><td class="g">Entire course</td></tr>
+</tbody>
+</table>
+
+<p>Most users see 5&ndash;8% weight loss in the first month, 15&ndash;20% by month six, and a plateau around month four that often requires dose adjustment. The scale doesn't tell the whole story.</p>
+
+<p>Expect noticeable body recomposition before dramatic scale changes. Clothes fitting better, belt notches tightening, and a flatter midsection are the early signals that fat (not just water) is being lost.</p>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>Side effect profiles vary significantly across peptide classes. GLP-1 agonists carry the most noticeable short-term effects, while GH-related peptides tend to be milder.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>GLP-1 Agonists</th><th>GH Peptides</th><th>MOTS-c</th></tr></thead>
+<tbody>
+<tr><td><strong>Nausea</strong></td><td class="r">Common (20&ndash;40%)</td><td class="g">Rare</td><td class="g">Not reported</td></tr>
+<tr><td><strong>Injection site reactions</strong></td><td class="y">Occasional</td><td class="y">Occasional</td><td class="y">Occasional</td></tr>
+<tr><td><strong>Diarrhea/Constipation</strong></td><td class="r">Common</td><td class="g">Rare</td><td class="g">Not reported</td></tr>
+<tr><td><strong>Headache</strong></td><td class="y">Moderate</td><td class="y">Moderate</td><td class="g">Mild</td></tr>
+<tr><td><strong>Fatigue</strong></td><td class="y">During titration</td><td class="g">Uncommon</td><td class="g">Uncommon</td></tr>
+<tr><td><strong>Insulin effects</strong></td><td class="g">Improves sensitivity</td><td class="y">Monitor closely</td><td class="g">Improves sensitivity</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Contraindications</div>
+  <p>GLP-1 agonists are contraindicated in patients with personal or family history of medullary thyroid carcinoma or Multiple Endocrine Neoplasia syndrome type 2. GH-related peptides should be avoided in individuals with active malignancies. Always get baseline bloodwork before starting any protocol.</p>
+</div>
+
+<!-- ========== BLOOD MONITORING ========== -->
+<h3>Recommended Blood Panels</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Baseline Testing</h4>
+    <p>Complete metabolic panel, lipid profile, HbA1c, fasting insulin, IGF-1, thyroid function (TSH, free T3/T4), CBC with differential.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Ongoing Monitoring</h4>
+    <p>Repeat at month 1, then quarterly. Add liver enzymes if using GLP-1 agonists. Track IGF-1 for any GH-related peptides. Monitor HbA1c trends closely.</p>
+  </div>
+</div>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Choosing the Right Peptide for Your Goals</h2>
+
+<p>Different starting points call for different peptides. Here's how to match your situation to the right compound.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Significant Weight Loss (30+ lbs)</h4>
+    <p>Start with retatrutide or tirzepatide. Their multi-receptor action produces the largest total weight loss. Pair with lifestyle changes for sustained results.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Stubborn Belly Fat</h4>
+    <p>Tesamorelin is purpose-built for visceral fat. Stack with AOD-9604 for both visceral and subcutaneous reduction. Best for those already near target weight.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Body Recomposition</h4>
+    <p>CJC-1295/Ipamorelin promotes gradual fat loss while preserving muscle. Add MOTS-c for metabolic optimization. Ideal for active individuals.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">First-Time Users</h4>
+    <p>Semaglutide offers the largest safety database and multiple delivery options (injection or oral). Its well-characterized side-effect profile makes it the safest starting point.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Exercise-Limited Individuals</h4>
+    <p>MOTS-c's exercise-mimicking effects via AMPK activation make it uniquely suited for those with joint issues or mobility limitations that prevent vigorous training.</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How long until I see results from fat-loss peptides?</summary>
+    <div class="fa">Most users notice reduced cravings within 72 hours of starting GLP-1 agonists. Visible body changes typically appear in 2&ndash;3 weeks as water weight drops and clothes feel looser. Meaningful fat loss measurements show around week 4&ndash;6. GH-related peptides like CJC/Ipamorelin work more gradually, with noticeable recomposition taking 6&ndash;8 weeks.</div>
+  </details>
+  <details>
+    <summary>Are fat-loss peptides safer than traditional weight loss drugs?</summary>
+    <div class="fa">Generally yes, because they work with existing biological pathways rather than forcing metabolic changes. However, "natural mechanism" doesn't mean risk-free. GLP-1 agonists carry risks of pancreatitis (rare) and thyroid concerns in animal models. GH-related peptides can affect insulin sensitivity. Medical supervision and regular bloodwork remain essential for any protocol.</div>
+  </details>
+  <details>
+    <summary>Will the weight stay off after stopping peptides?</summary>
+    <div class="fa">This depends entirely on your maintenance strategy. Peptides help reset metabolic function, but lasting results require sustained lifestyle changes. Research shows that abruptly stopping GLP-1 agonists without behavioral changes leads to rebound in 60&ndash;70% of cases. Most successful users transition to a lower maintenance dose or switch to milder compounds like <a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a>.</div>
+  </details>
+  <details>
+    <summary>Can peptides replace diet and exercise?</summary>
+    <div class="fa">No. Think of peptides as efficiency multipliers for the work you're already doing. A 2025 study showed peptide users who exercised lost 38% more fat than sedentary users on the same protocol. Diet quality still matters because peptides reduce appetite but don't change the nutritional value of what you eat.</div>
+  </details>
+  <details>
+    <summary>Which peptide produces the fastest fat loss?</summary>
+    <div class="fa">Retatrutide currently holds the record, with trial participants averaging 24% body weight loss over 48 weeks. Tirzepatide comes second at roughly 22% over 72 weeks. However, "fastest" isn't always "best." Rapid weight loss can mean more muscle loss and loose skin. The ideal rate is 1&ndash;2% of body weight per week.</div>
+  </details>
+  <details>
+    <summary>Are there non-injectable options for fat-loss peptides?</summary>
+    <div class="fa">Currently, only oral semaglutide (Rybelsus) offers proven non-injectable delivery with documented effectiveness. Research is underway for oral formulations of tirzepatide and retatrutide, but bioavailability remains a challenge for most peptides. Some users report topical AOD-9604 helps with localized fat, though systemic effects require injection.</div>
+  </details>
+  <details>
+    <summary>Can I stack multiple fat-loss peptides?</summary>
+    <div class="fa">Yes, and it's often more effective than single compounds when done correctly. The key is combining peptides from different pathways (for example, a GLP-1 agonist for appetite plus a GH secretagogue for metabolism). Avoid stacking compounds with overlapping mechanisms, and always work with a knowledgeable provider when combining protocols.</div>
+  </details>
+  <details>
+    <summary>What blood tests should I run before starting?</summary>
+    <div class="fa">At minimum: complete metabolic panel, lipid profile, HbA1c, fasting insulin, and thyroid function. If using GH-related peptides, add IGF-1 levels. Test at baseline, one month in, and quarterly after that. This catches metabolic shifts early and ensures your protocol is working safely.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Fat-loss peptides have moved from experimental curiosity to clinically validated tools. Retatrutide leads the pack for raw weight loss potency, semaglutide offers the deepest safety data, and compounds like MOTS-c represent the next frontier. The best peptide is the one matched to your individual biology, goals, and risk tolerance.</p>
+</div>
+
+<p>The peptide revolution in weight management continues accelerating. Over 60 new compounds are in clinical development, including oral retatrutide formulations and next-generation mitochondrial peptides. What began as a diabetes management tool has become the most promising approach to sustainable weight control we've ever seen.</p>
+
+<p>Remember: the best peptide is the one matched to your individual biology and goals. What works for someone else might not be your ideal solution. Consult with a peptide-knowledgeable medical provider to design your personalized fat loss strategy.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not constitute a doctor-patient relationship. The compounds discussed are not all FDA-approved for weight loss. Always consult a qualified healthcare provider before starting any peptide protocol. Never self-prescribe or adjust dosing without professional guidance.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Jastreboff AM et al. Triple-Hormone-Receptor Agonist Retatrutide for Obesity. <em>N Engl J Med.</em> 2023;389(6):514&ndash;526. <a href="https://pubmed.ncbi.nlm.nih.gov/37385275/">PubMed</a><br>
+Jastreboff AM et al. Tirzepatide Once Weekly for the Treatment of Obesity. <em>N Engl J Med.</em> 2022;387(4):327&ndash;340. <a href="https://pubmed.ncbi.nlm.nih.gov/35658024/">PubMed</a><br>
+Wilding JPH et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity. <em>N Engl J Med.</em> 2021;384(11):989&ndash;1002. <a href="https://pubmed.ncbi.nlm.nih.gov/33567185/">PubMed</a><br>
+Blundell J et al. Effects of once-weekly semaglutide on appetite, energy intake, control of eating, food preference and body weight. <em>Diabetes Obes Metab.</em> 2023;19(9):1242&ndash;1251. <a href="https://pubmed.ncbi.nlm.nih.gov/35441470/">PubMed</a><br>
+Falutz J et al. Effects of tesamorelin on body composition and visceral adipose tissue in HIV-infected patients. <em>J Clin Endocrinol Metab.</em> 2010;95(11):4814&ndash;4822. <a href="https://pubmed.ncbi.nlm.nih.gov/20829745/">PubMed</a><br>
+Lee C et al. The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity. <em>Cell Metab.</em> 2015;21(3):443&ndash;454. <a href="https://pubmed.ncbi.nlm.nih.gov/25738459/">PubMed</a><br>
+Heffernan KS et al. AOD-9604 and the regulation of fat metabolism. <em>Obes Rev.</em> 2004;5(2):115&ndash;121. <a href="https://pubmed.ncbi.nlm.nih.gov/15086865/">PubMed</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/semaglutide-weight-loss-guide">Semaglutide Weight Loss Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/retatrutide-complete-guide">Retatrutide Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/retatrutide-vs-tirzepatide-comparison">Retatrutide vs Tirzepatide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604 Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Metabolic Stack Protocol</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/semaglutide-weight-loss-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide Weight Loss Guide</a>
+            <a href="/articles/retatrutide-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Retatrutide Complete Guide</a>
+            <a href="/articles/aod-9604-fat-loss-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">AOD-9604 Fat Loss Guide</a>
+            <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Metabolic Enhancer Stack</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
