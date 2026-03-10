@@ -1,0 +1,564 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "How to Make Your Own GHK-Cu Copper Peptide Cream at Home",
+  description: "Step-by-step guide to making your own topical GHK-Cu copper peptide cream at home. Save money and get clinical-grade results with this DIY recipe.",
+  image: "/images/articles/diy-ghk-cu-cream.webp",
+  date: "2026-02-15",
+  category: "How-To",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">How-To &middot; Copper Peptide &middot; DIY Skincare</div>
+  <h1>How to Make Your Own GHK-Cu Copper Peptide Cream at Home</h1>
+  <p class="sub">A practical, step-by-step recipe for compounding topical GHK-Cu at a fraction of commercial prices. Equipment lists, exact formulas, pH management, storage, and the science behind why this peptide works on skin.</p>
+  <div class="pills">
+    <span class="pill">GHK-Cu &middot; Copper Peptide</span>
+    <span class="pill">Topical &middot; Anti-Aging</span>
+    <span class="pill">DIY &middot; Cost-Effective</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">70%</div><div class="l">Collagen Boost<br>in Studies</div></div>
+  <div class="sb"><div class="v c2">$3.50</div><div class="l">Per Batch<br>DIY Cost</div></div>
+  <div class="sb"><div class="v c3">0.1%</div><div class="l">Optimal<br>Concentration</div></div>
+  <div class="sb"><div class="v c4">5.5&ndash;6.0</div><div class="l">Target pH<br>Range</div></div>
+</div>
+
+<p><a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu (copper peptide)</a> is one of the most exciting discoveries in skin science. This small peptide naturally occurs in our bodies but declines sharply with age, and research shows it triggers <a href="/articles/best-peptides-for-skin-and-hair">collagen production</a>, accelerates wound healing, and fights inflammation at a cellular level.</p>
+
+<p>Commercial GHK-Cu creams cost $60 to $120 for tiny jars. That puts clinical-grade results out of reach for most people. The good news: you can make the same powerful formula at home for about $3.50 per batch.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is a practical walkthrough of home-compounding topical GHK-Cu cream, including the science, equipment, exact formulas, and safety precautions. It is <strong>not a recommendation to self-treat any condition</strong>. Consult a qualified dermatologist or healthcare provider before applying any peptide topically.</p>
+</div>
+
+<!-- ========== SCIENCE ========== -->
+<hr class="sep">
+<h2>The Science Behind Topical GHK-Cu</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>GHK-Cu (Glycyl-L-Histidyl-L-Lysine:Copper)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Copper-binding tripeptide &nbsp;|&nbsp; <strong>Molecular Weight:</strong> 403.9 g/mol &nbsp;|&nbsp; <strong>Natural Source:</strong> Human plasma, saliva, urine &nbsp;|&nbsp; <strong>Primary Actions:</strong> Collagen synthesis, wound healing, anti-inflammatory, antioxidant &nbsp;|&nbsp; <strong>Topical Penetration:</strong> Excellent (small molecular weight) &nbsp;|&nbsp; <strong>Optimal pH:</strong> 5.5&ndash;6.0</p>
+</div>
+
+<p>GHK-Cu is a copper-binding tripeptide with a molecular weight of just 403.9 g/mol. That small size is exactly why it penetrates the skin barrier so effectively. Studies confirm it reaches the dermis where it activates renewal pathways that thicker molecules simply cannot access.</p>
+
+<p>Research published in the <em>Journal of Biomedicine and Biotechnology</em> shows GHK-Cu increases collagen production by up to 70%. A 2020 clinical trial found it significantly improved skin elasticity after 12 weeks, with participants reporting reduced wrinkles and better hydration.</p>
+
+<!-- SVG Mechanism Diagram -->
+<div class="svg-box">
+  <div class="st">How GHK-Cu Works on Skin</div>
+  <div class="ss">Four primary pathways from a single tripeptide</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Collagen Synthesis -->
+    <rect x="15" y="10" width="155" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="92" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Collagen</text>
+    <text x="92" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">SYNTHESIS</text>
+    <line x1="35" y1="65" x2="150" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="92" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Upregulates Type I</text>
+    <text x="92" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">and III collagen genes</text>
+    <text x="92" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="92" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Up to 70% increase</text>
+    <text x="92" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">in production</text>
+    <line x1="35" y1="175" x2="150" y2="175" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="92" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="92" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Firmer, plumper</text>
+    <text x="92" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">skin structure</text>
+
+    <!-- Wound Healing -->
+    <rect x="185" y="10" width="155" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="262" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Healing</text>
+    <text x="262" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">WOUND REPAIR</text>
+    <line x1="205" y1="65" x2="320" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="262" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Attracts immune cells</text>
+    <text x="262" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">to damaged tissue</text>
+    <text x="262" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="262" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Accelerated tissue</text>
+    <text x="262" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">remodeling</text>
+    <line x1="205" y1="175" x2="320" y2="175" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="262" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="262" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Faster recovery</text>
+    <text x="262" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">from skin damage</text>
+
+    <!-- Anti-Inflammatory -->
+    <rect x="355" y="10" width="155" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="432" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Inflammation</text>
+    <text x="432" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">ANTI-INFLAMMATORY</text>
+    <line x1="375" y1="65" x2="490" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="432" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Suppresses pro-</text>
+    <text x="432" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">inflammatory cytokines</text>
+    <text x="432" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="432" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Reduced redness</text>
+    <text x="432" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">and irritation</text>
+    <line x1="375" y1="175" x2="490" y2="175" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="432" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="432" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Calmer, more even</text>
+    <text x="432" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">skin tone</text>
+
+    <!-- Antioxidant -->
+    <rect x="525" y="10" width="160" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="605" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Antioxidant</text>
+    <text x="605" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">FREE RADICAL DEFENSE</text>
+    <line x1="545" y1="65" x2="665" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="605" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Neutralizes oxidative</text>
+    <text x="605" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">stress from UV &#38; pollution</text>
+    <text x="605" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="605" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Protects collagen</text>
+    <text x="605" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">from breakdown</text>
+    <line x1="545" y1="175" x2="665" y2="175" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="605" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="605" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Slowed <a href="/articles/epithalon-anti-aging-guide">premature</a></text>
+    <text x="605" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">aging signs</text>
+  </svg>
+</div>
+
+<p>The peptide also acts as a powerful antioxidant, protecting skin from environmental damage and free radicals. This helps prevent <a href="/articles/epithalon-anti-aging-guide">premature aging</a> caused by sun exposure and pollution.</p>
+
+<p>Bioavailability matters with topical peptides. GHK-Cu has excellent skin penetration compared to larger molecules, and its copper component helps stabilize the peptide during absorption into the dermis.</p>
+
+<div class="d-t">
+  <div class="s">Why Copper Matters</div>
+  <p>The copper ion in GHK-Cu is not just along for the ride. Copper activates lysyl oxidase, the enzyme that cross-links collagen and elastin fibers. Without adequate copper, new collagen production stalls. GHK-Cu delivers copper exactly where it's needed, directly to the dermal matrix.</p>
+</div>
+
+<!-- ========== EQUIPMENT ========== -->
+<hr class="sep">
+<h2>Equipment and Supplies</h2>
+
+<p>Making professional-grade peptide cream requires specific tools. Most of these are one-time purchases that pay for themselves after a single batch compared to store-bought alternatives.</p>
+
+<table class="tbl">
+  <thead><tr><th>Item</th><th>Purpose</th><th>Where to Buy</th><th>Cost</th></tr></thead>
+  <tbody>
+    <tr><td>GHK-Cu powder</td><td>Active ingredient</td><td>Peptide suppliers</td><td class="g">$20&ndash;30/g</td></tr>
+    <tr><td>Sterile water</td><td>Reconstitution</td><td>Pharmacy</td><td class="g">$2&ndash;5</td></tr>
+    <tr><td>Digital scale (0.001g)</td><td>Precise weighing</td><td>Amazon</td><td class="y">$15&ndash;25</td></tr>
+    <tr><td>Glass mixing bowl</td><td>Cream preparation</td><td>Kitchen store</td><td class="g">$5&ndash;10</td></tr>
+    <tr><td>Hand mixer</td><td>Emulsification</td><td>Walmart</td><td class="y">$10&ndash;20</td></tr>
+    <tr><td>pH strips (4.0&ndash;7.0)</td><td>Acidity testing</td><td>Amazon</td><td class="g">$5&ndash;10</td></tr>
+    <tr><td>Amber glass jars</td><td>Light-safe storage</td><td>Specialty bottles</td><td class="g">$1&ndash;2 each</td></tr>
+    <tr><td>Disposable syringes</td><td>Measuring liquids</td><td>Pharmacy</td><td class="g">$1&ndash;2</td></tr>
+    <tr><td>Nitrile gloves</td><td>Contamination barrier</td><td>Hardware store</td><td class="g">$5&ndash;10</td></tr>
+  </tbody>
+</table>
+
+<p>Total setup cost runs about $60 to $80. This equipment makes 10 or more batches, which drops your per-batch equipment cost to nearly nothing. Always buy peptides from reputable suppliers with third-party testing certificates.</p>
+
+<!-- ========== INGREDIENTS ========== -->
+<hr class="sep">
+<h2>Exact Ingredients (30ml Batch)</h2>
+
+<p>Here is the precise formula. Each ingredient serves a specific function in the final product, and substitutions can affect both stability and absorption.</p>
+
+<table class="tbl">
+  <thead><tr><th>Ingredient</th><th>Amount</th><th>Function</th></tr></thead>
+  <tbody>
+    <tr><td>GHK-Cu solution</td><td>1.5ml (3mg)</td><td class="g">Active peptide for skin renewal</td></tr>
+    <tr><td>Aloe vera gel</td><td>10ml</td><td>Base with soothing properties</td></tr>
+    <tr><td>Hyaluronic acid</td><td>2ml</td><td class="g">Deep hydration booster</td></tr>
+    <tr><td>Glycerin</td><td>5ml</td><td>Humectant that draws moisture</td></tr>
+    <tr><td>Jojoba oil</td><td>5ml</td><td>Carrier oil mimicking skin sebum</td></tr>
+    <tr><td>Emulsifying wax</td><td>3g</td><td>Binds oil and water phases</td></tr>
+    <tr><td>Optiphen</td><td>0.5ml</td><td class="r">Preservative (do not skip)</td></tr>
+    <tr><td>Distilled water</td><td>6ml</td><td>Solvent for water-based ingredients</td></tr>
+  </tbody>
+</table>
+
+<p>Jojoba oil mimics natural sebum without clogging pores. Hyaluronic acid provides deep hydration that plumps fine lines from the inside out.</p>
+
+<!-- ========== STEP-BY-STEP ========== -->
+<hr class="sep">
+<h2>Step-by-Step Instructions</h2>
+
+<p>Follow these steps precisely. The order matters, especially the temperature at which you add the peptide.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Step 1: Prepare Workspace</h4>
+    <p>Clean all surfaces with isopropyl alcohol. Put on nitrile gloves. Gather every ingredient and tool before you start.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 2: Reconstitute GHK-Cu</h4>
+    <p>Add 1ml <a href="/articles/how-to-reconstitute-peptides">sterile water</a> to 10mg GHK-Cu powder. Swirl gently until dissolved. Never shake the vial.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 3: Mix Water Phase</h4>
+    <p>Combine aloe vera gel, hyaluronic acid, glycerin, and distilled water in a glass bowl. Heat gently to 70 C (158 F) using a double boiler.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 4: Mix Oil Phase</h4>
+    <p>Combine jojoba oil and emulsifying wax in a separate container. Heat to the same temperature as the water phase.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 5: Combine Phases</h4>
+    <p>Slowly pour oil phase into water phase while mixing with the hand mixer. Keep blending until a creamy consistency forms.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 6: Add Active Ingredients</h4>
+    <p>Wait until the mixture cools to room temperature. Then add GHK-Cu solution and Optiphen. Mix gently but thoroughly.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 7: Test pH</h4>
+    <p>Use pH strips to check acidity. Target range is 5.5 to 6.0. Adjust with diluted citric acid if the reading is too high.</p>
+  </div>
+  <div class="mc">
+    <h4>Step 8: Transfer to Storage</h4>
+    <p>Pour cream into amber glass jars immediately. Leave minimal air space at the top. Label with date and batch number.</p>
+  </div>
+</div>
+
+<div class="d-r">
+  <div class="s">Critical Pitfalls</div>
+  <p>Adding peptides when the mixture is still hot denatures the protein. Skipping pH testing causes GHK-Cu to degrade. Using metal utensils can interact with the copper ion. Inadequate mixing leads to phase separation within days.</p>
+</div>
+
+<!-- ========== RECONSTITUTION ========== -->
+<hr class="sep">
+<h2>How to Reconstitute GHK-Cu Powder</h2>
+
+<p>Proper <a href="/articles/how-to-reconstitute-peptides">reconstitution</a> is critical for peptide stability. Always use sterile water, never tap water. Minerals in tap water react with the copper complex and degrade the peptide before it ever reaches your skin.</p>
+
+<p>Measure 1ml of sterile water per 10mg of GHK-Cu powder. Draw the water into a syringe and gently inject it into the peptide vial. Let it sit for one minute before swirling.</p>
+
+<div class="cd ct">
+  <div class="tg">Handling Tip</div>
+  <h3>Never Shake the Vial</h3>
+  <p style="font-size:14px;margin-bottom:0;">Vigorous shaking can damage the <a href="/articles/what-are-peptides-beginners-guide">peptide structure</a> through mechanical stress. Gentle swirling is all you need for full dissolution. Use reconstituted peptide within 48 hours for best results, or store at 2 to 8 C for up to one week.</p>
+</div>
+
+<!-- ========== CARRIER ========== -->
+<hr class="sep">
+<h2>Choosing a Base Cream or Carrier</h2>
+
+<p>The carrier affects both peptide stability and absorption depth. Not all bases are equal, and the wrong choice can render your GHK-Cu completely inactive before it reaches the dermis.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Good Carriers</h4>
+    <p>Aloe-based gels (naturally pH-balanced). Oil-free moisturizers for acne-prone skin. Lightweight lotions for deeper penetration.</p>
+  </div>
+  <div class="mc">
+    <h4>Avoid These</h4>
+    <p>High alcohol content (dries skin). Strong acids or bases (shifts pH). Heavy fragrances (causes irritation).</p>
+  </div>
+  <div class="mc">
+    <h4>pH Is Everything</h4>
+    <p>GHK-Cu binds to copper-dependent enzymes in skin. The wrong pH breaks this bond. Always test and adjust to 5.5 to 6.0 before adding peptide.</p>
+  </div>
+</div>
+
+<p>Lightweight lotions absorb better than thick creams, allowing deeper peptide penetration. Avoid petroleum-based products entirely because they create a barrier that blocks absorption into the dermis.</p>
+
+<!-- ========== STORAGE ========== -->
+<hr class="sep">
+<h2>Storage and Shelf Life</h2>
+
+<p>GHK-Cu cream is perishable. Store it in amber glass jars in the refrigerator at 2 to 8 C. This extends shelf life to about two to three months. Freezing is not recommended because it disrupts the emulsion structure.</p>
+
+<div class="cd ca">
+  <div class="tg">Spoilage Warning</div>
+  <h3>Signs Your Cream Has Gone Bad</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Color change</strong> (turning greenish or brown) &nbsp;|&nbsp; <strong>Separation</strong> that won't remix with stirring &nbsp;|&nbsp; <strong>Unusual odor</strong> (sour or chemical smell) &nbsp;|&nbsp; <strong>Visible mold</strong> (discard immediately, do not scrape and reuse)</p>
+</div>
+
+<p>Preservatives like Optiphen prevent microbial growth, but they are not optional. Never skip this ingredient. If you see any spoilage signs, discard the entire batch and start fresh.</p>
+
+<!-- ========== APPLICATION ========== -->
+<hr class="sep">
+<h2>How to Apply the Finished Cream</h2>
+
+<p>Apply a pea-sized amount to clean, dry skin twice daily. Focus on areas with visible wrinkles or sun damage. Gently massage in circular motions until the product is fully absorbed.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Morning Routine</h4>
+    <p>Apply after cleansing but before heavier moisturizers. Morning application provides antioxidant protection against daytime UV and pollution exposure.</p>
+  </div>
+  <div class="mc">
+    <h4>Evening Routine</h4>
+    <p>Apply after cleansing before bed. Nighttime use supports the body's natural overnight repair cycle when skin cell turnover peaks.</p>
+  </div>
+</div>
+
+<h3>Expected Timeline</h3>
+
+<table class="tbl">
+  <thead><tr><th>Timeframe</th><th>What to Expect</th><th>Mechanism</th></tr></thead>
+  <tbody>
+    <tr><td>Week 1&ndash;2</td><td class="g">Improved hydration</td><td>Hyaluronic acid + GHK-Cu water retention</td></tr>
+    <tr><td>Week 4&ndash;6</td><td class="g">Firmer texture</td><td>Early collagen synthesis activation</td></tr>
+    <tr><td>Week 8&ndash;12</td><td class="g">Reduced fine lines</td><td>Collagen remodeling + elastin cross-linking</td></tr>
+    <tr><td>Month 3+</td><td class="g">More even skin tone</td><td>Cumulative anti-inflammatory effects</td></tr>
+  </tbody>
+</table>
+
+<p>Consistency matters more than concentration. Daily use at 0.1% beats occasional use at higher concentrations. Pair with sunscreen during the day since new collagen is particularly vulnerable to UV damage.</p>
+
+<!-- ========== COST COMPARISON ========== -->
+<hr class="sep">
+<h2>Cost Comparison: DIY vs. Commercial</h2>
+
+<p>The price difference is dramatic. Commercial brands charge premium markups for what amounts to basic formulation chemistry. Here is what the numbers actually look like.</p>
+
+<table class="tbl">
+  <thead><tr><th>Product</th><th>Size</th><th>GHK-Cu %</th><th>Price</th><th>Cost/mg</th></tr></thead>
+  <tbody>
+    <tr><td><strong>DIY Cream</strong></td><td>30ml</td><td>0.1%</td><td class="g">$3.50</td><td class="g">$0.12</td></tr>
+    <tr><td>Brand A</td><td>15ml</td><td>0.05%</td><td class="r">$65</td><td class="r">$8.67</td></tr>
+    <tr><td>Brand B</td><td>30ml</td><td>0.08%</td><td class="r">$89</td><td class="r">$3.71</td></tr>
+    <tr><td>Brand C</td><td>50ml</td><td>0.03%</td><td class="r">$75</td><td class="r">$5.00</td></tr>
+  </tbody>
+</table>
+
+<p>DIY costs about 3 to 5 percent of commercial products. You also control the exact concentration and ingredient quality, which means no fillers, no unnecessary additives, and no marketing markup.</p>
+
+<!-- ========== COMMON MISTAKES ========== -->
+<hr class="sep">
+<h2>Common Mistakes to Avoid</h2>
+
+<div class="g2">
+  <div class="cd cr">
+    <div class="tg">Mistake</div>
+    <h3>Wrong pH</h3>
+    <p style="font-size:14px;margin-bottom:0;">GHK-Cu degrades rapidly outside the 5.5 to 6.0 range. Test every single batch with pH strips. Adjust with diluted citric acid (lower) or baking soda solution (raise).</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Mistake</div>
+    <h3>Adding Peptide to Hot Mixture</h3>
+    <p style="font-size:14px;margin-bottom:0;">Heat denatures proteins. Always wait until the cream base has cooled to room temperature before introducing GHK-Cu. If it's warm to the touch, it's too hot.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Mistake</div>
+    <h3>Skipping Preservative</h3>
+    <p style="font-size:14px;margin-bottom:0;">Without Optiphen or an equivalent preservative, bacteria colonize the cream within days. This is not optional. Unpreserved cream is a skin infection waiting to happen.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Mistake</div>
+    <h3>Using Metal Utensils</h3>
+    <p style="font-size:14px;margin-bottom:0;">Copper reacts with metal tools, especially stainless steel and aluminum. Use glass or plastic for mixing, measuring, and storage. Even brief metal contact can deactivate the peptide.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Measurement Matters</div>
+  <p>Invest in a proper 0.001g scale. Small errors in peptide measurement directly affect potency. A $20 milligram scale is the difference between a product that works and an expensive moisturizer.</p>
+</div>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety and Patch Testing</h2>
+
+<p>GHK-Cu is generally well-tolerated, but individual reactions vary. Always perform a patch test before applying to your face or any large skin area.</p>
+
+<div class="cd cp">
+  <div class="tg">Patch Test Protocol</div>
+  <h3>How to Test Before Full Application</h3>
+  <p style="font-size:14px;margin-bottom:0;">Apply a small amount to the inner forearm. Wait 24 hours. Look for redness, itching, rash, swelling, or burning. If any of these appear, do not proceed with facial application. People with copper allergies should avoid GHK-Cu entirely.</p>
+</div>
+
+<p>Pregnant or nursing women should consult their doctor before using any peptide topically. If irritation develops at any point during ongoing use, stop immediately and allow the skin to recover fully before trying again at a lower concentration.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How long does DIY GHK-Cu cream last?</summary>
+    <div class="fa">Properly stored in the refrigerator, it lasts two to three months. Always check for spoilage signs before each use. The preservative extends shelf life but does not make it permanent.</div>
+  </details>
+  <details>
+    <summary>Can I apply this cream around my eyes?</summary>
+    <div class="fa">Yes, but with extra caution. Apply only to the orbital bone area, not directly on eyelids or the tear trough. If any stinging occurs, rinse immediately with cool water.</div>
+  </details>
+  <details>
+    <summary>What concentration works best?</summary>
+    <div class="fa">Research consistently shows 0.1% concentration is the sweet spot. Higher concentrations don't improve results and may trigger irritation. Stick to the recommended formula.</div>
+  </details>
+  <details>
+    <summary>Can I mix GHK-Cu with vitamin C?</summary>
+    <div class="fa">Not recommended in the same product. Vitamin C can oxidize copper and generate free radicals, which is the opposite of what you want. Use them at different times: vitamin C in the morning, GHK-Cu at night.</div>
+  </details>
+  <details>
+    <summary>How soon will I see results?</summary>
+    <div class="fa">Most people notice improved hydration within two weeks. Collagen-building effects take four to eight weeks to become visible. Full results appear after three months of consistent daily use.</div>
+  </details>
+  <details>
+    <summary>Can I apply this on body skin?</summary>
+    <div class="fa">Absolutely. It works well on the neck, chest, hands, and anywhere with sun damage or visible aging. You may need to scale up your batch size for body-wide application.</div>
+  </details>
+  <details>
+    <summary>Where should I buy GHK-Cu powder?</summary>
+    <div class="fa">Purchase from peptide suppliers that provide third-party testing certificates (COA). Avoid sellers who cannot produce lab verification. Purity should be 98% or higher for topical use.</div>
+  </details>
+</div>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational purposes only and does not constitute medical advice. GHK-Cu is a research compound and is not FDA-approved for cosmetic or therapeutic use. Always consult a qualified healthcare provider or dermatologist before starting any peptide regimen. Individual results vary. Stop use immediately if adverse reactions occur.
+</div>
+
+<!-- ========== FURTHER READING ========== -->
+<hr class="sep">
+<h2>Further Reading</h2>
+
+<p style="font-size:14.5px;line-height:1.8;">
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-vs-ghk-cu-comparison">BPC-157 vs GHK-Cu Comparison</a> &nbsp;&middot;&nbsp;
+<a href="/articles/glow-stack-ghk-cu-bpc157-epithalon">The Glow Stack: GHK-Cu + BPC-157 + Epithalon</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-skin-and-hair">Best Peptides for Skin and Hair</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-reconstitute-peptides">How to Reconstitute Peptides</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Complete Guide</a>
+            <a href="/articles/best-peptides-for-skin-and-hair" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Skin and Hair</a>
+            <a href="/articles/glow-stack-ghk-cu-bpc157-epithalon" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">The Glow Stack Guide</a>
+            <a href="/articles/bpc-157-vs-ghk-cu-comparison" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 vs GHK-Cu</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

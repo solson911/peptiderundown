@@ -1,0 +1,610 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Retatrutide vs Tirzepatide: Triple vs Dual Agonist Comparison",
+  description: "Head-to-head comparison of retatrutide and tirzepatide for weight loss. Mechanisms, clinical trial data, side effects, dosing, and practical considerations explained clearly.",
+  image: "/images/articles/retatrutide-vs-tirzepatide.webp",
+  date: "2026-03-10",
+  category: "Comparisons",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Comparison &middot; Weight Loss &middot; GLP-1 Agonists</div>
+  <h1>Retatrutide vs Tirzepatide: Triple vs Dual Agonist Comparison</h1>
+  <p class="sub">Two of the most powerful incretin-based weight loss peptides compared side by side. Mechanisms, trial data, side effects, and practical considerations for the dual agonist vs the triple agonist.</p>
+  <div class="pills">
+    <span class="pill">GLP-1 &middot; GIP &middot; Glucagon</span>
+    <span class="pill">Weight Loss &middot; Metabolic</span>
+    <span class="pill">Clinical Trials &middot; FDA</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">~22%</div><div class="l">Tirzepatide<br>Weight Loss (72wk)</div></div>
+  <div class="sb"><div class="v c2">~24%</div><div class="l">Retatrutide<br>Weight Loss (48wk)</div></div>
+  <div class="sb"><div class="v c3">2 vs 3</div><div class="l">Receptor<br>Targets</div></div>
+  <div class="sb"><div class="v c4">82%</div><div class="l">Liver Fat Reduction<br>(Retatrutide)</div></div>
+</div>
+
+<p>The weight loss peptide space changed when <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> proved that targeting two incretin receptors at once could outperform single-agonist drugs like <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a>. Now <a href="/articles/retatrutide-complete-guide">retatrutide</a> is pushing that logic one step further by adding a third receptor to the mix.</p>
+
+<p>These are not interchangeable medications. They work through different receptor combinations, produce different metabolic effects, and sit at very different points in the regulatory timeline. This comparison breaks down what actually matters when evaluating them.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>An educational comparison of tirzepatide and retatrutide covering receptor pharmacology, clinical trial results, safety data, dosing, and practical considerations. This is <strong>not medical advice</strong>. Consult a qualified healthcare provider before considering any weight loss medication.</p>
+</div>
+
+<!-- ========== MECHANISM OVERVIEW ========== -->
+<hr class="sep">
+<h2>Mechanism of Action: Dual vs Triple Agonism</h2>
+
+<p>The core difference between these two compounds comes down to how many receptors they activate. Tirzepatide hits two. Retatrutide hits three. That third receptor changes the metabolic picture in ways that go beyond simple appetite suppression.</p>
+
+<div class="svg-box">
+  <div class="st">Receptor Activation: Tirzepatide vs Retatrutide</div>
+  <div class="ss">GLP-1 &middot; GIP &middot; Glucagon receptor pathways compared</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- GLP-1 (shared) -->
+    <rect x="15" y="10" width="210" height="240" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="120" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">GLP-1 Receptor</text>
+    <text x="120" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">SHARED BY BOTH</text>
+    <line x1="35" y1="65" x2="205" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="120" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Appetite suppression</text>
+    <text x="120" y="110" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Slowed gastric emptying</text>
+    <text x="120" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Insulin secretion</text>
+    <line x1="35" y1="155" x2="205" y2="155" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="120" y="180" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">ACTIVATION</text>
+    <text x="120" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362" font-weight="600">Tirzepatide: Yes</text>
+    <text x="120" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#1E3362" font-weight="600">Retatrutide: Yes</text>
+
+    <!-- GIP (shared) -->
+    <rect x="245" y="10" width="210" height="240" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="350" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">GIP Receptor</text>
+    <text x="350" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">SHARED BY BOTH</text>
+    <line x1="265" y1="65" x2="435" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="350" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Enhanced insulin sensitivity</text>
+    <text x="350" y="110" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Reduced GI side effects</text>
+    <text x="350" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Fat tissue remodeling</text>
+    <line x1="265" y1="155" x2="435" y2="155" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="350" y="180" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">ACTIVATION</text>
+    <text x="350" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050" font-weight="600">Tirzepatide: Yes</text>
+    <text x="350" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#3E2050" font-weight="600">Retatrutide: Yes</text>
+
+    <!-- Glucagon (retatrutide only) -->
+    <rect x="475" y="10" width="210" height="240" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="580" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Glucagon Receptor</text>
+    <text x="580" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">RETATRUTIDE ONLY</text>
+    <line x1="495" y1="65" x2="665" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="580" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Increased energy expenditure</text>
+    <text x="580" y="110" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Hepatic fat oxidation</text>
+    <text x="580" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Thermogenesis boost</text>
+    <line x1="495" y1="155" x2="665" y2="155" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="580" y="180" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">ACTIVATION</text>
+    <text x="580" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#14503E" font-weight="600">Tirzepatide: No</text>
+    <text x="580" y="220" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#14503E" font-weight="600">Retatrutide: Yes</text>
+  </svg>
+</div>
+
+<h3>Tirzepatide: The Dual Agonist</h3>
+
+<p><a href="/articles/tirzepatide-complete-guide">Tirzepatide</a> activates GLP-1 and GIP receptors simultaneously. The GLP-1 side suppresses appetite and slows gastric emptying. The GIP side improves insulin sensitivity and appears to buffer against some of the GI side effects that pure GLP-1 agonists produce.</p>
+
+<p>This dual mechanism is why tirzepatide outperformed <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> in head-to-head trials. You're not just reducing calorie intake through appetite suppression. You're also shifting how the body processes and stores energy at the cellular level.</p>
+
+<div class="cd cb">
+  <div class="tg">Tirzepatide Profile</div>
+  <h3>Dual GLP-1/GIP Receptor Agonist</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Brand Names:</strong> Mounjaro (diabetes), Zepbound (obesity) &nbsp;|&nbsp; <strong>Receptors:</strong> GLP-1 + GIP &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection, weekly &nbsp;|&nbsp; <strong>FDA Status:</strong> Approved (2022 diabetes, 2023 obesity) &nbsp;|&nbsp; <strong>Manufacturer:</strong> Eli Lilly</p>
+</div>
+
+<h3>Retatrutide: The Triple Agonist</h3>
+
+<p><a href="/articles/retatrutide-complete-guide">Retatrutide</a> takes the same GLP-1/GIP foundation and adds glucagon receptor activation. That third target is what makes it fundamentally different. Glucagon drives the liver to burn stored fat, increases whole-body energy expenditure, and ramps up thermogenesis.</p>
+
+<p>Think of it this way: tirzepatide mostly works by reducing calorie input. Retatrutide works on both sides of the energy equation, reducing intake and increasing expenditure at the same time.</p>
+
+<div class="cd ct">
+  <div class="tg">Retatrutide Profile</div>
+  <h3>Triple GLP-1/GIP/Glucagon Receptor Agonist</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Code Name:</strong> LY3437943 &nbsp;|&nbsp; <strong>Receptors:</strong> GLP-1 + GIP + Glucagon &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection, weekly &nbsp;|&nbsp; <strong>FDA Status:</strong> Phase 3 clinical trials &nbsp;|&nbsp; <strong>Manufacturer:</strong> Eli Lilly</p>
+</div>
+
+<!-- ========== CLINICAL RESULTS ========== -->
+<hr class="sep">
+<h2>Clinical Trial Results: Weight Loss Head to Head</h2>
+
+<p>No direct head-to-head trial has compared these two drugs in the same study. What we have is data from separate trials run under different conditions. That said, the numbers tell a compelling story even with those caveats.</p>
+
+<h3>Tirzepatide: SURMOUNT-1 Trial</h3>
+
+<p>The SURMOUNT-1 trial enrolled over 2,500 adults with obesity and ran for 72 weeks. Participants on the highest dose (15 mg/week) lost an average of 22.5% of their body weight. Roughly one-third of participants hit the 25% threshold, a level of weight loss previously associated only with bariatric surgery (<a href="https://pubmed.ncbi.nlm.nih.gov/35658024/" target="_blank" rel="noopener">Jastreboff et al., 2022</a>).</p>
+
+<p>These were not marginal results. They represented a genuine step change in what a medication could accomplish for obesity.</p>
+
+<h3>Retatrutide: Phase 2 Trial</h3>
+
+<p>The Phase 2 trial of retatrutide enrolled 338 adults with obesity across 48 weeks. Participants on the 12 mg/week dose lost an average of 24.2% of body weight, with more than half achieving over 25% total weight loss (<a href="https://pubmed.ncbi.nlm.nih.gov/37385275/" target="_blank" rel="noopener">Jastreboff et al., 2023</a>).</p>
+
+<p>Even more striking: the weight loss curves had not plateaued at 48 weeks. That suggests even greater losses might be seen in longer Phase 3 trials.</p>
+
+<table class="tbl">
+  <thead><tr><th>Metric</th><th>Tirzepatide (SURMOUNT-1)</th><th>Retatrutide (Phase 2)</th></tr></thead>
+  <tbody>
+    <tr><td>Trial Duration</td><td>72 weeks</td><td>48 weeks</td></tr>
+    <tr><td>Highest Dose</td><td>15 mg/week</td><td>12 mg/week</td></tr>
+    <tr><td>Mean Weight Loss</td><td class="g">~22.5%</td><td class="g">~24.2%</td></tr>
+    <tr><td>Achieved &ge;25% Loss</td><td>~33%</td><td class="g">&gt;50%</td></tr>
+    <tr><td>Liver Fat Reduction</td><td class="y">~50%</td><td class="g">~82%</td></tr>
+    <tr><td>Trial Phase</td><td class="g">Phase 3 (complete)</td><td class="y">Phase 2 (Phase 3 ongoing)</td></tr>
+    <tr><td>FDA Approval</td><td class="g">Approved</td><td class="r">Not yet</td></tr>
+  </tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Important Caveat</div>
+  <p>These results come from different trials with different patient populations and study designs. The only way to know which compound truly produces greater weight loss is a randomized head-to-head trial, and that has not been conducted yet.</p>
+</div>
+
+<h3>The Liver Fat Story</h3>
+
+<p>One of the most interesting differences shows up in liver fat data. Tirzepatide reduced liver fat by roughly 50% in studies. Retatrutide reduced it by approximately 82%. That enormous difference almost certainly comes from the glucagon receptor component, which directly drives hepatic fat oxidation.</p>
+
+<p>For people with metabolic-associated fatty liver disease (MAFLD), this difference could be clinically meaningful. Fatty liver disease affects roughly 30% of adults globally and currently has limited treatment options.</p>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety Profile</h2>
+
+<p>Both medications share a common side effect signature because they both activate GLP-1 receptors. The GI effects that come with GLP-1 agonism are the price of admission for this drug class. Most people find them manageable, especially with proper dose titration.</p>
+
+<table class="tbl">
+  <thead><tr><th>Side Effect</th><th>Tirzepatide</th><th>Retatrutide</th></tr></thead>
+  <tbody>
+    <tr><td>Nausea</td><td class="y">Common (20-30%)</td><td class="y">Common (20-25%)</td></tr>
+    <tr><td>Diarrhea</td><td class="y">Common</td><td class="y">Common</td></tr>
+    <tr><td>Vomiting</td><td class="y">Occasional</td><td class="y">Occasional</td></tr>
+    <tr><td>Constipation</td><td class="y">Occasional</td><td class="y">Occasional</td></tr>
+    <tr><td>Injection Site Reactions</td><td class="g">Mild</td><td class="g">Mild</td></tr>
+    <tr><td>Heart Rate Increase</td><td class="y">Slight</td><td class="y">Slight</td></tr>
+    <tr><td>Dropout Due to Side Effects</td><td>~7%</td><td>6-10%</td></tr>
+  </tbody>
+</table>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Tirzepatide Safety Edge</h4>
+    <p>Years of real-world safety data. Tens of thousands of patients tracked through post-marketing surveillance. The GIP component appears to buffer against some GI side effects seen with pure GLP-1 agonists.</p>
+  </div>
+  <div class="mc">
+    <h4>Retatrutide Unknowns</h4>
+    <p>Limited to Phase 2 data with 338 participants. The glucagon receptor component raises theoretical concerns about blood glucose in non-diabetic patients, though trial data has been reassuring so far.</p>
+  </div>
+</div>
+
+<div class="cd cr">
+  <div class="tg">Safety Warnings</div>
+  <h3>Shared Contraindications</h3>
+  <p style="font-size:14px;margin-bottom:0;">Both medications carry warnings for: personal or family history of medullary thyroid carcinoma (MTC), multiple endocrine neoplasia syndrome type 2 (MEN2), history of <a href="/articles/peptide-side-effects-what-to-know">pancreatitis</a>, pregnancy or planned pregnancy, and severe gastrointestinal disease. These are not lifestyle drugs. They require medical supervision and monitoring.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols and Escalation</h2>
+
+<p>Both drugs follow a gradual dose escalation model. You start low and increase over weeks to months. This approach reduces GI side effects and lets your body adapt to the metabolic changes happening under the hood.</p>
+
+<h3>Tirzepatide Dose Escalation</h3>
+
+<table class="tbl">
+  <thead><tr><th>Phase</th><th>Weeks</th><th>Weekly Dose</th></tr></thead>
+  <tbody>
+    <tr><td>Starting</td><td>1 to 4</td><td>2.5 mg</td></tr>
+    <tr><td>Step 1</td><td>5 to 8</td><td>5 mg</td></tr>
+    <tr><td>Step 2</td><td>9 to 12</td><td>7.5 mg</td></tr>
+    <tr><td>Step 3</td><td>13 to 16</td><td>10 mg</td></tr>
+    <tr><td>Step 4</td><td>17 to 20</td><td>12.5 mg</td></tr>
+    <tr><td>Maintenance</td><td>21+</td><td>15 mg</td></tr>
+  </tbody>
+</table>
+
+<h3>Retatrutide Dose Escalation (Phase 2 Protocol)</h3>
+
+<table class="tbl">
+  <thead><tr><th>Phase</th><th>Duration</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td>Initiation</td><td>Weeks 1 to 4</td><td>Low starting dose</td></tr>
+    <tr><td>Escalation</td><td>Every 4 weeks</td><td>Gradual increases</td></tr>
+    <tr><td>Maintenance</td><td>Ongoing</td><td>Up to 12 mg/week</td></tr>
+  </tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Dosing Note</div>
+  <p>Retatrutide dosing protocols may change significantly once Phase 3 trial data is finalized. The escalation schedule used in Phase 2 was designed for research purposes, and the commercial formulation could look different.</p>
+</div>
+
+<!-- ========== PRACTICAL ========== -->
+<hr class="sep">
+<h2>Practical Considerations: Cost, Access, and Timing</h2>
+
+<p>Clinical data matters, but so does whether you can actually get the drug. This is where tirzepatide and retatrutide sit in completely different positions right now.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Availability</h4>
+    <p>Tirzepatide is FDA-approved and available by prescription today. Retatrutide is still in Phase 3 trials with an expected approval timeline of 2027 to 2028.</p>
+  </div>
+  <div class="mc">
+    <h4>Monthly Cost</h4>
+    <p>Tirzepatide runs approximately $1,000/month without insurance. Retatrutide pricing is unknown but expected to be in a similar range given manufacturing complexity.</p>
+  </div>
+  <div class="mc">
+    <h4>Insurance</h4>
+    <p>Coverage for tirzepatide remains inconsistent. Many plans exclude weight loss indications while covering the diabetes indication. Expect similar coverage battles for retatrutide.</p>
+  </div>
+</div>
+
+<table class="tbl">
+  <thead><tr><th>Factor</th><th>Tirzepatide</th><th>Retatrutide</th></tr></thead>
+  <tbody>
+    <tr><td>Prescription Status</td><td class="g">Available now</td><td class="r">Not available</td></tr>
+    <tr><td>Estimated Monthly Cost</td><td class="y">~$1,000</td><td>TBD</td></tr>
+    <tr><td>Insurance Coverage</td><td class="y">Variable</td><td>N/A</td></tr>
+    <tr><td>Manufacturer Programs</td><td class="g">Yes</td><td>N/A</td></tr>
+    <tr><td>Expected Commercial Launch</td><td class="g">Available</td><td class="y">2027-2028 (estimated)</td></tr>
+    <tr><td>Real-World Safety Data</td><td class="g">Years of data</td><td class="r">Phase 2 only</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== WHO SHOULD CONSIDER ========== -->
+<hr class="sep">
+<h2>Who Might Benefit from Each</h2>
+
+<p>These medications serve overlapping but not identical patient populations. The right choice depends on individual health status, urgency, and specific metabolic goals.</p>
+
+<div class="g2">
+  <div class="cd cb">
+    <div class="tg">Tirzepatide May Fit If</div>
+    <h3>You Need Treatment Now</h3>
+    <p style="font-size:14px;margin-bottom:0;">Already FDA-approved for both type 2 diabetes and obesity. Best for people who want an established medication with real-world safety data, insurance coverage possibilities, and a proven track record across large Phase 3 trials. Also appropriate if you have <a href="/articles/semaglutide-weight-loss-guide">type 2 diabetes</a> alongside obesity.</p>
+  </div>
+  <div class="cd ct">
+    <div class="tg">Retatrutide May Fit If</div>
+    <h3>You Have Specific Metabolic Goals</h3>
+    <p style="font-size:14px;margin-bottom:0;">The glucagon receptor component makes retatrutide particularly interesting for people with significant fatty liver disease, very high BMI requiring maximum possible weight loss, or those who did not respond adequately to dual-agonist therapy. Requires waiting for FDA approval and accepting Phase 3 data as it comes.</p>
+  </div>
+</div>
+
+<div class="d-r">
+  <div class="s">Critical Reminder</div>
+  <p>Do not delay treatment for a medication that has not been approved. If you have obesity-related health risks now, talk to your healthcare provider about currently available options including <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> and <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a>.</p>
+</div>
+
+<!-- ========== BEYOND WEIGHT LOSS ========== -->
+<hr class="sep">
+<h2>Beyond Weight Loss: Metabolic Effects</h2>
+
+<p>Weight loss is the headline number, but both drugs produce metabolic improvements that go well beyond the scale. Some of these effects are shared, while others are unique to the triple agonist.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Shared Benefits</h4>
+    <p>Both compounds improve glycemic control (HbA1c reduction), blood pressure, triglycerides, and waist circumference. These cardiovascular risk markers improve proportionally to weight loss in most cases.</p>
+  </div>
+  <div class="mc">
+    <h4>Retatrutide Unique</h4>
+    <p>The glucagon component drives dramatically greater liver fat reduction and increases resting energy expenditure. Early data also suggests potential benefits for lipid metabolism beyond what dual agonists achieve.</p>
+  </div>
+</div>
+
+<p>For a broader look at how <a href="/articles/best-peptides-for-fat-loss">peptides fit into fat loss strategies</a>, including stacking approaches, check our dedicated guide.</p>
+
+<!-- ========== BODY COMPOSITION ========== -->
+<hr class="sep">
+<h2>Body Composition: Fat Loss vs Muscle Preservation</h2>
+
+<p>Weight loss numbers alone do not tell the full story. The quality of weight loss matters just as much as the quantity. Losing 25% of body weight is less impressive if a large chunk of that comes from muscle tissue rather than fat.</p>
+
+<p>This is an area where the two compounds may differ in important ways, though data on retatrutide body composition remains limited.</p>
+
+<h3>What We Know About Lean Mass</h3>
+
+<p>Tirzepatide data from SURMOUNT-1 showed that roughly 30-40% of total weight lost consisted of lean mass. This is consistent with other GLP-1 based therapies and is partially a consequence of the caloric deficit itself. When you eat significantly less, your body breaks down both fat and muscle for energy.</p>
+
+<p>Retatrutide's glucagon component raises an interesting question. Glucagon promotes fat oxidation specifically, which could theoretically shift the fat-to-muscle ratio of weight loss in a favorable direction. However, this has not been confirmed in published body composition data from the Phase 2 trial.</p>
+
+<div class="cd ca">
+  <div class="tg">Muscle Preservation Strategy</div>
+  <h3>Practical Steps for Both Medications</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Protein intake:</strong> Aim for 1.2 to 1.6 g/kg of body weight daily &nbsp;|&nbsp; <strong>Resistance training:</strong> 2-3 sessions per week minimum &nbsp;|&nbsp; <strong>Adequate calories:</strong> Avoid extreme restriction beyond what the medication produces &nbsp;|&nbsp; <strong>Sleep:</strong> 7-9 hours for optimal recovery and hormonal balance &nbsp;|&nbsp; <strong>Creatine:</strong> 3-5 g/day may help preserve lean mass during caloric deficit</p>
+</div>
+
+<h3>The Energy Expenditure Difference</h3>
+
+<p>One of the most underappreciated differences between these two compounds is what happens on the expenditure side. Tirzepatide primarily reduces calorie intake. Your metabolic rate adjusts downward as you lose weight, a phenomenon called metabolic adaptation.</p>
+
+<p>Retatrutide's glucagon component may partially counteract this adaptation by directly increasing energy expenditure. If confirmed in Phase 3 data, this would be a significant advantage for long-term weight maintenance, the phase where most people struggle with regain.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Metabolic Adaptation Risk</h4>
+    <p>Tirzepatide users may experience 10-15% reduction in resting metabolic rate as weight drops. This is normal physiology but can slow progress and make maintenance harder.</p>
+  </div>
+  <div class="mc">
+    <h4>Glucagon Counter-Effect</h4>
+    <p>Retatrutide's glucagon agonism may offset some metabolic adaptation by maintaining higher energy expenditure. Phase 3 metabolic rate data will be critical for confirming this.</p>
+  </div>
+</div>
+
+<!-- ========== RESEARCH PIPELINE ========== -->
+<hr class="sep">
+<h2>The Research Pipeline: What Comes Next</h2>
+
+<p>Both medications exist within a rapidly evolving research landscape at Eli Lilly. Understanding where each sits in the development pipeline helps set realistic expectations about availability and future data.</p>
+
+<h3>Tirzepatide: Expanding Indications</h3>
+
+<p>Tirzepatide already has FDA approval for type 2 diabetes (Mounjaro) and obesity (Zepbound). Ongoing trials are investigating its use in heart failure with preserved ejection fraction, obstructive sleep apnea, and metabolic-associated steatohepatitis (MASH). The SURPASS-CVOT trial is evaluating cardiovascular outcomes specifically.</p>
+
+<p>These expanded indications could make tirzepatide available to broader patient populations and improve insurance coverage arguments.</p>
+
+<h3>Retatrutide: Phase 3 and Beyond</h3>
+
+<p>Retatrutide entered Phase 3 trials in late 2023. Multiple trials are running simultaneously, examining efficacy in obesity, type 2 diabetes, and MASH. The TRIUMPH program encompasses several large-scale studies that will generate the data needed for regulatory submissions.</p>
+
+<p>If Phase 3 results confirm Phase 2 findings, FDA submission could happen as early as 2026, with potential approval in 2027. Regulatory timelines are always uncertain, but Eli Lilly has a strong track record of efficient development with this drug class.</p>
+
+<div class="cd cp">
+  <div class="tg">Pipeline Watch</div>
+  <h3>Other Triple Agonists in Development</h3>
+  <p style="font-size:14px;margin-bottom:0;">Retatrutide is not the only triple agonist in development. Other pharmaceutical companies are exploring GLP-1/GIP/glucagon combinations with different receptor binding ratios and pharmacokinetic profiles. The next five years will likely bring multiple options in this drug class, increasing competition and potentially driving down costs.</p>
+</div>
+
+<!-- ========== MANAGING SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Managing Side Effects: Practical Tips</h2>
+
+<p>GI side effects are the most common reason people consider stopping these medications. Most symptoms peak during dose escalation and improve once you reach a stable maintenance dose. Here are strategies that apply to both compounds.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Nausea Control</h4>
+    <p>Eat smaller meals. Avoid high-fat and fried foods during escalation phases. Ginger tea or ginger supplements can help. Stay upright for 30 minutes after eating.</p>
+  </div>
+  <div class="mc">
+    <h4>Slow Escalation</h4>
+    <p>If side effects are severe, ask your provider about extending each dose step by 2-4 extra weeks before moving up. Slower escalation often means better tolerance.</p>
+  </div>
+  <div class="mc">
+    <h4>Hydration</h4>
+    <p>Reduced food intake often means reduced fluid intake. Aim for at least 2 liters of water daily. Dehydration worsens nausea, constipation, and fatigue.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">When to Contact Your Provider</div>
+  <p>Seek medical attention if you experience severe abdominal pain, persistent vomiting lasting more than 24 hours, signs of dehydration, or any allergic reaction symptoms. These medications require ongoing medical oversight, not just an initial prescription.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Is retatrutide more effective than tirzepatide for weight loss?</summary>
+    <div class="fa">Early Phase 2 data suggests slightly greater weight loss percentages with retatrutide, but this has not been confirmed in a direct head-to-head trial. The Phase 2 retatrutide trial was also shorter (48 weeks vs 72 weeks), making direct comparison tricky. Phase 3 results will give a clearer picture.</div>
+  </details>
+  <details>
+    <summary>Will retatrutide replace tirzepatide?</summary>
+    <div class="fa">Unlikely. Both drugs are made by Eli Lilly, and they will probably serve different patient populations. Tirzepatide works well for many people and has an established safety profile. Retatrutide may be reserved for cases where the triple agonist mechanism offers distinct clinical advantages, like severe fatty liver disease.</div>
+  </details>
+  <details>
+    <summary>Does the glucagon component in retatrutide raise blood sugar?</summary>
+    <div class="fa">Glucagon normally raises blood glucose, which raised concerns early on. However, trial data showed that retatrutide still improved glycemic control overall. The GLP-1 and GIP components appear to counterbalance the glucagon effect on blood sugar while allowing the beneficial effects on liver fat and energy expenditure.</div>
+  </details>
+  <details>
+    <summary>Which has worse side effects?</summary>
+    <div class="fa">Side effect profiles are broadly similar since both activate GLP-1 receptors. Some reports suggest tirzepatide may cause slightly more initial nausea, but the glucagon component of retatrutide did not introduce new safety signals in Phase 2 data. Individual tolerance varies significantly.</div>
+  </details>
+  <details>
+    <summary>Can I switch from tirzepatide to retatrutide?</summary>
+    <div class="fa">No switching data exists yet. Once retatrutide is approved, clinicians will need to develop transition protocols. Any switch would require medical supervision and likely a new dose escalation period. Do not attempt this without direct guidance from your prescribing physician.</div>
+  </details>
+  <details>
+    <summary>Will retatrutide cost more than tirzepatide?</summary>
+    <div class="fa">Pricing has not been announced. Both are complex peptide-based injectables manufactured by the same company, so similar pricing seems likely. Coverage will depend on insurance formulary decisions that have not been made yet.</div>
+  </details>
+  <details>
+    <summary>Does either medication cause muscle loss?</summary>
+    <div class="fa">All significant weight loss includes some lean mass reduction. Studies on tirzepatide show approximately 30-40% of weight lost comes from lean mass rather than fat. Retatrutide data on body composition is limited. Resistance training and adequate protein intake (1.2-1.6 g/kg/day) help preserve muscle mass on either medication.</div>
+  </details>
+  <details>
+    <summary>Should I wait for retatrutide instead of starting tirzepatide?</summary>
+    <div class="fa">If you have health risks related to obesity right now, delaying treatment is generally not recommended. Tirzepatide is available today and produces clinically meaningful weight loss. Retatrutide may not be commercially available until 2027 or 2028. Discuss timing with your healthcare provider based on your specific risk profile.</div>
+  </details>
+  <details>
+    <summary>How does this compare to the semaglutide vs tirzepatide matchup?</summary>
+    <div class="fa">Semaglutide is a single GLP-1 agonist. Tirzepatide is a dual GLP-1/GIP agonist. Retatrutide is a triple GLP-1/GIP/glucagon agonist. Each additional receptor target adds metabolic complexity and, based on available data, greater weight loss efficacy. See our <a href="/articles/semaglutide-vs-tirzepatide-comparison">semaglutide vs tirzepatide comparison</a> for that specific breakdown.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<p>Tirzepatide is the proven option available right now. It has FDA approval, years of real-world data, and clinical results that set a new standard for pharmaceutical weight loss. For most people seeking medical weight management today, it remains the strongest available choice.</p>
+
+<p>Retatrutide is the next frontier. Its triple agonist mechanism addresses both sides of the energy balance equation and shows remarkable effects on liver fat. If Phase 3 trials confirm the Phase 2 results, it could become the most effective weight loss medication ever developed.</p>
+
+<div class="d-p">
+  <div class="s">Key Takeaway</div>
+  <p>These medications are not competitors in the traditional sense. They represent an evolving continuum of incretin-based therapies. The best choice depends on your individual health profile, timeline, and what your healthcare provider recommends based on your complete medical picture.</p>
+</div>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational purposes only and does not constitute medical advice, diagnosis, or treatment. Tirzepatide and retatrutide are prescription medications that require physician supervision. Do not start, stop, or change any medication without consulting a qualified healthcare provider. Individual results vary. Clinical trial results may not reflect real-world outcomes for all patients.
+</div>
+
+<!-- Cross Links -->
+<hr class="sep">
+<h3>Related Guides</h3>
+<p style="font-size:14px;">
+<a href="/articles/tirzepatide-complete-guide">Tirzepatide Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/retatrutide-complete-guide">Retatrutide Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semaglutide-weight-loss-guide">Semaglutide Weight Loss Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semaglutide-vs-tirzepatide-comparison">Semaglutide vs Tirzepatide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-fat-loss">Best Peptides for Fat Loss</a> &nbsp;&middot;&nbsp;
+<a href="/articles/fat-burning-stack-retatrutide-5amino1mq-cardarine">Fat Burning Stack Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/tirzepatide-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Tirzepatide Complete Guide</a>
+            <a href="/articles/retatrutide-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Retatrutide Complete Guide</a>
+            <a href="/articles/semaglutide-weight-loss-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide Weight Loss Guide</a>
+            <a href="/articles/semaglutide-vs-tirzepatide-comparison" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide vs Tirzepatide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
