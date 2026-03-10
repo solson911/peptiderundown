@@ -1,0 +1,689 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "SS-31 (Elamipretide): The Mitochondrial Peptide Targeting Cellular Energy",
+  description: "A complete guide to SS-31 (elamipretide), the cardiolipin-targeting peptide studied for Barth syndrome, heart failure, and mitochondrial aging.",
+  image: "/images/articles/ss-31-elamipretide.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Mitochondria &middot; Cellular Energy</div>
+  <h1>SS-31 (Elamipretide): The Mitochondrial Peptide Targeting Cellular Energy</h1>
+  <p class="sub">A synthetic tetrapeptide that crosses cell membranes, binds cardiolipin on the inner mitochondrial membrane, and restores the machinery that produces 90% of your body's ATP. FDA-approved for Barth syndrome. Under investigation for heart failure and aging.</p>
+  <div class="pills">
+    <span class="pill">Cardiolipin &middot; Mitochondria</span>
+    <span class="pill">FDA-Approved &middot; Barth Syndrome</span>
+    <span class="pill">Heart Failure &middot; Aging Research</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">~640</div><div class="l">Molecular Weight<br>(Daltons)</div></div>
+  <div class="sb"><div class="v c2">2024</div><div class="l">FDA Approval<br>(Barth Syndrome)</div></div>
+  <div class="sb"><div class="v c3">5,000x</div><div class="l">Mitochondrial<br>Concentration</div></div>
+  <div class="sb"><div class="v c4">3&ndash;4 hr</div><div class="l">Plasma<br>Half-Life</div></div>
+</div>
+
+<p>Most peptides work on hormones, receptors, or signaling pathways outside the cell. SS-31 goes somewhere different.</p>
+
+<p>It crosses the cell membrane and parks itself on the inner mitochondrial membrane, right where your cells generate energy. That makes it one of the most unusual peptides in clinical development.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of SS-31 (elamipretide), covering its mechanism of action, clinical trials, dosing protocols, and safety profile. It is <strong>not a recommendation to use SS-31</strong>. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>SS-31 at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>SS-31 / Elamipretide</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Sequence:</strong> D-Arg-Dmt-Lys-Phe-NH2 &nbsp;|&nbsp; <strong>Type:</strong> Synthetic tetrapeptide (4 amino acids) &nbsp;|&nbsp; <strong>Molecular Weight:</strong> ~640 Da &nbsp;|&nbsp; <strong>Other Names:</strong> Elamipretide, Bendavia, MTP-131, Stelanir &nbsp;|&nbsp; <strong>Primary Target:</strong> Cardiolipin on inner mitochondrial membrane &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Approved for Barth syndrome (2024)</p>
+</div>
+
+<p>Unlike most peptides that bind extracellular receptors, SS-31 is cell-permeable. It concentrates inside mitochondria at roughly 1,000 to 5,000 times the extracellular concentration within minutes of administration.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== HOW IT WORKS ========== -->
+<hr class="sep">
+<h2>How SS-31 Works</h2>
+
+<p>The mechanism is specific and well-characterized. SS-31 doesn't just "support mitochondrial health" in some vague way. It binds a single target with measurable downstream effects.</p>
+
+<div class="svg-box">
+  <div class="st">SS-31: Cardiolipin-Targeted Mitochondrial Rescue</div>
+  <div class="ss">Cardiolipin binding &middot; Cristae stabilization &middot; ETC optimization &middot; ROS reduction</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Cardiolipin Binding -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Cardiolipin</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">BINDING TARGET</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">SS-31 binds via</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">electrostatic &#38;</text>
+    <text x="95" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">hydrophobic forces</text>
+    <text x="95" y="137" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Prevents oxidation</text>
+    <text x="95" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">of cardiolipin</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Membrane integrity</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">preserved</text>
+
+    <!-- Cristae Stabilization -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Cristae</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">STRUCTURAL</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Stabilizes inner</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">membrane folds</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="270" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">ETC supercomplexes</text>
+    <text x="270" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">assemble properly</text>
+    <text x="270" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Proton gradient held</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Efficient ATP</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">production</text>
+
+    <!-- ETC Optimization -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">ETC</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">ELECTRON TRANSPORT</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Complexes I, III, IV</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">run more efficiently</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="445" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Fewer electron leaks</text>
+    <text x="445" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Better O2 usage</text>
+    <text x="445" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Higher ATP yield</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">~90% of body's</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">energy restored</text>
+
+    <!-- ROS Reduction -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">ROS</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">OXIDATIVE STRESS</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Prevents excess ROS</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">at the source</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Up to 45% less</text>
+    <text x="612" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">mitochondrial ROS</text>
+    <text x="612" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Normal signaling kept</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Less oxidative</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">damage to cells</text>
+  </svg>
+</div>
+
+<h3>Cardiolipin Binding: The Core Mechanism</h3>
+
+<p>Cardiolipin is a phospholipid found almost exclusively on the inner mitochondrial membrane. It's essential for the electron transport chain, the process that generates roughly 90% of your body's ATP.</p>
+
+<p>SS-31 binds directly to cardiolipin through electrostatic and hydrophobic interactions (<a href="https://pubmed.ncbi.nlm.nih.gov/24120476/">Birk et al., 2013</a>).</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">What Cardiolipin Does</h4>
+    <p>Required for proper assembly of electron transport chain supercomplexes. Anchors cytochrome c. Maintains the proton gradient that drives ATP synthase. Involved in mitochondrial fission, fusion, and protein import.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">What SS-31 Does to It</h4>
+    <p>Stabilizes cristae structure. Optimizes electron transport through complexes I, III, and IV. Reduces electron leak that forms damaging reactive oxygen species. Prevents cardiolipin peroxidation.</p>
+  </div>
+</div>
+
+<h3>Why Cardiolipin Matters</h3>
+
+<p>Cardiolipin isn't just another membrane component. It's structurally unique, with four fatty acid chains instead of the usual two.</p>
+
+<table class="tbl">
+<thead><tr><th>Function</th><th>Role of Cardiolipin</th></tr></thead>
+<tbody>
+<tr><td><strong>ATP production</strong></td><td>Required for proper assembly of ETC supercomplexes</td></tr>
+<tr><td><strong>Apoptosis</strong></td><td>Anchors cytochrome c; oxidized cardiolipin releases it, triggering cell death</td></tr>
+<tr><td><strong>Mitochondrial dynamics</strong></td><td>Involved in fission and fusion of mitochondria</td></tr>
+<tr><td><strong>Protein import</strong></td><td>Facilitates transport of proteins into the mitochondrial matrix</td></tr>
+<tr><td><strong>Membrane potential</strong></td><td>Maintains the proton gradient that drives ATP synthase</td></tr>
+</tbody>
+</table>
+
+<p>When cardiolipin becomes oxidized or depleted, mitochondria start failing. This happens in aging, heart failure, neurodegenerative disease, and genetic conditions like Barth syndrome.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Age-related decline in cardiolipin content correlates directly with reduced mitochondrial function in heart, brain, and skeletal muscle tissue (<a href="https://pubmed.ncbi.nlm.nih.gov/20594945/">Paradies et al., 2010</a>).</p>
+</div>
+
+<h3>Reducing Oxidative Stress (Without Being an Antioxidant)</h3>
+
+<p>This distinction matters. SS-31 is not a traditional antioxidant that scavenges free radicals after they form. Instead, it prevents excess ROS from being generated in the first place by keeping the electron transport chain running efficiently.</p>
+
+<p>Think of it like fixing a leaky pipe rather than mopping up the water (<a href="https://pubmed.ncbi.nlm.nih.gov/24440382/">Szeto, 2014</a>).</p>
+
+<div class="cd ct">
+  <div class="tg">Mechanism</div>
+  <h3>Not a Scavenger, a Stabilizer</h3>
+  <p style="font-size:14px;margin-bottom:0;">Reduces mitochondrial ROS production by up to 45% in preclinical models. Does not affect normal ROS signaling (important because some ROS serve as cellular signals). Protects against ischemia-reperfusion injury, the damage that occurs when blood flow returns after a blockage.</p>
+</div>
+
+<!-- ========== BARTH SYNDROME ========== -->
+<hr class="sep">
+<h2>Barth Syndrome: The FDA-Approved Indication</h2>
+
+<p>Barth syndrome is a rare genetic disorder caused by mutations in the <strong>tafazzin (TAFAZZIN) gene</strong>. This gene encodes the enzyme responsible for remodeling cardiolipin into its mature form.</p>
+
+<p>Without functional tafazzin, cardiolipin accumulates in abnormal forms. The result is severe mitochondrial dysfunction, primarily affecting the heart and skeletal muscle.</p>
+
+<div class="sr">
+  <div class="sb"><div class="v c1">1 in 300K</div><div class="l">Estimated<br>Prevalence</div></div>
+  <div class="sb"><div class="v c2">X-linked</div><div class="l">Inheritance<br>Pattern</div></div>
+  <div class="sb"><div class="v c3">40 mg</div><div class="l">Approved<br>Daily Dose</div></div>
+  <div class="sb"><div class="v c4">+29.2 m</div><div class="l">Walk Test<br>Improvement</div></div>
+</div>
+
+<h3>The TAZPOWER Trial</h3>
+
+<p>This was the pivotal trial that led to FDA approval.</p>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td><strong>Participants</strong></td><td>12 patients with genetically confirmed Barth syndrome</td></tr>
+<tr><td><strong>Design</strong></td><td>Randomized, double-blind, placebo-controlled crossover</td></tr>
+<tr><td><strong>Duration</strong></td><td>12 weeks per treatment period</td></tr>
+<tr><td><strong>Dose</strong></td><td>40 mg <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous</a> daily</td></tr>
+<tr><td><strong>Primary endpoint</strong></td><td>6-minute walk test (6MWT)</td></tr>
+</tbody>
+</table>
+
+<table class="tbl">
+<thead><tr><th>Outcome</th><th>Elamipretide</th><th>Placebo</th></tr></thead>
+<tbody>
+<tr><td><strong>6MWT improvement</strong></td><td class="g">+20.6 meters</td><td class="r">-8.6 meters</td></tr>
+<tr><td><strong>Total distance walked</strong></td><td class="g">Significant improvement</td><td class="y">No change</td></tr>
+<tr><td><strong>Patient-reported fatigue</strong></td><td class="g">Improved</td><td class="y">No change</td></tr>
+</tbody>
+</table>
+
+<p>The difference between drug and placebo was 29.2 meters on the 6-minute walk test. In a disease this severe, that's clinically meaningful (<a href="https://pubmed.ncbi.nlm.nih.gov/34089644/">Thompson et al., 2021</a>).</p>
+
+<div class="d-t">
+  <div class="s">FDA Milestone</div>
+  <p>The FDA granted approval in January 2024 under the brand name <strong>Stelanir</strong>, making elamipretide the first and only approved treatment specifically targeting the underlying mitochondrial dysfunction in Barth syndrome.</p>
+</div>
+
+<!-- ========== HEART FAILURE ========== -->
+<hr class="sep">
+<h2>Heart Failure Research</h2>
+
+<p>Heart failure is, at its core, an energy crisis. The failing heart can't produce enough ATP to pump effectively. Since SS-31 targets mitochondrial energy production, it was a logical candidate.</p>
+
+<h3>EMBRACE Trial (HFrEF)</h3>
+
+<p>The largest heart failure trial for elamipretide enrolled 71 patients with heart failure and reduced ejection fraction.</p>
+
+<table class="tbl">
+<thead><tr><th>Endpoint</th><th>4 mg</th><th>40 mg</th><th>Placebo</th></tr></thead>
+<tbody>
+<tr><td><strong>LV end-systolic volume</strong></td><td class="g">Improved</td><td class="g">Improved</td><td class="y">No change</td></tr>
+<tr><td><strong>Ejection fraction</strong></td><td class="y">Trend toward improvement</td><td class="y">Trend toward improvement</td><td class="y">No change</td></tr>
+<tr><td><strong>6MWT</strong></td><td class="r">No significant change</td><td class="r">No significant change</td><td class="y">No change</td></tr>
+</tbody>
+</table>
+
+<p>The results were mixed. Cardiac imaging showed structural improvements, but functional measures like the walk test didn't hit statistical significance (<a href="https://pubmed.ncbi.nlm.nih.gov/31597611/">Butler et al., 2020</a>).</p>
+
+<div class="d-a">
+  <div class="s">Why the Mixed Results?</div>
+  <p>Short treatment duration (4 weeks may not reverse years of cardiac remodeling), small sample size (underpowered for modest effects), and patient heterogeneity (heart failure has many subtypes) all likely contributed.</p>
+</div>
+
+<div class="d-p">
+  <div class="s">Post-Hoc Insight</div>
+  <p>Post-hoc analyses suggested elamipretide was most effective in patients with the <strong>worst baseline mitochondrial function</strong>, hinting that patient selection could be critical for future trials.</p>
+</div>
+
+<h3>Ischemia-Reperfusion Injury</h3>
+
+<p>When a blocked artery is reopened (as in a heart attack or bypass surgery), the sudden return of oxygenated blood paradoxically causes additional damage.</p>
+
+<p>Preclinical studies showed SS-31 reduced infarct size by 50&ndash;60% when administered before reperfusion in animal models (<a href="https://pubmed.ncbi.nlm.nih.gov/22361324/">Kloner et al., 2012</a>). Human trials for this indication have been limited and results have not matched the dramatic preclinical findings.</p>
+
+<!-- ========== AGING ========== -->
+<hr class="sep">
+<h2>Aging and Exercise Applications</h2>
+
+<p>This is where SS-31 research gets particularly interesting for the longevity community. Mitochondrial dysfunction is one of the hallmarks of aging, and SS-31 directly targets it.</p>
+
+<h3>Age-Related Mitochondrial Decline</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--red);">What Goes Wrong With Age</h4>
+    <p>Cardiolipin content decreases. ROS production increases, creating a vicious cycle of oxidative damage. Mitochondrial DNA mutations accumulate. Damaged mitochondria aren't cleared efficiently (impaired mitophagy).</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">What SS-31 Addresses</h4>
+    <p>Directly protects and stabilizes cardiolipin. Reduces excess ROS production at the source. These are the first two problems on the list, and they're the ones that cascade into everything else.</p>
+  </div>
+</div>
+
+<h3>Preclinical Aging Data</h3>
+
+<p>The animal data is striking.</p>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Model</th><th>Key Finding</th></tr></thead>
+<tbody>
+<tr><td><strong>Siegel et al., 2013</strong></td><td>Aged mice (26 months)</td><td class="g">8 weeks reversed skeletal muscle mitochondrial decline</td></tr>
+<tr><td><strong>Campbell et al., 2019</strong></td><td>Aged mice</td><td class="g">Restored cardiac diastolic function to near-young levels</td></tr>
+<tr><td><strong>Sweetwyne et al., 2017</strong></td><td>Aged mice (24 months)</td><td class="g">Reversed kidney mitochondrial changes within 8 weeks</td></tr>
+</tbody>
+</table>
+
+<p>Sources: <a href="https://pubmed.ncbi.nlm.nih.gov/24209692/">Siegel et al., 2013</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/30786252/">Campbell et al., 2019</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/27999110/">Sweetwyne et al., 2017</a>.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>In aged mice, 8 weeks of SS-31 treatment was sufficient to restore skeletal muscle energetics to levels seen in young animals. This was not just slowing decline. It was reversal.</p>
+</div>
+
+<h3>Exercise Performance</h3>
+
+<p>In aged animals, SS-31 improved exercise tolerance, likely through enhanced mitochondrial ATP production in skeletal muscle. The peptide also reduced exercise-induced oxidative damage.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Aerobic Capacity</h4>
+    <p>More efficient oxidative phosphorylation could mean higher VO2 output.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Recovery</h4>
+    <p>Reduced exercise-induced mitochondrial damage may speed recovery between sessions.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Fatigue Resistance</h4>
+    <p>Better ATP production in endurance activities could delay exhaustion.</p>
+  </div>
+</div>
+
+<p>No controlled human trials have examined SS-31 specifically for exercise performance in healthy individuals. These remain speculative applications.</p>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>These are research-based protocols, not medical prescriptions. The only approved dosing is for Barth syndrome under medical supervision. Always work with a qualified provider.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td><strong>Approved dose (Barth syndrome)</strong></td><td>40 mg subcutaneous daily</td></tr>
+<tr><td><strong>Research doses (heart failure)</strong></td><td>4 mg or 40 mg subcutaneous daily</td></tr>
+<tr><td><strong>Research doses (other)</strong></td><td>0.01 to 0.25 mg/kg in various trials</td></tr>
+<tr><td><strong>Route</strong></td><td><a href="/articles/how-to-inject-peptides-subcutaneously">Subcutaneous injection</a></td></tr>
+<tr><td><strong>Half-life</strong></td><td>Approximately 3&ndash;4 hours</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Once daily in most protocols</td></tr>
+</tbody>
+</table>
+
+<h3>Reconstitution</h3>
+
+<p>SS-31 from research suppliers typically comes as a lyophilized powder. Standard <a href="/articles/how-to-reconstitute-peptides">reconstitution</a> with bacteriostatic water applies.</p>
+
+<h3>Practical Notes</h3>
+
+<p>The short half-life is worth noting. Unlike peptides such as BPC-157 or semaglutide that are dosed less frequently, SS-31 appears to require daily administration for sustained mitochondrial effects.</p>
+
+<p>Some research protocols have used twice-daily dosing to maintain more consistent tissue concentrations.</p>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>SS-31 has a generally favorable safety profile based on clinical trial data across multiple indications.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site reactions</strong></td><td class="y">Very common (~30%)</td><td>Redness, pain, itching at injection site</td></tr>
+<tr><td><strong>Headache</strong></td><td class="y">Common</td><td>Usually mild and transient</td></tr>
+<tr><td><strong>Fatigue</strong></td><td class="y">Occasional</td><td>Paradoxical given the mechanism; typically resolves</td></tr>
+<tr><td><strong>Nausea</strong></td><td class="y">Occasional</td><td>Less common than with GLP-1 peptides</td></tr>
+<tr><td><strong>Dizziness</strong></td><td class="y">Uncommon</td><td>More reported at higher doses</td></tr>
+<tr><td><strong>Skin reactions</strong></td><td class="y">Uncommon</td><td>Rash or urticaria in some patients</td></tr>
+<tr><td><strong>Contact urticaria</strong></td><td class="r">Rare</td><td>Reported in Barth syndrome trials</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">When to Stop</div>
+  <p>Severe injection site reactions (spreading redness, swelling, signs of infection), allergic reactions (difficulty breathing, facial swelling, widespread hives), or persistent worsening of symptoms. Consult your provider immediately.</p>
+</div>
+
+<p>For a broader overview, see our <a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>.</p>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>SS-31 vs. MOTS-c: Two Approaches to Mitochondrial Health</h2>
+
+<p>Both SS-31 and <a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a> are called "mitochondrial peptides," but they work through completely different mechanisms.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>SS-31 (Elamipretide)</th><th>MOTS-c</th></tr></thead>
+<tbody>
+<tr><td><strong>Origin</strong></td><td>Synthetic (lab-designed)</td><td>Endogenous (mitochondrial DNA)</td></tr>
+<tr><td><strong>Target</strong></td><td>Cardiolipin on inner membrane</td><td>AMPK pathway, nuclear gene regulation</td></tr>
+<tr><td><strong>Mechanism</strong></td><td>Stabilizes electron transport chain</td><td>Activates cellular energy sensor</td></tr>
+<tr><td><strong>Primary effects</strong></td><td>Restores structure &#38; ATP production</td><td>Metabolic regulation, insulin sensitivity</td></tr>
+<tr><td><strong>Clinical trials</strong></td><td class="g">Multiple phase 2/3, one FDA approval</td><td class="y">Very early development</td></tr>
+<tr><td><strong>FDA status</strong></td><td class="g">Approved (Barth syndrome)</td><td class="r">Not approved</td></tr>
+<tr><td><strong>Best studied for</strong></td><td>Heart failure, genetic mitochondrial disease</td><td>Metabolic syndrome, obesity, exercise</td></tr>
+<tr><td><strong>Half-life</strong></td><td>~3&ndash;4 hours</td><td>Not well characterized in humans</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Bottom Line</div>
+  <p>SS-31 works from the inside out, physically stabilizing the machinery that makes ATP. MOTS-c works from the outside in, activating signaling pathways that tell cells to ramp up energy metabolism. They're complementary rather than competing approaches.</p>
+</div>
+
+<p>For structural mitochondrial damage (aging, genetic disease, ischemia), SS-31 has stronger evidence. For metabolic dysfunction and insulin resistance, MOTS-c may be more relevant.</p>
+
+<!-- ========== WHO BENEFITS ========== -->
+<hr class="sep">
+<h2>Who Might Benefit</h2>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Strong Evidence</div>
+    <h3>Barth Syndrome Patients</h3>
+    <p style="font-size:14px;margin-bottom:0;">The only FDA-approved indication. Demonstrated clinical benefit in a controlled trial.</p>
+  </div>
+  <div class="cd cb">
+    <div class="tg">Moderate Evidence</div>
+    <h3>Mitochondrial Myopathies</h3>
+    <p style="font-size:14px;margin-bottom:0;">Conditions where impaired mitochondrial function drives muscle weakness.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Mixed Evidence</div>
+    <h3>Heart Failure Patients</h3>
+    <p style="font-size:14px;margin-bottom:0;">Particularly those with evidence of mitochondrial dysfunction as a primary driver.</p>
+  </div>
+  <div class="cd cp">
+    <div class="tg">Preclinical Only</div>
+    <h3>Aging Adults</h3>
+    <p style="font-size:14px;margin-bottom:0;">Strong animal data showing reversal of age-related mitochondrial changes. No human aging trials yet.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>Outside of Barth syndrome, all applications are investigational. Clinical evidence in healthy aging adults does not yet exist.</p>
+</div>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Legal Status and Availability</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">United States</h4>
+    <p>FDA-approved for Barth syndrome (Stelanir). Investigational for all other uses.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">European Union</h4>
+    <p>Not approved. Orphan drug designation granted.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Australia</h4>
+    <p>Not approved. Available through special access schemes.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Research Use</h4>
+    <p>Available from peptide research suppliers. Quality and purity vary.</p>
+  </div>
+</div>
+
+<p>The Barth syndrome approval does not make SS-31 legally available for off-label use without a prescription. Check our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for full details.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What does SS-31 actually do?</summary>
+    <div class="fa">SS-31 binds to cardiolipin on the inner mitochondrial membrane, stabilizing the electron transport chain. This improves ATP production, reduces excessive reactive oxygen species, and protects mitochondria from oxidative damage. The net effect is better cellular energy production.</div>
+  </details>
+  <details>
+    <summary>How quickly does SS-31 work?</summary>
+    <div class="fa">SS-31 concentrates in mitochondria within minutes of injection. Measurable improvements in mitochondrial function have been observed within hours in preclinical models. But clinical benefits take longer. In the Barth syndrome trial, improvements in exercise capacity were measured over 12 weeks. For age-related decline, animal studies suggest 4 to 8 weeks of daily treatment to see meaningful changes.</div>
+  </details>
+  <details>
+    <summary>Is SS-31 the same as elamipretide?</summary>
+    <div class="fa">Yes. SS-31 is the research name, elamipretide is the clinical/pharmaceutical name, and Stelanir is the brand name. Bendavia and MTP-131 are older names for the same compound.</div>
+  </details>
+  <details>
+    <summary>Can SS-31 reverse aging?</summary>
+    <div class="fa">That's a strong claim, and the honest answer is: we don't know yet in humans. In aged mice, SS-31 reversed mitochondrial dysfunction in the heart, skeletal muscle, and kidneys. Whether that translates to measurable <a href="/articles/best-peptides-for-anti-aging">anti-aging</a> effects in people remains to be proven. What it can do is target one specific hallmark of aging: mitochondrial dysfunction. It won't make you younger, but it may help your mitochondria function more like they did when you were younger.</div>
+  </details>
+  <details>
+    <summary>Can I combine SS-31 with other peptides?</summary>
+    <div class="fa">No clinical trials have examined SS-31 in combination with other peptides. Theoretically, combining it with MOTS-c could provide complementary mitochondrial support through different mechanisms. Some in the research community also combine it with <a href="/articles/nad-peptides-cellular-energy-longevity">NAD+</a> precursors like NMN or NR, though evidence for synergy is limited to speculation. Always discuss combinations with a qualified provider.</div>
+  </details>
+  <details>
+    <summary>How is SS-31 different from CoQ10 or other mitochondrial supplements?</summary>
+    <div class="fa">CoQ10 is a component of the electron transport chain and works as an electron carrier. SS-31 doesn't carry electrons. It stabilizes the structural environment where electron transport happens. Think of CoQ10 as adding oil to an engine. SS-31 is more like reinforcing the engine block itself. Also, oral CoQ10 has poor bioavailability and limited ability to reach mitochondria. SS-31 concentrates in mitochondria at thousandfold higher levels than plasma, making it far more targeted.</div>
+  </details>
+  <details>
+    <summary>What does SS-31 treatment cost?</summary>
+    <div class="fa">Stelanir (the approved Barth syndrome treatment) is priced as an orphan drug, meaning very expensive, likely in the range of tens of thousands of dollars annually. Research-grade SS-31 from peptide suppliers varies widely but is generally in the range of $50 to $150 per vial depending on quantity and supplier.</div>
+  </details>
+  <details>
+    <summary>Does SS-31 need to be cycled?</summary>
+    <div class="fa">There's no established cycling protocol for SS-31. In clinical trials, it was administered daily for weeks to months without tapering or cycling. The mechanism (structural stabilization of cardiolipin) doesn't involve receptor desensitization, so there's less theoretical reason to cycle compared to peptides that act on hormone receptors. That said, long-term safety data beyond clinical trials is limited.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>SS-31 is one of the most precisely targeted peptides in existence. Rather than working through hormone receptors or broad signaling pathways, it goes directly to the inner mitochondrial membrane and stabilizes the machinery that produces cellular energy.</p>
+</div>
+
+<p>The FDA approval for Barth syndrome validated the mechanism. The heart failure data, while mixed, showed biological activity in the right direction. And the preclinical aging data is some of the most compelling evidence for any single intervention targeting mitochondrial decline.</p>
+
+<p>The big question is whether the striking animal results will translate to meaningful benefits in aging humans. That data doesn't exist yet. But for a peptide that targets one of the most fundamental processes in cellular biology, SS-31 is worth watching closely.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. SS-31 (elamipretide) is FDA-approved only for Barth syndrome under the brand name Stelanir. All other uses discussed in this article are investigational. Always consult a qualified healthcare provider before starting any peptide protocol. Never self-administer any compound without proper medical supervision.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Birk AV, et al. The mitochondria-targeted compound SS-31 re-energizes ischemic mitochondria by interacting with cardiolipin. <em>J Am Soc Nephrol.</em> 2013;24(8):1250&ndash;1261. <a href="https://pubmed.ncbi.nlm.nih.gov/24120476/">PubMed</a><br>
+Paradies G, et al. Role of cardiolipin peroxidation and cytochrome c release in the decline of mitochondrial function in aging. <em>Free Radic Biol Med.</em> 2010;48(10):1286&ndash;1295. <a href="https://pubmed.ncbi.nlm.nih.gov/20594945/">PubMed</a><br>
+Szeto HH. First-in-class cardiolipin-protective compound as a therapeutic agent to restore mitochondrial bioenergetics. <em>Br J Pharmacol.</em> 2014;171(8):2029&ndash;2050. <a href="https://pubmed.ncbi.nlm.nih.gov/24440382/">PubMed</a><br>
+Thompson R, et al. Elamipretide in patients with Barth syndrome: a randomized, double-blind, placebo-controlled clinical trial followed by open-label extension. <em>Genet Med.</em> 2021;23(12):2364&ndash;2371. <a href="https://pubmed.ncbi.nlm.nih.gov/34089644/">PubMed</a><br>
+Butler J, et al. Effects of elamipretide on left ventricular function in patients with heart failure with reduced ejection fraction: the EMBRACE trial. <em>Eur J Heart Fail.</em> 2020;22(3):431&ndash;441. <a href="https://pubmed.ncbi.nlm.nih.gov/31597611/">PubMed</a><br>
+Kloner RA, et al. Reduction of ischemia/reperfusion injury with bendavia, a mitochondria-targeting cytoprotective peptide. <em>J Am Heart Assoc.</em> 2012;1(3):e001644. <a href="https://pubmed.ncbi.nlm.nih.gov/22361324/">PubMed</a><br>
+Siegel MP, et al. Mitochondrial-targeted peptide rapidly improves mitochondrial energetics and skeletal muscle performance in aged mice. <em>Aging Cell.</em> 2013;12(5):763&ndash;771. <a href="https://pubmed.ncbi.nlm.nih.gov/24209692/">PubMed</a><br>
+Campbell MD, et al. Improving mitochondrial function with SS-31 reverses age-related redox stress and improves exercise tolerance in aged mice. <em>Free Radic Biol Med.</em> 2019;134:268&ndash;281. <a href="https://pubmed.ncbi.nlm.nih.gov/30786252/">PubMed</a><br>
+Sweetwyne MT, et al. The mitochondrial-targeted peptide, SS-31, improves glomerular architecture in mice of advanced age. <em>Kidney Int.</em> 2017;91(5):1126&ndash;1145. <a href="https://pubmed.ncbi.nlm.nih.gov/27999110/">PubMed</a>
+</p>
+
+<!-- ========== RELATED ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a> &nbsp;&middot;&nbsp;
+<a href="/articles/are-peptides-legal-fda-regulations-2026">Are Peptides Legal? FDA Regulations 2026</a> &nbsp;&middot;&nbsp;
+<a href="/articles/mots-c-mitochondrial-peptide">MOTS-c Mitochondrial Peptide Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/mots-c-mitochondrial-peptide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">MOTS-c Mitochondrial Peptide Guide</a>
+            <a href="/articles/nad-peptides-cellular-energy-longevity" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">NAD+ Peptides for Cellular Energy</a>
+            <a href="/articles/best-peptides-for-anti-aging" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Anti-Aging</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
