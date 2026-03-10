@@ -1,0 +1,600 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Are Peptides Legal? FDA Regulations Explained (2026)",
+  description: "Plain-English overview of peptide legality in the US: FDA rules, research-only language, compounding vs supplements, import risk, and what has changed in 2026.",
+  image: "/images/articles/legal-fda.webp",
+  date: "2026-02-14",
+  category: "Safety",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#1A0A28 0%,#1E1640 40%,#2A1A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Safety &middot; Legal &middot; FDA Regulations</div>
+  <h1>Are Peptides Legal? FDA Regulations Explained (2026)</h1>
+  <p class="sub">The rules around peptide legality have changed dramatically since 2023. Here's what's actually legal, what's restricted, and how to protect yourself in the current regulatory environment.</p>
+  <div class="pills">
+    <span class="pill">FDA &middot; Compounding</span>
+    <span class="pill">503A &middot; 503B Frameworks</span>
+    <span class="pill">Research Chemicals</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">4</div><div class="l">Legal Classification<br>Categories</div></div>
+  <div class="sb"><div class="v c2">12+</div><div class="l">Peptides Flagged<br>by FDA Since 2024</div></div>
+  <div class="sb"><div class="v c3">50</div><div class="l">States with<br>Varying Rules</div></div>
+  <div class="sb"><div class="v c4">2024</div><div class="l">Major Crackdown<br>Year Began</div></div>
+</div>
+
+<p>"Are peptides legal?" It's the most common question we get. The honest answer: it depends on the peptide, how it's sold, what it's sold for, and who's prescribing it.</p>
+
+<p>The regulatory picture has shifted dramatically since 2023. If you're still operating on outdated information, you could be in for an unpleasant surprise.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This article explains the current legal status of peptides in the United States as of early 2026. It covers FDA classifications, the "difficult to compound" list, state-by-state variations, and how to buy peptides legally. This is educational content, not legal advice.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Classification Section -->
+<h2>How Peptides Are Classified Under US Law</h2>
+
+<p>Peptides aren't a single regulatory category. They span a wide spectrum from FDA-approved prescription drugs to dietary supplements to unregulated research chemicals.</p>
+
+<p>Where a specific peptide falls on that spectrum determines what's legal and what isn't.</p>
+
+<table class="tbl">
+<thead><tr><th>Category</th><th>Legal Status</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td><strong>FDA-Approved</strong></td><td class="g">Legal with prescription</td><td>Semaglutide, tirzepatide, tesamorelin</td></tr>
+<tr><td><strong>Compounded</strong></td><td class="y">Restricted (varies)</td><td>BPC-157, CJC-1295, ipamorelin</td></tr>
+<tr><td><strong>Research Chemicals</strong></td><td class="y">Gray area</td><td>Most non-approved peptides</td></tr>
+<tr><td><strong>Supplements</strong></td><td class="g">Legal</td><td>Collagen peptides, bioactive blends</td></tr>
+</tbody>
+</table>
+
+<!-- Color-coded cards for each category -->
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">FDA-Approved</div>
+    <h3>Prescription Peptides</h3>
+    <p style="font-size:14px;margin-bottom:0;">Fully legal with a valid prescription. Includes <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> (Ozempic, Wegovy), <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> (Mounjaro, Zepbound), and <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">tesamorelin</a> (Egrifta). Manufactured by pharma companies, backed by clinical trials, sold through licensed pharmacies.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Compounded</div>
+    <h3>503A and 503B Peptides</h3>
+    <p style="font-size:14px;margin-bottom:0;">A middle zone. Under Section 503A and 503B of the Federal Food, Drug, and Cosmetic Act, compounding pharmacies can prepare custom formulations under specific conditions. But the FDA has been tightening restrictions since 2024.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="cd cr">
+    <div class="tg">Research Chemicals</div>
+    <h3>Gray-Area Peptides</h3>
+    <p style="font-size:14px;margin-bottom:0;">Sold labeled "for research purposes only" or "not for human consumption." Buying a research peptide and injecting it is not something the law explicitly protects. The "research only" label protects sellers, not buyers.</p>
+  </div>
+  <div class="cd cb">
+    <div class="tg">Supplements</div>
+    <h3>DSHEA-Regulated Products</h3>
+    <p style="font-size:14px;margin-bottom:0;">Collagen peptides, creatine peptides, and certain bioactive blends sold under the Dietary Supplement Health and Education Act of 1994. Legal as long as they don't make drug claims.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- Difficult to Compound List -->
+<h2>The FDA's "Difficult to Compound" List</h2>
+
+<div class="d-r">
+  <div class="s">Major Regulatory Shift</div>
+  <p>This is the single biggest regulatory change affecting the peptide community since 2024. Many previously accessible compounded peptides are now restricted or unavailable through legitimate pharmacy channels.</p>
+</div>
+
+<p>Under the FDA Safety and Innovation Act, the agency maintains a list of drugs that are "difficult to compound" due to safety or efficacy concerns. Once a substance lands on this list, 503A compounding pharmacies essentially can't make it anymore.</p>
+
+<p>In late 2024 and into 2025, the FDA added several popular peptides to this list or took enforcement actions that effectively restricted compounding.</p>
+
+<!-- SVG Diagram: Regulatory Pathway -->
+<div class="svg-box">
+  <div class="st">Peptide Regulatory Pathway Overview</div>
+  <div class="ss">How the FDA determines peptide access status in 2026</div>
+  <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="700" height="320" fill="none"/>
+    <!-- Start node -->
+    <rect x="250" y="10" width="200" height="44" rx="8" fill="#2956A6" opacity="0.12" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="350" y="37" text-anchor="middle" font-size="13" font-weight="600" fill="#2956A6">Peptide Substance</text>
+    <!-- Arrow down -->
+    <line x1="350" y1="54" x2="350" y2="80" stroke="#86869A" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <!-- Decision: FDA Approved? -->
+    <rect x="220" y="80" width="260" height="44" rx="8" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="350" y="107" text-anchor="middle" font-size="12" font-weight="600" fill="#B48118">Has FDA Approval for Any Indication?</text>
+    <!-- Yes branch (left) -->
+    <line x1="220" y1="102" x2="120" y2="102" stroke="#187A62" stroke-width="1.5"/>
+    <line x1="120" y1="102" x2="120" y2="150" stroke="#187A62" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="170" y="94" font-size="10" fill="#187A62" font-weight="600">YES</text>
+    <rect x="30" y="150" width="180" height="40" rx="8" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="120" y="175" text-anchor="middle" font-size="11" font-weight="600" fill="#187A62">Legal with Prescription</text>
+    <!-- No branch (right) -->
+    <line x1="480" y1="102" x2="580" y2="102" stroke="#B53A3A" stroke-width="1.5"/>
+    <line x1="580" y1="102" x2="580" y2="150" stroke="#B53A3A" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="530" y="94" font-size="10" fill="#B53A3A" font-weight="600">NO</text>
+    <rect x="470" y="150" width="220" height="44" rx="8" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="580" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#B48118">On Difficult-to-Compound</text>
+    <text x="580" y="186" text-anchor="middle" font-size="11" font-weight="600" fill="#B48118">List?</text>
+    <!-- Yes: restricted -->
+    <line x1="580" y1="194" x2="580" y2="240" stroke="#B53A3A" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="596" y="220" font-size="10" fill="#B53A3A" font-weight="600">YES</text>
+    <rect x="470" y="240" width="220" height="40" rx="8" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="580" y="265" text-anchor="middle" font-size="11" font-weight="600" fill="#B53A3A">Compounding Restricted</text>
+    <!-- No: compounding possible -->
+    <line x1="470" y1="172" x2="350" y2="172" stroke="#187A62" stroke-width="1.5"/>
+    <line x1="350" y1="172" x2="350" y2="240" stroke="#187A62" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="410" y="164" font-size="10" fill="#187A62" font-weight="600">NO</text>
+    <rect x="240" y="240" width="220" height="44" rx="8" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="350" y="262" text-anchor="middle" font-size="11" font-weight="600" fill="#187A62">May Be Compounded via</text>
+    <text x="350" y="276" text-anchor="middle" font-size="11" font-weight="600" fill="#187A62">503A/503B Pharmacy</text>
+    <!-- Research path from restricted -->
+    <line x1="580" y1="280" x2="580" y2="305" stroke="#86869A" stroke-width="1" stroke-dasharray="4"/>
+    <text x="580" y="316" text-anchor="middle" font-size="10" fill="#86869A" font-style="italic">Research-only sales (gray area)</text>
+    <!-- Arrow marker -->
+    <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#86869A"/></marker></defs>
+  </svg>
+</div>
+
+<h3>Semaglutide: The Biggest Fight</h3>
+
+<p>After the semaglutide shortage was resolved, the FDA moved to end compounding of the drug. This triggered lawsuits from compounding pharmacies and significant public backlash.</p>
+
+<p>As of early 2026, the legal battles are ongoing. The FDA's position is clear: they want compounded semaglutide off the market now that branded supply is stable.</p>
+
+<h3>Tirzepatide</h3>
+
+<p>Followed a similar trajectory. Eli Lilly aggressively defended its market exclusivity, and the FDA's resolution of the tirzepatide shortage in late 2024 set the stage for compounding restrictions.</p>
+
+<h3>Other Peptides Under Increased Scrutiny</h3>
+
+<p>The FDA flagged several popular peptides as not meeting the definition of a "bulk drug substance" eligible for compounding. This was a devastating blow to the compounding peptide market.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Primary Use</th><th>Compounding Status</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/bpc-157-complete-guide">BPC-157</a></strong></td><td>Tissue repair, gut healing</td><td class="r">Restricted</td></tr>
+<tr><td><strong><a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a></strong></td><td>Fat loss</td><td class="r">Restricted</td></tr>
+<tr><td><strong><a href="/articles/cjc-1295-dac-guide">CJC-1295</a></strong></td><td>Growth hormone release</td><td class="r">Restricted</td></tr>
+<tr><td><strong>Ipamorelin</strong></td><td>Growth hormone release</td><td class="r">Restricted</td></tr>
+<tr><td><strong><a href="/articles/pt-141-bremelanotide-guide">PT-141</a></strong></td><td>Sexual function</td><td class="y">Approved version exists (Vyleesi)</td></tr>
+<tr><td><strong>Thymosin alpha-1</strong></td><td>Immune modulation</td><td class="r">Restricted</td></tr>
+<tr><td><strong><a href="/articles/tb-500-complete-guide">TB-500</a></strong></td><td>Tissue repair</td><td class="r">Restricted</td></tr>
+<tr><td><strong><a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a></strong></td><td>Skin, hair, healing</td><td class="r">Restricted</td></tr>
+<tr><td><strong><a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a></strong></td><td>Reproductive health</td><td class="r">Restricted</td></tr>
+<tr><td><strong><a href="/articles/dsip-sleep-peptide-guide">DSIP</a></strong></td><td>Sleep</td><td class="r">Restricted</td></tr>
+<tr><td><strong><a href="/articles/selank-semax-nootropic-peptides">Selank / Semax</a></strong></td><td>Cognitive, anxiolytic</td><td class="r">Restricted</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Timeline Section -->
+<h2>The 2024&ndash;2025 FDA Crackdowns: A Timeline</h2>
+
+<p>The period from mid-2024 through 2025 was the most aggressive regulatory crackdown on peptides in U.S. history. Here's what happened.</p>
+
+<div class="cd cr">
+  <div class="tg">Enforcement</div>
+  <h3>FDA Warning Letters Surged</h3>
+  <p style="font-size:14px;margin-bottom:0;">The agency issued dozens of warning letters to compounding pharmacies, research peptide vendors, and clinics selling peptides for uses not supported by approved indications. Many letters specifically called out marketing language that implied therapeutic benefit.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Market Shift</div>
+  <h3>Semaglutide and Tirzepatide Shortages Ended</h3>
+  <p style="font-size:14px;margin-bottom:0;">While GLP-1 drugs were in shortage, the FDA permitted compounding under shortage provisions of the FD&amp;C Act. Once Novo Nordisk and Eli Lilly ramped production and shortages were formally resolved, the legal basis for compounding evaporated. The FDA announced the end of the semaglutide shortage in early 2024, with tirzepatide following later that year.</p>
+</div>
+
+<div class="g2">
+  <div class="cd cp">
+    <div class="tg">Telehealth</div>
+    <h3>Online Clinics Faced Scrutiny</h3>
+    <p style="font-size:14px;margin-bottom:0;">The explosion of online clinics prescribing peptides via telemedicine caught regulatory attention. The DEA and FDA jointly targeted operations where prescribing standards appeared lax.</p>
+  </div>
+  <div class="cd cb">
+    <div class="tg">State Action</div>
+    <h3>Pharmacy Boards Stepped In</h3>
+    <p style="font-size:14px;margin-bottom:0;">Several state boards of pharmacy issued their own guidance restricting peptide compounding, even beyond federal requirements. This created a patchwork of rules that made compliance harder for multi-state operations.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Import Warning</div>
+  <p>U.S. Customs and Border Protection stepped up seizures of peptides imported from overseas, particularly from China. A 2024 Government Accountability Office report highlighted the growing volume of unapproved drug substances entering through international mail facilities.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Prescription vs Research vs Supplement -->
+<h2>Prescription vs. Research vs. Supplement</h2>
+
+<p>Understanding these categories is critical for knowing what's actually legal for you to buy and use.</p>
+
+<h3>Prescription-Only Peptides</h3>
+
+<p>These are FDA-approved drugs. You need a prescription from a licensed provider, and they must be dispensed by a licensed pharmacy.</p>
+
+<table class="tbl">
+<thead><tr><th>Drug</th><th>Brand Names</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a></strong></td><td>Ozempic, Wegovy, Rybelsus</td><td class="g">Fully approved</td></tr>
+<tr><td><strong><a href="/articles/tirzepatide-complete-guide">Tirzepatide</a></strong></td><td>Mounjaro, Zepbound</td><td class="g">Fully approved</td></tr>
+<tr><td><strong><a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Tesamorelin</a></strong></td><td>Egrifta</td><td class="g">Fully approved</td></tr>
+<tr><td><strong><a href="/articles/pt-141-bremelanotide-guide">Bremelanotide/PT-141</a></strong></td><td>Vyleesi</td><td class="g">Fully approved</td></tr>
+<tr><td><strong>Gonadorelin</strong></td><td>Various GnRH analogs</td><td class="g">Fully approved</td></tr>
+<tr><td><strong>Sermorelin</strong></td><td>Discontinued by original manufacturer</td><td class="y">Still compounded in some states</td></tr>
+</tbody>
+</table>
+
+<p>Using these without a prescription is illegal. Selling them without being a licensed pharmacy is illegal. There's no ambiguity here.</p>
+
+<h3>Research-Only Peptides</h3>
+
+<p>This is where things get murky. Peptides like BPC-157, TB-500, CJC-1295/Ipamorelin, DSIP, Selank, Semax, and many others have never received FDA approval for human use. They're sold by research chemical companies with disclaimers that they're for in-vitro or animal research only.</p>
+
+<p>Is it legal to buy them? Technically, purchasing a chemical for legitimate research purposes isn't prohibited. But if you're buying them for personal injection, you're not conducting legitimate research.</p>
+
+<div class="d-r">
+  <div class="s">Key Warning</div>
+  <p>The FDA has increasingly taken the position that research peptides are unapproved new drugs being marketed illegally. In 2025, several prominent research peptide companies received warning letters, and a few were shut down entirely. The "research use only" label is a legal fiction that protects the seller more than the buyer.</p>
+</div>
+
+<p>Is the average individual buyer likely to face prosecution? Historically, no. Enforcement has focused on sellers, not buyers. But the legal risk exists, and it's growing.</p>
+
+<h3>Supplement-Grade Peptides</h3>
+
+<p>Collagen peptides, certain antimicrobial peptides in topical products, and bioactive peptide blends sold as dietary supplements are legal under DSHEA. The key requirement is that the product must be marketed as a dietary supplement and cannot make drug claims.</p>
+
+<p>Some companies have tried to sell injectable-grade peptides as "supplements." That's a clear violation. The moment something is marketed for injection, it's a drug in the FDA's eyes.</p>
+
+<hr class="sep">
+
+<!-- Compounding Rules -->
+<h2>Compounding Pharmacy Rules: 503A vs. 503B in 2026</h2>
+
+<p>Compounding pharmacies operate under two main regulatory frameworks. The differences matter for what peptides you can access.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>503A</th><th>503B</th></tr></thead>
+<tbody>
+<tr><td><strong>Type</strong></td><td>Traditional compounding</td><td>Outsourcing facility</td></tr>
+<tr><td><strong>Prescription</strong></td><td class="y">Patient-specific required</td><td class="g">Not required</td></tr>
+<tr><td><strong>Oversight</strong></td><td>State pharmacy board</td><td>FDA-registered, inspected</td></tr>
+<tr><td><strong>Reporting</strong></td><td>State-level</td><td>Adverse event reporting to FDA</td></tr>
+<tr><td><strong>Scale</strong></td><td>Individual prescriptions</td><td>Larger batch production</td></tr>
+</tbody>
+</table>
+
+<p>The critical question for compounding in 2026 is whether the active pharmaceutical ingredient (API) is eligible. The FDA's position on many popular peptides is that they don't qualify as valid bulk drug substances under Section 503B.</p>
+
+<p>Some compounding pharmacies have challenged the FDA's determinations in court. The Outsourcing Facilities Association and several individual pharmacies filed lawsuits arguing that the FDA's evaluation process was arbitrary. These cases are working through the courts, and the outcomes will shape peptide access for years to come.</p>
+
+<hr class="sep">
+
+<!-- State by State -->
+<h2>State-by-State Variations</h2>
+
+<p>The United States doesn't have a single unified system for peptide regulation. Federal rules set the floor, but states can add their own restrictions.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Texas</h4>
+    <p>Relatively permissive toward compounding pharmacies and peptide prescribing through its medical board.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">California</h4>
+    <p>Tends to follow FDA guidance closely. Has actively restricted compounding of substances the FDA has flagged.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Florida</h4>
+    <p>Became a hub for peptide clinics and compounding operations. Regulatory environment was slower to crack down, but the Board of Pharmacy tightened rules in 2025.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">New York</h4>
+    <p>Some of the strictest compounding regulations in the country. Has been aggressive about enforcing them.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Telehealth Warning</div>
+  <p>If you're working with a telehealth clinic, verify that both the prescriber and the pharmacy are licensed in your state. Cross-state prescribing and dispensing without proper licensure is illegal and has been a focus of recent enforcement actions.</p>
+</div>
+
+<p>The practical reality is that your access to compounded peptides depends heavily on where you live and where your pharmacy operates. A peptide legally compounded in one state might not be available in another.</p>
+
+<hr class="sep">
+
+<!-- International -->
+<h2>Peptide Regulations Outside the US</h2>
+
+<p>Peptide regulation varies enormously worldwide. Here's a quick snapshot.</p>
+
+<table class="tbl">
+<thead><tr><th>Region</th><th>Regulatory Approach</th><th>Enforcement Level</th></tr></thead>
+<tbody>
+<tr><td><strong>Australia</strong></td><td>TGA rescheduled certain peptides as prescription medicines but maintained a compounding pathway</td><td class="y">Moderate</td></tr>
+<tr><td><strong>United Kingdom</strong></td><td>Peptides regulated as prescription-only medicines (POMs) when marketed for therapeutic use</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Canada</strong></td><td>Most bioactive peptides classified as prescription drugs; Health Canada has taken enforcement actions</td><td class="r">Strict</td></tr>
+<tr><td><strong>European Union</strong></td><td>Unapproved peptides treated as unauthorized medicinal products; enforcement varies by member state</td><td class="y">Varies</td></tr>
+<tr><td><strong>China / India</strong></td><td>Major manufacturing sources; export generally legal, import may violate receiving country's laws</td><td class="g">Minimal (export)</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Travel Caution</div>
+  <p>Traveling internationally with peptides requires extra care. Carrying injectable compounds across borders without clear medical documentation is risky. Some countries may treat unidentified injectables as controlled substance violations.</p>
+</div>
+
+<hr class="sep">
+
+<!-- How to Buy Legally -->
+<h2>How to Buy Peptides Legally in 2026</h2>
+
+<p>The regulatory environment is tightening, not loosening. Here's how to protect yourself.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Get a Prescription</h4>
+    <p>For peptides with approved pharmaceutical versions (semaglutide, tirzepatide, tesamorelin, PT-141), the safest route is a legitimate prescription filled at a licensed pharmacy.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Use Licensed Pharmacies</h4>
+    <p>Verify the pharmacy is state-licensed and ideally FDA-registered as a 503B facility. Check for recent FDA warning letters or inspection results.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Keep Documentation</h4>
+    <p>If you have a prescription for a compounded peptide, keep a copy. Carry prescription documentation when traveling domestically or internationally.</p>
+  </div>
+</div>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Be Skeptical of "Research Only"</h4>
+    <p>The research peptide market still exists, but it's under more pressure than ever. Understand the legal risks before purchasing.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Never Redistribute</h4>
+    <p>Buying for personal use is one level of legal risk. Selling or distributing is a completely different level with serious criminal exposure.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Stay Informed</h4>
+    <p>Regulations change. Follow developments through the FDA website and the Outsourcing Facilities Association for the latest updates.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can I legally buy peptides online in 2026?</summary>
+    <div class="fa">It depends on the peptide and the seller. FDA-approved peptides through licensed online pharmacies with a valid prescription are absolutely legal. Research peptides from unregulated vendors occupy a legal gray area that's getting grayer by the month. Supplement-grade peptides from reputable companies are legal, as long as they're properly marketed.</div>
+  </details>
+  <details>
+    <summary>What happens if I get caught with research peptides?</summary>
+    <div class="fa">For individual buyers, prosecution is extremely rare. The FDA's enforcement resources are focused on manufacturers, distributors, and sellers rather than end consumers. However, "extremely rare" is not the same as "impossible." If peptides are found during a customs inspection or law enforcement encounter, they could be seized. There are also theoretical criminal penalties for possessing unapproved drugs.</div>
+  </details>
+  <details>
+    <summary>Are compounded peptides still available?</summary>
+    <div class="fa">Yes, but the list of available compounds has shrunk considerably since 2024. Peptides that the FDA hasn't specifically flagged can still be compounded by licensed pharmacies with a valid prescription. Availability depends on your state and your pharmacy's willingness to compound specific substances given the current regulatory climate.</div>
+  </details>
+  <details>
+    <summary>Is it legal to import peptides from overseas for personal use?</summary>
+    <div class="fa">The FDA has a personal importation policy that allows, under very limited circumstances, individuals to import unapproved drugs for personal use. But this policy is discretionary and has many conditions. It's not a blanket permission, and customs seizures of peptide imports have increased substantially since 2024.</div>
+  </details>
+  <details>
+    <summary>Did the FDA ban BPC-157?</summary>
+    <div class="fa">The FDA didn't issue an outright "ban" on BPC-157. What they did was determine that BPC-157 doesn't meet the criteria to be a bulk drug substance eligible for compounding under Section 503B. The practical effect is similar to a ban for compounding purposes, though it doesn't criminalize possession. Research chemical companies may still sell it labeled for research use, but that market is under increasing scrutiny.</div>
+  </details>
+  <details>
+    <summary>What about peptide supplements like collagen?</summary>
+    <div class="fa">Collagen peptides, bioactive milk peptides, and similar products sold as dietary supplements are fully legal. They're regulated under DSHEA and are widely available in stores and online. These are very different from injectable research peptides both in terms of what they are and how they're regulated.</div>
+  </details>
+  <details>
+    <summary>Will peptide regulations get stricter or more relaxed?</summary>
+    <div class="fa">The trend since 2023 has been toward stricter regulation, and there's no strong indication that's going to reverse. The FDA has signaled its intention to continue evaluating peptides on the difficult-to-compound list. However, ongoing lawsuits from compounding pharmacies could result in court decisions that preserve access through compounding. Congressional interest in peptide access has also grown, with several bills introduced (though not yet passed) that would expand compounding rights.</div>
+  </details>
+  <details>
+    <summary>Can my doctor legally prescribe peptides off-label?</summary>
+    <div class="fa">Yes. Once a drug is FDA-approved for any indication, physicians can legally prescribe it off-label for other uses based on their clinical judgment. This applies to approved peptides like semaglutide and tesamorelin. However, a doctor cannot legally prescribe a substance that has never been FDA-approved. Compounding is the mechanism that has historically filled this gap, and it's the mechanism that's now under pressure.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Bottom Line -->
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>The peptide regulatory environment in 2026 is more complex and more restrictive than it was just two years ago. The days of easily ordering a wide range of peptides from research vendors or getting them compounded at any pharmacy are fading. That doesn't mean access is impossible. It means the pathways to legal access are narrower and require more diligence.</p>
+</div>
+
+<p>Work with licensed providers. Use licensed pharmacies. Keep your documentation.</p>
+
+<p>Stay current on the regulations, because they're still evolving. The courtroom battles between compounding pharmacies and the FDA will shape peptide access for years to come.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Legal and Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not legal advice or medical advice. Laws and regulations change frequently, and their application can vary based on specific facts and circumstances. Always consult a qualified attorney for legal questions and a licensed healthcare provider before starting any peptide protocol. PeptideRundown is not responsible for any actions taken based on the information in this article.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+FDA. Compounding and the FDA: Questions and Answers. <em>U.S. Food and Drug Administration.</em> 2024. <a href="https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers">FDA.gov</a><br>
+FDA. Bulk Drug Substances Used in Compounding Under Section 503B. <em>U.S. Food and Drug Administration.</em> 2025. <a href="https://www.fda.gov/drugs/human-drug-compounding/bulk-drug-substances-used-compounding-under-section-503b-fdc-act">FDA.gov</a><br>
+Government Accountability Office. Drug Safety: FDA Should Take Additional Steps to Improve Its Foreign Inspection Program. <em>GAO Reports.</em> 2024. <a href="https://www.gao.gov/products/gao-24-106465">GAO.gov</a><br>
+Dietary Supplement Health and Education Act of 1994 (DSHEA). <em>Public Law 103-417.</em> <a href="https://ods.od.nih.gov/About/DSHEA_Wording.aspx">NIH ODS</a><br>
+Federal Food, Drug, and Cosmetic Act, Sections 503A and 503B. <em>21 U.S.C. 353a, 353b.</em> <a href="https://www.fda.gov/drugs/human-drug-compounding/pharmacy-compounding-policy-and-law">FDA.gov</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semaglutide-weight-loss-guide">Semaglutide Weight Loss Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/tirzepatide-complete-guide">Tirzepatide Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/semaglutide-weight-loss-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide Weight Loss Guide</a>
+            <a href="/articles/tirzepatide-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Tirzepatide Complete Guide</a>
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

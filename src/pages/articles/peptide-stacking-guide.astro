@@ -1,0 +1,577 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Complete Guide to Peptide Stacking: How to Combine Peptides for Better Results",
+  description: "Learn how to safely stack peptides for enhanced results. Popular combinations, timing strategies, dose adjustments, and compatibility matrices for every goal.",
+  image: "/images/articles/peptide-stacking.webp",
+  date: "2026-02-15",
+  category: "How-To",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">How-To &middot; Peptide Stacking &middot; Combinations</div>
+  <h1>Complete Guide to Peptide Stacking: How to Combine Peptides for Better Results</h1>
+  <p class="sub">Strategic peptide combinations can produce results that single compounds can't match. This guide covers the proven stacks, timing protocols, dose adjustments, and compatibility rules you need to know.</p>
+  <div class="pills">
+    <span class="pill">Synergistic Combinations</span>
+    <span class="pill">Timing &middot; Cycling</span>
+    <span class="pill">Dose Adjustments</span>
+    <span class="pill">Compatibility Matrix</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">2&ndash;3</div><div class="l">Optimal Stack<br>Size (Peptides)</div></div>
+  <div class="sb"><div class="v c2">50&ndash;70%</div><div class="l">Starting Dose<br>Per Compound</div></div>
+  <div class="sb"><div class="v c3">5</div><div class="l">Core Stack<br>Categories</div></div>
+  <div class="sb"><div class="v c4">8&ndash;12 wk</div><div class="l">Typical Cycle<br>Duration</div></div>
+</div>
+
+<p>Using one peptide can be effective on its own. But combining two or three complementary compounds through different biological pathways can produce results that exceed what any single peptide could accomplish alone.</p>
+
+<p>This isn't about doubling doses or piling on compounds. It's about selecting peptides that work through separate receptor systems, creating synergies where the combined effect is greater than the sum of individual parts.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational overview of peptide stacking principles, popular combinations, timing strategies, and monitoring protocols. It is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Why Synergy Works -->
+<h2>Why Peptide Synergy Works</h2>
+
+<p>Peptides work through specific receptors and signaling pathways. When you combine peptides that act on complementary pathways, you get amplified effects that wouldn't be possible with single compounds.</p>
+
+<p>The growth hormone releasing hormone (GHRH) and growth hormone releasing peptide (GHRP) combination is the textbook example. GHRH peptides like <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> bind to pituitary receptors to signal GH release. GHRPs like <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> amplify that signal through entirely different receptors.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Studies show GHRH/GHRP combinations can increase IGF-1 levels by 50&ndash;100% more than either peptide used alone (<a href="https://pubmed.ncbi.nlm.nih.gov/10732899/">Bowers et al., 2000</a>). This synergy isn't just additive; it's multiplicative.</p>
+</div>
+
+<p>Healing peptides follow a similar pattern. <a href="/articles/bpc-157-complete-guide">BPC-157</a> works locally at injury sites to stimulate angiogenesis and cell migration. <a href="/articles/tb-500-complete-guide">TB-500</a> circulates systemically, reducing inflammation and signaling repair mechanisms throughout the body.</p>
+
+<p>Fat loss combinations work through different metabolic mechanisms too. AOD-9604 targets stubborn fat deposits by disrupting triglyceride storage, while Tesamorelin improves insulin sensitivity and enhances metabolism.</p>
+
+<!-- SVG Diagram: Stacking Strategy Overview -->
+<div class="svg-box">
+  <div class="st">Peptide Stacking Strategy Overview</div>
+  <div class="ss">How complementary pathways create synergistic effects</div>
+  <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="700" height="320" rx="8" fill="#FAFAF8"/>
+
+    <!-- Goal node (center) -->
+    <rect x="275" y="130" width="150" height="60" rx="10" fill="#2956A6" stroke="#1E3D7A" stroke-width="1.5"/>
+    <text x="350" y="157" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="11" font-weight="700">YOUR GOAL</text>
+    <text x="350" y="175" text-anchor="middle" fill="rgba(255,255,255,.6)" font-family="sans-serif" font-size="9">(GH, Healing, Fat Loss, etc.)</text>
+
+    <!-- Peptide A (left) -->
+    <rect x="40" y="40" width="160" height="55" rx="8" fill="#E4F5EF" stroke="#187A62" stroke-width="1.2"/>
+    <text x="120" y="62" text-anchor="middle" fill="#187A62" font-family="sans-serif" font-size="10" font-weight="700">PEPTIDE A</text>
+    <text x="120" y="80" text-anchor="middle" fill="#14503E" font-family="sans-serif" font-size="9">Pathway 1 (e.g. GHRH)</text>
+
+    <!-- Peptide B (right) -->
+    <rect x="500" y="40" width="160" height="55" rx="8" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.2"/>
+    <text x="580" y="62" text-anchor="middle" fill="#6E3B8A" font-family="sans-serif" font-size="10" font-weight="700">PEPTIDE B</text>
+    <text x="580" y="80" text-anchor="middle" fill="#3E2050" font-family="sans-serif" font-size="9">Pathway 2 (e.g. GHRP)</text>
+
+    <!-- Result node (bottom) -->
+    <rect x="225" y="240" width="250" height="55" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="350" y="263" text-anchor="middle" fill="#187A62" font-family="sans-serif" font-size="11" font-weight="700">SYNERGISTIC RESULT</text>
+    <text x="350" y="280" text-anchor="middle" fill="#14503E" font-family="sans-serif" font-size="9">Greater than sum of parts</text>
+
+    <!-- Arrows: A to Goal -->
+    <line x1="175" y1="95" x2="295" y2="135" stroke="#187A62" stroke-width="1.5" marker-end="url(#arrowG)"/>
+    <!-- Arrows: B to Goal -->
+    <line x1="525" y1="95" x2="405" y2="135" stroke="#6E3B8A" stroke-width="1.5" marker-end="url(#arrowP)"/>
+    <!-- Arrow: Goal to Result -->
+    <line x1="350" y1="190" x2="350" y2="240" stroke="#2956A6" stroke-width="2" marker-end="url(#arrowB)"/>
+
+    <!-- Dose label -->
+    <rect x="40" y="230" width="140" height="45" rx="6" fill="#FFF7E5" stroke="#B48118" stroke-width="1"/>
+    <text x="110" y="250" text-anchor="middle" fill="#B48118" font-family="sans-serif" font-size="9" font-weight="700">DOSE ADJUSTMENT</text>
+    <text x="110" y="264" text-anchor="middle" fill="#5A4010" font-family="sans-serif" font-size="9">50&ndash;70% each compound</text>
+
+    <!-- Timing label -->
+    <rect x="520" y="230" width="140" height="45" rx="6" fill="#FFF7E5" stroke="#B48118" stroke-width="1"/>
+    <text x="590" y="250" text-anchor="middle" fill="#B48118" font-family="sans-serif" font-size="9" font-weight="700">TIMING STRATEGY</text>
+    <text x="590" y="264" text-anchor="middle" fill="#5A4010" font-family="sans-serif" font-size="9">Simultaneous or staggered</text>
+
+    <!-- Arrow markers -->
+    <defs>
+      <marker id="arrowG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#187A62"/></marker>
+      <marker id="arrowP" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E3B8A"/></marker>
+      <marker id="arrowB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#2956A6"/></marker>
+    </defs>
+  </svg>
+</div>
+
+<hr class="sep">
+
+<!-- Core Stacking Principles -->
+<h2>Core Stacking Principles</h2>
+
+<p>Effective peptide stacking follows three fundamental principles. Get these right and you'll avoid the most common pitfalls that trip up beginners.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Mechanism Pairing</h4>
+    <p>Combine peptides that work through different biological pathways but share a common goal. Same receptor = competition. Different receptors = synergy.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Timing Strategy</h4>
+    <p>Determine whether to take compounds simultaneously, stagger them by hours, or cycle them on different days. Each approach fits different stack types.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Dose Adjustment</h4>
+    <p>Most peptides require reduced doses when combined. Start at 50&ndash;70% of each compound's normal standalone dose to prevent receptor overstimulation.</p>
+  </div>
+</div>
+
+<h3>Timing Approaches Explained</h3>
+
+<table class="tbl">
+<thead><tr><th>Approach</th><th>When to Use</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Simultaneous</strong></td><td>Synergistic pairs that amplify each other</td><td class="g">CJC-1295 + Ipamorelin (same injection)</td></tr>
+<tr><td><strong>Staggered</strong></td><td>Peptides that compete for the same receptor system</td><td class="y">GH peptide AM, healing peptide PM</td></tr>
+<tr><td><strong>Cycled</strong></td><td>Compounds that cause receptor desensitization</td><td class="y">Week 1&ndash;4 Stack A, Week 5&ndash;8 Stack B</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Important Note</div>
+  <p>Receptor desensitization is the primary reason for dose reduction when stacking. Overstimulating a single receptor system leads to downregulation, which can actually reduce your results over time.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Strategic Combinations -->
+<h2>Strategic Peptide Combinations</h2>
+
+<p>These are the five most well-established peptide stacks, each targeting a different primary goal. Every combination pairs compounds that work through separate mechanisms.</p>
+
+<!-- GH Stack Card -->
+<div class="cd cb">
+  <div class="tg">Growth Hormone</div>
+  <h3>CJC-1295 + Ipamorelin</h3>
+  <p style="font-size:14px;">The gold standard GH stack. <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> (a GHRH analog) extends the half-life of natural GH pulses, while <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> (a GHRP) amplifies pulse amplitude. Ipamorelin's selective action means it doesn't significantly affect cortisol or prolactin.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Protocol:</strong> Both peptides administered together before bed on an empty stomach. 5 days on, 2 days off. See our <a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157">full CJC-1295/Ipamorelin protocol</a> for details.</p>
+</div>
+
+<!-- Healing Stack Card -->
+<div class="cd ct">
+  <div class="tg">Tissue Repair</div>
+  <h3>BPC-157 + TB-500</h3>
+  <p style="font-size:14px;"><a href="/articles/bpc-157-complete-guide">BPC-157</a> works locally at injury sites to stimulate angiogenesis and accelerate connective tissue repair. <a href="/articles/tb-500-complete-guide">TB-500</a> circulates systemically, reducing inflammation and signaling stem cells to migrate to damaged areas.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Protocol:</strong> BPC-157 at 250&ndash;500 mcg daily near the injury site. TB-500 at 2.5&ndash;5 mg twice weekly via subcutaneous injection. Run 4&ndash;6 weeks continuously. See our <a href="/articles/bpc-157-vs-tb-500-comparison">BPC-157 vs TB-500 comparison</a>.</p>
+</div>
+
+<!-- Fat Loss Stack Card -->
+<div class="cd ca">
+  <div class="tg">Fat Loss</div>
+  <h3>AOD-9604 + Tesamorelin</h3>
+  <p style="font-size:14px;">AOD-9604 directly targets fat cells to release stored triglycerides. Tesamorelin reduces visceral fat by improving insulin sensitivity and lipid metabolism. This dual approach helps overcome plateaus that occur with single peptides.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Protocol:</strong> AOD-9604 at 300 mcg fasted AM. Tesamorelin at 1 mg pre-bed. Run 12 weeks, then 4 weeks off. See our <a href="/articles/best-peptides-for-fat-loss">fat loss peptides guide</a>.</p>
+</div>
+
+<!-- Anti-Aging Stack Card -->
+<div class="cd cp">
+  <div class="tg">Anti-Aging</div>
+  <h3>Epithalon + GH Secretagogues + GHK-Cu</h3>
+  <p style="font-size:14px;">Epithalon supports telomere maintenance through telomerase activation. GH secretagogues combat muscle loss and skin aging. Copper peptides like GHK-Cu stimulate collagen production. This multi-target approach provides broad-spectrum protection.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Protocol:</strong> Epithalon cycled 10 days on, then off for 6 months. CJC-1295/Ipamorelin 5 on/2 off ongoing. Topical GHK-Cu daily. See our <a href="/articles/best-peptides-for-anti-aging">anti-aging guide</a>.</p>
+</div>
+
+<!-- Cognitive Stack Card -->
+<div class="cd cb">
+  <div class="tg">Cognitive Enhancement</div>
+  <h3>Semax + Selank</h3>
+  <p style="font-size:14px;"><a href="/articles/semax-complete-guide">Semax</a> enhances BDNF production and neuronal growth, improving focus and memory formation. <a href="/articles/selank-complete-guide">Selank</a> modulates stress responses through GABAergic pathways, creating a calmer but more alert mental state.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Protocol:</strong> Both administered intranasally. Run 10&ndash;20 days with breaks between cycles to maintain receptor sensitivity.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Compatibility Matrix -->
+<h2>Peptide Compatibility Matrix</h2>
+
+<p>Not every combination works well together. This matrix provides general guidance based on mechanism overlap and reported interactions.</p>
+
+<table class="tbl">
+<thead><tr><th>Combination</th><th>Compatibility</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>GH + Healing</strong></td><td class="g">High</td><td>Synergistic for recovery; space doses 2+ hours apart</td></tr>
+<tr><td><strong>Anti-Aging + GH</strong></td><td class="g">High</td><td>Natural pairing; Epithalon complements GH stacks well</td></tr>
+<tr><td><strong>Healing + Cognitive</strong></td><td class="g">High</td><td>No known interactions; may support nerve repair</td></tr>
+<tr><td><strong>GH + Fat Loss</strong></td><td class="y">Moderate</td><td>Monitor glucose closely; may require dose reduction</td></tr>
+<tr><td><strong>Fat Loss + Healing</strong></td><td class="y">Moderate</td><td>May slow healing; monitor progress closely</td></tr>
+<tr><td><strong>GH + Cognitive</strong></td><td class="r">Low</td><td>Potential overstimulation; not for beginners</td></tr>
+</tbody>
+</table>
+
+<p>Individual responses vary significantly. Always start with the lowest effective doses when combining peptides and track your body's response over several weeks.</p>
+
+<hr class="sep">
+
+<!-- Sample Protocols -->
+<h2>Sample Weekly Protocols</h2>
+
+<h3>Muscle Growth Protocol</h3>
+
+<p>This protocol combines GH elevation with targeted tissue repair for maximum training recovery. Run for 8&ndash;12 weeks before taking a 4-week break.</p>
+
+<table class="tbl">
+<thead><tr><th>Timing</th><th>Compound</th><th>Dose</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Mon&ndash;Fri AM</strong></td><td>TB-500</td><td>500 mcg</td><td class="g">Subcutaneous injection</td></tr>
+<tr><td><strong>Mon&ndash;Fri Post-Workout</strong></td><td>BPC-157</td><td>250 mcg</td><td class="g">Inject near target muscle group</td></tr>
+<tr><td><strong>Mon&ndash;Fri Pre-Bed</strong></td><td>CJC-1295 + Ipamorelin</td><td>100 mcg each</td><td class="g">Fasted, empty stomach</td></tr>
+<tr><td><strong>Sat&ndash;Sun</strong></td><td>Off</td><td>n/a</td><td class="y">Recovery days</td></tr>
+</tbody>
+</table>
+
+<p>For more on peptides for <a href="/articles/best-peptides-for-muscle-growth">muscle growth</a>, see our full breakdown.</p>
+
+<h3>Injury Recovery Protocol</h3>
+
+<p>A targeted approach combining local repair with systemic healing support. Run continuously for 4&ndash;6 weeks.</p>
+
+<table class="tbl">
+<thead><tr><th>Timing</th><th>Compound</th><th>Dose</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Daily AM</strong></td><td>BPC-157</td><td>250&ndash;500 mcg</td><td class="g">Inject near injury site</td></tr>
+<tr><td><strong>2x Weekly</strong></td><td>TB-500</td><td>2.5 mg</td><td class="g">Subcutaneous, systemic</td></tr>
+<tr><td><strong>Daily PM</strong></td><td>Ipamorelin</td><td>100 mcg</td><td class="y">GH supports tissue repair</td></tr>
+<tr><td><strong>Daily Pre-Bed</strong></td><td>CJC-1295</td><td>100 mcg</td><td class="y">Empty stomach required</td></tr>
+</tbody>
+</table>
+
+<h3>Fat Loss Protocol</h3>
+
+<p>Run for 12 weeks, then take 4 weeks off. Combine with a caloric deficit and regular exercise for best results.</p>
+
+<table class="tbl">
+<thead><tr><th>Timing</th><th>Compound</th><th>Dose</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Mon&ndash;Sat Fasted AM</strong></td><td>AOD-9604</td><td>300 mcg</td><td class="g">Empty stomach required</td></tr>
+<tr><td><strong>Mon&ndash;Sat Pre-Bed</strong></td><td>Tesamorelin</td><td>1 mg</td><td class="g">Empty stomach required</td></tr>
+<tr><td><strong>Sunday</strong></td><td>Off</td><td>n/a</td><td class="y">Recovery day</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Studies on Tesamorelin show a 15&ndash;18% reduction in visceral adipose tissue over 26 weeks (<a href="https://pubmed.ncbi.nlm.nih.gov/20484475/">Falutz et al., 2007</a>). When combined with AOD-9604's lipolytic effects, users report accelerated fat loss compared to either peptide alone.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Common Mistakes -->
+<h2>Common Stacking Mistakes</h2>
+
+<p>These are the errors that most commonly undermine peptide stacking efforts. Avoiding them will save you time, money, and frustration.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--red);">Dose Doubling</h4>
+    <p>Taking full standalone doses of multiple peptides often leads to side effects without added benefits. Reduce to 50&ndash;70% of individual doses when stacking.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Timing Conflicts</h4>
+    <p>Administering competing peptides too close together causes receptor competition. Space conflicting compounds by at least 2 hours.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Ignoring Cycling</h4>
+    <p>Running stacks indefinitely leads to diminishing returns through receptor desensitization. Follow our <a href="/articles/peptide-cycling-guide">cycling guide</a> for proper timing.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Combining Too Many</h4>
+    <p>Starting with more than 2&ndash;3 peptides increases complexity without proven benefits. You also can't tell what's actually working.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Neglecting Blood Work</h4>
+    <p>Failing to monitor biomarkers like IGF-1, glucose, and inflammation markers means you're flying blind with no data to guide decisions.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Similar Mechanisms</h4>
+    <p>Stacking two GHRH analogs at full doses is redundant and increases side effects without added synergy. Pick one from each category.</p>
+  </div>
+</div>
+
+<div class="d-p">
+  <div class="s">Survey Data</div>
+  <p>A survey of experienced peptide users found that the most successful stacking protocols used just 2 peptides targeting complementary pathways, with 3 being the practical maximum before diminishing returns set in.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Monitoring -->
+<h2>Monitoring Your Stack</h2>
+
+<p>Effective stacking requires tracking several key biomarkers. Work with a healthcare provider to establish baseline values before starting any peptide protocol.</p>
+
+<table class="tbl">
+<thead><tr><th>Biomarker</th><th>Frequency</th><th>Stack Type</th><th>Target</th></tr></thead>
+<tbody>
+<tr><td><strong>IGF-1 Levels</strong></td><td>Every 3 months</td><td>GH stacks</td><td class="g">Upper-normal range</td></tr>
+<tr><td><strong>Fasting Glucose / HbA1c</strong></td><td>Monthly (first 3 mo)</td><td>GH stacks</td><td class="y">Within normal limits</td></tr>
+<tr><td><strong>CRP / ESR</strong></td><td>Monthly</td><td>Healing stacks</td><td class="g">Trending downward</td></tr>
+<tr><td><strong>DEXA Scan</strong></td><td>Quarterly</td><td>Fat loss / fitness</td><td class="g">Objective body comp data</td></tr>
+<tr><td><strong>Liver / Kidney Panel</strong></td><td>Every 3&ndash;6 months</td><td>All stacks</td><td class="y">Within normal range</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Warning Signs</div>
+  <p>Watch for persistent joint pain, unusual fatigue, numbness or tingling, or changes in sleep quality. These may indicate dose adjustments are needed or that a break from peptides is warranted. Stop and consult a healthcare provider if symptoms persist.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Who Benefits -->
+<h2>Who Might Benefit from Stacking</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Athletes in Recovery</h4>
+    <p>Healing stacks (BPC-157 + TB-500) combined with GH support can accelerate return-to-sport timelines after injury.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Body Composition Goals</h4>
+    <p>Fat loss stacks paired with GH secretagogues address both fat reduction and lean mass preservation simultaneously.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Cognitive Optimization</h4>
+    <p>Semax + Selank provides both cognitive enhancement and stress resilience, a combination that single nootropics rarely deliver.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Peptide Stacking FAQ</h2>
+
+<div class="faq">
+  <details>
+    <summary>Does stacking peptides increase side effects?</summary>
+    <div class="fa">Not necessarily. When done correctly with dose adjustments, stacking can actually reduce side effects compared to high single-peptide dosing. By using lower doses of multiple peptides that work through different pathways, you achieve benefits while minimizing receptor overload. Most side effects from stacking come from using full standalone doses of each peptide rather than reducing appropriately.</div>
+  </details>
+  <details>
+    <summary>How long should I run a peptide stack?</summary>
+    <div class="fa">Most stacks show initial benefits within 4&ndash;8 weeks, but optimal duration depends on your goals. Muscle growth and healing stacks typically run 8&ndash;12 weeks with 4-week breaks between cycles. Fat loss stacks work best in 12-week cycles. Anti-aging protocols may continue longer with periodic breaks. Epithalon, for example, is typically cycled 10 days on with 6-month breaks. See our <a href="/articles/peptide-cycling-guide">Peptide Cycling Guide</a> for more details.</div>
+  </details>
+  <details>
+    <summary>Can I stack more than two peptides?</summary>
+    <div class="fa">It's possible, but rarely necessary or beneficial beyond three peptides at once. Complexity increases exponentially with each addition, making it harder to pinpoint what's working and troubleshoot side effects. Most experienced users find optimal results with 2&ndash;3 peptide combinations targeted to specific goals. If you want to address multiple goals, consider rotating stacks rather than combining everything at once.</div>
+  </details>
+  <details>
+    <summary>How do I know if peptides are compatible?</summary>
+    <div class="fa">Research mechanism of action first. Peptides that work through different pathways or receptors generally combine well, while those targeting the same receptors may compete and cause desensitization. Our compatibility table above provides a starting point, but individual responses vary. Always verify claims against published research when possible.</div>
+  </details>
+  <details>
+    <summary>Should I change my diet when stacking peptides?</summary>
+    <div class="fa">Nutrition plays a significant role in peptide effectiveness. GH secretagogues work best when administered fasted, as eating within 2 hours of injection blunts the GH response significantly. Healing peptides benefit from adequate protein intake (at least 1g per pound of bodyweight). Fat loss stacks require a caloric deficit to see meaningful results.</div>
+  </details>
+  <details>
+    <summary>What's the biggest mistake beginners make with stacking?</summary>
+    <div class="fa">Impatience. Starting with too many peptides, doses too high, or expecting results too quickly. Effective stacking requires methodical experimentation and careful monitoring over weeks and months. Start with a single proven two-peptide combination at conservative doses and track your progress for at least 6&ndash;8 weeks before expanding your protocol.</div>
+  </details>
+  <details>
+    <summary>Can you stack injectable and oral peptides together?</summary>
+    <div class="fa">Yes, and this can be a convenient approach. BPC-157, for example, has shown oral bioavailability for gut-related conditions, while injectable administration works better for localized injuries. You could take oral BPC-157 for gut health while injecting TB-500 systemically for injury recovery. Just account for bioavailability differences when calculating your total peptide load.</div>
+  </details>
+  <details>
+    <summary>Are there specific blood tests for monitoring peptide stacks?</summary>
+    <div class="fa">Standard panels cover most needs. IGF-1 is the primary marker for GH peptides. Inflammatory markers (CRP, ESR) track healing peptide progress. Metabolic panels cover fat loss stacks. There aren't peptide-specific blood tests per se, but the downstream biomarkers tell you everything you need to know about whether your stack is working and whether it's safe to continue. Establish baselines before starting and retest every 3 months.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Bottom Line -->
+<div class="d-t">
+  <div class="s">The Bottom Line</div>
+  <p>Peptide stacking works best when you pair 2&ndash;3 compounds that act through different biological pathways toward the same goal. Start with conservative doses (50&ndash;70% of standalone), monitor your biomarkers regularly, and resist the temptation to add more compounds before you've given your current stack time to work.</p>
+</div>
+
+<p>The most successful peptide users aren't the ones running the most compounds. They're the ones who pick proven combinations, follow structured protocols, and track their results with blood work and objective measurements.</p>
+
+<p>If you're new to peptides, start with a single compound first. Get comfortable with how your body responds, then add a complementary peptide after 4&ndash;6 weeks. That methodical approach will consistently outperform the "throw everything at the wall" strategy.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only and does not constitute medical advice. Peptides discussed here are research compounds, and many are not approved by the FDA for human use. Always consult with a qualified healthcare provider before starting any peptide protocol. Individual results vary, and self-administration carries risks that should be discussed with a medical professional.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Bowers CY et al. On the in vitro and in vivo activity of a new synthetic hexapeptide that acts on the pituitary to specifically release growth hormone. <em>Endocrinology.</em> 1984;114(5):1537&ndash;1545. <a href="https://pubmed.ncbi.nlm.nih.gov/6423375/">PubMed</a><br>
+Bowers CY. Growth hormone-releasing peptide (GHRP). <em>Cell Mol Life Sci.</em> 1998;54(12):1316&ndash;1329. <a href="https://pubmed.ncbi.nlm.nih.gov/10732899/">PubMed</a><br>
+Sikiric P et al. Brain-gut axis and pentadecapeptide BPC 157: theoretical and practical implications. <em>Curr Neuropharmacol.</em> 2016;14(8):857&ndash;865. <a href="https://pubmed.ncbi.nlm.nih.gov/27306034/">PubMed</a><br>
+Goldstein AL, Kleinman HK. Advances in the biology of thymosin beta4 and their therapeutic implications. <em>Expert Opin Biol Ther.</em> 2015;15(1):139&ndash;145. <a href="https://pubmed.ncbi.nlm.nih.gov/25363308/">PubMed</a><br>
+Falutz J et al. Metabolic effects of a growth hormone-releasing factor in patients with HIV. <em>N Engl J Med.</em> 2007;357(23):2359&ndash;2370. <a href="https://pubmed.ncbi.nlm.nih.gov/18057338/">PubMed</a><br>
+Heffernan M et al. The effects of human GH and its lipolytic fragment (AOD9604) on lipid metabolism. <em>Endocrinology.</em> 2001;142(12):5182&ndash;5189. <a href="https://pubmed.ncbi.nlm.nih.gov/11713213/">PubMed</a><br>
+Khavinson VK. Peptides and ageing. <em>Neuro Endocrinol Lett.</em> 2002;23(Suppl 3):11&ndash;144. <a href="https://pubmed.ncbi.nlm.nih.gov/12374906/">PubMed</a><br>
+Ashmarin IP et al. Semax, an ACTH(4-10) analogue with nootropic properties. <em>CNS Drug Rev.</em> 2007;13(4):428&ndash;451. <a href="https://pubmed.ncbi.nlm.nih.gov/18078427/">PubMed</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157">CJC-1295/Ipamorelin/BPC-157 Stack Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-vs-tb-500-comparison">BPC-157 vs TB-500 Comparison</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-fat-loss">Best Peptides for Fat Loss</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-cycling-guide">Peptide Cycling Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">CJC-1295/Ipamorelin/BPC-157 Stack</a>
+            <a href="/articles/bpc-157-vs-tb-500-comparison" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 vs TB-500 Comparison</a>
+            <a href="/articles/best-peptides-for-fat-loss" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Fat Loss</a>
+            <a href="/articles/peptide-cycling-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Cycling Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

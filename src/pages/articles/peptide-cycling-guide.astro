@@ -1,0 +1,689 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptide Cycling Guide: When to Cycle, When to Stay On, and How to Do It Right",
+  description: "A practical guide to peptide cycling with recommended on/off schedules by category, sample protocols, and signs you need a break.",
+  image: "/images/articles/peptide-cycling-guide.webp",
+  date: "2026-02-15",
+  category: "How-To",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">How-To &middot; Cycling Protocols &middot; Scheduling</div>
+  <h1>Peptide Cycling Guide: When to Cycle, When to Stay On, and How to Do It Right</h1>
+  <p class="sub">Not all peptides follow the same rules. Some need structured on/off cycles to stay effective. Others work best with continuous use. Here's how to tell the difference and build a schedule that actually works.</p>
+  <div class="pills">
+    <span class="pill">GH Secretagogues</span>
+    <span class="pill">Healing Peptides</span>
+    <span class="pill">Desensitization</span>
+    <span class="pill">Annual Scheduling</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">8&ndash;12</div><div class="l">Typical On-Cycle<br>Weeks (GH Peptides)</div></div>
+  <div class="sb"><div class="v c2">4&ndash;6</div><div class="l">Recommended<br>Off-Cycle Weeks</div></div>
+  <div class="sb"><div class="v c3">6</div><div class="l">Peptide Categories<br>Covered</div></div>
+  <div class="sb"><div class="v c4">36 / 12</div><div class="l">Weeks On / Off<br>Per Year</div></div>
+</div>
+
+<p>Most people figure out <em>which</em> peptide to take. Fewer figure out <em>when to stop</em>.</p>
+
+<p>Run certain peptides too long without a break and you'll watch your results flatline. Run others on a cycle when they work better continuously, and you're leaving gains on the table.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational reference on peptide cycling schedules, receptor desensitization, and on/off protocols by category. It is not medical advice. Always consult a qualified healthcare provider before starting or stopping any peptide protocol.</p>
+</div>
+
+<hr class="sep">
+
+<!-- WHY CYCLING MATTERS -->
+<h2>Why Cycling Matters</h2>
+
+<p>Your body adapts. That's what it does.</p>
+
+<p>When you stimulate the same receptor over and over, the cell responds by reducing the number of available receptors or dampening their sensitivity. Pharmacologists call this <strong>receptor desensitization</strong> or <strong>downregulation</strong>.</p>
+
+<p>The practical result? The same dose stops working as well.</p>
+
+<h3>What Happens at the Receptor Level</h3>
+
+<p>The timeline below shows the general pattern for peptides that target a single receptor system (like GH secretagogues). Individual compounds vary, but the trajectory is consistent.</p>
+
+<table class="tbl">
+<thead><tr><th>Stage</th><th>What Happens</th><th>What You Notice</th></tr></thead>
+<tbody>
+<tr><td><strong>Week 1&ndash;4</strong></td><td>Receptors fully responsive</td><td class="g">Strong effects, noticeable results</td></tr>
+<tr><td><strong>Week 5&ndash;8</strong></td><td>Receptor density starts declining</td><td class="y">Slightly blunted response</td></tr>
+<tr><td><strong>Week 9&ndash;12+</strong></td><td>Significant downregulation</td><td class="r">Diminished returns, temptation to increase dose</td></tr>
+<tr><td><strong>After a break</strong></td><td>Receptors upregulate and resensitize</td><td class="g">Full response returns</td></tr>
+</tbody>
+</table>
+
+<p>This timeline varies by peptide. Some compounds cause rapid desensitization (GHRP-6 can blunt within weeks). Others can run for months before anything shifts.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Ghrelin receptor desensitization from GH secretagogues is well-documented. Studies show pulsatile dosing (with breaks) maintains GH release better than continuous administration (<a href="https://pubmed.ncbi.nlm.nih.gov/15265848/">Bowers et al., 2004</a>).</p>
+</div>
+
+<h3>Tolerance vs. Desensitization</h3>
+
+<p>People use these words interchangeably, but they're different.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Desensitization</h4>
+    <p>The receptor itself becomes less responsive. Taking a break fixes it. This is what most peptides cause.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">True Tolerance</h4>
+    <p>Your body adjusts through multiple pathways: enzyme changes, feedback loops, metabolic adaptation. Harder to reverse.</p>
+  </div>
+</div>
+
+<p>Most peptides cause desensitization, not true tolerance. That's good news. It means cycling actually works.</p>
+
+<hr class="sep">
+
+<!-- WHICH PEPTIDES NEED CYCLING -->
+<h2>Which Peptides Need Cycling vs. Continuous Use</h2>
+
+<p>This is where people get confused. Not every peptide follows the same rules.</p>
+
+<table class="tbl">
+<thead><tr><th>Category</th><th>Cycling Needed?</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><strong>GH Secretagogues</strong> (CJC-1295, Ipamorelin, GHRP-2/6, MK-677)</td><td class="r">Yes</td><td>Ghrelin/GHRH receptor desensitization</td></tr>
+<tr><td><strong>Healing Peptides</strong> (BPC-157, TB-500)</td><td class="g">Usually no</td><td>Goal-based duration, not receptor-limited</td></tr>
+<tr><td><strong>GLP-1 Agonists</strong> (semaglutide, tirzepatide)</td><td class="g">No</td><td>Continuous use maintains weight loss</td></tr>
+<tr><td><strong>Nootropic Peptides</strong> (Semax, Selank, Dihexa)</td><td class="y">Yes</td><td>Neurotransmitter system adaptation</td></tr>
+<tr><td><strong>Tanning Peptides</strong> (Melanotan II)</td><td class="y">Yes</td><td>MC1R desensitization, melanin saturation</td></tr>
+<tr><td><strong>Antimicrobial Peptides</strong> (LL-37, Thymosin Alpha-1)</td><td class="y">Depends</td><td>Short therapeutic courses vs. immune modulation</td></tr>
+</tbody>
+</table>
+
+<p>Let's break each category down.</p>
+
+<hr class="sep">
+
+<!-- GH SECRETAGOGUES -->
+<h2>GH Secretagogues: The Most Cycle-Dependent Category</h2>
+
+<p>Growth hormone releasing peptides are where cycling matters most. These compounds work by stimulating your pituitary to release more GH.</p>
+
+<p>Push that signal nonstop, and your pituitary stops listening.</p>
+
+<h3>Recommended Cycle Lengths</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>On Cycle</th><th>Off Period</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>CJC-1295 (no DAC)</strong></td><td>8&ndash;12 weeks</td><td>4 weeks</td><td>Pair with a GHRP for best results</td></tr>
+<tr><td><strong>CJC-1295 with DAC</strong></td><td>8&ndash;12 weeks</td><td>4&ndash;6 weeks</td><td>Longer half-life means longer off period</td></tr>
+<tr><td><strong>Ipamorelin</strong></td><td>8&ndash;12 weeks</td><td>4 weeks</td><td class="g">Most tolerable GHRP, least desensitization</td></tr>
+<tr><td><strong>GHRP-2</strong></td><td>6&ndash;8 weeks</td><td>4 weeks</td><td>Stronger GH pulse but faster desensitization</td></tr>
+<tr><td><strong>GHRP-6</strong></td><td>6&ndash;8 weeks</td><td>4 weeks</td><td class="y">Hunger spike can be extreme; shorter cycles preferred</td></tr>
+<tr><td><strong>MK-677 (Ibutamoren)</strong></td><td>8&ndash;16 weeks</td><td>4&ndash;8 weeks</td><td>Oral, long half-life; results fade on extended runs</td></tr>
+<tr><td><strong>Hexarelin</strong></td><td class="r">4&ndash;6 weeks</td><td>4 weeks</td><td class="r">Fastest desensitization of any GHRP</td></tr>
+</tbody>
+</table>
+
+<h3>Sample GH Secretagogue Schedule (Annual)</h3>
+
+<p>Here's what a clean annual cycling plan looks like. Three full cycles with proper off periods between each.</p>
+
+<!-- SVG Cycling Timeline -->
+<div class="svg-box">
+  <div class="st">Annual GH Secretagogue Cycling Timeline</div>
+  <div class="ss">Green = on cycle &middot; Gray = off cycle &middot; 36 weeks on, 12 weeks off per year</div>
+  <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="700" height="180" fill="none"/>
+    <!-- Month labels -->
+    <text x="30" y="30" font-size="11" fill="#86869A" font-weight="600">JAN</text>
+    <text x="85" y="30" font-size="11" fill="#86869A" font-weight="600">FEB</text>
+    <text x="140" y="30" font-size="11" fill="#86869A" font-weight="600">MAR</text>
+    <text x="195" y="30" font-size="11" fill="#86869A" font-weight="600">APR</text>
+    <text x="250" y="30" font-size="11" fill="#86869A" font-weight="600">MAY</text>
+    <text x="305" y="30" font-size="11" fill="#86869A" font-weight="600">JUN</text>
+    <text x="365" y="30" font-size="11" fill="#86869A" font-weight="600">JUL</text>
+    <text x="420" y="30" font-size="11" fill="#86869A" font-weight="600">AUG</text>
+    <text x="475" y="30" font-size="11" fill="#86869A" font-weight="600">SEP</text>
+    <text x="530" y="30" font-size="11" fill="#86869A" font-weight="600">OCT</text>
+    <text x="585" y="30" font-size="11" fill="#86869A" font-weight="600">NOV</text>
+    <text x="640" y="30" font-size="11" fill="#86869A" font-weight="600">DEC</text>
+    <!-- Cycle bars -->
+    <!-- Cycle 1: Jan-Mar (ON) -->
+    <rect x="20" y="45" width="165" height="36" rx="6" fill="#187A62" opacity="0.85"/>
+    <text x="102" y="68" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">Cycle 1 (12 wk)</text>
+    <!-- Off: Apr -->
+    <rect x="190" y="45" width="50" height="36" rx="6" fill="#D9D6CE" opacity="0.6"/>
+    <text x="215" y="68" font-size="10" fill="#86869A" text-anchor="middle" font-weight="600">OFF</text>
+    <!-- Cycle 2: May-Jul (ON) -->
+    <rect x="245" y="45" width="165" height="36" rx="6" fill="#187A62" opacity="0.85"/>
+    <text x="327" y="68" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">Cycle 2 (12 wk)</text>
+    <!-- Off: Aug -->
+    <rect x="415" y="45" width="50" height="36" rx="6" fill="#D9D6CE" opacity="0.6"/>
+    <text x="440" y="68" font-size="10" fill="#86869A" text-anchor="middle" font-weight="600">OFF</text>
+    <!-- Cycle 3: Sep-Nov (ON) -->
+    <rect x="470" y="45" width="165" height="36" rx="6" fill="#187A62" opacity="0.85"/>
+    <text x="552" y="68" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">Cycle 3 (12 wk)</text>
+    <!-- Off: Dec -->
+    <rect x="640" y="45" width="50" height="36" rx="6" fill="#D9D6CE" opacity="0.6"/>
+    <text x="665" y="68" font-size="10" fill="#86869A" text-anchor="middle" font-weight="600">OFF</text>
+    <!-- Annotations -->
+    <text x="20" y="110" font-size="11" fill="#187A62" font-weight="600">Protocol: CJC-1295/Ipamorelin, 3x daily</text>
+    <text x="20" y="128" font-size="11" fill="#86869A">Off periods: no GH peptides. Healing peptides and nootropics can continue.</text>
+    <text x="20" y="150" font-size="12" fill="#18182A" font-weight="700">Total: 36 weeks ON, 12 weeks OFF per year (3 full cycles)</text>
+  </svg>
+</div>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>During off periods, you can still use non-GH peptides like BPC-157 or TB-500 for healing. Cycling applies to the secretagogue, not your entire stack.</p>
+</div>
+
+<h3>The 5-Days-On, 2-Days-Off Debate</h3>
+
+<p>Some people cycle GH secretagogues with weekends off instead of full multi-week breaks.</p>
+
+<p>Does it work? Sort of. It's better than 7 days a week nonstop. But 2 days isn't enough for meaningful receptor resensitization. Think of it as damage limitation, not real cycling.</p>
+
+<p>If you want to run longer stretches without a multi-week break, 5-on/2-off is a reasonable compromise. Just don't expect it to fully replace proper cycling.</p>
+
+<hr class="sep">
+
+<!-- HEALING PEPTIDES -->
+<h2>Healing Peptides: Usually Run to Completion</h2>
+
+<p>BPC-157 and TB-500 are different from secretagogues. You're not trying to stimulate a hormonal pulse. You're supporting a repair process.</p>
+
+<h3>Recommended Protocols</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Typical Duration</th><th>Cycling?</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>4&ndash;8 weeks</td><td class="g">Run until healed, then stop</td><td>Can repeat courses with 2&ndash;4 week gaps</td></tr>
+<tr><td><strong>TB-500</strong></td><td>4&ndash;6 weeks loading, then maintenance</td><td class="g">Taper down, don't abruptly stop</td><td>Loading phase is higher dose, maintenance is 1&ndash;2x/week</td></tr>
+<tr><td><strong>BPC-157 + TB-500 stack</strong></td><td>6&ndash;8 weeks</td><td class="g">Run together, stop together</td><td>Most common healing stack</td></tr>
+<tr><td><strong>GHK-Cu</strong></td><td>4&ndash;8 weeks</td><td class="y">Cycle 4 on / 2 off for cosmetic use</td><td>Shorter cycles for ongoing use</td></tr>
+</tbody>
+</table>
+
+<h3>Sample Healing Protocol (Injury Recovery)</h3>
+
+<table class="tbl">
+<thead><tr><th>Week</th><th>BPC-157</th><th>TB-500</th></tr></thead>
+<tbody>
+<tr><td><strong>1&ndash;2</strong></td><td>250 mcg 2x/day</td><td>2 mg 2x/week</td></tr>
+<tr><td><strong>3&ndash;4</strong></td><td>250 mcg 2x/day</td><td>2 mg 2x/week</td></tr>
+<tr><td><strong>5&ndash;6</strong></td><td>250 mcg 1x/day</td><td>2 mg 1x/week</td></tr>
+<tr><td><strong>7&ndash;8</strong></td><td>250 mcg 1x/day (if needed)</td><td>Stop or 1x/week</td></tr>
+<tr><td><strong>9+</strong></td><td class="r">Stop</td><td class="r">Stop</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>BPC-157 shows no evidence of receptor desensitization in available research. Its effects operate through multiple pathways (nitric oxide, growth factor modulation, angiogenesis), which makes tolerance unlikely over standard treatment courses (<a href="https://pubmed.ncbi.nlm.nih.gov/29998800/">Sikiric et al., 2018</a>).</p>
+</div>
+
+<p>The rule with healing peptides: <strong>use them until the job is done, then stop.</strong> If the injury flares again months later, run another course.</p>
+
+<hr class="sep">
+
+<!-- WEIGHT LOSS PEPTIDES -->
+<h2>Weight Loss Peptides: Continuous Use, Not Cycling</h2>
+
+<p>GLP-1 receptor agonists like semaglutide and tirzepatide are designed for long-term use. This is one category where cycling is generally a bad idea.</p>
+
+<h3>Why You Don't Cycle GLP-1s</h3>
+
+<p>The data is clear on what happens when you stop.</p>
+
+<div class="cd cr">
+  <div class="tg">What Happens When You Stop</div>
+  <h3>GLP-1 Discontinuation Effects</h3>
+  <p style="font-size:14px;margin-bottom:8px;"><strong>Weight regain begins within weeks</strong> of discontinuation.</p>
+  <p style="font-size:14px;margin-bottom:8px;"><strong>Two-thirds of lost weight returns</strong> within a year of stopping (<a href="https://pubmed.ncbi.nlm.nih.gov/35441470/">Wilding et al., 2022</a>).</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Metabolic improvements reverse</strong> (blood sugar, lipids, blood pressure).</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Cycling Recommended?</th><th>Standard Duration</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a></strong> (Wegovy/Ozempic)</td><td class="g">No</td><td>Ongoing / indefinite</td></tr>
+<tr><td><strong><a href="/articles/tirzepatide-complete-guide">Tirzepatide</a></strong> (Mounjaro/Zepbound)</td><td class="g">No</td><td>Ongoing / indefinite</td></tr>
+<tr><td><strong><a href="/articles/retatrutide-complete-guide">Retatrutide</a></strong> (investigational)</td><td class="g">No</td><td>Ongoing / indefinite</td></tr>
+<tr><td><strong><a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a></strong></td><td class="y">Optional</td><td>12-week cycles with 4-week breaks</td></tr>
+<tr><td><strong><a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">5-Amino-1MQ</a></strong></td><td class="r">Yes</td><td>8&ndash;12 weeks on, 4 weeks off</td></tr>
+<tr><td><strong><a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">Tesamorelin</a></strong></td><td class="y">Depends</td><td>FDA-approved for continuous use, but GH component may benefit from cycling</td></tr>
+</tbody>
+</table>
+
+<p>AOD-9604 and 5-Amino-1MQ work through different mechanisms than GLP-1s and can benefit from cycling. But if you're on a true GLP-1 agonist for weight management, plan to stay on it.</p>
+
+<div class="d-r">
+  <div class="s">Bottom Line on GLP-1s</div>
+  <p>Cycling off a GLP-1 means cycling off your results. If you're using semaglutide or tirzepatide for weight loss, work with your prescriber on long-term management, not on/off schedules.</p>
+</div>
+
+<hr class="sep">
+
+<!-- NOOTROPIC PEPTIDES -->
+<h2>Nootropic Peptides: Cycle to Preserve Cognitive Effects</h2>
+
+<p>Brain-active peptides affect neurotransmitter systems that adapt quickly. Cycling keeps them effective.</p>
+
+<h3>Recommended Cycle Lengths</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>On Cycle</th><th>Off Period</th><th>Primary Mechanism</th></tr></thead>
+<tbody>
+<tr><td><strong>Semax</strong></td><td>2&ndash;4 weeks</td><td>2&ndash;4 weeks</td><td>BDNF modulation, melanocortin system</td></tr>
+<tr><td><strong>Selank</strong></td><td>2&ndash;4 weeks</td><td>2&ndash;4 weeks</td><td>GABAergic, anxiolytic</td></tr>
+<tr><td><strong>Dihexa</strong></td><td>2&ndash;4 weeks</td><td>4+ weeks</td><td>HGF/c-Met pathway</td></tr>
+<tr><td><strong>P21 (Cerebrolysin analog)</strong></td><td>4 weeks</td><td>4 weeks</td><td>Neurogenesis</td></tr>
+<tr><td><strong>PE-22-28</strong></td><td>2&ndash;3 weeks</td><td>2&ndash;3 weeks</td><td>TrkB agonist</td></tr>
+</tbody>
+</table>
+
+<h3>Sample Nootropic Cycling Schedule</h3>
+
+<table class="tbl">
+<thead><tr><th>Week</th><th>Status</th><th>Peptide</th></tr></thead>
+<tbody>
+<tr><td><strong>1&ndash;3</strong></td><td class="g">ON</td><td>Semax (200 mcg intranasal, 2x/day)</td></tr>
+<tr><td><strong>4&ndash;5</strong></td><td class="r">OFF</td><td>No nootropic peptides</td></tr>
+<tr><td><strong>6&ndash;8</strong></td><td class="g">ON</td><td>Selank (250 mcg intranasal, 2x/day)</td></tr>
+<tr><td><strong>9&ndash;10</strong></td><td class="r">OFF</td><td>No nootropic peptides</td></tr>
+<tr><td><strong>11&ndash;13</strong></td><td class="g">ON</td><td>Semax again or rotate to Dihexa</td></tr>
+<tr><td><strong>14&ndash;15</strong></td><td class="r">OFF</td><td>Break</td></tr>
+</tbody>
+</table>
+
+<p>Some people alternate between Semax and Selank rather than running them together. This gives each receptor system a longer break while keeping cognitive support continuous.</p>
+
+<div class="d-p">
+  <div class="s">Context</div>
+  <p>Nootropic peptides are among the least studied in humans. Recommended cycle lengths come from user-reported experiences and pharmacological reasoning, not large clinical trials. Start conservative.</p>
+</div>
+
+<hr class="sep">
+
+<!-- TANNING PEPTIDES -->
+<h2>Tanning and Cosmetic Peptides</h2>
+
+<p>Melanotan II is the most common tanning peptide, and it absolutely requires cycling.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Loading Phase</th><th>Maintenance</th><th>Off Period</th></tr></thead>
+<tbody>
+<tr><td><strong>Melanotan II</strong></td><td>0.25&ndash;0.5 mg/day for 2&ndash;3 weeks</td><td>0.5 mg 1&ndash;2x/week</td><td>2+ months after desired tan</td></tr>
+<tr><td><strong>PT-141 (Bremelanotide)</strong></td><td>No loading needed</td><td>As needed, max 1x per 24 hours</td><td class="y">Use sparingly; MC4R desensitizes with frequent use</td></tr>
+</tbody>
+</table>
+
+<p>Melanotan II builds melanin in the skin. Once you've reached your desired color, the melanin persists for weeks to months. You don't need to keep stimulating production.</p>
+
+<p>PT-141 for sexual function works best when used infrequently. People who dose it daily report rapid loss of effect. Once or twice a week maximum, with breaks of a week or more between courses if using regularly.</p>
+
+<hr class="sep">
+
+<!-- SIGNS YOU NEED A BREAK -->
+<h2>Signs You Need a Break</h2>
+
+<p>Your body will tell you when cycling is overdue. Pay attention to these signals.</p>
+
+<table class="tbl">
+<thead><tr><th>Sign</th><th>What It Suggests</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td><strong>Reduced effect at the same dose</strong></td><td>Receptor desensitization</td><td class="y">Start your off-cycle</td></tr>
+<tr><td><strong>Worse sleep quality</strong> (GH peptides)</td><td>HPA axis disruption or GH pattern changes</td><td class="y">Take 2&ndash;4 weeks off</td></tr>
+<tr><td><strong>Increased water retention</strong> (MK-677)</td><td>Prolonged GH/IGF-1 elevation</td><td class="y">Cycle off, reassess</td></tr>
+<tr><td><strong>GI issues worsening</strong> (any peptide)</td><td>Possible accumulation or sensitivity change</td><td class="r">Stop and evaluate</td></tr>
+<tr><td><strong>Mood changes</strong> (nootropics)</td><td>Neurotransmitter adaptation</td><td class="y">Cycle off for equal duration</td></tr>
+<tr><td><strong>Numbness or tingling in hands</strong> (GH peptides)</td><td>Elevated IGF-1, possible carpal tunnel</td><td class="r">Stop immediately, consult a provider</td></tr>
+<tr><td><strong>Fasting blood glucose rising</strong> (MK-677)</td><td>Insulin resistance from chronic GH elevation</td><td class="r">Cycle off, check bloodwork</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Warning</div>
+  <p>If you experience numbness, persistent joint pain, or significant blood sugar changes, don't just "cycle off." Get bloodwork and talk to a provider. These can indicate you've been running too high a dose, not just too long a duration.</p>
+</div>
+
+<hr class="sep">
+
+<!-- STACKING CONSIDERATIONS -->
+<h2>Stacking Considerations During Cycles</h2>
+
+<p>Running multiple peptides? Your cycling schedule gets more complex. Here are the three principles that matter.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Rule 1: Same System = Same Schedule</h4>
+    <p>Peptides hitting the same receptor system cycle together. CJC-1295 and Ipamorelin go on and off at the same time. They're hitting the same pathway.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Rule 2: Different Systems = Independent</h4>
+    <p>Your healing stack doesn't need to stop just because your GH secretagogues are on a break. Different receptors, different schedules.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Rule 3: Off-Cycles Are Opportunities</h4>
+    <p>Use your GH off-cycle to run nootropic cycles, focus on healing peptides, or get bloodwork done. Don't waste the downtime.</p>
+  </div>
+</div>
+
+<h3>Stacking Overlap Reference</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide A (Cycling)</th><th>Peptide B (Independent)</th><th>Can They Overlap?</th></tr></thead>
+<tbody>
+<tr><td><strong>CJC-1295/Ipamorelin</strong></td><td>BPC-157</td><td class="g">Yes, different systems</td></tr>
+<tr><td><strong>MK-677</strong></td><td>Semax</td><td class="y">Yes, but monitor sleep and mood</td></tr>
+<tr><td><strong>Hexarelin</strong></td><td>TB-500</td><td class="g">Yes, different systems</td></tr>
+<tr><td><strong>Semax</strong></td><td>Selank</td><td class="y">Better to alternate than stack</td></tr>
+</tbody>
+</table>
+
+<h3>Sample Combined Annual Stack</h3>
+
+<table class="tbl">
+<thead><tr><th>Period</th><th>GH Secretagogues</th><th>Healing</th><th>Nootropic</th></tr></thead>
+<tbody>
+<tr><td><strong>Jan&ndash;Mar</strong></td><td class="g">CJC/Ipa ON</td><td>BPC-157 (as needed)</td><td>Off</td></tr>
+<tr><td><strong>Apr</strong></td><td class="r">OFF</td><td>TB-500 course</td><td class="g">Semax ON</td></tr>
+<tr><td><strong>May&ndash;Jul</strong></td><td class="g">CJC/Ipa ON</td><td>Off</td><td>Off</td></tr>
+<tr><td><strong>Aug</strong></td><td class="r">OFF</td><td>Off</td><td class="g">Selank ON</td></tr>
+<tr><td><strong>Sep&ndash;Nov</strong></td><td class="g">CJC/Ipa ON</td><td>BPC-157 (as needed)</td><td>Off</td></tr>
+<tr><td><strong>Dec</strong></td><td class="r">OFF</td><td>Off</td><td class="g">Semax ON</td></tr>
+</tbody>
+</table>
+
+<p>This keeps your GH secretagogues on a clean 12-on/4-off schedule while filling off-periods with nootropic cycles. Healing peptides run as needed throughout the year, independent of everything else.</p>
+
+<hr class="sep">
+
+<!-- BLOODWORK AND MONITORING -->
+<h2>Bloodwork and Monitoring</h2>
+
+<p>Cycling isn't just about feel. Numbers matter.</p>
+
+<h3>What to Test and When</h3>
+
+<table class="tbl">
+<thead><tr><th>Test</th><th>When</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><strong>IGF-1</strong></td><td>End of GH cycle, and during off period</td><td>Confirms GH secretagogues are working and that levels normalize during breaks</td></tr>
+<tr><td><strong>Fasting glucose / HbA1c</strong></td><td>Every 3&ndash;6 months on MK-677 or GH peptides</td><td class="y">MK-677 especially can raise fasting glucose</td></tr>
+<tr><td><strong>CBC + CMP</strong></td><td>Every 6 months</td><td>General health baseline</td></tr>
+<tr><td><strong>Liver enzymes (ALT/AST)</strong></td><td>Every 6 months</td><td>Monitors hepatic stress</td></tr>
+<tr><td><strong>Cortisol</strong></td><td>If fatigue or mood changes appear</td><td>Rules out HPA axis issues</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">Bottom Line on Bloodwork</div>
+  <p>Get baseline bloodwork before starting any peptide. Repeat at least every 6 months. If something looks off, stop the peptide and retest in 4&ndash;6 weeks.</p>
+</div>
+
+<hr class="sep">
+
+<!-- COMMON MISTAKES -->
+<h2>Common Cycling Mistakes</h2>
+
+<div class="cd cr">
+  <div class="tg">Mistake #1</div>
+  <h3>Running Too Long Without Breaks</h3>
+  <p style="font-size:14px;margin-bottom:0;">The most common error. MK-677 users are especially guilty of this. Three months straight and they wonder why their fingers are swollen and blood sugar is climbing.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Mistake #2</div>
+  <h3>Cycling Peptides That Don't Need It</h3>
+  <p style="font-size:14px;margin-bottom:0;">Stopping BPC-157 at 4 weeks because "it's time to cycle" when your tendon is only half-healed. Finish the job.</p>
+</div>
+
+<div class="cd cr">
+  <div class="tg">Mistake #3</div>
+  <h3>Increasing Dose Instead of Cycling Off</h3>
+  <p style="font-size:14px;margin-bottom:0;">When effects fade, the answer is a break, not more peptide. Doubling your dose on a desensitized receptor just increases side effects without meaningful benefit.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Mistake #4</div>
+  <h3>No Bloodwork</h3>
+  <p style="font-size:14px;margin-bottom:0;">Flying blind. You can't assess what you can't measure.</p>
+</div>
+
+<div class="cd cr">
+  <div class="tg">Mistake #5</div>
+  <h3>Cycling GLP-1 Agonists Unnecessarily</h3>
+  <p style="font-size:14px;margin-bottom:0;">If your doctor put you on semaglutide for weight management, don't decide to "cycle off for a month" without discussing it. You'll regain weight and disrupt your metabolic progress.</p>
+</div>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How long should I cycle off peptides?</summary>
+    <div class="fa">It depends on the category. GH secretagogues need 4&ndash;6 weeks off for every 8&ndash;12 weeks on. Nootropic peptides need roughly equal on/off periods (2&ndash;4 weeks each). Healing peptides generally don't cycle; you stop when the injury is healed.</div>
+  </details>
+  <details>
+    <summary>Can I take any peptides during my off-cycle?</summary>
+    <div class="fa">Yes. An "off-cycle" applies to the specific receptor system you're resting. If you're cycling off CJC-1295/Ipamorelin, you can still run BPC-157, Semax, or other peptides that work through different pathways.</div>
+  </details>
+  <details>
+    <summary>Does MK-677 need cycling even though it's oral?</summary>
+    <div class="fa">Absolutely. MK-677 (Ibutamoren) stimulates the ghrelin receptor just like injectable GHRPs. The oral route doesn't change desensitization biology. Many users run it for 8&ndash;16 weeks, then take 4&ndash;8 weeks off. Watch your fasting glucose carefully.</div>
+  </details>
+  <details>
+    <summary>Will I lose my gains during the off-cycle?</summary>
+    <div class="fa">For GH secretagogues, IGF-1 levels will drop during the break, but structural gains (muscle, connective tissue improvements) persist. You're not "losing gains" by cycling. You're resetting your receptors to get more gains on the next round.</div>
+  </details>
+  <details>
+    <summary>How do I know if my peptide stopped working?</summary>
+    <div class="fa">Track your markers. For GH secretagogues, reduced sleep quality, less vivid dreams, and diminished post-injection flush are common signs. For nootropics, the cognitive boost fades or you feel "flat." For healing peptides, if pain isn't improving after 4+ weeks, the issue might not be desensitization. It might be the wrong peptide for your injury.</div>
+  </details>
+  <details>
+    <summary>Can I cycle two GH secretagogues alternately instead of taking time off?</summary>
+    <div class="fa">No. Switching from Ipamorelin to GHRP-2 isn't a "cycle." Both hit the GH secretagogue pathway. Your pituitary doesn't care which peptide is knocking; it cares that something keeps knocking without a break. You still need true off-time.</div>
+  </details>
+  <details>
+    <summary>Should I taper off or stop cold?</summary>
+    <div class="fa">For most peptides, stopping abruptly is fine. GH secretagogues don't require tapering. GLP-1 agonists are the exception. Stopping semaglutide or tirzepatide cold can cause rebound appetite and GI discomfort. Taper under medical guidance if discontinuing a GLP-1.</div>
+  </details>
+  <details>
+    <summary>What's the minimum off-cycle that actually works?</summary>
+    <div class="fa">For GH secretagogues, most protocols call for at least 4 weeks. Anything shorter and receptor resensitization is incomplete. For nootropic peptides, 2 weeks is the common minimum. The 5-on/2-off weekly approach for GH peptides is better than nothing, but it's not a substitute for a proper multi-week break.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- BOTTOM LINE -->
+<div class="d-t">
+  <div class="s">The Bottom Line</div>
+  <p>Peptide cycling isn't complicated once you understand the core principle: give your receptors time to reset. GH secretagogues need it most. Nootropic peptides benefit from it. Healing peptides usually don't require it. And GLP-1 agonists actively work against you if you cycle them.</p>
+</div>
+
+<p>Build your schedule around your goals. Use bloodwork to confirm what you're feeling.</p>
+
+<p>And when the effects start fading, don't reach for a higher dose. Reach for a break.</p>
+
+<!-- DISCLAIMER -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. Peptides discussed here may not be approved for human use in your jurisdiction. Always consult a qualified healthcare provider before starting, stopping, or modifying any peptide protocol. Do not disregard professional medical advice based on anything you read here.
+</div>
+
+<!-- REFERENCES -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Bowers CY. Growth hormone-releasing peptide (GHRP). <em>Cell Mol Life Sci.</em> 1998;54(12):1316&ndash;1329. <a href="https://pubmed.ncbi.nlm.nih.gov/15265848/">PubMed</a><br>
+Sikiric P et al. Brain-gut axis and pentadecapeptide BPC 157: Theoretical and practical implications. <em>Curr Neuropharmacol.</em> 2016;14(8):857&ndash;865. <a href="https://pubmed.ncbi.nlm.nih.gov/29998800/">PubMed</a><br>
+Wilding JPH et al. Weight regain and cardiometabolic effects after withdrawal of semaglutide. <em>Diabetes Obes Metab.</em> 2022;24(8):1553&ndash;1564. <a href="https://pubmed.ncbi.nlm.nih.gov/35441470/">PubMed</a><br>
+Muccioli G et al. Neuroendocrine and peripheral activities of ghrelin: implications in metabolism and obesity. <em>Eur J Pharmacol.</em> 2002;440(2&ndash;3):235&ndash;254. <a href="https://pubmed.ncbi.nlm.nih.gov/12007539/">PubMed</a><br>
+Nass R et al. Effects of an oral ghrelin mimetic on body composition and clinical outcomes in healthy older adults. <em>Ann Intern Med.</em> 2008;149(9):601&ndash;611. <a href="https://pubmed.ncbi.nlm.nih.gov/18981485/">PubMed</a>
+</p>
+
+<!-- RELATED READING -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-reconstitute-peptides">How to Reconstitute Peptides</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects: What to Know</a>
+            <a href="/articles/semax-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semax: Complete Nootropic Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
