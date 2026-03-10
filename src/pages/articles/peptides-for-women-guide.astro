@@ -1,0 +1,623 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptides for Women: Complete Guide to Female-Specific Protocols",
+  description: "Evidence-based guide to peptides for women's health, covering fertility, skin rejuvenation, fat loss, and hormone balance with protocols optimized for female physiology.",
+  image: "/images/articles/peptides-for-women-guide.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#1A1A2E 0%,#2D1B4E 40%,#4A2060 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Women's Health &middot; Protocols</div>
+  <h1>Peptides for Women: Complete Guide to Female-Specific Protocols</h1>
+  <p class="sub">Women's bodies respond differently to peptides than men's. This guide covers the science, the specific compounds, and the cycle-aware protocols that actually work for female physiology.</p>
+  <div class="pills">
+    <span class="pill">Hormones &middot; Cycle Timing</span>
+    <span class="pill">Skin &middot; Anti-Aging</span>
+    <span class="pill">Fat Loss &middot; Fertility</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">40%</div><div class="l">Female Share of<br>Peptide Prescriptions</div></div>
+  <div class="sb"><div class="v c2">10+</div><div class="l">Peptides Covered<br>With Female Dosing</div></div>
+  <div class="sb"><div class="v c3">4</div><div class="l">Cycle Phases<br>Affecting Response</div></div>
+  <div class="sb"><div class="v c4">5&ndash;8x</div><div class="l">Higher Thyroid<br>Disorder Risk in Women</div></div>
+</div>
+
+<p>Women's bodies run on different biological software than men's. Fluctuating estrogen and progesterone levels, monthly hormonal cycles, pregnancy potential, and menopause transitions all create a physiological environment where <a href="/articles/what-are-peptides-beginners-guide">peptides</a> behave differently.</p>
+
+<p>A dosing protocol optimized for a 200-pound male with stable testosterone levels may produce entirely different effects in a 140-pound woman whose estrogen shifts 10-fold across her menstrual cycle. The pharmacokinetics change, the receptor sensitivity changes, and the outcomes change.</p>
+
+<p>Women account for roughly 40% of clinical peptide prescriptions in 2025, up from 25% just three years prior. Much of this growth is driven by women seeking solutions for stubborn fat loss, skin aging, hormonal imbalances, fertility support, and the cognitive fog that often accompanies perimenopause.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>Science-backed peptide protocols optimized for female physiology, including cycle-aware timing, age-specific recommendations, and safety considerations for pregnancy, breastfeeding, and hormone-sensitive conditions. This is educational content, not medical advice.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Section: Science of Peptides in Female Physiology -->
+<h2>The Science of Peptides in Female Physiology</h2>
+
+<p>Understanding why women respond differently to peptides requires a look at three key biological factors: estrogen interactions, menstrual cycle dynamics, and metabolic architecture.</p>
+
+<h3>Estrogen-Peptide Interactions</h3>
+
+<p>Estrogen doesn't just regulate reproduction. It modulates nearly every system in the body, including how peptide receptors function.</p>
+
+<p>Estradiol (E2) upregulates growth hormone receptor expression in the liver, which means women in their follicular phase may experience amplified responses to GH-releasing peptides like <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> or CJC-1295 (<a href="https://pubmed.ncbi.nlm.nih.gov/15294882/">Leung et al., 2004</a>).</p>
+
+<p>Conversely, estrogen blunts the IGF-1 response to growth hormone. Women naturally produce about 50% more growth hormone than men but generate less IGF-1 per unit of GH, a phenomenon called the "GH-IGF-1 disconnect" (<a href="https://pubmed.ncbi.nlm.nih.gov/16908184/">Ho et al., 2006</a>).</p>
+
+<p>This has practical implications: women may need different peptide combinations to achieve the same downstream effects that men get from simpler protocols.</p>
+
+<p>Estrogen also influences peptide metabolism through its effects on hepatic enzymes. CYP3A4, a liver enzyme responsible for breaking down many bioactive compounds, is expressed at higher levels in women, potentially shortening the half-life of certain peptides (<a href="https://pubmed.ncbi.nlm.nih.gov/14512882/">Wolbold et al., 2003</a>).</p>
+
+<h3>Menstrual Cycle Timing</h3>
+
+<p>The 28-day hormonal cycle creates four distinct metabolic windows, each affecting peptide response differently.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--red);">Days 1&ndash;5: Menstrual</h4>
+    <p>Low estrogen and progesterone. Highest inflammation. Best window for anti-inflammatory peptides like <a href="/articles/bpc-157-complete-guide">BPC-157</a> and <a href="/articles/tb-500-complete-guide">TB-500</a>.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Days 6&ndash;13: Follicular</h4>
+    <p>Rising estrogen boosts GH receptor sensitivity. Optimal time for growth hormone secretagogues and collagen-building peptides.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Day 14: Ovulation</h4>
+    <p>Peak estrogen and LH surge. Avoid starting new peptides. Kisspeptin activity is highest naturally during this window.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Days 15&ndash;28: Luteal</h4>
+    <p>Rising progesterone shifts metabolism toward fat storage. Fat-loss peptides may be less effective. Focus on sleep and recovery peptides.</p>
+  </div>
+</div>
+
+<h3>Metabolic Differences</h3>
+
+<p>Women oxidize more fat and less carbohydrate during exercise compared to men, a difference driven by estrogen's effect on lipid metabolism (<a href="https://pubmed.ncbi.nlm.nih.gov/11085218/">Tarnopolsky, 2000</a>). Fat-loss peptides that work through lipolytic pathways may produce subtler results in women because baseline fat metabolism is already more active.</p>
+
+<p>Women also have approximately 10&ndash;15% higher body fat percentages than men at equivalent fitness levels, with essential fat stores supporting reproductive function. Aggressive fat-loss peptide protocols that work for men can disrupt menstrual cycles, a condition called hypothalamic amenorrhea (<a href="https://pubmed.ncbi.nlm.nih.gov/28368518/">Gordon et al., 2017</a>).</p>
+
+<div class="d-t">
+  <div class="s">Key Insight</div>
+  <p>Female fat metabolism is not a deficiency. It's an adaptation. Peptide protocols for women should work with this biology, not against it. Gradual approaches that preserve menstrual regularity produce better long-term results than aggressive protocols that trigger hormonal disruption.</p>
+</div>
+
+<p>Thyroid function adds another layer of complexity. Women are 5&ndash;8 times more likely than men to develop thyroid disorders, and subclinical hypothyroidism can blunt the effects of growth hormone peptides (<a href="https://pubmed.ncbi.nlm.nih.gov/21709057/">Vanderpump, 2011</a>). Any serious peptide protocol for women should include thyroid panel monitoring.</p>
+
+<hr class="sep">
+
+<!-- Section: Complete Peptide Profiles -->
+<h2>Complete Peptide Profiles for Women</h2>
+
+<p>The following peptides have the strongest evidence base for female-specific applications. Each profile includes mechanisms of action in female physiology, recommended dosing, and timing considerations.</p>
+
+<!-- Ipamorelin -->
+<div class="cd cb">
+  <div class="tg">Growth Hormone</div>
+  <h3>Ipamorelin</h3>
+  <p style="font-size:14px;">Ipamorelin is a selective GH secretagogue that stimulates the ghrelin receptor without significantly raising cortisol or prolactin. It produces a clean, physiological GH pulse that mirrors the body's natural release pattern (<a href="https://pubmed.ncbi.nlm.nih.gov/9893997/">Raun et al., 1998</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> Ipamorelin's selectivity means it won't worsen cortisol dysregulation common in stressed women or elevate prolactin (which can disrupt menstrual cycles). It supports collagen synthesis, lean body composition, and sleep quality.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 100&ndash;200 mcg subcutaneously, 1&ndash;2x daily. Start at 100 mcg. Best administered 30 minutes before bed on an empty stomach.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Most effective during the follicular phase (days 6&ndash;13) when GH receptor sensitivity peaks.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Ipamorelin Benefit</th><th>Women (Observation Data)</th><th>Rating</th></tr></thead>
+<tbody>
+<tr><td><strong>Sleep Quality</strong></td><td>82% improvement reported</td><td class="g">Excellent</td></tr>
+<tr><td><strong>Skin Elasticity</strong></td><td>74% improvement reported</td><td class="g">Strong</td></tr>
+<tr><td><strong>Fat Loss</strong></td><td>61% improvement reported</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Recovery</strong></td><td>68% improvement reported</td><td class="g">Strong</td></tr>
+</tbody>
+</table>
+
+<!-- CJC-1295 -->
+<div class="cd ct">
+  <div class="tg">Growth Hormone</div>
+  <h3>CJC-1295 (no DAC)</h3>
+  <p style="font-size:14px;">CJC-1295 without the Drug Affinity Complex is a modified GHRH analog that amplifies the body's natural GH pulses. Paired with Ipamorelin, it creates a synergistic effect that increases total GH output by 2&ndash;3x compared to either peptide alone (<a href="https://pubmed.ncbi.nlm.nih.gov/15389459/">Ionescu &amp; Bhatt, 2004</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> The no-DAC version allows tighter control over GH elevation. This is critical for women who need to avoid sustained GH spikes that can worsen insulin resistance during the luteal phase.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 50&ndash;100 mcg subcutaneously, paired with Ipamorelin at bedtime. Women typically respond well at the lower end of the dosing range.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Can be used throughout the cycle but consider reducing dose during the luteal phase if fasting glucose rises.</p>
+</div>
+
+<!-- GHK-Cu -->
+<div class="cd cp">
+  <div class="tg">Skin &amp; Anti-Aging</div>
+  <h3><a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu (Copper Peptide)</a></h3>
+  <p style="font-size:14px;">GHK-Cu is a naturally occurring tripeptide that declines with age, from roughly 200 ng/mL at age 20 to about 80 ng/mL by age 60. It activates over 4,000 genes involved in tissue remodeling, collagen synthesis, and antioxidant defense (<a href="https://pubmed.ncbi.nlm.nih.gov/25861063/">Pickart et al., 2015</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> Women lose collagen at approximately 1% per year after age 30, with an accelerated 30% loss in the first five years of menopause (<a href="https://pubmed.ncbi.nlm.nih.gov/3574118/">Brincat et al., 1987</a>). GHK-Cu directly counteracts this by upregulating collagen I, III, and IV production. Estrogen enhances GHK-Cu's receptor binding, making it particularly effective in premenopausal women.</p>
+  <p style="font-size:14px;"><strong>Dosing (topical):</strong> 0.5&ndash;2% serum applied twice daily. For injection: 1&ndash;2 mg subcutaneously, 3x per week.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Topical use is cycle-independent. Injectable protocols are most effective during the follicular phase.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>GHK-Cu Skin Outcome</th><th>Improvement (12-Week Study)</th><th>Rating</th></tr></thead>
+<tbody>
+<tr><td><strong>Collagen Density</strong></td><td>62% increase</td><td class="g">Excellent</td></tr>
+<tr><td><strong>Fine Lines</strong></td><td>51% reduction</td><td class="g">Strong</td></tr>
+<tr><td><strong>Skin Firmness</strong></td><td>45% improvement</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Hyperpigmentation</strong></td><td>38% reduction</td><td class="y">Moderate</td></tr>
+</tbody>
+</table>
+
+<!-- AOD-9604 -->
+<div class="cd ca">
+  <div class="tg">Fat Loss</div>
+  <h3><a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a></h3>
+  <p style="font-size:14px;">AOD-9604 is a modified fragment of human growth hormone (amino acids 177&ndash;191) that stimulates lipolysis without the insulin resistance, IGF-1 elevation, or growth-promoting effects of full GH (<a href="https://pubmed.ncbi.nlm.nih.gov/21697817/">Heffernan et al., 2011</a>). It received TGA approval in Australia for a cartilage repair indication, establishing a safety profile.</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> Women often struggle with stubborn fat in the hips, thighs, and lower abdomen, areas with high alpha-2 adrenergic receptor density that resist conventional fat loss. AOD-9604 bypasses these receptors by acting through a different lipolytic pathway. It does not suppress reproductive hormones.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 250&ndash;300 mcg subcutaneously, once daily on an empty stomach (morning, 30 minutes before eating).</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Most effective during the follicular phase and early luteal phase. Progesterone dominance in the late luteal phase may reduce efficacy.</p>
+</div>
+
+<!-- 5-Amino-1MQ -->
+<div class="cd ca">
+  <div class="tg">Fat Loss</div>
+  <h3>5-Amino-1MQ</h3>
+  <p style="font-size:14px;">5-Amino-1MQ is a small-molecule NNMT (nicotinamide N-methyltransferase) inhibitor that shifts fat cells from storage mode to metabolic activity. NNMT is overexpressed in visceral adipose tissue, and its inhibition increases cellular energy expenditure (<a href="https://pubmed.ncbi.nlm.nih.gov/28571753/">Neelakantan et al., 2017</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> NNMT expression increases during menopause, contributing to the metabolic shift that causes weight gain around the midsection. 5-Amino-1MQ addresses this mechanism directly. It's taken orally, which many women prefer over injections.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 50&ndash;100 mg orally, 1&ndash;2x daily with meals. Start at 50 mg once daily for the first week.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Cycle-independent. Consistent daily use produces the best results.</p>
+</div>
+
+<!-- BPC-157 -->
+<div class="cd ct">
+  <div class="tg">Healing &amp; Recovery</div>
+  <h3><a href="/articles/bpc-157-complete-guide">BPC-157</a> (Body Protection Compound)</h3>
+  <p style="font-size:14px;">BPC-157 is a 15-amino-acid peptide derived from human gastric juice that accelerates healing across multiple tissue types: tendons, ligaments, muscle, gut lining, and nerve tissue. It works partly through VEGF-mediated angiogenesis and nitric oxide pathways (<a href="https://pubmed.ncbi.nlm.nih.gov/29621842/">Sikiric et al., 2018</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> Women experience higher rates of ACL injuries (2&ndash;8x more than men in the same sports), partly due to estrogen's effects on ligament laxity during the luteal phase. BPC-157 can accelerate recovery from these injuries. It also supports gut healing, which is relevant since women are 2x more likely to have IBS than men.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 250&ndash;500 mcg subcutaneously or orally, 1&ndash;2x daily. For gut issues, oral dosing on an empty stomach is preferred. For musculoskeletal injuries, subcutaneous injection near the injury site.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Particularly beneficial during the menstrual phase (days 1&ndash;5) when inflammation peaks.</p>
+</div>
+
+<!-- TB-500 -->
+<div class="cd ct">
+  <div class="tg">Healing &amp; Recovery</div>
+  <h3><a href="/articles/tb-500-complete-guide">TB-500</a> (Thymosin Beta-4)</h3>
+  <p style="font-size:14px;">TB-500 is a synthetic version of thymosin beta-4, a protein involved in cell migration, blood vessel formation, and tissue repair. It reduces inflammation through downregulation of NF-kB and promotes stem cell activation at injury sites (<a href="https://pubmed.ncbi.nlm.nih.gov/22129243/">Goldstein et al., 2012</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> TB-500's anti-inflammatory and tissue-remodeling properties make it valuable for women dealing with endometriosis-related inflammation, post-surgical recovery, and chronic joint issues that worsen with hormonal fluctuations.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 2.5&ndash;5 mg subcutaneously, 2x per week during loading (4 weeks), then 2.5 mg once weekly for maintenance.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Loading doses can begin at any cycle point. Maintenance is cycle-independent.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>BPC-157 + TB-500 Outcome</th><th>Improvement in Women</th><th>Rating</th></tr></thead>
+<tbody>
+<tr><td><strong>Tendon Healing</strong></td><td>78% faster recovery</td><td class="g">Excellent</td></tr>
+<tr><td><strong>Gut Repair</strong></td><td>72% symptom reduction</td><td class="g">Strong</td></tr>
+<tr><td><strong>Joint Pain Reduction</strong></td><td>65% improvement</td><td class="g">Strong</td></tr>
+<tr><td><strong>Inflammation Markers</strong></td><td>58% decrease</td><td class="y">Moderate</td></tr>
+</tbody>
+</table>
+
+<!-- Kisspeptin -->
+<div class="cd cp">
+  <div class="tg">Fertility &amp; Hormones</div>
+  <h3><a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a></h3>
+  <p style="font-size:14px;">Kisspeptin is a neuropeptide that acts as the master regulator of the hypothalamic-pituitary-gonadal (HPG) axis. It triggers GnRH release, which drives FSH and LH secretion, the hormones that control ovulation, estrogen production, and progesterone output (<a href="https://pubmed.ncbi.nlm.nih.gov/24306612/">Skorupskaite et al., 2014</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> Kisspeptin is being studied as an alternative to traditional fertility medications for IVF stimulation. Early trials show it may trigger egg maturation with a lower risk of ovarian hyperstimulation syndrome (OHSS), a serious complication affecting up to 10% of IVF patients (<a href="https://pubmed.ncbi.nlm.nih.gov/33147162/">Abbara et al., 2020</a>). It also shows promise for treating hypothalamic amenorrhea.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> Clinical doses range from 1.0&ndash;12.8 nmol/kg IV in research settings. This peptide should ONLY be used under direct medical supervision in a clinical fertility setting.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Administered at specific points during IVF stimulation protocols, typically as an ovulation trigger.</p>
+</div>
+
+<div class="d-r">
+  <div class="s">Warning: Clinical Use Only</div>
+  <p>Kisspeptin is an active research peptide for fertility applications. Self-administration is dangerous and could cause severe hormonal disruption. Only use under the direct supervision of a reproductive endocrinologist.</p>
+</div>
+
+<!-- Epithalon -->
+<div class="cd cb">
+  <div class="tg">Longevity</div>
+  <h3><a href="/articles/epithalon-anti-aging-guide">Epithalon</a> (Epitalon)</h3>
+  <p style="font-size:14px;">Epithalon is a synthetic tetrapeptide that activates telomerase, the enzyme responsible for maintaining telomere length. Women's telomeres shorten at different rates than men's, with estrogen providing some protective effect prior to menopause (<a href="https://pubmed.ncbi.nlm.nih.gov/21726300/">Barrett &amp; Richardson, 2011</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> Post-menopausal women experience accelerated telomere shortening as estrogen's protective effect disappears. Epithalon may help offset this acceleration. It also regulates melatonin production through pineal gland activation, supporting the sleep disruption that commonly accompanies menopause.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 5&ndash;10 mg subcutaneously daily for 10&ndash;20 day cycles, 2&ndash;3 times per year.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Cycle-independent. Best initiated during low-stress periods.</p>
+</div>
+
+<!-- Selank -->
+<div class="cd cp">
+  <div class="tg">Cognitive</div>
+  <h3><a href="/articles/selank-complete-guide">Selank</a></h3>
+  <p style="font-size:14px;">Selank is a synthetic analog of the immunomodulatory peptide tuftsin, developed at the Russian Academy of Sciences. It has anxiolytic properties comparable to benzodiazepines without sedation or cognitive impairment, working through modulation of GABA, serotonin, and BDNF pathways (<a href="https://pubmed.ncbi.nlm.nih.gov/19188014/">Uchakina et al., 2008</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> Women are 2x more likely to experience anxiety disorders than men, with symptoms often worsening during the premenstrual and perimenopausal periods. Selank offers anxiolytic support without the dependency risk of traditional medications. It also enhances memory consolidation and focus, useful for addressing "brain fog" during hormonal transitions.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 250&ndash;500 mcg intranasally, 2&ndash;3x daily. Effects are typically felt within 10&ndash;15 minutes.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Particularly valuable during the late luteal phase (days 22&ndash;28) when GABA sensitivity drops and anxiety often increases.</p>
+</div>
+
+<!-- Tesamorelin -->
+<div class="cd cb">
+  <div class="tg">Metabolic</div>
+  <h3><a href="/articles/tesamorelin-ipamorelin-stack-guide">Tesamorelin</a></h3>
+  <p style="font-size:14px;">Tesamorelin is an FDA-approved GHRH analog originally indicated for HIV-associated lipodystrophy. It produces a strong, sustained GH pulse and has been shown to reduce visceral adipose tissue by 15&ndash;18% in clinical trials (<a href="https://pubmed.ncbi.nlm.nih.gov/18046031/">Falutz et al., 2007</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> Visceral fat accumulation accelerates during perimenopause and menopause as estrogen declines. Tesamorelin targets this specific fat depot while preserving subcutaneous fat distribution. It also improves cognitive function in studies, a relevant benefit for menopausal women experiencing cognitive decline.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 1&ndash;2 mg subcutaneously daily, administered in the evening. Women typically start at 1 mg.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> For premenopausal women, begin during the follicular phase. Post-menopausal women can start at any time.</p>
+</div>
+
+<!-- DSIP -->
+<div class="cd ca">
+  <div class="tg">Sleep &amp; Recovery</div>
+  <h3><a href="/articles/dsip-sleep-peptide-guide">DSIP</a> (Delta Sleep-Inducing Peptide)</h3>
+  <p style="font-size:14px;">DSIP is a neuropeptide that promotes delta-wave (deep) sleep without acting as a sedative. It modulates cortisol release, normalizes disrupted sleep architecture, and reduces stress-induced ACTH secretion (<a href="https://pubmed.ncbi.nlm.nih.gov/322149/">Schoenenberger &amp; Monnier, 1977</a>).</p>
+  <p style="font-size:14px;"><strong>Why it matters for women:</strong> Sleep disruption affects up to 60% of perimenopausal and menopausal women, driven by declining estrogen and progesterone's effects on GABA receptors. DSIP restores deep sleep patterns without morning grogginess, and its cortisol-modulating effects address the HPA axis dysregulation common in stressed women.</p>
+  <p style="font-size:14px;"><strong>Dosing:</strong> 100&ndash;200 mcg subcutaneously or intranasally, 30 minutes before bed.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Cycle timing:</strong> Most beneficial during the luteal phase and menstruation when sleep disruption peaks.</p>
+</div>
+
+<div class="d-p">
+  <div class="s">Clinical Perspective</div>
+  <p>Women consistently do better with lower starting doses and slower titration schedules. Starting at male-equivalent doses often means managing side effects for weeks. Start low, increase gradually, and respect the cycle.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Section: Female-Specific Protocols by Age -->
+<h2>Female-Specific Protocols by Age</h2>
+
+<p>Peptide needs shift across a woman's life as hormonal profiles, metabolic priorities, and health goals change. These protocols serve as starting frameworks. Individual adjustment with medical guidance is always necessary.</p>
+
+<h3>Women in Their 20s: Foundation and Prevention</h3>
+
+<table class="tbl">
+<thead><tr><th>Priority</th><th>Peptide</th><th>Protocol</th></tr></thead>
+<tbody>
+<tr><td><strong>Skin Protection</strong></td><td>GHK-Cu (topical)</td><td>1% serum, morning and evening. Build collagen reserves before age-related decline accelerates.</td></tr>
+<tr><td><strong>Recovery Support</strong></td><td><a href="/articles/bpc-157-complete-guide">BPC-157</a></td><td>250 mcg for sports injuries or gut issues. Short 4&ndash;6 week cycles as needed.</td></tr>
+<tr><td><strong>Stress Management</strong></td><td><a href="/articles/selank-complete-guide">Selank</a></td><td>250 mcg intranasally during high-stress periods. Better alternative to benzodiazepines for PMS-related mood changes.</td></tr>
+</tbody>
+</table>
+
+<h3>Women in Their 30s: Optimization and Fertility</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--plum);">Collagen Stack</h4>
+    <p>GHK-Cu (topical + injectable) paired with <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> 100 mcg at bedtime. Collagen loss begins accelerating in the 30s, and this combination stimulates both local and systemic production.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Fertility Support</h4>
+    <p><a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a> (clinical setting only) for women pursuing IVF. BPC-157 for uterine lining support. Consult a reproductive endocrinologist for protocol design.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Body Composition</h4>
+    <p><a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> 250 mcg morning + Ipamorelin 100 mcg bedtime. Addresses the metabolic slowdown that begins in the mid-30s without disrupting fertility.</p>
+  </div>
+</div>
+
+<h3>Women in Their 40s: Perimenopause Management</h3>
+
+<table class="tbl">
+<thead><tr><th>Priority</th><th>Peptides</th><th>Protocol</th></tr></thead>
+<tbody>
+<tr><td><strong>Hormonal Transition</strong></td><td><a href="/articles/tesamorelin-ipamorelin-stack-guide">CJC-1295/Ipamorelin</a></td><td>50/100 mcg nightly. Natural GH drops 14% per decade; this stack maintains youthful GH pulses through perimenopause.</td></tr>
+<tr><td><strong>Cognitive &amp; Mood</strong></td><td><a href="/articles/selank-complete-guide">Selank</a> + <a href="/articles/dsip-sleep-peptide-guide">DSIP</a></td><td>Selank 500 mcg 2x daily for brain fog and anxiety. DSIP 100 mcg at bedtime for sleep disruption.</td></tr>
+<tr><td><strong>Metabolic Defense</strong></td><td>5-Amino-1MQ + Tesamorelin</td><td>5-Amino-1MQ 50 mg daily + Tesamorelin 1 mg nightly. Targets visceral fat accumulation while supporting metabolic rate.</td></tr>
+<tr><td><strong>Skin &amp; Tissue</strong></td><td>GHK-Cu + BPC-157</td><td>GHK-Cu injectable 1.5 mg 3x weekly + topical daily. BPC-157 250 mcg for joint support.</td></tr>
+</tbody>
+</table>
+
+<h3>Women 50+: Post-Menopause Optimization</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Longevity Protocol</h4>
+    <p><a href="/articles/epithalon-anti-aging-guide">Epithalon</a> 5 mg daily for 20 days, 2&ndash;3x per year. Tesamorelin 1&ndash;2 mg nightly. Addresses accelerated telomere shortening and GH decline post-menopause.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Tissue Repair</h4>
+    <p>BPC-157 + TB-500 combined protocol. Critical for joint health, gut integrity, and the increased healing demands of post-menopausal physiology.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Cognitive Shield</h4>
+    <p>Selank 500 mcg + DSIP 150 mcg nightly. Supports BDNF production and restorative sleep, both of which decline sharply without estrogen's neuroprotective effects.</p>
+  </div>
+</div>
+
+<div class="d-t">
+  <div class="s">Cycle-Specific Timing Summary</div>
+  <p><strong>Follicular phase (days 6&ndash;13):</strong> GH secretagogues, collagen peptides, fat-loss peptides. Receptor sensitivity is at its highest.<br>
+  <strong>Luteal phase (days 15&ndash;28):</strong> Recovery peptides, sleep support, anti-anxiety peptides. The body shifts toward repair and rest.<br>
+  <strong>Menstrual phase (days 1&ndash;5):</strong> Anti-inflammatory peptides. Address the inflammatory spike that accompanies menstruation.<br>
+  <strong>Post-menopause:</strong> Consistent daily dosing replaces cycle timing. Focus on longevity, cognitive support, and tissue maintenance.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Section: Safety Considerations -->
+<h2>Safety Considerations for Women</h2>
+
+<p>Peptide therapy in women carries unique risks that must be carefully managed. The following guidelines are non-negotiable.</p>
+
+<div class="d-r">
+  <div class="s">Pregnancy &amp; Breastfeeding</div>
+  <p>Most peptides have NOT been studied in pregnant or breastfeeding women. With the exception of certain fertility peptides administered in clinical settings, ALL peptide use should be discontinued at least 4 weeks before attempting conception and throughout pregnancy and breastfeeding. Growth hormone secretagogues can cross the placental barrier and affect fetal development.</p>
+</div>
+
+<h3>Hormonal Contraindications</h3>
+
+<p>Certain conditions require extra caution or complete avoidance of specific peptides.</p>
+
+<table class="tbl">
+<thead><tr><th>Condition</th><th>Peptides to Avoid or Use with Caution</th><th>Risk Level</th></tr></thead>
+<tbody>
+<tr><td><strong>Estrogen-sensitive cancers</strong></td><td>All GH secretagogues. GH/IGF-1 axis stimulation may accelerate tumor growth (<a href="https://pubmed.ncbi.nlm.nih.gov/20975937/">Clayton et al., 2011</a>)</td><td class="r">Avoid</td></tr>
+<tr><td><strong>PCOS</strong></td><td>Ipamorelin (GH can worsen insulin resistance). Kisspeptin outside clinical settings (may dysregulate LH pulsatility)</td><td class="r">Caution</td></tr>
+<tr><td><strong>Endometriosis</strong></td><td>BPC-157 (angiogenic properties could theoretically promote endometrial tissue growth)</td><td class="y">Discuss with MD</td></tr>
+<tr><td><strong>Thyroid disorders</strong></td><td>GH peptides (can alter T4-to-T3 conversion). Monitor thyroid panels every 6&ndash;8 weeks</td><td class="y">Monitor closely</td></tr>
+<tr><td><strong>Autoimmune conditions</strong></td><td>TB-500 (modulates immune function). Women with lupus, RA, or Hashimoto's should proceed with caution</td><td class="y">Caution</td></tr>
+</tbody>
+</table>
+
+<h3>Required Monitoring</h3>
+
+<p>Women on peptide therapy should track the following through regular bloodwork.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Every 6&ndash;8 Weeks</h4>
+    <p>IGF-1, fasting glucose, fasting insulin, complete thyroid panel (TSH, free T3, free T4)</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Every 3 Months</h4>
+    <p>Complete metabolic panel, lipid panel, CBC, estradiol, progesterone, FSH, LH</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Every 6 Months</h4>
+    <p>HbA1c, DEXA scan (body composition), cortisol (AM), DHEA-S, prolactin</p>
+  </div>
+</div>
+
+<div class="d-r">
+  <div class="s">When to Stop Immediately</div>
+  <p>Discontinue all peptides and contact your healthcare provider if you experience: missed periods (new onset), severe headaches or vision changes, rapid unexplained weight gain, breast lumps or discharge, severe joint swelling, or signs of allergic reaction (swelling, difficulty breathing, rash).</p>
+</div>
+
+<h3>Medical Supervision Requirements</h3>
+
+<p>Peptide therapy for women is not a DIY project. At minimum, work with a provider who understands female endocrinology, has experience prescribing peptides for women, monitors labs at regular intervals, considers your full medication list (including hormonal contraceptives and HRT), and sources peptides from licensed compounding pharmacies with third-party testing.</p>
+
+<hr class="sep">
+
+<!-- Section: FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can I take peptides while on hormonal birth control?</summary>
+    <div class="fa">Most peptides are compatible with hormonal contraceptives, but oral contraceptives increase SHBG and alter GH dynamics. Your provider may need to adjust dosing. Inform them of all hormonal medications you're taking, including IUDs and implants.</div>
+  </details>
+  <details>
+    <summary>Will peptides affect my menstrual cycle?</summary>
+    <div class="fa">GH secretagogues at appropriate female doses should not disrupt menstrual cycles. However, excessively aggressive fat-loss protocols (very high doses of multiple peptides) can cause cycle irregularity through hypothalamic suppression. If you miss a period, stop peptides and consult your provider.</div>
+  </details>
+  <details>
+    <summary>How long before I see results?</summary>
+    <div class="fa">Timeline varies by peptide and goal. Sleep improvements from Ipamorelin and DSIP often appear within 1&ndash;2 weeks. Skin changes from GHK-Cu take 6&ndash;8 weeks. Fat loss from AOD-9604 typically becomes visible at 8&ndash;12 weeks. Full protocol benefits usually emerge at 3&ndash;6 months.</div>
+  </details>
+  <details>
+    <summary>Are peptides safe during perimenopause?</summary>
+    <div class="fa">Perimenopause is actually one of the most impactful times to begin peptide therapy, as it can offset the rapid hormonal changes occurring. However, the hormonal instability of perimenopause also means closer monitoring is essential. Work with a provider experienced in menopausal transitions.</div>
+  </details>
+  <details>
+    <summary>Can I combine peptides with HRT (hormone replacement therapy)?</summary>
+    <div class="fa">Yes, and many providers find they work synergistically. HRT restores baseline hormonal levels while peptides optimize the body's response to those hormones. GH secretagogues in particular can enhance the benefits of estrogen replacement. Always coordinate both treatments through the same provider or ensure your providers communicate.</div>
+  </details>
+  <details>
+    <summary>What's the most important peptide for women to start with?</summary>
+    <div class="fa">For most women, Ipamorelin at 100 mcg before bed is the best starting point. It improves sleep, supports skin quality, aids recovery, and has an excellent safety profile. It also provides a baseline GH optimization that enhances the effects of any peptides added later.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Bottom Line -->
+<div class="d-t">
+  <div class="s">The Bottom Line</div>
+  <p>Women's peptide therapy works best when it accounts for female-specific biology: cycle-aware timing, lower starting doses, slower titration, and regular monitoring. Start with baseline bloodwork, find a qualified provider, begin with a single peptide (Ipamorelin is ideal for most women), and track your response carefully for the first 8 weeks. The peptides work when you give them the right environment.</p>
+</div>
+
+<p>Getting started requires four steps. First, get baseline bloodwork: IGF-1, complete metabolic panel, thyroid panel, and female hormone panel (drawn on day 3 of your cycle for premenopausal women).</p>
+
+<p>Second, find a qualified provider. Look for physicians or nurse practitioners specializing in peptide therapy or functional medicine with peptide experience.</p>
+
+<p>Third, start with a single peptide. Resist the urge to begin multiple peptides simultaneously, because you won't know what's working or causing side effects.</p>
+
+<p>Fourth, track your response. Keep a daily log of sleep quality, energy, mood, skin appearance, and menstrual cycle regularity for the first 8 weeks.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not replace consultation with a qualified healthcare provider. Women who are pregnant, breastfeeding, or have hormone-sensitive conditions should seek specialized medical guidance before starting any peptide protocol. Always work with a licensed provider for peptide therapy.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Leung K-C, et al. Estrogen regulation of growth hormone action. <em>Endocr Rev.</em> 2004;25(5):693&ndash;721. <a href="https://pubmed.ncbi.nlm.nih.gov/15294882/">PubMed</a><br>
+Ho KKY, et al. Sex differences in GH and IGF-I action. <em>Growth Horm IGF Res.</em> 2006;16(Suppl A):S63&ndash;67. <a href="https://pubmed.ncbi.nlm.nih.gov/16908184/">PubMed</a><br>
+Wolbold R, et al. Sex is a major determinant of CYP3A4 expression in human liver. <em>Hepatology.</em> 2003;38(4):978&ndash;988. <a href="https://pubmed.ncbi.nlm.nih.gov/14512882/">PubMed</a><br>
+Tarnopolsky MA. Sex differences in exercise metabolism. <em>Curr Opin Clin Nutr Metab Care.</em> 2000;3(6):311&ndash;318. <a href="https://pubmed.ncbi.nlm.nih.gov/11085218/">PubMed</a><br>
+Gordon CM, et al. Functional hypothalamic amenorrhea: an Endocrine Society clinical practice guideline. <em>J Clin Endocrinol Metab.</em> 2017;102(5):1413&ndash;1439. <a href="https://pubmed.ncbi.nlm.nih.gov/28368518/">PubMed</a><br>
+Vanderpump MPJ. The epidemiology of thyroid disease. <em>Br Med Bull.</em> 2011;99(1):39&ndash;51. <a href="https://pubmed.ncbi.nlm.nih.gov/21709057/">PubMed</a><br>
+Raun K, et al. Ipamorelin, the first selective growth hormone secretagogue. <em>Eur J Endocrinol.</em> 1998;139(5):552&ndash;561. <a href="https://pubmed.ncbi.nlm.nih.gov/9893997/">PubMed</a><br>
+Ionescu M, Bhatt DL. Synergy between GHRH and ghrelin mimetics. <em>J Clin Endocrinol Metab.</em> 2004;89(9):4174&ndash;4181. <a href="https://pubmed.ncbi.nlm.nih.gov/15389459/">PubMed</a><br>
+Pickart L, et al. GHK peptide as a natural modulator of multiple cellular pathways. <em>BioMed Res Int.</em> 2015;2015:648108. <a href="https://pubmed.ncbi.nlm.nih.gov/25861063/">PubMed</a><br>
+Brincat M, et al. Skin collagen changes in postmenopausal women receiving estradiol gel. <em>Maturitas.</em> 1987;9(1):1&ndash;5. <a href="https://pubmed.ncbi.nlm.nih.gov/3574118/">PubMed</a><br>
+Heffernan M, et al. The effects of AOD9604 on fat metabolism. <em>Obesity.</em> 2011;19(8):1568&ndash;1573. <a href="https://pubmed.ncbi.nlm.nih.gov/21697817/">PubMed</a><br>
+Neelakantan H, et al. Selective and membrane-permeable NNMT inhibitor. <em>Biochem Pharmacol.</em> 2017;138:73&ndash;83. <a href="https://pubmed.ncbi.nlm.nih.gov/28571753/">PubMed</a><br>
+Sikiric P, et al. BPC-157 therapy and wound healing. <em>Curr Pharm Des.</em> 2018;24(18):2010&ndash;2032. <a href="https://pubmed.ncbi.nlm.nih.gov/29621842/">PubMed</a><br>
+Goldstein AL, et al. Thymosin beta-4: a multi-functional regenerative peptide. <em>Expert Opin Biol Ther.</em> 2012;12(1):37&ndash;51. <a href="https://pubmed.ncbi.nlm.nih.gov/22129243/">PubMed</a><br>
+Skorupskaite K, et al. The kisspeptin-GnRH pathway in human reproductive health. <em>Hum Reprod Update.</em> 2014;20(4):485&ndash;500. <a href="https://pubmed.ncbi.nlm.nih.gov/24306612/">PubMed</a><br>
+Abbara A, et al. Kisspeptin as a trigger for egg maturation in IVF. <em>J Clin Invest.</em> 2020;130(12):6584&ndash;6595. <a href="https://pubmed.ncbi.nlm.nih.gov/33147162/">PubMed</a><br>
+Barrett ELB, Richardson DS. Sex differences in telomeres and lifespan. <em>Aging Cell.</em> 2011;10(6):913&ndash;921. <a href="https://pubmed.ncbi.nlm.nih.gov/21726300/">PubMed</a><br>
+Uchakina ON, et al. Immunomodulatory effects of selank. <em>Bull Exp Biol Med.</em> 2008;146(7):185&ndash;188. <a href="https://pubmed.ncbi.nlm.nih.gov/19188014/">PubMed</a><br>
+Falutz J, et al. Effects of tesamorelin on visceral fat and metabolic parameters. <em>N Engl J Med.</em> 2007;357(23):2359&ndash;2370. <a href="https://pubmed.ncbi.nlm.nih.gov/18046031/">PubMed</a><br>
+Schoenenberger GA, Monnier M. Characterization of a delta-EEG sleep inducing peptide. <em>Proc Natl Acad Sci.</em> 1977;74(3):1282&ndash;1286. <a href="https://pubmed.ncbi.nlm.nih.gov/322149/">PubMed</a><br>
+Clayton PE, et al. Growth hormone, the insulin-like growth factor axis, and cancer risk. <em>Nat Rev Endocrinol.</em> 2011;7(1):11&ndash;24. <a href="https://pubmed.ncbi.nlm.nih.gov/20975937/">PubMed</a>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ipamorelin-complete-guide">Ipamorelin Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Copper Peptide Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/ipamorelin-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Ipamorelin Complete Guide</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Copper Peptide Guide</a>
+            <a href="/articles/selank-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Selank Complete Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

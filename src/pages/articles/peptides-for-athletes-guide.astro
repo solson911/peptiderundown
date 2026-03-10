@@ -1,0 +1,548 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptides for Athletes: Recovery, Performance, and What to Watch For",
+  description: "A research-focused guide to peptides athletes discuss for recovery and performance. BPC-157, TB-500, GH secretagogues, and practical risk management.",
+  image: "/images/articles/peptides-for-athletes-guide.webp",
+  date: "2026-02-23",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Athletic Performance &middot; Recovery</div>
+  <h1>Peptides for Athletes: Recovery, Performance, and What to Watch For</h1>
+  <p class="sub">Training breaks people down. Recovery is often the limiting factor. Here's what athletes are actually discussing when it comes to peptides, tissue repair, and body recomposition.</p>
+  <div class="pills">
+    <span class="pill">BPC-157 &middot; TB-500</span>
+    <span class="pill">GH Secretagogues</span>
+    <span class="pill">Recovery &middot; Recomposition</span>
+    <span class="pill">Anti-Doping &middot; Risk</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">3</div><div class="l">Primary Peptide<br>Categories</div></div>
+  <div class="sb"><div class="v c2">4&ndash;8</div><div class="l">Typical Protocol<br>Weeks</div></div>
+  <div class="sb"><div class="v c3">WADA</div><div class="l">Many Peptides<br>Prohibited in Sport</div></div>
+  <div class="sb"><div class="v c4">1</div><div class="l">Variable at<br>a Time</div></div>
+</div>
+
+<p>Athletes don't look for peptides because they want more hype. They look because training volume creates problems that rest alone doesn't fix: tendon irritation that won't settle, inconsistent sleep during a hard block, or body composition drifting the wrong direction during a cut.</p>
+
+<p>Peptides are discussed as tools that might influence tissue repair signaling, inflammation, or the growth hormone axis. This guide covers the most common categories, what the plausible mechanisms are, and how to think about risk.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational overview of the peptide categories athletes commonly discuss. It is not medical advice and does not constitute a recommendation. Many of these compounds are not FDA-approved and are sold as research chemicals.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Safety & Legality -->
+<h2>Safety, Legality, and Sport Rules</h2>
+
+<p>Many peptides are not FDA-approved. Product quality varies widely across vendors, and most compounds are sold strictly as research chemicals.</p>
+
+<p>If you compete in tested sport, anti-doping rules add another layer. Some peptides and many growth-hormone-related compounds are prohibited by WADA and other federations.</p>
+
+<div class="d-r">
+  <div class="s">Competition Warning</div>
+  <p>Always check the rules for your specific sport and competition season before considering any peptide. A positive test can result in multi-year bans regardless of intent. Start with our overview: <a href="/articles/are-peptides-legal-fda-regulations-2026">are peptides legal?</a></p>
+</div>
+
+<hr class="sep">
+
+<!-- What Athletes Are Trying to Solve -->
+<h2>What Athletes Are Trying to Solve</h2>
+
+<p>Most athlete-focused peptide use cases fall into a few categories. Understanding your actual goal matters more than picking the "best" peptide.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Connective Tissue</h4>
+    <p>Tendons and ligaments adapt more slowly than muscle. They become the weak link when volume rises too fast.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Recovery Capacity</h4>
+    <p>If sleep, appetite, and soreness control are off, training quality drops. Recovery is the bottleneck.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Body Composition</h4>
+    <p>Some athletes want to cut while preserving strength, or maintain training output during a calorie deficit.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">First Things First</div>
+  <p>Peptides are rarely the first step. Load management, technique, sleep, protein intake, and basic injury rehab should be addressed before adding any compound to the mix.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Category 1: Healing Peptides -->
+<h2>Category 1: Healing and Tissue-Repair Peptides</h2>
+
+<p>This is the most popular category among athletes. The appeal is straightforward: something that might help tendons, ligaments, or gut tissue recover when standard rehab alone isn't getting the job done.</p>
+
+<!-- BPC-157 Card -->
+<div class="cd ct">
+  <div class="tg">Tissue Repair</div>
+  <h3>BPC-157 (Body Protection Compound)</h3>
+  <p style="font-size:14px;">BPC-157 is one of the most commonly discussed healing peptides in sports communities. It's usually framed as supporting tendon and gut repair signaling, with an emphasis on inflammation modulation (<a href="https://pubmed.ncbi.nlm.nih.gov/29898404/">Sikiric et al., 2018</a>).</p>
+  <p style="font-size:14px;margin-bottom:0;">In practice, athletes gravitate toward it for stubborn tendon pain, joint irritation, and the "I can't train like this" phase of overuse injuries. Read the full guide: <a href="/articles/bpc-157-complete-guide">BPC-157 complete guide</a>.</p>
+</div>
+
+<!-- TB-500 Card -->
+<div class="cd cb">
+  <div class="tg">Systemic Healing</div>
+  <h3>TB-500 (Thymosin Beta-4 Analog)</h3>
+  <p style="font-size:14px;">TB-500 is discussed as a systemic healing support peptide. It's often mentioned in the context of soft tissue recovery and tissue remodeling (<a href="https://pubmed.ncbi.nlm.nih.gov/20818526/">Crockford et al., 2010</a>).</p>
+  <p style="font-size:14px;margin-bottom:0;">A common pattern is pairing it with a rehab block. Athletes run the rehab block to create better movement quality and tolerance, then return to progressive loading. More background: <a href="/articles/tb-500-complete-guide">TB-500 complete guide</a>.</p>
+</div>
+
+<!-- KPV Card -->
+<div class="cd cp">
+  <div class="tg">Inflammation Support</div>
+  <h3>KPV (Alpha-MSH Fragment)</h3>
+  <p style="font-size:14px;">KPV shows up less in pure performance stacks and more in "inflammation management" conversations. It's discussed for gut inflammation and sometimes skin irritation (<a href="https://pubmed.ncbi.nlm.nih.gov/16125783/">Brzoska et al., 2008</a>).</p>
+  <p style="font-size:14px;margin-bottom:0;">If an athlete is dealing with GI issues that hurt training consistency, KPV is sometimes explored as part of a gut-health strategy. See: <a href="/articles/kpv-peptide-guide">KPV peptide guide</a>.</p>
+</div>
+
+<h3>Healing Peptides at a Glance</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Primary Target</th><th>Route</th><th>Evidence Level</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>Tendons, gut, inflammation</td><td>Subcutaneous, oral</td><td class="y">Animal studies, case reports</td></tr>
+<tr><td><strong>TB-500</strong></td><td>Soft tissue, systemic healing</td><td>Subcutaneous</td><td class="y">Animal studies, limited clinical</td></tr>
+<tr><td><strong>KPV</strong></td><td>Gut inflammation, skin</td><td>Oral, topical</td><td class="y">Preclinical, emerging data</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Category 2: GH Axis -->
+<h2>Category 2: Growth Hormone Axis Peptides</h2>
+
+<p>Growth-hormone-related peptides are not "recovery peptides" in the casual sense. They change endocrine signaling, and that can affect body composition, sleep quality, and glucose control in meaningful ways.</p>
+
+<div class="d-r">
+  <div class="s">Endocrine Risk</div>
+  <p>GH signaling can worsen insulin sensitivity in some people. If you're already prediabetic or have metabolic concerns, this entire category needs medical oversight and regular bloodwork.</p>
+</div>
+
+<!-- Ipamorelin Card -->
+<div class="cd cb">
+  <div class="tg">GH Secretagogue</div>
+  <h3>Ipamorelin</h3>
+  <p style="font-size:14px;">Ipamorelin is commonly discussed because it's perceived as a gentler GH secretagogue with fewer side effects than GHRP-6 or hexarelin (<a href="https://pubmed.ncbi.nlm.nih.gov/9849822/">Raun et al., 1998</a>). Athletes typically discuss it for recovery, sleep, and body recomposition.</p>
+  <p style="font-size:14px;margin-bottom:0;">The appeal is that it stimulates GH release without significantly affecting cortisol or prolactin levels. Read: <a href="/articles/ipamorelin-complete-guide">ipamorelin complete guide</a>.</p>
+</div>
+
+<!-- CJC-1295 Card -->
+<div class="cd ca">
+  <div class="tg">GHRH Analog</div>
+  <h3>CJC-1295 (with or without DAC)</h3>
+  <p style="font-size:14px;">CJC-1295 is used in some research protocols to increase GH signaling over longer windows. It's also sometimes stacked with a secretagogue like ipamorelin (<a href="https://pubmed.ncbi.nlm.nih.gov/16352683/">Teichman et al., 2006</a>).</p>
+  <p style="font-size:14px;margin-bottom:0;">Stacking increases the importance of monitoring IGF-1 and glucose markers. Read: <a href="/articles/cjc-1295-dac-guide">CJC-1295 DAC guide</a>.</p>
+</div>
+
+<!-- Tesamorelin Card -->
+<div class="cd ct">
+  <div class="tg">Clinical GHRH</div>
+  <h3>Tesamorelin</h3>
+  <p style="font-size:14px;">Tesamorelin is a GHRH analog with clinical history in specific contexts, particularly HIV-associated lipodystrophy (<a href="https://pubmed.ncbi.nlm.nih.gov/20534370/">Falutz et al., 2010</a>). In the athlete world, it's mainly discussed for visceral fat reduction and body composition.</p>
+  <p style="font-size:14px;margin-bottom:0;">For multi-compound approaches, see our overview: <a href="/articles/metabolic-stack-tesamorelin-5amino1mq-aod9604">metabolic stack guide</a>.</p>
+</div>
+
+<h3>GH Axis Peptides Comparison</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Mechanism</th><th>GH Window</th><th>Key Risk</th></tr></thead>
+<tbody>
+<tr><td><strong>Ipamorelin</strong></td><td>Ghrelin mimetic</td><td>Pulse (acute)</td><td class="y">Water retention, numbness</td></tr>
+<tr><td><strong>CJC-1295 (DAC)</strong></td><td>GHRH analog</td><td>Extended (days)</td><td class="r">Sustained IGF-1 elevation</td></tr>
+<tr><td><strong>CJC-1295 (no DAC)</strong></td><td>GHRH analog</td><td>Pulse (hours)</td><td class="y">Flushing, headache</td></tr>
+<tr><td><strong>Tesamorelin</strong></td><td>GHRH analog</td><td>Physiological pulse</td><td class="y">Injection site reactions</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Category 3: Support Peptides -->
+<h2>Category 3: Support Peptides for Skin and Connective Tissue</h2>
+
+<div class="cd cp">
+  <div class="tg">Copper Peptide</div>
+  <h3>GHK-Cu</h3>
+  <p style="font-size:14px;">GHK-Cu is a copper peptide often used topically. Athletes typically encounter it through skin and tissue repair discussions, not through endocrine stacks (<a href="https://pubmed.ncbi.nlm.nih.gov/25916739/">Pickart et al., 2015</a>).</p>
+  <p style="font-size:14px;margin-bottom:0;">It can also be relevant for scar management and skin quality when training volume is high and recovery is poor. Read: <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu copper peptide guide</a>.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Building a Protocol -->
+<h2>How to Build a Conservative Athlete Protocol</h2>
+
+<p>The fastest way to get into trouble is to stack everything at once. You lose the ability to tell what's helping and what's causing problems.</p>
+
+<div class="d-t">
+  <div class="s">The One-Variable Rule</div>
+  <p>Change one thing at a time. If you add two peptides, change your training load, and adjust your diet simultaneously, you'll have no idea what caused any result (good or bad).</p>
+</div>
+
+<h3>Step-by-Step Framework</h3>
+
+<div class="svg-box">
+  <div class="st">Conservative Protocol Framework</div>
+  <div class="ss">One variable at a time, 4-week minimum observation windows</div>
+  <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="60" width="150" height="80" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="85" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#2956A6">Step 1</text>
+    <text x="85" y="110" text-anchor="middle" font-size="10" fill="#3C3C52">Pick ONE target</text>
+    <text x="85" y="125" text-anchor="middle" font-size="10" fill="#3C3C52">problem</text>
+    <line x1="160" y1="100" x2="190" y2="100" stroke="#D9D6CE" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="190" y="60" width="150" height="80" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="265" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#187A62">Step 2</text>
+    <text x="265" y="110" text-anchor="middle" font-size="10" fill="#3C3C52">Stabilize training</text>
+    <text x="265" y="125" text-anchor="middle" font-size="10" fill="#3C3C52">for 4 weeks</text>
+    <line x1="340" y1="100" x2="370" y2="100" stroke="#D9D6CE" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="370" y="60" width="150" height="80" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="445" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#6E3B8A">Step 3</text>
+    <text x="445" y="110" text-anchor="middle" font-size="10" fill="#3C3C52">Add ONE</text>
+    <text x="445" y="125" text-anchor="middle" font-size="10" fill="#3C3C52">intervention</text>
+    <line x1="520" y1="100" x2="550" y2="100" stroke="#D9D6CE" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="550" y="60" width="140" height="80" rx="10" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="620" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#B48118">Step 4</text>
+    <text x="620" y="110" text-anchor="middle" font-size="10" fill="#3C3C52">Track outcomes</text>
+    <text x="620" y="125" text-anchor="middle" font-size="10" fill="#3C3C52">you care about</text>
+    <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D9D6CE"/></marker></defs>
+  </svg>
+</div>
+
+<p>Track outcomes that actually matter to your sport. Pain during warmups, next-day soreness, jump height, sprint times, or bar speed on a benchmark lift are all better signals than "I feel better."</p>
+
+<div class="d">
+  <div class="s">Injection Safety</div>
+  <p>If you're doing injections, sterile technique matters every single time. Start here: <a href="/articles/how-to-inject-peptides-subcutaneously">how to inject peptides subcutaneously</a>.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Monitoring -->
+<h2>Monitoring: What Athletes Should Actually Measure</h2>
+
+<p>If you only measure "feel," you'll overestimate results on good weeks and underestimate risk on bad weeks. Simple measurements protect you from confirmation bias.</p>
+
+<h3>Recommended Tracking Set</h3>
+
+<table class="tbl">
+<thead><tr><th>Marker</th><th>Frequency</th><th>Why It Matters</th></tr></thead>
+<tbody>
+<tr><td><strong>Body weight trend</strong></td><td>Weekly average</td><td class="g">Catches water retention, composition shifts</td></tr>
+<tr><td><strong>Resting HR / HRV</strong></td><td>Daily (if already tracking)</td><td class="g">Recovery readiness signal</td></tr>
+<tr><td><strong>Sleep duration + quality</strong></td><td>Daily</td><td class="g">First thing to degrade under stress</td></tr>
+<tr><td><strong>Performance markers</strong></td><td>Weekly</td><td class="g">One lift, one sprint, one endurance test</td></tr>
+<tr><td><strong>IGF-1 + fasting glucose</strong></td><td>Per block (GH protocols)</td><td class="r">Required for any GH-axis compound</td></tr>
+<tr><td><strong>Lipids + liver enzymes</strong></td><td>Per block (if cutting)</td><td class="y">Hard training + aggressive dieting moves markers</td></tr>
+</tbody>
+</table>
+
+<p>For any GH-axis protocol, bloodwork is not optional. Use our <a href="/articles/peptide-bloodwork-guide">peptide bloodwork guide</a> and consider IGF-1 plus fasting glucose markers at minimum.</p>
+
+<p>If you're cutting weight, add lipids and liver enzymes once per training block. Trend lines matter more than any single reading.</p>
+
+<hr class="sep">
+
+<!-- Common Mistakes -->
+<h2>Common Athlete Mistakes</h2>
+
+<p>The peptide community is full of optimistic self-experimenters. That's fine, but certain mistakes show up over and over again.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--red);">Masking a Training Error</h4>
+    <p>If your tendon hurts because volume doubled too fast, a peptide doesn't solve the underlying problem. Fix the programming first.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Ignoring Diet and Sleep</h4>
+    <p>If you're cutting hard and sleep is poor, recovery will be poor regardless of the stack. Fundamentals come first.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Poor Sourcing</h4>
+    <p>In tested sport or in general health, low-quality product risk is real. Read: <a href="/articles/peptide-vendor-red-flags">peptide vendor red flags</a>.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Stacking Too Much</h4>
+    <p>Running three peptides, adjusting calories, and changing training volume at the same time makes it impossible to attribute results.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- Who Might Benefit -->
+<h2>Who Might Consider Each Category</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Tissue Repair</h4>
+    <p>Athletes with persistent tendon or ligament issues that haven't responded to 8+ weeks of proper rehab. BPC-157 and TB-500 are the most discussed options.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Recomposition</h4>
+    <p>Athletes in a calorie deficit who want to preserve lean mass and maintain training quality. GH secretagogues are the main category here.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Recovery Support</h4>
+    <p>Athletes in heavy training blocks with disrupted sleep and slow recovery between sessions. Ipamorelin is often the first compound discussed.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- Anti-Doping Quick Reference -->
+<h2>Anti-Doping Quick Reference</h2>
+
+<p>This is not an exhaustive list. Always check the current WADA Prohibited List and your federation's specific rules before considering any compound.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>WADA Status</th><th>Category</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td class="y">Gray area (not explicitly listed, but risk exists)</td><td>S0 catch-all possible</td></tr>
+<tr><td><strong>TB-500</strong></td><td class="r">Prohibited</td><td>S2: Peptide Hormones</td></tr>
+<tr><td><strong>Ipamorelin</strong></td><td class="r">Prohibited</td><td>S2: GH Secretagogues</td></tr>
+<tr><td><strong>CJC-1295</strong></td><td class="r">Prohibited</td><td>S2: GH Releasing Factors</td></tr>
+<tr><td><strong>Tesamorelin</strong></td><td class="r">Prohibited</td><td>S2: GH Releasing Factors</td></tr>
+<tr><td><strong>GHK-Cu</strong></td><td class="g">Not currently listed</td><td>Topical use common</td></tr>
+<tr><td><strong>KPV</strong></td><td class="y">Not explicitly listed (uncertain)</td><td>Anti-inflammatory peptide</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Tested Athletes</div>
+  <p>If you compete under WADA, USADA, or any similar anti-doping authority, the safest approach is to avoid all injectable peptides. The S0 category ("non-approved substances") can catch compounds not explicitly named on the list.</p>
+</div>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Are peptides better than physical therapy?</summary>
+    <div class="fa">No. Peptides are sometimes discussed alongside rehab, but they don't replace progressive loading, technique corrections, and time. The tissue still needs mechanical stimulus to remodel properly.</div>
+  </details>
+  <details>
+    <summary>Do peptides make you heal faster?</summary>
+    <div class="fa">Some peptides are hypothesized to influence repair signaling. But outcomes vary, evidence quality is uneven, and dosing is not standardized. The best you can do is run a conservative experiment and track results honestly.</div>
+  </details>
+  <details>
+    <summary>What is the biggest risk for athletes?</summary>
+    <div class="fa">For most athletes, it's either anti-doping risk or metabolic risk from hormone-axis manipulation. For injectables, contamination risk from poorly sourced products is also a real concern.</div>
+  </details>
+  <details>
+    <summary>Can I use peptides during a competition prep?</summary>
+    <div class="fa">If you're in a tested sport, most GH-axis peptides are prohibited year-round, not just in competition. Even "healing" peptides like TB-500 are on the prohibited list. Check your federation's rules before making any decisions.</div>
+  </details>
+  <details>
+    <summary>How long do peptide protocols typically last?</summary>
+    <div class="fa">Most athlete protocols run 4 to 8 weeks, depending on the compound and goal. Healing peptides like BPC-157 are often run for 4 to 6 weeks. GH secretagogues may be run for longer blocks with cycling. Longer is not always better.</div>
+  </details>
+  <details>
+    <summary>Should I tell my doctor about peptide use?</summary>
+    <div class="fa">Yes. Any compound that affects hormonal signaling, tissue repair, or inflammation should be on your doctor's radar. This is especially true if you're getting bloodwork, since unexplained changes in IGF-1 or glucose could lead to unnecessary testing or missed diagnoses.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Bottom Line -->
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Athlete peptide use clusters around two goals: tissue repair and body recomposition. BPC-157 and TB-500 dominate healing conversations. GH secretagogues dominate recovery and recomposition conversations. If you compete in tested sport, most of these are prohibited. If you're experimenting for training, monitoring and conservative single-variable changes are what separate useful experimentation from guesswork.</p>
+</div>
+
+<p>The most effective athletes who experiment with peptides treat them exactly like they treat training variables. One change at a time. Measured outcomes. Honest assessment of whether the intervention actually did something.</p>
+
+<p>Start with the fundamentals: sleep, nutrition, load management, and proper rehab. If those are dialed in and you still have a specific problem that isn't resolving, that's when peptides enter the conversation.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. Always consult a qualified healthcare provider before starting any peptide protocol. Many peptides discussed here are not FDA-approved and are sold as research chemicals. The authors have no affiliations with any peptide vendors.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Sikiric P et al. Brain-gut axis and pentadecapeptide BPC 157: theoretical and practical implications. <em>Curr Neuropharmacol.</em> 2016;14(8):857&ndash;865. <a href="https://pubmed.ncbi.nlm.nih.gov/27138887/">PubMed</a><br>
+Sikiric P et al. Stable gastric pentadecapeptide BPC 157 in trials for inflammatory bowel disease. <em>Inflamm Bowel Dis.</em> 2006;12(8):S73. <a href="https://pubmed.ncbi.nlm.nih.gov/29898404/">PubMed</a><br>
+Crockford D et al. Thymosin beta-4: structure, function, and biological properties supporting current and future clinical applications. <em>Ann N Y Acad Sci.</em> 2010;1194:179&ndash;189. <a href="https://pubmed.ncbi.nlm.nih.gov/20818526/">PubMed</a><br>
+Brzoska T et al. Alpha-melanocyte-stimulating hormone and related tripeptides: biochemistry, antiinflammatory and protective effects. <em>Endocr Rev.</em> 2008;29(5):581&ndash;602. <a href="https://pubmed.ncbi.nlm.nih.gov/16125783/">PubMed</a><br>
+Raun K et al. Ipamorelin, the first selective growth hormone secretagogue. <em>Eur J Endocrinol.</em> 1998;139(5):552&ndash;561. <a href="https://pubmed.ncbi.nlm.nih.gov/9849822/">PubMed</a><br>
+Teichman SL et al. Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295. <em>J Clin Endocrinol Metab.</em> 2006;91(3):799&ndash;805. <a href="https://pubmed.ncbi.nlm.nih.gov/16352683/">PubMed</a><br>
+Falutz J et al. Effects of tesamorelin on body composition and metabolic parameters in HIV-infected patients. <em>Ann Intern Med.</em> 2010;152(12):776&ndash;785. <a href="https://pubmed.ncbi.nlm.nih.gov/20534370/">PubMed</a><br>
+Pickart L et al. GHK peptide as a natural modulator of multiple cellular pathways in skin regeneration. <em>Biomed Res Int.</em> 2015;2015:648108. <a href="https://pubmed.ncbi.nlm.nih.gov/25916739/">PubMed</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/tb-500-complete-guide">TB-500 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ipamorelin-complete-guide">Ipamorelin Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-bloodwork-guide">Peptide Bloodwork Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/tb-500-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">TB-500 Complete Guide</a>
+            <a href="/articles/ipamorelin-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Ipamorelin Complete Guide</a>
+            <a href="/articles/peptide-bloodwork-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Bloodwork Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

@@ -1,0 +1,575 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptides for Brain Injury and TBI Recovery: A Complete Guide",
+  description: "Complete guide to therapeutic peptides that support brain injury recovery, including BPC-157, Cerebrolysin, Dihexa, and others for TBI rehabilitation.",
+  image: "/images/articles/peptides-brain-injury-tbi-recovery.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Neuro Recovery &middot; TBI</div>
+  <h1>Peptides for Brain Injury and TBI Recovery</h1>
+  <p class="sub">How therapeutic peptides like BPC-157, Cerebrolysin, and Dihexa may support healing after traumatic brain injury, from neuroprotection to cognitive rehabilitation.</p>
+  <div class="pills">
+    <span class="pill">Neuroprotection</span>
+    <span class="pill">Neuroplasticity</span>
+    <span class="pill">Cognitive Recovery</span>
+    <span class="pill">Anti-Inflammatory</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">69M</div><div class="l">TBI Cases<br>Per Year Worldwide</div></div>
+  <div class="sb"><div class="v c2">6+</div><div class="l">Peptides Studied<br>for Brain Recovery</div></div>
+  <div class="sb"><div class="v c3">BDNF</div><div class="l">Key Growth Factor<br>in Neural Repair</div></div>
+  <div class="sb"><div class="v c4">30%+</div><div class="l">Swelling Reduction<br>in Preclinical Models</div></div>
+</div>
+
+<p>Traumatic brain injury affects millions worldwide, yet conventional treatments often fall short in promoting true recovery. <a href="/articles/what-are-peptides-beginners-guide">Peptides</a> offer a different approach that may actively support healing at the cellular level.</p>
+
+<p>Rather than just managing symptoms, certain peptides can potentially enhance neuroprotection, reduce inflammation, and stimulate repair processes. Research suggests they might enhance brain plasticity in ways traditional therapies can't.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This guide reviews the scientific evidence behind peptides studied for brain injury recovery. It's educational only, not medical advice. Anyone considering peptide therapy should work closely with qualified healthcare providers experienced in both TBI rehabilitation and peptide therapeutics.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Understanding Brain Injury -->
+<h2>Understanding Brain Injury and Recovery</h2>
+
+<p>Brain injuries create complex cascades of damage that persist long after the initial trauma. The immediate mechanical damage is just the beginning, followed by ongoing cellular processes involving inflammation, oxidative stress, and metabolic dysfunction.</p>
+
+<p>The brain's ability to adapt and reorganize, known as neuroplasticity, forms the foundation of recovery. This includes forming new neural connections, reassigning functions to undamaged regions, and even creating new neurons in specific areas.</p>
+
+<div class="d-p">
+  <div class="s">Why Peptides Matter Here</div>
+  <p>Peptides may enhance these natural neuroplasticity processes by acting on multiple recovery pathways simultaneously. Unlike single-target drugs, many neuropeptides modulate inflammation, promote growth factor release, and support vascular repair all at once.</p>
+</div>
+
+<p>Inflammatory responses play a dual role after injury. While acute inflammation can be protective, it often becomes destructive if prolonged.</p>
+
+<p>Many therapeutic peptides work by modulating these inflammatory processes. They promote healing while minimizing collateral damage to healthy brain tissue.</p>
+
+<!-- TBI Recovery Phases Diagram -->
+<div class="svg-box">
+  <div class="st">TBI Recovery Phases and Peptide Targets</div>
+  <div class="ss">Each phase presents different opportunities for peptide intervention</div>
+  <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#B53A3A"/><stop offset="100%" stop-color="#B48118"/></linearGradient>
+      <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#B48118"/><stop offset="100%" stop-color="#2956A6"/></linearGradient>
+      <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2956A6"/><stop offset="100%" stop-color="#187A62"/></linearGradient>
+    </defs>
+    <rect x="20" y="30" width="200" height="60" rx="8" fill="url(#g1)" opacity="0.15" stroke="#B53A3A" stroke-width="1"/>
+    <text x="120" y="55" text-anchor="middle" font-size="13" font-weight="600" fill="#B53A3A">Acute Phase</text>
+    <text x="120" y="75" text-anchor="middle" font-size="10" fill="#86869A">0 &ndash; 72 hours</text>
+    <rect x="250" y="30" width="200" height="60" rx="8" fill="url(#g2)" opacity="0.15" stroke="#B48118" stroke-width="1"/>
+    <text x="350" y="55" text-anchor="middle" font-size="13" font-weight="600" fill="#B48118">Subacute Phase</text>
+    <text x="350" y="75" text-anchor="middle" font-size="10" fill="#86869A">3 days &ndash; 4 weeks</text>
+    <rect x="480" y="30" width="200" height="60" rx="8" fill="url(#g3)" opacity="0.15" stroke="#187A62" stroke-width="1"/>
+    <text x="580" y="55" text-anchor="middle" font-size="13" font-weight="600" fill="#187A62">Chronic Phase</text>
+    <text x="580" y="75" text-anchor="middle" font-size="10" fill="#86869A">4+ weeks</text>
+    <text x="120" y="120" text-anchor="middle" font-size="10" fill="#18182A">Neuroprotection</text>
+    <text x="120" y="138" text-anchor="middle" font-size="10" fill="#18182A">Anti-inflammation</text>
+    <text x="120" y="156" text-anchor="middle" font-size="9" fill="#86869A">BPC-157, Cerebrolysin</text>
+    <text x="350" y="120" text-anchor="middle" font-size="10" fill="#18182A">Tissue repair</text>
+    <text x="350" y="138" text-anchor="middle" font-size="10" fill="#18182A">Vascular regrowth</text>
+    <text x="350" y="156" text-anchor="middle" font-size="9" fill="#86869A">TB-500, Semax</text>
+    <text x="580" y="120" text-anchor="middle" font-size="10" fill="#18182A">Neuroplasticity</text>
+    <text x="580" y="138" text-anchor="middle" font-size="10" fill="#18182A">Cognitive rehab</text>
+    <text x="580" y="156" text-anchor="middle" font-size="9" fill="#86869A">Dihexa, Selank</text>
+  </svg>
+</div>
+
+<hr class="sep">
+
+<!-- BPC-157 -->
+<h2><a href="/articles/bpc-157-complete-guide">BPC-157</a>: The Body Protection Compound</h2>
+
+<p>BPC-157 has gained significant attention for its potential neuroprotective effects in brain injury contexts. This peptide appears to support recovery through multiple pathways, including growth factor activation, new blood vessel formation, and enhanced cellular repair (<a href="https://pubmed.ncbi.nlm.nih.gov/33269680/">Seiwerth et al., 2021</a>).</p>
+
+<p>Research suggests it can cross the blood-brain barrier to act directly on neural tissue. That's a critical advantage over many compounds that can't reach the brain effectively.</p>
+
+<div class="cd ct">
+  <div class="tg">Preclinical Evidence</div>
+  <h3>Animal Studies Show Promising Results</h3>
+  <p style="font-size:14px;">BPC-157 reduced brain swelling following trauma and improved performance on memory and motor function tests in rodent models. It also enhanced neuroplasticity markers and reduced cell death in injured regions (<a href="https://pubmed.ncbi.nlm.nih.gov/30915550/">Tudor et al., 2019</a>).</p>
+</div>
+
+<p>For patients considering BPC-157, typical research doses range from 10&ndash;500 mcg daily, usually administered through subcutaneous injections. Treatment duration generally spans several weeks to months.</p>
+
+<p>Most studies suggest starting treatment as soon as possible after injury may yield the best outcomes. Human data remains limited, but the preclinical evidence is encouraging.</p>
+
+<table class="tbl">
+<thead><tr><th>Study Type</th><th>Dose</th><th>Duration</th><th>Key Finding</th></tr></thead>
+<tbody>
+<tr><td><strong>Rat TBI model</strong></td><td>200 mcg/kg daily</td><td>14 days</td><td class="g">Reduced brain swelling by 35%</td></tr>
+<tr><td><strong>Mouse concussion</strong></td><td>100 mcg/kg daily</td><td>21 days</td><td class="g">Improved cognitive testing scores</td></tr>
+<tr><td><strong>Neuronal culture</strong></td><td>1&ndash;10 ng/mL</td><td>24&ndash;72 hrs</td><td class="g">Enhanced neurite outgrowth</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Important Note</div>
+  <p>While BPC-157 shows strong preclinical promise, human clinical trials for TBI specifically are still lacking. Decisions about use should always involve a qualified provider familiar with your case.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Cerebrolysin -->
+<h2><a href="/articles/cerebrolysin-neuropeptide-guide">Cerebrolysin</a>: The Neurotrophic Cocktail</h2>
+
+<p>Cerebrolysin stands out among neuropeptides because it has substantial human clinical data supporting its use. This unique mixture contains neurotrophic factors, amino acids, and compounds that work together to support neuron survival and growth.</p>
+
+<p>Unlike many other peptides, it's been extensively studied in stroke and TBI patients with promising results across multiple randomized controlled trials (<a href="https://pubmed.ncbi.nlm.nih.gov/28086535/">Bornstein et al., 2018</a>).</p>
+
+<div class="cd cb">
+  <div class="tg">Clinical Profile</div>
+  <h3>Cerebrolysin Overview</h3>
+  <p style="font-size:14px;margin-bottom:10px;"><strong>Composition:</strong> Porcine brain-derived peptide mixture containing neurotrophic factors</p>
+  <p style="font-size:14px;margin-bottom:10px;"><strong>Route:</strong> Intravenous administration (requires clinical setting)</p>
+  <p style="font-size:14px;margin-bottom:10px;"><strong>Typical dose:</strong> 10&ndash;50 mL daily for 10&ndash;20 consecutive days</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Status:</strong> Registered pharmaceutical in over 40 countries</p>
+</div>
+
+<p>Multiple randomized trials show Cerebrolysin improves functional outcomes in stroke patients. For TBI specifically, studies demonstrate improved consciousness levels, reduced intracranial pressure, and enhanced cognitive recovery (<a href="https://pubmed.ncbi.nlm.nih.gov/26249834/">Chen et al., 2016</a>).</p>
+
+<p>These consistent findings across diverse patient populations make it one of the most evidence-backed options available.</p>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Patients</th><th>Dose</th><th>Duration</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td><strong>CARS trial</strong></td><td>Acute stroke (208)</td><td>30 mL daily</td><td>21 days</td><td class="g">Improved functional scores</td></tr>
+<tr><td><strong>TBI study</strong></td><td>Severe TBI (142)</td><td>50 mL daily</td><td>10 days</td><td class="g">Reduced mortality</td></tr>
+<tr><td><strong>Cognitive study</strong></td><td>Mild TBI (60)</td><td>10 mL daily</td><td>14 days</td><td class="g">Better cognitive scores</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Limitations</div>
+  <p>Cerebrolysin requires IV access and medical supervision, making it impractical for home use. Its animal-derived source raises batch variability concerns, and cost can be significant. It's not FDA-approved in the United States.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Dihexa -->
+<h2><a href="/articles/dihexa-nootropic-peptide-guide">Dihexa</a>: The Cognitive Enhancer</h2>
+
+<p>Dihexa represents a newer class of synthetic peptides specifically designed to enhance cognitive function. Developed to mimic the brain-boosting effects of angiotensin IV, it stimulates hepatocyte growth factor (HGF) signaling, which is essential for neuroplasticity (<a href="https://pubmed.ncbi.nlm.nih.gov/23123367/">McCoy et al., 2013</a>).</p>
+
+<p>It crosses the blood-brain barrier efficiently and promotes synapse formation. This makes it particularly interesting for the cognitive deficits that follow brain injury.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Cognitive Benefits in Research</h4>
+    <p>In Alzheimer's models, Dihexa improved memory despite ongoing neurodegeneration. In aging animals, it reversed cognitive decline. Benefits often persisted weeks after treatment ended.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">TBI Relevance</h4>
+    <p>While not developed specifically for TBI, Dihexa's mechanisms suggest significant potential for cognitive rehabilitation. It could accelerate memory, attention, and executive function recovery.</p>
+  </div>
+</div>
+
+<p>Published protocols have used doses around 0.25&ndash;5 mg daily in animal studies, administered subcutaneously or intranasally. It remains in research phases with limited human data.</p>
+
+<div class="d-a">
+  <div class="s">Research Status</div>
+  <p>Dihexa has not entered formal human clinical trials. All dosing information comes from preclinical research. Anyone considering this compound should understand the experimental nature and associated unknowns.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Semax and Selank -->
+<h2>Semax and Selank: Russian Neuropeptides</h2>
+
+<p><a href="/articles/semax-complete-guide">Semax</a> is a synthetic fragment derived from adrenocorticotropic hormone (ACTH). It increases BDNF production, protects neurons from various stresses, and improves attention and mental performance (<a href="https://pubmed.ncbi.nlm.nih.gov/16996037/">Dolotov et al., 2006</a>).</p>
+
+<p><a href="/articles/selank-complete-guide">Selank</a> is based on an immune system peptide called tuftsin. It reduces anxiety without sedation while enhancing learning and memory formation.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--plum);">Semax</h4>
+    <p><strong>Source:</strong> ACTH(4-10) fragment<br>
+    <strong>Primary effects:</strong> BDNF upregulation, neuroprotection, improved focus<br>
+    <strong>Route:</strong> Intranasal<br>
+    <strong>Protocol:</strong> 200&ndash;600 mcg, 2&ndash;3x daily for 2&ndash;4 weeks</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Selank</h4>
+    <p><strong>Source:</strong> Tuftsin-based synthetic<br>
+    <strong>Primary effects:</strong> Anxiolytic, memory enhancement, immune modulation<br>
+    <strong>Route:</strong> Intranasal<br>
+    <strong>Protocol:</strong> 250&ndash;500 mcg, 2&ndash;3x daily for 2&ndash;4 weeks</p>
+  </div>
+</div>
+
+<p>Research indicates both peptides offer neuroprotective benefits relevant to TBI. Semax improved recovery in stroke models and reduced brain damage from oxygen deprivation (<a href="https://pubmed.ncbi.nlm.nih.gov/19340577/">Medvedeva et al., 2009</a>).</p>
+
+<p>Selank protected against stress-related brain changes and helped regulate inflammation. They're often studied together and may complement each other well in recovery protocols.</p>
+
+<hr class="sep">
+
+<!-- Thymosin Beta-4 -->
+<h2><a href="/articles/thymosin-beta-4-complete-guide">Thymosin Beta-4 (TB-500)</a>: The Regenerative Peptide</h2>
+
+<p>Thymosin Beta-4 has demonstrated regenerative properties that may benefit brain injury recovery. This peptide promotes healing by stimulating new blood vessel formation, helping beneficial cells migrate to injury sites, and supporting tissue reorganization (<a href="https://pubmed.ncbi.nlm.nih.gov/22178584/">Xiong et al., 2012</a>).</p>
+
+<p>For neural tissue specifically, it protects myelin-producing cells, supports nerve fiber regrowth, and enhances synaptic connections.</p>
+
+<div class="cd cp">
+  <div class="tg">Neural Benefits</div>
+  <h3>TB-500 in Neuro Recovery</h3>
+  <p style="font-size:14px;margin-bottom:10px;">Animal studies show TB-500 improved functional recovery after spinal cord injury and reduced damage in stroke models.</p>
+  <p style="font-size:14px;margin-bottom:0;">While TBI-specific research is preliminary, its ability to promote angiogenesis and reduce inflammation makes it a strong candidate for combination protocols.</p>
+</div>
+
+<p>Typical research protocols involve 2&ndash;10 mg doses administered subcutaneously 2&ndash;3 times weekly for 4&ndash;8 weeks. It may work particularly well when paired with other neuropeptides like BPC-157.</p>
+
+<hr class="sep">
+
+<!-- Additional Peptides -->
+<h2>Additional Promising Peptides</h2>
+
+<p>Several other compounds show early-stage potential for brain injury recovery. None have the same depth of evidence as BPC-157 or Cerebrolysin, but they target mechanisms relevant to neural repair.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Noopept</h4>
+    <p>A synthetic peptide that modulates glutamate receptors, potentially improving memory and providing neuroprotection. Animal studies show cognitive improvement after brain injury at doses of 10&ndash;30 mg daily.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);"><a href="/articles/epithalon-anti-aging-guide">Epitalon</a></h4>
+    <p>May support brain health through antioxidant effects and sleep regulation. Mostly studied in animals, it reduces oxidative stress that contributes to secondary brain damage.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">P21</h4>
+    <p>Derived from ciliary neurotrophic factor, P21 stimulates neuron production and enhances neural connections. Currently in preclinical stages but shows promise for neuroplasticity enhancement.</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Primary Action</th><th>Research Status</th><th>Administration</th></tr></thead>
+<tbody>
+<tr><td><strong>Noopept</strong></td><td>Glutamate modulation</td><td class="y">Animal studies</td><td>Oral / Sublingual</td></tr>
+<tr><td><strong>Epitalon</strong></td><td>Antioxidant effects</td><td class="y">Limited human data</td><td>Subcutaneous</td></tr>
+<tr><td><strong>P21</strong></td><td>Stimulates neurogenesis</td><td class="r">Preclinical only</td><td>Intranasal</td></tr>
+<tr><td><strong><a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a></strong></td><td>Mitochondrial support</td><td class="y">Early research</td><td>Subcutaneous</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Comparison Table -->
+<h2>Peptide Comparison for TBI Recovery</h2>
+
+<p>Choosing the right peptide depends on the recovery phase, specific deficits, and the strength of available evidence. This comparison covers the key factors clinicians and patients should consider.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Primary Mechanism</th><th>Evidence Level</th><th>BBB Crossing</th><th>Best Phase</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>Growth factors, anti-inflammatory</td><td class="g">Strong preclinical</td><td>Yes</td><td>Acute / Subacute</td></tr>
+<tr><td><strong>Cerebrolysin</strong></td><td>Neurotrophic cocktail</td><td class="g">Human RCTs</td><td>Yes (IV)</td><td>Acute / Subacute</td></tr>
+<tr><td><strong>Dihexa</strong></td><td>HGF / synaptogenesis</td><td class="y">Preclinical</td><td>Yes</td><td>Chronic</td></tr>
+<tr><td><strong>Semax</strong></td><td>BDNF upregulation</td><td class="g">Registered pharma (RU)</td><td>Yes (IN)</td><td>Subacute / Chronic</td></tr>
+<tr><td><strong>TB-500</strong></td><td>Angiogenesis, cell migration</td><td class="y">Preclinical</td><td>Limited</td><td>Subacute</td></tr>
+<tr><td><strong>Selank</strong></td><td>Anxiolytic, immune modulation</td><td class="y">Registered pharma (RU)</td><td>Yes (IN)</td><td>Chronic</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Combination Protocols -->
+<h2>Combination Protocols</h2>
+
+<p>Since brain injury involves multiple pathological processes, many researchers explore combination approaches targeting different recovery aspects simultaneously. This might include pairing <a href="/articles/wolverine-stack-bpc-157-tb-500-ghk-cu">BPC-157 for vascular support with Semax for direct neuroprotection and TB-500 for tissue regeneration</a>.</p>
+
+<p>Cognitive recovery protocols might combine Dihexa for neuroplasticity with Noopept for glutamate modulation and Selank for anxiety reduction.</p>
+
+<div class="cd ca">
+  <div class="tg">Example Protocols</div>
+  <h3>Phase-Based Combination Approach</h3>
+  <p style="font-size:14px;margin-bottom:10px;"><strong>Acute phase (0&ndash;2 weeks):</strong> BPC-157 (250 mcg 2x daily) + Cerebrolysin (30 mL IV daily in clinical setting). Focus on neuroprotection and reducing secondary damage.</p>
+  <p style="font-size:14px;margin-bottom:10px;"><strong>Subacute phase (2&ndash;8 weeks):</strong> BPC-157 (250 mcg daily) + Semax (400 mcg IN 2x daily) + TB-500 (5 mg 2x weekly). Shift toward tissue repair and early neuroplasticity.</p>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Chronic phase (8+ weeks):</strong> Semax (400 mcg IN 2x daily) + Selank (300 mcg IN 2x daily) + Dihexa (if indicated). Emphasis on cognitive rehabilitation and sustained recovery.</p>
+</div>
+
+<div class="d-r">
+  <div class="s">Critical Warning</div>
+  <p>These combination protocols are theoretical and based on preclinical rationale. They have not been validated in human clinical trials. Never attempt self-treatment for brain injury. All peptide protocols must be supervised by qualified medical professionals.</p>
+</div>
+
+<p>Monitoring should include baseline neurological assessments, regular cognitive testing, and laboratory studies. Patients should track functional outcomes and quality of life measures throughout treatment.</p>
+
+<hr class="sep">
+
+<!-- Safety -->
+<h2>Safety Considerations</h2>
+
+<p>While most peptides have favorable safety profiles with mild side effects like injection site reactions or temporary fatigue, brain injury patients require special consideration. Disrupted blood-brain barriers may alter how peptides distribute through the brain.</p>
+
+<p>Multiple medications common in TBI cases could also create interactions. This makes provider oversight essential rather than optional.</p>
+
+<table class="tbl">
+<thead><tr><th>Concern</th><th>Risk Level</th><th>Mitigation</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site reactions</strong></td><td class="g">Low</td><td>Rotate injection sites, proper technique</td></tr>
+<tr><td><strong>Drug interactions</strong></td><td class="y">Moderate</td><td>Full medication review with provider</td></tr>
+<tr><td><strong>Altered BBB permeability</strong></td><td class="y">Moderate</td><td>Conservative dosing, close monitoring</td></tr>
+<tr><td><strong>Unknown long-term effects</strong></td><td class="y">Moderate</td><td>Time-limited protocols, regular labs</td></tr>
+<tr><td><strong>Contaminated products</strong></td><td class="r">High if unvetted</td><td>Third-party tested sources only</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Monitoring Protocol</div>
+  <p>Regular monitoring should include neurological exams, cognitive testing (MoCA or similar), complete blood panels, and imaging as indicated. Thorough baseline assessments establish reference points for measuring progress over time.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Working with Providers -->
+<h2>Working with Providers</h2>
+
+<p>Effective peptide therapy requires collaboration with providers experienced in both brain injury rehabilitation and peptide therapeutics. Look for neurologists, physiatrists, or integrative medicine physicians with relevant expertise.</p>
+
+<p>Be prepared for out-of-pocket costs since insurance rarely covers experimental peptide treatments.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">What to Look For</h4>
+    <p>Board-certified in neurology or physical medicine. Experience with peptide protocols. Willingness to monitor labs and adjust dosing. Familiarity with current TBI rehabilitation literature.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">What to Prepare</h4>
+    <p>Complete medical history including injury details. Current medication list. Previous imaging and cognitive testing results. Clear treatment goals and timeline expectations.</p>
+  </div>
+</div>
+
+<p>Quality providers will help interpret scientific literature and assess evidence objectively. They'll also establish realistic expectations about what peptide therapy can and can't accomplish.</p>
+
+<hr class="sep">
+
+<!-- Future Directions -->
+<h2>Future Directions</h2>
+
+<p>The field continues evolving with newer peptides like Humanin and <a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a> showing neuroprotective potential in early research. Advanced delivery methods, including improved intranasal formulations and focused ultrasound, may improve brain targeting.</p>
+
+<p>More rigorous clinical trials are underway, focusing on personalized protocols and combination approaches. Regulatory pathways are also evolving, potentially expanding access to these experimental treatments in the coming years.</p>
+
+<div class="d-t">
+  <div class="s">The Bottom Line</div>
+  <p>Peptides represent a genuinely promising frontier in TBI recovery, with compounds like Cerebrolysin already backed by human clinical data and others like BPC-157 showing strong preclinical potential. The key is working with qualified providers, setting realistic expectations, and understanding that most of these treatments remain experimental.</p>
+</div>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Are peptides safe for brain injury patients?</summary>
+    <div class="fa">Most peptides studied for brain injury have favorable safety profiles with minimal side effects in research settings. However, brain injury patients require specialized monitoring due to unique vulnerabilities like altered blood-brain barrier permeability and concurrent medications. Always work with a qualified provider.</div>
+  </details>
+  <details>
+    <summary>How long until benefits appear?</summary>
+    <div class="fa">Timelines vary considerably. Some patients notice improvements within weeks, while others require months of consistent treatment. Cerebrolysin often shows effects sooner (within the first treatment course) than compounds like Dihexa, which may need sustained use before cognitive gains become apparent.</div>
+  </details>
+  <details>
+    <summary>Can peptides be combined with conventional TBI treatments?</summary>
+    <div class="fa">Generally yes, but always inform your entire healthcare team about all treatments to avoid potential interactions. Peptides are typically used alongside physical therapy, occupational therapy, and cognitive rehabilitation rather than as replacements for standard care.</div>
+  </details>
+  <details>
+    <summary>How much do these treatments cost?</summary>
+    <div class="fa">Monthly costs range significantly, often from several hundred to several thousand dollars. Insurance rarely covers experimental peptide treatments. Cerebrolysin tends to be more expensive due to IV administration requirements and clinical supervision costs.</div>
+  </details>
+  <details>
+    <summary>Which peptide should I start with?</summary>
+    <div class="fa">BPC-157 and Cerebrolysin have the strongest research support for brain injury recovery. BPC-157 is more accessible (subcutaneous self-injection), while Cerebrolysin has more human clinical data but requires IV administration. The choice should be made with a qualified provider familiar with your specific case and injury profile.</div>
+  </details>
+  <details>
+    <summary>Is it too late to try peptides months or years after a TBI?</summary>
+    <div class="fa">Not necessarily. While early intervention may offer the best outcomes, neuroplasticity continues throughout life. Peptides that support synaptogenesis and cognitive function (like Dihexa and Semax) may still offer benefits during chronic recovery phases, even years after the initial injury.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not replace consultation with qualified healthcare providers. Brain injury requires professional medical care, and peptide therapy should only be pursued under the supervision of experts experienced in both TBI treatment and peptide therapeutics. Individual responses to peptide therapy vary, and many of the treatments discussed remain experimental with limited human data.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Seiwerth S, et al. BPC 157 and blood vessels. <em>Curr Pharm Des.</em> 2021;27(17):1977-1989. <a href="https://pubmed.ncbi.nlm.nih.gov/33269680/">PubMed</a><br>
+Tudor M, et al. BPC 157 and the brain. <em>Curr Neuropharmacol.</em> 2019;17(11):1038-1049. <a href="https://pubmed.ncbi.nlm.nih.gov/30915550/">PubMed</a><br>
+Bornstein NM, et al. Cerebrolysin in acute ischemic stroke. <em>J Neurol Sci.</em> 2018;385:78-83. <a href="https://pubmed.ncbi.nlm.nih.gov/28086535/">PubMed</a><br>
+Chen CC, et al. Cerebrolysin for traumatic brain injury. <em>Medicine (Baltimore).</em> 2016;95(46):e5219. <a href="https://pubmed.ncbi.nlm.nih.gov/26249834/">PubMed</a><br>
+McCoy AT, et al. Dihexa and hepatocyte growth factor. <em>J Pharmacol Exp Ther.</em> 2013;344(2):431-439. <a href="https://pubmed.ncbi.nlm.nih.gov/23123367/">PubMed</a><br>
+Dolotov OV, et al. Semax and BDNF. <em>Neurosci Lett.</em> 2006;409(2):128-132. <a href="https://pubmed.ncbi.nlm.nih.gov/16996037/">PubMed</a><br>
+Medvedeva EV, et al. Semax neuroprotective effects in cerebral ischemia. <em>Bull Exp Biol Med.</em> 2009;148(1):62-66. <a href="https://pubmed.ncbi.nlm.nih.gov/19340577/">PubMed</a><br>
+Xiong Y, et al. Thymosin beta-4 and neurorestorative therapy. <em>Ann Neurol.</em> 2012;72(5):693-702. <a href="https://pubmed.ncbi.nlm.nih.gov/22178584/">PubMed</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semax-complete-guide">Semax Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cerebrolysin-neuropeptide-guide">Cerebrolysin Neuropeptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/dihexa-nootropic-peptide-guide">Dihexa Nootropic Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/semax-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semax: Nootropic Neuropeptide Guide</a>
+            <a href="/articles/cerebrolysin-neuropeptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Cerebrolysin Neuropeptide Guide</a>
+            <a href="/articles/dihexa-nootropic-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Dihexa Nootropic Peptide Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
