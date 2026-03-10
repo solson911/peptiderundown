@@ -1,0 +1,566 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptide Delivery Forms: Injectable vs Nasal vs Oral vs Topical",
+  description: "A practical guide to peptide delivery forms covering how injectable, nasal, oral, and topical peptides differ in absorption, stability, and real-world tradeoffs.",
+  image: "/images/articles/peptide-delivery-forms-guide.webp",
+  date: "2026-02-23",
+  category: "How-To",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">How-To &middot; Delivery &middot; Practical Guide</div>
+  <h1>Peptide Delivery Forms: Injectable vs Nasal vs Oral vs Topical</h1>
+  <p class="sub">The delivery route can matter as much as the compound itself. A practical breakdown of how each form works, what gets absorbed, and the tradeoffs that actually matter for safety and outcomes.</p>
+  <div class="pills">
+    <span class="pill">Injectable &middot; Subcutaneous</span>
+    <span class="pill">Intranasal &middot; Sublingual</span>
+    <span class="pill">Oral &middot; Topical</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">5</div><div class="l">Major Delivery<br>Routes</div></div>
+  <div class="sb"><div class="v c2">90%+</div><div class="l">Injectable<br>Bioavailability</div></div>
+  <div class="sb"><div class="v c3">&lt;10%</div><div class="l">Typical Oral<br>Bioavailability</div></div>
+  <div class="sb"><div class="v c4">Local</div><div class="l">Topical Target<br>Tissue Only</div></div>
+</div>
+
+<p>When people talk about peptides, they usually talk as if every peptide works the same way. In reality, the delivery form can matter as much as the compound itself.</p>
+
+<p>A peptide that looks great on paper can fail in the real world if it never reaches the target tissue. On the other side, a peptide that could work topically might not need injections at all.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of the five major peptide delivery forms, covering absorption, stability, practical tradeoffs, and how to choose the right route for a given goal. It is <strong>not a recommendation to use any specific peptide or delivery method</strong>. Consult a qualified healthcare provider before considering any peptide protocol.</p>
+</div>
+
+<!-- ========== WHY DELIVERY MATTERS ========== -->
+<hr class="sep">
+<h2>Why Delivery Form Matters More Than You Think</h2>
+
+<p>Peptides are chains of amino acids. They can be degraded by stomach acid, digestive enzymes, heat, light, and oxidation.</p>
+
+<p>This fragility is the core reason the same compound might exist in multiple forms. A route that bypasses the GI tract can dramatically change how much intact peptide reaches its target.</p>
+
+<div class="svg-box">
+  <div class="st">Peptide Delivery: Bioavailability by Route</div>
+  <div class="ss">How much intact peptide reaches target tissue across five delivery methods</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- Injectable -->
+    <rect x="15" y="10" width="125" height="240" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="77" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#2956A6">Injectable</text>
+    <text x="77" y="53" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">SUBCUTANEOUS</text>
+    <line x1="30" y1="63" x2="124" y2="63" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="77" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Bypasses GI tract</text>
+    <text x="77" y="97" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Direct to blood</text>
+    <text x="77" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="77" y="133" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Predictable dose</text>
+    <text x="77" y="148" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">High consistency</text>
+    <line x1="30" y1="168" x2="124" y2="168" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="77" y="190" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">BIOAVAILABILITY</text>
+    <text x="77" y="210" text-anchor="middle" font-family="Lora,serif" font-size="18" font-weight="700" fill="#2956A6">90%+</text>
+
+    <!-- Nasal -->
+    <rect x="155" y="10" width="125" height="240" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="217" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#6E3B8A">Intranasal</text>
+    <text x="217" y="53" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">NASAL SPRAY</text>
+    <line x1="170" y1="63" x2="264" y2="63" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="217" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Mucosal absorption</text>
+    <text x="217" y="97" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Possible CNS access</text>
+    <text x="217" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="217" y="133" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Fast onset</text>
+    <text x="217" y="148" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Non-invasive</text>
+    <line x1="170" y1="168" x2="264" y2="168" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="217" y="190" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">BIOAVAILABILITY</text>
+    <text x="217" y="210" text-anchor="middle" font-family="Lora,serif" font-size="18" font-weight="700" fill="#6E3B8A">10-50%</text>
+
+    <!-- Oral -->
+    <rect x="295" y="10" width="125" height="240" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="357" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#B48118">Oral</text>
+    <text x="357" y="53" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">CAPSULE / LIQUID</text>
+    <line x1="310" y1="63" x2="404" y2="63" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="357" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">GI tract exposure</text>
+    <text x="357" y="97" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">First-pass metabolism</text>
+    <text x="357" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="357" y="133" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Most convenient</text>
+    <text x="357" y="148" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Lowest absorption</text>
+    <line x1="310" y1="168" x2="404" y2="168" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="357" y="190" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">BIOAVAILABILITY</text>
+    <text x="357" y="210" text-anchor="middle" font-family="Lora,serif" font-size="18" font-weight="700" fill="#B48118">&lt;10%</text>
+
+    <!-- Topical -->
+    <rect x="435" y="10" width="125" height="240" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="497" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#187A62">Topical</text>
+    <text x="497" y="53" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">CREAM / SERUM</text>
+    <line x1="450" y1="63" x2="544" y2="63" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="497" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Skin barrier</text>
+    <text x="497" y="97" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Local absorption</text>
+    <text x="497" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="497" y="133" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Targeted delivery</text>
+    <text x="497" y="148" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Low systemic risk</text>
+    <line x1="450" y1="168" x2="544" y2="168" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="497" y="190" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">BIOAVAILABILITY</text>
+    <text x="497" y="210" text-anchor="middle" font-family="Lora,serif" font-size="18" font-weight="700" fill="#187A62">Local</text>
+
+    <!-- Sublingual -->
+    <rect x="575" y="10" width="110" height="240" rx="12" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="630" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#B53A3A">Sublingual</text>
+    <text x="630" y="53" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A" letter-spacing="1" font-weight="600">UNDER TONGUE</text>
+    <line x1="588" y1="63" x2="672" y2="63" stroke="#B53A3A" stroke-opacity=".2"/>
+    <text x="630" y="82" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Oral mucosa</text>
+    <text x="630" y="97" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Partial GI bypass</text>
+    <text x="630" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">&#8595;</text>
+    <text x="630" y="133" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Easy to use</text>
+    <text x="630" y="148" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Variable results</text>
+    <line x1="588" y1="168" x2="672" y2="168" stroke="#B53A3A" stroke-opacity=".15"/>
+    <text x="630" y="190" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A" font-weight="600">BIOAVAILABILITY</text>
+    <text x="630" y="210" text-anchor="middle" font-family="Lora,serif" font-size="18" font-weight="700" fill="#B53A3A">5-25%</text>
+  </svg>
+</div>
+
+<p>Storage also matters, regardless of route. A peptide that is repeatedly warmed, exposed to light, or contaminated will produce unpredictable results no matter how you take it. If you want the practical rules, see <a href="/articles/how-to-store-peptides">how to store peptides</a>.</p>
+
+<div class="d-r">
+  <div class="s">Quality and Safety Note</div>
+  <p>Many peptide products are sold for research use only. Route of administration changes risk. Injecting a low-quality product carries a different risk profile than applying a topical cream. If you are evaluating sources, start with <a href="/articles/peptide-vendor-red-flags">peptide vendor red flags</a>.</p>
+</div>
+
+<!-- ========== INJECTABLE ========== -->
+<hr class="sep">
+<h2>1. Injectable Peptides (Subcutaneous or Intramuscular)</h2>
+
+<p>Injectable delivery is the most common route for research peptides because it avoids the digestive system entirely. It also tends to be the most consistent route when dosing needs to be precise.</p>
+
+<div class="cd cb">
+  <div class="tg">Route Profile</div>
+  <h3>Subcutaneous / Intramuscular Injection</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Bioavailability:</strong> 90%+ for most peptides &nbsp;|&nbsp; <strong>Onset:</strong> Minutes to hours &nbsp;|&nbsp; <strong>Consistency:</strong> High &nbsp;|&nbsp; <strong>Convenience:</strong> Low (requires reconstitution, needles, sterile technique) &nbsp;|&nbsp; <strong>Primary Risk:</strong> Contamination, dosing errors, tissue irritation &nbsp;|&nbsp; <strong>Common Peptides:</strong> BPC-157, growth hormone secretagogues, most systemic peptides</p>
+</div>
+
+<p>Injectables offer predictable exposure compared with oral forms. The peptide enters subcutaneous tissue or muscle directly, where it is absorbed into the bloodstream without being degraded by stomach acid or liver enzymes.</p>
+
+<p>Product quality matters more with this route than any other. A contaminated vial can cause serious harm, and dosing errors are harder to undo once the peptide is already in your body.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Strengths</h4>
+    <p>Highest bioavailability. Most predictable dose-response. Ideal for systemic peptides where the target is not a local tissue. The gold standard for growth-hormone-axis and metabolic peptides.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Weaknesses</h4>
+    <p>Requires sterile technique and proper supplies. Contamination risk is real, especially from unverified sources. Needle anxiety is a barrier for many people. See <a href="/articles/how-to-inject-peptides-subcutaneously">how to inject peptides subcutaneously</a> for safe technique.</p>
+  </div>
+</div>
+
+<!-- ========== NASAL ========== -->
+<hr class="sep">
+<h2>2. Intranasal Peptides (Nasal Sprays)</h2>
+
+<p>Intranasal delivery is popular for peptides that target the brain or mood. The nasal mucosa provides a relatively direct pathway that can sometimes bypass the blood-brain barrier, producing faster central effects than other non-injectable routes.</p>
+
+<div class="cd cp">
+  <div class="tg">Route Profile</div>
+  <h3>Intranasal Spray</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Bioavailability:</strong> 10-50% depending on compound and formulation &nbsp;|&nbsp; <strong>Onset:</strong> Minutes &nbsp;|&nbsp; <strong>Consistency:</strong> Medium (varies with technique and congestion) &nbsp;|&nbsp; <strong>Convenience:</strong> High &nbsp;|&nbsp; <strong>Primary Risk:</strong> Nasal irritation, inconsistent absorption &nbsp;|&nbsp; <strong>Common Peptides:</strong> <a href="/articles/semax-complete-guide">Semax</a>, <a href="/articles/selank-complete-guide">Selank</a>, oxytocin</p>
+</div>
+
+<p>Nasal protocols are non-invasive. They are also easier to stop quickly if you do not tolerate the effect, since the peptide clears faster than an injected dose.</p>
+
+<p>The downside is variability. Absorption changes with congestion, spray technique, and product formulation. It is also easy to under-dose or to use inconsistent technique, which can make results hard to interpret.</p>
+
+<div class="d-a">
+  <div class="s">Technique Matters</div>
+  <p>Tilt your head slightly forward when spraying, not backward. The goal is for the solution to contact the nasal lining rather than dripping down your throat. Split your dose between both nostrils. If you are congested, the route becomes unreliable.</p>
+</div>
+
+<!-- ========== ORAL ========== -->
+<hr class="sep">
+<h2>3. Oral Peptides (Capsules and Liquids)</h2>
+
+<p>Oral delivery is the most convenient form. It is also the most challenging for most peptides, because the GI tract is specifically designed to break proteins down into individual amino acids.</p>
+
+<div class="cd ca">
+  <div class="tg">Route Profile</div>
+  <h3>Oral Capsule / Liquid</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Bioavailability:</strong> Typically under 10% for unmodified peptides &nbsp;|&nbsp; <strong>Onset:</strong> Slow (30-90 minutes if absorbed) &nbsp;|&nbsp; <strong>Consistency:</strong> Low &nbsp;|&nbsp; <strong>Convenience:</strong> Highest &nbsp;|&nbsp; <strong>Primary Risk:</strong> Poor absorption leading to wasted product, marketing claims without PK data &nbsp;|&nbsp; <strong>Common Peptides:</strong> Collagen peptides, BPC-157 (oral stability debated), semaglutide (pharmaceutical formulation)</p>
+</div>
+
+<p>Some peptide-like drugs are engineered to survive oral delivery. Semaglutide's oral formulation, for example, uses a specific absorption enhancer (SNAC) that took years of pharmaceutical research to develop. Many "oral peptide" products sold online do not have this kind of formulation work behind them.</p>
+
+<p>If you cannot find realistic absorption data for a specific oral peptide product, treat the claims cautiously. For long-term protocols, adherence can matter as much as theoretical potency, and orals win on adherence every time.</p>
+
+<div class="d-r">
+  <div class="s">Red Flag</div>
+  <p>If a vendor is selling an oral peptide with big bioavailability claims and no published pharmacokinetic data, that is a credibility problem. Ask for the data. If it does not exist, treat the product as unproven.</p>
+</div>
+
+<!-- ========== TOPICAL ========== -->
+<hr class="sep">
+<h2>4. Topical Peptides (Creams and Serums)</h2>
+
+<p>Topicals are common for skin, scalp, and localized tissue goals. They are also used for cosmetic applications where local signaling matters more than systemic exposure.</p>
+
+<div class="cd ct">
+  <div class="tg">Route Profile</div>
+  <h3>Topical Cream / Serum</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Bioavailability:</strong> Local only (minimal systemic absorption) &nbsp;|&nbsp; <strong>Onset:</strong> Hours to days for visible effects &nbsp;|&nbsp; <strong>Consistency:</strong> Medium &nbsp;|&nbsp; <strong>Convenience:</strong> High &nbsp;|&nbsp; <strong>Primary Risk:</strong> Irritation, limited penetration depth &nbsp;|&nbsp; <strong>Common Peptides:</strong> <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a>, copper peptides, matrixyl</p>
+</div>
+
+<p>Topicals avoid injection risk entirely. They also allow you to target a specific area, which is ideal when the goal is skin remodeling, wound support, or hair follicle signaling.</p>
+
+<p>Skin is a barrier, though. Penetration depends on molecule size, the formulation vehicle, and the condition of the skin itself. Patch testing matters, because topical peptides can irritate, especially on broken or sensitive skin.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Good Candidates for Topical</h4>
+    <p>Small peptides with local tissue targets. GHK-Cu is the classic example. Cosmetic peptides like matrixyl work well topically because the target (dermal collagen) is right where the product is applied.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Poor Candidates for Topical</h4>
+    <p>Large peptides that need systemic distribution. Growth hormone secretagogues, for example, need to reach the pituitary, and a skin cream will not get them there. If the target is an internal organ, topical is the wrong route.</p>
+  </div>
+</div>
+
+<!-- ========== SUBLINGUAL ========== -->
+<hr class="sep">
+<h2>5. Sublingual and Buccal (Under the Tongue / Cheek)</h2>
+
+<p>Some products are marketed as sublingual or buccal peptides. The theory is that absorption through oral mucosa might bypass part of first-pass liver metabolism, getting more intact peptide into the bloodstream than swallowing would.</p>
+
+<div class="cd cr">
+  <div class="tg">Route Profile</div>
+  <h3>Sublingual / Buccal</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Bioavailability:</strong> 5-25% for most peptides (highly variable) &nbsp;|&nbsp; <strong>Onset:</strong> 10-30 minutes &nbsp;|&nbsp; <strong>Consistency:</strong> Low to medium &nbsp;|&nbsp; <strong>Convenience:</strong> High &nbsp;|&nbsp; <strong>Primary Risk:</strong> Unclear absorption without strong formulation &nbsp;|&nbsp; <strong>Common Peptides:</strong> Some BPC-157 products, certain research compounds</p>
+</div>
+
+<p>In practice, absorption still depends heavily on formulation and molecule size. The oral mucosa is more permeable than gut lining for some molecules, but it is not a guaranteed shortcut.</p>
+
+<p>If a vendor cannot provide any realistic pharmacokinetic data for their sublingual product, treat big claims with the same skepticism you would apply to any unsubstantiated oral peptide.</p>
+
+<!-- ========== COMPARISON TABLE ========== -->
+<hr class="sep">
+<h2>Head-to-Head Comparison</h2>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Injectable</th><th>Intranasal</th><th>Oral</th><th>Topical</th><th>Sublingual</th></tr></thead>
+<tbody>
+<tr><td><strong>Bioavailability</strong></td><td class="g">90%+</td><td class="y">10-50%</td><td class="r">&lt;10%</td><td class="y">Local</td><td class="y">5-25%</td></tr>
+<tr><td><strong>Dosing consistency</strong></td><td class="g">High</td><td class="y">Medium</td><td class="r">Low-Med</td><td class="y">Medium</td><td class="r">Low-Med</td></tr>
+<tr><td><strong>Convenience</strong></td><td class="r">Low</td><td class="g">High</td><td class="g">Highest</td><td class="g">High</td><td class="g">High</td></tr>
+<tr><td><strong>Onset speed</strong></td><td class="g">Fast</td><td class="g">Fast</td><td class="y">Slow</td><td class="y">Slow</td><td class="y">Medium</td></tr>
+<tr><td><strong>Main risk</strong></td><td>Contamination</td><td>Irritation</td><td>Poor absorption</td><td>Limited depth</td><td>Unclear data</td></tr>
+<tr><td><strong>Skill required</strong></td><td class="r">High</td><td class="y">Medium</td><td class="g">Low</td><td class="g">Low</td><td class="g">Low</td></tr>
+</tbody>
+</table>
+
+<!-- ========== HOW TO CHOOSE ========== -->
+<hr class="sep">
+<h2>How to Choose the Right Delivery Form</h2>
+
+<p>Instead of asking "what is the best route," ask three simpler questions. The answers usually point to the right choice without much guesswork.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">What Is the Target?</h4>
+    <p>If the goal is local skin remodeling, a topical may be reasonable. If the goal is systemic endocrine change, it probably will not be. Match the route to where the peptide needs to arrive.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">What Is the Evidence?</h4>
+    <p>If a route is widely used but has no plausible absorption mechanism for that specific peptide, treat it as marketing until proven otherwise. Ask for PK data.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">What Is Your Risk Tolerance?</h4>
+    <p>Injecting a compound is a higher-stakes choice. If the benefit is uncertain, the risk-benefit balance may not justify it. Start with the lowest-risk route that plausibly matches the goal.</p>
+  </div>
+</div>
+
+<div class="d-t">
+  <div class="s">Decision Framework</div>
+  <p>The best route is the lowest-risk option that still delivers enough intact peptide to the right tissue. If a topical or nasal form works for your goal, there is rarely a reason to inject. Escalate only when the evidence and monitoring justify it.</p>
+</div>
+
+<!-- ========== COMMON MISTAKES ========== -->
+<hr class="sep">
+<h2>Common Mistakes With Delivery Forms</h2>
+
+<div class="cd ca">
+  <div class="tg">Mistake #1</div>
+  <h3>Mixing Routes and Variables</h3>
+  <p style="font-size:14px;margin-bottom:0;">If you switch from oral to injectable while also changing diet, training, and sleep, you will not know what caused the outcome. Change one variable at a time. Give each change enough time to show an effect before adjusting anything else.</p>
+</div>
+
+<div class="cd cr">
+  <div class="tg">Mistake #2</div>
+  <h3>Ignoring Storage and Handling</h3>
+  <p style="font-size:14px;margin-bottom:0;">A peptide that is repeatedly warmed, exposed to light, or contaminated can produce unpredictable results regardless of route. Proper storage is not optional. See <a href="/articles/how-to-store-peptides">how to store peptides</a> for the practical rules.</p>
+</div>
+
+<div class="cd cp">
+  <div class="tg">Mistake #3</div>
+  <h3>Assuming "Oral" Means "Safer"</h3>
+  <p style="font-size:14px;margin-bottom:0;">Oral convenience does not equal oral safety. A peptide that is not absorbed orally is mostly wasted money, not a safer choice. And some oral products contain questionable additives or fillers that introduce their own risks.</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Mistake #4</div>
+  <h3>DIY Route Conversion</h3>
+  <p style="font-size:14px;margin-bottom:0;">Converting an injectable peptide into a nasal spray or vice versa without proper formulation knowledge is risky. Sterility matters. Formulation matters. Improvised conversions can cause irritation, infection, or total loss of activity.</p>
+</div>
+
+<!-- ========== EMERGING ROUTES ========== -->
+<hr class="sep">
+<h2>Emerging Delivery Technologies</h2>
+
+<p>Researchers are working on new ways to get peptides into the body without injections. Most of these are still early-stage, but they are worth understanding because they will shape the next generation of peptide products.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Microneedle Patches</h4>
+    <p>Dissolving microneedle arrays physically penetrate the outer skin layer and deposit peptide directly into the dermis. Early clinical data for insulin and GLP-1 agonists is promising. Not yet widely available for research peptides.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Nanoparticle Encapsulation</h4>
+    <p>Wrapping peptides in lipid or polymer nanoparticles can protect them from enzymatic degradation in the gut. This is the technology behind some next-generation oral peptide drugs. Still mostly in the laboratory phase for most compounds.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Iontophoresis</h4>
+    <p>Uses a mild electrical current to drive charged peptide molecules through the skin. Can improve transdermal delivery for certain compounds. Requires specialized equipment and is not practical for home use yet.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Enteric Coatings</h4>
+    <p>Coatings that resist stomach acid and dissolve in the intestine. Used in some oral BPC-157 products. Effectiveness varies widely by manufacturer. Look for products that disclose their specific coating technology.</p>
+  </div>
+</div>
+
+<div class="d-p">
+  <div class="s">Keep Perspective</div>
+  <p>These technologies are exciting, but most are not ready for routine use. If a vendor is selling a "nanoparticle oral peptide" without published absorption data, the technology claim is marketing until proven otherwise. Real delivery innovations come with real pharmacokinetic evidence.</p>
+</div>
+
+<!-- ========== PEPTIDE-ROUTE PAIRING ========== -->
+<hr class="sep">
+<h2>Which Peptides Work Best With Which Route?</h2>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Best Route</th><th>Alternative</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/bpc-157-complete-guide">BPC-157</a></strong></td><td class="g">Subcutaneous</td><td class="y">Oral (debated)</td><td>Systemic healing; oral stability is debated in literature</td></tr>
+<tr><td><strong><a href="/articles/semax-complete-guide">Semax</a></strong></td><td class="g">Intranasal</td><td class="y">Subcutaneous</td><td>CNS target; nasal route provides faster brain access</td></tr>
+<tr><td><strong><a href="/articles/selank-complete-guide">Selank</a></strong></td><td class="g">Intranasal</td><td class="y">Subcutaneous</td><td>Anxiolytic CNS effects; similar rationale to Semax</td></tr>
+<tr><td><strong><a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a></strong></td><td class="g">Topical</td><td class="y">Subcutaneous</td><td>Skin and hair targets; local delivery is sufficient</td></tr>
+<tr><td><strong>CJC-1295 / Ipamorelin</strong></td><td class="g">Subcutaneous</td><td class="r">None proven</td><td>GH axis requires systemic delivery to pituitary</td></tr>
+<tr><td><strong>TB-500 (Thymosin Beta-4)</strong></td><td class="g">Subcutaneous</td><td class="r">None proven</td><td>Systemic tissue repair; requires blood distribution</td></tr>
+<tr><td><strong>Semaglutide</strong></td><td class="g">Subcutaneous</td><td class="g">Oral (Rybelsus)</td><td>Oral version uses SNAC enhancer; pharmaceutical formulation</td></tr>
+</tbody>
+</table>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Are injectable peptides always "stronger"?</summary>
+    <div class="fa">Not always. Injectables are more reliable in terms of absorption, but the best route depends on the compound and the target tissue. A topical GHK-Cu product applied directly to the skin may be more effective for dermal repair than an injection that distributes the peptide systemically. "Stronger" is the wrong frame. The question is whether enough peptide reaches the right place.</div>
+  </details>
+  <details>
+    <summary>Do nasal peptides go straight to the brain?</summary>
+    <div class="fa">Sometimes intranasal delivery is discussed that way, but the reality is more complicated. Some compounds may have faster central effects via the olfactory pathway, but systemic absorption still occurs. The nasal route reduces the barrier, it does not eliminate it. And congestion, technique, and formulation all affect how much actually reaches the CNS.</div>
+  </details>
+  <details>
+    <summary>Can I convert any injectable peptide into a nasal spray?</summary>
+    <div class="fa">No. Formulation matters, and sterility matters. Simply dissolving an injectable peptide in saline and putting it in a spray bottle is not the same as a properly formulated nasal product. Improvised DIY formulations can cause irritation, infection, or degradation of the peptide. If a compound is meant to be nasal, buy the nasal formulation.</div>
+  </details>
+  <details>
+    <summary>Are oral peptides just a waste of money?</summary>
+    <div class="fa">Not categorically. Some peptides have been engineered specifically for oral delivery, like semaglutide (Rybelsus). Collagen peptides are small enough to survive partial digestion. But many oral peptide products sold online lack the formulation technology needed for meaningful absorption. If the vendor has no pharmacokinetic data, the oral form is probably not delivering what they claim.</div>
+  </details>
+  <details>
+    <summary>Is topical peptide delivery effective for anything beyond cosmetics?</summary>
+    <div class="fa">Yes, but the applications are limited to local tissue targets. Wound healing, scar remodeling, and hair follicle signaling are all plausible topical applications for certain peptides. The limitation is depth. Topicals work well for dermal and superficial targets. They are not effective for deep tissue, organ, or systemic goals.</div>
+  </details>
+  <details>
+    <summary>What about transdermal patches for peptides?</summary>
+    <div class="fa">Transdermal patch technology exists for some small molecules, but most peptides are too large to cross the skin effectively via a patch. Some research is exploring microneedle patches that physically penetrate the outer skin layer, but these are not widely available for peptide delivery outside clinical settings. For now, patches are not a reliable peptide route.</div>
+  </details>
+  <details>
+    <summary>How do I know if my peptide is actually being absorbed?</summary>
+    <div class="fa">For injectable peptides, absorption is almost guaranteed. For other routes, look for published pharmacokinetic data showing blood levels after administration. If that data does not exist for a specific product, you are relying on the vendor's claims. Blood testing before and after a protocol can sometimes confirm whether a peptide is having its expected biological effect, depending on the compound.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Peptide delivery form is not a minor detail. It often determines whether a peptide is absorbed, whether dosing is consistent, and what risks you are taking on. The best route is always the lowest-risk option that delivers enough intact peptide to the right tissue.</p>
+</div>
+
+<p>If you are unsure, start with the lowest-risk route that plausibly matches the goal, and only escalate if the evidence and monitoring justify it. Ask for pharmacokinetic data. Be skeptical of claims without it.</p>
+
+<p>The most common mistake is treating delivery form as an afterthought. It is not. Pick the route first, then evaluate the product.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and does not recommend the use of any specific peptide or delivery method. Peptide products are often sold for research use only. Consult a qualified healthcare provider before considering any peptide protocol. Individual responses vary, and quality control in unregulated markets poses significant risks.
+</div>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/how-to-store-peptides">How to Store Peptides</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-inject-peptides-subcutaneously">How to Inject Peptides Subcutaneously</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-reconstitute-peptides">How to Reconstitute Peptides</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-vendor-red-flags">Peptide Vendor Red Flags</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/how-to-store-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Store Peptides</a>
+            <a href="/articles/how-to-inject-peptides-subcutaneously" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Inject Peptides</a>
+            <a href="/articles/peptide-vendor-red-flags" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Vendor Red Flags</a>
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Copper Peptide Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

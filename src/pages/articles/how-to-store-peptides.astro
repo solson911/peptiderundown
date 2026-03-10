@@ -1,0 +1,568 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "How to Store Peptides: Lyophilized and Reconstituted",
+  description: "How to store peptides before and after reconstitution. Temperature, light, bacteriostatic water vs sterile water, shelf life expectations, and travel tips.",
+  image: "/images/articles/storage.webp",
+  date: "2026-02-14",
+  category: "How-To",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">How-To &middot; Storage &middot; Stability</div>
+  <h1>How to Store Peptides: Lyophilized and Reconstituted</h1>
+  <p class="sub">Peptide stability comes down to three things: heat, light, and contamination. Control those, and storage is straightforward. Practical rules for both powder and liquid forms.</p>
+  <div class="pills">
+    <span class="pill">Lyophilized &middot; Reconstituted</span>
+    <span class="pill">Temperature &middot; Light &middot; Moisture</span>
+    <span class="pill">Bacteriostatic Water &middot; Sterile Water</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">-20&deg;C</div><div class="l">Ideal Long-Term<br>Freezer Storage</div></div>
+  <div class="sb"><div class="v c2">2&ndash;8&deg;C</div><div class="l">Reconstituted<br>Fridge Range</div></div>
+  <div class="sb"><div class="v c3">3&ndash;4 wk</div><div class="l">Typical Reconstituted<br>Shelf Life (BAC)</div></div>
+  <div class="sb"><div class="v c4">48&ndash;72h</div><div class="l">Sterile Water<br>Shelf Life</div></div>
+</div>
+
+<p>Most peptide failures happen before anyone draws the first dose. Vials left on a counter too long, powder exposed to humidity, a reconstituted solution stored without preservative for weeks. These are preventable problems.</p>
+
+<p>This guide covers storage rules for both lyophilized (powder) and reconstituted (liquid) peptides. If you need the mixing steps first, start with <a href="/articles/how-to-reconstitute-peptides">how to reconstitute peptides</a>.</p>
+
+<div class="d">
+  <div class="s">Key Takeaways</div>
+  <p>Lyophilized powders are far more stable than liquids. For long-term storage, a freezer around -20&deg;C is the default. Once reconstituted, most peptides belong in the fridge (2 to 8&deg;C). If anything looks off, cloudiness, particles, or color change, assume it is not usable.</p>
+</div>
+
+<!-- ========== STORAGE QUICK REFERENCE ========== -->
+<hr class="sep">
+<h2>Storage Quick Reference</h2>
+
+<table class="tbl">
+  <thead>
+    <tr><th>State</th><th>Best Temperature</th><th>Light</th><th>Typical Shelf Life</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Lyophilized (powder, sealed)</td><td>Freezer (-20&deg;C)</td><td>Dark</td><td class="g">Months to years</td></tr>
+    <tr><td>Reconstituted with BAC water</td><td>Fridge (2 to 8&deg;C)</td><td>Dark</td><td class="y">~3 to 4 weeks</td></tr>
+    <tr><td>Reconstituted with sterile water</td><td>Fridge (2 to 8&deg;C)</td><td>Dark</td><td class="r">~48 to 72 hours</td></tr>
+  </tbody>
+</table>
+
+<p>These are practical ranges, not guarantees. Different peptides and formulations degrade at different rates. Compound-specific stability data always trumps general advice.</p>
+
+<!-- ========== LYOPHILIZED VS RECONSTITUTED ========== -->
+<hr class="sep">
+<h2>Lyophilized vs Reconstituted: What Changes</h2>
+
+<div class="svg-box">
+  <div class="st">Peptide Stability: Powder vs Liquid</div>
+  <div class="ss">Degradation pathways &middot; Contamination risk &middot; Storage timeline</div>
+  <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+    <!-- Lyophilized -->
+    <rect x="20" y="10" width="310" height="200" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="175" y="38" text-anchor="middle" font-family="Lora,serif" font-size="15" font-weight="700" fill="#187A62">Lyophilized (Powder)</text>
+    <text x="175" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">HIGH STABILITY</text>
+    <line x1="40" y1="65" x2="310" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="175" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#14503E">Water removed via freeze-drying</text>
+    <text x="175" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#14503E">Hydrolysis + oxidation slowed</text>
+    <text x="175" y="128" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#14503E">No microbial growth medium</text>
+    <line x1="40" y1="148" x2="310" y2="148" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="175" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#187A62" font-weight="600">SHELF LIFE</text>
+    <text x="175" y="192" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#14503E" font-weight="600">Months to years at -20&#176;C</text>
+    <!-- Reconstituted -->
+    <rect x="370" y="10" width="310" height="200" rx="12" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="525" y="38" text-anchor="middle" font-family="Lora,serif" font-size="15" font-weight="700" fill="#B53A3A">Reconstituted (Liquid)</text>
+    <text x="525" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A" letter-spacing="1" font-weight="600">LOWER STABILITY</text>
+    <line x1="390" y1="65" x2="660" y2="65" stroke="#B53A3A" stroke-opacity=".2"/>
+    <text x="525" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">Water reintroduced to peptide</text>
+    <text x="525" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">Hydrolysis + deamidation active</text>
+    <text x="525" y="128" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A2020">Microbial risk with each puncture</text>
+    <line x1="390" y1="148" x2="660" y2="148" stroke="#B53A3A" stroke-opacity=".15"/>
+    <text x="525" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#B53A3A" font-weight="600">SHELF LIFE</text>
+    <text x="525" y="192" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#5A2020" font-weight="600">Days to weeks at 2-8&#176;C</text>
+  </svg>
+</div>
+
+<p>Lyophilized peptides are freeze-dried powders. Because water is removed, the common degradation pathways (hydrolysis, deamidation, oxidation) slow down dramatically. Reconstituted peptides have water in the vial, and that water reactivates both chemical change and microbial risk from repeated punctures.</p>
+
+<p>If you only remember one idea from this page, remember this. Powder buys you time. Liquid does not.</p>
+
+<!-- ========== LYOPHILIZED STORAGE ========== -->
+<hr class="sep">
+<h2>How to Store Lyophilized Peptides (Powder)</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Temperature</h4>
+    <p>A freezer around -20&deg;C is the standard long-term choice. A fridge (2 to 8&deg;C) works for shorter storage when you plan to reconstitute soon.</p>
+  </div>
+  <div class="mc">
+    <h4>Light</h4>
+    <p>Many peptides are UV-sensitive. Keep vials in original packaging or an opaque container. This alone prevents a common source of potency loss.</p>
+  </div>
+  <div class="mc">
+    <h4>Moisture</h4>
+    <p>Humidity is the quiet problem for powders. Keep vials sealed until reconstitution and store with a desiccant pack when possible.</p>
+  </div>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Temperature Guidance</div>
+  <h3>Freezer vs Fridge for Lyophilized Storage</h3>
+  <p style="font-size:14px;margin-bottom:0;">A freezer at -20&deg;C is the gold standard for long-term storage. A refrigerator (2 to 8&deg;C) is acceptable for vials you plan to use within a few weeks. Avoid leaving lyophilized peptides at room temperature for extended periods. Short handling time during reconstitution is fine, but steady warmth accelerates degradation of the peptide bond structure.</p>
+</div>
+
+<p>Research on pharmaceutical peptide stability confirms that lower temperatures consistently slow degradation kinetics across peptide classes (<a href="https://pubmed.ncbi.nlm.nih.gov/30767404/">PubMed: 30767404</a>). The relationship is not linear. Going from room temperature to fridge temperature helps a lot. Going from fridge to freezer helps more, but the biggest jump is getting below ambient.</p>
+
+<div class="d d-a">
+  <div class="s">Practical Tip</div>
+  <p>Opening vials "just to check" exposes the powder to humidity. Minimize how long the vial is open to air. Every second counts more than you think in a humid environment.</p>
+</div>
+
+<h3>Light Exposure and Photodegradation</h3>
+
+<p>UV and bright visible light can trigger photodegradation in many peptide sequences. Tryptophan-containing peptides are especially vulnerable. A general review of photodegradation in pharmaceuticals covers the mechanisms in detail (<a href="https://pubmed.ncbi.nlm.nih.gov/26055427/">PubMed: 26055427</a>).</p>
+
+<p>The fix is simple. Keep vials in their box or in an opaque container. If you use a clear storage bin in your freezer, wrap vials in foil or put them inside a small opaque bag.</p>
+
+<!-- ========== RECONSTITUTED STORAGE ========== -->
+<hr class="sep">
+<h2>How to Store Reconstituted Peptides (Liquid)</h2>
+
+<p>Once a peptide is reconstituted, treat it like a perishable lab reagent. Keep it cold, keep it clean, and keep exposure time short.</p>
+
+<h3>Bacteriostatic Water vs Sterile Water</h3>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Factor</th><th>Bacteriostatic Water</th><th>Sterile Water</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Preservative</td><td class="g">Yes (0.9% benzyl alcohol)</td><td class="r">No</td></tr>
+    <tr><td>Multi-dose use</td><td class="g">More suitable</td><td class="r">Higher contamination risk</td></tr>
+    <tr><td>Practical shelf life (fridge)</td><td class="y">Often weeks</td><td class="r">Often days</td></tr>
+    <tr><td>Cost per vial</td><td>Slightly higher</td><td>Lower</td></tr>
+    <tr><td>Sensitivity concerns</td><td class="y">Rare benzyl alcohol allergy</td><td class="g">None</td></tr>
+  </tbody>
+</table>
+
+<p>Bacteriostatic water contains a preservative (typically 0.9% benzyl alcohol) that inhibits microbial growth when you puncture the vial multiple times. Sterile water has no preservative. It can be appropriate for single-use draws, but it raises the contamination risk significantly for multi-dose vials.</p>
+
+<p>Repeated vial access is a well-documented contamination pathway in clinical settings (<a href="https://pubmed.ncbi.nlm.nih.gov/22610028/">PubMed: 22610028</a>). This is why most people prefer bacteriostatic water for any vial they plan to draw from more than once.</p>
+
+<div class="cd cb">
+  <div class="tg">Handling Protocol</div>
+  <h3>Five Habits That Prevent Most Problems</h3>
+  <p style="font-size:14px;margin-bottom:0;">Most failures come from sloppy handling, not mysterious chemical breakdown. <strong>1.</strong> Swab the vial stopper with an alcohol pad before every puncture. <strong>2.</strong> Use a fresh needle and syringe each time. <strong>3.</strong> Inject diluent slowly down the vial wall during reconstitution. <strong>4.</strong> Mix gently by rolling or slow inversion, never shake. <strong>5.</strong> Return the vial to the fridge within 60 seconds of drawing your dose.</p>
+</div>
+
+<!-- ========== FREEZE-THAW ========== -->
+<hr class="sep">
+<h2>Should You Freeze Reconstituted Peptides?</h2>
+
+<div class="cd cr">
+  <div class="tg">Caution</div>
+  <h3>Freeze-Thaw Cycles Damage Peptides</h3>
+  <p style="font-size:14px;margin-bottom:0;">Freezing a reconstituted vial is controversial because the outcome depends on the specific peptide and its formulation. Freeze-thaw cycles can cause concentration gradients, precipitation, and structural stress. Ice crystal formation physically disrupts tertiary structure in ways that gentle temperature changes do not.</p>
+</div>
+
+<p>If you are not working from peptide-specific stability data, the safer default is to avoid freezing reconstituted vials entirely. Instead, store your peptides as lyophilized powders in the freezer and only reconstitute what you can reasonably use within the shelf-life window.</p>
+
+<p>Some researchers aliquot reconstituted peptides into single-use portions before freezing, which avoids repeated freeze-thaw cycles. This is a valid approach if you have the right supplies, but it adds complexity and contamination opportunities during the splitting process.</p>
+
+<div class="d d-p">
+  <div class="s">Research Note</div>
+  <p>Studies on protein and peptide stability consistently show that freeze-thaw damage is cumulative. Each cycle introduces new opportunities for ice-crystal-induced structural disruption (<a href="https://pubmed.ncbi.nlm.nih.gov/28688727/">PubMed: 28688727</a>). If you must freeze, do it once and thaw once.</p>
+</div>
+
+<!-- ========== STORAGE ENVIRONMENT ========== -->
+<hr class="sep">
+<h2>Setting Up Your Storage Environment</h2>
+
+<p>You do not need a lab-grade setup to store peptides properly. A standard household fridge and freezer will handle the job if you follow a few principles.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Fridge Thermometer</h4>
+    <p>A cheap digital thermometer confirms your fridge holds 2 to 8&deg;C consistently. Many household fridges run warmer than their dial suggests, especially older models.</p>
+  </div>
+  <div class="mc">
+    <h4>Dedicated Container</h4>
+    <p>A small opaque plastic box keeps vials organized, protected from light, and separate from food items. Label it clearly so household members know not to move it.</p>
+  </div>
+  <div class="mc">
+    <h4>Desiccant Packs</h4>
+    <p>Toss a silica gel packet into your lyophilized storage container. Freezers and fridges have humidity, especially when doors open frequently. Desiccants absorb that moisture.</p>
+  </div>
+</div>
+
+<p>If you live in a hot climate, consider what happens during power outages. A small battery-powered temperature alarm costs under $20 and will alert you if your fridge or freezer warms past a threshold. For high-value peptide collections, this is cheap insurance.</p>
+
+<div class="cd cb">
+  <div class="tg">Power Outage Protocol</div>
+  <h3>What to Do When the Power Goes Out</h3>
+  <p style="font-size:14px;margin-bottom:0;">Keep the fridge and freezer doors closed. A full freezer holds safe temperatures for about 48 hours if unopened. A half-full freezer holds for about 24 hours. Reconstituted peptides in the fridge are more vulnerable. If the outage lasts more than 4 hours, move reconstituted vials to a cooler with ice packs. Lyophilized powders in a closed freezer will likely be fine.</p>
+</div>
+
+<!-- ========== WARNING SIGNS ========== -->
+<hr class="sep">
+<h2>Signs Something Has Gone Wrong</h2>
+
+<div class="g2">
+  <div class="cd cr">
+    <div class="tg">Discard Immediately</div>
+    <h3>Visual Red Flags</h3>
+    <p style="font-size:14px;margin-bottom:0;"><strong>Cloudiness</strong> that was not present after initial reconstitution. <strong>Visible particles</strong> or "floaters" in the solution. <strong>Color changes</strong> from the original clear appearance. Any of these suggest aggregation, contamination, or chemical breakdown.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Replace the Vial</div>
+    <h3>Physical Damage</h3>
+    <p style="font-size:14px;margin-bottom:0;"><strong>Cracked glass</strong> anywhere on the vial body. <strong>Compromised stopper</strong> that does not seal properly. <strong>Suspected contamination</strong> from a dropped vial, unswabbed puncture, or reused needle. If you are injecting, contamination is a bigger risk than potency loss.</p>
+  </div>
+</div>
+
+<div class="d d-r">
+  <div class="s">Safety Rule</div>
+  <p>When in doubt, discard and replace. A single vial of peptide costs far less than treating an infection from a contaminated injection.</p>
+</div>
+
+<!-- ========== TRAVEL ========== -->
+<hr class="sep">
+<h2>Traveling with Peptides</h2>
+
+<p>If you travel with peptides, focus on two things: temperature stability and breakage prevention. Use an insulated case with a cold pack and keep the vial protected from direct light.</p>
+
+<div class="cd cp">
+  <div class="tg">Travel Checklist</div>
+  <h3>Packing Essentials</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Insulated case:</strong> A small insulin travel cooler works well. <strong>Cold packs:</strong> Gel packs keep temps stable without freezing. <strong>Padding:</strong> Wrap vials in bubble wrap or foam. <strong>Light protection:</strong> Use an opaque case or wrap vials in foil. <strong>Alcohol swabs:</strong> Bring extras for each planned draw.</p>
+</div>
+
+<p>For a full walkthrough on TSA rules, international travel, and packing lists, see <a href="/articles/how-to-travel-with-peptides">how to travel with peptides</a>.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Driving Trips</h4>
+    <p>Keep vials in a cooler in the passenger cabin, not the trunk. Trunks can reach extreme temperatures in summer, and even a few hours of heat exposure can compromise reconstituted peptides.</p>
+  </div>
+  <div class="mc">
+    <h4>Air Travel</h4>
+    <p>Carry peptides in your carry-on bag. Checked luggage goes through unpressurized, unheated cargo holds. Temperature extremes and rough handling make checked bags a poor choice for glass vials.</p>
+  </div>
+</div>
+
+<!-- ========== LABELING ========== -->
+<hr class="sep">
+<h2>Labeling and Organization</h2>
+
+<p>When you have more than one vial, the biggest risk becomes mix-ups. Label each vial with the peptide name, the reconstitution date, the concentration, and the solvent used. A fine-tip permanent marker on medical tape works well.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Freezer Organization</h4>
+    <p>Store vials in a small opaque container. That reduces light exposure, prevents breakage, and makes it harder to leave something out on the counter by accident.</p>
+  </div>
+  <div class="mc">
+    <h4>Avoid the Door</h4>
+    <p>Door shelves see the biggest temperature swings from opening and closing. Temperature fluctuations are harder on stability than steady cold. Use a back shelf instead.</p>
+  </div>
+</div>
+
+<h3>What to Write on Each Label</h3>
+
+<p>Good labeling takes 30 seconds and prevents the most common storage mistake: grabbing the wrong vial. Here is a simple format that covers everything you need.</p>
+
+<div class="cd ca">
+  <div class="tg">Label Template</div>
+  <h3>Minimum Information Per Vial</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Line 1:</strong> Peptide name (e.g., BPC-157) &nbsp;|&nbsp; <strong>Line 2:</strong> Concentration after reconstitution (e.g., 250 mcg/tick) &nbsp;|&nbsp; <strong>Line 3:</strong> Reconstitution date &nbsp;|&nbsp; <strong>Line 4:</strong> Solvent used (BAC water or sterile water) &nbsp;|&nbsp; <strong>Line 5:</strong> Discard-by date based on your shelf-life estimate</p>
+</div>
+
+<!-- ========== COMMON MISTAKES ========== -->
+<hr class="sep">
+<h2>Five Common Storage Mistakes</h2>
+
+<div class="g2">
+  <div class="cd cr">
+    <div class="tg">Mistake #1</div>
+    <h3>Leaving Vials at Room Temp</h3>
+    <p style="font-size:14px;margin-bottom:0;">People set a vial on the counter while they prep, then forget about it. Even 30 minutes of room temperature is fine. Three hours is pushing it for reconstituted peptides. Set a phone timer if you have to.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Mistake #2</div>
+    <h3>Using Sterile Water for Multi-Dose Vials</h3>
+    <p style="font-size:14px;margin-bottom:0;">Sterile water is fine for a single draw. But without the preservative in bacteriostatic water, bacteria can multiply between punctures. If you plan more than one draw from a vial, always use BAC water.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Mistake #3</div>
+    <h3>Skipping the Alcohol Swab</h3>
+    <p style="font-size:14px;margin-bottom:0;">It takes five seconds. Skipping it introduces skin flora and environmental bacteria directly into your vial. This is the single easiest contamination prevention step you can take.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Mistake #4</div>
+    <h3>Shaking Instead of Rolling</h3>
+    <p style="font-size:14px;margin-bottom:0;">Aggressive shaking causes foaming and can physically damage peptide structure through shear stress. Gentle rolling between your palms or slow inversion dissolves the powder without the risk.</p>
+  </div>
+</div>
+
+<div class="cd cr">
+  <div class="tg">Mistake #5</div>
+  <h3>Reconstituting Too Much at Once</h3>
+  <p style="font-size:14px;margin-bottom:0;">If a vial contains 5mg and your daily dose is 250mcg, that is 20 doses. At one dose per day, you need 20 days of shelf life. With BAC water in the fridge, that is usually fine. But if you reconstitute five vials at once "for convenience," you will likely waste three of them before you get to them. Reconstitute as you go.</p>
+</div>
+
+<!-- ========== COMPOUND-SPECIFIC NOTES ========== -->
+<hr class="sep">
+<h2>Storage Notes by Peptide Category</h2>
+
+<p>Not all peptides are created equal when it comes to storage sensitivity. Some are remarkably hardy. Others start losing potency the moment you look at them wrong.</p>
+
+<div class="cd ct">
+  <div class="tg">Growth Hormone Peptides</div>
+  <h3>CJC-1295, Ipamorelin, Tesamorelin, Sermorelin</h3>
+  <p style="font-size:14px;margin-bottom:0;">Growth hormone secretagogues are generally stable when lyophilized at -20&deg;C. Once reconstituted with bacteriostatic water, most users report reliable potency for 3 to 4 weeks in the fridge. <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> and <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> are among the more forgiving peptides for storage. <a href="/articles/tesamorelin-fda-approved-gh-peptide-guide">Tesamorelin</a> follows similar patterns.</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Healing Peptides</div>
+  <h3>BPC-157, TB-500</h3>
+  <p style="font-size:14px;margin-bottom:0;"><a href="/articles/bpc-157-complete-guide">BPC-157</a> is relatively stable in both forms, though light sensitivity means dark storage matters. <a href="/articles/tb-500-complete-guide">TB-500</a> (Thymosin Beta-4) is a larger peptide that can be more prone to aggregation if agitated. Gentle handling during reconstitution is especially important for TB-500.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Nootropic Peptides</div>
+  <h3>Semax, Selank, Dihexa</h3>
+  <p style="font-size:14px;margin-bottom:0;"><a href="/articles/semax-complete-guide">Semax</a> and <a href="/articles/selank-complete-guide">Selank</a> are often supplied as nasal sprays, which have their own shelf-life considerations. If you reconstitute from powder, follow the same fridge storage rules. <a href="/articles/dihexa-nootropic-peptide-guide">Dihexa</a> is typically more stable as a lyophilized powder but can degrade faster once in solution due to its smaller size.</p>
+</div>
+
+<div class="cd cp">
+  <div class="tg">Weight Loss Peptides</div>
+  <h3>Semaglutide, Tirzepatide</h3>
+  <p style="font-size:14px;margin-bottom:0;"><a href="/articles/semaglutide-weight-loss-guide">Semaglutide</a> and <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> are GLP-1 receptor agonists with well-documented manufacturer storage guidelines. Prefilled pens should be stored in the fridge and used within the manufacturer's specified window (typically 56 days for semaglutide pens). Do not freeze these once they have been dispensed.</p>
+</div>
+
+<!-- ========== DEGRADATION MECHANISMS ========== -->
+<hr class="sep">
+<h2>Common Degradation Mechanisms</h2>
+
+<p>Understanding why peptides break down helps you prevent it. Four primary pathways account for most peptide degradation in storage.</p>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Mechanism</th><th>Trigger</th><th>Prevention</th><th>Risk Level</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Hydrolysis</td><td>Water exposure</td><td>Keep lyophilized until use</td><td class="r">High in liquid</td></tr>
+    <tr><td>Oxidation</td><td>Air, light, metals</td><td>Sealed vials, dark storage</td><td class="y">Moderate</td></tr>
+    <tr><td>Deamidation</td><td>pH shifts, heat</td><td>Proper buffer, cold storage</td><td class="y">Moderate</td></tr>
+    <tr><td>Aggregation</td><td>Freeze-thaw, agitation</td><td>Gentle handling, avoid freezing liquid</td><td class="r">High if shaken</td></tr>
+    <tr><td>Microbial</td><td>Repeated puncture</td><td>BAC water, sterile technique</td><td class="r">High without BAC</td></tr>
+  </tbody>
+</table>
+
+<p>A comprehensive review of peptide stability in pharmaceutical contexts covers these pathways in detail (<a href="https://pubmed.ncbi.nlm.nih.gov/25456049/">PubMed: 25456049</a>). The practical takeaway is that most degradation is preventable with basic storage discipline.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How long do lyophilized peptides last?</summary>
+    <div class="fa">It depends on the compound and storage conditions. As a practical rule, powders stored cold, sealed, and dry tend to last many months to years. Specific stability varies by sequence, and manufacturers sometimes provide stability data on the certificate of analysis. Check our <a href="/articles/how-to-read-peptide-coa">CoA reading guide</a> for what to look for.</div>
+  </details>
+  <details>
+    <summary>Can I store peptides in a normal fridge door?</summary>
+    <div class="fa">It is not ideal. The door warms up with every open/close cycle, and some household fridges see swings of 5 to 10 degrees at the door. A stable shelf toward the back of the fridge is a better choice for anything temperature-sensitive.</div>
+  </details>
+  <details>
+    <summary>Does shaking a reconstituted peptide ruin it?</summary>
+    <div class="fa">Aggressive shaking can create foaming, introduce air bubbles, and cause physical stress that leads to aggregation. Gentle mixing by slow rolling or inversion is the safer habit. Think of it like handling a blood sample, not a cocktail shaker.</div>
+  </details>
+  <details>
+    <summary>Can I store reconstituted peptides in a cooler for a few hours?</summary>
+    <div class="fa">For short periods, many people use an insulated case with a cold pack. The main goal is to avoid prolonged warmth and to protect the vial from light and breakage. If you travel often, read our dedicated guide on <a href="/articles/how-to-travel-with-peptides">traveling with peptides</a>.</div>
+  </details>
+  <details>
+    <summary>What happens if my peptide was left at room temperature overnight?</summary>
+    <div class="fa">A single overnight exposure at room temperature probably will not destroy a lyophilized peptide. Reconstituted peptides are more vulnerable. If it was a liquid left out for 8+ hours, the degradation risk depends on the specific peptide, but contamination risk is the bigger concern. When in doubt, discard it.</div>
+  </details>
+  <details>
+    <summary>Is it safe to use a peptide past its expiration date?</summary>
+    <div class="fa">Expiration dates reflect the manufacturer's tested stability window. Potency may decrease past that date, and there is no reliable way to test it at home. For injectable peptides, using expired product introduces unnecessary risk.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<p>Treat peptide storage like basic lab hygiene. Keep powders cold and dry, keep reconstituted vials refrigerated, avoid light, and prioritize contamination control above everything else.</p>
+
+<p>If you live in a hot climate or have frequent power outages, think about redundancy. A small temperature alarm in the fridge or freezer and an insulated container for short disruptions can prevent an expensive loss.</p>
+
+<p>When you are unsure about stability for a specific compound, the safest default is to store it lyophilized and only reconstitute what you can use within the expected shelf-life window.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational purposes only and is not medical advice. Peptide storage practices described here reflect general guidance from published research and common handling protocols. Always consult a qualified healthcare provider before starting any peptide protocol. PeptideRundown has no affiliation with any peptide vendor.
+</div>
+
+<hr class="sep">
+<p style="font-size:14px;color:var(--mut);"><strong>Related reading:</strong>
+<a href="/articles/how-to-reconstitute-peptides">How to Reconstitute Peptides</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-inject-peptides-subcutaneously">How to Inject Peptides Subcutaneously</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-read-peptide-coa">How to Read a Peptide CoA</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Dosing Calculator</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/how-to-inject-peptides-subcutaneously" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Inject Subcutaneously</a>
+            <a href="/articles/how-to-read-peptide-coa" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Read a Peptide CoA</a>
+            <a href="/articles/peptide-dosing-calculator-reconstitution-math" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Dosing Calculator</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

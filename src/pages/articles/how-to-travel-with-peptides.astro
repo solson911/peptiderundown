@@ -1,0 +1,556 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "How to Travel with Peptides: TSA Rules, Storage Tips, and Packing Guide",
+  description: "A practical guide to traveling with peptides covering TSA rules, international customs, cold chain storage, packing tips, and what documentation to carry.",
+  image: "/images/articles/how-to-travel-with-peptides.webp",
+  date: "2026-02-17",
+  category: "How-To",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">How-To &middot; Travel &middot; Peptide Storage</div>
+  <h1>How to Travel with Peptides: TSA Rules, Storage Tips, and Packing Guide</h1>
+  <p class="sub">Everything you need to know about flying domestically, crossing international borders, maintaining cold chain, and keeping your peptide supply intact from departure to destination.</p>
+  <div class="pills">
+    <span class="pill">TSA &middot; Domestic Flights</span>
+    <span class="pill">International Customs</span>
+    <span class="pill">Cold Chain &middot; Storage</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">36-46&deg;F</div><div class="l">Safe Storage<br>Temperature</div></div>
+  <div class="sb"><div class="v c2">25%</div><div class="l">Extra Supply<br>Recommended</div></div>
+  <div class="sb"><div class="v c3">24-48h</div><div class="l">Phase Change<br>Cooling Duration</div></div>
+  <div class="sb"><div class="v c4">3 Weeks</div><div class="l">Minimum Prep<br>Before Travel</div></div>
+</div>
+
+<p>Traveling with <a href="/articles/what-are-peptides-beginners-guide">peptides</a> forces you to solve problems that don't exist with traditional medications. These biological compounds are temperature-sensitive, legally ambiguous in some regions, and unfamiliar to most security officers.</p>
+
+<p>A ruined peptide supply means wasted money and interrupted treatment protocols. The good news: thousands of people fly with peptides every week without incident. They just plan ahead.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>TSA rules for domestic flights, international customs requirements, cold chain maintenance, packing strategies, hotel storage solutions, required documentation, and common mistakes that ruin peptide supplies mid-trip.</p>
+</div>
+
+<!-- ========== TSA RULES ========== -->
+<hr class="sep">
+<h2>TSA and Domestic Air Travel Rules</h2>
+
+<p>The TSA allows peptides in both carry-on and checked luggage. Peptides classify as medications, which exempts them from standard liquid restrictions when you declare them properly.</p>
+
+<p>Tell TSA officers about your peptides before screening begins. Present them in a separate clear bag along with any cooling equipment.</p>
+
+<div class="cd cb">
+  <div class="tg">Key Rule</div>
+  <h3>Always Declare Before Screening</h3>
+  <p style="font-size:14px;margin-bottom:0;">Inform the TSA officer that you are carrying medical peptides and cooling equipment <strong>before</strong> they begin scanning your bag. This prevents delays, demonstrates compliance, and gives you a chance to explain what the vials contain. Original pharmacy labels reduce questioning significantly.</p>
+</div>
+
+<table class="tbl">
+  <thead><tr><th>Item Type</th><th>TSA Status</th><th>Requirements</th></tr></thead>
+  <tbody>
+    <tr><td>Lyophilized peptide vials</td><td class="g">Allowed</td><td>No declaration needed</td></tr>
+    <tr><td>Reconstituted peptides</td><td class="g">Allowed</td><td>Must declare as medication</td></tr>
+    <tr><td>Ice packs (frozen solid)</td><td class="g">Permitted</td><td>Any size for medications</td></tr>
+    <tr><td>Gel cooling packs</td><td class="y">Permitted</td><td>Must be frozen at checkpoint</td></tr>
+    <tr><td>Insulin travel cases</td><td class="g">Recommended</td><td>Medical exemption applies</td></tr>
+  </tbody>
+</table>
+
+<p>Officers may inspect your cooling containers separately. They cannot require you to open sealed medication vials, but they may test the exterior for explosive residue. Carry printed TSA medication guidelines to clarify any confusion at the checkpoint.</p>
+
+<p>Never pack peptides in checked luggage if you can avoid it. Cargo holds swing between extreme temperatures that destroy peptide stability. The cabin keeps conditions more controlled and keeps your supply within reach.</p>
+
+<div class="d-a">
+  <div class="s">Pre-Check Tip</div>
+  <p>TSA PreCheck members still need to declare peptides, but they get shorter wait times. The medical liquid exemption applies regardless of your security program enrollment.</p>
+</div>
+
+<!-- ========== INTERNATIONAL ========== -->
+<hr class="sep">
+<h2>International Travel Considerations</h2>
+
+<p>International peptide transport gets complicated fast. Regulations vary wildly between countries, and what's perfectly legal at home may trigger customs violations abroad.</p>
+
+<p>Some nations require prescriptions for all peptide forms. Others restrict certain compounds entirely, regardless of medical need.</p>
+
+<div class="svg-box">
+  <div class="st">International Peptide Regulations by Region</div>
+  <div class="ss">Documentation &middot; Quantity limits &middot; Pre-approval requirements</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- EU -->
+    <rect x="15" y="10" width="160" height="240" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">European Union</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">MODERATE</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Physician letter</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">required</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Personal use amounts</text>
+    <text x="95" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">No pre-approval</text>
+    <line x1="35" y1="180" x2="155" y2="180" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">TIP</text>
+    <text x="95" y="225" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Carry translated</text>
+    <text x="95" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">documents</text>
+
+    <!-- Asia -->
+    <rect x="190" y="10" width="160" height="240" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Asia (Most)</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">STRICT</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Prescription +</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">translation needed</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="270" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">30-90 day supply</text>
+    <text x="270" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Varies by country</text>
+    <line x1="210" y1="180" x2="330" y2="180" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="270" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">TIP</text>
+    <text x="270" y="225" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Check embassy</text>
+    <text x="270" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">rules early</text>
+
+    <!-- Australia/NZ -->
+    <rect x="365" y="10" width="160" height="240" rx="12" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B53A3A">Australia / NZ</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A" letter-spacing="1" font-weight="600">VERY STRICT</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#B53A3A" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">TGA import permit</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">often required</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">&#8595;</text>
+    <text x="445" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Declared amounts only</text>
+    <text x="445" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Pre-approval for some</text>
+    <line x1="385" y1="180" x2="505" y2="180" stroke="#B53A3A" stroke-opacity=".15"/>
+    <text x="445" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A" font-weight="600">TIP</text>
+    <text x="445" y="225" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020" font-weight="500">Start paperwork</text>
+    <text x="445" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020" font-weight="500">1 month ahead</text>
+
+    <!-- Canada -->
+    <rect x="540" y="10" width="145" height="240" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Canada</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">MODERATE</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Health Canada</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">approval needed</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="612" y="142" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Personal use only</text>
+    <text x="612" y="157" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Research = extra steps</text>
+    <line x1="555" y1="180" x2="670" y2="180" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="612" y="205" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">TIP</text>
+    <text x="612" y="225" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Carry prescription</text>
+    <text x="612" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">&#38; COA together</text>
+  </svg>
+</div>
+
+<p>Research your destination's rules at least three weeks before departure. Embassy websites list current import requirements, but regulations shift frequently. When you're unsure, contact the embassy directly with specific questions about your compounds.</p>
+
+<div class="d-r">
+  <div class="s">Travel Alert</div>
+  <p>Some countries completely prohibit certain peptides regardless of medical need. Undeclared peptides can lead to confiscation, fines, or criminal charges. The "nothing to declare" line is never an option when carrying peptides across borders.</p>
+</div>
+
+<p>Consider specialized pharmaceutical shipping services for complex international trips. These companies handle customs documentation and maintain cold chain throughout transport. It costs more than carrying peptides personally, but it eliminates travel stress and regulatory risk.</p>
+
+<!-- ========== COLD CHAIN ========== -->
+<hr class="sep">
+<h2>Maintaining Cold Chain During Travel</h2>
+
+<p>Temperature control determines whether your peptides survive the trip. Even brief heat exposure causes irreversible degradation that renders peptides ineffective.</p>
+
+<p>Lyophilized peptides handle temperature swings better than reconstituted forms. But both need protection from extremes. Airport tarmacs hit 140 degrees F in summer. Cargo holds can drop below freezing.</p>
+
+<div class="cd ct">
+  <div class="tg">Storage Science</div>
+  <h3>Phase Change Materials vs. Regular Ice Packs</h3>
+  <p style="font-size:14px;margin-bottom:0;">Medical-grade cooling cases use phase change materials that freeze and melt at specific temperatures. They maintain 2-8 degrees C for 24 to 48 hours, far exceeding regular ice pack performance. Standard gel packs lose effectiveness within 4 to 6 hours in warm environments. The investment in proper cooling equipment pays for itself the first time it saves a peptide supply.</p>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Reconstituted Peptides</h4>
+    <p>Require constant refrigeration between 36-46 degrees F. Never allow freezing, as ice crystals destroy peptide structures. Keep in carry-on, never checked bags.</p>
+  </div>
+  <div class="mc">
+    <h4>Lyophilized Peptides</h4>
+    <p>Tolerate brief room temperature exposure. Degrade faster above 77 degrees F. More forgiving for travel, but still need cooling for trips over a few hours.</p>
+  </div>
+</div>
+
+<p>Monitor temperatures with a digital data logger placed inside your cooling case. These devices record excursions and provide evidence if peptides are damaged during transport. Many insurance policies require temperature documentation for claims.</p>
+
+<p>Pack peptides in the center of your cooling case, surrounded by cooling elements on all sides. This creates the most stable temperature zone and protects against external heat. Avoid opening the case frequently during travel.</p>
+
+<h3>Cooling Equipment Compared</h3>
+
+<table class="tbl">
+  <thead><tr><th>Equipment Type</th><th>Duration</th><th>Temp Range</th><th>Best For</th></tr></thead>
+  <tbody>
+    <tr><td>Phase change cooling case</td><td class="g">24-48 hours</td><td>2-8 degrees C</td><td>Long-haul flights</td></tr>
+    <tr><td>Medical insulin cooler</td><td class="g">12-24 hours</td><td>2-8 degrees C</td><td>Domestic travel</td></tr>
+    <tr><td>Gel ice packs in insulated bag</td><td class="y">4-6 hours</td><td>Variable</td><td>Short trips only</td></tr>
+    <tr><td>Standard cooler with ice</td><td class="y">6-10 hours</td><td>Hard to control</td><td>Road trips</td></tr>
+    <tr><td>No cooling (lyophilized only)</td><td class="r">2-4 hours max</td><td>Ambient</td><td>Very short transfers</td></tr>
+  </tbody>
+</table>
+
+<p>Insulin travel cases designed for diabetics work well for peptide transport too. They're TSA-recognized, appropriately sized, and come with built-in temperature indicators. Most cost between $30 and $80.</p>
+
+<!-- ========== ROAD TRIPS ========== -->
+<hr class="sep">
+<h2>Road Trips vs. Air Travel</h2>
+
+<p>Driving with peptides is simpler than flying in many ways. No TSA checkpoints, no customs declarations, and you control the environment the entire time.</p>
+
+<p>The main risk on road trips is leaving peptides in a hot car. Interior car temperatures can exceed 150 degrees F within 30 minutes on a sunny day, even with windows cracked.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Road Trip Advantages</h4>
+    <p>No security screening. Full control of temperature. Easy access to cooler for ice replenishment. Can store extra supplies in the trunk.</p>
+  </div>
+  <div class="mc">
+    <h4>Road Trip Risks</h4>
+    <p>Extreme car interior heat during stops. Longer exposure windows. No flight attendants to provide emergency ice. Rest stop refrigeration is unreliable.</p>
+  </div>
+</div>
+
+<p>Never leave peptides unattended in a parked vehicle, even briefly. Bring your cooling case inside during every stop. If you're checking into a hotel mid-drive, bring the case to your room before unloading anything else.</p>
+
+<div class="d-t">
+  <div class="s">Road Trip Rule</div>
+  <p>Keep your peptide cooling case in the passenger cabin, not the trunk. Trunk temperatures run significantly hotter than cabin temperatures, especially in summer months. Treat your peptides like a passenger, not cargo.</p>
+</div>
+
+<!-- ========== PACKING ========== -->
+<hr class="sep">
+<h2>Packing Checklist and Organization</h2>
+
+<p>Successful peptide travel starts with redundant safety measures. Build a dedicated travel kit that contains everything you need for safe transport and emergency situations.</p>
+
+<p>Pack 25% more peptides than your trip requires. Delays happen. Vials break. Cooling fails. That buffer keeps your treatment protocol on track.</p>
+
+<table class="tbl">
+  <thead><tr><th>Category</th><th>Essential Items</th><th>Optional Additions</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Temperature Control</strong></td><td>Insulated case, ice packs, thermometer</td><td>Backup cooling packs, data logger</td></tr>
+    <tr><td><strong>Documentation</strong></td><td>Prescription, COA certificates, ID</td><td>Translated documents, embassy contacts</td></tr>
+    <tr><td><strong>Supplies</strong></td><td>Alcohol wipes, sharps container</td><td><a href="/articles/how-to-reconstitute-peptides">Reconstitution supplies</a>, buffer solutions</td></tr>
+    <tr><td><strong>Emergency</strong></td><td>Extra peptides, provider contact info</td><td>Local pharmacy locations, insurance cards</td></tr>
+  </tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Organization Tip</div>
+  <p>Use waterproof bags for all cooling elements to prevent leaks that could damage documentation. Color-code different peptide types to avoid confusion. Label everything with your name and contact information.</p>
+</div>
+
+<p>Place critical documents in an easily accessible outer pocket of your carry-on. Security officers and customs agents appreciate quick access to proper paperwork. Keep digital copies in cloud storage as backup.</p>
+
+<p>Pre-positioning supplies at your destination through pharmaceutical couriers is worth considering for longer trips. It reduces travel complexity and ensures proper <a href="/articles/how-to-store-peptides">storage</a> is waiting when you arrive.</p>
+
+<!-- ========== HOTEL STORAGE ========== -->
+<hr class="sep">
+<h2>Hotel and Accommodation Storage</h2>
+
+<p>Hotel mini-fridges are unreliable for peptide storage. Many cycle between freezing and warm temperatures, creating the exact conditions that destroy peptide integrity.</p>
+
+<p>Test any hotel refrigerator with a thermometer before storing peptides inside. You want steady temperatures between 36-46 degrees F without freezing cycles.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Hotels</h4>
+    <p>Request medical-grade refrigeration when booking. Many quality properties provide specialized units for guests with medical needs.</p>
+  </div>
+  <div class="mc">
+    <h4>Vacation Rentals</h4>
+    <p>Full-size refrigerators with better temperature control. Filter platforms for properties with specific amenities.</p>
+  </div>
+  <div class="mc">
+    <h4>Extended Stays</h4>
+    <p>Consider renting temporary medical refrigeration equipment. Medical supply companies in major cities offer short-term rentals.</p>
+  </div>
+</div>
+
+<p>When proper refrigeration is not available, maintain your cooling case with fresh ice packs. Most hotels will freeze gel packs in their kitchen freezers. Some properties have ice machines that work in a pinch for insulated containers.</p>
+
+<div class="d">
+  <div class="s">Hotel Strategy</div>
+  <p>Contact hotels directly before booking to confirm medical refrigeration availability. Front desk staff often don't know about specialized services that the property actually offers.</p>
+</div>
+
+<!-- ========== DOCUMENTATION ========== -->
+<hr class="sep">
+<h2>What Documentation to Carry</h2>
+
+<p>Proper documentation prevents problems with security, customs, and medical emergencies abroad. Each document serves a specific purpose and should be within arm's reach during travel.</p>
+
+<p>Generic descriptions like "research chemicals" create suspicion and delays. Be specific and medical in all your paperwork.</p>
+
+<div class="cd ca">
+  <div class="tg">Documentation</div>
+  <h3>Required Documents for Peptide Travel</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Physician prescription</strong> with your name matching your passport, specific peptide names, dosages, and the prescribing doctor's contact info. <strong>Certificates of Analysis</strong> proving pharmaceutical-grade purity and sterility (see our <a href="/articles/how-to-read-peptide-coa">COA reading guide</a>). <strong>Medical necessity letter</strong> describing your diagnosis, treatment protocol, and why alternatives are not suitable. <strong>Emergency contact card</strong> with physician info, insurance details, and local embassy contacts.</p>
+</div>
+
+<p>For international travel, notarize all documents and obtain certified translations into the destination country's language. Some nations require apostille certification from your state government. Start this process at least one month before departure.</p>
+
+<p>Laminate emergency contact cards and carry multiple copies in different bags. Include information about your specific peptides and potential <a href="/articles/peptide-side-effects-what-to-know">side effects</a> in case you need medical attention abroad.</p>
+
+<!-- ========== MISTAKES ========== -->
+<hr class="sep">
+<h2>Common Mistakes to Avoid</h2>
+
+<p>The biggest mistake is assuming peptides can travel like regular medications. Traditional drugs tolerate temperature abuse that would destroy most peptides. This false confidence leads to inadequate cooling and ruined supplies.</p>
+
+<table class="tbl">
+  <thead><tr><th>Mistake</th><th>Consequence</th><th>Prevention</th></tr></thead>
+  <tbody>
+    <tr><td>Inadequate cooling</td><td class="r">Peptide degradation</td><td>Use medical-grade cooling systems</td></tr>
+    <tr><td>Missing documentation</td><td class="r">Confiscation or legal issues</td><td>Carry complete paperwork</td></tr>
+    <tr><td>Undeclared at customs</td><td class="r">Fines or criminal charges</td><td>Always declare medications</td></tr>
+    <tr><td>Checked luggage storage</td><td class="y">Temperature excursions</td><td>Keep peptides in carry-on</td></tr>
+    <tr><td>No backup supplies</td><td class="y">Treatment interruption</td><td>Pack 25% extra peptides</td></tr>
+    <tr><td>Early reconstitution</td><td class="y">Faster degradation</td><td>Travel lyophilized when possible</td></tr>
+  </tbody>
+</table>
+
+<p>Reconstituting peptides too early before travel increases degradation risk. Our <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a> covers optimal timing for peptide preparation. When possible, travel with lyophilized forms and reconstitute at your destination.</p>
+
+<div class="d-r">
+  <div class="s">Critical Warning</div>
+  <p>Some countries treat undeclared peptides as drug smuggling, resulting in arrest and prosecution. Failing to research destination regulations creates serious legal risks that no amount of cooling equipment can fix.</p>
+</div>
+
+<p>Allow extra time at airports, especially during peak travel periods. Rushing through checkpoints with medical supplies often triggers additional scrutiny that could have been avoided with a few extra minutes of patience.</p>
+
+<p>Using regular consumer coolers instead of medical-grade equipment often results in temperature failures. The small additional cost of proper equipment prevents major losses. Think of it as insurance for compounds that cost hundreds of dollars per vial.</p>
+
+<!-- ========== TRAVEL DAY TIMELINE ========== -->
+<hr class="sep">
+<h2>Travel Day Timeline</h2>
+
+<p>A structured approach to travel day removes the guesswork. Here's what experienced peptide travelers do at each stage of the journey.</p>
+
+<div class="cd ct">
+  <div class="tg">Timeline</div>
+  <h3>Before Leaving Home</h3>
+  <p style="font-size:14px;margin-bottom:0;">Freeze all cooling elements 24 hours in advance. Verify all documents are packed and accessible. Check peptide vials for any signs of degradation. Place a fresh battery in your temperature data logger. Confirm hotel refrigeration arrangements one final time.</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Timeline</div>
+  <h3>At the Airport</h3>
+  <p style="font-size:14px;margin-bottom:0;">Arrive 30 minutes earlier than you normally would. Have your peptide documentation accessible before entering the security line. Inform the TSA officer immediately that you're carrying medical supplies requiring cooling. Stay calm if they want to inspect your case. Request a private screening if you prefer discretion.</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Timeline</div>
+  <h3>During the Flight</h3>
+  <p style="font-size:14px;margin-bottom:0;">Store your cooling case under the seat in front of you for easy access, not in the overhead bin. Check the temperature indicator during longer flights. If cooling is failing, request ice from the flight crew. Keep the case closed as much as possible to preserve cold temperatures.</p>
+</div>
+
+<div class="cd cp">
+  <div class="tg">Timeline</div>
+  <h3>After Landing</h3>
+  <p style="font-size:14px;margin-bottom:0;">Head directly to your accommodation. Transfer peptides to proper refrigeration within 2 hours of landing. Check the data logger for any temperature excursions during transit. If excursions occurred, photograph the log and contact your healthcare provider before using the peptides.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can I travel internationally with research peptides not approved for human use?</summary>
+    <div class="fa">
+      <p>Research peptides face additional scrutiny at international borders compared to prescribed medications. Many countries prohibit importing compounds not approved by their regulatory agencies, regardless of research purpose. Academic travelers need institutional documentation, research protocols, and sometimes special import permits. Contact destination embassies well before travel and consider shipping through specialized research courier services instead of personal transport.</p>
+    </div>
+  </details>
+  <details>
+    <summary>What happens if my cooling system fails during a long flight?</summary>
+    <div class="fa">
+      <p>Ask flight attendants for ice to create temporary cooling in your travel case. Wrap peptides in aluminum foil for additional insulation if ice is not available. Upon landing, prioritize finding replacement cooling immediately through airport pharmacies, nearby hotels, or medical facilities. Document the temperature excursion with photos and timestamps for potential insurance claims. Consult your healthcare provider about replacement protocols before continuing use.</p>
+    </div>
+  </details>
+  <details>
+    <summary>How do I know if my peptides were damaged during travel?</summary>
+    <div class="fa">
+      <p>Obvious signs include crystallization changes in lyophilized powders, unusual cloudiness in reconstituted solutions, or particles floating in previously clear liquids. Temperature data loggers provide objective evidence of harmful excursions. However, subtle degradation may not show visible signs while still reducing potency. When in doubt, consider peptides potentially compromised and consult your healthcare provider about potency testing or replacement.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Are there countries where peptides are completely prohibited?</summary>
+    <div class="fa">
+      <p>Several countries maintain complete prohibitions on specific peptides or all non-approved biological compounds. Middle Eastern nations often ban growth hormone-related peptides entirely. Some Asian countries prohibit any compounds not approved by their national health agencies. These restrictions apply regardless of prescription status or medical need in your home country. Always verify <a href="/articles/are-peptides-legal-fda-regulations-2026">legal status</a> through official embassy channels before booking travel.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Can I ship peptides ahead to avoid travel complications?</summary>
+    <div class="fa">
+      <p>Specialized pharmaceutical shipping services offer cold-chain transport with proper documentation and customs handling. Costs typically range from $200-500 depending on destination and urgency, but they eliminate personal legal risks and travel stress. Shipping requires advance planning, typically 1 to 2 weeks for international delivery including customs clearance. This option works best for extended stays where the shipping cost is justified by reduced complexity.</p>
+    </div>
+  </details>
+  <details>
+    <summary>What should I do if customs officials question my peptides?</summary>
+    <div class="fa">
+      <p>Stay calm and professional. Present your documentation immediately: prescription, medical necessity letter, and certificates of analysis. Explain that peptides are prescribed medications for specific health conditions, not recreational substances. Avoid technical jargon that might confuse officers. If officials seem skeptical, request to speak with a medical officer or supervisor. Never consent to disposing of peptides without exploring all options first. Contact your embassy if detained.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Should I bring extra peptides beyond what I need?</summary>
+    <div class="fa">
+      <p>Always pack 25-30% more than your planned trip requires. Flight cancellations, extended stays, or cooling system failures can leave you short. But don't pack excessive quantities that might raise customs suspicions about commercial importing. Document the medical need for backup supplies in your physician's letter and consider peptide shelf life when deciding what to bring as extras.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider before traveling with any peptide protocol. Regulations vary by jurisdiction and change frequently. Verify all legal requirements through official government sources before travel.
+</div>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/how-to-store-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Store Peptides</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/how-to-read-peptide-coa" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Read a Peptide COA</a>
+            <a href="/articles/are-peptides-legal-fda-regulations-2026" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Are Peptides Legal? FDA Rules</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
