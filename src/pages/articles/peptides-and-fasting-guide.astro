@@ -1,0 +1,572 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptides and Fasting: How to Combine Them for Maximum Results",
+  description: "How intermittent fasting and peptides may fit together for fat loss, autophagy signals, and recovery. Timing ideas, fasted vs fed peptides, safety, and FAQs.",
+  image: "/images/articles/peptides-and-fasting.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Fasting &middot; Metabolism</div>
+  <h1>Peptides and Fasting: How to Combine Them for Maximum Results</h1>
+  <p class="sub">Fasting shifts your hormonal environment. Peptides send specific signals into that environment. Timing, context, and consistency matter more than any single protocol detail.</p>
+  <div class="pills">
+    <span class="pill">Intermittent Fasting &middot; Timing</span>
+    <span class="pill">Autophagy &middot; AMPK &middot; mTOR</span>
+    <span class="pill">Fat Loss &middot; Recovery</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">16:8</div><div class="l">Most Common<br>Fasting Window</div></div>
+  <div class="sb"><div class="v c2">GH</div><div class="l">Key Hormone<br>Affected by Fasting</div></div>
+  <div class="sb"><div class="v c3">AMPK</div><div class="l">Energy Sensor<br>Activated While Fasted</div></div>
+  <div class="sb"><div class="v c4">72h</div><div class="l">Peak Autophagy<br>Signal Window</div></div>
+</div>
+
+<p>Fasting changes your metabolic state. Insulin drops, fatty acid oxidation rises, and hunger patterns shift in predictable ways over time. None of this is magic. It is a well-documented set of hormonal and metabolic adjustments that depend on sleep quality, stress load, activity level, and total calorie intake.</p>
+
+<p>Peptides are signaling molecules. When you combine them with fasting, you are changing the hormonal backdrop those signals land in. That context matters. A growth hormone secretagogue hitting a low-insulin environment is different from the same peptide arriving post-meal with elevated glucose and insulin.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is a practical overview of how fasting and peptide timing interact. It covers metabolic shifts, timing categories, popular schedules, autophagy, gut support, safety, and example combinations. This is <strong>not medical advice</strong>. If you have diabetes, a history of eating disorders, or take prescription medications, consult a licensed healthcare provider before fasting or using any peptide.</p>
+</div>
+
+<!-- ========== WHAT FASTING CHANGES ========== -->
+<hr class="sep">
+<h2>What Fasting Changes in the Body</h2>
+
+<p>Fasting is not a single event. It is a progressive series of metabolic shifts that begin within hours of your last meal and intensify over time. The practical window for most people falls between 12 and 24 hours, where the hormonal changes are meaningful but the downsides stay manageable.</p>
+
+<div class="cd cb">
+  <div class="tg">Core Shifts</div>
+  <h3>The Four Metabolic Changes That Matter</h3>
+  <p style="font-size:14px;margin-bottom:0;">When you stop eating for 12 or more hours, insulin drops and glucagon rises. Your liver starts releasing stored glycogen while adipose tissue increases free fatty acid availability. Growth hormone secretion can increase significantly during overnight and extended fasts. These shifts create a metabolic environment that favors fat oxidation over glucose burning. A 2011 review in <em>Obesity Reviews</em> confirmed that intermittent fasting consistently reduces fasting insulin and improves insulin sensitivity in overweight adults (<a href="https://pubmed.ncbi.nlm.nih.gov/21309180/">PubMed</a>).</p>
+</div>
+
+<table class="tbl">
+  <thead><tr><th>Fasting Shift</th><th>What Happens</th><th>Key Influences</th></tr></thead>
+  <tbody>
+    <tr><td><span class="g">Lower insulin</span></td><td>Reduced cravings for some people, improved fat access</td><td>Sleep quality, carb intake, stress</td></tr>
+    <tr><td><span class="g">Higher fat oxidation</span></td><td>Steadier energy once adapted</td><td>Activity level, metabolic flexibility</td></tr>
+    <tr><td><span class="y">Hunger pattern changes</span></td><td>Hunger waves become predictable over 1&ndash;2 weeks</td><td>Meal composition, daily routine</td></tr>
+    <tr><td><span class="y">Recovery tradeoffs</span></td><td>Some feel better fasted, others feel worse</td><td>Training volume, protein timing</td></tr>
+  </tbody>
+</table>
+
+<p>Most of fasting's benefits come from consistency and calorie control over time. The fasting window is a tool for structuring intake. It is not a shortcut around poor sleep, high stress, or inadequate protein.</p>
+
+<!-- ========== FASTED VS FED ========== -->
+<hr class="sep">
+<h2>Do Peptides Work Better When Fasted?</h2>
+
+<p>Sometimes. The answer depends entirely on which peptide you are using and what you are trying to accomplish. For many injectable peptides, absorption is not strongly tied to food intake. What changes more is the hormonal and nutrient environment that the peptide signals into.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4>Fasted State Supports</h4>
+    <p>Fat-loss signaling, growth hormone pulses, AMPK activation, autophagy-related pathways. Low insulin creates a cleaner hormonal backdrop for GH secretagogues and metabolic peptides.</p>
+  </div>
+  <div class="mc">
+    <h4>Fed State Supports</h4>
+    <p>Muscle protein synthesis, gut repair around meals, mTOR activation for growth. If a peptide causes nausea on an empty stomach, moving it closer to food usually solves the problem.</p>
+  </div>
+</div>
+
+<div class="d d-a">
+  <div class="s">Important Context</div>
+  <p>"Fasted" is not automatically superior. If training performance drops or sleep worsens because of fasting stress, your results will get worse regardless of peptide timing. Context always beats theory.</p>
+</div>
+
+<!-- ========== TIMING CATEGORIES ========== -->
+<hr class="sep">
+<h2>Fasted vs Fed: Common Timing Categories</h2>
+
+<p>This section is informational only. Individual responses vary, and no timing protocol replaces clinical guidance for people with medical conditions.</p>
+
+<div class="cd ct">
+  <div class="tg">Often Discussed as Better Fasted</div>
+  <h3>GH Secretagogues and Metabolic Peptides</h3>
+  <p style="font-size:14px;margin-bottom:0;">Growth hormone secretagogues (like CJC-1295 and Ipamorelin) are commonly timed in fasted windows because elevated insulin blunts GH release. Fat-loss oriented peptides and compounds tied to mitochondrial or energy signaling (like <a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a>) also tend to be discussed as fasted-window tools. A 1992 study in the <em>Journal of Clinical Endocrinology and Metabolism</em> showed that glucose infusion suppressed GH response to GHRH by roughly 50% (<a href="https://pubmed.ncbi.nlm.nih.gov/1740683/">PubMed</a>).</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Often Discussed as Better with Food</div>
+  <h3>Gut-Support and Recovery Peptides</h3>
+  <p style="font-size:14px;margin-bottom:0;">Gut-support peptides like <a href="/articles/bpc-157-complete-guide">BPC-157</a> are often timed around meals when digestive activity is highest. Any compound that causes nausea on an empty stomach should be moved closer to food. Recovery-focused peptides taken post-training may also benefit from being near a meal where amino acids are available for repair.</p>
+</div>
+
+<table class="tbl">
+  <thead><tr><th>Category</th><th>Why People Time It This Way</th><th>Related Reading</th></tr></thead>
+  <tbody>
+    <tr><td><span class="g">Fasted tools</span></td><td>Align with low insulin and higher fat oxidation</td><td><a href="/articles/best-peptides-for-fat-loss">Best peptides for fat loss</a></td></tr>
+    <tr><td><span class="y">Fed tools</span></td><td>Align with digestion, nutrient handling, mTOR</td><td><a href="/articles/best-peptides-for-gut-health">Best peptides for gut health</a></td></tr>
+  </tbody>
+</table>
+
+<!-- ========== MECHANISM DIAGRAM ========== -->
+<hr class="sep">
+<h2>How Fasting and Peptides Interact</h2>
+
+<div class="svg-box">
+  <div class="st">Fasting and Peptide Signaling Pathways</div>
+  <div class="ss">How the fasted state changes the hormonal environment peptides signal into</div>
+  <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fasted State Box -->
+    <rect x="20" y="20" width="200" height="120" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="120" y="50" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#2956A6">Fasted State</text>
+    <text x="120" y="72" text-anchor="middle" font-size="10.5" fill="#3C3C52">Insulin low</text>
+    <text x="120" y="88" text-anchor="middle" font-size="10.5" fill="#3C3C52">Glucagon high</text>
+    <text x="120" y="104" text-anchor="middle" font-size="10.5" fill="#3C3C52">FFAs elevated</text>
+    <text x="120" y="120" text-anchor="middle" font-size="10.5" fill="#3C3C52">GH secretion up</text>
+    <!-- Arrow 1 -->
+    <line x1="220" y1="80" x2="280" y2="80" stroke="#2956A6" stroke-width="1.5" marker-end="url(#ar)"/>
+    <!-- Peptide Signal Box -->
+    <rect x="280" y="20" width="160" height="120" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="360" y="50" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#187A62">Peptide Signal</text>
+    <text x="360" y="72" text-anchor="middle" font-size="10.5" fill="#3C3C52">GH secretagogues</text>
+    <text x="360" y="88" text-anchor="middle" font-size="10.5" fill="#3C3C52">Metabolic peptides</text>
+    <text x="360" y="104" text-anchor="middle" font-size="10.5" fill="#3C3C52">Autophagy signals</text>
+    <text x="360" y="120" text-anchor="middle" font-size="10.5" fill="#3C3C52">Fat-loss support</text>
+    <!-- Arrow 2 -->
+    <line x1="440" y1="80" x2="500" y2="80" stroke="#187A62" stroke-width="1.5" marker-end="url(#ar2)"/>
+    <!-- Outcome Box -->
+    <rect x="500" y="20" width="180" height="120" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="590" y="50" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#B48118">Potential Outcomes</text>
+    <text x="590" y="72" text-anchor="middle" font-size="10.5" fill="#3C3C52">Enhanced GH pulse</text>
+    <text x="590" y="88" text-anchor="middle" font-size="10.5" fill="#3C3C52">Increased fat oxidation</text>
+    <text x="590" y="104" text-anchor="middle" font-size="10.5" fill="#3C3C52">AMPK activation</text>
+    <text x="590" y="120" text-anchor="middle" font-size="10.5" fill="#3C3C52">Cellular cleanup</text>
+    <!-- Fed State Box -->
+    <rect x="20" y="180" width="200" height="120" rx="12" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="120" y="210" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#B53A3A">Fed State</text>
+    <text x="120" y="232" text-anchor="middle" font-size="10.5" fill="#3C3C52">Insulin elevated</text>
+    <text x="120" y="248" text-anchor="middle" font-size="10.5" fill="#3C3C52">Amino acids available</text>
+    <text x="120" y="264" text-anchor="middle" font-size="10.5" fill="#3C3C52">mTOR active</text>
+    <text x="120" y="280" text-anchor="middle" font-size="10.5" fill="#3C3C52">Digestion engaged</text>
+    <!-- Arrow 3 -->
+    <line x1="220" y1="240" x2="280" y2="240" stroke="#B53A3A" stroke-width="1.5" marker-end="url(#ar3)"/>
+    <!-- Fed Peptide Box -->
+    <rect x="280" y="180" width="160" height="120" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="360" y="210" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#6E3B8A">Peptide Signal</text>
+    <text x="360" y="232" text-anchor="middle" font-size="10.5" fill="#3C3C52">Gut-support peptides</text>
+    <text x="360" y="248" text-anchor="middle" font-size="10.5" fill="#3C3C52">Recovery compounds</text>
+    <text x="360" y="264" text-anchor="middle" font-size="10.5" fill="#3C3C52">Growth signals</text>
+    <text x="360" y="280" text-anchor="middle" font-size="10.5" fill="#3C3C52">Nausea-prone peptides</text>
+    <!-- Arrow 4 -->
+    <line x1="440" y1="240" x2="500" y2="240" stroke="#6E3B8A" stroke-width="1.5" marker-end="url(#ar4)"/>
+    <!-- Fed Outcome Box -->
+    <rect x="500" y="180" width="180" height="120" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="590" y="210" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#187A62">Potential Outcomes</text>
+    <text x="590" y="232" text-anchor="middle" font-size="10.5" fill="#3C3C52">Gut lining repair</text>
+    <text x="590" y="248" text-anchor="middle" font-size="10.5" fill="#3C3C52">Muscle protein synthesis</text>
+    <text x="590" y="264" text-anchor="middle" font-size="10.5" fill="#3C3C52">Better tolerance</text>
+    <text x="590" y="280" text-anchor="middle" font-size="10.5" fill="#3C3C52">Nutrient partitioning</text>
+    <!-- Arrow markers -->
+    <defs>
+      <marker id="ar" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#2956A6"/></marker>
+      <marker id="ar2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#187A62"/></marker>
+      <marker id="ar3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#B53A3A"/></marker>
+      <marker id="ar4" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#6E3B8A"/></marker>
+    </defs>
+  </svg>
+</div>
+
+<!-- ========== IF SCHEDULES ========== -->
+<hr class="sep">
+<h2>Intermittent Fasting Schedules and Peptide Timing</h2>
+
+<p>The easiest mistake is overcomplicating your routine. A simple fasting schedule that you can repeat consistently beats a perfect schedule you abandon after two weeks. Pick one, run it for at least 14 days, and track sleep, energy, and training performance before making changes.</p>
+
+<div class="cd cb">
+  <div class="tg">16:8 Protocol</div>
+  <h3>The Most Common Starting Point</h3>
+  <p style="font-size:14px;">People often take fasted peptides in the morning during the tail end of the overnight fast, then time gut-support or recovery peptides around the first meal. This schedule works well because it preserves a normal social eating window while still giving you 16 hours of lower insulin exposure.</p>
+</div>
+
+<table class="tbl">
+  <thead><tr><th>Time Window</th><th>What It Might Look Like</th><th>Reasoning</th></tr></thead>
+  <tbody>
+    <tr><td><span class="g">Morning (fasted)</span></td><td>GH secretagogue or metabolic peptide</td><td>Matches low insulin state</td></tr>
+    <tr><td><span class="y">Midday</span></td><td>Hydration, electrolytes, black coffee</td><td>Reduces false hunger signals</td></tr>
+    <tr><td><span class="g">First meal (noon)</span></td><td>Gut-support timing if needed</td><td>Aligns with digestive activity</td></tr>
+  </tbody>
+</table>
+
+<div class="cd ca">
+  <div class="tg">OMAD Protocol</div>
+  <h3>One Meal a Day</h3>
+  <p style="font-size:14px;">OMAD can feel simple, but it comes with real tradeoffs. Hitting adequate protein in a single meal is difficult for most people. If OMAD drives binge-style refeeding or disrupts sleep from a massive evening meal, it is usually a net negative. Consider this schedule only if you have a history of comfortable extended fasts and can consistently hit 120+ grams of protein in one sitting.</p>
+</div>
+
+<div class="cd cp">
+  <div class="tg">Weekly 24-Hour Fast</div>
+  <h3>One or Two Times Per Week</h3>
+  <p style="font-size:14px;">Some people prefer a weekly 24-hour fast because it is easier to recover from than multi-day protocols. The approach is simple: keep peptide variables minimal during the fast day, then return to normal routines during refeed. This works well for people whose primary goal is longevity signaling rather than aggressive fat loss.</p>
+</div>
+
+<!-- ========== AUTOPHAGY ========== -->
+<hr class="sep">
+<h2>Autophagy: What Is Real and What Is Hype</h2>
+
+<p>Autophagy is a normal cellular recycling process. Your cells are always doing some degree of autophagy. Fasting increases the signal, especially when liver glycogen gets low and AMPK activity rises. The 2016 Nobel Prize in Physiology went to Yoshinori Ohsumi for his work characterizing the molecular machinery behind autophagy (<a href="https://pubmed.ncbi.nlm.nih.gov/27818375/">PubMed</a>).</p>
+
+<p>The problem is measurement. You cannot measure your own autophagy with any consumer tool. Blood ketones are a rough proxy for metabolic state but not a direct autophagy readout. Most of what you read online about "activating autophagy in 16 hours" is oversimplified.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Autophagy</h4>
+    <p>Cellular recycling and cleanup of damaged organelles. Increases with fasting, exercise, and caloric restriction. Not a binary on/off switch.</p>
+  </div>
+  <div class="mc">
+    <h4>AMPK</h4>
+    <p>Energy-sensing enzyme activated when cellular energy is low. Promotes fat oxidation and mitochondrial biogenesis. Fasting and exercise both increase it.</p>
+  </div>
+  <div class="mc">
+    <h4>mTOR</h4>
+    <p>Growth and repair signaling hub. Activated by amino acids and insulin. Suppressing it chronically while trying to build muscle works against your goals.</p>
+  </div>
+</div>
+
+<div class="d d-t">
+  <div class="s">Research Note</div>
+  <p>Some peptides are discussed as autophagy-adjacent because they influence AMPK, mTOR, or mitochondrial function. <a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a> is one example. It is a mitochondrial-derived peptide that activates AMPK in skeletal muscle. A 2015 study in <em>Cell Metabolism</em> showed MOTS-c improved glucose regulation and prevented diet-induced obesity in mice (<a href="https://pubmed.ncbi.nlm.nih.gov/25738455/">PubMed</a>).</p>
+</div>
+
+<div class="d d-r">
+  <div class="s">Common Mistake</div>
+  <p>If your goal is muscle gain, chronic high fasting stress combined with chronic low mTOR signaling will work against you. You cannot optimize for maximum autophagy and maximum muscle growth at the same time. Pick a primary goal and structure your fasting and peptide timing around it.</p>
+</div>
+
+<!-- ========== GUT SUPPORT ========== -->
+<hr class="sep">
+<h2>Gut Support During Fasting and Refeed</h2>
+
+<p>Refeeding is where many people feel the downside of fasting. Large meals after long fasts can cause bloating, reflux, and urgency. The gut lining adapts to meal patterns, and suddenly dumping a massive bolus of food into a resting digestive system creates predictable discomfort.</p>
+
+<p>Gut-support peptides are often discussed as better timed around meals rather than deep into a fast. The logic is straightforward: if the peptide supports mucosal repair or motility, it makes sense to have it active when the gut is actually processing food.</p>
+
+<div class="cd ct">
+  <div class="tg">Practical Refeed Tips</div>
+  <h3>Breaking Your Fast Without GI Distress</h3>
+  <p style="font-size:14px;margin-bottom:0;">Start with a smaller meal 20&ndash;30 minutes before your main meal. Include protein and easy-to-digest carbs. Avoid huge fat loads if they cause nausea. If you are prone to GI issues during refeeding, see <a href="/articles/best-peptides-for-gut-health">best peptides for gut health</a> for context on compounds people discuss for digestive support.</p>
+</div>
+
+<table class="tbl">
+  <thead><tr><th>Refeed Strategy</th><th>What to Do</th><th>Why It Helps</th></tr></thead>
+  <tbody>
+    <tr><td><span class="g">Small starter meal</span></td><td>100&ndash;200 calories of protein and carbs 20&ndash;30 min before main meal</td><td>Primes digestive enzymes gradually</td></tr>
+    <tr><td><span class="g">Moderate portions</span></td><td>Split your feeding window into 2&ndash;3 meals rather than one massive plate</td><td>Reduces bloating and reflux risk</td></tr>
+    <tr><td><span class="y">Limit initial fat load</span></td><td>Save higher-fat foods for the second meal of the window</td><td>Fat slows gastric emptying, which can worsen nausea post-fast</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== ELECTROLYTES ========== -->
+<hr class="sep">
+<h2>Electrolytes and Hydration While Fasting</h2>
+
+<p>Fasting increases fluid and electrolyte loss, especially in the first 24&ndash;48 hours. When insulin drops, the kidneys excrete more sodium, and potassium and magnesium follow. This is why many people get headaches, muscle cramps, and fatigue during their first week of intermittent fasting.</p>
+
+<p>If you are adding peptides to a fasting protocol, electrolyte management becomes even more important. Dehydration and mineral depletion can mask or mimic peptide side effects, making it harder to evaluate whether a compound is working or causing problems.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Sodium</h4>
+    <p>Most under-consumed electrolyte during fasting. 1&ndash;2g of added sodium from salt or electrolyte mix during the fasted window helps with headaches and energy.</p>
+  </div>
+  <div class="mc">
+    <h4>Potassium</h4>
+    <p>Supports nerve and muscle function. Low potassium can cause cramping and heart palpitations. Food sources include avocado, potato, and spinach during feeding windows.</p>
+  </div>
+  <div class="mc">
+    <h4>Magnesium</h4>
+    <p>Commonly depleted during fasting. Magnesium glycinate or citrate in the evening can improve sleep quality, which is critical for recovery and GH secretion.</p>
+  </div>
+</div>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety Notes That Matter More Than Timing</h2>
+
+<p>Fasting and peptides both increase the need for honest self-monitoring. It is easy to get caught up in optimization while ignoring basic warning signs. The priorities below are more important than any timing protocol.</p>
+
+<table class="tbl">
+  <thead><tr><th>Risk</th><th>Why It Matters</th><th>Safer Approach</th></tr></thead>
+  <tbody>
+    <tr><td><span class="r">Hypoglycemia</span></td><td>Can become a medical emergency, especially with diabetes medications</td><td>Clinician guidance, conservative fasting windows</td></tr>
+    <tr><td><span class="r">Electrolyte imbalance</span></td><td>Headaches, cramps, fatigue, and cardiac risk in extreme cases</td><td>Sodium, potassium, and magnesium planning</td></tr>
+    <tr><td><span class="y">Overtraining</span></td><td>Poor recovery and sleep disruption compound fasting stress</td><td>Lower training volume on fasting days</td></tr>
+    <tr><td><span class="y">Poor product quality</span></td><td>Contamination and dosing errors are real risks with research peptides</td><td>Third-party testing, sterile reconstitution technique</td></tr>
+  </tbody>
+</table>
+
+<div class="d d-r">
+  <div class="s">Critical Warning</div>
+  <p>If you take insulin, sulfonylureas, or any blood sugar-lowering medication, do not fast without direct supervision from your prescribing physician. Combining fasting with these medications can cause dangerous hypoglycemia.</p>
+</div>
+
+<!-- ========== EXAMPLE COMBINATIONS ========== -->
+<hr class="sep">
+<h2>Example Combinations People Discuss</h2>
+
+<p>This section is informational only. If you have medical conditions, consult a healthcare provider before combining fasting with any compound. The safest approach is to pick one primary goal, then choose a fasting schedule that supports it.</p>
+
+<div class="cd cb">
+  <div class="tg">Fat Loss and Appetite Control</div>
+  <h3>Moderate Fasting Window Focus</h3>
+  <p style="font-size:14px;">A moderate fasting window (14:10 or 16:8) is common for fat loss because it is easier to maintain adequate protein intake while still creating a calorie deficit. Resistance training 3&ndash;5 days per week preserves muscle during the deficit. Fasted peptide timing in the morning pairs with meal-timed compounds around the first meal.</p>
+</div>
+
+<table class="tbl">
+  <thead><tr><th>Element</th><th>Common Choice</th><th>Why It Is Chosen</th></tr></thead>
+  <tbody>
+    <tr><td>Fasting schedule</td><td><span class="g">14:10 or 16:8</span></td><td>Consistency and adherence</td></tr>
+    <tr><td>Training</td><td><span class="g">Resistance training 3&ndash;5x weekly</span></td><td>Preserves muscle during deficit</td></tr>
+    <tr><td>Peptide timing</td><td><span class="y">Fasted AM, meal-timed around first meal</span></td><td>Aligns signals with daily routine</td></tr>
+  </tbody>
+</table>
+
+<div class="cd cp">
+  <div class="tg">Longevity-Style Focus</div>
+  <h3>Occasional Extended Fasts</h3>
+  <p style="font-size:14px;">Some people use one 24-hour fast per week and keep the rest of the week normal. The idea is to get periodic autophagy signaling without making every day feel like a stress test. Normal protein intake on non-fast days supports muscle and recovery. Sleep quality, HRV, and training performance serve as feedback signals.</p>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Training and Recovery Focus</div>
+  <h3>Performance as the Priority</h3>
+  <p style="font-size:14px;">If performance is the primary goal, shorter fasting windows and predictable meal timing usually work better. Extended fasts can blunt training intensity, and the recovery cost of combining hard training with aggressive fasting is often underestimated. For performance-oriented peptide stacks, see the <a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157">CJC-1295/Ipamorelin/BPC-157 stack guide</a>.</p>
+</div>
+
+<div class="d d-a">
+  <div class="s">Honest Check</div>
+  <p>If your lifts, mood, or sleep are trending down, your protocol is failing even if the scale weight drops. Body composition is not just about weight. Losing muscle while losing fat is a common outcome of overly aggressive fasting combined with inadequate protein.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Do peptides break a fast?</summary>
+    <div class="fa">Injectable peptides contain negligible calories and do not trigger a meaningful insulin response. For most people, the bigger question is whether the peptide changes hunger, energy, or sleep patterns. If you are fasting for medical reasons (such as pre-surgical prep or lab work), ask your healthcare provider what "breaking the fast" means for your specific situation.</div>
+  </details>
+
+  <details>
+    <summary>Should I take peptides right before breaking the fast?</summary>
+    <div class="fa">It depends on the peptide. Many people prefer fasted dosing earlier in the fasting window and meal-timed dosing close to the first meal. If a peptide makes you nauseous on an empty stomach, move it closer to food. There is no universal "best" timing that applies to all compounds.</div>
+  </details>
+
+  <details>
+    <summary>Which peptides are commonly timed fasted?</summary>
+    <div class="fa">Growth hormone secretagogues and fat-loss oriented peptides are the most commonly fasted-timed compounds. The reasoning is that low insulin and high GH secretion create a more favorable signaling environment. If your goal is fat loss, start with the basics (calorie deficit, sleep, training) then read the <a href="/articles/best-peptides-for-fat-loss">best peptides for fat loss</a> guide.</div>
+  </details>
+
+  <details>
+    <summary>Which peptides are commonly timed with food?</summary>
+    <div class="fa">Gut-support peptides like <a href="/articles/bpc-157-complete-guide">BPC-157</a> are commonly timed around meals. Refeeding is when many people notice GI sensitivity, so keeping meal size reasonable is often more important than perfect peptide timing. See the <a href="/articles/best-peptides-for-gut-health">gut health peptides guide</a> for more context.</div>
+  </details>
+
+  <details>
+    <summary>Is fasting a good idea if I am trying to gain muscle?</summary>
+    <div class="fa">It can work, but it is easy to under-eat protein and total calories. If your training performance drops, muscle gain usually drops too. A shorter overnight fast (12&ndash;14 hours) with consistent protein intake across 2&ndash;3 meals is often a better approach than aggressive fasting windows when hypertrophy is the goal.</div>
+  </details>
+
+  <details>
+    <summary>What is the safest way to experiment?</summary>
+    <div class="fa">Change one variable at a time. Keep the fasting schedule stable for at least two weeks before adjusting peptide timing. Track sleep, training performance, and subjective energy. Consult a healthcare provider if you have any medical conditions or take prescription medications. For peptide handling basics, see <a href="/articles/how-to-store-peptides">how to store peptides</a>.</div>
+  </details>
+
+  <details>
+    <summary>Can I do a 3-day fast with peptides?</summary>
+    <div class="fa">Extended fasts beyond 24 hours carry additional risks including significant electrolyte depletion, muscle catabolism, and refeeding syndrome. Adding peptides to a multi-day fast adds complexity to an already demanding protocol. This is not something to experiment with without medical supervision, especially if you are new to fasting.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>Bottom Line</h2>
+
+<p>Fasting is a useful structure for appetite control, insulin management, and metabolic flexibility. Peptides are signaling tools that may complement certain goals when timed appropriately. Neither one is a substitute for the fundamentals: adequate sleep, consistent protein intake, progressive training, and hydration.</p>
+
+<p>The combination works best when it is simple, safe, and repeatable. Start with a fasting schedule you can sustain. Add one variable at a time. Track the things that actually matter (sleep quality, training performance, body composition, mood) rather than chasing theoretical optimization.</p>
+
+<p>If you have diabetes, take prescription medications, or have a history of eating disorders, work with a qualified healthcare provider before combining fasting with any peptide protocol. Safety always comes before optimization.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational purposes only and does not constitute medical advice. Peptides discussed here are not FDA-approved drugs. Always consult a qualified healthcare provider before beginning any fasting protocol or peptide regimen. Do not use this information to self-treat any medical condition.
+</div>
+
+<!-- References -->
+<h3>References</h3>
+<p style="font-size:13px;line-height:1.8;">
+Barnosky AR, Hoddy KK, Unterman TG, Varady KA. Intermittent fasting vs daily calorie restriction for type 2 diabetes prevention: a review of human findings. <em>Transl Res.</em> 2014;164(4):302-311. <a href="https://pubmed.ncbi.nlm.nih.gov/24993615/">PubMed</a><br>
+Harvie MN, Pegington M, Mattson MP, et al. The effects of intermittent or continuous energy restriction on weight loss and metabolic disease risk markers. <em>Int J Obes.</em> 2011;35(5):714-727. <a href="https://pubmed.ncbi.nlm.nih.gov/21309180/">PubMed</a><br>
+Ho KY, Veldhuis JD, Johnson ML, et al. Fasting enhances growth hormone secretion and amplifies the complex rhythms of growth hormone secretion in man. <em>J Clin Invest.</em> 1988;81(4):968-975. <a href="https://pubmed.ncbi.nlm.nih.gov/3127426/">PubMed</a><br>
+Lee C, Longo V. Fasting vs dietary restriction in cellular protection and cancer treatment. <em>Oncogene.</em> 2011;30(30):3305-3316. <a href="https://pubmed.ncbi.nlm.nih.gov/21516129/">PubMed</a><br>
+Lee C, Zeng J, Drew BG, et al. The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance. <em>Cell Metab.</em> 2015;21(3):443-454. <a href="https://pubmed.ncbi.nlm.nih.gov/25738455/">PubMed</a><br>
+Ohsumi Y. Historical landmarks of autophagy research. <em>Cell Res.</em> 2014;24(1):9-23. <a href="https://pubmed.ncbi.nlm.nih.gov/24366340/">PubMed</a><br>
+Patterson RE, Sears DD. Metabolic effects of intermittent fasting. <em>Annu Rev Nutr.</em> 2017;37:371-393. <a href="https://pubmed.ncbi.nlm.nih.gov/28715993/">PubMed</a>
+</p>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/best-peptides-for-fat-loss">Best Peptides for Fat Loss</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-gut-health">Best Peptides for Gut Health</a> &nbsp;&middot;&nbsp;
+<a href="/articles/mots-c-mitochondrial-peptide">MOTS-c Mitochondrial Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/sermorelin-growth-hormone-guide">Sermorelin Growth Hormone Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/best-peptides-for-fat-loss" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Fat Loss</a>
+            <a href="/articles/best-peptides-for-gut-health" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Gut Health</a>
+            <a href="/articles/mots-c-mitochondrial-peptide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">MOTS-c Mitochondrial Peptide</a>
+            <a href="/articles/sermorelin-growth-hormone-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Sermorelin Growth Hormone Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

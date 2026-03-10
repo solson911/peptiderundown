@@ -1,0 +1,602 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptides and Testosterone: How to Combine Peptides with TRT",
+  description: "Learn how peptides work with testosterone replacement therapy for enhanced results. GH peptides, kisspeptin, and protocols for men optimizing hormones.",
+  image: "/images/articles/peptides-and-testosterone.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Hormones &middot; Men's Health</div>
+  <h1>Peptides and Testosterone: How to Combine Peptides with TRT</h1>
+  <p class="sub">Testosterone replacement therapy has clear benefits but real limitations. Specific peptides can fill those gaps, from preserving fertility to amplifying body composition results. Here is what the evidence says about combining them.</p>
+  <div class="pills">
+    <span class="pill">GH Secretagogues &middot; Body Composition</span>
+    <span class="pill">Kisspeptin &middot; Fertility</span>
+    <span class="pill">Recovery &middot; Sexual Health</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">18-23%</div><div class="l">Greater Lean Mass<br>With GH + TRT</div></div>
+  <div class="sb"><div class="v c2">78%</div><div class="l">Maintained Sperm<br>Count (Kisspeptin)</div></div>
+  <div class="sb"><div class="v c3">5+</div><div class="l">Peptide Classes<br>That Pair With TRT</div></div>
+  <div class="sb"><div class="v c4">HPG</div><div class="l">Primary Axis<br>Affected by TRT</div></div>
+</div>
+
+<p>Testosterone replacement therapy delivers powerful benefits, but it has limitations that leave many men looking for more complete hormonal optimization. That is where <a href="/articles/what-are-peptides-beginners-guide">peptides</a> come in. These short-chain amino acid compounds offer targeted solutions to problems that TRT alone cannot fully address.</p>
+
+<p>Clinical evidence shows that combining GH-secretagogues with TRT improves lean mass gains by 18 to 23 percent compared to TRT alone. By pairing specific peptides with testosterone protocols, men can achieve superior results in body composition, recovery, sexual health, and hormonal balance.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of peptide and TRT combinations, covering mechanisms, clinical evidence, protocols, and safety. It is <strong>not a recommendation to self-prescribe</strong>. Always consult a qualified healthcare provider before starting any hormone or peptide regimen.</p>
+</div>
+
+<!-- ========== HOW TRT WORKS ========== -->
+<hr class="sep">
+<h2>How TRT Works and Where It Falls Short</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Testosterone Replacement Therapy</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Exogenous hormone replacement &nbsp;|&nbsp; <strong>Routes:</strong> Injection, gel, pellet &nbsp;|&nbsp; <strong>Primary Target:</strong> Androgen receptors &nbsp;|&nbsp; <strong>Key Benefit:</strong> Restores testosterone levels in deficient men &nbsp;|&nbsp; <strong>Key Limitation:</strong> Suppresses HPG axis, impairs fertility &nbsp;|&nbsp; <strong>Monitoring:</strong> Hematocrit, estradiol, PSA, lipids</p>
+</div>
+
+<p>TRT provides exogenous testosterone to restore levels in men with clinically low production. It effectively addresses symptoms like low energy, reduced muscle mass, and diminished libido. Standard protocols use injections, gels, or pellets to maintain stable blood levels.</p>
+
+<p>Despite its benefits, TRT does not restore natural testosterone production pathways. It suppresses luteinizing hormone (LH) and follicle-stimulating hormone (FSH) release from the pituitary gland. This creates a cascade of downstream problems.</p>
+
+<table class="tbl">
+<thead><tr><th>Limitation</th><th>Cause</th><th>Severity</th><th>Peptide Solution</th></tr></thead>
+<tbody>
+<tr><td><strong>Testicular atrophy</strong></td><td>Lack of LH stimulation</td><td class="r">Common</td><td>Kisspeptin, Gonadorelin</td></tr>
+<tr><td><strong>Impaired fertility</strong></td><td>Suppressed FSH and sperm production</td><td class="r">Very common</td><td>Kisspeptin, hCG</td></tr>
+<tr><td><strong>Estrogen management</strong></td><td>Testosterone aromatization</td><td class="y">Moderate</td><td>DIM, monitoring</td></tr>
+<tr><td><strong>Suboptimal body composition</strong></td><td>No GH pathway stimulation</td><td class="y">Moderate</td><td>CJC-1295/Ipamorelin</td></tr>
+<tr><td><strong>Long-term dependency</strong></td><td>HPG axis shutdown</td><td class="y">Variable</td><td>Kisspeptin for restart</td></tr>
+</tbody>
+</table>
+
+<p>These limitations explain why many TRT users add peptides. Each peptide class addresses a specific gap through a targeted biological mechanism.</p>
+
+<!-- ========== MECHANISM SVG ========== -->
+<hr class="sep">
+<h2>How Peptides and TRT Work Together</h2>
+
+<p>Testosterone and peptides operate through complementary pathways. When combined strategically, they create a more complete hormonal environment than either approach can deliver alone.</p>
+
+<div class="svg-box">
+  <div class="st">Peptide + TRT: Multi-Pathway Synergy</div>
+  <div class="ss">GH axis &middot; HPG axis &middot; Tissue repair &middot; Central nervous system</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- GH Axis -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">GH Axis</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">SECRETAGOGUES</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">CJC-1295 / Ipamorelin</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">pulse GH release</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Fat mobilization</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Collagen synthesis</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Sleep quality</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Body composition</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">&#38; recovery</text>
+
+    <!-- HPG Axis -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">HPG Axis</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">FERTILITY SUPPORT</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Kisspeptin / Gonadorelin</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">stimulate LH &#38; FSH</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Testicular volume</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Spermatogenesis</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Natural pathways</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Preserved fertility</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">&#38; testicular function</text>
+
+    <!-- Tissue Repair -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Tissue Repair</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">HEALING PEPTIDES</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">BPC-157 / TB-500</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">repair connective tissue</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Collagen synthesis</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Angiogenesis</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Anti-inflammatory</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Joint health &#38;</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">training consistency</text>
+
+    <!-- CNS / Sexual -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">CNS / Sexual</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">MELANOCORTIN</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">PT-141 activates</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">MC3R / MC4R</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Central arousal</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Enhanced desire</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Brain-level action</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Sexual function</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">beyond TRT alone</text>
+  </svg>
+</div>
+
+<p>Testosterone amplifies GH receptor expression in muscle tissue, making the body more responsive to growth hormone pulses stimulated by peptides (<a href="https://pubmed.ncbi.nlm.nih.gov/15572415/">Gibney et al., 2005</a>). Meanwhile, peptides like kisspeptin maintain the HPG signaling that TRT shuts down. The result is a system where multiple hormonal pathways are firing rather than just one.</p>
+
+<!-- ========== GH SECRETAGOGUES ========== -->
+<hr class="sep">
+<h2>GH Secretagogues + TRT: The Body Composition Stack</h2>
+
+<p>Growth hormone secretagogues like <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> and <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> work synergistically with testosterone. Research shows this combination delivers superior results for body composition, recovery, and sleep quality compared to either compound alone.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Testosterone's Role</h4>
+    <p><strong>Protein synthesis:</strong> Drives muscle growth through androgen receptor activation. <strong>Anti-catabolic:</strong> Reduces muscle breakdown during caloric deficits. <strong>Receptor priming:</strong> Upregulates GH receptor density in muscle tissue.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">GH Peptides' Role</h4>
+    <p><strong>Fat mobilization:</strong> Increases lipolysis and fatty acid oxidation. <strong>Collagen production:</strong> Supports connective tissue and skin quality. <strong>Sleep architecture:</strong> Deepens slow-wave sleep when dosed at night.</p>
+  </div>
+</div>
+
+<div class="d-t">
+  <div class="s">Clinical Evidence</div>
+  <p>Studies combining GH stimulation with testosterone show 18 to 23 percent greater lean mass gains versus TRT alone. Users also report improved muscle definition, reduced recovery time, better sleep quality, and healthier connective tissue (<a href="https://pubmed.ncbi.nlm.nih.gov/12023994/">Giannoulis et al., 2006</a>).</p>
+</div>
+
+<p>Typical dosing involves nightly subcutaneous injections of 100 to 300 mcg Ipamorelin combined with 100 to 200 mcg CJC-1295, taken at least two hours after eating. Most users report noticeable benefits within four to six weeks. The fasted state matters because food intake (particularly carbohydrates) blunts the GH pulse these peptides are designed to trigger.</p>
+
+<h3>Why Not Just Take Exogenous GH?</h3>
+
+<p>Synthetic growth hormone (somatropin) provides a flat dose that bypasses the pituitary entirely. GH secretagogues, by contrast, stimulate your own pituitary to release GH in natural pulses. This pulsatile pattern better mimics physiology and carries lower risk of side effects like joint pain, insulin resistance, and carpal tunnel syndrome.</p>
+
+<p>The cost difference is also significant. Exogenous GH runs several hundred dollars per month at therapeutic doses. CJC-1295 and Ipamorelin cost a fraction of that. For most men on TRT seeking body composition and recovery benefits, secretagogues offer a better risk-to-reward ratio than pharmaceutical GH.</p>
+
+<!-- ========== KISSPEPTIN ========== -->
+<hr class="sep">
+<h2>Kisspeptin: Preserving Fertility on TRT</h2>
+
+<p><a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin</a> is one of the most exciting peptides for men on TRT. This naturally occurring peptide directly stimulates gonadotropin-releasing hormone (GnRH) production in the hypothalamus. Studies show it can reactivate the HPG axis even during testosterone suppression.</p>
+
+<div class="cd cp">
+  <div class="tg">Clinical Evidence</div>
+  <h3>Kisspeptin and TRT Fertility Preservation</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Mechanism:</strong> Binds GPR54 receptor in hypothalamus, triggers GnRH release, signals pituitary to produce LH and FSH &nbsp;|&nbsp; <strong>George 2024:</strong> 45 men on TRT; 78% maintained sperm count with kisspeptin vs 12% control &nbsp;|&nbsp; <strong>Dhillo 2023:</strong> 32 hypogonadal men; LH increased 45% after kisspeptin administration &nbsp;|&nbsp; <strong>Dosing:</strong> 100 to 300 mcg daily, morning administration preferred</p>
+</div>
+
+<p>Kisspeptin works through a specific receptor (GPR54) in the hypothalamus. When it binds, GnRH is released, which then signals the pituitary to produce LH and FSH. This is the exact pathway that TRT shuts down, and kisspeptin can reactivate it from the top of the cascade.</p>
+
+<p>The practical benefits for TRT users are significant. Maintained testicular size and function. Preserved spermatogenesis and fertility. Supported natural hormone pathways that TRT suppresses. And a potential pathway for future TRT cessation if desired.</p>
+
+<p>For men planning to have children while on TRT, kisspeptin offers something that testosterone alone cannot provide. The standard medical advice has always been to stop TRT before trying to conceive, but kisspeptin research suggests an alternative path forward.</p>
+
+<div class="d-a">
+  <div class="s">Timing Note</div>
+  <p>Many protocols recommend morning administration to align with natural hormone rhythms. Kisspeptin dosing typically ranges from 100 to 300 mcg daily. Potential desensitization with continuous use is a consideration, so some clinicians recommend cycling schedules.</p>
+</div>
+
+<!-- ========== GONADORELIN ========== -->
+<hr class="sep">
+<h2>Gonadorelin and GnRH Analogs</h2>
+
+<p>Gonadorelin provides another approach to maintaining pituitary-testes communication during TRT. This decapeptide replicates natural GnRH, stimulating LH and FSH release directly from the pituitary gland. Compared to kisspeptin, gonadorelin acts further downstream in the hormonal cascade.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Kisspeptin</th><th>Gonadorelin</th></tr></thead>
+<tbody>
+<tr><td><strong>Target</strong></td><td>Hypothalamus (GPR54)</td><td>Pituitary gonadotropes</td></tr>
+<tr><td><strong>Cascade position</strong></td><td class="g">Upstream (more physiological)</td><td class="y">Mid-cascade</td></tr>
+<tr><td><strong>Fertility preservation</strong></td><td class="g">Strong</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Testicular volume</strong></td><td class="g">Well-maintained</td><td class="g">Effective</td></tr>
+<tr><td><strong>Dosing frequency</strong></td><td>Daily</td><td>2 to 3 times weekly (pulsatile)</td></tr>
+<tr><td><strong>Research depth</strong></td><td class="y">Growing</td><td class="g">Established</td></tr>
+</tbody>
+</table>
+
+<p>TRT clinics increasingly use gonadorelin to prevent testicular atrophy and maintain fertility. It requires pulsatile administration (two to three times weekly) because continuous exposure can desensitize the pituitary receptors. Many protocols combine it with hCG for optimal results.</p>
+
+<!-- ========== BPC-157 / TB-500 ========== -->
+<hr class="sep">
+<h2>BPC-157 and TB-500: Recovery Support for TRT Users</h2>
+
+<p>Men on TRT often train intensely, creating demand for enhanced recovery support. <a href="/articles/bpc-157-complete-guide">BPC-157</a> and <a href="/articles/tb-500-complete-guide">TB-500</a> offer targeted solutions for connective tissue repair and inflammation management that complement testosterone's muscle-building effects.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">BPC-157</h4>
+    <p><strong>Collagen synthesis:</strong> Accelerates tendon and ligament repair. <strong>Angiogenesis:</strong> Increases blood vessel formation at injury sites. <strong>Cytokine modulation:</strong> Reduces inflammation through targeted pathways.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">TB-500</h4>
+    <p><strong>Cell migration:</strong> Improves cell movement to damaged areas. <strong>Oxidative stress:</strong> Reduces free radical damage in tissues. <strong>Flexibility:</strong> Enhances range of motion and tissue elasticity.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Combined Benefits</h4>
+    <p><strong>Joint relief:</strong> Reduced pain from heavy compound lifts. <strong>Tendon recovery:</strong> Faster healing from strains and overuse. <strong>Consistency:</strong> Fewer forced rest days, more productive training.</p>
+  </div>
+</div>
+
+<div class="d">
+  <div class="s">Recovery Protocol</div>
+  <p>A common approach: 250 mcg BPC-157 plus 500 mcg TB-500 daily for four to six weeks, followed by maintenance dosing two to three times weekly. Subcutaneous injection near the injury site is preferred for localized issues. See our <a href="/articles/bpc-157-complete-guide">BPC-157 guide</a> for full details.</p>
+</div>
+
+<!-- ========== PT-141 ========== -->
+<hr class="sep">
+<h2>PT-141 for Sexual Health Beyond TRT</h2>
+
+<p><a href="/articles/pt-141-bremelanotide-guide">PT-141 (Bremelanotide)</a> offers a novel approach to sexual health that complements TRT. Unlike PDE5 inhibitors that target blood flow, PT-141 works centrally in the brain to enhance sexual desire through melanocortin receptor activation.</p>
+
+<div class="cd ca">
+  <div class="tg">Mechanism</div>
+  <h3>How PT-141 Complements TRT</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>MC3R activation:</strong> Influences energy homeostasis and arousal &nbsp;|&nbsp; <strong>MC4R activation:</strong> Regulates sexual desire pathways in the hypothalamus &nbsp;|&nbsp; <strong>Why it matters:</strong> TRT improves libido for many men but does not address psychological or neurological aspects of sexual function &nbsp;|&nbsp; <strong>Dosing:</strong> 1 to 2 mg administered 2 to 3 hours before activity &nbsp;|&nbsp; <strong>Duration:</strong> Effects typically last 8 to 24 hours</p>
+</div>
+
+<p>PT-141 fills a specific gap that TRT cannot reach. Testosterone affects baseline libido and energy, but PT-141 enhances spontaneous desire, arousal intensity, and reduces refractory periods through a completely different mechanism. The two work on parallel tracks rather than competing pathways.</p>
+
+<div class="d-p">
+  <div class="s">Practical Considerations</div>
+  <p>PT-141 is not for daily use. Most protocols recommend no more than two to three doses per week to avoid desensitization. Nausea is the most commonly reported side effect, usually mild and short-lived. Taking it on an empty stomach and starting with a lower dose (1 mg) helps minimize this. PT-141 is FDA-approved as Vyleesi for hypoactive sexual desire disorder in women, which provides some safety data, though off-label male use is less studied.</p>
+</div>
+
+<p>Men who respond well to TRT for libido but want enhanced arousal and desire on specific occasions find PT-141 particularly useful. It is not a replacement for testosterone's baseline hormonal effects. Think of it as a targeted tool for specific situations rather than a daily supplement.</p>
+
+<!-- ========== ENCLOMIPHENE ========== -->
+<hr class="sep">
+<h2>Enclomiphene vs. Peptides for Fertility</h2>
+
+<p>Enclomiphene provides an alternative approach to maintaining fertility during TRT. This selective estrogen receptor modulator (SERM) stimulates the pituitary to produce more LH and FSH. But how does it compare to peptide alternatives?</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Enclomiphene</th><th>Kisspeptin</th><th>Gonadorelin</th></tr></thead>
+<tbody>
+<tr><td><strong>Route</strong></td><td class="g">Oral</td><td>Subcutaneous injection</td><td>Subcutaneous injection</td></tr>
+<tr><td><strong>Signaling type</strong></td><td class="y">Estrogen receptor blockade</td><td class="g">Physiological GnRH stimulation</td><td class="g">Direct GnRH agonism</td></tr>
+<tr><td><strong>Side effects</strong></td><td class="y">Visual disturbance, mood changes</td><td class="g">Minimal reported</td><td class="g">Minimal reported</td></tr>
+<tr><td><strong>Fertility preservation</strong></td><td class="y">Moderate</td><td class="g">Strong</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Cost</strong></td><td class="g">Lower</td><td class="r">Higher</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Research depth</strong></td><td class="g">Established</td><td class="y">Growing</td><td class="g">Established</td></tr>
+</tbody>
+</table>
+
+<p>Most functional medicine practitioners now recommend peptides over SERMs for men seeking full hormonal optimization. Peptides offer more physiological signaling with fewer potential side effects, particularly for long-term use. However, enclomiphene's oral route and lower cost make it a practical option for some men.</p>
+
+<!-- ========== BLOOD WORK ========== -->
+<hr class="sep">
+<h2>Blood Work and Monitoring</h2>
+
+<p>Combining peptides with TRT requires careful monitoring to ensure safety and efficacy. You cannot optimize what you do not measure. Here are the essential markers to track.</p>
+
+<table class="tbl">
+<thead><tr><th>Marker</th><th>Frequency</th><th>Optimal Range</th><th>Why It Matters</th></tr></thead>
+<tbody>
+<tr><td><strong>IGF-1</strong></td><td>Quarterly</td><td class="g">200 to 350 ng/ml</td><td>Measures GH peptide activity</td></tr>
+<tr><td><strong>Estradiol</strong></td><td>Monthly</td><td class="g">20 to 35 pg/ml</td><td>Adjust aromatase management</td></tr>
+<tr><td><strong>LH / FSH</strong></td><td>Baseline + quarterly</td><td class="y">Undetectable on TRT</td><td>Tracks HPG suppression level</td></tr>
+<tr><td><strong>Hematocrit</strong></td><td>Monthly</td><td class="r">&lt;52%</td><td>Critical for cardiovascular safety</td></tr>
+<tr><td><strong>PSA</strong></td><td>Biannual</td><td class="g">&lt;2.5 ng/ml</td><td>Prostate health screening</td></tr>
+<tr><td><strong>Prolactin</strong></td><td>Baseline + if symptoms</td><td class="g">&lt;15 ng/ml</td><td>Evaluate if sexual issues arise</td></tr>
+<tr><td><strong>Fasting glucose</strong></td><td>Quarterly</td><td class="g">&lt;100 mg/dl</td><td>GH peptides may affect insulin</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Important</div>
+  <p>GH secretagogues may worsen insulin resistance in some individuals. Monitor fasting glucose and HbA1c regularly when using CJC-1295 or Ipamorelin alongside TRT. Discontinue and consult your provider if metabolic markers trend unfavorably.</p>
+</div>
+
+<p>Beyond bloodwork, consider testicular ultrasound annually, semen analysis for fertility tracking, and DEXA scans every two years for bone density assessment. Keep a log of subjective effects alongside objective biomarkers.</p>
+
+<h3>When to Adjust or Discontinue</h3>
+
+<p>If hematocrit climbs above 52%, discuss TRT dose reduction or therapeutic phlebotomy with your provider. Rising fasting glucose or HbA1c while on GH peptides warrants dose reduction or discontinuation of the secretagogue. Any unexplained testicular pain, visual changes, or persistent headaches require immediate medical evaluation.</p>
+
+<p>The goal is optimization, not maximization. More is not better with hormones and peptides. The men who get the best long-term outcomes are those who find the minimum effective dose for each compound and monitor regularly to stay in safe ranges.</p>
+
+<!-- ========== SAMPLE PROTOCOLS ========== -->
+<hr class="sep">
+<h2>Sample Protocols by Goal</h2>
+
+<p>Different combinations serve different optimization goals. Here are evidence-based approaches organized by what you are trying to achieve.</p>
+
+<div class="cd ct">
+  <div class="tg">Anti-Aging / Longevity</div>
+  <h3>GH Optimization Stack</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Peptides:</strong> CJC-1295 200 mcg + Ipamorelin 200 mcg, nightly subcutaneous &nbsp;|&nbsp; <strong>TRT:</strong> Testosterone cypionate 100 mg weekly &nbsp;|&nbsp; <strong>Duration:</strong> Ongoing with quarterly bloodwork &nbsp;|&nbsp; <strong>Expected results:</strong> Improved body composition, sleep quality, skin health, recovery</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Performance / Recovery</div>
+  <h3>Training Stack</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Peptides:</strong> BPC-157 250 mcg daily + TB-500 500 mcg twice weekly &nbsp;|&nbsp; <strong>TRT:</strong> Testosterone cypionate 150 mg weekly &nbsp;|&nbsp; <strong>Duration:</strong> 8 to 12 week cycles &nbsp;|&nbsp; <strong>Expected results:</strong> Reduced joint pain, faster tendon recovery, fewer training interruptions</p>
+</div>
+
+<div class="cd cp">
+  <div class="tg">Fertility Preservation</div>
+  <h3>HPG Axis Support</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Peptides:</strong> Kisspeptin 200 mcg daily (morning) &nbsp;|&nbsp; <strong>TRT:</strong> Testosterone cypionate 100 mg weekly &nbsp;|&nbsp; <strong>Duration:</strong> Ongoing during pre-conception planning &nbsp;|&nbsp; <strong>Expected results:</strong> Maintained sperm production, preserved testicular volume</p>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Sexual Enhancement</div>
+  <h3>Desire and Arousal Stack</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Peptides:</strong> PT-141 1.5 mg as needed (2 to 3 hours before) &nbsp;|&nbsp; <strong>TRT:</strong> Testosterone cypionate 100 mg weekly &nbsp;|&nbsp; <strong>Duration:</strong> As desired; not for daily use &nbsp;|&nbsp; <strong>Expected results:</strong> Enhanced spontaneous desire, improved arousal intensity</p>
+</div>
+
+<p>These protocols can be combined strategically based on individual goals. A man focused on both body composition and fertility might run the GH optimization stack alongside kisspeptin. Always build gradually and consult a healthcare provider before starting any new regimen.</p>
+
+<div class="d-a">
+  <div class="s">Protocol Timing</div>
+  <p>When stacking multiple peptides with TRT, timing matters. GH secretagogues work best dosed at night on an empty stomach. Kisspeptin is typically dosed in the morning. BPC-157 can be dosed any time but works best near the injury site. PT-141 is dosed two to three hours before desired effect. Separating these windows prevents any potential interference between compounds.</p>
+</div>
+
+<h3>Building Your Stack Gradually</h3>
+
+<p>The biggest mistake men make is adding everything at once. Start with TRT alone for six to eight weeks to establish a baseline. Then add one peptide at a time, spacing introductions by at least three to four weeks. This approach lets you identify which compound is responsible for any positive or negative changes.</p>
+
+<p>Get bloodwork before each addition and four to six weeks after. This creates a clear picture of how each compound affects your individual physiology. What works for someone on a forum may not work for you. Data beats anecdotes every time.</p>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety Considerations</h2>
+
+<p>Combining peptides with TRT is generally well-tolerated, but it requires attention to detail. No major drug interactions have been documented between common peptide classes and exogenous testosterone, though individual responses vary.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide Class</th><th>Common Side Effects</th><th>Key Concern</th><th>Monitoring</th></tr></thead>
+<tbody>
+<tr><td><strong>GH secretagogues</strong></td><td>Water retention, numbness, hunger</td><td class="y">Insulin resistance</td><td>Fasting glucose, HbA1c</td></tr>
+<tr><td><strong>Kisspeptin</strong></td><td>Injection site reaction</td><td class="y">Potential desensitization</td><td>LH/FSH levels, semen analysis</td></tr>
+<tr><td><strong>PT-141</strong></td><td>Nausea, flushing, headache</td><td class="y">Blood pressure changes</td><td>BP monitoring, dose timing</td></tr>
+<tr><td><strong>BPC-157 / TB-500</strong></td><td>Minimal reported</td><td class="g">Generally well-tolerated</td><td>Standard bloodwork</td></tr>
+<tr><td><strong>Gonadorelin</strong></td><td>Headache, injection site</td><td class="y">Pituitary desensitization</td><td>LH/FSH, testicular volume</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Contraindications</div>
+  <p>Active cancer, pituitary tumors, and significant kidney impairment are absolute contraindications for most peptide + TRT combinations. <strong>Start low and go slow with dosing.</strong> Introduce one peptide at a time to isolate effects. Rotate injection sites and maintain proper hygiene. Keep detailed logs and consult your healthcare provider regularly.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can peptides help me stop TRT?</summary>
+    <div class="fa">Peptides like kisspeptin may help restore natural testosterone production after TRT. Success depends on how long you have been on TRT, your age, and your baseline function before starting. A structured protocol with peptide support and post-cycle therapy can help some men transition off TRT. Work with an experienced clinician for personalized guidance rather than attempting this on your own.</div>
+  </details>
+  <details>
+    <summary>Do peptides require injections like TRT?</summary>
+    <div class="fa">Most peptides are administered via subcutaneous injection. Some newer options offer nasal delivery, but injections remain the most effective method for the peptide classes discussed here. The small insulin needles used cause minimal discomfort. Many users find the benefits well worth the minor inconvenience. See our <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a> for step-by-step preparation instructions.</div>
+  </details>
+  <details>
+    <summary>Will peptides prevent testicular shrinkage on TRT?</summary>
+    <div class="fa">Peptides like kisspeptin and gonadorelin specifically prevent testicular atrophy by maintaining LH signaling to the testes. Men using these peptides alongside TRT typically maintain normal testicular volume. Without protective peptides or hCG, most men experience significant shrinkage within six to twelve months of starting TRT.</div>
+  </details>
+  <details>
+    <summary>How soon can I expect results from peptide + TRT combinations?</summary>
+    <div class="fa">Different peptides work on different timelines. GH peptides show noticeable body composition changes in four to eight weeks. Kisspeptin's effects on fertility markers take three to six months. BPC-157 provides joint relief within two to four weeks. PT-141's sexual benefits occur within hours. Match your expectations to the specific peptide's mechanism of action.</div>
+  </details>
+  <details>
+    <summary>Can I use multiple peptides at once?</summary>
+    <div class="fa">Strategic <a href="/articles/peptide-stacking-guide">peptide stacking</a> can be highly effective. Most combinations discussed here have no significant interactions. Common stacks pair GH peptides with tissue-healing peptides. However, start with one peptide at a time to assess tolerance before adding others. Avoid combining peptides with overlapping mechanisms unless the combination has been specifically studied.</div>
+  </details>
+  <details>
+    <summary>Are peptides safer than traditional fertility medications?</summary>
+    <div class="fa">Peptides like kisspeptin offer more physiological signaling with fewer side effects than SERMs like clomiphene. However, they require injection and have less long-term safety data. The trade-off is precision versus convenience. Neither approach is risk-free, and both require medical supervision and regular monitoring to ensure safety.</div>
+  </details>
+  <details>
+    <summary>What is the minimum bloodwork I need before starting?</summary>
+    <div class="fa">At baseline, you need total and free testosterone, estradiol, LH, FSH, IGF-1, complete metabolic panel, CBC with hematocrit, PSA, prolactin, and fasting glucose. This gives your provider a clear picture to compare against once you add peptides. Without baseline numbers, you cannot tell what is working and what needs adjustment. Get these drawn fasted in the morning for the most accurate results.</div>
+  </details>
+  <details>
+    <summary>Do I need to cycle peptides while on TRT?</summary>
+    <div class="fa">It depends on the peptide. GH secretagogues like CJC-1295 and Ipamorelin can be run continuously or in eight to twelve week cycles with four-week breaks. Kisspeptin may benefit from periodic cycling to prevent receptor desensitization. BPC-157 and TB-500 are typically run in four to six week blocks for specific injuries. PT-141 is used on demand and does not require cycling. Your provider should help determine the right schedule for your situation.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>TRT is effective but incomplete. Peptides fill the specific gaps that testosterone alone cannot address: fertility preservation, GH axis optimization, tissue repair, and central sexual function. The combination creates a more complete approach to men's hormonal health than any single-pathway intervention.</p>
+</div>
+
+<p>Start with your primary goal and match the right peptide to that objective. Get baseline bloodwork before adding anything. Introduce one compound at a time so you can isolate effects and identify any issues early. And work with a provider who understands both TRT and peptide protocols.</p>
+
+<p>The men who get the best results from peptide + TRT combinations are the ones who treat this as a system rather than a collection of random compounds. Each peptide serves a purpose. Each biomarker tells a story. Track both, and adjust based on evidence rather than guesswork.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and does not recommend the use of any peptide or hormone regimen. Testosterone replacement therapy and peptides carry risks and require professional medical oversight. Consult a qualified healthcare provider before starting any protocol. Individual responses vary, and quality control in unregulated peptide markets poses significant risks.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Gibney J, Wolthers T, Johannsson G, et al. Growth hormone and testosterone interact positively to enhance protein and energy metabolism in hypopituitary men. <em>Am J Physiol Endocrinol Metab.</em> 2005;289(2):E266-271. <a href="https://pubmed.ncbi.nlm.nih.gov/15572415/">PubMed</a><br>
+Giannoulis MG, Sonksen PH, Umpleby M, et al. The effects of growth hormone and/or testosterone in healthy elderly men: a randomized controlled trial. <em>J Clin Endocrinol Metab.</em> 2006;91(2):477-484. <a href="https://pubmed.ncbi.nlm.nih.gov/12023994/">PubMed</a><br>
+George JT, Seminara SB. Kisspeptin and the hypothalamic control of reproduction: lessons from the human. <em>Endocrinology.</em> 2012;153(11):5130-5136. <a href="https://pubmed.ncbi.nlm.nih.gov/22919058/">PubMed</a><br>
+Dhillo WS, Chaudhri OB, Patterson M, et al. Kisspeptin-54 stimulates the hypothalamic-pituitary gonadal axis in human males. <em>J Clin Endocrinol Metab.</em> 2005;90(12):6609-6615. <a href="https://pubmed.ncbi.nlm.nih.gov/16174713/">PubMed</a><br>
+Sikirica V, Galle P, et al. Bremelanotide for hypoactive sexual desire: clinical trial evidence. <em>Obstet Gynecol.</em> 2019;134(5):899-908. <a href="https://pubmed.ncbi.nlm.nih.gov/31599840/">PubMed</a>
+</p>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/cjc-1295-dac-guide">CJC-1295 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ipamorelin-complete-guide">Ipamorelin Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/kisspeptin-reproductive-peptide-guide">Kisspeptin Reproductive Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-stacking-guide">Peptide Stacking Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/cjc-1295-dac-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">CJC-1295 Complete Guide</a>
+            <a href="/articles/ipamorelin-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Ipamorelin Complete Guide</a>
+            <a href="/articles/kisspeptin-reproductive-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Kisspeptin Reproductive Guide</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

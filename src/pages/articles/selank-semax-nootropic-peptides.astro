@@ -1,0 +1,605 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Selank and Semax: Russian Nootropic Peptides Explained",
+  description: "A complete guide to Selank and Semax, two nootropic peptides developed in Russia for anxiety, cognition, and neuroprotection. Mechanisms, dosing, stacking, and safety.",
+  image: "/images/articles/selank-semax.webp",
+  date: "2026-02-14",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Nootropics &middot; Cognitive Enhancement</div>
+  <h1>Selank and Semax: Russian Nootropic Peptides Explained</h1>
+  <p class="sub">Two synthetic peptides developed at the Russian Academy of Sciences, approved as prescription medications in Russia, and widely used by nootropic enthusiasts worldwide. What the research says about mechanisms, dosing, stacking, and safety.</p>
+  <div class="pills">
+    <span class="pill">Anxiolytic &middot; Nootropic</span>
+    <span class="pill">Intranasal Delivery</span>
+    <span class="pill">GABA &middot; BDNF &middot; NGF</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">2</div><div class="l">Peptides<br>Compared</div></div>
+  <div class="sb"><div class="v c2">20+</div><div class="l">Years of Russian<br>Clinical Use</div></div>
+  <div class="sb"><div class="v c3">GABA</div><div class="l">Selank Primary<br>Mechanism</div></div>
+  <div class="sb"><div class="v c4">BDNF</div><div class="l">Semax Primary<br>Mechanism</div></div>
+</div>
+
+<p>Russia has a long and somewhat underappreciated history of peptide research. While Western pharmaceutical development focused on small molecules and later biologics, Russian scientists were quietly building an impressive body of work on synthetic <a href="/articles/what-are-peptides-beginners-guide">peptides</a> for cognitive enhancement and immune modulation.</p>
+
+<p>Two peptides that came out of this tradition stand out: <a href="/articles/selank-complete-guide">Selank</a> and <a href="/articles/semax-complete-guide">Semax</a>. Both were developed at the Institute of Molecular Genetics of the Russian Academy of Sciences, and both have been approved as prescription medications in Russia.</p>
+
+<p>In the West, they've built a dedicated following among nootropic enthusiasts and biohackers. But there's more to these peptides than internet hype. Let's look at what the research actually tells us.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational comparison of Selank and Semax covering their origins, mechanisms, dosing, stacking protocols, and safety profiles. It is <strong>not a recommendation to use either peptide</strong>. Neither is FDA-approved in the United States. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== ORIGINS ========== -->
+<hr class="sep">
+<h2>Origins: From Soviet Research Labs to Modern Nootropics</h2>
+
+<p>The development of both Selank and Semax traces back to Soviet-era research programs aimed at enhancing cognitive performance and stress resilience. The work was led by Nikolai Myasoedov and his colleagues at the Russian Academy of Sciences, starting in the 1980s and continuing through the post-Soviet period.</p>
+
+<p>The approach was clever. Rather than designing entirely novel molecules, the researchers took naturally occurring peptides and modified them to improve stability and bioactivity.</p>
+
+<div class="g2">
+  <div class="cd cb">
+    <div class="tg">Selank Origin</div>
+    <h3>Based on Tuftsin</h3>
+    <p style="font-size:14px;margin-bottom:0;">Derived from the immune peptide tuftsin (Thr-Lys-Pro-Arg). A Pro-Gly-Pro tail was added to resist enzymatic breakdown and extend duration of action.</p>
+  </div>
+  <div class="cd cp">
+    <div class="tg">Semax Origin</div>
+    <h3>Based on ACTH (4&ndash;7)</h3>
+    <p style="font-size:14px;margin-bottom:0;">Derived from adrenocorticotropic hormone fragment (Met-Glu-His-Phe). Same Pro-Gly-Pro stabilizing tail. No hormonal effects from the parent molecule.</p>
+  </div>
+</div>
+
+<p>By the early 2000s, both peptides had completed clinical trials in Russia and received regulatory approval. Selank was approved as an anxiolytic, and Semax as a nootropic and neuroprotective agent. They're prescribed there for conditions ranging from generalized anxiety to stroke recovery.</p>
+
+<!-- ========== SELANK ========== -->
+<hr class="sep">
+<h2>Selank: The Anxiolytic Peptide</h2>
+
+<div class="cd ct">
+  <div class="tg">Compound Profile</div>
+  <h3>Selank (TP-7)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Sequence:</strong> Thr-Lys-Pro-Arg-Pro-Gly-Pro &nbsp;|&nbsp; <strong>Type:</strong> Synthetic heptapeptide &nbsp;|&nbsp; <strong>Parent:</strong> Tuftsin (immune peptide) &nbsp;|&nbsp; <strong>Route:</strong> Intranasal spray &nbsp;|&nbsp; <strong>Primary Actions:</strong> Anxiolytic, immunomodulatory, nootropic &nbsp;|&nbsp; <strong>Russian Approval:</strong> Anxiolytic medication</p>
+</div>
+
+<h3>How Selank Works</h3>
+
+<p>Selank's mechanisms are multifaceted. The research points to several distinct pathways working in parallel.</p>
+
+<div class="svg-box">
+  <div class="st">Selank: Multi-Pathway Mechanism of Action</div>
+  <div class="ss">GABA modulation &middot; Serotonin metabolism &middot; BDNF expression &middot; Immune regulation</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- GABA -->
+    <rect x="15" y="10" width="160" height="240" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">GABA System</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">INHIBITORY</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Enhances GABA</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">signaling in brain</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Anxiolytic effect</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">No sedation</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">No addiction risk</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="210" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Calm without fog</text>
+
+    <!-- Serotonin -->
+    <rect x="190" y="10" width="160" height="240" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Serotonin</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">MOOD REGULATION</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Influences serotonin</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">metabolism enzymes</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Mood stabilization</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Emotional balance</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Stress resilience</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="270" y="210" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Stable mood baseline</text>
+
+    <!-- BDNF -->
+    <rect x="365" y="10" width="160" height="240" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">BDNF</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">NEUROPLASTICITY</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Increases BDNF</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">expression in brain</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Neuronal survival</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Synaptic growth</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Cognitive support</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="445" y="210" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Long-term brain health</text>
+
+    <!-- Immune -->
+    <rect x="540" y="10" width="145" height="240" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Immune</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">IMMUNOMODULATORY</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Modulates cytokine</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#38; immune gene</text>
+    <text x="612" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">expression</text>
+    <text x="612" y="137" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Balanced immune</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">response</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="210" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Tuftsin-derived benefit</text>
+  </svg>
+</div>
+
+<h4>GABAergic Modulation</h4>
+<p>Selank appears to influence the GABA system, the brain's primary inhibitory neurotransmitter network. A study by Seredenin et al. found that Selank enhanced the effects of GABA in the brain, producing anxiolytic effects comparable to benzodiazepines but without the sedation or addiction potential (<a href="https://pubmed.ncbi.nlm.nih.gov/12596521/">Seredenin et al., 2002</a>).</p>
+
+<h4>Serotonin Metabolism</h4>
+<p>Research has shown that Selank influences serotonin metabolism, particularly affecting the enzyme responsible for breaking down serotonin. This could contribute to its mood-stabilizing properties (<a href="https://pubmed.ncbi.nlm.nih.gov/18683656/">Narkevich et al., 2008</a>).</p>
+
+<h4>BDNF Expression</h4>
+<p>Brain-derived neurotrophic factor is critical for neuroplasticity and neuronal survival. Selank has been shown to increase BDNF expression in animal models, which may explain some of its cognitive benefits (<a href="https://pubmed.ncbi.nlm.nih.gov/18683655/">Inozemtseva et al., 2008</a>).</p>
+
+<h4>Immune Modulation</h4>
+<p>Since Selank is based on tuftsin, it retains immunomodulatory properties. A study published in <em>Immunology</em> demonstrated that Selank could modulate the expression of 45 inflammation-related genes (<a href="https://pubmed.ncbi.nlm.nih.gov/23710696/">Kolomin et al., 2013</a>).</p>
+
+<h3>Selank Research Findings</h3>
+
+<p>Clinical studies conducted in Russia have shown Selank to be effective for generalized anxiety disorder, with efficacy comparable to medazepam (a benzodiazepine) but with a better safety profile. Patients showed reduced anxiety scores without significant sedation or cognitive impairment (<a href="https://pubmed.ncbi.nlm.nih.gov/18577217/">Zozulya et al., 2008</a>).</p>
+
+<p>Animal studies have demonstrated anxiolytic effects across multiple behavioral models. Selank-treated animals show reduced anxiety-like behaviors in the elevated plus maze, light-dark box, and other standard anxiety tests.</p>
+
+<p>The immune angle is interesting too. Some research suggests Selank could be beneficial during periods of high stress or immune challenge, though this application needs more clinical data.</p>
+
+<div class="d-p d">
+  <div class="s">Clinical Context</div>
+  <p>In Russian clinical practice, Selank is prescribed for generalized anxiety disorder and neurasthenia. It's considered a first-line option when patients need anxiolytic relief without the cognitive dulling that benzodiazepines cause. Physicians there also note its favorable interaction profile with other medications.</p>
+</div>
+
+<p>For a deeper look at Selank, see our <a href="/articles/selank-complete-guide">complete Selank guide</a>.</p>
+
+<!-- ========== SEMAX ========== -->
+<hr class="sep">
+<h2>Semax: The Cognitive Enhancer</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Semax (ACTH 4&ndash;7 Analog)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Sequence:</strong> Met-Glu-His-Phe-Pro-Gly-Pro (MEHFPGP) &nbsp;|&nbsp; <strong>Type:</strong> Synthetic heptapeptide &nbsp;|&nbsp; <strong>Parent:</strong> ACTH fragment &nbsp;|&nbsp; <strong>Route:</strong> Intranasal spray, subcutaneous &nbsp;|&nbsp; <strong>Primary Actions:</strong> Nootropic, neuroprotective, neurogenic &nbsp;|&nbsp; <strong>Russian Approval:</strong> Nootropic &#38; neuroprotective medication</p>
+</div>
+
+<p>Despite being derived from ACTH, Semax doesn't have the hormonal effects you'd expect from its parent molecule. It doesn't stimulate cortisol production or affect the adrenal glands in any meaningful way. The researchers specifically isolated the cognitive-enhancing fragment while leaving the hormonal activity behind.</p>
+
+<h3>How Semax Works</h3>
+
+<div class="cd ct">
+  <div class="tg">Key Mechanism</div>
+  <h3>BDNF and NGF Upregulation</h3>
+  <p style="font-size:14px;margin-bottom:0;">This is Semax's most well-documented mechanism. Multiple studies show that Semax significantly increases brain-derived neurotrophic factor and nerve growth factor expression. One study found Semax increased BDNF mRNA expression by up to 1.4-fold in the rat hippocampus and cortex (<a href="https://pubmed.ncbi.nlm.nih.gov/16996037/">Dolotov et al., 2006</a>).</p>
+</div>
+
+<h4>Dopaminergic and Serotonergic Effects</h4>
+<p>Semax influences monoamine neurotransmitter systems. Research shows it modulates dopamine and serotonin turnover in the brain, which contributes to its effects on attention, motivation, and mood (<a href="https://pubmed.ncbi.nlm.nih.gov/16353768/">Eremin et al., 2005</a>).</p>
+
+<h4>Neuroprotection</h4>
+<p>In models of ischemic brain injury, Semax has demonstrated significant neuroprotective effects. It appears to reduce oxidative stress, inhibit inflammatory cascades, and support neuronal survival in oxygen-deprived conditions (<a href="https://pubmed.ncbi.nlm.nih.gov/16447576/">Gusev et al., 2005</a>).</p>
+
+<h4>Gene Expression</h4>
+<p>A study by Agapova et al. found that Semax affected the expression of a wide range of genes related to the immune system and vascular function in rat brain tissue after ischemic stroke (<a href="https://pubmed.ncbi.nlm.nih.gov/18044688/">Agapova et al., 2007</a>).</p>
+
+<h3>Semax Research Findings</h3>
+
+<p>In Russia, Semax has been used clinically for several conditions. Its primary approved indication is stroke recovery, where clinical studies have shown improved neurological outcomes when administered during the acute phase of ischemic stroke.</p>
+
+<p>One Russian clinical trial involving stroke patients found that intranasal Semax administration within the first 12 hours of ischemic stroke led to significantly better neurological outcomes compared to standard treatment alone (<a href="https://pubmed.ncbi.nlm.nih.gov/16447576/">Gusev et al., 2005</a>).</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Stroke Recovery</h4>
+    <p>Primary approved indication. Improved neurological outcomes in acute ischemic stroke when added to standard treatment.</p>
+  </div>
+  <div class="mc">
+    <h4>Cognitive Enhancement</h4>
+    <p>Studies in healthy volunteers showed improved memory, attention, and mental performance following administration.</p>
+  </div>
+  <div class="mc">
+    <h4>Optic Nerve Support</h4>
+    <p>Approved in Russia for certain optic nerve conditions, with studies showing improved visual function.</p>
+  </div>
+</div>
+
+<p>For the full Semax compound profile with dosing details, see our <a href="/articles/semax-complete-guide">complete Semax guide</a>.</p>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>Selank vs. Semax: Head-to-Head Comparison</h2>
+
+<p>Despite both being Russian nootropic peptides administered the same way, Selank and Semax are quite different in their primary effects. Think of it this way: Selank quiets the noise, and Semax sharpens the signal.</p>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Aspect</th><th>Selank</th><th>Semax</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Parent molecule</td><td>Tuftsin (immune peptide)</td><td>ACTH (stress hormone fragment)</td></tr>
+    <tr><td>Primary effect</td><td class="g">Anxiolytic, calming</td><td class="g">Cognitive enhancement, stimulating</td></tr>
+    <tr><td>Key mechanism</td><td>GABA modulation, serotonin</td><td>BDNF/NGF upregulation, dopamine</td></tr>
+    <tr><td>Best for</td><td>Anxiety, stress, immune support</td><td>Focus, memory, neuroprotection</td></tr>
+    <tr><td>Subjective feel</td><td>Calm clarity</td><td>Motivated alertness</td></tr>
+    <tr><td>Energy effect</td><td class="y">Neutral to mildly calming</td><td class="g">Mildly stimulating</td></tr>
+    <tr><td>Sedation risk</td><td class="g">None</td><td class="g">None</td></tr>
+    <tr><td>Addiction potential</td><td class="g">None observed</td><td class="g">None observed</td></tr>
+  </tbody>
+</table>
+
+<p>Both improve cognitive function, but they approach it from opposite directions. Selank reduces the interference that anxiety and stress create. Semax directly enhances the neural hardware responsible for focus and memory.</p>
+
+<div class="cd ca">
+  <div class="tg">Practical Tip</div>
+  <h3>Choosing Between Them</h3>
+  <p style="font-size:14px;">If your main issue is racing thoughts, social anxiety, or stress-driven cognitive fog, Selank is the better starting point. If you're already calm but want sharper focus, faster recall, and more mental stamina, Semax is the pick.</p>
+  <p style="font-size:14px;margin-bottom:0;">Many users eventually try both, either separately or as a stack. The combination covers both sides of cognitive performance: reducing interference and boosting signal strength.</p>
+</div>
+
+<!-- ========== NASAL DELIVERY ========== -->
+<hr class="sep">
+<h2>Why Nasal Sprays? The Intranasal Advantage</h2>
+
+<p>Both Selank and Semax are primarily administered as nasal sprays. This isn't just for convenience. The nasal route provides direct access to the brain via the olfactory pathway, bypassing the blood-brain barrier and first-pass metabolism.</p>
+
+<div class="g2">
+  <div class="cd ca">
+    <div class="tg">Delivery Benefits</div>
+    <h3>Intranasal Advantages</h3>
+    <p style="font-size:14px;"><strong>Rapid onset:</strong> Effects typically felt within 15 to 30 minutes.</p>
+    <p style="font-size:14px;"><strong>Higher brain bioavailability:</strong> More peptide reaches the CNS compared to subcutaneous injection.</p>
+    <p style="font-size:14px;"><strong>Easy self-administration:</strong> No needles required.</p>
+    <p style="font-size:14px;margin-bottom:0;"><strong>Good absorption:</strong> The nasal mucosa is highly vascularized and provides efficient peptide absorption.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Technique Note</div>
+    <h3>Proper Spray Technique</h3>
+    <p style="font-size:14px;">Tilt your head slightly forward, insert the nozzle, and spray while gently inhaling.</p>
+    <p style="font-size:14px;margin-bottom:0;">Don't tilt your head back or sniff hard, as this sends the solution to the back of the throat rather than keeping it in contact with the nasal mucosa where absorption happens.</p>
+  </div>
+</div>
+
+<p>Most formulations come as pre-mixed nasal spray solutions. Some users reconstitute lyophilized powder into saline solution for nasal use. Either approach works, though pre-mixed formulations are more convenient.</p>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<div class="d-a d">
+  <div class="s">Important Note</div>
+  <p>These are reference points from published literature and community experience, not medical prescriptions. Start at the lower end and adjust based on your response. Consult a healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Parameter</th><th>Selank</th><th>Semax</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Standard daily dose</td><td>250 to 500 mcg</td><td>200 to 600 mcg</td></tr>
+    <tr><td>Typical protocol</td><td>1 spray/nostril, 2&ndash;3x daily</td><td>1&ndash;2 sprays/nostril, 2&ndash;3x daily</td></tr>
+    <tr><td>Cycle length</td><td>14 to 30 days</td><td>10 to 30 days</td></tr>
+    <tr><td>Onset</td><td class="y">First few days</td><td class="g">Within 30 minutes</td></tr>
+    <tr><td>Russian clinical max</td><td>Up to 750 mcg/day</td><td>Up to 1200 mcg/day (stroke, supervised)</td></tr>
+    <tr><td>Route</td><td>Intranasal</td><td>Intranasal (preferred), subcutaneous</td></tr>
+  </tbody>
+</table>
+
+<div class="cd cp">
+  <div class="tg">Variant Note</div>
+  <h3>N-Acetyl Semax Amidate (NASA)</h3>
+  <p style="font-size:14px;margin-bottom:0;">A modified version of Semax that some users prefer. It's claimed to be more potent and longer-lasting, though formal research on this specific analog is limited. If you're new to Semax, start with the standard form before experimenting with variants.</p>
+</div>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>Both peptides have favorable safety profiles based on available research and clinical use in Russia. Neither has shown the kind of serious adverse effects associated with pharmaceutical anxiolytics or stimulants.</p>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Selank Safety</div>
+    <h3>Generally Very Well Tolerated</h3>
+    <p style="font-size:14px;"><strong>Common:</strong> Occasional mild nasal irritation.</p>
+    <p style="font-size:14px;"><strong>Rare:</strong> Fatigue or drowsiness at higher doses.</p>
+    <p style="font-size:14px;"><strong>Withdrawal:</strong> No significant effects reported.</p>
+    <p style="font-size:14px;margin-bottom:0;"><strong>Dependency:</strong> None observed in studies.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Semax Safety</div>
+    <h3>Generally Well Tolerated</h3>
+    <p style="font-size:14px;"><strong>Common:</strong> Nasal irritation or dryness.</p>
+    <p style="font-size:14px;"><strong>Occasional:</strong> Headache at higher doses. Some users report mild irritability.</p>
+    <p style="font-size:14px;"><strong>Anecdotal:</strong> Hair growth (possibly related to neurotrophic factor upregulation).</p>
+    <p style="font-size:14px;margin-bottom:0;"><strong>Withdrawal:</strong> No significant effects reported.</p>
+  </div>
+</div>
+
+<p>That said, long-term safety data outside of Russian clinical practice is limited. Cycling protocols (2 to 4 weeks on, then a break) remain the prudent approach.</p>
+
+<!-- ========== STACK ========== -->
+<hr class="sep">
+<h2>The Selank + Semax Stack: Calm Focus</h2>
+
+<div class="d-t d">
+  <div class="s">Stack Summary</div>
+  <p>Selank quiets the noise (anxiety). Semax sharpens the signal (focus). Together, you get calm, productive focus without sedation or overstimulation.</p>
+</div>
+
+<p>Given their complementary mechanisms, combining <a href="/articles/selank-complete-guide">Selank</a> and <a href="/articles/semax-complete-guide">Semax</a> is a popular approach. The logic is straightforward: Selank handles the anxiety and stress side while Semax provides the cognitive boost.</p>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Protocol</th><th>Timing</th><th>Dose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="g">Morning Focus</td><td>AM</td><td>Semax 200&ndash;400 mcg intranasal</td></tr>
+    <tr><td class="g">Afternoon Calm</td><td>PM</td><td>Selank 250&ndash;500 mcg intranasal</td></tr>
+    <tr><td class="y">Balanced (Alternative)</td><td>AM, both together</td><td>Moderate doses of each, alternating nostrils</td></tr>
+  </tbody>
+</table>
+
+<p>Some people use them at the same time, alternating nostrils. Others separate them by a few hours. There's no formal research on the combination, but the mechanisms don't conflict, and anecdotal reports are generally positive.</p>
+
+<p>If you're new to either peptide, try them individually first. Get a sense of how each one affects you before combining. This lets you troubleshoot if something doesn't feel right.</p>
+
+<!-- ========== LEGAL ========== -->
+<hr class="sep">
+<h2>Legal Status</h2>
+
+<p>This is where things get complicated. For a full breakdown of peptide regulations, see our <a href="/articles/are-peptides-legal-fda-regulations-2026">2026 peptide legality guide</a>.</p>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Country / Region</th><th>Status</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Russia</td><td class="g">Approved Rx</td><td>Both approved as prescription medications. Widely available in pharmacies.</td></tr>
+    <tr><td>United States</td><td class="y">Gray area</td><td>Not FDA-approved. Not scheduled as controlled substances. Available through research suppliers.</td></tr>
+    <tr><td>European Union</td><td class="y">Unregulated</td><td>Not approved as medicines. Availability varies by country.</td></tr>
+    <tr><td>Australia</td><td class="r">Restricted</td><td>Stricter peptide regulation. Likely requires prescription through specialized pathways.</td></tr>
+    <tr><td>Canada</td><td class="y">Gray area</td><td>Not approved, not specifically prohibited.</td></tr>
+  </tbody>
+</table>
+
+<p>The regulatory environment for peptides is shifting. Several countries have tightened restrictions on research peptides in recent years. Check your local regulations before purchasing.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can I take Selank or Semax if I'm on antidepressants?</summary>
+    <div class="fa">
+      <p>Both peptides interact with serotonergic systems, so caution is warranted if you're taking SSRIs or other serotonergic medications. The risk of serotonin syndrome is likely low given the mild serotonergic effects, but consult your doctor before combining. Don't stop prescribed medications to try peptides.</p>
+    </div>
+  </details>
+  <details>
+    <summary>How do these compare to pharmaceutical nootropics like modafinil?</summary>
+    <div class="fa">
+      <p>Different tools for different situations. Modafinil is a strong wakefulness-promoting agent that works primarily through dopamine reuptake inhibition. Semax is gentler, with broader neurotrophic effects. Selank is more comparable to a mild anxiolytic.</p>
+      <p>The peptides won't hit as hard as modafinil for raw wakefulness, but they offer benefits (like neurotrophic support) that modafinil doesn't.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Do the effects build over time or are they immediate?</summary>
+    <div class="fa">
+      <p>Both. Semax has noticeable acute effects within 30 minutes (improved focus, mental clarity). But the neurotrophic effects (BDNF upregulation, neuroplasticity) build over days to weeks of consistent use.</p>
+      <p>Selank's anxiolytic effects are often noticed within the first few days, with full benefits developing over 1 to 2 weeks.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Can I use these peptides long-term?</summary>
+    <div class="fa">
+      <p>Russian clinical practice includes cycling protocols rather than continuous use. Typical cycles are 2 to 4 weeks on, followed by a break of similar length. Whether long-term continuous use is safe hasn't been adequately studied. Cycling is the prudent approach.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Are there oral versions available?</summary>
+    <div class="fa">
+      <p>Both peptides are primarily designed for intranasal use. Oral bioavailability would be very low for both due to enzymatic degradation. Sublingual administration has been tried by some users but isn't well-studied. Stick with intranasal for best results.</p>
+    </div>
+  </details>
+  <details>
+    <summary>What's the shelf life?</summary>
+    <div class="fa">
+      <p>Reconstituted solutions should be refrigerated and used within 4 to 6 weeks. Lyophilized powder stored properly (cool, dry, dark) can last much longer, potentially years. Pre-mixed nasal sprays usually have expiration dates on the packaging.</p>
+      <p>See our <a href="/articles/how-to-store-peptides">peptide storage guide</a> for best practices.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Will these show up on a drug test?</summary>
+    <div class="fa">
+      <p>Standard workplace drug tests screen for specific substances (amphetamines, opioids, THC, etc.) and would not detect either peptide. Athletic drug testing is a different matter.</p>
+      <p>WADA (World Anti-Doping Agency) has rules about peptide hormones, though Selank and Semax don't fall neatly into current prohibited categories. If you're a competitive athlete, check with your sport's anti-doping authority.</p>
+    </div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<p>Selank and Semax represent some of the most interesting nootropic peptides available today. They come with a stronger clinical backing than most compounds in the peptide space, thanks to decades of Russian research and actual regulatory approval in that country.</p>
+
+<p>Selank is your choice if anxiety and stress are your primary concerns. Semax is better suited if you're after cognitive enhancement and neuroprotection. Combining them gives you the best of both worlds.</p>
+
+<p>The main limitation is the lack of Western clinical trials. Most of the research was published in Russian journals, and while much of it has been translated, the studies don't always meet the methodological standards expected by Western regulatory bodies. That doesn't mean the science is wrong. It just means there's a gap that hasn't been filled yet.</p>
+
+<p>If you're interested in trying either peptide, start low, go slow, and keep notes on your response. These aren't miracle compounds, but for the right person, they can be genuinely helpful tools for cognitive optimization and stress management.</p>
+
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational purposes only and does not constitute medical advice. Selank and Semax are not FDA-approved in the United States. Always consult a qualified healthcare provider before starting any peptide protocol. Do not discontinue prescribed medications based on information in this article.
+</div>
+
+<h3>Related Reading</h3>
+<p style="font-size:14px;">
+<a href="/articles/selank-complete-guide">Selank: Complete Anxiolytic Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semax-complete-guide">Semax: Complete Nootropic Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cognition-stack-semax-selank-dihexa">Cognition Stack: Semax, Selank, and Dihexa</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cerebrolysin-neuropeptide-guide">Cerebrolysin Neuropeptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/selank-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Selank: Anxiolytic Peptide Guide</a>
+            <a href="/articles/semax-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semax: Nootropic Peptide Guide</a>
+            <a href="/articles/cognition-stack-semax-selank-dihexa" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Cognition Stack Guide</a>
+            <a href="/articles/cerebrolysin-neuropeptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Cerebrolysin Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
