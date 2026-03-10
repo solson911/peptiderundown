@@ -20,7 +20,7 @@ const {
 
 const origin = Astro.url.origin;
 const path = Astro.url.pathname;
-const normalizedPath = (path !== '/' && path.endsWith('/')) ? path.slice(0, -1) : path;
+const normalizedPath = (path === '/') ? path : (path.endsWith('/') ? path : path + '/');
 const computedCanonical = canonicalUrl || (origin + normalizedPath);
 const fullTitle = `${title} | PeptideRundown`;
 const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage);

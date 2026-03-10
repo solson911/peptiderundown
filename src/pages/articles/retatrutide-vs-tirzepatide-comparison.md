@@ -41,9 +41,9 @@ The glucagon component targets liver fat specifically and boosts calorie burning
 
 | Mechanism Component | Tirzepatide | Retatrutide |
 |---------------------|-------------|-------------|
-| GLP-1 receptor | ✅ Yes | ✅ Yes |
-| GIP receptor | ✅ Yes | ✅ Yes |
-| Glucagon receptor | ❌ No | ✅ Yes |
+| GLP-1 receptor | Yes | Yes |
+| GIP receptor | Yes | Yes |
+| Glucagon receptor | No | Yes |
 | Primary weight loss approach | Appetite reduction | Appetite reduction + increased calorie burn |
 
 ### Why Glucagon Matters
@@ -83,7 +83,7 @@ Phase 2 trial results for retatrutide are promising:
 | Duration to results | 72 weeks | 48 weeks |
 | Highest dose studied | 15mg weekly | 12mg weekly |
 | Liver fat reduction | ~50% | ~82% |
-| FDA approval status | ✅ Approved (2022) | ❌ Phase 3 trials |
+| FDA approval status | Approved (2022) | Phase 3 trials |
 
 These numbers come from different studies under different conditions. A direct comparison study would provide clearer answers.
 

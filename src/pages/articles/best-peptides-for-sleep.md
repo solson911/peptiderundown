@@ -176,11 +176,11 @@ Peptides have excellent safety profiles when used properly. Follow these guideli
 
 | Peptide     | Safety Rating | Cycle Length | Break Period | Common Side Effects       |
 |-------------|---------------|--------------|--------------|---------------------------|
-| DSIP        | ★★★★★         | Continuous   | None needed  | Rare, mild headache       |
-| Ipamorelin  | ★★★★☆         | 3 months     | 1 month      | Mild hunger increase      |
-| CJC-1295    | ★★★☆☆         | 2 months     | 2 months     | Water retention possible  |
-| Selank      | ★★★★☆         | 6 weeks      | 2 weeks      | Occasional nasal dryness  |
-| BPC-157     | ★★★★★         | Continuous   | None needed  | Rare, mild fatigue        |
+| DSIP        | 5/5           | Continuous   | None needed  | Rare, mild headache       |
+| Ipamorelin  | 4/5           | 3 months     | 1 month      | Mild hunger increase      |
+| CJC-1295    | 3/5           | 2 months     | 2 months     | Water retention possible  |
+| Selank      | 4/5           | 6 weeks      | 2 weeks      | Occasional nasal dryness  |
+| BPC-157     | 5/5           | Continuous   | None needed  | Rare, mild fatigue        |
 
 ### Synergistic Support Nutrients
 

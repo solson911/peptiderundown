@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://peptiderundown.com',
+  trailingSlash: 'always',
   integrations: [
     sitemap({
       customPages: [],
