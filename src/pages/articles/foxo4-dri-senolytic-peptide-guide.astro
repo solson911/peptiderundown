@@ -1,0 +1,549 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "FOXO4-DRI: The Senolytic Peptide Guide",
+  description: "A complete guide to FOXO4-DRI, the peptide targeting senescent cells. Mechanism, research, dosing, and how it compares to other senolytics.",
+  image: "/images/articles/foxo4-dri.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- GRADIENT HERO -->
+<div class="hero">
+  <div class="hero-k">Peptide Guides &middot; Longevity</div>
+  <h1>FOXO4-DRI: The Senolytic Peptide Targeting Zombie Cells</h1>
+  <p class="sub">A precision peptide designed to clear senescent "zombie cells" by disrupting the FOXO4-p53 survival axis. Here's what the research actually shows.</p>
+  <div class="pills">
+    <span class="pill">Senolytic</span>
+    <span class="pill">Anti-Aging</span>
+    <span class="pill">p53 Pathway</span>
+    <span class="pill">Preclinical</span>
+  </div>
+</div>
+
+<!-- STAT STRIPS -->
+<div class="sr">
+  <div class="sb"><div class="v c1">~2.2 kDa</div><div class="l">Molecular<br>Weight</div></div>
+  <div class="sb"><div class="v c2">80%</div><div class="l">Senescent Cell<br>Clearance (Mice)</div></div>
+  <div class="sb"><div class="v c3">36%</div><div class="l">Lifespan Extension<br>(Progeria Mice)</div></div>
+  <div class="sb"><div class="v c4">2017</div><div class="l">Key Study<br>Published</div></div>
+</div>
+
+<!-- INTRO -->
+<p>Aging isn't just about time passing. It's about what accumulates inside your tissues: senescent cells, sometimes called "zombie cells," that stop dividing but refuse to die.</p>
+
+<p>These damaged cells release inflammatory signals called the senescence-associated secretory phenotype (SASP). SASP damages surrounding healthy tissue and accelerates aging throughout the body. FOXO4-DRI is a synthetic <a href="/articles/what-are-peptides-beginners-guide">peptide</a> designed to selectively trigger death in these problematic cells while leaving healthy ones alone.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of FOXO4-DRI, covering its senolytic mechanism, preclinical research, dosing considerations, and comparison to other senolytics. It is <strong>not a recommendation to use FOXO4-DRI</strong>. This peptide is not approved for human use. Consult a qualified healthcare provider before considering any experimental therapy.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>FOXO4-DRI at a Glance</h2>
+
+<div class="cd ct">
+  <div class="tg">Compound Profile</div>
+  <h3>FOXO4-DRI (FOXO4-D-Retro-Inverso)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic D-retro-inverso peptide &nbsp;|&nbsp; <strong>Molecular Weight:</strong> ~2,200 Da &nbsp;|&nbsp; <strong>Target:</strong> FOXO4-p53 interaction in senescent cells &nbsp;|&nbsp; <strong>Origin:</strong> Dr. Peter de Keizer's lab, Erasmus University Medical Center &nbsp;|&nbsp; <strong>Route:</strong> Injection (intraperitoneal in mice; likely subcutaneous in humans) &nbsp;|&nbsp; <strong>Status:</strong> Research compound only, no human trials &nbsp;|&nbsp; <strong>Primary Action:</strong> Selective senolysis via p53 reactivation</p>
+</div>
+
+<p>FOXO4-DRI emerged from a 2017 study that asked a simple question: can you force zombie cells to self-destruct without harming healthy tissue? The answer, at least in mice, was yes. The peptide triggered selective apoptosis in senescent cells across multiple tissues, producing visible rejuvenation in aged animals.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISM ========== -->
+<hr class="sep">
+<h2>How FOXO4-DRI Works: The p53 Liberation Strategy</h2>
+
+<p>To understand FOXO4-DRI, you need to understand why senescent cells survive in the first place. The answer involves two proteins: FOXO4 and p53.</p>
+
+<p>In healthy cells, p53 acts as a tumor suppressor and damage response coordinator. When a cell is too damaged to repair, p53 triggers apoptosis (programmed cell death). But in senescent cells, FOXO4 binds to p53 and traps it in the nucleus, preventing it from activating death signals (<a href="https://pubmed.ncbi.nlm.nih.gov/28340339/">Baar et al., 2017</a>).</p>
+
+<div class="svg-box">
+  <div class="st">FOXO4-DRI Senolytic Pathway</div>
+  <div class="ss">How the peptide reactivates p53-mediated apoptosis in senescent cells</div>
+  <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Step 1: Senescent Cell -->
+    <rect x="10" y="10" width="160" height="280" rx="12" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="90" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B53A3A">Senescent Cell</text>
+    <text x="90" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A" letter-spacing="1" font-weight="600">ZOMBIE STATE</text>
+    <line x1="30" y1="65" x2="150" y2="65" stroke="#B53A3A" stroke-opacity=".2"/>
+    <text x="90" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">FOXO4 binds p53</text>
+    <text x="90" y="106" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">in the nucleus</text>
+    <text x="90" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">&#8595;</text>
+    <text x="90" y="152" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">p53 trapped</text>
+    <text x="90" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">Apoptosis blocked</text>
+    <text x="90" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020">SASP released</text>
+    <line x1="30" y1="205" x2="150" y2="205" stroke="#B53A3A" stroke-opacity=".15"/>
+    <text x="90" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B53A3A" font-weight="600">RESULT</text>
+    <text x="90" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020" font-weight="500">Cell survives,</text>
+    <text x="90" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A2020" font-weight="500">damages neighbors</text>
+
+    <!-- Step 2: FOXO4-DRI Intervention -->
+    <rect x="190" y="10" width="160" height="280" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">FOXO4-DRI</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">INTERVENTION</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="270" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Competes with</text>
+    <text x="270" y="106" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">native FOXO4</text>
+    <text x="270" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="270" y="152" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Binds p53 with</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">higher affinity</text>
+    <text x="270" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Disrupts FOXO4-p53</text>
+    <line x1="210" y1="205" x2="330" y2="205" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="270" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">RESULT</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">p53 freed from</text>
+    <text x="270" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">nuclear sequestration</text>
+
+    <!-- Step 3: p53 Reactivation -->
+    <rect x="370" y="10" width="150" height="280" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">p53 Freed</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">REACTIVATION</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="445" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">p53 exits nucleus</text>
+    <text x="445" y="106" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">to mitochondria</text>
+    <text x="445" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="445" y="152" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Activates intrinsic</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">apoptosis pathway</text>
+    <text x="445" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Caspase cascade</text>
+    <line x1="385" y1="205" x2="505" y2="205" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="445" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">RESULT</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Programmed cell</text>
+    <text x="445" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">death initiated</text>
+
+    <!-- Step 4: Outcome -->
+    <rect x="540" y="10" width="150" height="280" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="615" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Clearance</text>
+    <text x="615" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">TISSUE RENEWAL</text>
+    <line x1="555" y1="65" x2="675" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="615" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Senescent cell</text>
+    <text x="615" y="106" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">eliminated</text>
+    <text x="615" y="130" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="615" y="152" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">SASP silenced</text>
+    <text x="615" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Inflammation drops</text>
+    <text x="615" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Stem cells activate</text>
+    <line x1="555" y1="205" x2="675" y2="205" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="615" y="228" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">RESULT</text>
+    <text x="615" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Tissue rejuvenation</text>
+    <text x="615" y="268" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">&#38; reduced aging</text>
+  </svg>
+</div>
+
+<h3>Why D-Retro-Inverso?</h3>
+
+<p>The "DRI" in FOXO4-DRI stands for D-retro-inverso. This means the peptide is built with D-amino acids (mirror images of the natural L-amino acids) in reverse sequence. The result is a molecule that mimics the shape of natural FOXO4 but resists breakdown by proteases.</p>
+
+<p>This enzymatic stability is critical. Standard peptides get chewed up by the body within minutes. The DRI modification gives FOXO4-DRI a much longer functional half-life, allowing it to outcompete native FOXO4 for p53 binding.</p>
+
+<h3>Selectivity for Senescent Cells</h3>
+
+<p>The key selling point of FOXO4-DRI is selectivity. In healthy cells, FOXO4 and p53 don't form the same tight complex that drives senescent cell survival. This means the peptide preferentially affects cells where FOXO4-p53 binding is active, which is primarily in senescent populations.</p>
+
+<div class="d-t">
+  <div class="s">Key Insight</div>
+  <p>FOXO4-DRI works like a targeted demolition crew. It identifies cells that are using the FOXO4-p53 axis to cheat death and removes their survival mechanism. Healthy cells, which don't rely on this axis, are largely unaffected.</p>
+</div>
+
+<!-- ========== RESEARCH FINDINGS ========== -->
+<hr class="sep">
+<h2>Key Research Findings</h2>
+
+<p>The landmark 2017 study from de Keizer's lab at Erasmus University Medical Center remains the primary source of data on FOXO4-DRI (<a href="https://pubmed.ncbi.nlm.nih.gov/28340339/">Baar et al., 2017</a>). The researchers treated both naturally aged mice and fast-aging progeria model mice.</p>
+
+<table class="tbl">
+<thead><tr><th>Tissue / Function</th><th>Observed Effect</th><th>Evidence Level</th></tr></thead>
+<tbody>
+<tr><td><strong>Fur density</strong></td><td>Restored to youthful thickness in aged mice</td><td class="g">Strong (visible, quantified)</td></tr>
+<tr><td><strong>Kidney function</strong></td><td>~50% improvement in filtration; reduced proteinuria</td><td class="g">Strong (biomarker data)</td></tr>
+<tr><td><strong>Exercise endurance</strong></td><td>2.5x longer treadmill running time</td><td class="g">Strong (functional test)</td></tr>
+<tr><td><strong>Lifespan (progeria)</strong></td><td>36% extension in fast-aging mice</td><td class="g">Strong (survival curves)</td></tr>
+<tr><td><strong>Liver function</strong></td><td>Improved detoxification enzyme profiles</td><td class="y">Moderate (biomarker data)</td></tr>
+<tr><td><strong>Wound healing</strong></td><td>Accelerated tissue repair in aged mice</td><td class="y">Moderate (observational)</td></tr>
+<tr><td><strong>Human lifespan</strong></td><td>No data</td><td class="r">None (no human trials)</td></tr>
+</tbody>
+</table>
+
+<p>The results were striking. Old mice literally looked younger after treatment. Their fur grew back, their kidneys worked better, and they could run dramatically longer on a treadmill.</p>
+
+<div class="d-a">
+  <div class="s">Important Caveat</div>
+  <p>These results come entirely from mouse models. The progeria mice used in the lifespan study experience accelerated aging, which is not the same as normal biological aging. Whether FOXO4-DRI would produce similar effects in naturally aging humans remains unknown.</p>
+</div>
+
+<h3>Study Limitations</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--red);">What We Don't Know</h4>
+    <p><strong>Sample sizes</strong> were small. <strong>Long-term safety data</strong> doesn't exist. <strong>Tissue analysis</strong> was limited to a few organ systems. <strong>Normal aging models</strong> were not the primary focus of the lifespan extension data.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">What the Data Supports</h4>
+    <p><strong>Selective senolysis</strong> appears achievable in mice. <strong>Functional improvements</strong> were measurable and significant. <strong>Tolerability</strong> was good in treated animals. <strong>Mechanism</strong> is well-characterized at the molecular level.</p>
+  </div>
+</div>
+
+<!-- ========== BENEFITS ========== -->
+<hr class="sep">
+<h2>Potential Benefits and Applications</h2>
+
+<p>Based on preclinical evidence and the known biology of senescent cells, FOXO4-DRI could theoretically address several age-related conditions. All of these remain unconfirmed in humans.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Chronic Inflammation</h4>
+    <p>Senescent cells are major drivers of "inflammaging." Clearing them reduces SASP-mediated inflammatory signaling throughout tissues.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Tissue Function</h4>
+    <p>Mouse data shows improved kidney filtration, liver function, and skin quality after senescent cell removal. These are direct consequences of reducing local SASP damage.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Physical Performance</h4>
+    <p>The 2.5x improvement in exercise endurance suggests that senescent cell burden directly impairs physical capacity. Clearing them may restore function.</p>
+  </div>
+</div>
+
+<div class="cd ca">
+  <div class="tg">Disease Targets</div>
+  <h3>Conditions Driven by Senescent Cells</h3>
+  <p style="font-size:14px;margin-bottom:0;">Senescent cell accumulation has been implicated in <strong>idiopathic pulmonary fibrosis</strong>, <strong>osteoarthritis</strong>, <strong>atherosclerosis</strong>, <strong>type 2 diabetes</strong>, and <strong>neurodegenerative diseases</strong>. If FOXO4-DRI can selectively clear these cells in humans, it could address the root cause rather than just managing symptoms. This is speculative, but the biological rationale is sound.</p>
+</div>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>FOXO4-DRI vs. Other Senolytics</h2>
+
+<p>FOXO4-DRI isn't the only senolytic approach under investigation. Dasatinib plus quercetin (D+Q), fisetin, and navitoclax all target senescent cells through different mechanisms. Here's how they compare.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>FOXO4-DRI</th><th>D+Q</th><th>Fisetin</th><th>Navitoclax</th></tr></thead>
+<tbody>
+<tr><td><strong>Type</strong></td><td>Peptide</td><td>Drug combo</td><td>Flavonoid</td><td>BCL-2 inhibitor</td></tr>
+<tr><td><strong>Specificity</strong></td><td class="g">High (FOXO4-p53 axis)</td><td class="y">Moderate</td><td class="y">Low</td><td class="r">Low (platelet toxicity)</td></tr>
+<tr><td><strong>Administration</strong></td><td>Injection</td><td>Oral</td><td>Oral</td><td>Oral</td></tr>
+<tr><td><strong>Human clinical data</strong></td><td class="r">None</td><td class="y">Limited (early trials)</td><td class="y">Minimal (one trial)</td><td class="y">Limited (cancer context)</td></tr>
+<tr><td><strong>Off-target effects</strong></td><td class="g">Minimal in mice</td><td class="y">Some GI and bruising</td><td class="g">Generally well-tolerated</td><td class="r">Significant platelet drop</td></tr>
+<tr><td><strong>Cost</strong></td><td class="r">Very high</td><td class="y">Moderate</td><td class="g">Low</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Ease of use</strong></td><td class="r">Requires injection</td><td class="g">Oral dosing</td><td class="g">Oral dosing</td><td class="y">Requires monitoring</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Context</div>
+  <p>D+Q (dasatinib plus quercetin) is the most studied senolytic combination in humans so far. It has shown senescent cell clearance in small clinical trials for diabetic kidney disease and idiopathic pulmonary fibrosis. Fisetin is the easiest to access but has the weakest evidence. FOXO4-DRI has the most elegant mechanism but zero human data.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Considerations</h2>
+
+<div class="d-r">
+  <div class="s">Warning</div>
+  <p>No human dosing protocol exists for FOXO4-DRI. The following information is derived from mouse studies using standard allometric scaling. These are <strong>not recommendations</strong>. Self-experimentation with this compound carries unknown risks.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Mouse Study</th><th>Estimated Human Equivalent*</th></tr></thead>
+<tbody>
+<tr><td><strong>Dose</strong></td><td>5 mg/kg</td><td>~0.4 mg/kg (allometric scaling)</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Every other day</td><td>Unknown</td></tr>
+<tr><td><strong>Duration</strong></td><td>3 treatments over 5 days</td><td>Unknown</td></tr>
+<tr><td><strong>Route</strong></td><td>Intraperitoneal injection</td><td>Likely subcutaneous</td></tr>
+<tr><td><strong>Repeat cycles</strong></td><td>Not studied long-term</td><td>Unknown</td></tr>
+</tbody>
+</table>
+
+<p style="font-size:12.5px;color:var(--mut);">*Calculated using FDA-standard body surface area scaling factors. Does not account for species-specific pharmacokinetics.</p>
+
+<p>Senescent cells repopulate over time as new cells enter senescence. This means any effective treatment protocol would likely require periodic dosing cycles. But we don't know how often, or whether repeated exposure carries cumulative risks.</p>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety and Side Effects</h2>
+
+<p>Mouse studies showed good tolerability at therapeutic doses. But "good tolerability in mice" is a low bar for human safety confidence. Several concerns remain unanswered.</p>
+
+<table class="tbl">
+<thead><tr><th>Concern</th><th>Risk Level</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td><strong>Off-target cell death</strong></td><td class="y">Theoretical</td><td>Could healthy cells with active p53 be affected? Unlikely based on mechanism, but not proven in humans</td></tr>
+<tr><td><strong>Wound healing interference</strong></td><td class="y">Theoretical</td><td>Some senescent cells play temporary roles in wound repair; removing them during healing could slow recovery</td></tr>
+<tr><td><strong>Cancer suppression loss</strong></td><td class="y">Theoretical</td><td>Senescence is a tumor-suppressive mechanism; removing senescent cells might allow damaged cells to proliferate</td></tr>
+<tr><td><strong>Long-term effects</strong></td><td class="r">Unknown</td><td>No data on repeated dosing over months or years in any species</td></tr>
+<tr><td><strong>Immune response</strong></td><td class="y">Possible</td><td>Peptide therapeutics can trigger antibody formation with repeated exposure</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">The Senescence Paradox</div>
+  <p>Senescence isn't entirely bad. It serves as a brake on cancer (damaged cells stop dividing instead of becoming tumors) and plays a role in wound healing and embryonic development. Removing all senescent cells could have unintended consequences. The goal of senolytic therapy is selective removal of chronically senescent cells, not total elimination.</p>
+</div>
+
+<!-- ========== SYNTHESIS ========== -->
+<hr class="sep">
+<h2>Synthesis, Availability, and Legal Status</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Production Challenges</h4>
+    <p>FOXO4-DRI requires specialized D-retro-inverso synthesis, which is more complex and expensive than standard peptide production. Few manufacturers can produce it at research grade. Quality control is a major concern with commercially available sources.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Regulatory Status</h4>
+    <p>FOXO4-DRI is not approved for human use in any country. No company has announced plans for clinical trials. It's available from some research chemical suppliers, but these products are sold "for research use only" and lack pharmaceutical-grade quality assurance.</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Development Stage</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong>Preclinical research</strong></td><td class="g">Completed (2017)</td></tr>
+<tr><td><strong>IND filing</strong></td><td class="r">Not filed</td></tr>
+<tr><td><strong>Phase 1 (safety)</strong></td><td class="r">Not started</td></tr>
+<tr><td><strong>Phase 2 (efficacy)</strong></td><td class="r">Not started</td></tr>
+<tr><td><strong>Market approval</strong></td><td class="r">Likely years away, if ever</td></tr>
+</tbody>
+</table>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Is Interested in FOXO4-DRI?</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Longevity Researchers</h4>
+    <p>Scientists studying the biology of aging are interested in FOXO4-DRI as a tool for understanding how senescent cell clearance affects tissue function and lifespan.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Biohackers</h4>
+    <p>Self-experimenters in the longevity community have shown interest, though the lack of human data and high cost make responsible self-experimentation extremely difficult.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Drug Developers</h4>
+    <p>Pharmaceutical companies are watching the senolytic space closely. FOXO4-DRI's mechanism validates the concept, even if the peptide itself may not be the final clinical product.</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What exactly does FOXO4-DRI do?</summary>
+    <div class="fa">It selectively triggers apoptosis (programmed cell death) in senescent cells. These "zombie cells" accumulate with age and release inflammatory signals that damage surrounding tissue. FOXO4-DRI works by disrupting the FOXO4-p53 protein interaction that keeps senescent cells alive. By blocking this interaction, the peptide frees p53 to activate the cell's natural self-destruct program.</div>
+  </details>
+  <details>
+    <summary>How is FOXO4-DRI different from other anti-aging compounds?</summary>
+    <div class="fa">Most anti-aging approaches (antioxidants, <a href="/articles/nad-boosters-nmn-nr-guide">NAD+ boosters</a>, caloric restriction mimetics) try to protect or support cells. FOXO4-DRI does the opposite: it removes cells that are already damaged beyond repair. This makes it a senolytic rather than a protective or supportive therapy. It's designed to clean house, not reinforce the walls.</div>
+  </details>
+  <details>
+    <summary>Has anyone taken FOXO4-DRI?</summary>
+    <div class="fa">No published human studies exist. Some individuals in the biohacking community have reportedly self-experimented, but these accounts are anecdotal, uncontrolled, and not scientifically meaningful. Any human use at this stage is purely experimental and carries unknown risks.</div>
+  </details>
+  <details>
+    <summary>What are the known risks?</summary>
+    <div class="fa">In mice, tolerability was good. But potential human risks include off-target effects on healthy cells, unknown consequences of chronic senescent cell removal, possible interference with wound healing, and theoretical loss of tumor-suppressive senescence. Some senescent cells play beneficial roles, so removing them completely might create new problems.</div>
+  </details>
+  <details>
+    <summary>Can FOXO4-DRI extend human lifespan?</summary>
+    <div class="fa">There's no evidence for this. The 36% lifespan extension was observed in progeria mice, which experience accelerated aging that doesn't mirror normal biological aging. Whether any senolytic approach can extend human lifespan is one of the biggest open questions in aging research. The complexity of human aging makes lifespan predictions from mouse data unreliable.</div>
+  </details>
+  <details>
+    <summary>How does it compare to dasatinib plus quercetin (D+Q)?</summary>
+    <div class="fa">D+Q is the most clinically advanced senolytic combination, with small human trials completed. It works through different mechanisms (tyrosine kinase inhibition and anti-apoptotic protein targeting). FOXO4-DRI has a more precise mechanism but zero human data. D+Q is oral; FOXO4-DRI requires injection. For now, D+Q has more clinical evidence, while FOXO4-DRI has stronger theoretical selectivity.</div>
+  </details>
+  <details>
+    <summary>Is FOXO4-DRI available to buy?</summary>
+    <div class="fa">Some research chemical suppliers sell it. But quality varies dramatically between sources, and these products are not intended for human consumption. Without regulatory oversight, there's no guarantee of purity, correct folding, or proper dosing. Research-grade material from reputable peptide synthesis companies is extremely expensive.</div>
+  </details>
+  <details>
+    <summary>Could FOXO4-DRI help with specific diseases?</summary>
+    <div class="fa">Theoretically, conditions driven by senescent cell accumulation could benefit. These include idiopathic pulmonary fibrosis, osteoarthritis, atherosclerosis, and certain aspects of <a href="/articles/epithalon-anti-aging-guide">age-related decline</a>. But this is entirely speculative based on mouse data and our understanding of senescent cell biology. Human studies are needed before any therapeutic claims can be made.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>FOXO4-DRI is a scientifically elegant approach to one of aging's core problems: the accumulation of senescent cells. Its targeted mechanism, strong preclinical results, and clear biological rationale make it one of the most interesting compounds in longevity research. But it remains entirely preclinical. No human safety data exists, no clinical trials are planned, and self-experimentation carries unknown risks.</p>
+</div>
+
+<p>The science behind FOXO4-DRI is real and compelling. The FOXO4-p53 axis is a validated target, and the mouse data shows that clearing senescent cells can produce measurable rejuvenation.</p>
+
+<p>But science and clinical readiness are different things. Until human trials establish safety and efficacy, FOXO4-DRI belongs in the "fascinating research" category, not in anyone's medicine cabinet. Focus on established, evidence-based longevity strategies while watching this space develop.</p>
+
+<!-- MEDICAL DISCLAIMER -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. FOXO4-DRI is not approved for human use by the FDA or any regulatory agency. Always consult a qualified healthcare provider before considering any experimental peptide therapy. Self-experimentation with research compounds carries significant and unknown risks.
+</div>
+
+<!-- REFERENCES -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Baar MP, Brandt RMC, Putavet DA, et al. Targeted Apoptosis of Senescent Cells Restores Tissue Homeostasis in Response to Chemotoxicity and Aging. <em>Cell.</em> 2017;169(1):132&ndash;147.e16. <a href="https://pubmed.ncbi.nlm.nih.gov/28340339/">PubMed</a><br>
+Baker DJ, Childs BG, Durik M, et al. Naturally occurring p16(Ink4a)-positive cells shorten healthy lifespan. <em>Nature.</em> 2016;530(7589):184&ndash;189. <a href="https://pubmed.ncbi.nlm.nih.gov/26840489/">PubMed</a><br>
+Xu M, Pirtskhalava T, Farr JN, et al. Senolytics improve physical function and increase lifespan in old age. <em>Nat Med.</em> 2018;24(8):1246&ndash;1256. <a href="https://pubmed.ncbi.nlm.nih.gov/29988130/">PubMed</a><br>
+Kirkland JL, Tchkonia T. Senolytic drugs: from discovery to translation. <em>J Intern Med.</em> 2020;288(5):518&ndash;536. <a href="https://pubmed.ncbi.nlm.nih.gov/32686219/">PubMed</a><br>
+Zhu Y, Tchkonia T, Pirtskhalava T, et al. The Achilles' heel of senescent cells: from transcriptome to senolytic drugs. <em>Aging Cell.</em> 2015;14(4):644&ndash;658. <a href="https://pubmed.ncbi.nlm.nih.gov/25754370/">PubMed</a>
+</p>
+
+<!-- RELATED READING -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/epithalon-anti-aging-guide">Epithalon Anti-Aging Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides?</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/epithalon-anti-aging-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Epithalon Anti-Aging Guide</a>
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides?</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects Guide</a>
+            <a href="/articles/peptide-stacking-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Stacking Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

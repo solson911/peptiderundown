@@ -1,0 +1,627 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Cerebrolysin: The Neuropeptide Complex for Brain Recovery",
+  description: "A guide to Cerebrolysin, the porcine brain-derived neuropeptide complex used for stroke, TBI, and Alzheimer's recovery. Mechanism, research, dosing, side effects, and availability.",
+  image: "/images/articles/cerebrolysin.webp",
+  date: "2026-02-14",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Neuropeptide &middot; Brain Recovery</div>
+  <h1>Cerebrolysin: The Neuropeptide Complex for Brain Recovery</h1>
+  <p class="sub">A porcine brain-derived peptide mix approved in 40+ countries for stroke, TBI, and dementia. Over 200 clinical studies, yet virtually unknown in the US. Here's what the research actually shows.</p>
+  <div class="pills">
+    <span class="pill">Neurotrophic &middot; BDNF Mimicry</span>
+    <span class="pill">Injectable &middot; IM or IV</span>
+    <span class="pill">Stroke &middot; TBI &middot; Alzheimer's</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">200+</div><div class="l">Clinical<br>Studies</div></div>
+  <div class="sb"><div class="v c2">40+</div><div class="l">Countries<br>Approved</div></div>
+  <div class="sb"><div class="v c3">BDNF</div><div class="l">Primary<br>Mechanism</div></div>
+  <div class="sb"><div class="v c4">40 yr</div><div class="l">Clinical<br>Track Record</div></div>
+</div>
+
+<p>Cerebrolysin splits the medical world along geographic lines. In Russia, China, and much of Europe, it's a mainstream treatment for stroke and dementia. In the United States, most neurologists have never heard of it.</p>
+
+<p>This disconnect isn't because the research doesn't exist. It's because the regulatory and commercial environment makes it invisible to American medicine.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of Cerebrolysin covering its mechanisms, clinical evidence, dosing protocols, side effects, and availability. It is <strong>not a recommendation to use Cerebrolysin</strong>. Cerebrolysin is not FDA-approved in the United States. Consult a qualified healthcare provider before considering any peptide protocol.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>Cerebrolysin at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Cerebrolysin (Porcine Brain Peptide Complex)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Composition:</strong> ~25% low-molecular-weight peptides + ~75% free amino acids &nbsp;|&nbsp; <strong>Source:</strong> Purified porcine (pig) brain tissue &nbsp;|&nbsp; <strong>Manufacturer:</strong> EVER Neuro Pharma (Austria) &nbsp;|&nbsp; <strong>Mechanism:</strong> Mimics BDNF, NGF, GDNF activity &nbsp;|&nbsp; <strong>Routes:</strong> IM (up to 5 mL) or IV (above 5 mL) &nbsp;|&nbsp; <strong>FDA Status:</strong> Not submitted for approval &nbsp;|&nbsp; <strong>Approved in:</strong> 40+ countries including Russia, China, Austria, Germany</p>
+</div>
+
+<p>Cerebrolysin is a <a href="/articles/what-are-peptides-beginners-guide">peptide preparation</a> derived from purified porcine brain tissue. It's manufactured through a standardized enzymatic process that breaks down brain proteins into small peptides and free amino acids.</p>
+
+<p>The peptide fraction (below 10 kDa) provides the biological activity. These peptides mimic naturally occurring neurotrophic factors, the proteins your brain uses to grow, maintain, and repair neurons.</p>
+
+<p>Think of it as a cocktail of brain-derived signaling molecules, not a single compound with a single target. For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How Cerebrolysin Works</h2>
+
+<p>Cerebrolysin acts through multiple overlapping pathways. Understanding these mechanisms explains why it shows up across such different clinical contexts, from acute stroke to chronic dementia.</p>
+
+<div class="svg-box">
+  <div class="st">Cerebrolysin: Multi-Pathway Mechanism of Action</div>
+  <div class="ss">Neurotrophic mimicry &middot; Anti-apoptotic &middot; Anti-inflammatory &middot; Amyloid reduction</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- BDNF/NGF -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">BDNF / NGF</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">NEUROTROPHIC</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Activates PI3K/Akt</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#38; MAPK/ERK paths</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Neuron survival</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">New synapses</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Dendrite growth</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Brain plasticity</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">&#38; recovery</text>
+
+    <!-- Anti-Apoptotic -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Anti-Apoptotic</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">CELL SURVIVAL</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Inhibits secondary</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">cell death after injury</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Protects penumbra</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">neurons in stroke</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Reduces infarct size</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Preserved neurons</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">post-injury</text>
+
+    <!-- Anti-Inflammatory -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#6E3B8A">Anti-Inflammatory</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">IMMUNE MODULATION</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Reduces microglial</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">activation in CNS</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Lower TNF-alpha</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Lower IL-1 beta</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Less neuroinflammation</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Protected brain</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">environment</text>
+
+    <!-- Amyloid Reduction -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#B48118">Amyloid Beta</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">APP PROCESSING</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Shifts APP toward</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">non-amyloidogenic</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Less toxic plaque</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">formation</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Preserved synapses</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Alzheimer's disease</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">relevance</text>
+  </svg>
+</div>
+
+<h3>Neurotrophic Factor Mimicry</h3>
+
+<p>The core mechanism is straightforward. Cerebrolysin's peptide fragments mimic the activity of BDNF (brain-derived neurotrophic factor), NGF (nerve growth factor), and GDNF (glial cell-derived neurotrophic factor). These are the proteins your brain naturally produces to grow and maintain neurons.</p>
+
+<p>Hartbauer et al. (2001) demonstrated that Cerebrolysin activates the PI3K/Akt and MAPK/ERK signaling pathways (<a href="https://pubmed.ncbi.nlm.nih.gov/11358484/">PubMed</a>). These are the same downstream cascades triggered by actual BDNF binding.</p>
+
+<table class="tbl">
+<thead><tr><th>Factor Mimicked</th><th>Normal Role</th><th>Cerebrolysin Effect</th></tr></thead>
+<tbody>
+<tr><td><strong>BDNF</strong></td><td>Neuron survival and growth</td><td class="g">Activates PI3K/Akt and MAPK/ERK</td></tr>
+<tr><td><strong>NGF</strong></td><td>Neuronal maintenance</td><td class="g">Promotes neuronal health</td></tr>
+<tr><td><strong>GDNF</strong></td><td>Dopaminergic neuron protection</td><td class="g">Supports dopamine pathways</td></tr>
+</tbody>
+</table>
+
+<h3>Neuroplasticity and Synaptic Density</h3>
+
+<p>Rockenstein et al. (2006) found that Cerebrolysin increases synaptophysin, a marker of synaptic density (<a href="https://pubmed.ncbi.nlm.nih.gov/16697710/">PubMed</a>). More synapses means more connections between neurons.</p>
+
+<p>That translates to better cognitive function and faster recovery from brain injuries. It's the same principle behind why exercise and environmental enrichment improve cognition.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Cerebrolysin increases synaptophysin levels while simultaneously shifting APP processing away from toxic amyloid beta production. This dual action makes it relevant for both acute brain injuries and chronic neurodegenerative disease (<a href="https://pubmed.ncbi.nlm.nih.gov/16697710/">Rockenstein et al., 2006</a>).</p>
+</div>
+
+<h3>Anti-inflammatory Effects</h3>
+
+<p>Alvarez et al. (2006) showed that Cerebrolysin reduces microglial activation and lowers TNF-alpha and IL-1 beta levels (<a href="https://pubmed.ncbi.nlm.nih.gov/16439158/">PubMed</a>). Chronic neuroinflammation is a driver of nearly every neurodegenerative condition.</p>
+
+<p>By calming the brain's immune response, Cerebrolysin creates a more favorable environment for healing and neuronal survival.</p>
+
+<!-- ========== CLINICAL EVIDENCE ========== -->
+<hr class="sep">
+<h2>Clinical Evidence</h2>
+
+<p>Cerebrolysin has been tested in over 200 clinical studies. The evidence is strongest for stroke recovery, with meaningful data also available for TBI and Alzheimer's disease.</p>
+
+<h3>Stroke Recovery</h3>
+
+<p>This is where the case for Cerebrolysin is most compelling.</p>
+
+<table class="tbl">
+<thead><tr><th>Trial</th><th>Participants</th><th>Key Finding</th></tr></thead>
+<tbody>
+<tr><td><strong>CASTA (2012)</strong></td><td>1,070 acute stroke patients</td><td class="g">Significant benefits in severe strokes</td></tr>
+<tr><td><strong>E-COMPASS (2017)</strong></td><td>Stroke + rehabilitation</td><td class="g">Better motor recovery vs. rehab alone</td></tr>
+<tr><td><strong>Cochrane Review (2020)</strong></td><td>Multiple trials pooled</td><td class="y">Improvements in global neurological status</td></tr>
+</tbody>
+</table>
+
+<p>The CASTA trial enrolled over a thousand patients and found statistically significant improvements in patients with severe strokes (<a href="https://pubmed.ncbi.nlm.nih.gov/22627987/">Heiss et al., 2012</a>).</p>
+
+<p>The E-COMPASS finding is particularly notable. Cerebrolysin enhanced the brain's ability to rewire during rehabilitation. That's a fundamentally different proposition from simply protecting neurons during acute injury.</p>
+
+<div class="cd ct">
+  <div class="tg">Stroke Evidence</div>
+  <h3>Rehabilitation Enhancement</h3>
+  <p style="font-size:14px;margin-bottom:0;">The E-COMPASS trial showed that Cerebrolysin combined with standard rehabilitation produced significantly better motor recovery than rehabilitation alone. The Cochrane review (<a href="https://pubmed.ncbi.nlm.nih.gov/32573768/">Ziganshina et al., 2020</a>) confirmed improvements in global neurological status across multiple trials, though it noted variability in study quality.</p>
+</div>
+
+<h3>Traumatic Brain Injury</h3>
+
+<p><a href="/articles/peptides-brain-injury-tbi-recovery">TBI</a> is notoriously difficult to treat. There are essentially no FDA-approved drugs for it. Even modest improvements are clinically meaningful.</p>
+
+<p>The CAPTAIN trials examined Cerebrolysin in moderate-to-severe TBI patients and found improved cognitive recovery and neurological outcomes at 90 days (<a href="https://pubmed.ncbi.nlm.nih.gov/23390978/">Chen et al., 2013</a>).</p>
+
+<div class="d-a">
+  <div class="s">Important Context</div>
+  <p>TBI research is plagued by heterogeneity. Every brain injury is different, making large controlled trials extremely difficult. The CAPTAIN results are promising but not definitive. More large-scale replication is needed.</p>
+</div>
+
+<h3>Alzheimer's Disease</h3>
+
+<p>Alvarez et al. (2006) found that 30 mL daily for 4 weeks produced cognitive improvements persisting for up to 3 months after treatment ended (<a href="https://pubmed.ncbi.nlm.nih.gov/16439158/">PubMed</a>).</p>
+
+<p>Improvements were measured using the ADAS-cog scale, the standard for Alzheimer's trials. Effect sizes were comparable to approved medications like donepezil.</p>
+
+<h3>Cognitive Enhancement in Healthy People</h3>
+
+<p>The evidence here is thinner but the interest is high. No large controlled studies exist in healthy individuals.</p>
+
+<p>Anecdotal reports from the biohacking community describe improved focus, mental clarity, faster processing, and better verbal fluency. The mechanisms are plausible: BDNF-like activity and increased synaptic density are the same processes targeted by exercise and other cognitive enhancers.</p>
+
+<!-- ========== ADMINISTRATION ========== -->
+<hr class="sep">
+<h2>Administration</h2>
+
+<p>Cerebrolysin is available only as an <a href="/articles/how-to-inject-peptides-subcutaneously">injectable solution</a>. The peptides would be destroyed by digestive enzymes if taken orally.</p>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>Max Dose</th><th>Setting</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Intramuscular (IM)</strong></td><td>Up to 5 mL</td><td>Self-administered</td><td>Deltoid or gluteus</td></tr>
+<tr><td><strong>Intravenous (IV)</strong></td><td>Above 5 mL</td><td>Clinical supervision</td><td>Diluted in saline, infused 15&ndash;60 min</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Warning</div>
+  <p>Cerebrolysin should never be mixed with balanced amino acid solutions or given as a rapid IV push at high doses. Always follow established infusion protocols.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<h3>Medical Protocols (From Clinical Trials)</h3>
+
+<table class="tbl">
+<thead><tr><th>Condition</th><th>Dose</th><th>Route</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>Acute stroke</strong></td><td>30&ndash;50 mL daily</td><td>IV</td><td>10&ndash;21 days (start within 24&ndash;72h)</td></tr>
+<tr><td><strong>TBI</strong></td><td>30 mL daily</td><td>IV</td><td>5&ndash;10 days</td></tr>
+<tr><td><strong>Alzheimer's / dementia</strong></td><td>10&ndash;30 mL daily</td><td>IV</td><td>4-week cycles, 2&ndash;4x/year</td></tr>
+<tr><td><strong>Mild cognitive impairment</strong></td><td>5&ndash;10 mL daily</td><td>IM or IV</td><td>10&ndash;20 days</td></tr>
+</tbody>
+</table>
+
+<h3>Biohacking / Nootropic Protocols</h3>
+
+<table class="tbl">
+<thead><tr><th>Protocol</th><th>Dose</th><th>Frequency</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/cognition-stack-semax-selank-dihexa">Cognitive enhancement</a></strong></td><td>2&ndash;5 mL IM</td><td>3&ndash;5x/week</td><td>4-week cycles</td></tr>
+<tr><td><strong>Maintenance</strong></td><td>2 mL IM</td><td>2&ndash;3x/week</td><td>Ongoing</td></tr>
+<tr><td><strong>Intensive</strong></td><td>5&ndash;10 mL daily (IM or slow IV)</td><td>Daily</td><td>10&ndash;20 days, then break</td></tr>
+</tbody>
+</table>
+
+<p>Most people cycle Cerebrolysin: 20 days on, 2&ndash;3 months off. Effects tend to persist beyond treatment because structural changes (new synapses, improved neuronal health) don't disappear immediately.</p>
+
+<div class="d-p">
+  <div class="s">Starting Tip</div>
+  <p>Begin with 1&ndash;2 mL IM if you're new. Individual response varies considerably, and it's better to titrate up than to overshoot on the first injection.</p>
+</div>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>Cerebrolysin vs. Other Neurotrophic Compounds</h2>
+
+<p>Several compounds target similar pathways. Here's how Cerebrolysin compares to the alternatives most commonly discussed in nootropic communities.</p>
+
+<table class="tbl">
+<thead><tr><th>Compound</th><th>Source</th><th>Route</th><th>Clinical Evidence</th><th>Availability</th></tr></thead>
+<tbody>
+<tr><td><strong>Cerebrolysin</strong></td><td>Porcine brain</td><td>IM / IV</td><td class="g">200+ studies</td><td class="y">Rx in 40+ countries</td></tr>
+<tr><td><strong><a href="/articles/semax-complete-guide">Semax</a></strong></td><td>Synthetic (ACTH 4&ndash;7)</td><td>Intranasal</td><td class="g">Registered Rx in Russia</td><td class="y">Research peptide (US)</td></tr>
+<tr><td><strong>P21</strong></td><td>Synthetic (BDNF mimetic)</td><td>Intranasal / SC</td><td class="r">Preclinical only</td><td class="r">Research peptide</td></tr>
+<tr><td><strong>Cortexin</strong></td><td>Bovine brain</td><td>IM</td><td class="y">Moderate (Russian studies)</td><td class="y">Rx in Russia</td></tr>
+<tr><td><strong>Dihexa</strong></td><td>Synthetic (HGF mimetic)</td><td>Oral / SC</td><td class="r">Preclinical only</td><td class="r">Research peptide</td></tr>
+</tbody>
+</table>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Common Stacks</h2>
+
+<p>Cerebrolysin is frequently combined with other nootropic compounds. No formal interaction studies exist, so start compounds one at a time.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Cerebrolysin + Semax</h4>
+    <p>Two neurotrophic compounds working through complementary pathways. <a href="/articles/selank-semax-nootropic-peptides">Semax</a> provides BDNF upregulation via intranasal delivery, while Cerebrolysin adds broader neurotrophic factor mimicry via injection.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Cerebrolysin + P21</h4>
+    <p>P21 is a synthetic BDNF mimetic derived from the active region of CNTF. Combining it with Cerebrolysin creates a multi-angle approach to neurotrophic signaling.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Cerebrolysin + Lion's Mane</h4>
+    <p>Lion's mane mushroom stimulates NGF production naturally. Pairing it with Cerebrolysin covers both synthetic neurotrophic mimicry and endogenous NGF stimulation.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Cerebrolysin + Selank</h4>
+    <p>For those experiencing anxiety alongside cognitive decline. <a href="/articles/selank-complete-guide">Selank</a> provides anxiolytic and immunomodulatory effects that complement Cerebrolysin's neurotrophic action.</p>
+  </div>
+</div>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>Cerebrolysin has a strong safety profile based on decades of clinical use. A 2012 safety meta-analysis covering over 3,000 patients found the overall adverse event rate was similar to placebo (<a href="https://pubmed.ncbi.nlm.nih.gov/29484894/">Bornstein et al., 2018</a>).</p>
+
+<h3>Common Side Effects</h3>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Headache</strong></td><td class="y">Most frequent</td><td>Usually first few days only</td></tr>
+<tr><td><strong>Dizziness</strong></td><td class="y">Occasional</td><td>Typically transient</td></tr>
+<tr><td><strong>Injection site pain</strong></td><td class="y">Common</td><td>Standard for IM injections</td></tr>
+<tr><td><strong>Warmth / flushing</strong></td><td class="y">Occasional</td><td>During or shortly after injection</td></tr>
+<tr><td><strong>Nausea</strong></td><td class="y">Uncommon</td><td>More likely at higher doses</td></tr>
+</tbody>
+</table>
+
+<h3>Uncommon Side Effects</h3>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Agitation / irritability</strong></td><td>Higher doses; feeling overstimulated</td></tr>
+<tr><td><strong>Insomnia</strong></td><td>Avoid evening dosing</td></tr>
+<tr><td><strong>Appetite changes</strong></td><td>Both directions reported</td></tr>
+<tr><td><strong>Sweating</strong></td><td>Occasionally during IV infusions</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Contraindications</div>
+  <p>Anyone allergic to porcine products should avoid Cerebrolysin entirely. It is generally contraindicated in active epilepsy due to a very small number of reported seizure events. Patients with severe renal impairment should also consult their physician before considering treatment.</p>
+</div>
+
+<!-- ========== CYCLING ========== -->
+<hr class="sep">
+<h2>Cycling Protocols</h2>
+
+<p>Effects persist beyond the treatment window because the structural changes Cerebrolysin promotes (new synapses, improved neuronal health) don't disappear the moment you stop injecting.</p>
+
+<table class="tbl">
+<thead><tr><th>Protocol</th><th>On Period</th><th>Off Period</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>Standard cycle</strong></td><td>20 days</td><td>2&ndash;3 months</td><td>General cognitive support</td></tr>
+<tr><td><strong>Clinical cycle</strong></td><td>4 weeks</td><td>8&ndash;12 weeks</td><td>Alzheimer's / dementia (2&ndash;4x/year)</td></tr>
+<tr><td><strong>Acute protocol</strong></td><td>10&ndash;21 days</td><td>As needed</td><td>Post-stroke or post-TBI recovery</td></tr>
+</tbody>
+</table>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Might Consider Cerebrolysin</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Stroke Recovery</h4>
+    <p>Strongest evidence base. Particularly useful when combined with active rehabilitation programs.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">TBI Patients</h4>
+    <p>Limited approved options exist for TBI. Cerebrolysin offers a supported mechanism for cognitive recovery.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Cognitive Decline</h4>
+    <p>Alzheimer's and mild cognitive impairment, with effect sizes comparable to approved dementia medications.</p>
+  </div>
+</div>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Availability and Legal Status</h2>
+
+<p>Cerebrolysin's availability depends entirely on where you live. It's a mainstream pharmaceutical in much of the world, yet completely absent from US medicine.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Approved Regions</h4>
+    <p><strong>Russia, China, South Korea:</strong> Registered pharmaceutical, widely prescribed. <strong>Austria, Germany:</strong> Available as pharmaceutical. <strong>Mexico:</strong> Available, common source for importers.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Not Approved</h4>
+    <p><strong>United States:</strong> Not FDA-approved (no submission made). <strong>Canada:</strong> Not approved by Health Canada. <strong>Australia:</strong> Not approved by TGA.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Sourcing Warning</div>
+  <p>Because Cerebrolysin is a branded pharmaceutical with a single manufacturer (EVER Neuro Pharma), counterfeiting is a real concern. Always verify packaging, batch numbers, and source authenticity. Most people source it from international pharmacies, particularly Eastern Europe or Mexico.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can Cerebrolysin regrow brain cells?</summary>
+    <div class="fa">Cerebrolysin doesn't directly create new neurons in any proven way. It supports survival of existing neurons, promotes new connections (synaptogenesis), and protects damaged neurons from dying. Animal models show some evidence of hippocampal neurogenesis (<a href="https://pubmed.ncbi.nlm.nih.gov/14643768/">Tatebayashi et al., 2003</a>), but this hasn't been confirmed in humans.</div>
+  </details>
+  <details>
+    <summary>How quickly does Cerebrolysin work?</summary>
+    <div class="fa">Some users report noticeable cognitive effects within the first few days. In stroke trials, measurable improvements appeared within 10&ndash;21 days. For Alzheimer's patients, improvements on cognitive testing were seen after 4 weeks of daily treatment.</div>
+  </details>
+  <details>
+    <summary>Is Cerebrolysin safe for long-term use?</summary>
+    <div class="fa">Limited data exists on continuous long-term use since most protocols are cyclical. Decades of clinical use haven't raised major safety flags, but formal long-term studies are lacking. The standard approach is cycling: treat for a defined period, then take a break.</div>
+  </details>
+  <details>
+    <summary>Does Cerebrolysin cross the blood-brain barrier?</summary>
+    <div class="fa">Yes. The small peptide fragments (below 10 kDa) cross the blood-brain barrier. This has been confirmed in animal pharmacokinetic studies and is a key reason the peptide fraction, not just the amino acids, provides the therapeutic effect.</div>
+  </details>
+  <details>
+    <summary>Is Cerebrolysin the same as Cortexin?</summary>
+    <div class="fa">No. Cortexin is a similar concept (brain-derived peptide preparation) but manufactured by a different company with a different process and sourced from bovine brain tissue. Both are used in Russian and Eastern European medicine, but they're distinct products with separate clinical evidence.</div>
+  </details>
+  <details>
+    <summary>Can I take Cerebrolysin orally?</summary>
+    <div class="fa">No. Cerebrolysin must be injected (IM or IV). The peptides would be broken down by digestive enzymes before reaching the bloodstream. There is no oral formulation.</div>
+  </details>
+  <details>
+    <summary>Can vegans or vegetarians use Cerebrolysin?</summary>
+    <div class="fa">Cerebrolysin is derived from pig brain tissue. For those avoiding animal products, synthetic neurotrophic peptides like <a href="/articles/semax-complete-guide">Semax</a> or P21 may be alternatives worth exploring with a healthcare provider.</div>
+  </details>
+  <details>
+    <summary>What's the best time of day to inject Cerebrolysin?</summary>
+    <div class="fa">Morning or early afternoon is preferred. Cerebrolysin can be mildly stimulating, and evening dosing has been associated with insomnia in some users. Most clinical protocols administer it during daytime hours.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Cerebrolysin has more clinical evidence than most compounds in the peptide and nootropic space. The data on stroke recovery and Alzheimer's disease is genuinely compelling, and the safety record over 40+ years of widespread use is reassuring. But it requires injection, the evidence includes many studies of moderate quality, and the lack of FDA approval means quality assurance depends entirely on sourcing from legitimate channels.</p>
+</div>
+
+<p>For people dealing with brain injuries, neurodegenerative conditions, or cognitive decline, Cerebrolysin represents an option backed by real science. For healthy individuals seeking cognitive enhancement, the rationale is plausible but less proven.</p>
+
+<p>The geographic divide in Cerebrolysin's acceptance says more about pharmaceutical economics than about the compound itself. It's not that the evidence is weak. It's that no company has found it commercially worthwhile to pursue FDA approval for a decades-old biological extract.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. Cerebrolysin is not FDA-approved in the United States. Always consult a qualified healthcare provider before starting any treatment protocol. Individual results vary, and the information here should not replace professional medical guidance.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Hartbauer M, Hutter-Paier B, Windisch M. Effects of Cerebrolysin on the outgrowth and protection of processes of cultured brain neurons. <em>J Neural Transm.</em> 2001;108(5):581&ndash;592. <a href="https://pubmed.ncbi.nlm.nih.gov/11358484/">PubMed</a><br>
+Rockenstein E, Torrance M, Mante M, et al. Cerebrolysin decreases amyloid-beta production by regulating amyloid protein precursor maturation in a transgenic model of Alzheimer's disease. <em>J Neurosci Res.</em> 2006;83(7):1252&ndash;1261. <a href="https://pubmed.ncbi.nlm.nih.gov/16697710/">PubMed</a><br>
+Alvarez XA, Cacabelos R, Sampedro C, et al. Efficacy and safety of Cerebrolysin in moderate to moderately severe Alzheimer's disease. <em>Dement Geriatr Cogn Disord.</em> 2006;21(1):28&ndash;37. <a href="https://pubmed.ncbi.nlm.nih.gov/16439158/">PubMed</a><br>
+Onishchenko LS, Gaikova ON, Yanishevskii SN. Changes in the focus of experimental ischemic stroke under the influence of Cerebrolysin. <em>Neurosci Behav Physiol.</em> 2008;38(1):49&ndash;54. <a href="https://pubmed.ncbi.nlm.nih.gov/18180046/">PubMed</a><br>
+Heiss WD, Brainin M, Bornstein NM, et al. Cerebrolysin in patients with acute ischemic stroke in Asia: results of a double-blind, placebo-controlled randomized trial (CASTA). <em>Stroke.</em> 2012;43(3):630&ndash;636. <a href="https://pubmed.ncbi.nlm.nih.gov/22627987/">PubMed</a><br>
+Chen CC, Wei ST, Tsaia SC, et al. Cerebrolysin enhances cognitive recovery of mild traumatic brain injury patients: double-blind, placebo-controlled, randomized study. <em>Br J Neurosurg.</em> 2013;27(6):803&ndash;807. <a href="https://pubmed.ncbi.nlm.nih.gov/23390978/">PubMed</a><br>
+Tatebayashi Y, Lee MH, Li L, Iqbal K, Bhatt P, Bhatt DL. The dentate gyrus neurogenesis: a therapeutic target for Alzheimer's disease. <em>Acta Neuropathol.</em> 2003;105(3):225&ndash;232. <a href="https://pubmed.ncbi.nlm.nih.gov/14643768/">PubMed</a><br>
+Bornstein NM, Guekht A, Vester J, et al. Safety and efficacy of Cerebrolysin in early post-stroke recovery: a meta-analysis of nine randomized clinical trials. <em>Neurol Sci.</em> 2018;39(4):629&ndash;640. <a href="https://pubmed.ncbi.nlm.nih.gov/29484894/">PubMed</a><br>
+Ziganshina LE, Abakumova T, Vernay L. Cerebrolysin for acute ischaemic stroke. <em>Cochrane Database Syst Rev.</em> 2020;7(7):CD007026. <a href="https://pubmed.ncbi.nlm.nih.gov/32573768/">PubMed</a>
+</p>
+
+<!-- ========== RELATED READING ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/semax-complete-guide">Semax Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/selank-complete-guide">Selank Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptides-brain-injury-tbi-recovery">Peptides for TBI Recovery</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cognition-stack-semax-selank-dihexa">Cognition Stack Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/semax-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semax: Nootropic Neuropeptide Guide</a>
+            <a href="/articles/selank-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Selank: Anxiolytic Peptide Guide</a>
+            <a href="/articles/peptides-brain-injury-tbi-recovery" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptides for TBI Recovery</a>
+            <a href="/articles/cognition-stack-semax-selank-dihexa" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Cognition Stack Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

@@ -1,0 +1,538 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Follistatin 344: Guide to Myostatin Inhibition and Muscle Growth",
+  description: "Follistatin 344 binds myostatin to reduce muscle growth limits. Mechanisms, research evidence, isoform differences, dosing context, and safety monitoring explained.",
+  image: "/images/articles/follistatin-344.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Muscle Growth &middot; Myostatin Inhibition</div>
+  <h1>Follistatin 344: Guide to Myostatin Inhibition and Muscle Growth</h1>
+  <p class="sub">A naturally occurring glycoprotein that binds myostatin and activins, studied for its role in muscle development. What the research shows, what it doesn't, and how to think about this compound honestly.</p>
+  <div class="pills">
+    <span class="pill">Myostatin &middot; GDF-8 Binding</span>
+    <span class="pill">Muscle Growth &middot; Body Composition</span>
+    <span class="pill">Research Stage &middot; Not FDA Approved</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">344</div><div class="l">Amino Acid<br>Chain Length</div></div>
+  <div class="sb"><div class="v c2">GDF-8</div><div class="l">Primary Target<br>(Myostatin)</div></div>
+  <div class="sb"><div class="v c3">3</div><div class="l">Known Isoforms<br>(344 &middot; 315 &middot; 288)</div></div>
+  <div class="sb"><div class="v c4">Preclinical</div><div class="l">Evidence Stage<br>In Humans</div></div>
+</div>
+
+<p>Follistatin 344 gets attention because it appears to do something most muscle-building compounds can't: reduce the body's own braking system for muscle growth. That brake is myostatin, a protein that tells your muscles "that's enough."</p>
+
+<p>The idea sounds simple. But the biology around follistatin is bigger than a single pathway, and the gap between animal results and human reality is wider than most discussions admit.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational overview of Follistatin 344, covering its mechanisms, research evidence, isoform differences, and safety considerations. It is <strong>not a recommendation to use Follistatin 344</strong>. This compound is not approved for human use. Consult a qualified healthcare provider before considering any peptide protocol.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>Follistatin 344 at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Follistatin 344 (FST344)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Glycoprotein (344 amino acids) &nbsp;|&nbsp; <strong>Class:</strong> Myostatin/activin-binding protein &nbsp;|&nbsp; <strong>Origin:</strong> Naturally occurring in the body; recombinant forms used in research &nbsp;|&nbsp; <strong>Primary Target:</strong> Myostatin (GDF-8), activins &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection (research context) &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved for human use &nbsp;|&nbsp; <strong>Evidence Level:</strong> Mostly preclinical; limited human data</p>
+</div>
+
+<p>It's sometimes grouped with peptides, but follistatin is closer to a small protein than a short peptide chain. That distinction matters because size affects stability, dosing assumptions, and delivery methods.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>. If you're new to this space, start with <a href="/articles/what-are-peptides-beginners-guide">What are peptides? A beginner's guide</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How Follistatin Works: Myostatin and Beyond</h2>
+
+<p>Myostatin is part of the TGF-beta superfamily. It acts as a growth limiter: when myostatin signaling is high, muscle growth stays constrained. When that signaling drops, muscle can grow with less restriction.</p>
+
+<p>Follistatin binds myostatin directly, lowering the "effective" signal reaching muscle tissue. But it doesn't stop there.</p>
+
+<div class="svg-box">
+  <div class="st">Follistatin 344: Myostatin Inhibition Pathway</div>
+  <div class="ss">Binding targets &middot; Signal reduction &middot; Downstream effects</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Follistatin -->
+    <rect x="250" y="10" width="200" height="60" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="350" y="35" text-anchor="middle" font-family="Lora,serif" font-size="15" font-weight="700" fill="#2956A6">Follistatin 344</text>
+    <text x="350" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#2956A6" letter-spacing="1" font-weight="600">BINDING PROTEIN</text>
+
+    <!-- Arrows down -->
+    <line x1="270" y1="70" x2="130" y2="110" stroke="#2956A6" stroke-width="1.5" marker-end="url(#arrowB)"/>
+    <line x1="350" y1="70" x2="350" y2="110" stroke="#6E3B8A" stroke-width="1.5" marker-end="url(#arrowP)"/>
+    <line x1="430" y1="70" x2="570" y2="110" stroke="#187A62" stroke-width="1.5" marker-end="url(#arrowT)"/>
+
+    <!-- Myostatin box -->
+    <rect x="40" y="110" width="180" height="70" rx="10" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="130" y="138" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#B53A3A">Myostatin (GDF-8)</text>
+    <text x="130" y="158" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A2020">Muscle growth brake</text>
+    <text x="130" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#B53A3A" font-weight="600">BLOCKED</text>
+
+    <!-- Activin box -->
+    <rect x="260" y="110" width="180" height="70" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="350" y="138" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#6E3B8A">Activins (A, B)</text>
+    <text x="350" y="158" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">Reproductive, metabolic</text>
+    <text x="350" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#6E3B8A" font-weight="600">MODULATED</text>
+
+    <!-- TGF-beta box -->
+    <rect x="480" y="110" width="180" height="70" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="570" y="138" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#187A62">TGF-&#946; Factors</text>
+    <text x="570" y="158" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">Fibrosis, repair</text>
+    <text x="570" y="172" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#187A62" font-weight="600">NETWORK EFFECTS</text>
+
+    <!-- Downstream results -->
+    <line x1="130" y1="180" x2="130" y2="210" stroke="#B53A3A" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="350" y1="180" x2="350" y2="210" stroke="#6E3B8A" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="570" y1="180" x2="570" y2="210" stroke="#187A62" stroke-width="1" stroke-dasharray="4"/>
+
+    <rect x="40" y="210" width="180" height="55" rx="8" fill="#FFF7E5" stroke="#B48118" stroke-width="1"/>
+    <text x="130" y="233" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A4010" font-weight="600">Muscle Growth</text>
+    <text x="130" y="252" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Less restricted remodeling</text>
+
+    <rect x="260" y="210" width="180" height="55" rx="8" fill="#FFF7E5" stroke="#B48118" stroke-width="1"/>
+    <text x="350" y="233" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A4010" font-weight="600">Hormonal Shifts</text>
+    <text x="350" y="252" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Reproductive axis effects</text>
+
+    <rect x="480" y="210" width="180" height="55" rx="8" fill="#FFF7E5" stroke="#B48118" stroke-width="1"/>
+    <text x="570" y="233" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#5A4010" font-weight="600">Tissue Remodeling</text>
+    <text x="570" y="252" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Signaling balance changes</text>
+
+    <!-- Arrow markers -->
+    <defs>
+      <marker id="arrowB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#2956A6"/></marker>
+      <marker id="arrowP" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#6E3B8A"/></marker>
+      <marker id="arrowT" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#187A62"/></marker>
+    </defs>
+  </svg>
+</div>
+
+<div class="d-a">
+  <div class="s">Important Context</div>
+  <p>"Myostatin blocker" is useful shorthand, but it's incomplete. Follistatin also binds activins that participate in reproductive and metabolic signaling. That's why responsible discussions go beyond "bigger muscles."</p>
+</div>
+
+<h3>The Myostatin Connection</h3>
+
+<p>Animal models with reduced myostatin signaling often show dramatic increases in muscle size. The "Belgian Blue" cattle breed is the classic example: a natural myostatin mutation gives them extreme muscular development (<a href="https://pubmed.ncbi.nlm.nih.gov/9065402/">McPherron et al., 1997</a>).</p>
+
+<p>But translating that magnitude to humans is uncertain. Animal models and gene therapy experiments don't map cleanly onto short-term protein administration in people.</p>
+
+<h3>The Activin Layer</h3>
+
+<p>Follistatin also binds activin A and activin B. These proteins play roles in follicle-stimulating hormone (FSH) regulation, inflammation, and tissue remodeling.</p>
+
+<p>This is easy to miss if you're only reading about muscle. But it's one reason monitoring hormones matters for anyone exploring this compound with a clinician.</p>
+
+<table class="tbl">
+<thead><tr><th>Binding Target</th><th>What Follistatin Does</th><th>Downstream Theme</th></tr></thead>
+<tbody>
+<tr><td><strong>Myostatin (GDF-8)</strong></td><td>Binds and reduces signaling</td><td class="g">Muscle size and remodeling</td></tr>
+<tr><td><strong>Activin A / B</strong></td><td>Alters activin availability</td><td class="y">Reproductive axis, inflammation</td></tr>
+<tr><td><strong>TGF-beta factors</strong></td><td>Network-level interactions</td><td class="y">Fibrosis, repair, signaling balance</td></tr>
+</tbody>
+</table>
+
+<!-- ========== RESEARCH EVIDENCE ========== -->
+<hr class="sep">
+<h2>What the Research Actually Shows</h2>
+
+<p>Most commonly cited results come from animal work, gene therapy experiments, or limited human observations. That doesn't make the topic worthless. It means confidence should match the quality and scale of the evidence.</p>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Animal Evidence</div>
+    <h3>Preclinical Signals</h3>
+    <p style="font-size:14px;margin-bottom:0;">Rodent studies consistently show increased lean mass and muscle fiber size when myostatin signaling is reduced. Some injury models report faster remodeling. But lab conditions don't match real-world training, and size gains don't always equal functional strength (<a href="https://pubmed.ncbi.nlm.nih.gov/11320250/">Lee &amp; McPherron, 2001</a>).</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Human Evidence</div>
+    <h3>Very Limited</h3>
+    <p style="font-size:14px;margin-bottom:0;">Human data is sparse and not enough to support confident claims about outcomes, ideal protocols, or long-term risks. Much of the gene therapy work in humans targets muscular dystrophy, not healthy muscle growth (<a href="https://pubmed.ncbi.nlm.nih.gov/25655219/">Mendell et al., 2015</a>).</p>
+  </div>
+</div>
+
+<h3>Preclinical Evidence Breakdown</h3>
+
+<table class="tbl">
+<thead><tr><th>Model Type</th><th>Typical Endpoint</th><th>Common Finding</th><th>Caution</th></tr></thead>
+<tbody>
+<tr><td><strong>Rodent muscle studies</strong></td><td>Lean mass, fiber size</td><td class="g">Increased muscle size</td><td>Size doesn't always equal functional strength</td></tr>
+<tr><td><strong>Injury / immobilization</strong></td><td>Recovery rate, histology</td><td class="g">Faster remodeling signals</td><td>Lab conditions differ from real-world training</td></tr>
+<tr><td><strong>Metabolic / aging models</strong></td><td>Body comp, insulin markers</td><td class="y">Mixed metabolic effects</td><td>Many confounders, short study windows</td></tr>
+<tr><td><strong>Gene therapy vectors</strong></td><td>Follistatin expression levels</td><td class="g">Sustained myostatin reduction</td><td class="r">Not comparable to protein administration</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>"More muscle tissue" is the most consistent animal signal. But function and long-term safety aren't nearly as clear. The best evidence is specific and boring; the most viral claims usually skip the setup details.</p>
+</div>
+
+<h3>Evaluating Any Follistatin Claim</h3>
+
+<p>A lot of confusion comes from mixing different kinds of interventions. Some results people quote come from gene therapy that increases follistatin expression, not from a vial of compound used short-term.</p>
+
+<div class="cd cp">
+  <div class="tg">Critical Questions</div>
+  <h3>When You Read a Study or Summary</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>What was administered?</strong> Peptide/protein vs. gene therapy vector vs. analog. These aren't comparable interventions.<br><strong>What outcome was measured?</strong> Strength tests vs. imaging vs. biomarkers. A bigger number on a scan may not mean functional improvement.<br><strong>How long was follow-up?</strong> Some risks and reversals only show up after months.<br><strong>Who was studied?</strong> Healthy vs. disease model. Disease contexts behave differently.<br><strong>What was controlled?</strong> Without training, diet, and baseline lab controls, results can mislead.</p>
+</div>
+
+<!-- ========== ISOFORM COMPARISON ========== -->
+<hr class="sep">
+<h2>Follistatin Isoforms: 344 vs. 315 vs. 288</h2>
+
+<p>You'll see three isoform numbers come up in discussions. They differ in chain length and tissue binding properties. They're not interchangeable, and assuming they are can lead to bad conclusions.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Follistatin 344</th><th>Follistatin 315</th><th>Follistatin 288</th></tr></thead>
+<tbody>
+<tr><td><strong>Chain length</strong></td><td>344 amino acids</td><td>315 amino acids</td><td>288 amino acids</td></tr>
+<tr><td><strong>Tissue binding</strong></td><td class="y">Broader distribution</td><td class="y">Moderate specificity</td><td class="g">Higher tissue specificity</td></tr>
+<tr><td><strong>Research use</strong></td><td class="g">Most commonly referenced</td><td class="y">Common alternative</td><td class="y">Less commonly discussed</td></tr>
+<tr><td><strong>Circulating half-life</strong></td><td class="y">Context-dependent</td><td class="y">Context-dependent</td><td class="y">Context-dependent</td></tr>
+<tr><td><strong>Key takeaway</strong></td><td colspan="3">Not interchangeable by assumption. Isoform choice should match research context.</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Context</div>
+  <p>Follistatin 344 is the longest isoform and the one most frequently referenced in muscle-related research. But "most referenced" doesn't mean "best for every goal." The differences in tissue binding and half-life can matter depending on what a researcher is studying.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing and Administration Context</h2>
+
+<p>This section is informational only. It is not medical advice and not a recommendation.</p>
+
+<p>Research protocols and anecdotal discussions often reference subcutaneous injections, sometimes in cycles. Because the molecule is larger than typical short peptides, assumptions borrowed from small-peptide dosing don't always apply.</p>
+
+<table class="tbl">
+<thead><tr><th>Discussed Goal</th><th>Common Pattern Mentioned</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Body composition</strong></td><td>Daily dosing in short blocks (10&ndash;30 days)</td><td class="y">Protocols vary widely</td></tr>
+<tr><td><strong>Rehabilitation interest</strong></td><td>Lower dosing with longer monitoring</td><td class="y">Outcome measures matter</td></tr>
+<tr><td><strong>"Maintenance" concepts</strong></td><td>Intermittent dosing</td><td class="r">Long-term effects not established</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Warning</div>
+  <p>The biggest practical risk in non-clinical use isn't only the biology. It's also quality control, sterility, and unmonitored side effects. Product purity in unregulated settings can vary dramatically.</p>
+</div>
+
+<p>For basic technique background, see <a href="/articles/how-to-inject-peptides-subcutaneously">How to inject peptides subcutaneously</a> and <a href="/articles/how-to-store-peptides">How to store peptides</a>.</p>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety, Side Effects, and Monitoring</h2>
+
+<p>Follistatin biology touches multiple signaling systems. That means thoughtful monitoring matters more than with simpler compounds. If a clinician is involved, they can tailor labs and evaluation based on medical history and goals.</p>
+
+<h3>Commonly Discussed Risks</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--red);">Product Quality</h4>
+    <p>Purity, contamination, and dosing accuracy vary by source. Without regulatory oversight, what's on the label may not match what's in the vial.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Injection Risks</h4>
+    <p>Injection-site irritation or infection when sterile technique is poor. Larger molecules can sometimes cause more local reactions than small peptides.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Hormonal Effects</h4>
+    <p>Unpredictable effects on hormones due to activin-related pathways. Anyone with fertility goals or hormone-sensitive conditions should talk with a provider.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Connective Tissue Mismatch</h4>
+    <p>Muscle strength may not keep up with connective tissue adaptation. Training smart matters more than ever when muscle growth is accelerated.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Unknown Long-Term Profile</h4>
+    <p>Long-term safety in humans hasn't been established. Some effects in animal models raise questions about cardiac tissue and fibrosis that remain unanswered.</p>
+  </div>
+</div>
+
+<h3>Monitoring Framework</h3>
+
+<table class="tbl">
+<thead><tr><th>Monitoring Item</th><th>Why It's Considered</th><th>Timing</th></tr></thead>
+<tbody>
+<tr><td><strong>CBC and CMP</strong></td><td>General safety snapshot</td><td class="g">Baseline, then periodic</td></tr>
+<tr><td><strong>Lipids and fasting glucose</strong></td><td>Body comp changes can shift metabolic markers</td><td class="g">Baseline, then periodic</td></tr>
+<tr><td><strong>Hormone panel</strong></td><td>Activin-related pathways may affect reproductive hormones</td><td class="y">Baseline and follow-up</td></tr>
+<tr><td><strong>Training and pain log</strong></td><td>Connective tissue tolerance assessment</td><td class="g">Ongoing</td></tr>
+<tr><td><strong>Cardiac markers</strong></td><td>Theoretical concerns from some animal data</td><td class="y">Case-dependent</td></tr>
+</tbody>
+</table>
+
+<p>A good general foundation for monitoring is the <a href="/articles/peptide-bloodwork-guide">Peptide bloodwork guide</a>. For general safety considerations, <a href="/articles/peptide-side-effects-what-to-know">Peptide side effects: what to know</a> is also worth reading.</p>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Explores Follistatin 344 (and Why)</h2>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Research Interest</div>
+    <h3>Muscle Wasting Conditions</h3>
+    <p style="font-size:14px;margin-bottom:0;">Preclinical and early gene therapy work has focused on conditions like muscular dystrophy and sarcopenia. The therapeutic angle is about restoring lost muscle, not building beyond normal.</p>
+  </div>
+  <div class="cd cb">
+    <div class="tg">Performance Interest</div>
+    <h3>Body Composition Goals</h3>
+    <p style="font-size:14px;margin-bottom:0;">Some people explore follistatin for lean mass and body composition changes. The evidence base for this use in healthy humans is very thin, and the risk-benefit picture is unclear.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="cd ca">
+    <div class="tg">Rehabilitation</div>
+    <h3>Recovery After Injury</h3>
+    <p style="font-size:14px;margin-bottom:0;">Interest in faster muscle recovery after immobilization or injury. Animal data shows some promise, but human evidence is lacking.</p>
+  </div>
+  <div class="cd cp">
+    <div class="tg">Aging Research</div>
+    <h3>Age-Related Muscle Loss</h3>
+    <p style="font-size:14px;margin-bottom:0;">Myostatin levels tend to increase with age, which contributes to sarcopenia. Follistatin's binding action is of interest in this context, though clinical trials are sparse.</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Is Follistatin 344 the same as a myostatin inhibitor?</summary>
+    <div class="fa">It's best to think of it as a myostatin-binding and activin-binding protein. It can reduce effective myostatin signaling, which functions like "inhibition" in practice. But it's part of a wider network and affects more than just myostatin.</div>
+  </details>
+  <details>
+    <summary>Does more muscle size automatically mean better performance?</summary>
+    <div class="fa">Not always. Size can increase without a matching rise in strength, coordination, tendon adaptation, or conditioning. Performance depends on training, recovery, and the health of connective tissue. Muscle that outpaces tendons is a real injury risk.</div>
+  </details>
+  <details>
+    <summary>What are the biggest practical risks people overlook?</summary>
+    <div class="fa">Sterility, sourcing, and monitoring. In the real world, contaminated products and poor injection technique can cause immediate harm. Untracked biomarker changes can creep up over time. The compound itself isn't the only risk factor.</div>
+  </details>
+  <details>
+    <summary>How long do effects last after stopping?</summary>
+    <div class="fa">That's not well established in humans. Some animal work suggests changes can persist beyond the dosing window. But durability and reversibility in people remains uncertain. Don't assume effects are permanent or fully reversible.</div>
+  </details>
+  <details>
+    <summary>Can Follistatin 344 affect hormones or fertility?</summary>
+    <div class="fa">It might, because follistatin interacts with activins that participate in reproductive signaling. FSH regulation can be affected. Anyone with fertility goals or hormone-sensitive conditions should speak with a healthcare provider before considering this compound.</div>
+  </details>
+  <details>
+    <summary>How is Follistatin 344 different from Follistatin 315?</summary>
+    <div class="fa">They differ in chain length and tissue binding properties. Follistatin 344 is the longer isoform and has a broader tissue distribution. Follistatin 315 is more tissue-specific. They should not be treated as interchangeable without understanding these differences.</div>
+  </details>
+  <details>
+    <summary>Is there a risk of cardiac effects?</summary>
+    <div class="fa">Some animal studies have raised questions about myostatin inhibition and cardiac tissue remodeling. This hasn't been clearly confirmed or ruled out in humans. It's one reason why cardiac markers should be part of any monitoring protocol.</div>
+  </details>
+  <details>
+    <summary>What should I read next for muscle growth research?</summary>
+    <div class="fa">Start with <a href="/articles/best-peptides-for-muscle-growth">Best peptides for muscle growth</a> for a broader overview. Review technique basics like <a href="/articles/how-to-store-peptides">How to store peptides</a>. Keep your expectations grounded in the quality of evidence available.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Follistatin 344 is interesting because it sits upstream of key muscle growth regulators, especially myostatin. The science is promising in animal models, but the human picture is incomplete. If you're evaluating claims, weigh the evidence level, the product quality, and the seriousness of monitoring.</p>
+</div>
+
+<p>The gap between "myostatin knockout mice are huge" and "this will safely build muscle in a healthy human" is enormous. Most of the exciting results come from gene therapy or genetic knockouts, not from a short course of subcutaneous injections.</p>
+
+<p>If you're making decisions about your health, involve a qualified healthcare provider. This is an area where enthusiasm routinely outpaces evidence.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not intended as medical advice and should not be treated as such. Follistatin 344 is not approved by the FDA for human use. Always consult a qualified healthcare provider before starting any peptide or research compound protocol. Individual results and risks vary. Never self-administer any compound without proper medical supervision.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+McPherron AC, Lawler AM, Lee SJ. Regulation of skeletal muscle mass in mice by a new TGF-beta superfamily member. <em>Nature.</em> 1997;387(6628):83-90. <a href="https://pubmed.ncbi.nlm.nih.gov/9139826/">PubMed</a><br>
+Lee SJ, McPherron AC. Regulation of myostatin activity and muscle growth. <em>Proc Natl Acad Sci USA.</em> 2001;98(16):9306-11. <a href="https://pubmed.ncbi.nlm.nih.gov/11459935/">PubMed</a><br>
+Amthor H, et al. Follistatin complexes myostatin and antagonises myostatin-mediated inhibition of myogenesis. <em>Dev Biol.</em> 2004;270(1):19-30. <a href="https://pubmed.ncbi.nlm.nih.gov/15136138/">PubMed</a><br>
+Mendell JR, et al. A phase 1/2a follistatin gene therapy trial for Becker muscular dystrophy. <em>Mol Ther.</em> 2015;23(1):192-201. <a href="https://pubmed.ncbi.nlm.nih.gov/25655219/">PubMed</a><br>
+Kota J, et al. Follistatin gene delivery enhances muscle growth and strength in nonhuman primates. <em>Sci Transl Med.</em> 2009;1(6):6ra15. <a href="https://pubmed.ncbi.nlm.nih.gov/20368179/">PubMed</a><br>
+Nakatani M, et al. Transgenic expression of a myostatin inhibitor derived from follistatin increases skeletal muscle mass and ameliorates dystrophic pathology. <em>FASEB J.</em> 2008;22(2):477-87. <a href="https://pubmed.ncbi.nlm.nih.gov/17893249/">PubMed</a><br>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/best-peptides-for-muscle-growth">Best Peptides for Muscle Growth</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides?</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-bloodwork-guide">Peptide Bloodwork Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/best-peptides-for-muscle-growth" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Muscle Growth</a>
+            <a href="/articles/peptide-bloodwork-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Bloodwork Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects Guide</a>
+            <a href="/articles/how-to-inject-peptides-subcutaneously" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Inject Peptides</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
