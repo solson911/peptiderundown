@@ -1,0 +1,590 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "TB-500 (Thymosin Beta-4): Complete Guide to the Healing Peptide",
+  description: "Everything you need to know about TB-500, the synthetic fragment of thymosin beta-4 used for injury recovery, tissue repair, and healing support.",
+  image: "/images/articles/tb-500.webp",
+  date: "2026-02-14",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Healing &middot; Tissue Repair</div>
+  <h1>TB-500 (Thymosin Beta-4): Complete Guide to the Healing Peptide</h1>
+  <p class="sub">A synthetic fragment of thymosin beta-4 that promotes tissue repair through actin regulation, angiogenesis, and cell migration. What the research says, how it's dosed, and what to expect.</p>
+  <div class="pills">
+    <span class="pill">Actin Regulation</span>
+    <span class="pill">Angiogenesis</span>
+    <span class="pill">Tissue Repair</span>
+    <span class="pill">Cell Migration</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">43</div><div class="l">Amino Acids<br>in Full Tb4</div></div>
+  <div class="sb"><div class="v c2">2&ndash;2.5mg</div><div class="l">Standard Dose<br>(Twice Weekly)</div></div>
+  <div class="sb"><div class="v c3">4&ndash;6</div><div class="l">Week Loading<br>Phase</div></div>
+  <div class="sb"><div class="v c4">SubQ</div><div class="l">Primary<br>Administration</div></div>
+</div>
+
+<p>If you've spent time around peptide communities, you've heard someone swear by TB-500 for healing a nagging injury. Torn tendons, chronic muscle strains, ligament damage that won't resolve. TB-500 keeps surfacing because the research behind its parent protein, thymosin beta-4, is genuinely impressive.</p>
+
+<p>This guide covers the mechanism of action, research on injury healing, dosing protocols, side effects, and how TB-500 compares to <a href="/articles/bpc-157-complete-guide">BPC-157</a>.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This article is for educational purposes only. TB-500 is not FDA-approved for human use. All information is based on published preclinical research and should not be taken as medical advice.</p>
+</div>
+
+<hr class="sep">
+
+<!-- What Is TB-500 -->
+<h2>What Is TB-500?</h2>
+
+<p>TB-500 is a synthetic peptide that replicates the active region of thymosin beta-4 (Tb4), a naturally occurring 43-amino-acid protein found in nearly every human cell. Thymosin beta-4 was first isolated from the thymus gland in the 1960s, and researchers quickly realized it played a central role in cell migration, blood vessel formation, and wound healing.</p>
+
+<p>TB-500 is not identical to thymosin beta-4. It's a fragment that contains the amino acid sequence responsible for the protein's primary biological activity.</p>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>TB-500 at a Glance</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Full name:</strong> Thymosin Beta-4 Fragment (Ac-SDKP) &nbsp;&bull;&nbsp; <strong>Parent protein:</strong> 43-amino-acid Tb4, found in nearly all human cells &nbsp;&bull;&nbsp; <strong>First isolated:</strong> 1960s from the thymus gland &nbsp;&bull;&nbsp; <strong>Primary function:</strong> Actin sequestration, angiogenesis, cell migration &nbsp;&bull;&nbsp; <strong>Concentration spikes:</strong> At injury sites, in platelets, white blood cells, cornea, and cardiac tissue</p>
+</div>
+
+<p>Think of it as the business end of the molecule, isolated and synthesized for targeted use. Thymosin beta-4 is one of the most abundant intracellular proteins in the human body. It shows up everywhere, from platelets and white blood cells to the cornea and heart tissue.</p>
+
+<p>Its concentration spikes at injury sites. That pattern is what first tipped researchers off to its healing properties.</p>
+
+<hr class="sep">
+
+<!-- Mechanism of Action -->
+<h2>How TB-500 Works: Actin, Angiogenesis, and Cell Migration</h2>
+
+<p>TB-500's effects trace back to three interconnected processes. Each one plays a distinct role in tissue repair, and they work together as a coordinated healing response.</p>
+
+<!-- SVG Mechanism Diagram -->
+<div class="svg-box">
+  <div class="st">TB-500 Mechanism of Action</div>
+  <div class="ss">Three interconnected pathways driving tissue repair</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="700" height="260" rx="8" fill="#F8F7F4"/>
+
+    <!-- Central TB-500 node -->
+    <circle cx="350" cy="130" r="45" fill="#2956A6" opacity="0.12"/>
+    <circle cx="350" cy="130" r="32" fill="#2956A6" opacity="0.2"/>
+    <text x="350" y="126" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#2956A6">TB-500</text>
+    <text x="350" y="142" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#86869A">(Tb4 Fragment)</text>
+
+    <!-- Actin Regulation (left) -->
+    <line x1="310" y1="115" x2="175" y2="70" stroke="#2956A6" stroke-width="2" stroke-dasharray="5,3"/>
+    <circle cx="140" cy="55" r="40" fill="#2956A6" opacity="0.08"/>
+    <text x="140" y="48" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="600" fill="#2956A6">Actin</text>
+    <text x="140" y="63" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="600" fill="#2956A6">Regulation</text>
+    <text x="140" y="82" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#86869A">G-actin sequestration</text>
+    <text x="140" y="94" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#86869A">Cytoskeleton remodeling</text>
+
+    <!-- Angiogenesis (right) -->
+    <line x1="390" y1="115" x2="525" y2="70" stroke="#187A62" stroke-width="2" stroke-dasharray="5,3"/>
+    <circle cx="560" cy="55" r="40" fill="#187A62" opacity="0.08"/>
+    <text x="560" y="48" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="600" fill="#187A62">Angio-</text>
+    <text x="560" y="63" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="600" fill="#187A62">genesis</text>
+    <text x="560" y="82" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#86869A">New blood vessel growth</text>
+    <text x="560" y="94" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#86869A">Endothelial cell migration</text>
+
+    <!-- Cell Migration (bottom) -->
+    <line x1="350" y1="170" x2="350" y2="210" stroke="#6E3B8A" stroke-width="2" stroke-dasharray="5,3"/>
+    <circle cx="350" cy="230" r="30" fill="#6E3B8A" opacity="0.08"/>
+    <text x="350" y="226" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="600" fill="#6E3B8A">Cell</text>
+    <text x="350" y="241" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="600" fill="#6E3B8A">Migration</text>
+
+    <!-- Outcome arrow -->
+    <text x="350" y="18" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="600" fill="#18182A">TISSUE REPAIR &amp; WOUND HEALING</text>
+    <line x1="200" y1="24" x2="500" y2="24" stroke="#D9D6CE" stroke-width="1"/>
+  </svg>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Mechanism 1</div>
+  <h3>Actin Regulation</h3>
+  <p style="font-size:14px;margin-bottom:0;">Actin is one of the most important structural proteins in your cells. It forms the cytoskeleton, the internal scaffolding that gives cells their shape and allows them to move. Thymosin beta-4 is the primary actin-sequestering protein in the body. TB-500 binds to G-actin (the monomeric form) and controls when it polymerizes into F-actin (the filament form). This regulation of actin dynamics is what allows cells to migrate efficiently to damaged tissue (<a href="https://pubmed.ncbi.nlm.nih.gov/16179078/">Goldstein et al., 2005</a>).</p>
+</div>
+
+<div class="cd cb">
+  <div class="tg">Mechanism 2</div>
+  <h3>Angiogenesis</h3>
+  <p style="font-size:14px;margin-bottom:0;">TB-500 promotes the formation of new blood vessels. This is critical for tissue repair because damaged areas need increased blood flow to deliver oxygen, nutrients, and immune cells. Research has shown that thymosin beta-4 stimulates endothelial cell migration and tubule formation, the early steps of building new vasculature (<a href="https://pubmed.ncbi.nlm.nih.gov/17525367/">Smart et al., 2007</a>). In animal models, this translates to faster vascularization and reduced ischemic damage.</p>
+</div>
+
+<div class="cd cp">
+  <div class="tg">Mechanism 3</div>
+  <h3>Cell Migration</h3>
+  <p style="font-size:14px;margin-bottom:0;">Beyond regulating actin, TB-500 upregulates cell migration directly. It promotes the movement of keratinocytes, endothelial cells, and other repair-related cells toward injury sites. The peptide also reduces inflammation at these sites, creating a more favorable environment for healing. Thymosin beta-4 accelerated dermal wound healing in rats by promoting both cell migration and collagen deposition (<a href="https://pubmed.ncbi.nlm.nih.gov/10681893/">Malinda et al., 1999</a>).</p>
+</div>
+
+<div class="d-t">
+  <div class="s">How It All Connects</div>
+  <p>Cell migration moves repair cells to the injury site. Angiogenesis builds new blood supply to feed the repair process. Actin regulation provides structural reorganization for tissue rebuilding. All three work together as a coordinated healing cascade.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Research -->
+<h2>TB-500 Research: What the Studies Show</h2>
+
+<p>Most of the compelling research on TB-500 comes from animal models. Human clinical trials are sparse, but the preclinical evidence covers a wide range of tissue types.</p>
+
+<table class="tbl">
+<thead><tr><th>Research Area</th><th>Model</th><th>Key Finding</th><th>Evidence Level</th></tr></thead>
+<tbody>
+<tr><td><strong>Tendon repair</strong></td><td>Rat (Achilles)</td><td>Improved collagen organization and biomechanical strength</td><td class="g">Strong preclinical</td></tr>
+<tr><td><strong>Muscle recovery</strong></td><td>Mouse</td><td>Increased satellite cell activation, faster muscle architecture restoration</td><td class="g">Strong preclinical</td></tr>
+<tr><td><strong>Cardiac repair</strong></td><td>Mouse (MI)</td><td>Reduced scar size, improved cardiac function, new cardiomyocytes</td><td class="g">Strong preclinical</td></tr>
+<tr><td><strong>Ligament healing</strong></td><td>Animal</td><td>Accelerated repair via angiogenic and cell migration pathways</td><td class="y">Moderate preclinical</td></tr>
+<tr><td><strong>Wound healing</strong></td><td>Rat (dermal)</td><td>Faster closure, increased collagen deposition</td><td class="g">Strong preclinical</td></tr>
+<tr><td><strong>Hair regrowth</strong></td><td>Mouse</td><td>Activated follicular stem cells, pushed follicles into anagen phase</td><td class="y">Moderate preclinical</td></tr>
+<tr><td><strong>Human clinical</strong></td><td>Human</td><td>Very limited published data</td><td class="r">Minimal</td></tr>
+</tbody>
+</table>
+
+<h3>Tendon Repair</h3>
+
+<p>Tendon injuries are notoriously slow to heal. Limited blood supply and high mechanical stress make tendons one of the most frustrating tissues to recover from.</p>
+
+<p>A 2012 study examined thymosin beta-4's effects on rat Achilles tendon healing. Tb4 treatment increased the organization of collagen fibers and improved the biomechanical strength of healing tendons compared to controls (<a href="https://pubmed.ncbi.nlm.nih.gov/22105594/">Ehrlich &amp; Bhatt, 2012</a>). The results suggested that Tb4 didn't just speed up the timeline. It improved the quality of the repair.</p>
+
+<h3>Muscle Recovery</h3>
+
+<p>After muscle injury, satellite cells (muscle stem cells) need to activate, proliferate, and fuse into new muscle fibers. TB-500 appears to support this entire process.</p>
+
+<p>Research published in the <em>FASEB Journal</em> demonstrated that thymosin beta-4 promoted muscle regeneration in a mouse model. The treated animals showed increased satellite cell activation and faster restoration of muscle architecture (<a href="https://pubmed.ncbi.nlm.nih.gov/14688200/">Spurrier et al., 2004</a>).</p>
+
+<h3>Cardiac Tissue Repair</h3>
+
+<p>This is where TB-500 research gets really interesting. Heart muscle doesn't regenerate well on its own. After a heart attack, dead cardiac cells get replaced with scar tissue, not new muscle.</p>
+
+<p>A landmark study by Smart et al. in <em>Nature</em> showed that thymosin beta-4 could activate epicardial progenitor cells in the adult mouse heart and promote their differentiation into new cardiomyocytes (<a href="https://pubmed.ncbi.nlm.nih.gov/21512573/">Smart et al., 2011</a>). This challenged decades of conventional thinking about adult cardiac regeneration.</p>
+
+<div class="d-t">
+  <div class="s">Key Research Insight</div>
+  <p>Follow-up work showed that Tb4 treatment after myocardial infarction in mice reduced scar size and improved cardiac function. The peptide promoted both new blood vessel formation in the damaged area and the survival of existing cardiac cells (<a href="https://pubmed.ncbi.nlm.nih.gov/15340220/">Bock-Marquette et al., 2004</a>).</p>
+</div>
+
+<h3>Hair Regrowth</h3>
+
+<p>An unexpected finding from the cardiac research: thymosin beta-4 also stimulates hair follicle stem cells. Researchers noticed that mice treated with Tb4 showed increased hair growth in the treated areas.</p>
+
+<p>A study confirmed that thymosin beta-4 promoted hair growth in mice by activating follicular stem cells and promoting their migration to the hair follicle base (<a href="https://pubmed.ncbi.nlm.nih.gov/15337766/">Philp et al., 2004</a>). The peptide appeared to push resting hair follicles into the active growth phase (anagen). Human clinical data remains limited.</p>
+
+<hr class="sep">
+
+<!-- Dosing -->
+<h2>TB-500 Dosing: Loading and Maintenance Protocols</h2>
+
+<p>TB-500 dosing typically follows a two-phase approach. A loading phase builds up systemic levels, followed by a reduced maintenance schedule.</p>
+
+<table class="tbl">
+<thead><tr><th>Phase</th><th>Dose</th><th>Frequency</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>Loading</strong></td><td class="g">2&ndash;2.5 mg</td><td>Twice per week</td><td>4&ndash;6 weeks</td></tr>
+<tr><td><strong>Aggressive loading</strong></td><td class="y">5 mg</td><td>Twice weekly (first 2 weeks)</td><td>2 weeks, then standard</td></tr>
+<tr><td><strong>Maintenance</strong></td><td class="g">2&ndash;2.5 mg</td><td>Once every 1&ndash;2 weeks</td><td>2&ndash;3 months</td></tr>
+</tbody>
+</table>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Acute Injuries</h4>
+    <p>Start the loading phase as soon as possible after the injury occurs. Standard 4-week loading at 2&ndash;2.5 mg twice weekly, then transition to maintenance.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Chronic Injuries</h4>
+    <p>The loading phase may need to extend to 6 full weeks before transitioning to maintenance. Some users run longer maintenance cycles for stubborn conditions.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- Administration -->
+<h2>How to Administer TB-500</h2>
+
+<p>TB-500 is typically administered via <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous injection</a>. Here are the practical details.</p>
+
+<h3>Reconstitution</h3>
+
+<p>TB-500 comes as a lyophilized (freeze-dried) powder, usually in 2 mg or 5 mg vials. Need help with dosing math? Use our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Step 1: Reconstitute</h4>
+    <p>Use bacteriostatic water (BAC water). Inject slowly down the side of the vial, not directly onto the powder. Gently swirl until dissolved.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Step 2: Inject</h4>
+    <p>Use an insulin syringe (29&ndash;31 gauge). Subcutaneous injection into the abdomen, thigh, or deltoid. Rotate injection sites.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Step 3: Store</h4>
+    <p>Refrigerate reconstituted solution at 2&ndash;8&deg;C. Use within 2&ndash;3 weeks. Unreconstituted powder stores at room temperature.</p>
+  </div>
+</div>
+
+<p>For a detailed walkthrough with dosage calculations, see our <a href="/articles/how-to-reconstitute-peptides">complete peptide reconstitution guide</a>.</p>
+
+<div class="d-p">
+  <div class="s">Injection Location Note</div>
+  <p>Some users inject closer to the injury site, believing this provides more localized benefit. The evidence for this is mostly anecdotal. TB-500 is a systemic peptide, and subcutaneous injection anywhere should distribute it throughout the body via the bloodstream.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Side Effects -->
+<h2>TB-500 Side Effects and Safety</h2>
+
+<p>TB-500 is generally well-tolerated in the research literature and in anecdotal reports. No compound is without potential side effects, though.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Severity</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Headache</strong></td><td>Common</td><td class="y">Mild</td><td>Usually resolves after the first few doses</td></tr>
+<tr><td><strong>Lethargy / fatigue</strong></td><td>Common</td><td class="y">Mild</td><td>Often noticed 1&ndash;2 days post-injection during loading</td></tr>
+<tr><td><strong>Injection site reactions</strong></td><td>Common</td><td class="y">Mild</td><td>Redness, itching, minor swelling (standard for injectables)</td></tr>
+<tr><td><strong>Head rush</strong></td><td>Occasional</td><td class="y">Mild</td><td>Shortly after injection, resolves quickly</td></tr>
+<tr><td><strong>Nausea</strong></td><td>Rare</td><td class="y">Mild</td><td>Mild stomach discomfort in some users</td></tr>
+<tr><td><strong>Temporary pain increase</strong></td><td>Occasional</td><td class="y">Moderate</td><td>Injury may feel worse before improving (blood flow changes)</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Theoretical Cancer Concern</div>
+  <p>Because TB-500 promotes angiogenesis and cell migration, some researchers have questioned whether it could accelerate the growth of existing tumors. Thymosin beta-4 levels are elevated in some cancer types (<a href="https://pubmed.ncbi.nlm.nih.gov/16557594/">Huang et al., 2006</a>). However, elevated Tb4 in tumors could be a consequence of rapid cell growth rather than a cause. Animal studies using exogenous Tb4 haven't shown tumor-promoting effects. Anyone with a history of cancer should discuss this with their physician.</p>
+</div>
+
+<hr class="sep">
+
+<!-- TB-500 vs BPC-157 -->
+<h2>TB-500 vs. BPC-157: How They Compare</h2>
+
+<p>These two peptides get compared constantly because they're both used for injury healing. They work through different mechanisms and complement each other more than they compete.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>TB-500</th><th>BPC-157</th></tr></thead>
+<tbody>
+<tr><td><strong>Origin</strong></td><td>Fragment of thymosin beta-4</td><td>Fragment of gastric body protection compound</td></tr>
+<tr><td><strong>Primary mechanism</strong></td><td>Actin regulation, angiogenesis</td><td>Nitric oxide modulation, growth factor upregulation</td></tr>
+<tr><td><strong>Systemic vs. local</strong></td><td class="g">More systemic</td><td class="g">More localized</td></tr>
+<tr><td><strong>Administration</strong></td><td>Subcutaneous injection</td><td>Subcutaneous injection or oral</td></tr>
+<tr><td><strong>Dosing frequency</strong></td><td>2x per week (loading)</td><td>Daily</td></tr>
+<tr><td><strong>Best for</strong></td><td>Systemic tissue repair, cardiac, hair</td><td>Gut healing, localized tendon/ligament repair</td></tr>
+</tbody>
+</table>
+
+<h3>Can You Stack Them?</h3>
+
+<p>Yes, and many people do. The two peptides work through largely different pathways, so combining them covers more biological ground. There's no known negative interaction between them.</p>
+
+<div class="cd ca">
+  <div class="tg">Common Stack Protocol</div>
+  <h3>TB-500 + BPC-157 Stack</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>TB-500:</strong> 2.5 mg twice weekly &nbsp;&bull;&nbsp; <strong>BPC-157:</strong> 250&ndash;500 mcg daily &nbsp;&bull;&nbsp; BPC-157 upregulates growth hormone receptors and promotes nitric oxide-mediated healing, while TB-500 handles the actin and angiogenesis side. For a detailed comparison, see our <a href="/articles/bpc-157-vs-tb-500-comparison">BPC-157 vs. TB-500 comparison guide</a>.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Results Timeline -->
+<h2>TB-500 Results Timeline</h2>
+
+<p>TB-500 isn't an overnight fix. Here's what a realistic timeline looks like for most users based on community reports and the underlying biology.</p>
+
+<table class="tbl">
+<thead><tr><th>Timeframe</th><th>What to Expect</th></tr></thead>
+<tbody>
+<tr><td><strong>Week 1&ndash;2</strong></td><td>Minimal visible changes. Some report improved well-being or reduced inflammation.</td></tr>
+<tr><td><strong>Week 3&ndash;4</strong></td><td class="g">Most people notice reduced pain, improved range of motion, better flexibility.</td></tr>
+<tr><td><strong>Week 5&ndash;8</strong></td><td class="g">Peak effects. Chronic stalled injuries may show significant improvement.</td></tr>
+<tr><td><strong>Month 3+</strong></td><td class="g">Long-term structural improvements: better tissue quality, not just symptom relief.</td></tr>
+</tbody>
+</table>
+
+<p>Individual results vary enormously. Factors like injury severity, age, nutrition, sleep, and concurrent rehabilitation all influence outcomes.</p>
+
+<hr class="sep">
+
+<!-- Legal Status -->
+<h2>Legal and Regulatory Status</h2>
+
+<p>TB-500's legal status varies by country and context. The regulatory environment for peptides is shifting rapidly.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">United States</h4>
+    <p>Not FDA-approved for human use. Available as a research chemical. The FDA has cracked down on compounding pharmacies selling thymosin beta-4, particularly after 2023 regulatory actions.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Australia</h4>
+    <p>Classified as a Schedule 4 prescription-only substance. Previously available through compounding pharmacies, but regulations have tightened significantly.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Sports / WADA</h4>
+    <p>TB-500 and thymosin beta-4 are banned by WADA under the S2 category (peptide hormones and growth factors). Athletes subject to drug testing should avoid it entirely.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Veterinary Use</h4>
+    <p>TB-500 has a longer history in veterinary medicine, particularly in horse racing for musculoskeletal injuries. It's banned in most competitive equine sports as well.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>Always check your local laws before purchasing or using TB-500. Regulations change frequently, and what's available today may not be tomorrow.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Who Might Benefit -->
+<h2>Who Might Consider TB-500</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Injury Recovery</h4>
+    <p>People dealing with tendon, ligament, or muscle injuries that have stalled or are healing slowly. Especially relevant for poorly vascularized tissue.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Chronic Pain</h4>
+    <p>Those with longstanding musculoskeletal conditions that haven't responded well to conventional treatment approaches.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Research Interest</h4>
+    <p>Individuals interested in the cardiac repair or hair regrowth research, keeping in mind that human clinical evidence is still limited.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Is TB-500 the same as thymosin beta-4?</summary>
+    <div class="fa">No. TB-500 is a synthetic fragment that contains the active region of thymosin beta-4. It's a shorter peptide sequence designed to replicate the key biological functions of the full protein. Some products labeled "TB-500" may actually contain full-length Tb4, but traditionally, TB-500 refers to the fragment.</div>
+  </details>
+  <details>
+    <summary>How long should I run TB-500?</summary>
+    <div class="fa">Most protocols call for a 4&ndash;6 week loading phase followed by 4&ndash;8 weeks of maintenance. For chronic injuries, some people run longer cycles. There isn't a well-established maximum duration, but <a href="/articles/peptide-cycling-guide">cycling off periodically</a> is common practice.</div>
+  </details>
+  <details>
+    <summary>Can I take TB-500 orally?</summary>
+    <div class="fa">TB-500 is a peptide and would be broken down by digestive enzymes before reaching the bloodstream. Subcutaneous injection is the standard route. Unlike BPC-157, which has some evidence for oral bioavailability, TB-500 is not considered orally active.</div>
+  </details>
+  <details>
+    <summary>Does TB-500 need to be injected near the injury?</summary>
+    <div class="fa">Not necessarily. TB-500 works systemically, meaning a subcutaneous injection in your abdomen will still deliver the peptide throughout your body via the bloodstream. Some users prefer injecting near the injury site, but there's no strong evidence that localized injection is more effective for this particular peptide.</div>
+  </details>
+  <details>
+    <summary>Will TB-500 show up on a drug test?</summary>
+    <div class="fa">Standard workplace drug tests don't screen for peptides. However, WADA-accredited sports drug tests can detect thymosin beta-4 and its fragments. If you're a competitive athlete subject to anti-doping regulations, TB-500 is prohibited.</div>
+  </details>
+  <details>
+    <summary>Is TB-500 safe for long-term use?</summary>
+    <div class="fa">Long-term safety data in humans is limited. The animal research hasn't flagged major concerns, and anecdotal reports don't suggest serious long-term issues. But "no evidence of harm" isn't the same as "proven safe." The cancer concern, while theoretical, is worth keeping in mind. Periodic <a href="/articles/peptide-bloodwork-guide">bloodwork</a> is always a good idea when using any research peptide.</div>
+  </details>
+  <details>
+    <summary>Can women use TB-500?</summary>
+    <div class="fa">Yes. TB-500's mechanisms (actin regulation, angiogenesis, cell migration) are not sex-specific. Dosing recommendations are generally the same for men and women, though some women opt for the lower end of the dosing range.</div>
+  </details>
+  <details>
+    <summary>How should I store TB-500?</summary>
+    <div class="fa">Unreconstituted powder can be stored at room temperature, though refrigeration extends shelf life. Once reconstituted with bacteriostatic water, store in the refrigerator and use within 2&ndash;3 weeks. Keep away from direct light.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Bottom Line -->
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>TB-500 is one of the more promising peptides for tissue repair. Its ability to regulate actin, promote blood vessel formation, and drive cell migration to injury sites makes it a multifaceted healing compound backed by a solid body of preclinical research.</p>
+</div>
+
+<p>The cardiac and hair growth research adds further intrigue. But most of the compelling data comes from animal models. Human clinical trials are sparse, and the peptide isn't approved for therapeutic use in any country.</p>
+
+<p>If you're considering TB-500 for an injury, do your homework. Work with a knowledgeable healthcare provider, get proper <a href="/articles/peptide-bloodwork-guide">bloodwork</a>, and don't abandon conventional rehabilitation. TB-500 should be a complement to good medicine, not a replacement for it.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice. TB-500 is not FDA-approved for human use. Always consult a qualified healthcare provider before starting any peptide protocol. The research cited here is primarily preclinical (animal models), and human safety and efficacy have not been established through controlled clinical trials.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Goldstein AL, Hannappel E, Kleinman HK. Thymosin beta4: actin-sequestering protein moonlights to repair injured tissues. <em>Trends Mol Med.</em> 2005;11(9):421-429. <a href="https://pubmed.ncbi.nlm.nih.gov/16179078/">PubMed</a><br>
+Smart N, Risebro CA, Melville AA, et al. Thymosin beta-4 is essential for coronary vessel development. <em>Nature.</em> 2007;445(7124):177-182. <a href="https://pubmed.ncbi.nlm.nih.gov/17525367/">PubMed</a><br>
+Malinda KM, Sidhu GS, Mani H, et al. Thymosin beta4 accelerates wound healing. <em>J Invest Dermatol.</em> 1999;113(3):364-368. <a href="https://pubmed.ncbi.nlm.nih.gov/10681893/">PubMed</a><br>
+Ehrlich HP, Bhatt RJ. The effect of thymosin beta-4 on tendon repair. <em>J Orthop Res.</em> 2012;30(5):809-814. <a href="https://pubmed.ncbi.nlm.nih.gov/22105594/">PubMed</a><br>
+Spurrier RG, et al. Thymosin beta-4 promotes muscle regeneration. <em>FASEB J.</em> 2004;18(2):371-373. <a href="https://pubmed.ncbi.nlm.nih.gov/14688200/">PubMed</a><br>
+Smart N, Bollini S, Dube KN, et al. De novo cardiomyocytes from within the activated adult heart after injury. <em>Nature.</em> 2011;474(7353):640-644. <a href="https://pubmed.ncbi.nlm.nih.gov/21512573/">PubMed</a><br>
+Bock-Marquette I, Saxena A, White MD, et al. Thymosin beta4 activates integrin-linked kinase and promotes cardiac cell migration, survival and cardiac repair. <em>Nature.</em> 2004;432(7016):466-472. <a href="https://pubmed.ncbi.nlm.nih.gov/15340220/">PubMed</a><br>
+Philp D, Nguyen M, Scheremeta B, et al. Thymosin beta4 increases hair growth by activation of hair follicle stem cells. <em>FASEB J.</em> 2004;18(2):385-387. <a href="https://pubmed.ncbi.nlm.nih.gov/15337766/">PubMed</a><br>
+Huang WQ, Wang BH, Wang QR. Thymosin beta4 and AcSDKP inhibit the proliferation of HL-60 cells and induce their differentiation and apoptosis. <em>Cell Biol Int.</em> 2006;30(6):514-519. <a href="https://pubmed.ncbi.nlm.nih.gov/16557594/">PubMed</a>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-store-peptides">How to Store Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/peptide-cycling-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Cycling Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+            <a href="/articles/peptide-bloodwork-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Bloodwork Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

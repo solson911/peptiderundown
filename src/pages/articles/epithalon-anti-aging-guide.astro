@@ -1,0 +1,680 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Epithalon: The Telomerase-Activating Peptide Behind 30 Years of Anti-Aging Research",
+  description: "A complete guide to Epithalon (Epitalon), the synthetic tetrapeptide that activates telomerase. Research, dosing protocols, cycling, side effects, and legal status.",
+  image: "/images/articles/epithalon.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Longevity &middot; Anti-Aging</div>
+  <h1>Epithalon: The Telomerase-Activating Peptide Behind 30 Years of Anti-Aging Research</h1>
+  <p class="sub">A synthetic tetrapeptide that reactivates telomerase, restores melatonin production, and has extended lifespan by 12&ndash;24% in animal models. Three decades of data, mostly from one prolific Russian lab.</p>
+  <div class="pills">
+    <span class="pill">Telomerase &middot; Telomere Elongation</span>
+    <span class="pill">Pineal &middot; Melatonin</span>
+    <span class="pill">Longevity &middot; Anti-Aging</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">30+</div><div class="l">Years of<br>Published Research</div></div>
+  <div class="sb"><div class="v c2">18.7%</div><div class="l">Lifespan Extension<br>(CBA Mice)</div></div>
+  <div class="sb"><div class="v c3">4</div><div class="l">Amino Acids<br>(Ala-Glu-Asp-Gly)</div></div>
+  <div class="sb"><div class="v c4">390.35</div><div class="l">Molecular Weight<br>(Daltons)</div></div>
+</div>
+
+<p>Most anti-aging compounds promise a lot and deliver almost nothing. Epithalon is different.</p>
+
+<p>It has three decades of published research behind it, most of it from one of Russia's most prolific gerontologists. Whether that makes it proven or just well-studied depends on how you read the data.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of Epithalon covering its mechanisms, clinical research, dosing protocols, and safety profile. It is <strong>not a recommendation to use Epithalon</strong>. Epithalon is not FDA-approved in the United States. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>What Is Epithalon?</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Epithalon (Epitalon)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Sequence:</strong> Ala-Glu-Asp-Gly &nbsp;|&nbsp; <strong>Type:</strong> Synthetic tetrapeptide &nbsp;|&nbsp; <strong>Molecular Weight:</strong> 390.35 Da &nbsp;|&nbsp; <strong>Origin:</strong> St. Petersburg Institute of Bioregulation and Gerontology &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved &nbsp;|&nbsp; <strong>Developer:</strong> Dr. Vladimir Khavinson &nbsp;|&nbsp; <strong>Primary Actions:</strong> Telomerase activation, melatonin stimulation, antioxidant upregulation</p>
+</div>
+
+<p>Epithalon (also spelled Epitalon) is a synthetic version of <strong>epithalamin</strong>, a <a href="/articles/what-are-peptides-beginners-guide">peptide</a> naturally produced by the pineal gland. Its full sequence is just four <a href="/articles/what-are-peptides-beginners-guide">amino acids</a> long, making it one of the smallest bioactive peptides in longevity research.</p>
+
+<p>The peptide was first synthesized in the 1980s by Dr. Vladimir Khavinson's team. They isolated epithalamin from bovine pineal glands, identified its active sequence, and created the synthetic version that could be produced at scale.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How Epithalon Works: Telomerase Activation Pathway</h2>
+
+<p>Epithalon's central mechanism is <strong>telomerase activation</strong>. But its effects branch out into several downstream pathways that collectively influence aging at the cellular level.</p>
+
+<div class="svg-box">
+  <div class="st">Epithalon: Telomerase Activation Pathway</div>
+  <div class="ss">Pineal stimulation &middot; Telomerase reactivation &middot; Antioxidant defense &middot; Cellular longevity</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Pineal / Melatonin -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Pineal Gland</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">MELATONIN</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Epithalon stimulates</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">pineal function</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Melatonin restored</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Circadian rhythm</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">normalization</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Sleep quality</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">&#38; immune support</text>
+
+    <!-- Telomerase -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Telomerase</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">hTERT ACTIVATION</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Reactivates hTERT</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">gene expression</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Telomere elongation</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Extended replicative</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">capacity of cells</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Cellular lifespan</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">extension</text>
+
+    <!-- Antioxidant -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">SOD / GPx</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">ANTIOXIDANT</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Upregulates SOD</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#38; glutathione peroxidase</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Reduced oxidative</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">damage to tissues</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Lower lipid peroxidation</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Tissue protection</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">&#38; healthier aging</text>
+
+    <!-- Gene Regulation -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Gene Reg.</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">EXPRESSION</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Modulates cell</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">proliferation genes</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Normalized apoptosis</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Balanced cell cycling</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Healthier tissue renewal</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Reduced tumor</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">incidence in animals</text>
+  </svg>
+</div>
+
+<h3>Telomerase Activation: The Core Mechanism</h3>
+
+<p>Every time a cell divides, its <strong>telomeres</strong> get shorter. Telomeres are the protective caps on the ends of chromosomes, often compared to the plastic tips on shoelaces.</p>
+
+<p>When telomeres get too short, the cell enters <strong>senescence</strong>. It stops dividing, and accumulating senescent cells is one of the hallmarks of aging at the cellular level.</p>
+
+<p><strong>Telomerase</strong> is the enzyme that rebuilds telomeres. Most adult cells produce very little of it.</p>
+
+<p>Epithalon reactivates <a href="/articles/longevity-stack-epithalon-nmn-thymosin">telomerase expression</a>. In human somatic cells, it has been shown to increase telomerase activity by stimulating hTERT gene expression, elongate telomeres in human fetal fibroblasts beyond the Hayflick limit, and extend replicative lifespan of cells by an additional 10+ passages (<a href="https://pubmed.ncbi.nlm.nih.gov/14523363/">Khavinson et al., 2003</a>).</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>In human fetal fibroblast cultures, Epithalon overcame the Hayflick limit, allowing cells to divide 44 additional population doublings beyond untreated controls.</p>
+</div>
+
+<h3>Pineal Gland and Melatonin Regulation</h3>
+
+<p>The pineal gland is central to circadian rhythm, and its function declines sharply with age. Epithalon appears to restore some of that function.</p>
+
+<p>Research shows it stimulates melatonin production in aging pineal glands, normalizes circadian rhythm disruptions common in older adults, and restores pineal gland sensitivity to light-dark cycle signaling (<a href="https://pubmed.ncbi.nlm.nih.gov/12946226/">Anisimov et al., 2003</a>).</p>
+
+<p>This melatonin connection matters. <a href="/articles/dsip-sleep-peptide-guide">Melatonin is not just a sleep hormone</a>. It's a potent antioxidant, immune modulator, and oncostatic agent.</p>
+
+<h3>Antioxidant and Gene Expression Effects</h3>
+
+<p>Beyond telomerase and melatonin, Epithalon influences broader gene regulation. It activates antioxidant enzymes including superoxide dismutase (SOD) and glutathione peroxidase, modulates gene expression related to cell proliferation and apoptosis, and reduces lipid peroxidation in aging tissues.</p>
+
+<table class="tbl">
+<thead><tr><th>Mechanism</th><th>Effect</th><th>Relevance</th></tr></thead>
+<tbody>
+<tr><td><strong>Telomerase activation</strong></td><td>Telomere elongation</td><td class="g">Cellular lifespan extension</td></tr>
+<tr><td><strong>Melatonin stimulation</strong></td><td>Circadian rhythm restoration</td><td class="g">Sleep, immune function</td></tr>
+<tr><td><strong>Antioxidant upregulation</strong></td><td>Reduced oxidative damage</td><td class="g">Tissue protection</td></tr>
+<tr><td><strong>Gene regulation</strong></td><td>Normalized expression patterns</td><td class="g">Healthier cell function</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Context</div>
+  <p>Epithalon doesn't target just one pathway. It acts on the pineal gland, telomere maintenance, and antioxidant defenses simultaneously, which is part of why animal studies show such broad effects on aging.</p>
+</div>
+
+<!-- ========== RESEARCH ========== -->
+<hr class="sep">
+<h2>The Khavinson Research: 30 Years of Data</h2>
+
+<p>Dr. Vladimir Khavinson has published over <strong>800 papers</strong> on peptide bioregulation. His work on Epithalon and epithalamin spans from the late 1980s to today.</p>
+
+<p>Here's a fair assessment: the research volume is impressive, but nearly all of it comes from Russian institutions with limited independent replication by Western labs.</p>
+
+<h3>Animal Lifespan Studies</h3>
+
+<p>The most striking data comes from rodent and fruit fly models.</p>
+
+<div class="cd ct">
+  <div class="tg">Animal Data</div>
+  <h3>CBA Mice Lifespan Study</h3>
+  <p style="font-size:14px;margin-bottom:0;">Epithalon-treated CBA mice lived an average of <strong>699 days</strong> vs. 589 days in controls, an increase of roughly <strong>18.7%</strong>. Maximum lifespan extended from 770 to 860 days. Tumor incidence dropped from 45.8% to 26.5% (<a href="https://pubmed.ncbi.nlm.nih.gov/12946226/">Anisimov et al., 2003</a>).</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Control</th><th>Epithalon-Treated</th></tr></thead>
+<tbody>
+<tr><td><strong>Mean lifespan</strong></td><td>589 days</td><td class="g">699 days</td></tr>
+<tr><td><strong>Maximum lifespan</strong></td><td>770 days</td><td class="g">860 days</td></tr>
+<tr><td><strong>Lifespan increase</strong></td><td>Baseline</td><td class="g">~18.7%</td></tr>
+<tr><td><strong>Tumor incidence</strong></td><td>45.8%</td><td class="g">26.5%</td></tr>
+</tbody>
+</table>
+
+<p>In Drosophila (fruit flies), treatment with Epithalon extended mean lifespan by <strong>11&ndash;16%</strong> depending on strain. The peptide also delayed age-related decline in locomotor activity (<a href="https://pubmed.ncbi.nlm.nih.gov/24142370/">Khavinson et al., 2014</a>).</p>
+
+<p>In aging female rats, epithalamin (the natural precursor) restored estrous function and reduced the incidence of spontaneous tumors from <strong>41% to 10.8%</strong> (<a href="https://pubmed.ncbi.nlm.nih.gov/11524632/">Anisimov et al., 2001</a>).</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Across multiple animal models, Epithalon consistently extended lifespan by 12&ndash;24% and reduced spontaneous tumor incidence. Few other peptides have this kind of cross-species longevity data.</p>
+</div>
+
+<h3>Human Cell Studies</h3>
+
+<p>Khavinson's team tested Epithalon on human cell cultures and found it could reactivate telomerase in somatic cells that normally have low telomerase activity.</p>
+
+<table class="tbl">
+<thead><tr><th>Cell Type</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td><strong>Fetal fibroblasts</strong></td><td class="g">44 additional population doublings beyond Hayflick limit</td></tr>
+<tr><td><strong>Pulmonary fibroblasts</strong></td><td class="g">Telomere elongation observed</td></tr>
+<tr><td><strong>Retinal pigment epithelial cells</strong></td><td class="g">Increased proliferative capacity</td></tr>
+</tbody>
+</table>
+
+<p>(<a href="https://pubmed.ncbi.nlm.nih.gov/14523363/">Khavinson et al., 2003</a>)</p>
+
+<h3>Human Clinical Observations</h3>
+
+<p>This is where the evidence gets thinner.</p>
+
+<p>Khavinson's group conducted a long-running observational study on elderly patients in St. Petersburg. Participants received either epithalamin or Epithalon alongside thymic peptides over a <strong>6-year period</strong> (1992&ndash;2007).</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Cardiovascular</h4>
+    <p>Mortality reduced by <strong>50%</strong> in the treated group.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Immune Function</h4>
+    <p>Improved T-cell function and immune biomarkers.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Sleep Quality</h4>
+    <p>Melatonin rhythm restoration in disrupted patients.</p>
+  </div>
+</div>
+
+<p>(<a href="https://pubmed.ncbi.nlm.nih.gov/16314082/">Khavinson, 2005</a>)</p>
+
+<p>The sample size was roughly <strong>260 patients</strong> aged 60&ndash;89. While the results are promising, these were not blinded, randomized trials by modern Western standards. The study combined epithalamin with thymalin (a thymic peptide), making it difficult to isolate Epithalon's specific contribution.</p>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>The human data is suggestive but not definitive. No double-blind, placebo-controlled phase 2 or phase 3 trials have been conducted on Epithalon by Western research institutions.</p>
+</div>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>Epithalon vs. Other Longevity Peptides</h2>
+
+<p>Several peptides show up in longevity discussions, but they work through very different mechanisms. Here's how Epithalon compares to the most common alternatives.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Epithalon</th><th>BPC-157</th><th>GHK-Cu</th><th>Thymosin Alpha-1</th></tr></thead>
+<tbody>
+<tr><td><strong>Primary target</strong></td><td>Telomerase / pineal</td><td>Gut healing / tissue repair</td><td>Collagen / wound healing</td><td>Immune modulation</td></tr>
+<tr><td><strong>Anti-aging mechanism</strong></td><td class="g">Telomere elongation</td><td class="y">Indirect (tissue repair)</td><td class="y">Skin / tissue remodeling</td><td class="y">Immune function</td></tr>
+<tr><td><strong>Route</strong></td><td>Subcutaneous injection</td><td>Oral / injectable</td><td>Topical / injectable</td><td>Subcutaneous injection</td></tr>
+<tr><td><strong>Human clinical data</strong></td><td class="y">Limited (Russian)</td><td class="r">Very limited</td><td class="y">Moderate (topical)</td><td class="g">FDA orphan drug status</td></tr>
+<tr><td><strong>Lifespan data (animal)</strong></td><td class="g">Yes, 12&ndash;24% extension</td><td class="r">No</td><td class="r">Limited</td><td class="r">No</td></tr>
+</tbody>
+</table>
+
+<p>Epithalon is unique in this group because it's the only peptide with published <strong>animal lifespan extension data</strong>. That's a significant distinction in longevity research.</p>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<div class="d-a">
+  <div class="s">Important</div>
+  <p>These are research-based protocols, not medical prescriptions. Always work with a qualified provider before starting any peptide regimen.</p>
+</div>
+
+<p>The most commonly referenced protocol comes from the Khavinson studies and community use.</p>
+
+<h3>Standard Protocol</h3>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Recommendation</th></tr></thead>
+<tbody>
+<tr><td><strong>Dose</strong></td><td>5&ndash;10 mg per day</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Once daily</td></tr>
+<tr><td><strong>Route</strong></td><td>Subcutaneous injection</td></tr>
+<tr><td><strong>Cycle length</strong></td><td>10&ndash;20 days</td></tr>
+<tr><td><strong>Cycles per year</strong></td><td>2&ndash;3</td></tr>
+<tr><td><strong>Timing</strong></td><td>Evening preferred (melatonin synergy)</td></tr>
+<tr><td><strong>Total per cycle</strong></td><td>50&ndash;200 mg</td></tr>
+</tbody>
+</table>
+
+<h3>Common Cycling Approaches</h3>
+
+<table class="tbl">
+<thead><tr><th>Approach</th><th>Dose</th><th>Duration</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td><strong>Conservative</strong></td><td>5 mg/day</td><td>10 days</td><td class="y">Every 6 months</td></tr>
+<tr><td><strong>Standard</strong></td><td>10 mg/day</td><td>10 days</td><td class="g">Every 4&ndash;6 months</td></tr>
+<tr><td><strong>Aggressive</strong></td><td>10 mg/day</td><td>20 days</td><td class="r">Every 3&ndash;4 months</td></tr>
+</tbody>
+</table>
+
+<p>Most users follow the <strong>10 mg/day for 10 days, repeated every 4&ndash;6 months</strong> approach. This mirrors the most commonly cited protocol in Khavinson's publications.</p>
+
+<h3>Why Cycling?</h3>
+
+<p>Epithalon is almost always used in cycles rather than continuously. There are several reasons for this approach.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Lasting Effects</h4>
+    <p>Telomerase activation and pineal stimulation persist well beyond the dosing period, so continuous use isn't necessary.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Research Protocol</h4>
+    <p>Cycling mirrors the original research protocols used in both animal and human studies by Khavinson's lab.</p>
+  </div>
+</div>
+
+<h3>Reconstitution</h3>
+
+<p>Epithalon comes as a lyophilized powder. Reconstitute with bacteriostatic water, then draw doses from the vial.</p>
+
+<p>For detailed step-by-step instructions, see our <a href="/articles/how-to-reconstitute-peptides">peptide reconstitution guide</a>.</p>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>Epithalon has a remarkably clean side effect profile across published studies. No serious adverse events have been reported in either animal or human research.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site redness</strong></td><td class="y">Occasional</td><td>Mild, resolves within hours</td></tr>
+<tr><td><strong>Mild drowsiness</strong></td><td class="y">Rare</td><td>Likely related to melatonin increase</td></tr>
+<tr><td><strong>Headache</strong></td><td class="y">Rare</td><td>Usually transient</td></tr>
+<tr><td><strong>Vivid dreams</strong></td><td class="y">Anecdotal</td><td>Reported by users, possibly melatonin-related</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Warning</div>
+  <p>Anyone with a current cancer diagnosis or history of cancer should avoid telomerase-activating compounds unless cleared by an oncologist. While animal studies showed <strong>reduced</strong> tumor incidence, the long-term effects of repeated telomerase activation are not fully understood.</p>
+</div>
+
+<h3>When to Stop</h3>
+
+<p>Discontinue if you experience persistent injection site reactions that worsen over time, allergic response including swelling or rash, or unusual fatigue and mood changes that coincide with dosing.</p>
+
+<p>The safety data comes from a relatively small body of research. Epithalon has not undergone the rigorous safety testing required for FDA approval.</p>
+
+<p>For a broader overview, see our <a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>.</p>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Common Stacks</h2>
+
+<p>Many users combine Epithalon with other longevity-focused peptides. No significant interactions have been reported, but clinical interaction data does not exist.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Immune + Anti-Aging</h4>
+    <p><strong>Epithalon + Thymosin Alpha-1.</strong> Mirrors Khavinson's original clinical protocols for immune and anti-aging support.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Repair + Longevity</h4>
+    <p><strong>Epithalon + BPC-157.</strong> Combines tissue repair with cellular anti-aging for a broad-spectrum approach.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Skin + Cellular</h4>
+    <p><strong>Epithalon + GHK-Cu.</strong> Pairs skin and tissue remodeling with telomere-level anti-aging support.</p>
+  </div>
+</div>
+
+<!-- ========== MEASURING RESULTS ========== -->
+<hr class="sep">
+<h2>Measuring Results: What to Test</h2>
+
+<p>Since Epithalon's effects are primarily cellular, you won't see dramatic visible changes. Bloodwork and biomarker testing are the best way to track progress.</p>
+
+<table class="tbl">
+<thead><tr><th>Test</th><th>What It Measures</th><th>When to Test</th></tr></thead>
+<tbody>
+<tr><td><strong>Telomere length test</strong></td><td>Average telomere length (leukocytes)</td><td>Before first cycle and 3&ndash;6 months after</td></tr>
+<tr><td><strong>Melatonin (24-hour urine)</strong></td><td>Pineal function</td><td>Before and 2&ndash;4 weeks after cycle</td></tr>
+<tr><td><strong>IGF-1</strong></td><td>Growth hormone axis</td><td>Baseline and post-cycle</td></tr>
+<tr><td><strong>CRP / inflammatory markers</strong></td><td>Systemic inflammation</td><td>Baseline and post-cycle</td></tr>
+<tr><td><strong>Complete metabolic panel</strong></td><td>Overall health markers</td><td>Every 6 months</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">Testing Note</div>
+  <p>Telomere length testing has significant variability between labs and even between draws. Use the same lab and testing methodology for before/after comparisons to get meaningful data.</p>
+</div>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Legal Status and Availability</h2>
+
+<p>Epithalon occupies a gray area in most countries. Here's the breakdown by region.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">United States</h4>
+    <p>Legal to purchase as a "research chemical." Not FDA-approved for human use. Most suppliers label it "for research purposes only."</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">European Union</h4>
+    <p>Varies by country. Generally available from research suppliers, but regulations differ significantly across member states.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Russia</h4>
+    <p>Most studied here. Epithalamin has been used in clinical settings, and the research infrastructure is strongest in St. Petersburg.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Australia / Canada</h4>
+    <p>Australia: regulated under TGA, prescription-only for compounding. Canada: not approved, available through research chemical suppliers.</p>
+  </div>
+</div>
+
+<p>Check our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for full details on regulations in your region.</p>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Might Consider Epithalon</h2>
+
+<p>Epithalon isn't for everyone. Based on the available research, certain profiles align better with its mechanism of action than others.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Age-Related Decline</h4>
+    <p>Adults over 40 experiencing measurable telomere shortening or disrupted sleep patterns related to declining melatonin production.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Longevity Enthusiasts</h4>
+    <p>People already tracking biomarkers and running longevity protocols who want to add a telomerase-activating compound to their regimen.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Circadian Disruption</h4>
+    <p>Those with age-related circadian rhythm disturbances who haven't responded well to standard melatonin supplementation.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Researchers</h4>
+    <p>Scientists studying telomere biology, cellular senescence, or pineal gland function in the context of aging.</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What does Epithalon actually do?</summary>
+    <div class="fa">Epithalon activates <strong>telomerase</strong>, the enzyme responsible for rebuilding the protective caps (telomeres) on your chromosomes. It also stimulates <strong>melatonin production</strong> from the pineal gland and upregulates <strong>antioxidant defenses</strong>. The combined effect is a slowing of several key aging processes at the cellular level.</div>
+  </details>
+  <details>
+    <summary>How long does it take to see results?</summary>
+    <div class="fa">You won't "feel" Epithalon working the way you might feel a stimulant or a GLP-1 drug. Most users report subtle improvements in <strong>sleep quality</strong> within the first week of a cycle, likely from the melatonin effect. Telomere changes take months to measure and require lab testing.</div>
+  </details>
+  <details>
+    <summary>Is Epithalon safe?</summary>
+    <div class="fa">Based on 30 years of published research, Epithalon appears to have a very favorable safety profile. No serious adverse events have been reported. That said, it has not undergone formal regulatory safety review. The long-term effects of cyclical telomerase activation in humans remain an open question.</div>
+  </details>
+  <details>
+    <summary>Can I take Epithalon with other peptides?</summary>
+    <div class="fa">Many users combine Epithalon with other longevity-focused peptides. Common stacks include <strong>Epithalon + Thymosin Alpha-1</strong> for immune and anti-aging support, <strong>Epithalon + BPC-157</strong> for tissue repair alongside cellular anti-aging, and <strong>Epithalon + GHK-Cu</strong> for skin and tissue remodeling. No significant interactions have been reported, but clinical interaction data does not exist.</div>
+  </details>
+  <details>
+    <summary>Does Epithalon cause cancer?</summary>
+    <div class="fa">This is the most common concern. Telomerase is active in most cancer cells, so the worry is that activating it could promote tumor growth. The animal data actually shows the <strong>opposite</strong>: Epithalon-treated mice had significantly lower tumor incidence than controls. Khavinson's team argues that Epithalon normalizes cell function rather than promoting uncontrolled growth. Still, anyone with active cancer should avoid this peptide until more data exists.</div>
+  </details>
+  <details>
+    <summary>How is Epithalon different from TA-65?</summary>
+    <div class="fa">Both target telomerase, but through completely different mechanisms. Epithalon is a synthetic tetrapeptide administered by subcutaneous injection that directly activates hTERT gene expression. TA-65 is an astragalus extract (cycloastragenol) taken as an oral capsule that provides indirect telomerase support. Epithalon has 30+ years of research and animal lifespan data; TA-65 has moderate research but no lifespan extension shown. Epithalon costs $50&ndash;150 per cycle (2&ndash;3x/year), while TA-65 runs $100&ndash;600/month continuously.</div>
+  </details>
+  <details>
+    <summary>Is Epithalon legal to buy?</summary>
+    <div class="fa">In the United States, yes. It's sold as a research chemical. You can legally purchase and possess it. It is not legal to sell it labeled for human consumption, and it's not available by prescription. Check our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for details on other regions.</div>
+  </details>
+  <details>
+    <summary>What's the best time of day to inject Epithalon?</summary>
+    <div class="fa">Evening is generally preferred. Since Epithalon stimulates melatonin production from the pineal gland, timing the injection in the evening aligns with your body's natural circadian melatonin peak. This may enhance the sleep quality benefits many users report during a cycle.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Epithalon is one of the most studied peptides in anti-aging research. Thirty years of data show consistent results: telomerase activation, lifespan extension in animals, melatonin restoration, and reduced tumor incidence. The limitation is that most of this research comes from a single group of investigators in Russia.</p>
+</div>
+
+<p>Independent replication by Western labs is sparse. The human data, while promising, doesn't meet the gold standard of large, randomized, placebo-controlled trials.</p>
+
+<p>For people interested in longevity science, Epithalon sits in an interesting spot. The mechanistic case is strong, and the animal data is compelling. The human evidence is suggestive but incomplete. Whether that's enough depends on your personal threshold for evidence.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not constitute a doctor-patient relationship. Epithalon is not FDA-approved for any medical condition. Always consult a qualified healthcare provider before starting any peptide protocol. The research cited here is summarized for educational purposes and may not reflect the full body of evidence on this compound.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Khavinson VKh, Bondarev IE, Butyugov AA. Epithalon peptide induces telomerase activity and telomere elongation in human somatic cells. <em>Bull Exp Biol Med.</em> 2003;135(6):590&ndash;592. <a href="https://pubmed.ncbi.nlm.nih.gov/14523363/">PubMed</a><br>
+Anisimov VN, Khavinson VKh, Popovich IG, et al. Effect of Epitalon on biomarkers of aging, life span and spontaneous tumor incidence in female Swiss-derived SHR mice. <em>Biogerontology.</em> 2003;4(4):193&ndash;202. <a href="https://pubmed.ncbi.nlm.nih.gov/12946226/">PubMed</a><br>
+Khavinson VKh, Bondarev IE, Butyugov AA, Smirnova TD. Peptide promotes overcoming of the division limit in human somatic cell. <em>Bull Exp Biol Med.</em> 2004;137(5):503&ndash;506. <a href="https://pubmed.ncbi.nlm.nih.gov/15455129/">PubMed</a><br>
+Anisimov VN, Loktionov AS, Khavinson VKh, Morozov VG. Effect of low-molecular-weight factors of thymus and pineal gland on life span and spontaneous tumour development in female mice of different age. <em>Mech Ageing Dev.</em> 2001;122(9):1075&ndash;1089. <a href="https://pubmed.ncbi.nlm.nih.gov/11524632/">PubMed</a><br>
+Khavinson VKh. Peptides and ageing. <em>Neuro Endocrinol Lett.</em> 2005;23(Suppl 3):11&ndash;144. <a href="https://pubmed.ncbi.nlm.nih.gov/16314082/">PubMed</a><br>
+Khavinson VKh, Linkova NS, Pronyaeva VE, et al. Effects of peptide Ala-Glu-Asp-Gly on telomerase activity and telomere length in human somatic cells. <em>Bull Exp Biol Med.</em> 2014;157(1):148&ndash;152. <a href="https://pubmed.ncbi.nlm.nih.gov/24142370/">PubMed</a>
+</p>
+
+<!-- ========== RELATED READING ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/what-are-peptides-beginners-guide">What Are Peptides? Beginner's Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a> &nbsp;&middot;&nbsp;
+<a href="/articles/are-peptides-legal-fda-regulations-2026">Are Peptides Legal? FDA Regulations in 2026</a> &nbsp;&middot;&nbsp;
+<a href="/articles/longevity-stack-epithalon-nmn-thymosin">Longevity Stack Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/longevity-stack-epithalon-nmn-thymosin" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Longevity Stack: Epithalon + NMN + Thymosin</a>
+            <a href="/articles/what-are-peptides-beginners-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">What Are Peptides? Beginner's Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects: What to Know</a>
+            <a href="/articles/are-peptides-legal-fda-regulations-2026" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Are Peptides Legal? FDA Regulations 2026</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
