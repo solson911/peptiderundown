@@ -1,0 +1,625 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Thymosin Beta-4 (TB-4): The Complete Guide",
+  description: "A detailed guide to Thymosin Beta-4 (TB-4), its mechanisms, benefits for wound healing, cardiac repair, hair growth, dosing, and how it compares to TB-500.",
+  image: "/images/articles/thymosin-beta-4.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Tissue Repair &middot; Regeneration</div>
+  <h1>Thymosin Beta-4 (TB-4): The Complete Guide</h1>
+  <p class="sub">A naturally occurring 43-amino-acid peptide that coordinates tissue repair across the entire body. How it works, what the research shows for wound healing, cardiac repair, and hair growth, plus dosing and safety.</p>
+  <div class="pills">
+    <span class="pill">Actin Binding &middot; Cell Migration</span>
+    <span class="pill">Wound Healing &middot; Cardiac Repair</span>
+    <span class="pill">Hair Growth &middot; Neuroprotection</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">4,963</div><div class="l">Molecular Weight<br>(Daltons)</div></div>
+  <div class="sb"><div class="v c2">43</div><div class="l">Amino Acids<br>in Sequence</div></div>
+  <div class="sb"><div class="v c3">40%</div><div class="l">Faster Healing<br>in Mouse Models</div></div>
+  <div class="sb"><div class="v c4">1981</div><div class="l">Year First<br>Identified</div></div>
+</div>
+
+<p>Thymosin Beta-4 is one of the most abundant intracellular peptides in the human body. It's present in nearly every tissue, with concentrations spiking dramatically at injury sites. When you cut your skin, strain a tendon, or damage heart muscle, TB-4 is one of the first molecular responders.</p>
+
+<p>Unlike many synthetic peptides, TB-4 is a natural compound your body already produces. White blood cells and platelets release it locally during healing. It doesn't circulate like a hormone; it acts right where it's needed.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of TB-4 covering its mechanisms, clinical research, dosing protocols, and safety profile. It is <strong>not a recommendation to use TB-4</strong>. TB-4 is not FDA-approved for medical use. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>TB-4 at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Thymosin Beta-4 (TB-4)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Length:</strong> 43 amino acids &nbsp;|&nbsp; <strong>Type:</strong> Endogenous peptide &nbsp;|&nbsp; <strong>Molecular Weight:</strong> 4,963 Da &nbsp;|&nbsp; <strong>Discovery:</strong> 1981, thymus gland isolation &nbsp;|&nbsp; <strong>Routes:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved; research compound &nbsp;|&nbsp; <strong>Primary Actions:</strong> Cell migration, angiogenesis, anti-inflammatory, stem cell recruitment</p>
+</div>
+
+<p>TB-4 was originally isolated from the thymus gland, which is where its name comes from. Since then, researchers have found it in virtually every tissue type. It's especially concentrated in wound fluid, blood platelets, and developing embryonic tissue.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How TB-4 Works: Four Core Mechanisms</h2>
+
+<p>TB-4 acts on multiple repair pathways at once. This multi-target approach is what makes it different from most single-mechanism healing agents.</p>
+
+<div class="svg-box">
+  <div class="st">TB-4: Actin Binding and Tissue Repair Pathway</div>
+  <div class="ss">Actin regulation &middot; Angiogenesis &middot; Anti-inflammation &middot; Stem cell support</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Actin Binding -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Actin Binding</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">CELL MIGRATION</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Sequesters G-actin</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">monomers</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Controls cytoskeleton</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">remodeling</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Fibroblast movement</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Flexible tissue</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">repair, less scarring</text>
+
+    <!-- Angiogenesis -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Angiogenesis</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">BLOOD VESSEL GROWTH</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Stimulates VEGF</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">production</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">New capillary</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">formation</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Better O&#8322; delivery</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Nutrient-rich</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">healing environment</text>
+
+    <!-- Anti-Inflammatory -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Inflammation</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">IMMUNE MODULATION</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Lowers TNF-&#945;</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">and IL-1&#946;</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Raises IL-10</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Balanced response</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Reduced damage</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Optimal conditions</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">for regeneration</text>
+
+    <!-- Stem Cells -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Stem Cells</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">CELL RECRUITMENT</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Recruits MSCs to</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">injury sites</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Promotes targeted</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">differentiation</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Cardiac progenitors</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Regeneration from</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">resident stem cells</text>
+  </svg>
+</div>
+
+<h3>Actin Binding and Cell Migration</h3>
+
+<p>TB-4's primary molecular function is binding G-actin monomers. This prevents premature polymerization into filaments, giving cells the cytoskeletal flexibility they need to move toward wound sites (<a href="https://pubmed.ncbi.nlm.nih.gov/8175793/">Safer et al., 1994</a>).</p>
+
+<p>This matters most for fibroblasts, the cells responsible for laying down new connective tissue. When fibroblasts can move freely into a wound, they produce more flexible tissue instead of dense scar formations.</p>
+
+<h3>Blood Vessel Formation (Angiogenesis)</h3>
+
+<p>Healing tissue needs blood supply. TB-4 stimulates vascular endothelial growth factor (VEGF) production and enhances endothelial cell activity (<a href="https://pubmed.ncbi.nlm.nih.gov/15226823/">Malinda et al., 1999</a>).</p>
+
+<p>The result is increased capillary density at injury sites. More blood vessels mean better oxygen and nutrient delivery to regenerating tissue.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>TB-4's angiogenic activity sets it apart from simple wound closure agents. It doesn't just close wounds; it creates the vascular infrastructure needed for genuine tissue regeneration.</p>
+</div>
+
+<h3>Inflammation Control</h3>
+
+<p>TB-4 downregulates pro-inflammatory cytokines like TNF-alpha and IL-1 beta while increasing anti-inflammatory signals like IL-10. This creates a balanced immune environment rather than shutting down inflammation entirely.</p>
+
+<p>That balance matters. You need some inflammation for proper healing. TB-4 keeps the response proportional to the injury.</p>
+
+<h3>Stem Cell Recruitment</h3>
+
+<p>Recent research shows TB-4 promotes mesenchymal stem cell (MSC) migration to injury sites (<a href="https://pubmed.ncbi.nlm.nih.gov/20621080/">Smart et al., 2011</a>). Once there, these stem cells differentiate into the specific cell types needed for repair.</p>
+
+<p>This is especially relevant for cardiac applications. TB-4 appears to activate resident cardiac progenitor cells that would otherwise remain dormant after a heart attack.</p>
+
+<!-- ========== RESEARCH EVIDENCE ========== -->
+<hr class="sep">
+<h2>Research Evidence by Application</h2>
+
+<p>TB-4 has been studied across a wide range of injury types. Here's what the preclinical and early clinical data actually shows.</p>
+
+<h3>Wound Healing</h3>
+
+<p>This is TB-4's most extensively studied application. Multiple animal models show significant acceleration of wound closure, with improved tissue quality compared to controls.</p>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Model</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td><strong>Goldstein et al.</strong></td><td>Mouse skin wounds</td><td class="g">40% faster healing</td></tr>
+<tr><td><strong>Sosne et al.</strong></td><td>Corneal injuries</td><td class="g">Reduced scarring</td></tr>
+<tr><td><strong>Philp et al.</strong></td><td>Human cell models</td><td class="g">Better cell migration</td></tr>
+<tr><td><strong>Badamchian et al.</strong></td><td>Burn models</td><td class="g">Faster skin recovery</td></tr>
+</tbody>
+</table>
+
+<p>These findings have implications for chronic wounds like diabetic ulcers and pressure sores, conditions where normal healing mechanisms are impaired.</p>
+
+<h3>Cardiac Repair</h3>
+
+<p>Heart tissue has very limited regenerative capacity on its own. TB-4's ability to activate cardiac progenitor cells makes it an exciting candidate for post-heart-attack therapy.</p>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Model</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td><strong>Bock-Marquette et al.</strong></td><td>Heart attack</td><td class="g">Better pumping function</td></tr>
+<tr><td><strong>Sosne et al.</strong></td><td>Ischemia model</td><td class="g">Smaller damaged areas</td></tr>
+<tr><td><strong>Peng et al.</strong></td><td>Heart failure</td><td class="y">Improved function (modest)</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Clinical Context</div>
+  <p>While cardiac findings are promising, human trials remain limited. Most heart-related applications are still investigational. Always consult a cardiologist before considering TB-4 for any cardiac condition.</p>
+</div>
+
+<h3>Hair Growth</h3>
+
+<p>TB-4 stimulates hair follicle activity through its angiogenic and cell migration properties. It appears to extend the anagen (growth) phase of the hair cycle.</p>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Model</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td><strong>Philp et al.</strong></td><td>Mouse follicles</td><td class="g">Longer growth phase</td></tr>
+<tr><td><strong>Kim et al.</strong></td><td>Human cells</td><td class="g">Increased proliferation</td></tr>
+<tr><td><strong>Gao et al.</strong></td><td>Hair loss model</td><td class="y">Better density (moderate)</td></tr>
+</tbody>
+</table>
+
+<p>Hair regrowth typically requires 3&ndash;6 months of consistent use. Don't expect overnight results.</p>
+
+<h3>Brain and Nerve Support</h3>
+
+<p>Newer research explores TB-4's effects on neural tissue. The same mechanisms that repair skin and heart, cell migration, angiogenesis, and inflammation control, appear to benefit the nervous system too.</p>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Model</th><th>Finding</th></tr></thead>
+<tbody>
+<tr><td><strong>Morris et al.</strong></td><td>Brain injury</td><td class="g">Smaller lesion size</td></tr>
+<tr><td><strong>Zhang et al.</strong></td><td>Stroke model</td><td class="g">Better functional recovery</td></tr>
+<tr><td><strong>Xiong et al.</strong></td><td>Spinal injury</td><td class="y">Improved nerve regrowth</td></tr>
+</tbody>
+</table>
+
+<p>These studies suggest TB-4 isn't limited to peripheral tissue repair. Central nervous system applications are still early-stage but worth watching.</p>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<p>TB-4 dosing varies based on the target condition and individual factors. Most research protocols use subcutaneous injection. Here's what the published literature and clinical protocols suggest.</p>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Typical Range</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Daily Amount</strong></td><td>2&ndash;10 mg</td><td>Lower end for maintenance</td></tr>
+<tr><td><strong>Frequency</strong></td><td>1&ndash;2x daily</td><td>Based on half-life</td></tr>
+<tr><td><strong>Injection Sites</strong></td><td>Abdomen, thigh</td><td>Rotate locations</td></tr>
+<tr><td><strong>Cycle Length</strong></td><td>4&ndash;12 weeks</td><td>Varies by purpose</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Dosing Note</div>
+  <p>Body weight, injury severity, and treatment goals all influence appropriate dosing. There is no one-size-fits-all protocol. Work with a healthcare provider to determine what makes sense for your situation.</p>
+</div>
+
+<h3>Storage and Handling</h3>
+
+<p>TB-4 is a sensitive peptide that breaks down under heat, light, and extreme pH. Proper handling directly affects whether you get therapeutic benefit.</p>
+
+<table class="tbl">
+<thead><tr><th>Factor</th><th>Effect</th><th>Recommendation</th></tr></thead>
+<tbody>
+<tr><td><strong>Temperature</strong></td><td class="r">Degrades when warm</td><td>Refrigerate at all times</td></tr>
+<tr><td><strong>Light</strong></td><td class="y">UV sensitive</td><td>Store in dark container</td></tr>
+<tr><td><strong>pH Level</strong></td><td class="y">Unstable at extremes</td><td>Use bacteriostatic water</td></tr>
+<tr><td><strong>Time</strong></td><td class="r">Activity drops over time</td><td>Use within 30 days</td></tr>
+</tbody>
+</table>
+
+<!-- ========== TB-4 vs TB-500 ========== -->
+<hr class="sep">
+<h2>TB-4 vs. TB-500: What's the Difference?</h2>
+
+<p>This is one of the most common questions in the peptide space. <a href="/articles/tb-500-complete-guide">TB-500</a> is not just a nickname for TB-4. It's a synthetic fragment of the full peptide, containing the active region responsible for actin binding.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>TB-4 (Full Peptide)</th><th>TB-500 (Fragment)</th></tr></thead>
+<tbody>
+<tr><td><strong>Structure</strong></td><td>Full 43-amino-acid sequence</td><td>17-amino-acid active fragment</td></tr>
+<tr><td><strong>Primary Action</strong></td><td class="g">Multiple mechanisms</td><td class="y">Mainly actin binding</td></tr>
+<tr><td><strong>Stability</strong></td><td class="y">Moderate</td><td class="g">Higher</td></tr>
+<tr><td><strong>Research Support</strong></td><td class="g">More extensive</td><td class="y">Less established</td></tr>
+<tr><td><strong>Cost</strong></td><td class="r">Higher</td><td class="g">Lower</td></tr>
+<tr><td><strong>Stem Cell Effects</strong></td><td class="g">Demonstrated</td><td class="y">Uncertain</td></tr>
+</tbody>
+</table>
+
+<p>TB-500 is more affordable and more stable, which makes it popular. But the full TB-4 peptide provides broader regenerative effects because it retains structural elements that the fragment lacks.</p>
+
+<p>If cost isn't a factor, TB-4 is the more complete option. If budget matters, TB-500 still offers meaningful actin-binding activity.</p>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Stacking with Other Peptides</h2>
+
+<p>TB-4 is commonly combined with other regenerative peptides for potentially synergistic effects. The logic is straightforward: different peptides hit different repair pathways.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">TB-4 + BPC-157</h4>
+    <p>The most popular combination. <a href="/articles/bpc-157-complete-guide">BPC-157</a> works through different pathways (nitric oxide, growth hormone receptors) while TB-4 handles actin regulation and stem cell recruitment. Complementary mechanisms with minimal overlap.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">TB-4 + GHK-Cu</h4>
+    <p><a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a> supports collagen synthesis and skin remodeling. Combined with TB-4's cell migration and angiogenic effects, this pairing targets tissue repair from multiple angles.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Stacking Caution</div>
+  <p>Combination protocols are largely based on theoretical rationale, not controlled human trials. Always discuss multi-peptide regimens with a healthcare provider. Potential interactions haven't been fully studied.</p>
+</div>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>TB-4 is generally well-tolerated in research settings. Reported issues are mild and usually resolve on their own.</p>
+
+<table class="tbl">
+<thead><tr><th>Potential Issue</th><th>Frequency</th><th>Management</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site reactions</strong></td><td class="y">Uncommon</td><td>Rotate injection sites</td></tr>
+<tr><td><strong>Headaches</strong></td><td class="g">Rare</td><td>Rest and hydration</td></tr>
+<tr><td><strong>Fatigue</strong></td><td class="y">Occasional</td><td>Adjust timing to evening</td></tr>
+<tr><td><strong>Mild flu-like symptoms</strong></td><td class="g">Rare</td><td>Symptomatic care</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Warning</div>
+  <p>Long-term safety data is limited. TB-4 promotes cell growth and blood vessel formation, which raises theoretical concerns for anyone with active cancer or pre-cancerous conditions. If you have a history of malignancy, discuss this with your oncologist before considering TB-4. Report any lasting <a href="/articles/peptide-side-effects-what-to-know">side effects</a> to your healthcare provider promptly.</p>
+</div>
+
+<!-- ========== CYCLING ========== -->
+<hr class="sep">
+<h2>Cycling Protocols</h2>
+
+<p>Most <a href="/articles/peptide-cycling-guide">peptide cycling</a> protocols recommend periodic breaks from TB-4. This helps prevent potential receptor desensitization and gives the body time to consolidate repair gains.</p>
+
+<table class="tbl">
+<thead><tr><th>Phase</th><th>Duration</th><th>Dosing</th></tr></thead>
+<tbody>
+<tr><td><strong>Loading</strong></td><td>2&ndash;4 weeks</td><td>Higher end of range (5&ndash;10 mg/day)</td></tr>
+<tr><td><strong>Maintenance</strong></td><td>4&ndash;8 weeks</td><td>Lower end (2&ndash;5 mg/day)</td></tr>
+<tr><td><strong>Off Cycle</strong></td><td>4&ndash;12 weeks</td><td>No TB-4</td></tr>
+</tbody>
+</table>
+
+<p>Cycle length depends on the condition being addressed. Acute injuries may need shorter, more intense cycles. Chronic conditions may benefit from longer maintenance periods.</p>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Might Benefit from TB-4 Research</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Wound Management</h4>
+    <p>Diabetic foot ulcers, pressure sores, surgical healing, burn recovery.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Musculoskeletal</h4>
+    <p>Tendon and ligament injuries, muscle strains, joint recovery, connective tissue repair.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Appearance</h4>
+    <p>Hair thinning and loss, skin rejuvenation, scar improvement.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Cardiac Support</h4>
+    <p>Post-heart attack recovery, blood vessel growth in damaged cardiac tissue, heart function improvement.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Neuroprotection</h4>
+    <p>Traumatic brain injury recovery, stroke rehabilitation, spinal cord injury support.</p>
+  </div>
+</div>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Regulatory Status</h2>
+
+<p>TB-4 is not approved for medical use in most countries. Its regulatory classification varies by region.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">United States</h4>
+    <p>Research compound only. Not approved for human therapeutic use by the FDA.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">European Union</h4>
+    <p>Research compound. Special authorization required for clinical use.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Australia</h4>
+    <p>Schedule 4 prescription substance. Available through authorized practitioners.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Canada</h4>
+    <p>Restricted compound. Special access program required.</p>
+  </div>
+</div>
+
+<p>Regulatory status changes as research progresses. Always check current regulations in your jurisdiction.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What does TB-4 actually do in the body?</summary>
+    <div class="fa">TB-4 coordinates tissue repair at injury sites. It controls actin dynamics so cells can move into wounds, stimulates new blood vessel growth, modulates inflammation, and recruits stem cells. Think of it as a repair coordinator rather than a single-action drug.</div>
+  </details>
+  <details>
+    <summary>How soon can I expect to see results?</summary>
+    <div class="fa">Timing depends on the application. Wound healing improvements may appear within 2&ndash;4 weeks. Hair regrowth typically needs 3&ndash;6 months. Cardiac and neurological applications focus on long-term recovery measured over months.</div>
+  </details>
+  <details>
+    <summary>Is TB-4 safe for extended use?</summary>
+    <div class="fa">Current research suggests good tolerance over several months. Safety beyond 6 months isn't well-established. Most protocols recommend periodic breaks (cycling) rather than continuous use.</div>
+  </details>
+  <details>
+    <summary>Can I combine TB-4 with BPC-157?</summary>
+    <div class="fa">Yes, this is the most common TB-4 combination. The two peptides work through different mechanisms, making them theoretically complementary. <a href="/articles/bpc-157-complete-guide">BPC-157</a> focuses on nitric oxide pathways and growth hormone receptors, while TB-4 handles actin regulation and stem cell activation. Discuss any combination with your healthcare provider.</div>
+  </details>
+  <details>
+    <summary>How does TB-4 differ from growth hormones?</summary>
+    <div class="fa">TB-4 targets specific local repair pathways at injury sites. Growth hormones have systemic, whole-body effects on metabolism, growth, and body composition. They work through completely different cellular mechanisms and serve different purposes.</div>
+  </details>
+  <details>
+    <summary>What's the difference between TB-4 and TB-500?</summary>
+    <div class="fa">TB-500 is a synthetic fragment of TB-4 containing the 17-amino-acid active region responsible for actin binding. TB-4 is the full 43-amino-acid peptide with additional structural elements that enable broader biological activity, including stem cell recruitment. TB-500 is cheaper and more stable; TB-4 is more comprehensive.</div>
+  </details>
+  <details>
+    <summary>Are there natural ways to increase TB-4 levels?</summary>
+    <div class="fa">Exercise appears to boost TB-4 expression in tissues. Adequate protein intake supports peptide synthesis generally. However, these natural methods don't raise levels nearly as much as direct administration.</div>
+  </details>
+  <details>
+    <summary>Should I take breaks from TB-4?</summary>
+    <div class="fa">Yes. Most protocols recommend <a href="/articles/peptide-cycling-guide">cycling</a> with 4&ndash;12 week on-periods followed by equal breaks. This helps prevent potential receptor desensitization and gives your body time to consolidate repair progress.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>TB-4 is a naturally occurring peptide with broad tissue repair capabilities backed by strong preclinical evidence. Its multi-mechanism approach (actin binding, angiogenesis, inflammation control, stem cell recruitment) makes it one of the most versatile regenerative peptides studied to date. Human clinical data is still limited, and all applications remain investigational.</p>
+</div>
+
+<p>The research on TB-4 is genuinely interesting. Its ability to coordinate multiple repair pathways simultaneously gives it potential that single-mechanism therapies can't match.</p>
+
+<p>That said, preclinical promise doesn't automatically translate to human benefit. We need more controlled human trials before drawing strong conclusions about therapeutic use. For now, TB-4 remains a research compound with real scientific merit and uncertain clinical translation.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not replace consultation with a qualified healthcare provider. Thymosin Beta-4 is not approved by the FDA for therapeutic use. Do not begin any peptide protocol without professional medical guidance. The authors have no financial relationships with peptide vendors.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Safer D, Elzinga M, Nachmias VT. Thymosin beta 4 and Fx, an actin-sequestering peptide, are indistinguishable. <em>J Biol Chem.</em> 1991;266(7):4029-4032. <a href="https://pubmed.ncbi.nlm.nih.gov/8175793/">PubMed</a><br>
+Malinda KM, Sidhu GS, Mani H, et al. Thymosin beta4 accelerates wound healing. <em>J Invest Dermatol.</em> 1999;113(3):364-368. <a href="https://pubmed.ncbi.nlm.nih.gov/15226823/">PubMed</a><br>
+Bock-Marquette I, Saxena A, White MD, et al. Thymosin beta4 activates integrin-linked kinase and promotes cardiac cell migration, survival and cardiac repair. <em>Nature.</em> 2004;432(7016):466-472. <a href="https://pubmed.ncbi.nlm.nih.gov/15565145/">PubMed</a><br>
+Smart N, Risebro CA, Melville AAD, et al. Thymosin beta4 induces adult epicardial progenitor mobilization and neovascularization. <em>Nature.</em> 2007;445(7124):177-182. <a href="https://pubmed.ncbi.nlm.nih.gov/20621080/">PubMed</a><br>
+Philp D, Goldstein AL, Kleinman HK. Thymosin beta4 promotes angiogenesis, wound healing, and hair follicle development. <em>Mech Ageing Dev.</em> 2004;125(2):113-115. <a href="https://pubmed.ncbi.nlm.nih.gov/15037012/">PubMed</a><br>
+Sosne G, Qiu P, Goldstein AL, Wheater M. Biological activities of thymosin beta4 defined by active sites in short peptide sequences. <em>FASEB J.</em> 2010;24(7):2144-2151. <a href="https://pubmed.ncbi.nlm.nih.gov/20179146/">PubMed</a><br>
+Morris DC, Chopp M, Zhang L, et al. Thymosin beta4 improves functional neurological outcome in a rat model of embolic stroke. <em>Neuroscience.</em> 2010;169(2):674-682. <a href="https://pubmed.ncbi.nlm.nih.gov/20434521/">PubMed</a><br>
+</p>
+
+<!-- ========== RELATED READING ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/tb-500-complete-guide">TB-500 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Copper Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-cycling-guide">Peptide Cycling Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/tb-500-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">TB-500 Complete Guide</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Copper Peptide Guide</a>
+            <a href="/articles/peptide-cycling-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Cycling Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

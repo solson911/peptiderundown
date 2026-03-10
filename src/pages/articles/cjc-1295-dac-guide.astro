@@ -1,0 +1,566 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "CJC-1295 with DAC: Long-Acting Growth Hormone Releaser",
+  description: "A complete guide to CJC-1295 DAC, the long-acting GHRH analog with Drug Affinity Complex. Mechanism, benefits, dosing, side effects, and comparisons to no-DAC and ipamorelin.",
+  image: "/images/articles/cjc-1295.webp",
+  date: "2026-02-14",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Growth Hormone &middot; GHRH Analog</div>
+  <h1>CJC-1295 with DAC: Long-Acting Growth Hormone Releaser</h1>
+  <p class="sub">The GHRH analog that binds to albumin and keeps working for days instead of minutes. How it works, what the clinical data shows, and how it compares to the no-DAC version and ipamorelin.</p>
+  <div class="pills">
+    <span class="pill">GHRH Analog</span>
+    <span class="pill">Drug Affinity Complex</span>
+    <span class="pill">6&ndash;8 Day Half-Life</span>
+    <span class="pill">IGF-1 Elevation</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">6&ndash;8d</div><div class="l">Half-Life<br>With DAC</div></div>
+  <div class="sb"><div class="v c2">36&ndash;105%</div><div class="l">IGF-1 Increase<br>In Clinical Trials</div></div>
+  <div class="sb"><div class="v c3">2x/wk</div><div class="l">Typical Dosing<br>Frequency</div></div>
+  <div class="sb"><div class="v c4">~3.4 kDa</div><div class="l">Molecular<br>Weight</div></div>
+</div>
+
+<p>If you've spent any time looking into growth hormone peptides, you've probably run into CJC-1295. But there's a catch that trips people up: there are <strong>two versions</strong>.</p>
+
+<p>CJC-1295 with DAC and CJC-1295 without DAC (sometimes called "mod GRF 1-29") are related compounds with very different behavior in the body. This guide covers the DAC version, the one that sticks around for days instead of minutes.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of CJC-1295 DAC covering its mechanism, benefits, dosing protocols, side effects, and comparisons to alternatives. It is <strong>not a recommendation to use CJC-1295 DAC</strong>. This peptide is not FDA-approved for human use. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>CJC-1295 DAC at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>CJC-1295 with Drug Affinity Complex</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic GHRH analog &nbsp;|&nbsp; <strong>Origin:</strong> ConjuChem Biotechnologies &nbsp;|&nbsp; <strong>Half-Life:</strong> 5.8&ndash;8 days (albumin-bound) &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>Mechanism:</strong> GHRH receptor agonist with albumin binding &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved; research chemical &nbsp;|&nbsp; <strong>Primary Actions:</strong> GH secretion, IGF-1 elevation, lipolysis</p>
+</div>
+
+<p>CJC-1295 is a synthetic analog of growth hormone-releasing hormone (GHRH). Your hypothalamus naturally produces GHRH, which tells the pituitary gland to release growth hormone (GH).</p>
+
+<p>The problem with natural GHRH is that enzymes chew it up in minutes. Researchers at ConjuChem Biotechnologies solved this by modifying the first 29 amino acids of GHRH and attaching a <strong>Drug Affinity Complex (DAC)</strong>, a reactive chemical group that binds to albumin in your blood.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISM ========== -->
+<hr class="sep">
+<h2>How the Drug Affinity Complex Works</h2>
+
+<p>Once injected, the DAC moiety forms a covalent bond with circulating albumin. Albumin has a half-life of roughly 19&ndash;21 days in humans.</p>
+
+<p>By hitching a ride on albumin, CJC-1295 DAC extends its own half-life from about 30 minutes (for the non-DAC version) to approximately <strong>5.8&ndash;8 days</strong> (<a href="https://pubmed.ncbi.nlm.nih.gov/16352683/">Teichman et al., 2006</a>). The albumin binding also shields the peptide from enzymatic degradation by dipeptidyl peptidase IV (DPP-IV).</p>
+
+<div class="svg-box">
+  <div class="st">CJC-1295 DAC: Mechanism of Action</div>
+  <div class="ss">Albumin binding &middot; GHRH receptor activation &middot; GH pulsatility &middot; IGF-1 elevation</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- Injection -->
+    <rect x="15" y="10" width="155" height="240" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="92" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">DAC Binding</text>
+    <text x="92" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">ALBUMIN COMPLEX</text>
+    <line x1="35" y1="65" x2="150" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="92" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">CJC-1295 injected</text>
+    <text x="92" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">subcutaneously</text>
+    <text x="92" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="92" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">DAC binds albumin</text>
+    <text x="92" y="153" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">covalently</text>
+    <line x1="35" y1="172" x2="150" y2="172" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="92" y="195" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">RESULT</text>
+    <text x="92" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Half-life: 6&ndash;8 days</text>
+    <text x="92" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">DPP-IV protection</text>
+
+    <!-- GHRH Receptor -->
+    <rect x="185" y="10" width="165" height="240" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="267" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">GHRH-R</text>
+    <text x="267" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">PITUITARY TARGET</text>
+    <line x1="205" y1="65" x2="330" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="267" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Binds GHRH receptor</text>
+    <text x="267" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">on somatotrophs</text>
+    <text x="267" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="267" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Triggers GH synthesis</text>
+    <text x="267" y="153" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">and secretion</text>
+    <line x1="205" y1="172" x2="330" y2="172" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="267" y="195" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">RESULT</text>
+    <text x="267" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Amplified GH pulses</text>
+    <text x="267" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Pulsatility preserved</text>
+
+    <!-- GH Output -->
+    <rect x="365" y="10" width="160" height="240" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">GH Output</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">GROWTH HORMONE</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Sustained elevation</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">over 6&ndash;8 days</text>
+    <text x="445" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="445" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Somatostatin feedback</text>
+    <text x="445" y="153" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">still intact</text>
+    <line x1="385" y1="172" x2="505" y2="172" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="445" y="195" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">RESULT</text>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">No pituitary shutdown</text>
+    <text x="445" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Safety buffer active</text>
+
+    <!-- IGF-1 -->
+    <rect x="540" y="10" width="145" height="240" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">IGF-1</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">DOWNSTREAM</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Liver converts GH</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">to IGF-1</text>
+    <text x="612" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">36&ndash;105% increase</text>
+    <text x="612" y="153" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">lasting up to 28 days</text>
+    <line x1="555" y1="172" x2="670" y2="172" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="195" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">RESULT</text>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Fat loss, recovery,</text>
+    <text x="612" y="230" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">tissue repair</text>
+  </svg>
+</div>
+
+<h3>GH Pulsatility and Negative Feedback</h3>
+
+<p>Unlike exogenous GH injections that flatten natural pulsatility, CJC-1295 DAC works <em>with</em> your body's existing GH rhythm. It amplifies both the amplitude and frequency of GH pulses while the pulsatile pattern stays intact (<a href="https://pubmed.ncbi.nlm.nih.gov/29713752/">Ionescu &amp; Bhatt, 2018</a>).</p>
+
+<p>Somatostatin, the hormone that puts the brakes on GH release, still functions normally. This provides a built-in safety buffer you don't get with direct GH injection.</p>
+
+<div class="d-t">
+  <div class="s">Key Distinction</div>
+  <p>CJC-1295 DAC stimulates your pituitary to produce its own GH. Exogenous GH bypasses the pituitary entirely. That difference matters for long-term pituitary health and natural GH recovery after discontinuation.</p>
+</div>
+
+<!-- ========== BENEFITS ========== -->
+<hr class="sep">
+<h2>Benefits: What CJC-1295 DAC Actually Does</h2>
+
+<p>Most benefits stem from sustained elevation of GH and IGF-1. These aren't overnight effects. Expect gradual improvements over weeks to months of consistent use.</p>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Fat Loss</div>
+    <h3>Lipolysis and Body Composition</h3>
+    <p style="font-size:14px;margin-bottom:0;">GH is one of the most potent lipolytic hormones in your body. It promotes breakdown of stored triglycerides, increases fatty acid oxidation, and consistently reduces visceral fat in GH-deficient adults (<a href="https://pubmed.ncbi.nlm.nih.gov/9024231/">Johannsson et al., 1997</a>). The long half-life makes CJC-1295 DAC particularly well-suited here.</p>
+  </div>
+  <div class="cd cb">
+    <div class="tg">Recovery</div>
+    <h3>Muscle Growth and Repair</h3>
+    <p style="font-size:14px;margin-bottom:0;">GH and IGF-1 promote protein synthesis and nitrogen retention. They don't build muscle the way testosterone does, but they create an anabolic environment that supports lean tissue growth with resistance training. Recovery is where most users notice the biggest difference (<a href="https://pubmed.ncbi.nlm.nih.gov/20427735/">Doessing et al., 2010</a>).</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="cd cp">
+    <div class="tg">Sleep</div>
+    <h3>Deep Sleep Enhancement</h3>
+    <p style="font-size:14px;margin-bottom:0;">GH secretion naturally peaks during deep sleep. GH-releasing peptides have been shown to increase slow-wave sleep duration (<a href="https://pubmed.ncbi.nlm.nih.gov/7768645/">Frieboes et al., 1995</a>). Users frequently report improved sleep depth and feeling more rested.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Tissue Support</div>
+    <h3><a href="/articles/best-peptides-for-skin-and-hair">Skin and Connective Tissue</a></h3>
+    <p style="font-size:14px;margin-bottom:0;">GH stimulates collagen production. Users often notice improved skin elasticity and thickness after 2&ndash;3 months. Hair and nail growth may also improve. GH accelerates tissue repair processes, well-documented in clinical settings (<a href="https://pubmed.ncbi.nlm.nih.gov/15273542/">Herndon et al., 2004</a>).</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Benefit</th><th>Mechanism</th><th>Typical Timeline</th><th>Evidence Level</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/best-peptides-for-fat-loss">Fat loss</a></strong></td><td>Lipolysis, fatty acid oxidation</td><td>4&ndash;12 weeks</td><td class="g">Strong (clinical)</td></tr>
+<tr><td><strong>Recovery</strong></td><td>Collagen synthesis, protein turnover</td><td>2&ndash;4 weeks</td><td class="g">Strong (clinical)</td></tr>
+<tr><td><strong><a href="/articles/best-peptides-for-sleep">Sleep quality</a></strong></td><td>Slow-wave sleep enhancement</td><td>1&ndash;2 weeks</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Skin/hair</strong></td><td>Collagen production</td><td>8&ndash;12 weeks</td><td class="y">Moderate (anecdotal + GH data)</td></tr>
+<tr><td><strong>Lean mass</strong></td><td>IGF-1 driven protein synthesis</td><td>8&ndash;16 weeks</td><td class="y">Moderate</td></tr>
+</tbody>
+</table>
+
+<!-- ========== DAC vs NO-DAC ========== -->
+<hr class="sep">
+<h2>CJC-1295 DAC vs. No-DAC (Mod GRF 1-29)</h2>
+
+<p>This is the comparison that matters most. The two versions share a core peptide structure but behave very differently once injected.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>CJC-1295 DAC</th><th>No-DAC (Mod GRF 1-29)</th></tr></thead>
+<tbody>
+<tr><td><strong>Half-life</strong></td><td class="g">5.8&ndash;8 days</td><td class="y">~30 minutes</td></tr>
+<tr><td><strong>Dosing frequency</strong></td><td class="g">2x per week</td><td class="r">2&ndash;3x per day</td></tr>
+<tr><td><strong>GH release pattern</strong></td><td>Sustained elevation (GH "bleed")</td><td>Sharp pulse, then baseline</td></tr>
+<tr><td><strong>Convenience</strong></td><td class="g">High</td><td class="r">Low</td></tr>
+<tr><td><strong>GH pulsatility</strong></td><td class="y">Somewhat blunted between doses</td><td class="g">Closely mimics natural pulses</td></tr>
+<tr><td><strong>Best for</strong></td><td>Steady IGF-1, convenience</td><td>Natural-style GH pulses</td></tr>
+</tbody>
+</table>
+
+<p>The no-DAC version is often preferred by people who want to preserve the most natural GH pulsatility possible. CJC-1295 DAC keeps stimulating GH release continuously, which is more convenient but slightly less physiological.</p>
+
+<p>Some researchers have raised concern about partial desensitization of somatotroph cells over time, though clinical data hasn't shown this to be a major issue at standard doses.</p>
+
+<!-- ========== CJC vs IPAMORELIN ========== -->
+<hr class="sep">
+<h2>CJC-1295 DAC vs. Ipamorelin</h2>
+
+<p>These two get compared constantly because they're often used together. But they work through completely different mechanisms.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">CJC-1295 DAC</h4>
+    <p>GHRH analog. Acts on the GHRH receptor. Tells the pituitary <em>how much</em> GH to make. Long-acting (days).</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Ipamorelin</h4>
+    <p>Growth hormone secretagogue (GHS). Acts on the ghrelin receptor (GHS-R1a). Tells the pituitary <em>when</em> to release GH. Short-acting (hours).</p>
+  </div>
+</div>
+
+<p>They stimulate GH release through separate pathways, producing a synergistic effect when combined. Unlike GHRP-6 or GHRP-2, ipamorelin doesn't significantly raise cortisol or prolactin at normal doses (<a href="https://pubmed.ncbi.nlm.nih.gov/9849822/">Raun et al., 2009</a>).</p>
+
+<p>This makes the CJC-1295 DAC + ipamorelin combination popular: sustained baseline GH elevation plus acute pulses, without hunger or cortisol spikes. For a full breakdown, see the <a href="/articles/tesamorelin-ipamorelin-stack-guide">tesamorelin and ipamorelin stack guide</a>.</p>
+
+<div class="d-p">
+  <div class="s">Stacking Insight</div>
+  <p>Think of GHRH as the gas pedal and GHS as a turbo boost. CJC-1295 DAC sets the baseline level of GH production higher, while ipamorelin adds sharp pulses on top. The two pathways don't compete with each other.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>How to Dose CJC-1295 DAC</h2>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Recommendation</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Standard dose</strong></td><td>1&ndash;2 mg subcutaneous</td><td>Twice per week</td></tr>
+<tr><td><strong>Injection timing</strong></td><td>Evening preferred</td><td>Consistent schedule matters</td></tr>
+<tr><td><strong>Cycle length</strong></td><td>8&ndash;16 weeks on</td><td>4&ndash;8 weeks off between cycles</td></tr>
+<tr><td><strong>With ipamorelin</strong></td><td>CJC-1295 DAC 2 mg 2x/wk</td><td>+ ipamorelin 200&ndash;300 mcg 1&ndash;3x daily</td></tr>
+<tr><td><strong>Reconstitution</strong></td><td>Bacteriostatic water</td><td>Gently swirl, never shake</td></tr>
+<tr><td><strong>Storage</strong></td><td>Refrigerate after reconstitution</td><td>Use within 3&ndash;4 weeks</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Timing Tip</div>
+  <p>Elevated blood sugar and insulin blunt GH release. Many users inject on an empty stomach or before bed to maximize the GH response. Fasting for 1&ndash;2 hours before injection is a common practice.</p>
+</div>
+
+<p>CJC-1295 DAC typically comes as lyophilized powder. <a href="/articles/how-to-reconstitute-peptides">Reconstitute</a> with bacteriostatic water and store refrigerated. See the <a href="/articles/how-to-store-peptides">peptide storage guide</a> for details.</p>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>CJC-1295 DAC is generally well-tolerated in studies. Most side effects relate to GH elevation itself and are dose-dependent.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Severity</th><th>Management</th></tr></thead>
+<tbody>
+<tr><td><strong>Water retention</strong></td><td>Common</td><td class="y">Mild to moderate</td><td>Lower dose; usually resolves</td></tr>
+<tr><td><strong>Numbness/tingling</strong></td><td>Common</td><td class="y">Mild</td><td>Reduce dose if persistent</td></tr>
+<tr><td><strong>Injection site reactions</strong></td><td>Common</td><td class="g">Mild</td><td>Rotate sites; temporary</td></tr>
+<tr><td><strong>Headaches</strong></td><td>Occasional</td><td class="y">Mild</td><td>Often resolves after week 1&ndash;2</td></tr>
+<tr><td><strong>Joint discomfort</strong></td><td>Occasional</td><td class="y">Mild</td><td>Related to water retention</td></tr>
+<tr><td><strong>Blood sugar effects</strong></td><td>Uncommon</td><td class="r">Monitor closely</td><td>Check glucose if insulin-resistant</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Cancer Risk Warning</div>
+  <p>Chronically high IGF-1 levels have been associated with increased cancer risk in epidemiological studies (<a href="https://pubmed.ncbi.nlm.nih.gov/15026468/">Renehan et al., 2004</a>). Anyone with a history of cancer or active malignancy should avoid GH-stimulating peptides. For a broader look at risks, see the <a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>.</p>
+</div>
+
+<h3>Lab Monitoring</h3>
+
+<p>Track IGF-1 levels, fasting glucose, and HbA1c periodically. IGF-1 gives an objective measure of whether the peptide is working and whether you're in a safe range.</p>
+
+<p>Cortisol and prolactin can see modest increases with GHRH analogs, though pairing with ipamorelin (rather than GHRP-6) minimizes this concern.</p>
+
+<!-- ========== CYCLING ========== -->
+<hr class="sep">
+<h2>Cycling Protocol</h2>
+
+<table class="tbl">
+<thead><tr><th>Phase</th><th>Duration</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td><strong>On cycle</strong></td><td class="g">8&ndash;16 weeks</td><td>1&ndash;2 mg subcutaneous, twice weekly</td></tr>
+<tr><td><strong>Off cycle</strong></td><td class="y">4&ndash;8 weeks</td><td>Allow receptor sensitivity to reset</td></tr>
+<tr><td><strong>Lab check</strong></td><td>Before starting + week 4</td><td>IGF-1, fasting glucose, HbA1c</td></tr>
+<tr><td><strong>Dose adjustment</strong></td><td>Week 2&ndash;3</td><td>Increase only if well-tolerated and labs support it</td></tr>
+</tbody>
+</table>
+
+<p>Most protocols suggest starting at the lower end (1 mg twice weekly) and increasing only if side effects remain manageable and IGF-1 stays within a reasonable range.</p>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Might Consider CJC-1295 DAC</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Age-Related GH Decline</h4>
+    <p>Adults over 30 experiencing declining GH output who want to support recovery, body composition, and sleep without daily injections.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Athletes and Lifters</h4>
+    <p>Those seeking improved recovery, connective tissue support, and gradual body composition improvements alongside training.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Convenience-Focused Users</h4>
+    <p>People who prefer twice-weekly dosing over the 2&ndash;3 daily injections required by short-acting GHRH analogs like mod GRF 1-29.</p>
+  </div>
+</div>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Legal Status</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Regulatory Status</h4>
+    <p>CJC-1295 DAC is not approved by the FDA for human use. It's sold as a research chemical in many countries. Some clinics prescribe it off-label under physician supervision.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Sports Prohibition</h4>
+    <p>Banned by WADA and most sports organizations under the category of growth hormone releasing factors. Athletes subject to drug testing should not use it.</p>
+  </div>
+</div>
+
+<!-- ========== CJC vs SERMORELIN ========== -->
+<hr class="sep">
+<h2>CJC-1295 DAC vs. Sermorelin</h2>
+
+<p>Both are GHRH analogs, but sermorelin is the original with a very short half-life (about 10&ndash;20 minutes). It was FDA-approved for GH deficiency in children before being discontinued for commercial reasons.</p>
+
+<p>CJC-1295 DAC is a more potent, longer-lasting successor. Sermorelin requires daily injections while CJC-1295 DAC needs only twice weekly. For a full comparison, see the <a href="/articles/cjc-1295-vs-sermorelin-comparison">CJC-1295 vs. sermorelin comparison</a>.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How fast does CJC-1295 DAC start working?</summary>
+    <div class="fa">GH and IGF-1 levels begin rising within hours of the first injection. Noticeable benefits like improved sleep and recovery typically take 2&ndash;4 weeks. Full effects on fat loss and muscle develop over 2&ndash;3 months.</div>
+  </details>
+  <details>
+    <summary>Can I use CJC-1295 DAC without combining it with anything?</summary>
+    <div class="fa">Yes. It works on its own. But most protocols combine it with a GHS like ipamorelin for synergistic effects. CJC-1295 DAC sets the baseline higher, and ipamorelin adds sharp pulses on top.</div>
+  </details>
+  <details>
+    <summary>Does CJC-1295 DAC suppress natural GH production?</summary>
+    <div class="fa">Not in the same way exogenous GH does. CJC-1295 DAC works through the GHRH receptor, still using your pituitary to make GH. Somatostatin feedback remains intact. When you stop, your pituitary continues functioning normally. There's no "shutdown" analogous to anabolic steroids.</div>
+  </details>
+  <details>
+    <summary>Is CJC-1295 DAC legal?</summary>
+    <div class="fa">CJC-1295 DAC is sold as a research chemical in many countries. It's not approved by the FDA for human use and is banned by WADA and most sports organizations.</div>
+  </details>
+  <details>
+    <summary>How do I know if my CJC-1295 DAC is real?</summary>
+    <div class="fa">Test your IGF-1 before and 2&ndash;3 weeks after starting. Genuine CJC-1295 DAC should produce a measurable increase. Third-party testing services can also verify peptide identity and purity.</div>
+  </details>
+  <details>
+    <summary>What's the difference between CJC-1295 DAC and sermorelin?</summary>
+    <div class="fa">Both are GHRH analogs, but sermorelin has a very short half-life (10&ndash;20 minutes) and requires daily injections. CJC-1295 DAC is more potent with a 6&ndash;8 day half-life, needing only twice-weekly dosing. See the <a href="/articles/cjc-1295-vs-sermorelin-comparison">full comparison</a>.</div>
+  </details>
+  <details>
+    <summary>Should I take CJC-1295 DAC on an empty stomach?</summary>
+    <div class="fa">It's not strictly required, but elevated blood sugar and insulin do blunt GH release. Many users inject before bed or after a 1&ndash;2 hour fast to get the strongest GH response.</div>
+  </details>
+  <details>
+    <summary>What labs should I monitor while using CJC-1295 DAC?</summary>
+    <div class="fa">At minimum, track IGF-1 levels (the best objective marker), fasting glucose, and HbA1c. Get baseline labs before starting and recheck at 4 weeks. If you have insulin resistance, monitor glucose more frequently.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>CJC-1295 DAC is one of the most practical GH-releasing peptides available. Its long half-life means fewer injections, more stable GH output, and better compliance compared to short-acting alternatives. The trade-off is less precise control over GH pulsatility.</p>
+</div>
+
+<p>It's not a magic bullet. The benefits are real but gradual, and they work best alongside solid training, nutrition, and sleep habits.</p>
+
+<p>Start with a low dose, monitor your labs, and pay attention to how your body responds. Work with a knowledgeable healthcare provider who understands peptide therapy.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only and does not constitute medical advice. CJC-1295 DAC is not approved by the FDA for human use. Always consult a qualified healthcare provider before starting any peptide protocol. Individual responses vary, and peptide therapy carries risks that should be discussed with a physician.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Teichman SL, Neale A, Lawrence B, Gagnon C, Castaigne JP, Bhatt R. Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295, a long-acting analog of GH-releasing hormone, in healthy adults. <em>J Clin Endocrinol Metab.</em> 2006;91(3):799-805. <a href="https://pubmed.ncbi.nlm.nih.gov/16352683/">PubMed</a><br>
+Ionescu M, Bhatt R. Prolonged pharmacodynamic effects of CJC-1295 on growth hormone secretion. <em>Growth Horm IGF Res.</em> 2018. <a href="https://pubmed.ncbi.nlm.nih.gov/29713752/">PubMed</a><br>
+Johannsson G, Marin P, Lonn L, et al. Growth hormone treatment of abdominally obese men reduces abdominal fat mass, improves glucose and lipoprotein metabolism. <em>J Clin Endocrinol Metab.</em> 1997;82(3):727-734. <a href="https://pubmed.ncbi.nlm.nih.gov/9024231/">PubMed</a><br>
+Doessing S, Heinemeier KM, Holm L, et al. Growth hormone stimulates the collagen synthesis in human tendon and skeletal muscle without affecting myofibrillar protein synthesis. <em>J Physiol.</em> 2010;588(Pt 2):341-351. <a href="https://pubmed.ncbi.nlm.nih.gov/20427735/">PubMed</a><br>
+Frieboes RM, Murck H, Maier P, Schier T, Holsboer F, Steiger A. Growth hormone-releasing peptide-6 stimulates sleep, growth hormone, ACTH and cortisol release in normal man. <em>Neuroendocrinology.</em> 1995;61(5):584-589. <a href="https://pubmed.ncbi.nlm.nih.gov/7768645/">PubMed</a><br>
+Herndon DN, Tompkins RG. Support of the metabolic response to burn injury. <em>Lancet.</em> 2004;363(9424):1895-1902. <a href="https://pubmed.ncbi.nlm.nih.gov/15273542/">PubMed</a><br>
+Raun K, Hansen BS, Johansen NL, et al. Ipamorelin, the first selective growth hormone secretagogue. <em>Eur J Endocrinol.</em> 1998;139(5):552-561. <a href="https://pubmed.ncbi.nlm.nih.gov/9849822/">PubMed</a><br>
+Renehan AG, Zwahlen M, Minder C, O'Dwyer ST, Shalet SM, Egger M. Insulin-like growth factor (IGF)-I, IGF binding protein-3, and cancer risk: systematic review and meta-regression analysis. <em>Lancet.</em> 2004;363(9418):1346-1353. <a href="https://pubmed.ncbi.nlm.nih.gov/15026468/">PubMed</a>
+</p>
+
+<!-- ========== RELATED READING ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/sermorelin-growth-hormone-guide">Sermorelin Growth Hormone Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cjc-1295-vs-sermorelin-comparison">CJC-1295 vs. Sermorelin Comparison</a> &nbsp;&middot;&nbsp;
+<a href="/articles/tesamorelin-ipamorelin-stack-guide">Tesamorelin + Ipamorelin Stack Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-fat-loss">Best Peptides for Fat Loss</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/sermorelin-growth-hormone-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Sermorelin Growth Hormone Guide</a>
+            <a href="/articles/tesamorelin-ipamorelin-stack-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Tesamorelin + Ipamorelin Stack</a>
+            <a href="/articles/cjc-1295-vs-sermorelin-comparison" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">CJC-1295 vs. Sermorelin</a>
+            <a href="/articles/best-peptides-for-fat-loss" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Fat Loss</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

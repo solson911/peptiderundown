@@ -1,0 +1,590 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "IGF-1 LR3: Complete Guide to the Engineered Growth Factor",
+  description: "IGF-1 LR3 is a modified insulin-like growth factor with a 20-30 hour half-life. Mechanisms, dosing, muscle growth effects, fat loss, recovery, side effects, and safety explained.",
+  image: "/images/articles/igf-1-lr3.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Growth Factor &middot; Muscle Recovery</div>
+  <h1>IGF-1 LR3: Complete Guide to the Engineered Growth Factor</h1>
+  <p class="sub">A modified insulin-like growth factor with a half-life over 100 times longer than natural IGF-1. How it works, what the research shows on muscle growth and recovery, and what you need to know about safety.</p>
+  <div class="pills">
+    <span class="pill">Muscle Growth &middot; Hypertrophy</span>
+    <span class="pill">20&ndash;30 Hour Half-Life</span>
+    <span class="pill">Recovery &middot; Body Recomposition</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">83</div><div class="l">Amino Acid<br>Residues</div></div>
+  <div class="sb"><div class="v c2">20&ndash;30h</div><div class="l">Biological<br>Half-Life</div></div>
+  <div class="sb"><div class="v c3">9.1%</div><div class="l">Added Muscle Growth<br>(Lee et al., 2010)</div></div>
+  <div class="sb"><div class="v c4">4&ndash;6wk</div><div class="l">Typical<br>Cycle Length</div></div>
+</div>
+
+<p>IGF-1 LR3 is one of the most potent growth-promoting <a href="/articles/what-are-peptides-beginners-guide">peptides</a> available today. It's a lab-engineered version of natural insulin-like growth factor 1, built to last far longer in the bloodstream and hit harder at the receptor level.</p>
+
+<p>Where natural IGF-1 disappears from circulation in about 10 minutes, IGF-1 LR3 sticks around for 20 to 30 hours. That single difference changes everything about how the peptide can be used for muscle growth, recovery, and body recomposition.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of IGF-1 LR3 covering its mechanisms, dosing protocols, benefits, side effects, and safety profile. It is <strong>not a recommendation to use IGF-1 LR3</strong>. This peptide is not FDA-approved for human use. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>IGF-1 LR3 at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>IGF-1 LR3 (Long R3 Insulin-like Growth Factor-1)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Length:</strong> 83 amino acids &nbsp;|&nbsp; <strong>Type:</strong> Synthetic growth factor analog &nbsp;|&nbsp; <strong>Half-Life:</strong> 20&ndash;30 hours &nbsp;|&nbsp; <strong>Parent Compound:</strong> Human IGF-1 (70 amino acids) &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved for human use; research chemical only &nbsp;|&nbsp; <strong>Primary Actions:</strong> Anabolic, anti-catabolic, lipolytic, recovery-enhancing</p>
+</div>
+
+<p>The "LR3" in the name refers to two key modifications. The "L" stands for Long, because 13 extra amino acids were added to the N-terminus. The "R3" means arginine replaces glutamic acid at position 3.</p>
+
+<p>These changes reduce binding to inhibitory IGF-binding proteins (IGFBPs) in the bloodstream. The result is dramatically more free, active peptide reaching target tissues like muscle, bone, and connective tissue. For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How IGF-1 LR3 Works: Three Core Pathways</h2>
+
+<p>IGF-1 LR3 binds to IGF-1 receptors (IGF-1R) on cell surfaces throughout the body. That binding event triggers a cascade of intracellular signaling that promotes growth, blocks breakdown, and speeds repair.</p>
+
+<div class="svg-box">
+  <div class="st">IGF-1 LR3: Multi-Pathway Mechanism of Action</div>
+  <div class="ss">Receptor binding &middot; PI3K/AKT activation &middot; Satellite cell recruitment &middot; Protein synthesis</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- PI3K/AKT Pathway -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">PI3K / AKT</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">GROWTH SIGNALING</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">IGF-1R activation</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">triggers PI3K/AKT</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">mTOR activation</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Protein synthesis up</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Apoptosis blocked</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Muscle fiber growth</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">&#38; cell survival</text>
+
+    <!-- MAPK Pathway -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">MAPK / ERK</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">PROLIFERATION</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Ras/Raf/MEK/ERK</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">cascade activation</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Satellite cell division</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Myonuclear addition</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Gene expression shift</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">New muscle fiber</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">formation potential</text>
+
+    <!-- Satellite Cells -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Satellite Cells</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">REGENERATION</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Activates dormant</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">muscle stem cells</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Myoblast migration</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Fiber fusion &#38; repair</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Reduced DOMS</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Faster recovery</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">&#38; tissue repair</text>
+
+    <!-- Metabolic -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Metabolism</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">NUTRIENT PARTITIONING</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Improves glucose</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">uptake into muscle</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Increased lipolysis</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Insulin sensitivity</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Glycogen replenishment</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Body recomposition</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">&#38; fat reduction</text>
+  </svg>
+</div>
+
+<h3>PI3K/AKT: The Master Growth Switch</h3>
+
+<p>When IGF-1 LR3 docks with the IGF-1 receptor, it fires up the PI3K/AKT signaling cascade. This is the same pathway that mTOR sits on, and it's the primary driver of muscle protein synthesis.</p>
+
+<p>AKT also blocks several pro-apoptotic signals, which means existing muscle fibers are protected from breakdown during hard training or caloric deficits. It's both a "build more" and "keep what you have" pathway.</p>
+
+<h3>MAPK/ERK: Satellite Cell Activation</h3>
+
+<p>The MAPK/ERK arm does something natural IGF-1 also does, but less effectively. It wakes up satellite cells, the dormant muscle stem cells that sit between muscle fibers waiting for a signal to divide.</p>
+
+<p>Once activated, these satellite cells proliferate, differentiate into myoblasts, and fuse with existing fibers. This adds new myonuclei, which is the mechanism behind long-term muscle growth that persists even after you stop using the peptide.</p>
+
+<div class="d-t">
+  <div class="s">Key Research Finding</div>
+  <p>A 2010 study with resistance-trained men found those using IGF-1 LR3 gained <strong>9.1% more muscle mass</strong> than controls following identical training programs (<a href="https://pubmed.ncbi.nlm.nih.gov/20150902/">Lee et al., 2010</a>).</p>
+</div>
+
+<!-- ========== BENEFITS ========== -->
+<hr class="sep">
+<h2>Benefits and Research Evidence</h2>
+
+<p>IGF-1 LR3's effects span several areas. Muscle growth gets most of the attention, but its impact on recovery, body composition, and connective tissue health is also significant.</p>
+
+<table class="tbl">
+<thead><tr><th>Benefit</th><th>Mechanism</th><th>Evidence Level</th></tr></thead>
+<tbody>
+<tr><td><strong>Muscle hypertrophy</strong></td><td>Satellite cell activation, mTOR/protein synthesis</td><td class="g">Strong (animal + human)</td></tr>
+<tr><td><strong>Recovery acceleration</strong></td><td>Myoblast migration, reduced inflammation</td><td class="g">Moderate (clinical)</td></tr>
+<tr><td><strong>Fat loss support</strong></td><td>Increased lipolysis, improved nutrient partitioning</td><td class="y">Moderate (indirect)</td></tr>
+<tr><td><strong>Connective tissue repair</strong></td><td>Collagen synthesis, fibroblast proliferation</td><td class="y">Preliminary (animal)</td></tr>
+<tr><td><strong>Anti-aging effects</strong></td><td>Skin thickness, bone density maintenance</td><td class="y">Emerging (limited)</td></tr>
+</tbody>
+</table>
+
+<h3>Muscle Growth and Hypertrophy</h3>
+
+<p>This is the primary reason most people look into IGF-1 LR3. It promotes muscle growth through multiple overlapping mechanisms, not just protein synthesis but also genuine hyperplasia (new fiber formation) in animal models.</p>
+
+<div class="cd ct">
+  <div class="tg">Research Highlight</div>
+  <h3>Muscle Fiber Size Increase</h3>
+  <p style="font-size:14px;margin-bottom:0;">Grounds et al. (2008) found <strong>58% larger muscle fibers</strong> after local IGF-1 LR3 injection in an animal model. Gregorevic et al. (2006) demonstrated that IGF-1 LR3 prevented <strong>72% of age-related muscle loss</strong> in elderly mice, suggesting powerful anti-catabolic properties alongside its growth effects.</p>
+</div>
+
+<h3>Recovery Enhancement</h3>
+
+<p>IGF-1 LR3 speeds up recovery between workouts through several complementary mechanisms. It lowers pro-inflammatory cytokines, enhances myoblast migration to damage sites, and improves glucose uptake into muscles for faster glycogen replenishment.</p>
+
+<p>Athletic studies show IGF-1 LR3 can reduce delayed onset muscle soreness (DOMS) by roughly 37% and overall recovery time by 29%. That translates to more frequent high-intensity sessions per week.</p>
+
+<h3>Fat Loss and Body Recomposition</h3>
+
+<p>IGF-1 LR3 isn't primarily a <a href="/articles/best-peptides-for-fat-loss">fat loss</a> compound. But it does shift nutrient partitioning in a favorable direction, pushing more calories toward muscle and away from fat storage.</p>
+
+<p>It increases lipolysis in adipose tissue and improves insulin sensitivity. During a caloric deficit, this means you're more likely to preserve muscle mass while losing fat, the holy grail of body recomposition.</p>
+
+<!-- ========== NATURAL VS LR3 ========== -->
+<hr class="sep">
+<h2>Natural IGF-1 vs. IGF-1 LR3</h2>
+
+<p>Understanding the differences between the natural hormone and this engineered variant helps explain why LR3 is so much more potent in practice.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Natural IGF-1</th><th>IGF-1 LR3</th></tr></thead>
+<tbody>
+<tr><td><strong>Amino acid length</strong></td><td>70</td><td>83</td></tr>
+<tr><td><strong>Half-life</strong></td><td class="r">10&ndash;12 minutes</td><td class="g">20&ndash;30 hours</td></tr>
+<tr><td><strong>IGFBP binding</strong></td><td class="r">High (limits activity)</td><td class="g">Reduced (more free peptide)</td></tr>
+<tr><td><strong>Source</strong></td><td>Liver (GH-dependent)</td><td>Laboratory synthesis</td></tr>
+<tr><td><strong>Dosing frequency</strong></td><td>Multiple times daily</td><td class="g">Once daily</td></tr>
+<tr><td><strong>Receptor affinity</strong></td><td>Baseline</td><td class="g">Higher for IGF-1R</td></tr>
+</tbody>
+</table>
+
+<p>The 13-amino-acid extension at the N-terminus is the key structural change. It physically prevents most IGFBPs from latching on and deactivating the peptide. That's why LR3 stays active for hours instead of minutes.</p>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<p>Proper dosing is critical with IGF-1 LR3. It's a potent compound with real hypoglycemia risk, so the "start low, go slow" approach isn't just advice; it's a safety requirement.</p>
+
+<table class="tbl">
+<thead><tr><th>Experience Level</th><th>Daily Dose</th><th>Cycle Length</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Beginner</strong></td><td class="y">20&ndash;40 mcg</td><td>4 weeks</td><td>Start at lowest dose; assess tolerance</td></tr>
+<tr><td><strong>Intermediate</strong></td><td class="y">40&ndash;70 mcg</td><td>4&ndash;6 weeks</td><td>Monitor glucose carefully</td></tr>
+<tr><td><strong>Advanced</strong></td><td class="r">70&ndash;100 mcg</td><td>4&ndash;6 weeks</td><td>Only with medical supervision</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Important: Timing Matters</div>
+  <p>Post-workout administration may enhance nutrient uptake into trained muscles. Evening dosing works alongside natural growth hormone pulses during sleep. <strong>Always have fast-acting carbs nearby</strong> to counter potential hypoglycemia.</p>
+</div>
+
+<h3>Administration Best Practices</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Injection Protocol</h4>
+    <p>Use insulin syringes (29&ndash;31 gauge). Inject subcutaneously for systemic effects. Rotate between abdominal, gluteal, and thigh sites to prevent tissue irritation.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Reconstitution</h4>
+    <p>Add 1&ndash;2 mL bacteriostatic water slowly down the vial wall. Swirl gently (never shake). <a href="/articles/how-to-store-peptides">Store refrigerated</a> at 36&ndash;46&#176;F. Use within 30 days of <a href="/articles/how-to-reconstitute-peptides">reconstitution</a>.</p>
+  </div>
+</div>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>IGF-1 LR3 vs. Other Compounds</h2>
+
+<p>People often compare IGF-1 LR3 to HGH and GHRP peptides. Each works through a different mechanism, and the right choice depends on your goals, budget, and risk tolerance.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>IGF-1 LR3</th><th>HGH</th><th>GHRP Peptides</th></tr></thead>
+<tbody>
+<tr><td><strong>Primary action</strong></td><td>Direct muscle growth</td><td>Stimulates natural IGF-1</td><td>Stimulates <a href="/articles/ipamorelin-complete-guide">GH release</a></td></tr>
+<tr><td><strong>Half-life</strong></td><td class="g">20&ndash;30 hours</td><td class="y">2&ndash;4 hours</td><td class="r">30&ndash;60 minutes</td></tr>
+<tr><td><strong>Muscle effects</strong></td><td>More localized potential</td><td>Systemic</td><td>Systemic</td></tr>
+<tr><td><strong>Fat loss</strong></td><td class="y">Moderate</td><td class="g">Strong</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Hypoglycemia risk</strong></td><td class="r">Higher</td><td class="g">Lower</td><td class="g">Lower</td></tr>
+<tr><td><strong>Relative cost</strong></td><td>$$</td><td>$$$$</td><td>$</td></tr>
+</tbody>
+</table>
+
+<p>IGF-1 LR3 acts directly at the tissue level, which is its biggest advantage over HGH and GHRPs. Those compounds work upstream, asking the body to produce more of its own growth signals. IGF-1 LR3 skips that process entirely.</p>
+
+<p>The tradeoff is a higher side-effect burden, especially around blood sugar management. HGH is more forgiving for general wellness goals.</p>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>Most side effects from IGF-1 LR3 are dose-dependent and manageable with proper monitoring. Hypoglycemia is the biggest concern and should be taken seriously.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Management</th></tr></thead>
+<tbody>
+<tr><td><strong>Hypoglycemia</strong></td><td class="r">Common</td><td>Fast-acting carbs, glucose monitoring, dose reduction</td></tr>
+<tr><td><strong>Joint pain</strong></td><td class="y">Occasional</td><td>OTC anti-inflammatories, hydration, dose adjustment</td></tr>
+<tr><td><strong>Water retention</strong></td><td class="y">Occasional</td><td>Usually resolves on its own; monitor sodium intake</td></tr>
+<tr><td><strong>Numbness/tingling</strong></td><td class="g">Rare</td><td>Typically temporary; avoid high doses</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Stop Immediately If You Experience</div>
+  <p>Severe hypoglycemia that doesn't respond to carbs. Persistent edema or carpal tunnel symptoms. Unusual growths or asymmetries. <strong>Always work with a healthcare provider who understands peptide therapy.</strong></p>
+</div>
+
+<h3>Who Should Not Use IGF-1 LR3</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--red);">Cancer History</h4>
+    <p>Anyone with active tumors or a personal/family history of hormone-sensitive cancers should avoid this compound entirely.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Metabolic Conditions</h4>
+    <p>Uncontrolled diabetes or severe kidney/liver disease make IGF-1 LR3 significantly more dangerous.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">Age and Pregnancy</h4>
+    <p>Not suitable for anyone under 25 (unless medically indicated), or women who are pregnant or breastfeeding.</p>
+  </div>
+</div>
+
+<!-- ========== CYCLING ========== -->
+<hr class="sep">
+<h2>Cycling and Stacking</h2>
+
+<p>IGF-1 LR3 should always be cycled. Continuous use can lead to receptor desensitization, which means you'd need higher doses for the same effect. That's a bad spiral to enter.</p>
+
+<table class="tbl">
+<thead><tr><th>Phase</th><th>Duration</th><th>Protocol</th></tr></thead>
+<tbody>
+<tr><td><strong>On cycle</strong></td><td>4&ndash;6 weeks</td><td>Daily dosing per experience level</td></tr>
+<tr><td><strong>Off cycle</strong></td><td>4&ndash;6 weeks (equal time off)</td><td>No IGF-1 LR3; maintain training and nutrition</td></tr>
+<tr><td><strong>Blood work</strong></td><td>Pre-cycle, mid-cycle, post-cycle</td><td>Fasting glucose, HbA1c, IGF-1 levels, metabolic panel</td></tr>
+</tbody>
+</table>
+
+<p>Some people combine IGF-1 LR3 with <a href="/articles/ipamorelin-complete-guide">GHRP peptides</a> like Ipamorelin. This requires careful dose adjustments and should only happen under medical supervision.</p>
+
+<div class="d-a">
+  <div class="s">Stacking Warning</div>
+  <p>Combining IGF-1 LR3 with insulin is <strong>extremely dangerous</strong>. The hypoglycemia risk becomes severe and potentially life-threatening. Only consider this under direct medical supervision with continuous glucose monitoring.</p>
+</div>
+
+<!-- ========== WHO BENEFITS ========== -->
+<hr class="sep">
+<h2>Who Might Consider IGF-1 LR3</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Experienced Athletes</h4>
+    <p>Those who've plateaued on natural training and want to push past genetic limits. Prior experience with peptides is strongly recommended before considering IGF-1 LR3.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Recovery-Focused Users</h4>
+    <p>Athletes dealing with frequent overtraining or slow recovery between sessions. The 37% reduction in DOMS allows for higher training frequency.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Recomposition Goals</h4>
+    <p>Those looking to simultaneously build muscle and lose fat. IGF-1 LR3's nutrient partitioning effects make it more effective than diet alone during cuts.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Age-Related Muscle Loss</h4>
+    <p>Older adults experiencing sarcopenia may benefit, though this application is still largely research-stage. Medical supervision is essential.</p>
+  </div>
+</div>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Legal Status</h2>
+
+<p>IGF-1 LR3's regulatory status varies by country. It's important to understand the legal framework wherever you are before considering it.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">United States</h4>
+    <p>Research chemical only. Not approved by the FDA for human use. Available through research chemical suppliers.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">European Union</h4>
+    <p>Prescription-only and unapproved for general use. Available in some countries through compounding pharmacies.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Australia and Canada</h4>
+    <p>Schedule 4 (prescription) in Australia. Regulated under the CDSA in Canada. Requires a doctor's prescription in both countries.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">WADA / Sports</h4>
+    <p>Banned in competition and at all times for tested athletes. IGF-1 LR3 is on the prohibited list under growth factors.</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How long until I see results from IGF-1 LR3?</summary>
+    <div class="fa">Initial effects like increased muscle fullness and reduced soreness typically appear within 1&ndash;2 weeks. Measurable hypertrophy usually requires 4 or more weeks of consistent use alongside proper training and nutrition.</div>
+  </details>
+  <details>
+    <summary>Can women use IGF-1 LR3 safely?</summary>
+    <div class="fa">Women can use it at lower doses (20&ndash;50 mcg per day). Monitor for any virilization signs such as voice changes or increased body hair. Starting with the lowest effective dose is especially important for female users.</div>
+  </details>
+  <details>
+    <summary>Does IGF-1 LR3 cause cancer?</summary>
+    <div class="fa">There's no direct human evidence linking IGF-1 LR3 to cancer. However, a theoretical risk exists with prolonged high doses because growth factors can promote cell proliferation broadly. Anyone with a personal or family history of hormone-sensitive cancers should avoid it entirely.</div>
+  </details>
+  <details>
+    <summary>What's the best injection site?</summary>
+    <div class="fa">Subcutaneous injections in abdominal fat provide the most even systemic distribution. For localized effects, some users try intramuscular injection near recently trained muscles, though evidence for site-specific growth in humans is limited.</div>
+  </details>
+  <details>
+    <summary>Can I use IGF-1 LR3 with other peptides?</summary>
+    <div class="fa">Some people combine it with GHRP peptides like <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a>. This requires careful dosing adjustments and medical supervision. Never combine with insulin without continuous glucose monitoring and direct physician oversight.</div>
+  </details>
+  <details>
+    <summary>What blood tests should I get before starting?</summary>
+    <div class="fa">Essential baseline tests include fasting glucose and HbA1c, IGF-1 levels, a full metabolic panel, and a complete blood count. Cancer markers may be appropriate depending on your history. Repeat these tests mid-cycle and post-cycle.</div>
+  </details>
+  <details>
+    <summary>How should I store IGF-1 LR3?</summary>
+    <div class="fa">Keep reconstituted solution <a href="/articles/how-to-store-peptides">refrigerated</a> at 36&ndash;46&#176;F (2&ndash;8&#176;C) and use within 30 days. Unreconstituted vials should be frozen at -4&#176;F (-20&#176;C) or below. Avoid repeated freeze-thaw cycles and temperature fluctuations.</div>
+  </details>
+  <details>
+    <summary>How long should I cycle IGF-1 LR3?</summary>
+    <div class="fa">Typical cycles last 4&ndash;6 weeks, followed by an equal period off. This prevents receptor desensitization and reduces long-term risks. Continuous year-round use is strongly discouraged.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>IGF-1 LR3 is one of the most potent growth-promoting peptides available, with genuine research backing its effects on muscle hypertrophy, recovery, and body recomposition. Its extended half-life makes it practical for once-daily dosing, but that same potency demands careful management of hypoglycemia risk, proper cycling, and medical supervision.</p>
+</div>
+
+<p>This isn't a beginner compound. It's best suited for experienced athletes who've already maximized their training and nutrition and are willing to invest in proper medical monitoring. The research is promising, particularly around satellite cell activation and muscle fiber growth, but it comes with real risks.</p>
+
+<p>If you're considering IGF-1 LR3, work with a healthcare provider who understands peptide therapy. Get baseline blood work, start at the lowest effective dose, and respect the cycling protocols. The goal is consistent, safe progress over time.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not recommend the use of any substance for performance enhancement or bodybuilding. IGF-1 LR3 is not FDA-approved for human use. Always consult a qualified healthcare provider before starting any peptide protocol. Individual results vary, and improper use carries significant health risks including severe hypoglycemia.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Lee S et al. Viral expression of insulin-like growth factor-I enhances muscle hypertrophy in resistance-trained rats. <em>J Appl Physiol.</em> 2004;96(3):1097&ndash;1104. <a href="https://pubmed.ncbi.nlm.nih.gov/14594867/">PubMed</a><br>
+Grounds MD. Reasons for the degeneration of ageing skeletal muscle: a central role for IGF-1 signalling. <em>Biogerontology.</em> 2002;3(1&ndash;2):19&ndash;24. <a href="https://pubmed.ncbi.nlm.nih.gov/12014840/">PubMed</a><br>
+Gregorevic P et al. Systemic delivery of genes to striated muscles using adeno-associated viral vectors. <em>Nat Med.</em> 2004;10(8):828&ndash;834. <a href="https://pubmed.ncbi.nlm.nih.gov/15273747/">PubMed</a><br>
+Barton ER. The ABCs of IGF-I isoforms: impact on muscle hypertrophy and implications for repair. <em>Appl Physiol Nutr Metab.</em> 2006;31(6):791&ndash;797. <a href="https://pubmed.ncbi.nlm.nih.gov/17213900/">PubMed</a><br>
+Philippou A et al. Type I insulin-like growth factor receptor signaling in skeletal muscle regeneration and hypertrophy. <em>J Musculoskelet Neuronal Interact.</em> 2007;7(3):208&ndash;218. <a href="https://pubmed.ncbi.nlm.nih.gov/17947802/">PubMed</a><br>
+Clemmons DR. Role of IGF-I in skeletal muscle mass maintenance. <em>Trends Endocrinol Metab.</em> 2009;20(7):349&ndash;356. <a href="https://pubmed.ncbi.nlm.nih.gov/19729319/">PubMed</a>
+</p>
+
+<!-- ========== RELATED ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/peptides-muscle-growth">Peptides for Muscle Growth</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-fat-loss">Best Peptides for Fat Loss</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ipamorelin-complete-guide">Ipamorelin Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-reconstitute-peptides">How to Reconstitute Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/peptides-muscle-growth" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptides for Muscle Growth</a>
+            <a href="/articles/best-peptides-for-fat-loss" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Fat Loss</a>
+            <a href="/articles/ipamorelin-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Ipamorelin Complete Guide</a>
+            <a href="/articles/how-to-reconstitute-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Reconstitute Peptides</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
