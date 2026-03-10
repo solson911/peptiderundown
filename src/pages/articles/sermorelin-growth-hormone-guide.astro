@@ -1,0 +1,583 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Sermorelin: A Complete Guide to Growth Hormone Support",
+  description: "Sermorelin stimulates natural growth hormone production through the GHRH receptor pathway. Dosing, mechanisms, side effects, comparisons, and clinical evidence explained.",
+  image: "/images/articles/sermorelin.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Growth Hormone &middot; Anti-Aging</div>
+  <h1>Sermorelin: A Complete Guide to Growth Hormone Support</h1>
+  <p class="sub">A synthetic GHRH analog that stimulates your pituitary gland to produce its own growth hormone. How it works, what the research shows, and what to know about dosing and safety.</p>
+  <div class="pills">
+    <span class="pill">GHRH Analog &middot; 29 Amino Acids</span>
+    <span class="pill">Subcutaneous &middot; Evening Dosing</span>
+    <span class="pill">Anti-Aging &middot; Body Composition</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">29</div><div class="l">Amino Acid<br>Sequence Length</div></div>
+  <div class="sb"><div class="v c2">3,357</div><div class="l">Molecular Weight<br>(Daltons)</div></div>
+  <div class="sb"><div class="v c3">1997</div><div class="l">FDA Approved<br>(as Geref Diagnostic)</div></div>
+  <div class="sb"><div class="v c4">3&ndash;6 mo</div><div class="l">Typical<br>Cycle Length</div></div>
+</div>
+
+<p>Sermorelin works with your body's natural systems instead of overriding them. Unlike direct growth hormone injections, this peptide tells your pituitary gland to produce and release its own GH, preserving the pulsatile rhythm your endocrine system depends on.</p>
+
+<p>That distinction matters more than most people realize. When you inject synthetic growth hormone directly, you bypass the feedback loops that keep hormone levels in check. Sermorelin keeps those loops intact, which is why many clinicians consider it a safer starting point for age-related GH decline.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of sermorelin covering its mechanisms, dosing protocols, clinical evidence, side effects, and comparisons with other GH-support peptides. It is <strong>not a recommendation to use sermorelin</strong>. Always consult a qualified healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>Sermorelin at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Sermorelin Acetate (GHRH 1&ndash;29)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Sequence:</strong> Tyr-Ala-Asp-Ala-Ile-Phe-Thr-Asn-Ser-Tyr-Arg-Lys-Val-Leu-Gly-Gln-Leu-Ser-Ala-Arg-Lys-Leu-Leu-Gln-Asp-Ile-Met-Ser-Arg &nbsp;|&nbsp; <strong>Type:</strong> Synthetic peptide (GHRH analog) &nbsp;|&nbsp; <strong>Molecular Weight:</strong> ~3,357 Da &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Previously approved as Geref for diagnostic use (1997); now available through compounding pharmacies &nbsp;|&nbsp; <strong>Primary Actions:</strong> GH secretagogue, anti-aging support, body composition improvement</p>
+</div>
+
+<p>Sermorelin is the first 29 amino acids of naturally occurring growth hormone-releasing hormone (GHRH). That fragment is the biologically active portion of the full 44-amino-acid molecule. Researchers discovered early on that you don't need the complete sequence to trigger pituitary GH release.</p>
+
+<p>Originally developed as a diagnostic tool, sermorelin was marketed as Geref to test pituitary function. Today it's primarily prescribed off-label through compounding pharmacies for adults experiencing age-related GH decline. For compound sourcing details, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISM ========== -->
+<hr class="sep">
+<h2>How Sermorelin Works: The GHRH Receptor Pathway</h2>
+
+<p>Sermorelin's mechanism is straightforward compared to many peptides. It mimics natural GHRH, binds the same receptor on pituitary somatotroph cells, and triggers GH synthesis and release through the same signaling cascade your body already uses.</p>
+
+<p>The key advantage here is that sermorelin preserves pulsatile GH secretion. Your body releases growth hormone in bursts throughout the day, with the largest pulse during deep sleep. Sermorelin supports this pattern rather than flattening it into a steady-state level.</p>
+
+<div class="svg-box">
+  <div class="st">Sermorelin: GHRH Receptor Signaling Pathway</div>
+  <div class="ss">Subcutaneous injection &rarr; Pituitary activation &rarr; GH release &rarr; IGF-1 production &rarr; Tissue effects</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- Step 1: Injection -->
+    <rect x="10" y="30" width="120" height="200" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="70" y="58" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#2956A6">Injection</text>
+    <text x="70" y="73" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">SUBCUTANEOUS</text>
+    <line x1="25" y1="82" x2="115" y2="82" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="70" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Sermorelin enters</text>
+    <text x="70" y="117" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">bloodstream</text>
+    <text x="70" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Travels to</text>
+    <text x="70" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">pituitary gland</text>
+    <line x1="25" y1="175" x2="115" y2="175" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="70" y="198" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">TIMING</text>
+    <text x="70" y="216" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Evening dosing</text>
+
+    <!-- Arrow 1 -->
+    <text x="143" y="135" font-family="DM Sans,sans-serif" font-size="18" fill="#86869A">&#8594;</text>
+
+    <!-- Step 2: Receptor Binding -->
+    <rect x="158" y="30" width="130" height="200" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="223" y="58" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#6E3B8A">GHRH Receptor</text>
+    <text x="223" y="73" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">PITUITARY BINDING</text>
+    <line x1="173" y1="82" x2="273" y2="82" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="223" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Binds somatotroph</text>
+    <text x="223" y="117" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">cell receptors</text>
+    <text x="223" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Activates cAMP</text>
+    <text x="223" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">signaling cascade</text>
+    <line x1="173" y1="175" x2="273" y2="175" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="223" y="198" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY STEP</text>
+    <text x="223" y="216" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Mimics native GHRH</text>
+
+    <!-- Arrow 2 -->
+    <text x="301" y="135" font-family="DM Sans,sans-serif" font-size="18" fill="#86869A">&#8594;</text>
+
+    <!-- Step 3: GH Release -->
+    <rect x="316" y="30" width="120" height="200" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="376" y="58" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#187A62">GH Release</text>
+    <text x="376" y="73" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">PULSATILE OUTPUT</text>
+    <line x1="331" y1="82" x2="421" y2="82" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="376" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Pituitary secretes</text>
+    <text x="376" y="117" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">stored GH</text>
+    <text x="376" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Natural pulsatile</text>
+    <text x="376" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">pattern preserved</text>
+    <line x1="331" y1="175" x2="421" y2="175" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="376" y="198" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">ADVANTAGE</text>
+    <text x="376" y="216" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Feedback loops intact</text>
+
+    <!-- Arrow 3 -->
+    <text x="449" y="135" font-family="DM Sans,sans-serif" font-size="18" fill="#86869A">&#8594;</text>
+
+    <!-- Step 4: IGF-1 -->
+    <rect x="464" y="30" width="120" height="200" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="524" y="58" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#B48118">IGF-1</text>
+    <text x="524" y="73" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">LIVER CONVERSION</text>
+    <line x1="479" y1="82" x2="569" y2="82" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="524" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">GH reaches liver</text>
+    <text x="524" y="117" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Produces IGF-1</text>
+    <text x="524" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Mediates most</text>
+    <text x="524" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">growth effects</text>
+    <line x1="479" y1="175" x2="569" y2="175" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="524" y="198" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">BIOMARKER</text>
+    <text x="524" y="216" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Measurable via blood</text>
+
+    <!-- Arrow 4 -->
+    <text x="597" y="135" font-family="DM Sans,sans-serif" font-size="18" fill="#86869A">&#8594;</text>
+
+    <!-- Step 5: Tissue Effects -->
+    <rect x="612" y="30" width="78" height="200" rx="12" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="651" y="58" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#B53A3A">Tissues</text>
+    <text x="651" y="73" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#B53A3A" letter-spacing="1" font-weight="600">SYSTEMIC</text>
+    <line x1="622" y1="82" x2="680" y2="82" stroke="#B53A3A" stroke-opacity=".2"/>
+    <text x="651" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A2020">Muscle</text>
+    <text x="651" y="117" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A2020">Bone</text>
+    <text x="651" y="132" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A2020">Skin</text>
+    <text x="651" y="147" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A2020">Fat cells</text>
+    <text x="651" y="162" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A2020">Organs</text>
+  </svg>
+</div>
+
+<h3>Why Pulsatile Release Matters</h3>
+
+<p>Your body doesn't produce growth hormone in a steady stream. It comes in bursts, with the biggest spike occurring during stage 3 deep sleep (<a href="https://pubmed.ncbi.nlm.nih.gov/9665394/">Van Cauter et al., 1998</a>). This pulsatile pattern is critical for proper receptor sensitivity.</p>
+
+<p>Direct GH injections often create sustained elevations that can downregulate receptors over time. Sermorelin preserves the natural on-off cycling because it works through the same feedback mechanisms as endogenous GHRH. When GH levels rise, somatostatin kicks in to slow things down, just as it normally would.</p>
+
+<div class="d-t">
+  <div class="s">Key Advantage</div>
+  <p>Because sermorelin acts upstream of GH production, the pituitary retains control over how much growth hormone actually enters circulation. This built-in safety valve doesn't exist with direct GH supplementation.</p>
+</div>
+
+<!-- ========== BENEFITS ========== -->
+<hr class="sep">
+<h2>Benefits and Clinical Evidence</h2>
+
+<p>The benefits of sermorelin track closely with what you'd expect from restoring healthy GH levels. Most users report gradual improvements across several areas over the first 3&ndash;6 months of therapy.</p>
+
+<table class="tbl">
+<thead><tr><th>Benefit Area</th><th>Mechanism</th><th>Evidence Level</th><th>Timeline</th></tr></thead>
+<tbody>
+<tr><td><strong>Body Composition</strong></td><td>GH-mediated lipolysis and protein synthesis</td><td class="g">Moderate clinical data</td><td>8&ndash;12 weeks</td></tr>
+<tr><td><strong>Sleep Quality</strong></td><td>GH pulse alignment with sleep architecture</td><td class="g">Well-supported</td><td>2&ndash;4 weeks</td></tr>
+<tr><td><strong>Skin and Collagen</strong></td><td>IGF-1 stimulation of fibroblasts</td><td class="y">Anecdotal + indirect</td><td>3&ndash;6 months</td></tr>
+<tr><td><strong>Metabolic Health</strong></td><td>Improved glucose handling, lipid profiles</td><td class="y">Limited clinical data</td><td>8&ndash;16 weeks</td></tr>
+<tr><td><strong>Recovery Support</strong></td><td>GH and IGF-1 tissue repair pathways</td><td class="y">Mostly anecdotal</td><td>4&ndash;8 weeks</td></tr>
+<tr><td><strong>Energy and Vitality</strong></td><td>Restored GH levels, improved sleep</td><td class="y">Widely reported</td><td>3&ndash;6 weeks</td></tr>
+</tbody>
+</table>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Body Composition</div>
+    <h3>Lean Mass and Fat Distribution</h3>
+    <p style="font-size:14px;margin-bottom:0;">Sermorelin doesn't directly build muscle, but it supports an environment where lean tissue is easier to maintain. Growth hormone promotes lipolysis (fat breakdown), and many users notice changes in abdominal fat distribution within the first few months. The effect is dose-dependent and works best alongside consistent training and nutrition.</p>
+  </div>
+  <div class="cd cp">
+    <div class="tg">Sleep Quality</div>
+    <h3>Deep Sleep and Recovery</h3>
+    <p style="font-size:14px;margin-bottom:0;">One of the earliest and most consistent reports from sermorelin users is improved sleep. This makes physiological sense: evening dosing aligns with the natural nocturnal GH pulse, and better GH signaling supports deeper stage 3 sleep. Many users notice this within the first 2&ndash;3 weeks.</p>
+  </div>
+</div>
+
+<h3>Skin and Tissue Support</h3>
+
+<p>Collagen production declines roughly 1% per year starting in your mid-twenties. GH and IGF-1 both stimulate fibroblast activity, which is why some sermorelin users report improved skin texture and elasticity over time. These changes are subtle and typically take 3&ndash;6 months to become noticeable.</p>
+
+<h3>Metabolic Effects</h3>
+
+<p>Growth hormone influences how your body handles glucose and lipids. Some clinical observations suggest sermorelin therapy can support healthy insulin sensitivity and favorable changes in cholesterol ratios (<a href="https://pubmed.ncbi.nlm.nih.gov/9519937/">Walker et al., 1998</a>). These metabolic effects tend to be modest and vary between individuals.</p>
+
+<div class="d-p">
+  <div class="s">Research Context</div>
+  <p>Most sermorelin research comes from its use as a GH-stimulation test and from small clinical trials on GH-deficient adults. Large-scale randomized controlled trials specifically on sermorelin for anti-aging are limited. The evidence base is growing but not yet definitive.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing and Administration</h2>
+
+<p>Sermorelin dosing requires medical supervision. Your provider will consider factors like age, weight, baseline IGF-1 levels, and treatment goals when setting your protocol.</p>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Typical Range</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Daily Dose</strong></td><td>100&ndash;300 mcg</td><td class="g">Most common: 200&ndash;300 mcg</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Once daily</td><td>Evening, before bed</td></tr>
+<tr><td><strong>Injection Site</strong></td><td>Subcutaneous</td><td>Stomach or thigh, rotate sites</td></tr>
+<tr><td><strong>Cycle Length</strong></td><td>3&ndash;6 months</td><td class="y">Followed by a break period</td></tr>
+<tr><td><strong>Storage (reconstituted)</strong></td><td>Refrigerated</td><td class="r">Do not freeze; use within 2&ndash;3 weeks</td></tr>
+</tbody>
+</table>
+
+<h3>Reconstitution Process</h3>
+
+<p>Sermorelin arrives as a lyophilized (freeze-dried) powder that needs to be mixed with bacteriostatic water before use. This is standard for most injectable peptides. If you're new to the process, check our <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a>.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Step 1: Prepare</h4>
+    <p>Clean the vial top with an alcohol swab. Draw the appropriate amount of bacteriostatic water into an insulin syringe.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Step 2: Mix</h4>
+    <p>Inject water slowly into the peptide vial, aiming the stream at the glass wall. Gently swirl until fully dissolved. Never shake.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Step 3: Store</h4>
+    <p>Refrigerate immediately after mixing. Use within 2&ndash;3 weeks. Always use sterile technique for each draw.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Timing Matters</div>
+  <p>Administer sermorelin 30&ndash;60 minutes before bed on an empty stomach. Food (especially fats and carbohydrates) can blunt the GH response. Most protocols recommend fasting for at least 2 hours before injection.</p>
+</div>
+
+<!-- ========== COMPARISON ========== -->
+<hr class="sep">
+<h2>Sermorelin vs. Other GH Peptides</h2>
+
+<p>Sermorelin isn't the only peptide that supports growth hormone release. Several alternatives target the same goal through different mechanisms. Understanding the differences helps you have a more informed conversation with your provider.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Mechanism</th><th>Dosing</th><th>Duration</th><th>Key Distinction</th></tr></thead>
+<tbody>
+<tr><td><strong>Sermorelin</strong></td><td>GHRH analog</td><td>Daily (evening)</td><td>3&ndash;6 months</td><td class="g">Preserves natural pulsatility</td></tr>
+<tr><td><strong><a href="/articles/ipamorelin-complete-guide">Ipamorelin</a></strong></td><td>Ghrelin receptor agonist</td><td>Daily</td><td>3&ndash;6 months</td><td class="g">Selective, minimal cortisol effect</td></tr>
+<tr><td><strong><a href="/articles/cjc-1295-dac-guide">CJC-1295 (DAC)</a></strong></td><td>GHRH analog + DAC linker</td><td>Twice weekly</td><td>Longer acting</td><td class="y">Extended half-life; steady GH elevation</td></tr>
+<tr><td><strong>Tesamorelin</strong></td><td>GHRH analog</td><td>Daily</td><td>3&ndash;6 months</td><td class="g">FDA-approved for HIV lipodystrophy</td></tr>
+<tr><td><strong>Direct hGH</strong></td><td>Exogenous hormone</td><td>Daily</td><td>Ongoing</td><td class="r">Bypasses feedback; higher side-effect risk</td></tr>
+</tbody>
+</table>
+
+<h3>Sermorelin vs. Direct Growth Hormone</h3>
+
+<p>This is the comparison most people care about. Direct GH injections supply the hormone itself, while sermorelin asks your pituitary to make its own. Both raise GH and IGF-1 levels, but the downstream effects differ.</p>
+
+<div class="g2">
+  <div class="cd cb">
+    <div class="tg">Sermorelin</div>
+    <h3>Works With Your System</h3>
+    <p style="font-size:14px;margin-bottom:0;">Preserves natural GH pulses. Lower side-effect risk at standard doses. Maintains pituitary function. Significantly lower cost than prescription hGH. Requires daily injections.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Direct hGH</div>
+    <h3>Replaces Your System</h3>
+    <p style="font-size:14px;margin-bottom:0;">Creates sustained GH elevation. Higher risk of side effects (joint pain, insulin resistance, edema). Can suppress natural production over time. Expensive. Tightly regulated.</p>
+  </div>
+</div>
+
+<h3>Combination Protocols</h3>
+
+<p>Some providers combine sermorelin with <a href="/articles/ipamorelin-complete-guide">ipamorelin</a> to target both GHRH and ghrelin receptor pathways simultaneously. This approach may produce a stronger GH pulse than either peptide alone. Synergistic combinations aren't right for everyone, so discuss the tradeoffs with your clinician.</p>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>Sermorelin has a favorable safety profile compared to direct GH therapy. Most side effects are mild and temporary, relating to either the injection itself or the GH elevation it produces.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Severity</th><th>Management</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site redness</strong></td><td>Common</td><td class="g">Mild</td><td>Rotate injection sites</td></tr>
+<tr><td><strong>Mild headache</strong></td><td>Common early on</td><td class="g">Mild</td><td>Usually resolves in days</td></tr>
+<tr><td><strong>Transient flushing</strong></td><td>Occasional</td><td class="g">Mild</td><td>Subsides within minutes</td></tr>
+<tr><td><strong>Water retention</strong></td><td>Occasional</td><td class="y">Moderate</td><td>Dose adjustment may help</td></tr>
+<tr><td><strong>Joint discomfort</strong></td><td>Rare</td><td class="y">Moderate</td><td>Reduce dose; consult provider</td></tr>
+<tr><td><strong>Tingling in hands/feet</strong></td><td>Rare</td><td class="y">Moderate</td><td>Dose-dependent; usually resolves</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Contraindications</div>
+  <p>Sermorelin should not be used by anyone with active cancer or a history of cancer where growth factors could promote recurrence. Growth hormone stimulates cell proliferation. Always disclose your full medical history to your provider before starting any GH peptide therapy.</p>
+</div>
+
+<!-- ========== CYCLING ========== -->
+<hr class="sep">
+<h2>Cycling and Long-Term Use</h2>
+
+<p>Most protocols involve <a href="/articles/peptide-cycling-guide">cycling</a> sermorelin rather than continuous use. Cycling helps maintain pituitary sensitivity to the peptide and prevents receptor desensitization.</p>
+
+<table class="tbl">
+<thead><tr><th>Phase</th><th>Duration</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td><strong>Loading / Active</strong></td><td>3&ndash;6 months</td><td class="g">Daily evening injections at prescribed dose</td></tr>
+<tr><td><strong>Break Period</strong></td><td>1&ndash;3 months</td><td class="y">No sermorelin; allows receptor resensitization</td></tr>
+<tr><td><strong>Maintenance</strong></td><td>Ongoing cycles</td><td>Repeat as directed by provider</td></tr>
+</tbody>
+</table>
+
+<p>Some providers recommend blood work at the start of each cycle and at the midpoint. IGF-1 levels are the primary biomarker used to gauge response. If IGF-1 rises appropriately, the pituitary is responding well.</p>
+
+<!-- ========== WHO BENEFITS ========== -->
+<hr class="sep">
+<h2>Who Might Consider Sermorelin</h2>
+
+<p>Sermorelin isn't for everyone. It works best for specific populations where age-related GH decline is contributing to noticeable symptoms.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Age-Related Decline</h4>
+    <p>Adults over 30 experiencing reduced energy, increased body fat, or poor recovery. GH production peaks in your twenties and drops roughly 14% per decade after that.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Active Individuals</h4>
+    <p>Athletes and fitness enthusiasts looking for recovery support. Sermorelin isn't performance-enhancing, but it may help maintain muscle mass during intense training periods.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Wellness-Focused Adults</h4>
+    <p>People working with anti-aging clinicians on broader hormone optimization strategies. Sermorelin fits within a comprehensive approach that includes sleep, nutrition, and exercise.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">Important Reminder</div>
+  <p>Don't self-prescribe sermorelin. A qualified provider should test your IGF-1 levels, review your health history, and determine whether GH support is appropriate for your situation. Medical oversight isn't optional here.</p>
+</div>
+
+<!-- ========== LEGAL ========== -->
+<hr class="sep">
+<h2>Legal and Regulatory Status</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">United States</h4>
+    <p>FDA approved sermorelin as Geref for diagnostic use in 1997. It's now available through compounding pharmacies with a valid prescription. Not currently manufactured as a branded pharmaceutical.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">International</h4>
+    <p>Regulations vary significantly by country. Some allow prescription use; others restrict or prohibit it entirely. Always check local laws before purchasing. Importing peptides across borders carries legal risk.</p>
+  </div>
+</div>
+
+<div class="d">
+  <div class="s">Quality and Sourcing</div>
+  <p>Not all sermorelin products are equal. Reputable compounding pharmacies provide certificates of analysis and third-party purity testing. Ask your provider about their sourcing. For vendor comparisons and purity data, check <a href="https://peptidearc.com">PeptideArc</a>.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How soon will I notice effects from sermorelin?</summary>
+    <div class="fa">Most users report improved sleep quality within 2&ndash;4 weeks. Body composition changes typically take 8&ndash;12 weeks to become noticeable. Full benefits generally develop over 3&ndash;6 months of consistent use. Individual responses vary based on age, baseline GH levels, and lifestyle factors.</div>
+  </details>
+  <details>
+    <summary>Do I need to cycle sermorelin?</summary>
+    <div class="fa">Yes. Most protocols run 3&ndash;6 months on, followed by 1&ndash;3 months off. Cycling preserves pituitary responsiveness and prevents receptor desensitization. Your provider will set the specific schedule based on your blood work and response.</div>
+  </details>
+  <details>
+    <summary>Can women use sermorelin safely?</summary>
+    <div class="fa">Yes. Women can use sermorelin under medical supervision with appropriate dosing. Protocols may differ slightly based on hormonal status, menstrual cycle considerations, or menopausal stage. A knowledgeable provider will account for these factors.</div>
+  </details>
+  <details>
+    <summary>How does sermorelin compare to ipamorelin?</summary>
+    <div class="fa">They work through different receptor pathways. Sermorelin targets the GHRH receptor, while <a href="/articles/ipamorelin-complete-guide">ipamorelin</a> targets the ghrelin (GHS) receptor. Both stimulate GH release but through complementary mechanisms, which is why some protocols combine them. Ipamorelin tends to produce a more selective GH pulse with less impact on cortisol and prolactin.</div>
+  </details>
+  <details>
+    <summary>Does sermorelin require refrigeration?</summary>
+    <div class="fa">Unreconstituted powder should be stored in the refrigerator. After mixing with bacteriostatic water, keep it refrigerated and use within 2&ndash;3 weeks. Never freeze reconstituted sermorelin, as freezing can degrade the peptide and reduce potency.</div>
+  </details>
+  <details>
+    <summary>Is sermorelin safe for long-term use?</summary>
+    <div class="fa">Long-term safety data is limited, as most studies cover relatively short durations. The cycling approach (months on, months off) helps mitigate potential risks from continuous use. Regular blood monitoring through your provider is essential for ongoing safety assurance.</div>
+  </details>
+  <details>
+    <summary>Can I take sermorelin with food?</summary>
+    <div class="fa">You should avoid eating for at least 2 hours before your injection. Food, particularly fats and carbohydrates, can blunt the GH response by raising blood sugar and insulin levels. Most protocols recommend injecting 30&ndash;60 minutes before bed on an empty stomach.</div>
+  </details>
+  <details>
+    <summary>What blood tests should I get before starting?</summary>
+    <div class="fa">At minimum, your provider should check IGF-1 levels, a comprehensive metabolic panel, and fasting glucose/insulin. Some clinicians also test free and total testosterone, thyroid hormones, and a complete blood count. Baseline labs help establish whether GH support is appropriate and provide a reference point for monitoring progress.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Sermorelin is a well-characterized GHRH analog that stimulates your pituitary to produce its own growth hormone. It preserves natural pulsatile release patterns, carries a lower side-effect risk than direct GH therapy, and costs significantly less. For adults experiencing age-related GH decline, it represents a measured approach that works with your biology rather than replacing it.</p>
+</div>
+
+<p>The evidence base for sermorelin is solid but not exhaustive. It was originally FDA-approved as a diagnostic tool, and its off-label use for anti-aging has outpaced the clinical trial data. That said, the mechanism is well-understood and the safety profile is reassuring when used under proper medical supervision.</p>
+
+<p>Lifestyle factors still matter more than any peptide. Sleep, nutrition, exercise, and stress management form the foundation that sermorelin therapy builds upon. No peptide compensates for poor fundamentals.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not replace consultation with a qualified healthcare provider. Sermorelin is a prescription peptide that requires medical supervision. Do not self-prescribe or self-administer without professional guidance. Individual results vary, and not all claims made about sermorelin are supported by large-scale clinical trials.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Walker RF, Codd EE, Baird FC, et al. Stimulation of statural growth by recombinant growth hormone-releasing factor in the aging. <em>J Anti-Aging Med.</em> 1998;1(1):53&ndash;62.<br>
+Van Cauter E, Plat L, Copinschi G. Interrelations between sleep and the somatotropic axis. <em>Sleep.</em> 1998;21(6):553&ndash;566. <a href="https://pubmed.ncbi.nlm.nih.gov/9665394/">PubMed</a><br>
+Vittone J, Blackman MR, Busby-Whitehead J, et al. Effects of single nightly injections of growth hormone-releasing hormone (GHRH 1-29) in healthy elderly men. <em>Metabolism.</em> 1997;46(1):89&ndash;96. <a href="https://pubmed.ncbi.nlm.nih.gov/9005975/">PubMed</a><br>
+Prakash A, Goa KL. Sermorelin: a review of its use in the diagnosis and treatment of children with idiopathic growth hormone deficiency. <em>BioDrugs.</em> 1999;12(2):139&ndash;157. <a href="https://pubmed.ncbi.nlm.nih.gov/18031173/">PubMed</a><br>
+Merriam GR, Schwartz RS, Vitiello MV. Growth hormone-releasing hormone and growth hormone secretagogues in normal aging. <em>Endocrine.</em> 2003;22(1):41&ndash;48. <a href="https://pubmed.ncbi.nlm.nih.gov/14610297/">PubMed</a><br>
+</p>
+
+<!-- ========== RELATED ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/ipamorelin-complete-guide">Ipamorelin: Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cjc-1295-dac-guide">CJC-1295 (DAC) Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-cycling-guide">Peptide Cycling Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-inject-peptides-subcutaneously">How to Inject Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/ipamorelin-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Ipamorelin: Complete Guide</a>
+            <a href="/articles/cjc-1295-dac-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">CJC-1295 (DAC) Guide</a>
+            <a href="/articles/best-peptides-for-muscle-growth" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Muscle Growth</a>
+            <a href="/articles/peptide-cycling-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Cycling Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

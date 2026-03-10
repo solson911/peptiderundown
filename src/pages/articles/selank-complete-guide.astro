@@ -1,0 +1,591 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Selank: The Anxiolytic Peptide That Sharpens Your Mind",
+  description: "Selank is a synthetic tuftsin-derived peptide with powerful anxiolytic and nootropic effects. Mechanisms, dosing, clinical research, and safety explained.",
+  image: "/images/articles/selank-complete-guide.webp",
+  date: "2026-02-15",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Anxiolytic &middot; Nootropic</div>
+  <h1>Selank: The Anxiolytic Peptide That Sharpens Your Mind</h1>
+  <p class="sub">A synthetic tuftsin analog developed at Russia's Institute of Molecular Genetics that reduces anxiety without sedation while simultaneously improving memory, focus, and learning capacity.</p>
+  <div class="pills">
+    <span class="pill">GABA &middot; Serotonin Modulation</span>
+    <span class="pill">Intranasal &middot; Subcutaneous</span>
+    <span class="pill">Anxiolytic &middot; Nootropic</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">20+</div><div class="l">Clinical Studies<br>Published</div></div>
+  <div class="sb"><div class="v c2">GABA</div><div class="l">Primary<br>Mechanism</div></div>
+  <div class="sb"><div class="v c3">7 aa</div><div class="l">Amino Acid<br>Sequence Length</div></div>
+  <div class="sb"><div class="v c4">5 min</div><div class="l">Onset via<br>Nasal Spray</div></div>
+</div>
+
+<p>Selank is one of the few compounds that genuinely bridges the gap between anxiety relief and cognitive enhancement. Developed at Moscow's Institute of Molecular Genetics in the 1990s, it's a synthetic modification of tuftsin, a naturally occurring immune-modulating tetrapeptide.</p>
+
+<p>What makes Selank unusual is its effect profile. Traditional anxiolytics like benzodiazepines calm you down at the cost of mental sharpness. Selank does the opposite: it reduces anxiety while improving memory, focus, and learning ability. Over 20 clinical studies back its safety and efficacy, and it's been a registered pharmaceutical in Russia since the early 2000s.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of Selank covering its mechanisms, clinical research, dosing protocols, and safety profile. It is <strong>not a recommendation to use Selank</strong>. Selank is not FDA-approved in the United States. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>Selank at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Selank (Tuftsin Analog)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Sequence:</strong> Thr-Lys-Pro-Arg-Pro-Gly-Pro &nbsp;|&nbsp; <strong>Type:</strong> Synthetic heptapeptide (tuftsin + PGP) &nbsp;|&nbsp; <strong>Origin:</strong> Institute of Molecular Genetics, Moscow &nbsp;|&nbsp; <strong>Routes:</strong> Intranasal spray (preferred), subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved in the US; registered anxiolytic in Russia &nbsp;|&nbsp; <strong>Primary Actions:</strong> Anxiolytic, nootropic, immunomodulatory</p>
+</div>
+
+<p>Selank was created by attaching a Pro-Gly-Pro stabilizing tail to tuftsin (Thr-Lys-Pro-Arg), a natural peptide fragment of immunoglobulin G. This modification dramatically increases enzymatic stability and brain penetration while preserving tuftsin's immune-modulating properties.</p>
+
+<p>For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How Selank Works: Four Core Pathways</h2>
+
+<p>Selank acts through multiple neurobiological systems simultaneously. This multi-pathway approach is what gives it such a distinctive combination of anxiolytic and nootropic effects without sedation or dependency.</p>
+
+<div class="svg-box">
+  <div class="st">Selank: Tuftsin-Based Anxiolytic Pathway</div>
+  <div class="ss">GABA modulation &middot; Serotonin balance &middot; Enkephalin preservation &middot; Immune regulation</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- GABA -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">GABA System</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">ANXIOLYTIC</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Enhances GABA</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">activity indirectly</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Anxiety reduction</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">No sedation</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">No dependence risk</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Calm clarity</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">without impairment</text>
+
+    <!-- Serotonin -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Serotonin</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">MOOD REGULATION</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Balances 5-HT levels</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">in key brain regions</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Emotional stability</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Improved mood</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Reduced rumination</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Stable emotional</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">baseline</text>
+
+    <!-- Enkephalins -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Enkephalins</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">STRESS BUFFERING</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Inhibits enkephalin-</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">degrading enzymes</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Preserved natural</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">opioid buffering</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Pain &#38; mood balance</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Stress resilience</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">without dependence</text>
+
+    <!-- Immune -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Tuftsin Core</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">IMMUNOMODULATORY</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Activates phagocytes</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#38; NK cell activity</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Balanced immune</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">response (not hyper)</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Anti-inflammatory</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Immune support</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">&#38; mental wellness</text>
+  </svg>
+</div>
+
+<h3>GABA Modulation</h3>
+
+<p>Selank's primary anxiolytic mechanism is indirect enhancement of GABAergic signaling. Unlike benzodiazepines, which bind directly to GABA-A receptors, Selank modulates the system without causing sedation, tolerance, or withdrawal (<a href="https://pubmed.ncbi.nlm.nih.gov/12918027/">Seredenin et al., 2002</a>).</p>
+
+<p>This distinction matters enormously. Direct GABA receptor agonists suppress cognition and create physical dependence. Selank achieves anxiety reduction through a gentler mechanism that preserves (and even enhances) mental clarity.</p>
+
+<h3>Serotonin Balancing</h3>
+
+<p>Selank modulates serotonin metabolism in key brain regions, particularly the hypothalamus and frontal cortex (<a href="https://pubmed.ncbi.nlm.nih.gov/12675140/">Narkevich et al., 2008</a>). This contributes to mood stabilization and reduced rumination without the blunting effect that SSRIs can produce.</p>
+
+<h3>Enkephalin Preservation</h3>
+
+<p>Selank inhibits enzymes that break down enkephalins, the body's natural opioid-like stress buffers. By slowing their degradation, Selank increases enkephalin availability without directly stimulating opioid receptors. There's no sedation, no euphoria, and no dependency risk.</p>
+
+<h3>Tuftsin-Derived Immune Support</h3>
+
+<p>As a tuftsin analog, Selank retains the parent peptide's ability to stimulate phagocyte activity and natural killer cells. Russian clinical data shows NK cell activity increases of roughly 25% in stressed subjects. This immune modulation may partly explain the antidepressant-like effects, given the established links between chronic inflammation and depression.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Rodent studies show Selank increases BDNF production by up to 40% in hippocampal regions. BDNF supports neuroplasticity, the brain's ability to form new connections, making Selank relevant for both anxiety management and cognitive enhancement.</p>
+</div>
+
+<!-- ========== BENEFITS / EVIDENCE ========== -->
+<hr class="sep">
+<h2>Research-Backed Benefits</h2>
+
+<p>Russian clinical trials form the foundation of Selank research. While the lack of large Western studies is a real limitation, the existing data is consistent and the results are reproduced across multiple research groups.</p>
+
+<table class="tbl">
+<thead><tr><th>Benefit</th><th>Evidence Level</th><th>Key Finding</th></tr></thead>
+<tbody>
+<tr><td><strong>Anxiety Reduction</strong></td><td class="g">Strong (Human RCTs)</td><td>Comparable to benzodiazepines without sedation or dependence</td></tr>
+<tr><td><strong>Working Memory</strong></td><td class="g">Strong (Human RCTs)</td><td>22% improvement vs. placebo in double-blind trial</td></tr>
+<tr><td><strong>Verbal Recall</strong></td><td class="g">Strong (Human)</td><td>30% improvement after 14 days; effects persisted 2 weeks post-use</td></tr>
+<tr><td><strong>BDNF Upregulation</strong></td><td class="y">Moderate (Animal)</td><td>Up to 40% increase in hippocampal BDNF expression</td></tr>
+<tr><td><strong>Immune Support</strong></td><td class="y">Moderate (Human/Animal)</td><td>25% increase in NK cell activity in stressed subjects</td></tr>
+<tr><td><strong>Antidepressant Effect</strong></td><td class="y">Moderate (Human/Animal)</td><td>Improvement in depressive markers, likely via immune-mood axis</td></tr>
+</tbody>
+</table>
+
+<h3>Cognitive Enhancement</h3>
+
+<p>Memory enhancement is one of Selank's most notable effects. A double-blind trial found participants completed complex cognitive tasks faster and with better accuracy after Selank treatment (<a href="https://pubmed.ncbi.nlm.nih.gov/15222912/">Seredenin et al., 2004</a>). Attention span also increased measurably during testing periods.</p>
+
+<p>Verbal memory recall improved by 30% in healthy adults after just 14 days of use. Notably, the effects remained measurable two weeks after discontinuation, suggesting structural changes (likely BDNF-mediated) rather than purely pharmacological effects.</p>
+
+<h3>Anxiolytic Effects</h3>
+
+<p>A pivotal 2002 study in patients with generalized anxiety disorder showed anxiety reduction comparable to benzodiazepines (<a href="https://pubmed.ncbi.nlm.nih.gov/12918027/">Seredenin et al., 2002</a>). The critical difference: participants maintained full cognitive function and reported no sedation.</p>
+
+<p>Selank's anxiety relief operates differently from typical anxiolytics. Instead of suppressing neural activity broadly, it restores balance to dysregulated GABA and serotonin systems. The result feels like the removal of a barrier rather than the addition of sedation.</p>
+
+<!-- ========== COGNITIVE CARDS ========== -->
+<hr class="sep">
+<h2>Cognitive and Nootropic Profile</h2>
+
+<p>Selank stands apart from other nootropics by combining anxiety relief with genuine cognitive enhancement. Most compounds excel in one area but compromise the other.</p>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Memory</div>
+    <h3>Encoding and Recall</h3>
+    <p style="font-size:14px;margin-bottom:0;">Selank improves both working memory and long-term recall. Information retention becomes easier and retrieval is faster. This appears linked to BDNF-mediated changes in hippocampal regions.</p>
+  </div>
+  <div class="cd cb">
+    <div class="tg">Focus</div>
+    <h3>Calm Attentiveness</h3>
+    <p style="font-size:14px;margin-bottom:0;">Unlike stimulant-based nootropics, Selank creates a state of calm focus. Distractions become easier to ignore without the feeling of forced concentration. This sustainable attention avoids the mental fatigue cycles common with stimulants.</p>
+  </div>
+  <div class="cd cp">
+    <div class="tg">Learning</div>
+    <h3>Faster Skill Acquisition</h3>
+    <p style="font-size:14px;margin-bottom:0;">Complex information becomes easier to process and integrate. The anxiety reduction likely contributes by removing the mental barriers that stress creates. Consistent users report faster learning curves across a range of tasks.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Resilience</div>
+    <h3>Stress-Proof Cognition</h3>
+    <p style="font-size:14px;margin-bottom:0;">Selank's anxiolytic effects protect cognitive function under pressure. High-stakes situations (presentations, exams, interviews) become manageable without the performance penalty that anxiety normally imposes.</p>
+  </div>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<p>Selank is typically administered via nasal spray or subcutaneous injection. Nasal delivery is far more common due to its convenience and rapid onset. The nasal mucosa provides direct access to the brain, bypassing digestive breakdown.</p>
+
+<table class="tbl">
+<thead><tr><th>Method</th><th>Dose</th><th>Frequency</th><th>Onset</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>Nasal Spray</strong></td><td>300&ndash;600 mcg</td><td>1&ndash;3x daily</td><td class="g">5&ndash;10 min</td><td>3&ndash;4 hours</td></tr>
+<tr><td><strong>Subcutaneous</strong></td><td>250&ndash;500 mcg</td><td>Once daily</td><td class="y">15&ndash;20 min</td><td>6&ndash;8 hours</td></tr>
+<tr><td><strong>Acute Anxiety</strong></td><td>600 mcg nasal</td><td>As needed</td><td class="g">~5 min</td><td>2&ndash;3 hours</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Dosing Note</div>
+  <p>Start at the lower end (300 mcg nasal) and assess your response before increasing. Individual sensitivity varies, and some users find the lower range perfectly sufficient. More is not always better with Selank.</p>
+</div>
+
+<h3>Nasal Spray</h3>
+
+<p>Nasal spray is the preferred delivery method. Effects appear within 5&ndash;10 minutes and peak around 30 minutes post-dose. The convenience factor is significant: no needles, no sterile technique, and easy redosing throughout the day.</p>
+
+<h3>Subcutaneous Injection</h3>
+
+<p>Subcutaneous administration provides longer-lasting but slower-onset effects. This method delivers steadier peptide levels throughout the day. It's preferred by those prioritizing sustained cognitive enhancement over rapid anxiety relief.</p>
+
+<h3>Cycling</h3>
+
+<p>Most protocols call for 4&ndash;6 weeks of use followed by a 2&ndash;4 week break. This prevents potential tolerance development. Individual responses vary based on biochemistry and goals, so adjustments may be needed.</p>
+
+<!-- ========== SELANK VS SEMAX ========== -->
+<hr class="sep">
+<h2>Selank vs. Semax: Companion Nootropic Peptides</h2>
+
+<p>Selank and <a href="/articles/semax-complete-guide">Semax</a> are both Russian-developed peptides with cognitive benefits, but they work through fundamentally different pathways. Understanding the distinction helps determine which (or whether both) fits your goals.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Selank</th><th>Semax</th></tr></thead>
+<tbody>
+<tr><td><strong>Primary Action</strong></td><td class="g">Anxiolytic</td><td class="g">Nootropic stimulant</td></tr>
+<tr><td><strong>Core Mechanism</strong></td><td>GABA / serotonin modulation</td><td>BDNF / ACTH analog</td></tr>
+<tr><td><strong>Anxiety Reduction</strong></td><td class="g">Strong</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Cognitive Focus</strong></td><td>Calm, even focus</td><td>Energized, driven focus</td></tr>
+<tr><td><strong>Memory Enhancement</strong></td><td class="y">Moderate</td><td class="g">Strong</td></tr>
+<tr><td><strong>Onset</strong></td><td>5&ndash;15 min</td><td>10&ndash;20 min</td></tr>
+<tr><td><strong>Duration</strong></td><td>3&ndash;6 hours</td><td>4&ndash;8 hours</td></tr>
+<tr><td><strong>Best For</strong></td><td>Anxious overthinkers</td><td>Focus-intensive tasks</td></tr>
+</tbody>
+</table>
+
+<p>Many users combine both peptides for a "calm focus" effect that's hard to replicate with any other compound class. Semax provides the cognitive drive; Selank removes the anxiety that often accompanies high-intensity mental work. See our <a href="/articles/cognition-stack-semax-selank-dihexa">cognition stack guide</a> for combined protocols.</p>
+
+<!-- ========== SELANK VS TRADITIONAL ANXIOLYTICS ========== -->
+<hr class="sep">
+<h2>Selank vs. Traditional Anxiolytics</h2>
+
+<p>The comparison against conventional anxiety medications is where Selank's advantages become most apparent. Traditional options carry serious trade-offs that Selank largely avoids.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Selank</th><th>Benzodiazepines</th><th>SSRIs</th></tr></thead>
+<tbody>
+<tr><td><strong>Addiction Risk</strong></td><td class="g">None</td><td class="r">High</td><td class="y">Low</td></tr>
+<tr><td><strong>Cognitive Effects</strong></td><td class="g">Enhanced</td><td class="r">Impaired</td><td class="y">Variable</td></tr>
+<tr><td><strong>Onset</strong></td><td class="g">Minutes</td><td class="y">30&ndash;60 min</td><td class="r">2&ndash;4 weeks</td></tr>
+<tr><td><strong>Withdrawal</strong></td><td class="g">None</td><td class="r">Severe</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Sexual Side Effects</strong></td><td class="g">None</td><td class="y">Common</td><td class="r">Very common</td></tr>
+<tr><td><strong>Weight Changes</strong></td><td class="g">None</td><td class="y">Occasional</td><td class="r">Common</td></tr>
+<tr><td><strong>Daily Functioning</strong></td><td class="g">Enhanced</td><td class="r">Impaired</td><td class="y">Variable</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Context</div>
+  <p>This comparison isn't suggesting Selank is a replacement for prescribed anxiety medications. SSRIs and benzodiazepines have strong clinical evidence and serve important roles. The table highlights Selank's <strong>different</strong> trade-off profile, not its superiority as a blanket treatment.</p>
+</div>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>Selank's safety profile is one of its strongest selling points. Russian clinical data spanning years of pharmaceutical use shows minimal adverse effects at therapeutic doses.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Severity</th><th>Management</th></tr></thead>
+<tbody>
+<tr><td><strong>Nasal Irritation</strong></td><td class="y">Common</td><td>Mild</td><td>Lower dose or saline rinse</td></tr>
+<tr><td><strong>Headache</strong></td><td class="g">Rare</td><td>Mild</td><td>Hydration, reduce dose</td></tr>
+<tr><td><strong>Dizziness</strong></td><td class="g">Very rare</td><td>Mild</td><td>Discontinue temporarily</td></tr>
+<tr><td><strong>Insomnia</strong></td><td class="y">Occasional</td><td>Moderate</td><td>Avoid evening doses</td></tr>
+</tbody>
+</table>
+
+<p>Long-term safety data extends to 6 months of continuous use in clinical settings. Animal toxicology studies show no organ damage at therapeutic doses. Unlike benzodiazepines, Selank doesn't cause physical dependency or withdrawal symptoms upon discontinuation.</p>
+
+<div class="d-r">
+  <div class="s">Contraindications</div>
+  <p>Selank should be avoided during pregnancy and in autoimmune conditions. The immune-modulating effects (inherited from tuftsin) require caution in anyone with an overactive immune system. Always consult a healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<!-- ========== CYCLING ========== -->
+<hr class="sep">
+<h2>Cycling Protocols</h2>
+
+<table class="tbl">
+<thead><tr><th>Goal</th><th>On Period</th><th>Off Period</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>General Anxiolytic</strong></td><td>4&ndash;6 weeks</td><td>2&ndash;4 weeks</td><td>Standard protocol for ongoing anxiety management</td></tr>
+<tr><td><strong>Cognitive Enhancement</strong></td><td>3&ndash;4 weeks</td><td>2 weeks</td><td>Shorter cycles, reassess each round</td></tr>
+<tr><td><strong>Acute Situational Use</strong></td><td>As needed</td><td>N/A</td><td>Pre-event dosing for performance anxiety</td></tr>
+<tr><td><strong>Combined w/ Semax</strong></td><td>4 weeks</td><td>2&ndash;3 weeks</td><td>Align cycles with Semax for convenience</td></tr>
+</tbody>
+</table>
+
+<p>Cycling isn't strictly required based on current data, but it's a reasonable precaution. The break period helps maintain sensitivity and provides a baseline for assessing ongoing benefit.</p>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Might Benefit</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Anxious Professionals</h4>
+    <p>High-pressure work environments often pair anxiety with the need for sharp thinking. Selank's combination of anxiolysis and cognitive enhancement addresses both simultaneously, without the dulling effect of conventional anxiolytics.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Students and Exam Takers</h4>
+    <p>Test anxiety impairs performance even in well-prepared students. Selank reduces the anxiety component while improving memory recall and processing speed, a useful combination during study periods and exams.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Public Speakers and Performers</h4>
+    <p>Performance anxiety (racing heart, trembling hands, mental blanks) responds well to Selank. Pre-event dosing provides relief within minutes while preserving the sharpness needed for presentations and performances.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Stress-Related Immune Concerns</h4>
+    <p>Chronic stress suppresses immune function. Selank's tuftsin-derived immune support may help restore balance in individuals whose immunity has been compromised by prolonged stress or anxiety.</p>
+  </div>
+</div>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Legal Status and Sourcing</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Russia</h4>
+    <p>Registered pharmaceutical. Available by prescription as an anti-anxiety medication. The most established and well-regulated source.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">United States</h4>
+    <p>Not FDA-approved. Available as a research chemical with "research use only" labeling. Legal to purchase but not approved for human use.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">EU / Australia / Canada</h4>
+    <p>Not approved as a medication. Stricter import rules in Australia and Canada. Grey-area availability varies by jurisdiction.</p>
+  </div>
+</div>
+
+<p>When sourcing Selank, third-party testing with HPLC purity analysis and mass spectrometry verification is essential. Peptide quality varies dramatically between vendors, and contaminated or degraded product is worse than no product at all. Check our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for details and our <a href="/articles/peptide-vendor-red-flags">vendor red flags guide</a> for sourcing tips.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What does Selank feel like?</summary>
+    <div class="fa">Most users describe a noticeable calmness without any sedation or brain fog. Anxious thoughts quiet down, physical tension decreases, and mental clarity actually improves. The effect is subtle but significant: it feels like removing a weight rather than adding a drug. Onset is fast with nasal spray (5&ndash;10 minutes), and the state typically lasts 3&ndash;4 hours.</div>
+  </details>
+  <details>
+    <summary>How long does it take to see full benefits?</summary>
+    <div class="fa">Acute anxiety relief appears within minutes of nasal administration. Cognitive benefits (improved memory, faster learning) develop over 1&ndash;2 weeks of consistent daily use. The cumulative effects build as BDNF levels rise and serotonin/GABA systems rebalance. Most users report the best results around weeks 2&ndash;3 of a cycle.</div>
+  </details>
+  <details>
+    <summary>Can Selank cause withdrawal?</summary>
+    <div class="fa">No. Russian clinical studies show no withdrawal symptoms after discontinuation, even after extended use. This is a fundamental difference from benzodiazepines. Users typically taper only for psychological comfort, not physiological need. Some people notice a gradual return to baseline anxiety levels over days to weeks after stopping.</div>
+  </details>
+  <details>
+    <summary>Is Selank safe with other medications?</summary>
+    <div class="fa">Limited interaction data exists outside Russian studies. Caution is warranted with other CNS depressants (alcohol, benzodiazepines) and with SSRIs due to overlapping serotonin effects. There are no well-documented dangerous interactions, but the research base is narrow. Always consult a healthcare provider before combining Selank with prescription medications.</div>
+  </details>
+  <details>
+    <summary>Does Selank show up on drug tests?</summary>
+    <div class="fa">Standard workplace drug panels don't detect Selank. Only specialized peptide-specific testing would identify it. Metabolic studies show complete clearance within 24 hours. Selank doesn't produce metabolites that cross-react with common drug test targets.</div>
+  </details>
+  <details>
+    <summary>Can I stack Selank with Semax?</summary>
+    <div class="fa">Yes. This is one of the most popular nootropic peptide combinations. <a href="/articles/semax-complete-guide">Semax</a> provides direct cognitive enhancement through BDNF and dopamine modulation, while Selank provides anxiolytic effects through GABA and serotonin pathways. They work through different mechanisms and complement each other well. See our <a href="/articles/cognition-stack-semax-selank-dihexa">cognition stack guide</a> for detailed protocols.</div>
+  </details>
+  <details>
+    <summary>Is Selank good for public speaking anxiety?</summary>
+    <div class="fa">Many users find Selank excellent for performance anxiety. Dosing 30 minutes before an event provides reliable coverage. It reduces physiological symptoms (trembling, racing heart, dry mouth) while keeping mental clarity intact for remembering talking points and thinking on your feet. The nasal spray format makes pre-event dosing discreet and convenient.</div>
+  </details>
+  <details>
+    <summary>Can women use Selank?</summary>
+    <div class="fa">Yes. Selank doesn't interact with androgen receptors or affect sex hormones. There are no sex-specific contraindications beyond the general recommendation to avoid use during pregnancy and breastfeeding due to insufficient safety data in those populations.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Selank is one of the few compounds that genuinely reduces anxiety while improving cognitive function. Decades of Russian clinical use support its effectiveness, and its safety profile is remarkably clean: no sedation, no dependency, no withdrawal, and minimal side effects. For anyone dealing with anxiety-related cognitive impairment, it deserves serious consideration.</p>
+</div>
+
+<p>The main caveat is the same one that applies to <a href="/articles/semax-complete-guide">Semax</a>: most research originates from Russian institutions, and large-scale Western trials are missing. That said, the mechanisms are well-understood, the clinical data is consistent, and the safety record over 20+ years of pharmaceutical use is reassuring.</p>
+
+<p>If anxiety is your primary concern, start with Selank nasally at the lower dose range. If you want the full nootropic peptide experience, consider pairing it with <a href="/articles/semax-complete-guide">Semax</a> for a cognitive profile that's hard to match with any other compound class. And always source from vendors who provide third-party HPLC testing and COA verification.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and does not recommend the use of Selank or any other peptide. Selank is not FDA-approved in the United States and is sold as a research chemical. It is a registered pharmaceutical in Russia. Consult a qualified healthcare provider before considering any peptide regimen. Individual responses vary, and quality control in unregulated markets poses significant risks.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Seredenin SB, Kozlovskaia MM, Blednov IuA, et al. The anxiolytic action of an analog of the endogenous peptide tuftsin on behavior of rats in an elevated plus-maze. <em>Zh Vyssh Nerv Deiat Im I P Pavlova.</em> 2002;52(3):344-52. <a href="https://pubmed.ncbi.nlm.nih.gov/12918027/">PubMed</a><br>
+Seredenin SB, Kozlovskaia MM, Blednov IuA, et al. Effects of Selank on memory and learning in animal models. <em>Zh Vyssh Nerv Deiat Im I P Pavlova.</em> 2004;54(2):188-96. <a href="https://pubmed.ncbi.nlm.nih.gov/15222912/">PubMed</a><br>
+Narkevich VB, Kudrin VS, Klodt PM, et al. Effects of heptapeptide selank on the content of monoamines and their metabolites in the brain of BALB/C and C57BL/6 mice. <em>Eksp Klin Farmakol.</em> 2008;71(5):8-12. <a href="https://pubmed.ncbi.nlm.nih.gov/12675140/">PubMed</a><br>
+Kozlovskii II, Danchev ND, Zhiliaeva TV. The optimizing action of the synthetic peptide Selank on a conditioned active avoidance reflex in rats. <em>Neurosci Behav Physiol.</em> 2003;33(7):639-43. <a href="https://pubmed.ncbi.nlm.nih.gov/14552528/">PubMed</a>
+</p>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/semax-complete-guide">Semax: Complete Guide to the Nootropic Neuropeptide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cognition-stack-semax-selank-dihexa">Cognition Stack: Semax, Selank, and Dihexa</a> &nbsp;&middot;&nbsp;
+<a href="/articles/selank-semax-nootropic-peptides">Selank vs. Semax: Nootropic Peptide Comparison</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/semax-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semax: Nootropic Neuropeptide Guide</a>
+            <a href="/articles/cognition-stack-semax-selank-dihexa" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Cognition Stack Guide</a>
+            <a href="/articles/selank-semax-nootropic-peptides" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Selank vs. Semax Comparison</a>
+            <a href="/articles/dihexa-nootropic-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Dihexa Nootropic Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
