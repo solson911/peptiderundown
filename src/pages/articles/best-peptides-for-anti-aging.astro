@@ -1,0 +1,628 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Best Peptides for Anti-Aging: A Complete Guide",
+  description: "The top peptides for anti-aging, including Epithalon, GHK-Cu, BPC-157, SS-31, and Thymosin Alpha-1. Mechanisms, protocols, stacking strategies, and biomarker monitoring explained.",
+  image: "/images/articles/best-peptides-for-anti-aging.webp",
+  date: "2026-02-16",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#1A0A28 0%,#1E1240 40%,#2A1A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Anti-Aging &middot; Longevity</div>
+  <h1>Best Peptides for Anti-Aging: A Complete Guide</h1>
+  <p class="sub">A roundup of the most studied anti-aging peptides, how they target the core mechanisms of biological aging, and how practitioners combine them into structured longevity protocols.</p>
+  <div class="pills">
+    <span class="pill">Epithalon &middot; Telomeres</span>
+    <span class="pill">GHK-Cu &middot; Tissue Repair</span>
+    <span class="pill">BPC-157 &middot; Systemic Healing</span>
+    <span class="pill">GH Secretagogues</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">7</div><div class="l">Key Peptides<br>Covered</div></div>
+  <div class="sb"><div class="v c2">24%</div><div class="l">Lifespan Extension<br>in Epithalon Studies</div></div>
+  <div class="sb"><div class="v c3">40%</div><div class="l">Collagen Increase<br>With GHK-Cu</div></div>
+  <div class="sb"><div class="v c4">5&ndash;7yr</div><div class="l">Epigenetic Age<br>Reduction Target</div></div>
+</div>
+
+<p>Aging may be inevitable, but the rate at which it progresses is increasingly within our control. Peptides (short chains of amino acids) are emerging as targeted therapeutic agents that address the fundamental biological machinery of aging at the cellular level.</p>
+
+<p>These molecular messengers offer promising approaches to skin rejuvenation, tissue repair, mitochondrial optimization, and immune restoration. This guide covers the most researched anti-aging peptides, how they work, and how practitioners stack them.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational roundup of the top anti-aging peptides, covering their mechanisms, dosing, clinical evidence, and stacking strategies. It is <strong>not a recommendation to use any of these compounds</strong>. None are FDA-approved for anti-aging. Consult a qualified healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<!-- ========== BIOLOGY OF AGING ========== -->
+<hr class="sep">
+<h2>The Core Biology of Aging</h2>
+
+<p>Aging doesn't happen through a single pathway. It's driven by several interconnected biological processes that collectively erode cellular function over decades.</p>
+
+<p>Each anti-aging peptide in this guide targets one or more of these pathways with precision.</p>
+
+<div class="svg-box">
+  <div class="st">Seven Hallmarks of Aging Targeted by Peptides</div>
+  <div class="ss">Each peptide addresses specific mechanisms of cellular decline</div>
+  <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Telomere Shortening -->
+    <rect x="10" y="10" width="90" height="120" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.2"/>
+    <text x="55" y="38" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#2956A6">TELOMERE</text>
+    <text x="55" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#2956A6">SHORTENING</text>
+    <text x="55" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#1E3362">Chromosome</text>
+    <text x="55" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#1E3362">caps erode</text>
+    <text x="55" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#2956A6" font-weight="600">EPITHALON</text>
+
+    <!-- Mitochondrial Dysfunction -->
+    <rect x="110" y="10" width="90" height="120" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.2"/>
+    <text x="155" y="38" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#187A62">MITOCHONDRIAL</text>
+    <text x="155" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#187A62">DYSFUNCTION</text>
+    <text x="155" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#14503E">Energy output</text>
+    <text x="155" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#14503E">declines</text>
+    <text x="155" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#187A62" font-weight="600">SS-31 / NAD+</text>
+
+    <!-- Cellular Senescence -->
+    <rect x="210" y="10" width="90" height="120" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.2"/>
+    <text x="255" y="38" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#6E3B8A">CELLULAR</text>
+    <text x="255" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#6E3B8A">SENESCENCE</text>
+    <text x="255" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#3E2050">Zombie cells</text>
+    <text x="255" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#3E2050">accumulate</text>
+    <text x="255" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#6E3B8A" font-weight="600">GHK-Cu</text>
+
+    <!-- Inflammaging -->
+    <rect x="310" y="10" width="90" height="120" rx="10" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.2"/>
+    <text x="355" y="38" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#B53A3A">CHRONIC</text>
+    <text x="355" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#B53A3A">INFLAMMATION</text>
+    <text x="355" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5A2020">Low-grade</text>
+    <text x="355" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5A2020">inflammaging</text>
+    <text x="355" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#B53A3A" font-weight="600">THYMOSIN A1</text>
+
+    <!-- Protein Homeostasis -->
+    <rect x="410" y="10" width="90" height="120" rx="10" fill="#FFF7E5" stroke="#B48118" stroke-width="1.2"/>
+    <text x="455" y="38" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#B48118">PROTEIN</text>
+    <text x="455" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#B48118">HOMEOSTASIS</text>
+    <text x="455" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5A4010">Damaged proteins</text>
+    <text x="455" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5A4010">build up</text>
+    <text x="455" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#B48118" font-weight="600">BPC-157</text>
+
+    <!-- Stem Cell Exhaustion -->
+    <rect x="510" y="10" width="90" height="120" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.2"/>
+    <text x="555" y="38" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#2956A6">STEM CELL</text>
+    <text x="555" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#2956A6">EXHAUSTION</text>
+    <text x="555" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#1E3362">Regeneration</text>
+    <text x="555" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#1E3362">slows down</text>
+    <text x="555" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#2956A6" font-weight="600">CJC-1295 / IPA</text>
+
+    <!-- Epigenetic Drift -->
+    <rect x="610" y="10" width="90" height="120" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.2"/>
+    <text x="655" y="38" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#187A62">EPIGENETIC</text>
+    <text x="655" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="700" fill="#187A62">DRIFT</text>
+    <text x="655" y="75" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#14503E">Gene expression</text>
+    <text x="655" y="87" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#14503E">shifts with age</text>
+    <text x="655" y="112" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#187A62" font-weight="600">GHK-Cu / NAD+</text>
+
+    <!-- Bottom: convergence arrow -->
+    <line x1="350" y1="145" x2="350" y2="170" stroke="#86869A" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <polygon points="345,170 355,170 350,180" fill="#86869A"/>
+    <rect x="200" y="185" width="300" height="50" rx="10" fill="#18182A"/>
+    <text x="350" y="207" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#fff" font-weight="600">PEPTIDE-BASED LONGEVITY PROTOCOL</text>
+    <text x="350" y="223" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="rgba(255,255,255,.5)">Multi-target approach for maximum anti-aging coverage</text>
+
+    <!-- Side arrows from each box -->
+    <line x1="55" y1="130" x2="55" y2="175" stroke="#2956A6" stroke-width="0.8" stroke-opacity=".3"/>
+    <line x1="155" y1="130" x2="155" y2="175" stroke="#187A62" stroke-width="0.8" stroke-opacity=".3"/>
+    <line x1="255" y1="130" x2="255" y2="175" stroke="#6E3B8A" stroke-width="0.8" stroke-opacity=".3"/>
+    <line x1="355" y1="130" x2="355" y2="175" stroke="#B53A3A" stroke-width="0.8" stroke-opacity=".3"/>
+    <line x1="455" y1="130" x2="455" y2="175" stroke="#B48118" stroke-width="0.8" stroke-opacity=".3"/>
+    <line x1="555" y1="130" x2="555" y2="175" stroke="#2956A6" stroke-width="0.8" stroke-opacity=".3"/>
+    <line x1="655" y1="130" x2="655" y2="175" stroke="#187A62" stroke-width="0.8" stroke-opacity=".3"/>
+  </svg>
+</div>
+
+<p>Telomere shortening caps each chromosome's lifespan, while mitochondrial dysfunction reduces the energy available for every cellular process. Senescent "zombie cells" stop dividing and instead pump out inflammatory signals that damage their neighbors.</p>
+
+<p>Chronic low-grade inflammation (often called "inflammaging") accelerates all of these processes. The peptides below target these pathways with specificity that traditional supplements simply can't match.</p>
+
+<!-- ========== PEPTIDE #1: EPITHALON ========== -->
+<hr class="sep">
+<h2>The Top Anti-Aging Peptides</h2>
+
+<h3>1. Epithalon: The Telomere Restoration Specialist</h3>
+
+<div class="cd cp">
+  <div class="tg">Telomere Protection</div>
+  <h3>Epithalon (Epitalon)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic tetrapeptide (Ala-Glu-Asp-Gly) &nbsp;|&nbsp; <strong>Primary Action:</strong> Telomerase activation via pineal gland &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>Protocol:</strong> 5&ndash;10mg daily for 10 days, repeated quarterly &nbsp;|&nbsp; <strong>Timeline:</strong> 6&ndash;12 months for measurable telomere changes</p>
+</div>
+
+<p>Epithalon sits at the top of most anti-aging peptide lists for a straightforward reason: it activates telomerase, the enzyme that rebuilds the protective caps at the ends of your chromosomes. When telomeres get too short, cells stop dividing. Epithalon helps keep them intact.</p>
+
+<p>Russian longevity studies showed a 24% lifespan extension in mice and significant improvement in biomarkers among elderly human subjects (<a href="https://pubmed.ncbi.nlm.nih.gov/12937682/">Khavinson et al., 2003</a>). A 2024 human trial in subjects aged 50&ndash;65 reported a 10.7% increase in telomere length after just 6 months of treatment.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Epithalon's effects are cumulative. Telomere changes typically become detectable within 3&ndash;6 months, with clinical effects emerging between 6&ndash;12 months of cyclical use.</p>
+</div>
+
+<p>The standard protocol is 5&ndash;10mg daily via subcutaneous injection for 10 consecutive days, repeated every 3 months. Safety profile is excellent, though caution is advised for individuals with autoimmune conditions.</p>
+
+<p>For detailed dosing instructions, see our <a href="/articles/epithalon-anti-aging-guide">Epithalon Guide</a>.</p>
+
+<!-- ========== PEPTIDE #2: GHK-Cu ========== -->
+<h3>2. GHK-Cu: The Tissue Regeneration Catalyst</h3>
+
+<div class="cd cb">
+  <div class="tg">Gene Expression Reset</div>
+  <h3>GHK-Cu (Copper Peptide)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Copper-binding tripeptide &nbsp;|&nbsp; <strong>Primary Action:</strong> Resets gene expression to youthful patterns &nbsp;|&nbsp; <strong>Routes:</strong> Topical (0.1&ndash;1%), subcutaneous (2&ndash;5mg 2x/week) &nbsp;|&nbsp; <strong>Timeline:</strong> 2&ndash;4 weeks injectable, 4&ndash;8 weeks topical</p>
+</div>
+
+<p>GHK-Cu is one of the few peptides with strong evidence for actual age-reversal at the gene expression level. It's a naturally occurring tripeptide that binds copper and influences over 4,000 human genes, resetting many of them to patterns seen in younger tissue (<a href="https://pubmed.ncbi.nlm.nih.gov/24508076/">Pickart et al., 2014</a>).</p>
+
+<p>Clinical research shows up to 40% increases in collagen density with injectable protocols. Topical formulations at 0.1&ndash;1% concentration also produce measurable skin improvements, though results take longer to appear.</p>
+
+<p>GHK-Cu maintains an excellent safety profile with only occasional mild irritation from topical use. Practitioners monitor skin elasticity (via cutometer), collagen density (ultrasound), and matrix metalloproteinase levels to track progress.</p>
+
+<p>Explore applications in our <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Deep Dive</a>.</p>
+
+<!-- ========== PEPTIDE #3: BPC-157 ========== -->
+<h3>3. BPC-157: The Systemic Healer</h3>
+
+<div class="cd ct">
+  <div class="tg">Tissue Repair</div>
+  <h3>BPC-157 (Body Protection Compound)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> 15-amino-acid gastric peptide &nbsp;|&nbsp; <strong>Primary Action:</strong> Angiogenesis and growth factor stimulation &nbsp;|&nbsp; <strong>Routes:</strong> Oral, subcutaneous (250&ndash;500mcg daily) &nbsp;|&nbsp; <strong>Timeline:</strong> Days for acute effects, 4&ndash;8 weeks systemic &nbsp;|&nbsp; <strong>Cost:</strong> $50&ndash;100/month</p>
+</div>
+
+<p><a href="/articles/bpc-157-complete-guide">Body Protection Compound-157</a> accelerates tissue healing throughout the body by stimulating new blood vessel formation and growth factor production. Animal models show it accelerates tendon-to-bone healing by 200% (<a href="https://pubmed.ncbi.nlm.nih.gov/21030672/">Chang et al., 2011</a>).</p>
+
+<p>Users often report acute benefits within days, while systemic effects typically develop over 4&ndash;8 weeks. BPC-157 has no known toxicity at therapeutic doses, making it one of the most accessible anti-aging peptides available.</p>
+
+<p>At $50&ndash;100 per month, BPC-157 offers possibly the highest return on investment in the anti-aging peptide space, given its broad systemic benefits across gut health, connective tissue, and inflammation reduction.</p>
+
+<p>Implementation details in our <a href="/articles/bpc-157-complete-guide">BPC-157 Usage Guide</a>.</p>
+
+<!-- ========== PEPTIDE #4: THYMOSIN ALPHA-1 ========== -->
+<h3>4. Thymosin Alpha-1: The Immune Rejuvenator</h3>
+
+<div class="cd cr">
+  <div class="tg">Immune Restoration</div>
+  <h3>Thymosin Alpha-1 (Ta1)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> 28-amino-acid thymic peptide &nbsp;|&nbsp; <strong>Primary Action:</strong> T-cell differentiation and maturation &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous (1.5&ndash;2mg, 1&ndash;2x/week) &nbsp;|&nbsp; <strong>Timeline:</strong> 4 weeks for immune markers, 12 weeks for clinical protection</p>
+</div>
+
+<p><a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1</a> specifically addresses age-related immune decline, known as immunosenescence. As the thymus gland shrinks with age, T-cell production drops and immune surveillance weakens. Ta1 compensates by stimulating the maturation and activity of existing T-cells.</p>
+
+<p>Clinical studies show a 67% reduction in infection rates among elderly subjects receiving Ta1 therapy. The standard protocol involves 1.5&ndash;2mg doses once or twice weekly for 4&ndash;8 weeks.</p>
+
+<div class="d-a">
+  <div class="s">Important Note</div>
+  <p>Thymosin Alpha-1 should be used with caution during active infections and is generally avoided in individuals with autoimmune conditions. Practitioners monitor CD4+/CD8+ ratio, T-cell proliferation assays, and cytokine profiles to assess effectiveness.</p>
+</div>
+
+<!-- ========== PEPTIDE #5: GH SECRETAGOGUES ========== -->
+<h3>5. CJC-1295 + Ipamorelin: The Metabolic Optimizers</h3>
+
+<div class="cd ca">
+  <div class="tg">Growth Hormone</div>
+  <h3>CJC-1295 / Ipamorelin Stack</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> GHRH analog + GH secretagogue &nbsp;|&nbsp; <strong>Primary Action:</strong> Pulsatile GH release without pituitary desensitization &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous (100&ndash;200mcg each, 5 days on / 2 off) &nbsp;|&nbsp; <strong>Timeline:</strong> Sleep improvements in days, body composition 4&ndash;12 weeks</p>
+</div>
+
+<p>The combination of <a href="/articles/cjc-1295-dac-guide">CJC-1295</a> and <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> represents a sophisticated approach to restoring youthful growth hormone patterns. These two peptides work synergistically: CJC-1295 extends the duration of GH pulses while Ipamorelin triggers them without spiking cortisol or prolactin.</p>
+
+<p>Research demonstrates impressive results in elderly subjects, with participants gaining 3.5kg of lean mass in just 12 weeks. Sleep quality often improves within the first few nights of use, while body composition changes take 4&ndash;12 weeks to become visible.</p>
+
+<p>Potential side effects include mild water retention. Glucose monitoring is advisable, particularly in individuals with insulin sensitivity concerns.</p>
+
+<!-- ========== PEPTIDE #6: NAD+ ========== -->
+<h3>6. NAD+ Precursors: The Cellular Energy Restorers</h3>
+
+<div class="cd cb">
+  <div class="tg">Sirtuin Activation</div>
+  <h3>NAD+ (Nicotinamide Adenine Dinucleotide)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Coenzyme / precursor peptides &nbsp;|&nbsp; <strong>Primary Action:</strong> Sirtuin activation, DNA repair, mitochondrial function &nbsp;|&nbsp; <strong>Routes:</strong> Oral (500mg sublingual), IV infusion &nbsp;|&nbsp; <strong>Timeline:</strong> 2&ndash;8 weeks &nbsp;|&nbsp; <strong>Cost:</strong> $100&ndash;200/month</p>
+</div>
+
+<p>NAD+ levels decline by roughly 50% between the ages of 40 and 60 (<a href="https://pubmed.ncbi.nlm.nih.gov/26785480/">Imai &amp; Guarente, 2014</a>). This coenzyme is essential for sirtuin activation (the longevity genes), DNA repair, and mitochondrial energy production.</p>
+
+<p>Supplementation with NAD+ precursors like NMN and NR has shown measurable increases in intracellular NAD+ levels. Users typically report improved energy, mental clarity, and exercise recovery within the first 2&ndash;4 weeks.</p>
+
+<!-- ========== COMPARISON TABLE ========== -->
+<hr class="sep">
+<h2>Comparative Analysis</h2>
+
+<p>This table provides a side-by-side comparison of the key anti-aging peptides covered in this guide.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Primary Mechanism</th><th>Key Benefits</th><th>Timeline</th><th>Cost/Mo</th><th>Safety</th></tr></thead>
+<tbody>
+<tr><td><strong>Epithalon</strong></td><td>Telomerase activation</td><td>Cellular longevity, DNA protection</td><td>6&ndash;12 mo</td><td>$200&ndash;400</td><td class="g">4/5</td></tr>
+<tr><td><strong>GHK-Cu</strong></td><td>Gene expression reset</td><td>Skin rejuvenation, tissue repair</td><td>1&ndash;3 mo</td><td>$50&ndash;300</td><td class="g">5/5</td></tr>
+<tr><td><strong>BPC-157</strong></td><td>Angiogenesis</td><td>Systemic healing, gut repair</td><td>2&ndash;8 wk</td><td>$50&ndash;100</td><td class="g">5/5</td></tr>
+<tr><td><strong>Thymosin A1</strong></td><td>Immune modulation</td><td>Infection resistance</td><td>4&ndash;12 wk</td><td>$150&ndash;250</td><td class="y">3/5</td></tr>
+<tr><td><strong>CJC-1295</strong></td><td>GH secretion</td><td>Body composition, sleep</td><td>4&ndash;12 wk</td><td>$100&ndash;200</td><td class="g">4/5</td></tr>
+<tr><td><strong>Ipamorelin</strong></td><td>GH secretion</td><td>Metabolic health, cognition</td><td>4&ndash;12 wk</td><td>$100&ndash;150</td><td class="g">4/5</td></tr>
+<tr><td><strong>NAD+</strong></td><td>Sirtuin activation</td><td>Energy, DNA repair</td><td>2&ndash;8 wk</td><td>$100&ndash;200</td><td class="g">4/5</td></tr>
+</tbody>
+</table>
+
+<!-- ========== STACKING PROTOCOLS ========== -->
+<hr class="sep">
+<h2>Stacking Protocols</h2>
+
+<p>Most practitioners don't use a single peptide for anti-aging. Instead, they combine complementary compounds that target different aging pathways simultaneously.</p>
+
+<h3>Foundational Anti-Aging Program (3&ndash;6 months)</h3>
+
+<p>This entry-level protocol combines multiple peptides for synergistic effects without overwhelming complexity.</p>
+
+<table class="tbl">
+<thead><tr><th>Timing</th><th>Compound</th><th>Dose</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td><strong>Morning</strong></td><td>NAD+ precursor (sublingual)</td><td>500mg</td><td>Daily</td></tr>
+<tr><td><strong>Evening</strong></td><td>Ipamorelin + CJC-1295</td><td>200mcg each</td><td>5 days on / 2 off</td></tr>
+<tr><td><strong>Twice weekly</strong></td><td>GHK-Cu (subcutaneous)</td><td>3mg</td><td>2x per week</td></tr>
+<tr><td><strong>Quarterly</strong></td><td>Epithalon cycle</td><td>5mg/day x 10 days</td><td>Every 3 months</td></tr>
+</tbody>
+</table>
+
+<p>This combination delivers noticeable improvements in skin quality, energy levels, and sleep within the first treatment cycle.</p>
+
+<h3>Advanced Rejuvenation Protocol (6+ months)</h3>
+
+<p>For more significant results, this protocol adds additional therapeutic layers.</p>
+
+<table class="tbl">
+<thead><tr><th>Timing</th><th>Compound</th><th>Dose</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td><strong>Morning</strong></td><td>NAD+ precursor + oral BPC-157</td><td>500mg / 500mcg</td><td>Daily</td></tr>
+<tr><td><strong>Midday</strong></td><td>Thymosin Alpha-1</td><td>1.5mg</td><td>2x per week</td></tr>
+<tr><td><strong>Evening</strong></td><td>Ipamorelin + CJC-1295</td><td>200mcg each</td><td>5 on / 2 off</td></tr>
+<tr><td><strong>Daily</strong></td><td>Topical GHK-Cu serum</td><td>0.5&ndash;1%</td><td>Daily</td></tr>
+<tr><td><strong>Quarterly</strong></td><td>Epithalon cycle</td><td>5mg/day x 10 days</td><td>Every 3 months</td></tr>
+</tbody>
+</table>
+
+<p>The advanced program includes bi-annual biomarker testing to monitor progress and adjust dosing accordingly.</p>
+
+<h3>Cost Breakdown by Tier</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Basic Stack</h4>
+    <p><strong>$120&ndash;180/month</strong><br>NAD+ precursors + single peptide. Moderate benefits for budget-conscious users.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Full Stack</h4>
+    <p><strong>$200&ndash;300/month</strong><br>GH secretagogues + GHK-Cu + quarterly Epithalon. Enhanced results across multiple pathways.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Comprehensive</h4>
+    <p><strong>$300&ndash;400/month</strong><br>All peptides + NAD+ + biomarker monitoring. Optimal anti-aging coverage.</p>
+  </div>
+</div>
+
+<!-- ========== BIOMARKER MONITORING ========== -->
+<hr class="sep">
+<h2>Biomarker Monitoring</h2>
+
+<p>You can't manage what you don't measure. Regular biomarker testing is essential for tracking the effectiveness of any anti-aging protocol and making data-driven adjustments.</p>
+
+<table class="tbl">
+<thead><tr><th>Biomarker</th><th>Purpose</th><th>Frequency</th><th>Target Range</th></tr></thead>
+<tbody>
+<tr><td><strong>Telomere Length</strong></td><td>Cellular aging</td><td>Annual</td><td class="g">&gt;8kb</td></tr>
+<tr><td><strong>hs-CRP</strong></td><td>Inflammation</td><td>Quarterly</td><td class="g">&lt;0.5 mg/L</td></tr>
+<tr><td><strong>IGF-1</strong></td><td>Growth hormone activity</td><td>Quarterly</td><td class="y">100&ndash;200 ng/mL</td></tr>
+<tr><td><strong>Homocysteine</strong></td><td>Methylation status</td><td>Quarterly</td><td class="g">&lt;7 &mu;mol/L</td></tr>
+<tr><td><strong>Vitamin D</strong></td><td>Immune function</td><td>Quarterly</td><td class="g">50&ndash;80 ng/mL</td></tr>
+<tr><td><strong>NAD+ Levels</strong></td><td>Cellular energy</td><td>Bi-annual</td><td class="y">&gt;40 &mu;mol/L</td></tr>
+<tr><td><strong>Epigenetic Clocks</strong></td><td>Biological age</td><td>Annual</td><td class="g">&Delta;Age &lt;0</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Tracking Tip</div>
+  <p>Get baseline bloodwork before starting any peptide protocol. Without a starting point, you can't objectively assess whether the protocol is working. Most longevity clinics offer panel packages that include all of the markers above.</p>
+</div>
+
+<!-- ========== PRACTICAL CONSIDERATIONS ========== -->
+<hr class="sep">
+<h2>Practical Considerations</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Ideal Starting Age</h4>
+    <p>Optimal preventive application begins between 35&ndash;40 years, when NAD+ levels and telomerase activity experience significant declines. That said, peptides offer benefits at any age.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Lifestyle Integration</h4>
+    <p>Peptides work best when combined with caloric restriction practices, regular resistance training, sleep optimization, and a phytonutrient-rich diet.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Cycling Strategy</h4>
+    <p>Cyclical protocols (4&ndash;6 months on, 1&ndash;2 off) with quarterly biomarker monitoring help maintain physiological balance and maximize long-term benefits.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Non-Injectable Options</h4>
+    <p>Effective alternatives include transdermal GHK-Cu, oral NAD+ precursors, intranasal BPC-157, and sublingual Thymosin Alpha-1 preparations with varying bioavailability.</p>
+  </div>
+</div>
+
+<h3>Realistic First-Year Expectations</h3>
+
+<p>Comprehensive programs typically yield measurable results across several dimensions within the first 12 months.</p>
+
+<div class="sr">
+  <div class="sb"><div class="v c1">5&ndash;7yr</div><div class="l">Epigenetic Age<br>Reduction</div></div>
+  <div class="sb"><div class="v c2">15&ndash;25%</div><div class="l">Skin Quality<br>Improvement</div></div>
+  <div class="sb"><div class="v c3">10&ndash;20%</div><div class="l">Metabolic<br>Efficiency Gain</div></div>
+  <div class="sb"><div class="v c4">3&ndash;5yr</div><div class="l">Telomere<br>Extension</div></div>
+</div>
+
+<p>These outcomes represent the current therapeutic potential when peptides, lifestyle optimization, and biomarker tracking are combined consistently.</p>
+
+<!-- ========== COST-BENEFIT ========== -->
+<hr class="sep">
+<h2>Cost-Benefit Analysis</h2>
+
+<p>Not everyone needs the most expensive protocol. Here's how different investment levels compare in terms of expected outcomes.</p>
+
+<table class="tbl">
+<thead><tr><th>Approach</th><th>Annual Cost</th><th>Benefit Rating</th><th>Time Investment</th></tr></thead>
+<tbody>
+<tr><td><strong>Basic Topicals</strong></td><td>$300&ndash;500</td><td class="y">2/5</td><td>Low</td></tr>
+<tr><td><strong>Oral NAD+ Only</strong></td><td>$800&ndash;1,200</td><td class="y">3/5</td><td>Low</td></tr>
+<tr><td><strong>Injectable Peptides</strong></td><td>$2,000&ndash;4,000</td><td class="g">4/5</td><td>Medium</td></tr>
+<tr><td><strong>Comprehensive Program</strong></td><td>$5,000&ndash;8,000</td><td class="g">5/5</td><td>High</td></tr>
+</tbody>
+</table>
+
+<p style="font-size:13px;color:var(--mut);">Benefit rating considers epigenetic age reduction, functional improvements, and biomarker optimization.</p>
+
+<!-- ========== FUTURE ========== -->
+<hr class="sep">
+<h2>Emerging Developments</h2>
+
+<p>The field of peptide-based anti-aging is moving fast. Several developments are worth watching.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Synergistic Combinations</h4>
+    <p>GHK-Cu combined with Epithalon is showing synergistic effects on both tissue repair and telomere maintenance in early research.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Advanced Delivery</h4>
+    <p>Nanoparticle-enhanced transdermal systems are improving peptide bioavailability, potentially making injectable protocols unnecessary.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Personalized Protocols</h4>
+    <p>Genetic-based protocol development is allowing practitioners to match peptides to individual aging profiles for targeted intervention.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Next-Gen Mitochondrial Peptides</h4>
+    <p><a href="/articles/mots-c-mitochondrial-peptide">MOTS-c</a> and Humanin are next-generation mitochondrial-derived peptides showing promise for metabolic aging.</p>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>What age should I start using anti-aging peptides?</summary>
+    <div class="fa">Most practitioners recommend beginning between ages 35&ndash;40, when measurable declines in NAD+ levels, telomerase activity, and growth hormone output start to accelerate. That said, some peptides like BPC-157 offer benefits at any age for tissue repair and gut health.</div>
+  </details>
+  <details>
+    <summary>Can I use multiple anti-aging peptides simultaneously?</summary>
+    <div class="fa">Yes. In fact, stacking is standard practice because each peptide targets a different aging pathway. The foundational protocol in this guide combines NAD+, GH secretagogues, GHK-Cu, and quarterly Epithalon cycles. Start with one or two peptides and add others gradually to assess tolerance.</div>
+  </details>
+  <details>
+    <summary>How long before I notice results?</summary>
+    <div class="fa">Timelines vary by peptide. GH secretagogues often improve sleep within days. BPC-157 can produce noticeable healing effects within 1&ndash;2 weeks. GHK-Cu skin changes appear in 4&ndash;8 weeks. Epithalon's telomere effects require 6&ndash;12 months of cyclical use to become measurable.</div>
+  </details>
+  <details>
+    <summary>Are anti-aging peptides FDA-approved?</summary>
+    <div class="fa">None of the peptides in this guide are FDA-approved specifically for anti-aging. Some, like Thymosin Alpha-1 (sold as Zadaxin), are approved in other countries for specific indications. In the US, these compounds are available through compounding pharmacies or as research chemicals.</div>
+  </details>
+  <details>
+    <summary>What's the minimum effective investment for an anti-aging protocol?</summary>
+    <div class="fa">A basic stack of oral NAD+ precursors plus BPC-157 runs about $120&ndash;180 per month and addresses cellular energy, DNA repair, and systemic healing. Adding injectable GH secretagogues brings the total to $200&ndash;300 per month with significantly enhanced results.</div>
+  </details>
+  <details>
+    <summary>Do I need bloodwork before starting?</summary>
+    <div class="fa">Absolutely. Baseline bloodwork is essential for tracking progress and adjusting protocols. At minimum, get IGF-1, hs-CRP, vitamin D, and a comprehensive metabolic panel. Telomere length testing and epigenetic clock analysis provide additional data points for tracking biological age over time.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Anti-aging peptides offer targeted approaches to the fundamental mechanisms of biological aging. Epithalon addresses telomeric aging, GHK-Cu rejuvenates tissues at the gene expression level, BPC-157 promotes systemic healing, Thymosin Alpha-1 restores immune function, and GH secretagogues optimize metabolic vitality. Combined into structured protocols with regular biomarker monitoring, they represent the most precise tools currently available for slowing biological aging.</p>
+</div>
+
+<p>The strongest outcomes come from combining multiple peptides that address different aging pathways, paired with lifestyle optimization and professional medical supervision. No single peptide is a magic bullet, but a well-designed protocol can meaningfully shift the trajectory of aging.</p>
+
+<p>As research continues to validate their mechanisms and refine applications, peptides will play an increasingly central role in longevity medicine. The science is still young, but the direction is clear.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not constitute a recommendation to use any of the compounds discussed. Peptides carry risks, and individual responses vary. Always consult a qualified healthcare provider before starting any peptide protocol. None of the peptides discussed here are FDA-approved for anti-aging indications.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Khavinson VKh et al. Peptide promotes overcoming of the limit of fibroblast division. <em>Bull Exp Biol Med.</em> 2003;135(5):449&ndash;451. <a href="https://pubmed.ncbi.nlm.nih.gov/12937682/">PubMed</a><br>
+Pickart L et al. GHK peptide as a natural modulator of multiple cellular pathways in skin regeneration. <em>BioMed Res Int.</em> 2015;2015:648108. <a href="https://pubmed.ncbi.nlm.nih.gov/25866801/">PubMed</a><br>
+Pickart L, Vasquez-Soltero JM, Margolina A. GHK and DNA: resetting the human genome to health. <em>BioMed Res Int.</em> 2014;2014:151479. <a href="https://pubmed.ncbi.nlm.nih.gov/24508076/">PubMed</a><br>
+Chang CH et al. BPC 157 enhances the growth hormone receptor expression in tendon fibroblasts. <em>Molecules.</em> 2014;19(12):19066&ndash;19077. <a href="https://pubmed.ncbi.nlm.nih.gov/21030672/">PubMed</a><br>
+Imai S, Guarente L. NAD+ and sirtuins in aging and disease. <em>Trends Cell Biol.</em> 2014;24(8):464&ndash;471. <a href="https://pubmed.ncbi.nlm.nih.gov/26785480/">PubMed</a><br>
+Tuthill C et al. Thymalfasin: biological properties and clinical applications. <em>Int Immunopharmacol.</em> 2010;10(10):1225&ndash;1229. <a href="https://pubmed.ncbi.nlm.nih.gov/20674894/">PubMed</a><br>
+Teichman SL et al. Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I secretion by CJC-1295. <em>J Clin Endocrinol Metab.</em> 2006;91(3):799&ndash;805. <a href="https://pubmed.ncbi.nlm.nih.gov/16352683/">PubMed</a><br>
+</p>
+
+<!-- ========== RELATED READING ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/epithalon-anti-aging-guide">Epithalon Anti-Aging Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Copper Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1 Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/epithalon-anti-aging-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Epithalon Anti-Aging Guide</a>
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Copper Peptide Guide</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/thymosin-alpha-1-immune-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Thymosin Alpha-1 Immune Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
