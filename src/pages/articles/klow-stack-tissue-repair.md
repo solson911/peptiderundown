@@ -64,12 +64,12 @@ Combining these peptides creates additive and synergistic effects. Each componen
 
 | Healing Mechanism | BPC-157 | TB-500 | GHK-Cu |
 |-------------------|---------|--------|--------|
-| **Angiogenesis** | ✓ | ✓ | - |
-| **Collagen Synthesis** | ✓ | - | ✓ |
-| **Stem Cell Attraction** | - | ✓ | ✓ |
-| **Inflammation Control** | ✓ | ✓ | ✓ |
-| **Antioxidant Effects** | - | - | ✓ |
-| **Nerve Regeneration** | ✓ | - | - |
+| **Angiogenesis** | Yes | Yes | - |
+| **Collagen Synthesis** | Yes | - | Yes |
+| **Stem Cell Attraction** | - | Yes | Yes |
+| **Inflammation Control** | Yes | Yes | Yes |
+| **Antioxidant Effects** | - | - | Yes |
+| **Nerve Regeneration** | Yes | - | - |
 
 The KLOW stack provides complete healing support. It addresses both acute injuries and chronic tissue damage. This makes it valuable for athletes and recovery patients alike.
 
