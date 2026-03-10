@@ -1,0 +1,624 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Melanotan 2: Tanning Peptide Benefits, Risks, and Dosing",
+  description: "An honest guide to Melanotan 2 (MT-2), the synthetic tanning peptide. How it works, dosing protocols, side effects, safety concerns including melanoma risk, and legal status.",
+  image: "/images/articles/melanotan-2.webp",
+  date: "2026-02-14",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#1A0E0A 0%,#2E1A10 40%,#3D2815 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Cosmetic &middot; Melanocortin</div>
+  <h1>Melanotan 2: Tanning Peptide Benefits, Risks, and Dosing</h1>
+  <p class="sub">A synthetic alpha-MSH analog that darkens skin without a tanning bed. How it works through MC1R activation, what the side effects actually look like, and why the melanoma question still isn't settled.</p>
+  <div class="pills">
+    <span class="pill">MC1R &middot; Eumelanin Production</span>
+    <span class="pill">Subcutaneous Injection</span>
+    <span class="pill">Not FDA-Approved</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">MC1R</div><div class="l">Primary<br>Target Receptor</div></div>
+  <div class="sb"><div class="v c2">3&ndash;4 wk</div><div class="l">Time to<br>Full Tan</div></div>
+  <div class="sb"><div class="v c3">5</div><div class="l">Melanocortin<br>Receptors Activated</div></div>
+  <div class="sb"><div class="v c4">No</div><div class="l">FDA<br>Approval</div></div>
+</div>
+
+<p>Melanotan 2 is one of the most popular and most controversial peptides in the cosmetic space. It darkens your skin without a tanning bed.</p>
+
+<p>It can boost libido. It may suppress appetite. And it carries real risks that anyone considering it needs to understand before moving forward.</p>
+
+<div class="d-r">
+  <div class="s">Safety First</div>
+  <p>MT-2 is <strong>not FDA-approved</strong> and carries unresolved safety concerns, including a possible link to melanoma. This guide is educational only. Consult a qualified healthcare provider before considering any peptide protocol.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>Melanotan 2 at a Glance</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Melanotan 2 (alpha-MSH Analog)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic analog of alpha-MSH &nbsp;|&nbsp; <strong>Primary Target:</strong> MC1R (melanocortin 1 receptor) &nbsp;|&nbsp; <strong>Secondary Targets:</strong> MC3R, MC4R, MC5R &nbsp;|&nbsp; <strong>Primary Effect:</strong> Skin darkening (eumelanin production) &nbsp;|&nbsp; <strong>Secondary Effects:</strong> Sexual arousal, appetite suppression &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved &nbsp;|&nbsp; <strong>Related:</strong> <a href="/articles/pt-141-bremelanotide-guide">PT-141 (bremelanotide)</a>, derived from MT-2 research</p>
+</div>
+
+<p>MT-2 was originally developed at the University of Arizona in the 1990s as a potential preventive treatment for skin cancer. The idea was straightforward: if you could darken people's skin without UV exposure, you could protect them from UV damage.</p>
+
+<p>The compound never made it through formal drug development. But it found a second life in the underground peptide market for cosmetic tanning and its sexual side effects.</p>
+
+<p>MT-2 is closely related to <strong>bremelanotide (PT-141)</strong>, which was derived from MT-2 research and eventually received FDA approval for treating hypoactive sexual desire disorder in women. For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISM ========== -->
+<hr class="sep">
+<h2>How Melanotan 2 Works</h2>
+
+<p>MT-2 is a non-selective agonist of melanocortin receptors, binding to MC1R through MC5R. This non-selectivity is why it produces such a wide range of effects, from skin darkening to sexual arousal to appetite changes.</p>
+
+<h3>Receptor Activity and Effects</h3>
+
+<table class="tbl">
+<thead><tr><th>Receptor</th><th>Location</th><th>Effect</th></tr></thead>
+<tbody>
+<tr><td><strong>MC1R</strong></td><td>Melanocytes (skin)</td><td class="g">Skin darkening, eumelanin production</td></tr>
+<tr><td><strong>MC3R</strong></td><td>Brain, gut</td><td class="y">Energy balance, fat metabolism</td></tr>
+<tr><td><strong>MC4R</strong></td><td>Hypothalamus</td><td class="y">Sexual arousal, appetite suppression</td></tr>
+<tr><td><strong>MC5R</strong></td><td>Various tissues</td><td class="y">Sebaceous gland regulation</td></tr>
+</tbody>
+</table>
+
+<h3>The MC1R Tanning Cascade</h3>
+
+<div class="svg-box">
+  <div class="st">MC1R Pathway: How MT-2 Produces Skin Darkening</div>
+  <div class="ss">Receptor binding &middot; cAMP signaling &middot; Tyrosinase activation &middot; Eumelanin synthesis</div>
+  <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Step 1: MT-2 Binds MC1R -->
+    <rect x="10" y="30" width="120" height="140" rx="10" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="70" y="55" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#2956A6">MT-2</text>
+    <text x="70" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">BINDS MC1R</text>
+    <line x1="25" y1="80" x2="115" y2="80" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="70" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">Binds MC1R on</text>
+    <text x="70" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">melanocytes</text>
+    <text x="70" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">STEP 1</text>
+
+    <!-- Arrow 1 -->
+    <line x1="135" y1="100" x2="155" y2="100" stroke="#86869A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- Step 2: cAMP -->
+    <rect x="160" y="30" width="120" height="140" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="220" y="55" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#6E3B8A">cAMP Rise</text>
+    <text x="220" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">SIGNALING</text>
+    <line x1="175" y1="80" x2="265" y2="80" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="220" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">Adenylate cyclase</text>
+    <text x="220" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#3E2050">increases cAMP</text>
+    <text x="220" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">STEP 2</text>
+
+    <!-- Arrow 2 -->
+    <line x1="285" y1="100" x2="305" y2="100" stroke="#86869A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- Step 3: PKA / Tyrosinase -->
+    <rect x="310" y="30" width="120" height="140" rx="10" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="370" y="55" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#187A62">PKA</text>
+    <text x="370" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">ACTIVATION</text>
+    <line x1="325" y1="80" x2="415" y2="80" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="370" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">Protein kinase A</text>
+    <text x="370" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">upregulates tyrosinase</text>
+    <text x="370" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">STEP 3</text>
+
+    <!-- Arrow 3 -->
+    <line x1="435" y1="100" x2="455" y2="100" stroke="#86869A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- Step 4: Eumelanin -->
+    <rect x="460" y="30" width="120" height="140" rx="10" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="520" y="55" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#B48118">Eumelanin</text>
+    <text x="520" y="72" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">PRODUCTION</text>
+    <line x1="475" y1="80" x2="565" y2="80" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="520" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">Dark melanin made</text>
+    <text x="520" y="115" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5A4010">and distributed</text>
+    <text x="520" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">STEP 4</text>
+
+    <!-- Step 5: Skin Darkens -->
+    <!-- Arrow 4 -->
+    <line x1="585" y1="100" x2="605" y2="100" stroke="#86869A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <rect x="610" y="45" width="80" height="110" rx="10" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1.5"/>
+    <text x="650" y="80" text-anchor="middle" font-family="Lora,serif" font-size="11" font-weight="700" fill="#B53A3A">Skin</text>
+    <text x="650" y="95" text-anchor="middle" font-family="Lora,serif" font-size="11" font-weight="700" fill="#B53A3A">Darkens</text>
+    <text x="650" y="125" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#5A2020">Over days</text>
+    <text x="650" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#5A2020">to weeks</text>
+
+    <!-- Arrow marker -->
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#86869A"/>
+      </marker>
+    </defs>
+  </svg>
+</div>
+
+<div class="d-t">
+  <div class="s">Key Distinction</div>
+  <p>MT-2 produces <strong>eumelanin</strong>, the dark brown/black pigment that actually provides UV protection. This is different from pheomelanin (the reddish pigment in fair-skinned, red-haired individuals), which doesn't protect against UV and may generate free radicals.</p>
+</div>
+
+<p>MT-2 can be particularly effective for fair-skinned individuals whose melanocytes can produce eumelanin but typically don't. Some UV exposure is still needed to optimize the tan, but far less than without the peptide.</p>
+
+<h3>MC4R: Sexual and Appetite Effects</h3>
+
+<p><strong>Sexual arousal</strong> from MC4R activation in the hypothalamus is often the most noticeable effect, sometimes occurring before any visible skin darkening. This effect was so pronounced that researchers developed <a href="/articles/pt-141-bremelanotide-guide">PT-141 (bremelanotide)</a> specifically to target it, receiving FDA approval in 2019 as Vyleesi (<a href="https://pubmed.ncbi.nlm.nih.gov/27045258/">Clayton et al., 2016</a>).</p>
+
+<p><strong>Appetite suppression</strong> through MC4R is also real but inconsistent. It's usually not dramatic enough to be the primary reason for using the peptide (<a href="https://pubmed.ncbi.nlm.nih.gov/16803859/">Adan et al., 2006</a>).</p>
+
+<!-- ========== TIMELINE ========== -->
+<hr class="sep">
+<h2>What to Expect: Timeline</h2>
+
+<p>Results with MT-2 don't happen overnight. Here's a realistic timeline based on common user experiences.</p>
+
+<table class="tbl">
+<thead><tr><th>Phase</th><th>Timeline</th><th>What Happens</th></tr></thead>
+<tbody>
+<tr><td><strong>First injection</strong></td><td>Hours</td><td class="y">Sexual arousal effects, possible nausea and flushing</td></tr>
+<tr><td><strong>Loading (Week 1&ndash;2)</strong></td><td>5&ndash;10 days</td><td class="y">Skin darkening begins; fair skin may take longer</td></tr>
+<tr><td><strong>Loading (Week 2&ndash;3)</strong></td><td>2&ndash;3 weeks</td><td class="g">Color develops, may appear slightly uneven initially</td></tr>
+<tr><td><strong>Full tan</strong></td><td>3&ndash;4 weeks</td><td class="g">Desired shade reached, even distribution</td></tr>
+<tr><td><strong>Maintenance</strong></td><td>Ongoing</td><td class="g">Less frequent dosing maintains color</td></tr>
+<tr><td><strong>After stopping</strong></td><td>1&ndash;3 months</td><td class="y">Tan fades gradually as skin cells turn over</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Moles and Freckles</div>
+  <p>MT-2 <strong>will</strong> darken existing moles and freckles. New moles may also appear. This is both a cosmetic concern and a safety consideration. If you have moles, monitor them closely during and after use.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<p>MT-2 is administered via subcutaneous injection, typically into the abdominal fat. For technique, see our <a href="/articles/how-to-inject-peptides-subcutaneously">subcutaneous injection guide</a>.</p>
+
+<p>Need help with dosing math? Use our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>.</p>
+
+<h3>Reconstitution</h3>
+
+<p>MT-2 typically comes as lyophilized powder in <strong>10 mg vials</strong>. Adding 1 mL of bacteriostatic water gives a concentration of 10 mg/mL for easy dose measurement.</p>
+
+<h3>Loading Phase</h3>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Recommendation</th></tr></thead>
+<tbody>
+<tr><td><strong>Starting dose</strong></td><td>0.1&ndash;0.25 mg (assess tolerance)</td></tr>
+<tr><td><strong>Working dose</strong></td><td>0.25&ndash;0.5 mg</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Once daily, preferably evening</td></tr>
+<tr><td><strong>Duration</strong></td><td>2&ndash;4 weeks or until desired tan</td></tr>
+<tr><td><strong>UV exposure</strong></td><td>Brief sessions (10&ndash;20 min), 2&ndash;3x/week</td></tr>
+</tbody>
+</table>
+
+<h3>Maintenance Phase</h3>
+
+<table class="tbl">
+<thead><tr><th>Parameter</th><th>Recommendation</th></tr></thead>
+<tbody>
+<tr><td><strong>Dose</strong></td><td>0.25&ndash;0.5 mg</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Once or twice per week</td></tr>
+<tr><td><strong>UV exposure</strong></td><td>Minimal, once per week or as needed</td></tr>
+</tbody>
+</table>
+
+<h3>Dosing Tips</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Start Low</h4>
+    <p>Nausea is dose-dependent. Beginning at 0.1 mg lets your body adjust gradually.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Evening Dosing</h4>
+    <p>Inject before bed. You'll sleep through the worst of the nausea and flushing.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Antihistamines Help</h4>
+    <p>Diphenhydramine 30 minutes before injection can reduce nausea and flushing significantly.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Don't Chase Results</h4>
+    <p>Higher doses increase side effects without proportionally improving tanning speed.</p>
+  </div>
+</div>
+
+<h3>Storage</h3>
+
+<p>Reconstituted MT-2 should be refrigerated and used within <strong>4&ndash;6 weeks</strong>. Unreconstituted powder lasts longer when refrigerated or frozen. For detailed storage tips, see our <a href="/articles/how-to-store-peptides">peptide storage guide</a>.</p>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects</h2>
+
+<p>MT-2 has a well-documented side effect profile. Most are dose-dependent and improve with continued use. For a broader overview, see our <a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>.</p>
+
+<h3>Common Side Effects</h3>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Nausea</strong></td><td class="y">50&ndash;70%</td><td>Worst early on, improves with tolerance</td></tr>
+<tr><td><strong>Facial flushing</strong></td><td class="y">Common</td><td>15&ndash;30 min after injection, lasts 30&ndash;60 min</td></tr>
+<tr><td><strong>Fatigue/drowsiness</strong></td><td class="y">Common</td><td>Another reason for evening dosing</td></tr>
+<tr><td><strong>Appetite suppression</strong></td><td class="g">Mild</td><td>Can be welcome for some</td></tr>
+<tr><td><strong>Injection site reactions</strong></td><td class="y">Common</td><td>Minor redness, itching</td></tr>
+</tbody>
+</table>
+
+<h3>Less Common Side Effects</h3>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Spontaneous erections</strong></td><td>Pronounced MC4R effect in men</td></tr>
+<tr><td><strong>Mole/freckle darkening</strong></td><td>Essentially universal with sufficient use</td></tr>
+<tr><td><strong>New mole formation</strong></td><td>Reported by some users</td></tr>
+<tr><td><strong>Stomach cramping</strong></td><td>Accompanies nausea, resolves similarly</td></tr>
+<tr><td><strong>Dizziness</strong></td><td>Occasional, mild, transient</td></tr>
+</tbody>
+</table>
+
+<div class="cd cr">
+  <div class="tg">Rare but Serious</div>
+  <h3>Serious Side Effects</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Melanoma risk:</strong> Unresolved (see dedicated section below) &nbsp;|&nbsp; <strong>Rhabdomyolysis:</strong> Extremely rare case reports, unclear causality &nbsp;|&nbsp; <strong>Priapism:</strong> Prolonged erections at higher doses, may require medical attention</p>
+</div>
+
+<!-- ========== MELANOMA ========== -->
+<hr class="sep">
+<h2>The Melanoma Question</h2>
+
+<div class="d-r">
+  <div class="s">Critical Warning</div>
+  <p>The melanoma risk question is unresolved. If you have a personal or family history of melanoma, <strong>do not use MT-2</strong>. Period.</p>
+</div>
+
+<p>Melanoma develops from melanocytes, the same cells MT-2 stimulates. Chronic stimulation could theoretically promote malignant transformation. This is the single biggest safety concern with the compound.</p>
+
+<h3>Evidence Summary</h3>
+
+<table class="tbl">
+<thead><tr><th>Evidence Type</th><th>Finding</th><th>Weight</th></tr></thead>
+<tbody>
+<tr><td><strong>Case reports</strong></td><td>Melanoma diagnoses in MT-2 users reported (<a href="https://pubmed.ncbi.nlm.nih.gov/25899937/">Hjuler et al., 2015</a>)</td><td class="r">Can't establish causation</td></tr>
+<tr><td><strong>Animal data</strong></td><td>MT-2 did not promote melanoma growth in one mouse model (<a href="https://pubmed.ncbi.nlm.nih.gov/19175862/">Langan et al., 2009</a>)</td><td class="g">Somewhat reassuring</td></tr>
+<tr><td><strong>Mechanistic concern</strong></td><td>Melanocyte activation could accelerate pre-existing atypical cells</td><td class="r">Theoretically plausible</td></tr>
+<tr><td><strong>Population data</strong></td><td>No large-scale epidemiological studies exist</td><td class="r">Major data gap</td></tr>
+</tbody>
+</table>
+
+<h3>Practical Guidance</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--red);">High Risk</h4>
+    <p>Personal or family history of melanoma? Do not use MT-2. The risk calculus is clearly negative.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Elevated Risk</h4>
+    <p>Many atypical moles? The risk-benefit ratio shifts unfavorably. Consider alternatives.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">If Using MT-2</h4>
+    <p>Monitor skin carefully, get regular dermatologist checks, and minimize UV exposure.</p>
+  </div>
+</div>
+
+<p>Mole darkening also makes self-monitoring harder, which is itself a safety concern. If you can't tell whether a mole is changing because of MT-2 or something else, that's a problem.</p>
+
+<!-- ========== OTHER SAFETY ========== -->
+<hr class="sep">
+<h2>Other Safety Considerations</h2>
+
+<div class="g2">
+  <div class="cd ca">
+    <div class="tg">Purity Concern</div>
+    <h3>Contamination Risk</h3>
+    <p style="font-size:14px;margin-bottom:0;">MT-2 is not pharmaceutical grade. Studies analyzing online peptides have found purity issues, incorrect dosing, and contamination (<a href="https://pubmed.ncbi.nlm.nih.gov/36683093/">Cohen et al., 2023</a>). Buy from suppliers providing third-party COAs showing HPLC purity and endotoxin testing.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Unknown Territory</div>
+    <h3>Long-Term Effects</h3>
+    <p style="font-size:14px;margin-bottom:0;">MT-2 has been used recreationally for 15&ndash;20 years. No systematic long-term data exists. We genuinely don't know what 10+ years of intermittent melanocyte stimulation does to the body.</p>
+  </div>
+</div>
+
+<div class="d-a">
+  <div class="s">UV Interaction</div>
+  <p>MT-2 makes you more responsive to UV. The eumelanin it produces is protective, but UV still causes DNA damage regardless of melanin levels. Use reasonable sun exposure practices even with the added pigmentation.</p>
+</div>
+
+<!-- ========== MT-1 vs MT-2 ========== -->
+<hr class="sep">
+<h2>Melanotan 1 vs. Melanotan 2</h2>
+
+<p>These two peptides are often confused. They share a common origin but differ significantly in their receptor selectivity and side effect profiles.</p>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>Melanotan 1 (Afamelanotide)</th><th>Melanotan 2</th></tr></thead>
+<tbody>
+<tr><td><strong>Selectivity</strong></td><td class="g">More selective MC1R agonist</td><td class="y">Non-selective (MC1R&ndash;MC5R)</td></tr>
+<tr><td><strong>Tanning effect</strong></td><td class="g">Yes</td><td class="g">Yes</td></tr>
+<tr><td><strong>Sexual side effects</strong></td><td class="g">Minimal</td><td class="r">Significant</td></tr>
+<tr><td><strong>Nausea</strong></td><td class="g">Less</td><td class="r">More</td></tr>
+<tr><td><strong>Approved use</strong></td><td class="g">EU-approved (Scenesse) for EPP</td><td class="r">Not approved anywhere</td></tr>
+<tr><td><strong>Availability</strong></td><td class="y">Harder to obtain, more expensive</td><td class="g">Widely available</td></tr>
+</tbody>
+</table>
+
+<!-- ========== LEGAL STATUS ========== -->
+<hr class="sep">
+<h2>Legal Status</h2>
+
+<p>MT-2 occupies a gray area in most countries. For a full breakdown, see our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide regulations guide</a>.</p>
+
+<table class="tbl">
+<thead><tr><th>Country</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong>United States</strong></td><td class="y">Not FDA-approved, not scheduled; sold as "research chemical"</td></tr>
+<tr><td><strong>United Kingdom</strong></td><td class="y">Illegal to sell, legal to possess for personal use</td></tr>
+<tr><td><strong>Australia</strong></td><td class="r">Schedule 4 (prescription-only); importing without prescription is illegal</td></tr>
+<tr><td><strong>European Union</strong></td><td class="y">Not approved; regulations vary by country</td></tr>
+<tr><td><strong>Canada</strong></td><td class="y">Not approved; available from research suppliers</td></tr>
+</tbody>
+</table>
+
+<p>The regulatory situation could change. Several countries have discussed tightening regulations on cosmetic peptides.</p>
+
+<!-- ========== WHO MIGHT CONSIDER ========== -->
+<hr class="sep">
+<h2>Who Might Consider MT-2</h2>
+
+<div class="g2">
+  <div class="cd ct">
+    <div class="tg">Potential Fit</div>
+    <h3>Fair-Skinned Individuals</h3>
+    <p style="font-size:14px;margin-bottom:0;">People with Fitzpatrick skin types I&ndash;II who want a tan but burn easily with UV exposure. MT-2 can produce eumelanin in skin that normally makes very little.</p>
+  </div>
+  <div class="cd ct">
+    <div class="tg">Potential Fit</div>
+    <h3>Minimal UV Goals</h3>
+    <p style="font-size:14px;margin-bottom:0;">Those who want tanned skin while minimizing total UV exposure. MT-2 reduces the amount of sun time needed to maintain color.</p>
+  </div>
+</div>
+
+<div class="d-r">
+  <div class="s">Who Should Avoid MT-2</div>
+  <p>Anyone with a personal or family history of melanoma, a large number of atypical moles, or an inability to commit to regular dermatological monitoring. Pregnant or breastfeeding individuals should also avoid MT-2 entirely.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>How long does it take for MT-2 to work?</summary>
+    <div class="fa">Most users notice skin darkening within <strong>5&ndash;10 days</strong>. A full tan typically takes <strong>3&ndash;4 weeks</strong>. Fair-skinned individuals may take slightly longer to see visible results.</div>
+  </details>
+  <details>
+    <summary>Do you still need sun exposure with MT-2?</summary>
+    <div class="fa">Some UV helps activate and distribute the melanin, but far less than tanning without MT-2. Brief exposures of <strong>10&ndash;20 minutes</strong> a few times per week are typically sufficient. Some users report darkening without deliberate sun exposure at all.</div>
+  </details>
+  <details>
+    <summary>How long does the tan last after stopping?</summary>
+    <div class="fa">The tan fades gradually over <strong>1&ndash;3 months</strong> as melanin-containing skin cells turn over. Maintenance dosing preserves the color indefinitely.</div>
+  </details>
+  <details>
+    <summary>Can women use MT-2?</summary>
+    <div class="fa">Yes. MT-2 works the same way in women. Women also commonly experience the sexual arousal effects. Dosing protocols are the same regardless of sex.</div>
+  </details>
+  <details>
+    <summary>Is MT-2 the same as PT-141?</summary>
+    <div class="fa">No. <a href="/articles/pt-141-bremelanotide-guide">PT-141 (bremelanotide)</a> was derived from MT-2 research but is a cyclic peptide fragment designed to target MC4R for sexual effects without tanning. PT-141 is FDA-approved (as Vyleesi). MT-2 is not.</div>
+  </details>
+  <details>
+    <summary>Will MT-2 protect me from sunburn?</summary>
+    <div class="fa">The eumelanin provides some UV protection, and many users tolerate more sun without burning. But it's not sunscreen. UV still causes DNA damage regardless of melanin levels. Don't treat it as a substitute for sun protection.</div>
+  </details>
+  <details>
+    <summary>Can MT-2 cause permanent skin changes?</summary>
+    <div class="fa">The tan itself is temporary. But new moles or darkened existing moles may persist after stopping. Dermatological monitoring is important both during and after use.</div>
+  </details>
+  <details>
+    <summary>What about nasal sprays?</summary>
+    <div class="fa">MT-2 nasal sprays exist but have poor and inconsistent bioavailability compared to subcutaneous injection. Most experienced users consider them unreliable for consistent results.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>MT-2 works for tanning. It produces real eumelanin, creates a natural-looking tan, and does so with minimal UV exposure. But it carries unresolved safety questions, particularly around melanoma risk, that demand careful consideration.</p>
+</div>
+
+<p>The sexual side effects are a bonus for many users. The appetite suppression is a mild perk. But these secondary effects shouldn't overshadow the primary concern: this is a compound that stimulates the same cells melanoma arises from.</p>
+
+<p>Add in the lack of regulation, potential purity issues, and unknown long-term safety profile, and you have a compound that demands informed decision-making.</p>
+
+<p>If you choose to use MT-2, start with low doses, monitor your skin carefully, get regular dermatologist checks, and stay honest with yourself about the risk-benefit tradeoff.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it is not a recommendation to use Melanotan 2. MT-2 is not FDA-approved and carries unresolved safety concerns. Always consult a qualified healthcare provider before starting any peptide protocol. Never self-treat, self-diagnose, or ignore professional medical advice based on information found online.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Clayton AH et al. Bremelanotide for female sexual dysfunctions in premenopausal women: a randomized, placebo-controlled dose-finding trial. <em>Womens Health (Lond).</em> 2016;12(3):325&ndash;337. <a href="https://pubmed.ncbi.nlm.nih.gov/27045258/">PubMed</a><br>
+Adan RA et al. The MC4 receptor and control of appetite. <em>Br J Pharmacol.</em> 2006;149(7):815&ndash;827. <a href="https://pubmed.ncbi.nlm.nih.gov/16803859/">PubMed</a><br>
+Hjuler KF et al. Melanoma associated with the use of melanotan-II. <em>Dermatology.</em> 2015;230(3):263&ndash;267. <a href="https://pubmed.ncbi.nlm.nih.gov/25899937/">PubMed</a><br>
+Langan EA et al. The effects of alpha-melanocyte stimulating hormone on human melanoma in vitro and in a xenotransplant mouse model. <em>Melanoma Res.</em> 2009;19(1):14&ndash;21. <a href="https://pubmed.ncbi.nlm.nih.gov/19175862/">PubMed</a><br>
+Cohen PA et al. Quantity of active ingredients in illegally marketed peptide products. <em>JAMA Netw Open.</em> 2023;6(1):e2251697. <a href="https://pubmed.ncbi.nlm.nih.gov/36683093/">PubMed</a>
+</p>
+
+<!-- ========== RELATED READING ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/pt-141-bremelanotide-guide">PT-141 (Bremelanotide) Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects: What to Know</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-inject-peptides-subcutaneously">How to Inject Peptides</a> &nbsp;&middot;&nbsp;
+<a href="/articles/are-peptides-legal-fda-regulations-2026">Peptide Legal Status 2026</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/pt-141-bremelanotide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">PT-141 (Bremelanotide) Guide</a>
+            <a href="/articles/peptide-side-effects-what-to-know" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Side Effects Guide</a>
+            <a href="/articles/how-to-inject-peptides-subcutaneously" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Inject Peptides</a>
+            <a href="/articles/are-peptides-legal-fda-regulations-2026" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Legal Status 2026</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

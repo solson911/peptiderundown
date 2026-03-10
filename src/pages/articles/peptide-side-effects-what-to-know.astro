@@ -1,0 +1,620 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptide Side Effects: What to Know Before You Start",
+  description: "Common peptide side effects explained: injection reactions, water retention, appetite changes, glucose issues, blood pressure shifts, and when to stop and talk to a clinician.",
+  image: "/images/articles/side-effects.webp",
+  date: "2026-02-14",
+  category: "Safety",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#1A0A0A 0%,#2D1420 40%,#3A1A2A 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Safety &middot; Side Effects &middot; All Peptide Categories</div>
+  <h1>Peptide Side Effects: What to Know Before You Start</h1>
+  <p class="sub">Every bioactive compound comes with trade-offs. Here's what the research says about common side effects across GLP-1 agonists, growth hormone peptides, healing peptides, and immune peptides.</p>
+  <div class="pills">
+    <span class="pill">GLP-1 &middot; GI Effects</span>
+    <span class="pill">GH Peptides &middot; Water Retention</span>
+    <span class="pill">Red Flags &middot; When to Stop</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">44%</div><div class="l">Nausea Rate<br>GLP-1 Agonists</div></div>
+  <div class="sb"><div class="v c2">10&ndash;25%</div><div class="l">Injection Site<br>Reaction Rate</div></div>
+  <div class="sb"><div class="v c3">4&ndash;8 wk</div><div class="l">Typical Side Effect<br>Resolution Window</div></div>
+  <div class="sb"><div class="v c4">6+</div><div class="l">Red Flag Symptoms<br>Requiring Urgent Care</div></div>
+</div>
+
+<p>Peptides have become mainstream. From GLP-1 agonists for weight management to growth hormone secretagogues for recovery, millions of people now use these compounds regularly.</p>
+
+<p>But no bioactive substance is free of side effects. Peptides, despite closely mimicking natural signaling molecules, are no exception.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational overview of peptide side effects across all major categories. It covers what to expect, what's serious, and when to talk to a clinician. This is not medical advice.</p>
+</div>
+
+<hr class="sep">
+
+<!-- SVG Overview Diagram -->
+<h2>Side Effect Overview by Category</h2>
+
+<p>Different peptide classes produce very different side effect profiles. Understanding which effects belong to which category helps you prepare and respond appropriately.</p>
+
+<div class="svg-box">
+  <div class="st">Peptide Side Effects by Category</div>
+  <div class="ss">Most common effects for each major peptide class</div>
+  <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="700" height="320" rx="8" fill="#F8F7F4"/>
+    <!-- GLP-1 Column -->
+    <rect x="30" y="30" width="145" height="260" rx="8" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="102" y="55" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#2956A6">GLP-1 Agonists</text>
+    <text x="102" y="80" text-anchor="middle" font-size="11" fill="#3C3C52">Nausea (44%)</text>
+    <text x="102" y="100" text-anchor="middle" font-size="11" fill="#3C3C52">Vomiting (24%)</text>
+    <text x="102" y="120" text-anchor="middle" font-size="11" fill="#3C3C52">Diarrhea (30%)</text>
+    <text x="102" y="140" text-anchor="middle" font-size="11" fill="#3C3C52">Constipation (24%)</text>
+    <text x="102" y="160" text-anchor="middle" font-size="11" fill="#3C3C52">Acid reflux</text>
+    <text x="102" y="180" text-anchor="middle" font-size="11" fill="#3C3C52">Fatigue</text>
+    <rect x="42" y="200" width="120" height="28" rx="4" fill="#2956A6" opacity="0.1"/>
+    <text x="102" y="218" text-anchor="middle" font-size="10" font-weight="600" fill="#2956A6">GI-dominant</text>
+    <!-- GH Peptides Column -->
+    <rect x="195" y="30" width="145" height="260" rx="8" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="267" y="55" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#187A62">GH Peptides</text>
+    <text x="267" y="80" text-anchor="middle" font-size="11" fill="#3C3C52">Water retention</text>
+    <text x="267" y="100" text-anchor="middle" font-size="11" fill="#3C3C52">Tingling/numbness</text>
+    <text x="267" y="120" text-anchor="middle" font-size="11" fill="#3C3C52">Hunger (MK-677)</text>
+    <text x="267" y="140" text-anchor="middle" font-size="11" fill="#3C3C52">Joint stiffness</text>
+    <text x="267" y="160" text-anchor="middle" font-size="11" fill="#3C3C52">Elevated glucose</text>
+    <text x="267" y="180" text-anchor="middle" font-size="11" fill="#3C3C52">Vivid dreams</text>
+    <rect x="207" y="200" width="120" height="28" rx="4" fill="#187A62" opacity="0.1"/>
+    <text x="267" y="218" text-anchor="middle" font-size="10" font-weight="600" fill="#187A62">Metabolic-dominant</text>
+    <!-- Healing Peptides Column -->
+    <rect x="360" y="30" width="145" height="260" rx="8" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="432" y="55" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#6E3B8A">Healing Peptides</text>
+    <text x="432" y="80" text-anchor="middle" font-size="11" fill="#3C3C52">Mild nausea</text>
+    <text x="432" y="100" text-anchor="middle" font-size="11" fill="#3C3C52">Dizziness</text>
+    <text x="432" y="120" text-anchor="middle" font-size="11" fill="#3C3C52">Headaches</text>
+    <text x="432" y="140" text-anchor="middle" font-size="11" fill="#3C3C52">Lethargy</text>
+    <text x="432" y="160" text-anchor="middle" font-size="11" fill="#3C3C52">Head rush</text>
+    <text x="432" y="180" text-anchor="middle" font-size="11" fill="#3C3C52">Temp increase</text>
+    <rect x="372" y="200" width="120" height="28" rx="4" fill="#6E3B8A" opacity="0.1"/>
+    <text x="432" y="218" text-anchor="middle" font-size="10" font-weight="600" fill="#6E3B8A">Mild profile</text>
+    <!-- Immune Peptides Column -->
+    <rect x="525" y="30" width="145" height="260" rx="8" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="597" y="55" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="600" fill="#B48118">Immune Peptides</text>
+    <text x="597" y="80" text-anchor="middle" font-size="11" fill="#3C3C52">Injection soreness</text>
+    <text x="597" y="100" text-anchor="middle" font-size="11" fill="#3C3C52">Flu-like symptoms</text>
+    <text x="597" y="120" text-anchor="middle" font-size="11" fill="#3C3C52">Low-grade fever</text>
+    <text x="597" y="140" text-anchor="middle" font-size="11" fill="#3C3C52">Redness at site</text>
+    <text x="597" y="160" text-anchor="middle" font-size="11" fill="#3C3C52">Fatigue</text>
+    <text x="597" y="180" text-anchor="middle" font-size="11" fill="#3C3C52">&nbsp;</text>
+    <rect x="537" y="200" width="120" height="28" rx="4" fill="#B48118" opacity="0.1"/>
+    <text x="597" y="218" text-anchor="middle" font-size="10" font-weight="600" fill="#B48118">Immune activation</text>
+    <!-- Universal bar at bottom -->
+    <rect x="30" y="250" width="640" height="30" rx="6" fill="#FDEEEC" stroke="#B53A3A" stroke-width="1"/>
+    <text x="350" y="270" text-anchor="middle" font-size="11" font-weight="600" fill="#B53A3A">Universal: Injection site reactions (10&ndash;25%) &bull; Headaches &bull; Fatigue &bull; Mild dizziness &bull; Flushing</text>
+  </svg>
+</div>
+
+<hr class="sep">
+
+<!-- Universal Side Effects -->
+<h2>Universal Side Effects Across All Peptides</h2>
+
+<p>Some side effects show up no matter which peptide you're using. These are the baseline effects that come with injecting any bioactive compound subcutaneously.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site reactions</strong></td><td class="y">10&ndash;25%</td><td>Redness, swelling, itching, small lumps (<a href="https://pubmed.ncbi.nlm.nih.gov/31205634/">PubMed</a>)</td></tr>
+<tr><td><strong>Headaches</strong></td><td class="y">Common</td><td>Especially first 1&ndash;2 weeks as body adjusts</td></tr>
+<tr><td><strong>Fatigue</strong></td><td class="y">Common</td><td>Usually transient, resolves within days</td></tr>
+<tr><td><strong>Mild dizziness</strong></td><td class="g">Occasional</td><td>Typically resolves quickly</td></tr>
+<tr><td><strong>Flushing</strong></td><td class="g">Occasional</td><td>More common with certain peptide classes</td></tr>
+</tbody>
+</table>
+
+<p>These effects are usually mild and self-limiting. Most people find they fade within the first two weeks of consistent use.</p>
+
+<hr class="sep">
+
+<!-- GLP-1 Side Effects -->
+<h2>GLP-1 Receptor Agonists</h2>
+
+<p>GLP-1 peptides like <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> and <a href="/articles/tirzepatide-complete-guide">tirzepatide</a> carry the most intense side effect profile of any peptide category. The effects are dominated by GI issues because GLP-1 slows gastric emptying.</p>
+
+<p>Food sits in your stomach longer than your body expects. That's the core mechanism behind the nausea, vomiting, and reflux.</p>
+
+<div class="cd cr">
+  <div class="tg">GLP-1 Side Effects</div>
+  <h3>Gastrointestinal Effects Dominate This Category</h3>
+  <p style="font-size:14px;margin-bottom:0;">Nearly half of GLP-1 users experience nausea, and about a quarter deal with vomiting or constipation. Slow dose titration over 4&ndash;8 weeks is the single most important step to reduce these effects.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Severity</th><th>Timeline</th></tr></thead>
+<tbody>
+<tr><td><strong>Nausea</strong></td><td class="r">~44%</td><td class="y">Mild&ndash;moderate</td><td>Peaks weeks 1&ndash;8, tapers off</td></tr>
+<tr><td><strong>Vomiting</strong></td><td class="r">~24%</td><td class="y">Moderate</td><td>Worst during dose escalation</td></tr>
+<tr><td><strong>Diarrhea</strong></td><td class="r">~30%</td><td class="y">Mild&ndash;moderate</td><td>Can alternate with constipation</td></tr>
+<tr><td><strong>Constipation</strong></td><td class="y">~24%</td><td class="g">Mild</td><td>Persistent in some users</td></tr>
+<tr><td><strong>Decreased appetite</strong></td><td class="y">Common</td><td class="g">Desired effect</td><td>Ongoing</td></tr>
+<tr><td><strong>Acid reflux</strong></td><td class="y">Common</td><td class="g">Mild</td><td>Manageable with meal timing</td></tr>
+<tr><td><strong>Fatigue</strong></td><td class="y">Common</td><td class="g">Mild</td><td>Especially during caloric deficit</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Critical Rule</div>
+  <p>Slow dose titration is non-negotiable. Jumping to a high dose too fast is the number one reason people feel miserable on GLP-1 compounds. Follow a proper schedule over 4&ndash;8 weeks minimum.</p>
+</div>
+
+<hr class="sep">
+
+<!-- GH Peptides Side Effects -->
+<h2>Growth Hormone Secretagogues</h2>
+
+<p>GH peptides like CJC-1295, ipamorelin, MK-677, and tesamorelin stimulate your pituitary to release more growth hormone. The side effects reflect that hormonal shift. For compound-specific details, see our guides on <a href="/articles/cjc-1295-dac-guide">CJC-1295 DAC</a> and the <a href="/articles/tesamorelin-ipamorelin-stack-guide">tesamorelin-ipamorelin stack</a>.</p>
+
+<div class="cd ca">
+  <div class="tg">GH Peptides</div>
+  <h3>Metabolic and Fluid-Related Effects</h3>
+  <p style="font-size:14px;margin-bottom:0;">GH elevation affects sodium and water reabsorption in the kidneys, increases IGF-1 (which can cause tingling), and has anti-insulin effects that raise fasting glucose. MK-677 is the most aggressive in this class because it's also a ghrelin mimetic.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Frequency</th><th>Mechanism</th></tr></thead>
+<tbody>
+<tr><td><strong>Water retention</strong></td><td class="y">~6% clinical, higher anecdotal</td><td>GH affects sodium/water reabsorption in kidneys</td></tr>
+<tr><td><strong>Tingling/numbness</strong></td><td class="y">Common</td><td>Elevated IGF-1, mimics carpal tunnel</td></tr>
+<tr><td><strong>Increased hunger</strong></td><td class="r">Strong with MK-677</td><td>MK-677 is a ghrelin mimetic</td></tr>
+<tr><td><strong>Joint pain/stiffness</strong></td><td class="y">Occasional</td><td>Related to GH elevation</td></tr>
+<tr><td><strong>Elevated fasting glucose</strong></td><td class="r">Documented (MK-677)</td><td>GH has anti-insulin effects (<a href="https://pubmed.ncbi.nlm.nih.gov/18544658/">PubMed</a>)</td></tr>
+<tr><td><strong>Vivid dreams</strong></td><td class="y">Common</td><td>Sleep architecture changes</td></tr>
+<tr><td><strong>Cortisol/prolactin increases</strong></td><td class="y">Temporary</td><td>More common with GHRP-6/GHRP-2</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Warning: Pre-Diabetic Users</div>
+  <p>If you're pre-diabetic or insulin resistant, get <a href="/articles/peptide-bloodwork-guide">bloodwork</a> before and during GH peptide use. MK-677 can increase fasting glucose and decrease insulin sensitivity.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Healing Peptides -->
+<h2>Healing Peptides: BPC-157 and TB-500</h2>
+
+<p><a href="/articles/bpc-157-complete-guide">BPC-157</a> and <a href="/articles/tb-500-complete-guide">TB-500</a> are the two most popular recovery peptides. Their side effect profiles are considerably milder than GLP-1s or GH peptides.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--plum);">BPC-157 Effects</h4>
+    <p>Occasional nausea (oral form), dizziness, mild GI discomfort, and temporary temperature increases. Generally well-tolerated at standard doses.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">TB-500 Effects</h4>
+    <p>Occasional headaches, mild lethargy, and head rush shortly after injection. Most users report minimal issues at recommended doses.</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Compound</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Nausea</strong></td><td>BPC-157 (oral)</td><td class="g">Occasional, mild</td></tr>
+<tr><td><strong>Dizziness</strong></td><td>BPC-157</td><td class="g">Occasional</td></tr>
+<tr><td><strong>GI discomfort</strong></td><td>BPC-157 (oral)</td><td class="g">Mild</td></tr>
+<tr><td><strong>Temperature increase</strong></td><td>BPC-157</td><td class="g">Temporary</td></tr>
+<tr><td><strong>Headaches</strong></td><td>TB-500</td><td class="g">Occasional</td></tr>
+<tr><td><strong>Lethargy</strong></td><td>TB-500</td><td class="g">Mild</td></tr>
+<tr><td><strong>Head rush</strong></td><td>TB-500</td><td class="y">Shortly after injection</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Theoretical Concern</div>
+  <p>BPC-157's potential to promote angiogenesis (new blood vessel formation) has implications for anyone with a cancer history (<a href="https://pubmed.ncbi.nlm.nih.gov/29767834/">PubMed</a>). Clinical significance at typical doses isn't established, but discuss it with your doctor.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Immune Peptides -->
+<h2>Immune and Antimicrobial Peptides</h2>
+
+<p>Thymosin Alpha-1 and LL-37 are the most commonly discussed immune peptides. Their side effect profiles are generally mild, though less clinical data exists for LL-37 compared to pharmaceutical-grade TA-1.</p>
+
+<table class="tbl">
+<thead><tr><th>Compound</th><th>Common Side Effects</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Thymosin Alpha-1</strong></td><td>Injection site discomfort, mild flu-like symptoms</td><td class="g">Adverse events mostly mild, comparable to placebo (<a href="https://pubmed.ncbi.nlm.nih.gov/18177681/">PubMed</a>)</td></tr>
+<tr><td><strong>LL-37</strong></td><td>Localized pain, redness, low-grade fever</td><td class="y">Less clinical data available</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Anti-Drug Antibodies -->
+<h2>Immune Responses: Anti-Drug Antibodies</h2>
+
+<p>Your body can develop antibodies against synthetic peptides. This is more likely with peptides that differ from natural sequences or with longer-term use.</p>
+
+<p>In most cases, anti-drug antibodies don't neutralize the peptide's effect. But in some individuals they can reduce efficacy or trigger allergic reactions (<a href="https://pubmed.ncbi.nlm.nih.gov/32373124/">PubMed</a>).</p>
+
+<table class="tbl">
+<thead><tr><th>Factor</th><th>Impact on Immunogenicity</th></tr></thead>
+<tbody>
+<tr><td><strong>Peptide purity</strong></td><td class="r">Lower purity = higher immune response</td></tr>
+<tr><td><strong>Aggregation</strong></td><td class="r">Aggregated peptides are more immunogenic</td></tr>
+<tr><td><strong>Route of administration</strong></td><td class="y">Subcutaneous tends to be more immunogenic than IV</td></tr>
+<tr><td><strong>Duration of use</strong></td><td class="y">Longer use increases ADA risk</td></tr>
+<tr><td><strong>Sequence similarity to human</strong></td><td class="g">More similar = less immunogenic</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Why Sourcing Matters</div>
+  <p>Poorly manufactured peptides with high impurity levels are more likely to provoke immune responses. This is one of the strongest arguments for third-party tested products from reputable sources.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Red Flags -->
+<h2>Red Flags: When to Stop and Seek Medical Help</h2>
+
+<p>Most peptide side effects are annoying but harmless. The symptoms below are not. If you experience any of these, stop your peptide immediately and get medical attention.</p>
+
+<div class="cd cr">
+  <div class="tg">Emergency Symptoms</div>
+  <h3>These Require Immediate Medical Attention</h3>
+  <p style="font-size:14px;margin-bottom:0;">Don't wait to see if these resolve on their own. Severe abdominal pain, spreading hives with throat tightness, and chest pain are all potential emergencies that need same-day evaluation.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Symptom</th><th>Possible Cause</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td><strong>Severe abdominal pain radiating to back</strong></td><td>Pancreatitis (GLP-1 risk, <a href="https://pubmed.ncbi.nlm.nih.gov/28975607/">PubMed</a>)</td><td class="r">Emergency</td></tr>
+<tr><td><strong>Neck lump, difficulty swallowing, hoarseness</strong></td><td>Thyroid C-cell changes (GLP-1 boxed warning)</td><td class="r">Seek evaluation</td></tr>
+<tr><td><strong>Spreading hives, throat tightness, difficulty breathing</strong></td><td>Anaphylaxis</td><td class="r">Emergency</td></tr>
+<tr><td><strong>Persistent vision changes</strong></td><td>Intracranial hypertension (GH-related)</td><td class="r">Seek evaluation</td></tr>
+<tr><td><strong>Chest pain or irregular heartbeat</strong></td><td>Cardiovascular effects</td><td class="r">Emergency</td></tr>
+<tr><td><strong>Severe persistent vomiting</strong></td><td>Dehydration risk (GLP-1s)</td><td class="r">Seek care</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Practical Tips -->
+<h2>Practical Tips to Minimize Side Effects</h2>
+
+<p>Most peptide side effects are dose-dependent and timing-dependent. Smart practices dramatically reduce how often and how severely they hit.</p>
+
+<h3>Dosing Strategy</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Start Low, Go Slow</h4>
+    <p>The #1 rule for every peptide. Rushing titration is the most common mistake new users make.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Time Doses Strategically</h4>
+    <p>GH peptides work best before bed. GLP-1 injections are typically best in the morning.</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Tip</th><th>Why It Matters</th></tr></thead>
+<tbody>
+<tr><td><strong>GLP-1 titration</strong></td><td>Follow a proper schedule over <strong>4&ndash;8 weeks minimum</strong></td></tr>
+<tr><td><strong>Eat smaller, more frequent meals</strong></td><td>Large meals + delayed gastric emptying = severe nausea on GLP-1s</td></tr>
+<tr><td><strong>Stay hydrated</strong></td><td>Especially important with GLP-1s (dehydration risk) and GH peptides (water retention)</td></tr>
+</tbody>
+</table>
+
+<h3>Injection Best Practices</h3>
+
+<table class="tbl">
+<thead><tr><th>Practice</th><th>Benefit</th></tr></thead>
+<tbody>
+<tr><td><strong>Rotate injection sites</strong></td><td class="g">Reduces local reactions, prevents lipodystrophy</td></tr>
+<tr><td><strong>Abdomen, outer thighs, upper arms</strong></td><td class="g">Best rotation pattern for subcutaneous injections</td></tr>
+<tr><td><strong>Use bacteriostatic water</strong></td><td class="g">Prevents bacterial growth in multi-use vials</td></tr>
+<tr><td><strong>Proper technique</strong></td><td class="g">See our <a href="/articles/how-to-inject-peptides-subcutaneously">injection guide</a></td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Monitoring -->
+<h2>Bloodwork and Monitoring</h2>
+
+<p>Bloodwork is not optional. It's the only way to catch silent problems like elevated glucose, liver enzyme changes, or kidney stress before they become serious.</p>
+
+<div class="d-t">
+  <div class="s">Key Principle</div>
+  <p>Get baseline labs before starting any peptide. Then recheck at 6&ndash;8 weeks for most markers, or 3 months for HbA1c and lipid panels. Your <a href="/articles/peptide-bloodwork-guide">bloodwork guide</a> has the full protocol.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Marker</th><th>When to Check</th><th>Relevant For</th></tr></thead>
+<tbody>
+<tr><td><strong>Fasting glucose</strong></td><td>Baseline + 6&ndash;8 weeks</td><td>GH peptides, GLP-1s</td></tr>
+<tr><td><strong>HbA1c</strong></td><td>Baseline + 3 months</td><td>GH peptides</td></tr>
+<tr><td><strong>IGF-1</strong></td><td>Baseline + 6&ndash;8 weeks</td><td>GH peptides</td></tr>
+<tr><td><strong>Liver enzymes</strong></td><td>Baseline + 6&ndash;8 weeks</td><td>All peptides</td></tr>
+<tr><td><strong>Kidney function</strong></td><td>Baseline + 6&ndash;8 weeks</td><td>GLP-1s (dehydration risk)</td></tr>
+<tr><td><strong>CBC</strong></td><td>Baseline</td><td>All peptides</td></tr>
+<tr><td><strong>Lipid panel</strong></td><td>Baseline + 3 months</td><td>GH peptides</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Drug Interactions -->
+<h2>Drug Interactions to Watch</h2>
+
+<p>Peptides don't exist in a vacuum. If you're taking other medications, certain combinations require extra attention and clinician oversight.</p>
+
+<table class="tbl">
+<thead><tr><th>Interaction</th><th>Concern</th><th>Recommendation</th></tr></thead>
+<tbody>
+<tr><td><strong>GLP-1s + oral medications</strong></td><td class="r">Delayed gastric emptying affects absorption</td><td>Watch warfarin, levothyroxine, antibiotics, oral contraceptives</td></tr>
+<tr><td><strong>GH peptides + insulin/diabetes meds</strong></td><td class="r">GH raises blood glucose</td><td>Adjust diabetes management with prescriber</td></tr>
+<tr><td><strong>BPC-157 + blood thinners</strong></td><td class="y">May affect coagulation pathways</td><td>Discuss with doctor</td></tr>
+<tr><td><strong>Thymosin Alpha-1 + immunosuppressants</strong></td><td class="r">TA-1 upregulates immune function</td><td>Could be counterproductive or dangerous</td></tr>
+<tr><td><strong>Alcohol + any peptide</strong></td><td class="y">Worsens GI side effects, impairs metabolic benefits</td><td>Limit consumption, especially during titration</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<!-- When to Pause -->
+<h2>When to Pause, Reduce, or Stop</h2>
+
+<p>Not every side effect means you need to quit. But knowing the difference between "ride it out" and "stop immediately" is critical for safety.</p>
+
+<div class="g2">
+  <div class="cd ca">
+    <div class="tg">Reduce Dose If</div>
+    <h3>These Warrant Pulling Back</h3>
+    <p style="font-size:14px;margin-bottom:0;">Nausea affects your ability to eat adequately for more than a week. Water retention doesn't resolve after 2&ndash;3 weeks. Tingling or numbness is worsening progressively. Persistent headaches aren't improving.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Stop and Seek Help If</div>
+    <h3>These Require Medical Attention</h3>
+    <p style="font-size:14px;margin-bottom:0;">Any red flag symptom listed above. Side effects affect daily functioning. Signs of injection site infection (increasing redness, warmth, pus, fever). Bloodwork shows concerning changes in glucose, liver enzymes, or kidney markers.</p>
+  </div>
+</div>
+
+<div class="d">
+  <div class="s">Be Honest With Your Provider</div>
+  <p>Many peptides exist in a gray area (see our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a>). Doctors can't help you if they don't know what's in your system. Be upfront about everything you're using.</p>
+</div>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Are peptide side effects permanent?</summary>
+    <div class="fa">The vast majority are not. Most resolve within days to weeks of stopping or reducing dose. Water retention from GH peptides clears within a week. GI effects from GLP-1s resolve within 1&ndash;2 weeks. Long-term effects are extremely rare at standard doses.</div>
+  </details>
+  <details>
+    <summary>Do oral peptides have fewer side effects than injectables?</summary>
+    <div class="fa">Not necessarily fewer, just different. Oral peptides have more GI-focused side effects. Injectables cause more injection site reactions. Oral bioavailability is lower for most peptides, potentially requiring higher doses that cause more GI irritation.</div>
+  </details>
+  <details>
+    <summary>Can I take multiple peptides at once?</summary>
+    <div class="fa">Many people stack peptides successfully. But stacking makes it harder to identify which compound causes a specific side effect. If you're new, start one peptide at a time, stabilize for a few weeks, then consider adding another.</div>
+  </details>
+  <details>
+    <summary>How long do side effects typically last?</summary>
+    <div class="fa">Most initial side effects peak within 1&ndash;2 weeks and subside by week 4&ndash;6. GLP-1 GI side effects can take up to 8 weeks to settle, especially with each dose increase. If side effects aren't improving after 6&ndash;8 weeks at a stable dose, consult a provider.</div>
+  </details>
+  <details>
+    <summary>Are side effects worse with research-grade vs. pharmaceutical-grade peptides?</summary>
+    <div class="fa">Generally, yes. Pharmaceutical-grade peptides undergo rigorous quality control. Research-grade varies enormously in purity, and impurities drive injection site reactions and immune responses. Third-party testing is non-negotiable for research-grade products.</div>
+  </details>
+  <details>
+    <summary>Should I stop a peptide if I feel nauseous the first week?</summary>
+    <div class="fa">Not necessarily. Mild nausea during the first 1&ndash;2 weeks is common and usually resolves as your body adjusts. However, if nausea is severe enough that you can't eat adequately, reduce your dose. Never push through symptoms that affect your ability to function normally.</div>
+  </details>
+  <details>
+    <summary>Does injection site matter for side effects?</summary>
+    <div class="fa">Yes. The abdomen typically provides the most consistent absorption. Rotating between abdomen, outer thighs, and upper arms reduces the risk of local reactions and lipodystrophy (tissue changes at the injection site). Avoid injecting into the same spot repeatedly.</div>
+  </details>
+  <details>
+    <summary>Can peptide side effects indicate a quality problem with the product?</summary>
+    <div class="fa">Sometimes. Unusual or severe injection site reactions, unexpected systemic symptoms, or effects that don't match the known profile of your peptide could indicate contamination, degradation, or mislabeling. If something feels off, stop using the product and consider third-party testing.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Bottom Line -->
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Peptides are powerful tools, but they come with real trade-offs. Understanding the common side effects for your specific category, knowing the warning signs, and following smart dosing practices makes the difference between a positive experience and a miserable one.</p>
+</div>
+
+<p>Don't skip your bloodwork. Don't rush your titration. And don't ignore your body when it's telling you something is off.</p>
+
+<p>The best outcomes come from starting low, tracking how you feel, and having an honest relationship with a healthcare provider who knows what you're taking.</p>
+
+<!-- Medical Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be treated as such. Peptide use carries real risks. Always consult a qualified healthcare provider before starting any peptide protocol, especially if you have pre-existing conditions or take other medications.
+</div>
+
+<!-- References -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Injection site reactions in peptide therapy. <em>J Clin Pharmacol.</em> 2019. <a href="https://pubmed.ncbi.nlm.nih.gov/31205634/">PubMed</a><br>
+Nass R et al. Effects of an oral ghrelin mimetic on body composition and clinical outcomes in healthy older adults. <em>Ann Intern Med.</em> 2008;149(9):601&ndash;611. <a href="https://pubmed.ncbi.nlm.nih.gov/18544658/">PubMed</a><br>
+Sikirica V et al. BPC-157 and angiogenesis. <em>J Physiol Pharmacol.</em> 2018;69(2). <a href="https://pubmed.ncbi.nlm.nih.gov/29767834/">PubMed</a><br>
+Pancreatitis risk with GLP-1 receptor agonists. <em>Diabetes Obes Metab.</em> 2017. <a href="https://pubmed.ncbi.nlm.nih.gov/28975607/">PubMed</a><br>
+Thymalfasin safety profile. <em>Expert Opin Drug Saf.</em> 2008;7(1):43&ndash;57. <a href="https://pubmed.ncbi.nlm.nih.gov/18177681/">PubMed</a><br>
+Anti-drug antibodies in peptide therapeutics. <em>Front Immunol.</em> 2020;11:1024. <a href="https://pubmed.ncbi.nlm.nih.gov/32373124/">PubMed</a>
+</p>
+
+<!-- Related Reading -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/semaglutide-weight-loss-guide">Semaglutide Weight Loss Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-bloodwork-guide">Peptide Bloodwork Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/how-to-inject-peptides-subcutaneously">How to Inject Peptides</a> &nbsp;&middot;&nbsp;
+<a href="/articles/are-peptides-legal-fda-regulations-2026">Peptide Legality Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/semaglutide-weight-loss-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide Weight Loss Guide</a>
+            <a href="/articles/peptide-bloodwork-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Bloodwork Guide</a>
+            <a href="/articles/how-to-inject-peptides-subcutaneously" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">How to Inject Peptides Subcutaneously</a>
+            <a href="/articles/are-peptides-legal-fda-regulations-2026" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Legality Guide 2026</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

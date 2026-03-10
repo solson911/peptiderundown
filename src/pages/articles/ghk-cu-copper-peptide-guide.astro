@@ -1,0 +1,592 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "GHK-Cu: The Copper Peptide for Skin, Hair, and Healing",
+  description: "A complete guide to GHK-Cu, the naturally occurring copper peptide with proven benefits for skin rejuvenation, hair growth, wound healing, and anti-aging. Mechanisms, dosing, and research.",
+  image: "/images/articles/ghk-cu.webp",
+  date: "2026-02-14",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#1A0F2E 0%,#2D1B4E 40%,#3A2468 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Skin Science &middot; Anti-Aging</div>
+  <h1>GHK-Cu: The Copper Peptide for Skin, Hair, and Healing</h1>
+  <p class="sub">A naturally occurring tripeptide that declines with age, linked to collagen production, wound repair, and over 4,000 gene expression changes. What the clinical data actually shows.</p>
+  <div class="pills">
+    <span class="pill">Copper Peptide &middot; Tripeptide</span>
+    <span class="pill">Topical &middot; Injectable</span>
+    <span class="pill">Collagen &middot; Anti-Aging</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">4,000+</div><div class="l">Genes<br>Affected</div></div>
+  <div class="sb"><div class="v c2">60%</div><div class="l">Decline by<br>Age 60</div></div>
+  <div class="sb"><div class="v c3">3</div><div class="l">Amino Acids<br>+ Copper(II)</div></div>
+  <div class="sb"><div class="v c4">1970s</div><div class="l">First Isolated<br>by Dr. Pickart</div></div>
+</div>
+
+<p>GHK-Cu is one of those <a href="/articles/what-are-peptides-beginners-guide">peptides</a> that sounds too good to be true. A tiny tripeptide that boosts collagen, speeds wound healing, regrows <a href="/articles/ghk-cu-skin-hair-guide">hair</a>, and reduces inflammation?</p>
+
+<p>But the research goes back decades, and it holds up surprisingly well. This is one of the few peptides where the clinical data actually matches the hype.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational breakdown of GHK-Cu covering its mechanisms, clinical evidence, dosing methods, and safety profile. It is <strong>not a recommendation to use GHK-Cu</strong>. Consult a qualified healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<!-- ========== COMPOUND OVERVIEW ========== -->
+<hr class="sep">
+<h2>GHK-Cu at a Glance</h2>
+
+<div class="cd cp">
+  <div class="tg">Compound Profile</div>
+  <h3>GHK-Cu (Glycyl-L-Histidyl-L-Lysine Copper)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Sequence:</strong> Gly-His-Lys + Cu(II) &nbsp;|&nbsp; <strong>Type:</strong> Naturally occurring tripeptide-copper complex &nbsp;|&nbsp; <strong>Molecular Weight:</strong> 403.93 g/mol &nbsp;|&nbsp; <strong>Discovered:</strong> 1970s by Dr. Loren Pickart &nbsp;|&nbsp; <strong>Routes:</strong> Topical cream/serum, subcutaneous injection, microneedling, nasal spray &nbsp;|&nbsp; <strong>FDA Status:</strong> Not approved as a drug; widely used in cosmetics &nbsp;|&nbsp; <strong>Primary Actions:</strong> Collagen synthesis, wound healing, anti-inflammatory, gene modulation</p>
+</div>
+
+<p>GHK-Cu was first isolated from human plasma in the 1970s by Dr. Loren Pickart (<a href="https://pubmed.ncbi.nlm.nih.gov/18789600/">Pickart, 2008</a>). The "Cu" refers to copper. GHK binds copper(II) ions with extremely high affinity, and it's this copper-bound form that's biologically active.</p>
+
+<p>Your body produces GHK-Cu naturally, but levels drop sharply with age. At 20, plasma concentrations sit around 200 ng/mL. By 60, that's fallen to roughly 80 ng/mL.</p>
+
+<p>That decline correlates with visible aging, slower wound healing, and reduced tissue repair capacity. For a deeper compound profile, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>How GHK-Cu Works: Three Core Pathways</h2>
+
+<p>GHK-Cu acts through multiple biological pathways simultaneously. Understanding these mechanisms explains why such a small molecule produces such a wide range of effects across skin, hair, and tissue repair.</p>
+
+<div class="svg-box">
+  <div class="st">GHK-Cu: Copper Peptide Mechanism of Action</div>
+  <div class="ss">Gene modulation &middot; Copper delivery &middot; Stem cell recruitment &middot; Collagen pathway</div>
+  <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+    <!-- Gene Modulation -->
+    <rect x="15" y="10" width="160" height="260" rx="12" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="95" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6E3B8A">Gene Switch</text>
+    <text x="95" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" letter-spacing="1" font-weight="600">4,000+ GENES</text>
+    <line x1="35" y1="65" x2="155" y2="65" stroke="#6E3B8A" stroke-opacity=".2"/>
+    <text x="95" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Upregulates repair</text>
+    <text x="95" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#38; collagen genes</text>
+    <text x="95" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#8595;</text>
+    <text x="95" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">Downregulates</text>
+    <text x="95" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">inflammation</text>
+    <text x="95" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050">&#38; fibrosis genes</text>
+    <line x1="35" y1="190" x2="155" y2="190" stroke="#6E3B8A" stroke-opacity=".15"/>
+    <text x="95" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6E3B8A" font-weight="600">KEY OUTCOME</text>
+    <text x="95" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">Younger gene</text>
+    <text x="95" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#3E2050" font-weight="500">expression pattern</text>
+
+    <!-- Copper Delivery -->
+    <rect x="190" y="10" width="160" height="260" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="270" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Cu(II) Delivery</text>
+    <text x="270" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">ENZYMATIC COFACTOR</text>
+    <line x1="210" y1="65" x2="330" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="270" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Bioavailable copper</text>
+    <text x="270" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">to lysyl oxidase</text>
+    <text x="270" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="270" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Collagen cross-linking</text>
+    <text x="270" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">SOD activation</text>
+    <text x="270" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Angiogenesis</text>
+    <line x1="210" y1="190" x2="330" y2="190" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="270" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="270" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Structural tissue</text>
+    <text x="270" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">integrity</text>
+
+    <!-- Stem Cell Recruitment -->
+    <rect x="365" y="10" width="160" height="260" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="445" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">Stem Cells</text>
+    <text x="445" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">REGENERATIVE</text>
+    <line x1="385" y1="65" x2="505" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="445" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Attracts mesenchymal</text>
+    <text x="445" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">stem cells to injury</text>
+    <text x="445" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="445" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Fibroblast growth</text>
+    <text x="445" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Osteoblast growth</text>
+    <text x="445" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Chondrocyte growth</text>
+    <line x1="385" y1="190" x2="505" y2="190" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="445" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="445" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Multi-tissue</text>
+    <text x="445" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">healing</text>
+
+    <!-- Collagen Pathway -->
+    <rect x="540" y="10" width="145" height="260" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="612" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Collagen</text>
+    <text x="612" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">SKIN MATRIX</text>
+    <line x1="555" y1="65" x2="670" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="612" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Stimulates type I</text>
+    <text x="612" y="100" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#38; III collagen</text>
+    <text x="612" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="612" y="140" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">GAG synthesis</text>
+    <text x="612" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Hyaluronic acid</text>
+    <text x="612" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Dermatan sulfate</text>
+    <line x1="555" y1="190" x2="670" y2="190" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="612" y="215" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">KEY OUTCOME</text>
+    <text x="612" y="235" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">Firmer, thicker</text>
+    <text x="612" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010" font-weight="500">hydrated skin</text>
+  </svg>
+</div>
+
+<h3>Gene Expression Modulation</h3>
+
+<p>A landmark study found GHK-Cu significantly affected <strong>4,000+ genes</strong>, roughly 6% of the human genome (<a href="https://pubmed.ncbi.nlm.nih.gov/23019195/">Campbell et al., 2012</a>). That's not a typo. A single tripeptide shifting thousands of genes toward a younger expression pattern.</p>
+
+<p>The upregulated genes handle tissue repair, collagen synthesis, and antioxidant defense. The downregulated ones control inflammation, tissue destruction, and fibrosis.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>GHK-Cu acts as a master switch, shifting gene expression toward a younger, more regenerative pattern. This is one of the broadest gene-modulatory effects documented for any single peptide.</p>
+</div>
+
+<h3>Copper Delivery</h3>
+
+<p>Copper is an essential trace element involved in dozens of enzymatic reactions. GHK-Cu delivers it in a controlled, bioavailable form rather than as free copper ions, which can cause oxidative damage.</p>
+
+<table class="tbl">
+<thead><tr><th>Copper-Dependent Process</th><th>Enzyme</th><th>Relevance</th></tr></thead>
+<tbody>
+<tr><td><strong>Collagen cross-linking</strong></td><td>Lysyl oxidase</td><td class="g">Critical for skin firmness</td></tr>
+<tr><td><strong>Antioxidant defense</strong></td><td>Superoxide dismutase</td><td class="g">Protects against UV damage</td></tr>
+<tr><td><strong>New blood vessels</strong></td><td>Various</td><td class="g">Wound healing support</td></tr>
+<tr><td><strong>Nerve repair</strong></td><td>Various</td><td class="y">Less studied but promising</td></tr>
+</tbody>
+</table>
+
+<h3>Stem Cell Recruitment</h3>
+
+<p>GHK-Cu attracts mesenchymal stem cells to sites of injury. These stem cells can differentiate into fibroblasts, osteoblasts, and chondrocytes.</p>
+
+<p>That multi-lineage recruitment may explain why GHK-Cu accelerates healing across so many different tissue types. It's not just patching wounds; it's calling in the repair crew.</p>
+
+<!-- ========== SKIN BENEFITS ========== -->
+<hr class="sep">
+<h2>Skin Benefits: What the Clinical Data Shows</h2>
+
+<p>Skin rejuvenation is GHK-Cu's best-studied application. The data here is stronger than for most peptides in the cosmetic space, with controlled clinical trials showing measurable improvements.</p>
+
+<h3>Clinical Study Results</h3>
+
+<table class="tbl">
+<thead><tr><th>Study</th><th>Duration</th><th>Finding</th></tr></thead>
+<tbody>
+<tr><td><strong>Leyden et al., 2002</strong></td><td>12 weeks</td><td class="g">GHK-Cu cream increased skin collagen vs. placebo and vitamin C (<a href="https://pubmed.ncbi.nlm.nih.gov/12196747/">PubMed</a>)</td></tr>
+<tr><td><strong>Finkley et al., 2005</strong></td><td>12 weeks</td><td class="g">Improved laxity, clarity, firmness; comparable to tretinoin without irritation (<a href="https://pubmed.ncbi.nlm.nih.gov/16029674/">PubMed</a>)</td></tr>
+</tbody>
+</table>
+
+<p>Both studies used topical formulations at standard cosmetic concentrations. The Finkley study is particularly notable because it directly compared GHK-Cu to tretinoin (prescription-strength retinoid) and found similar results with far less irritation.</p>
+
+<h3>GHK-Cu vs. Retinoids</h3>
+
+<p>This comparison matters because retinoids are the gold standard in topical anti-aging. Matching their efficacy without the side effects is a meaningful claim.</p>
+
+<table class="tbl">
+<thead><tr><th>Factor</th><th>GHK-Cu</th><th>Retinoids (Tretinoin)</th></tr></thead>
+<tbody>
+<tr><td><strong>Wrinkle reduction</strong></td><td class="g">Comparable</td><td class="g">Comparable</td></tr>
+<tr><td><strong>Collagen stimulation</strong></td><td class="g">Yes</td><td class="g">Yes</td></tr>
+<tr><td><strong>Irritation</strong></td><td class="g">Minimal</td><td class="r">Dryness, peeling, sun sensitivity</td></tr>
+<tr><td><strong>Skin thickness</strong></td><td class="g">Improved</td><td class="g">Improved</td></tr>
+<tr><td><strong>Tolerance</strong></td><td class="g">Excellent</td><td class="y">Adjustment period needed</td></tr>
+</tbody>
+</table>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--plum);">Skin Thickness</h4>
+    <p>GHK-Cu reverses the thinning that defines chronological aging. Thicker skin means fewer visible wrinkles and better resilience against environmental damage.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Hydration Boost</h4>
+    <p>Stimulates glycosaminoglycan synthesis, including hyaluronic acid and dermatan sulfate. The result is plumper, more hydrated skin from the inside out.</p>
+  </div>
+</div>
+
+<!-- ========== HAIR GROWTH ========== -->
+<hr class="sep">
+<h2>Hair Growth</h2>
+
+<p>The hair data is less extensive than skin research, but what exists is encouraging. GHK-Cu affects multiple mechanisms relevant to hair loss.</p>
+
+<div class="cd ct">
+  <div class="tg">Hair Mechanisms</div>
+  <h3>How GHK-Cu Supports Hair Growth</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Follicle size:</strong> Increased follicle diameter correlates with thicker hair shafts &nbsp;|&nbsp; <strong>Growth phase:</strong> May prolong anagen (active growth) &nbsp;|&nbsp; <strong>Blood supply:</strong> Angiogenesis enhances nutrient delivery to follicles &nbsp;|&nbsp; <strong>DHT protection:</strong> Some evidence of counteracting dihydrotestosterone damage</p>
+</div>
+
+<p>A study comparing topical GHK-Cu to <strong>minoxidil 5%</strong> found similar hair growth stimulation in mice (<a href="https://pubmed.ncbi.nlm.nih.gov/17569567/">Pyo et al., 2007</a>). Human data is more limited, but anecdotal reports are consistently positive.</p>
+
+<div class="d-a">
+  <div class="s">Realistic Expectations</div>
+  <p>GHK-Cu is not a proven replacement for finasteride or minoxidil. It's a reasonable addition to a hair maintenance protocol, but don't expect it to reverse advanced hair loss on its own.</p>
+</div>
+
+<!-- ========== WOUND HEALING ========== -->
+<hr class="sep">
+<h2>Wound Healing and Tissue Repair</h2>
+
+<p>Wound healing is arguably GHK-Cu's most well-documented application. The evidence here is consistent across multiple animal and in vitro studies.</p>
+
+<h3>The Healing Cascade</h3>
+
+<table class="tbl">
+<thead><tr><th>Stage</th><th>GHK-Cu's Role</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Immune response</strong></td><td>Attracts macrophages and mast cells</td><td class="g">Clean wound bed</td></tr>
+<tr><td><strong>2. Angiogenesis</strong></td><td>Stimulates new blood vessel growth</td><td class="g">Nutrient supply restored</td></tr>
+<tr><td><strong>3. Structural repair</strong></td><td>Promotes collagen deposition</td><td class="g">Tissue integrity</td></tr>
+<tr><td><strong>4. Neural recovery</strong></td><td>Encourages nerve regeneration</td><td class="y">Sensation restored</td></tr>
+<tr><td><strong>5. Remodeling</strong></td><td>Modulates collagen type ratios</td><td class="g">Reduced scarring</td></tr>
+</tbody>
+</table>
+
+<p>Animal studies consistently show faster wound closure with GHK-Cu treatment. More importantly, GHK-Cu appears to promote <strong>regenerative healing</strong> (similar to fetal wound repair) rather than fibrotic scarring (<a href="https://pubmed.ncbi.nlm.nih.gov/7507147/">Mulder et al., 1994</a>).</p>
+
+<p>That distinction matters. Most wound healing in adults produces scar tissue. GHK-Cu shifts the balance toward actual tissue regeneration.</p>
+
+<!-- ========== ANTI-INFLAMMATORY ========== -->
+<hr class="sep">
+<h2>Anti-Inflammatory and Antioxidant Effects</h2>
+
+<p>GHK-Cu suppresses pro-inflammatory cytokines including <strong>IL-6</strong> and <strong>TNF-alpha</strong> while promoting anti-inflammatory signals. In a COPD study, GHK-Cu reversed many gene expression changes associated with the disease (<a href="https://pubmed.ncbi.nlm.nih.gov/23019195/">Campbell et al., 2012</a>).</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Direct Antioxidant</h4>
+    <p>GHK-Cu scavenges free radicals directly, providing immediate protection against oxidative stress and UV-induced skin damage.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Indirect Antioxidant</h4>
+    <p>Upregulates your body's own antioxidant enzymes, including superoxide dismutase. This gives longer-lasting protection than the peptide alone.</p>
+  </div>
+</div>
+
+<!-- ========== ADMINISTRATION ========== -->
+<hr class="sep">
+<h2>Administration Methods</h2>
+
+<p>GHK-Cu is versatile in terms of delivery routes. The right method depends on your goals.</p>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>Concentration/Dose</th><th>Pros</th><th>Cons</th></tr></thead>
+<tbody>
+<tr><td><strong>Topical (creams/serums)</strong></td><td>0.01&ndash;1%</td><td class="g">Easy, no needles, well-studied</td><td class="y">Limited to local effects</td></tr>
+<tr><td><strong><a href="/articles/how-to-inject-peptides-subcutaneously">Subcutaneous injection</a></strong></td><td>1&ndash;2 mg daily or EOD</td><td class="g">Systemic distribution</td><td class="y">Requires reconstitution</td></tr>
+<tr><td><strong>Nasal spray</strong></td><td>200&ndash;600 mcg/spray</td><td class="g">Non-invasive</td><td class="y">Less research available</td></tr>
+<tr><td><strong>Microneedling + topical</strong></td><td>Applied post-needling</td><td class="g">Deeper penetration</td><td class="y">Requires device</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Pro Tip</div>
+  <p>Microneedling + GHK-Cu makes theoretical sense. You're creating controlled micro-wounds while delivering the peptide deeper than any cream could reach. The combination amplifies both the wound-healing signal and the peptide's penetration.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Guidelines</h2>
+
+<p>Dosing varies significantly by route. Topical users can start immediately; injectable users should understand <a href="/articles/peptide-dosing-calculator-reconstitution-math">reconstitution math</a> first.</p>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>Dose</th><th>Frequency</th><th>Results Timeline</th></tr></thead>
+<tbody>
+<tr><td><strong>Topical</strong></td><td>1&ndash;3 ppm or higher</td><td>1&ndash;2x daily</td><td class="y">4&ndash;12 weeks</td></tr>
+<tr><td><strong>Subcutaneous</strong></td><td>1&ndash;2 mg</td><td>Daily or EOD</td><td class="y">4&ndash;8 week cycles</td></tr>
+<tr><td><strong>Nasal</strong></td><td>200&ndash;600 mcg/spray</td><td>1&ndash;2 sprays/day</td><td class="y">Less standardized</td></tr>
+</tbody>
+</table>
+
+<div class="d">
+  <div class="s">Dosing Note</div>
+  <p>For skin-specific goals, topical application is sufficient and better studied. For systemic <a href="/articles/best-peptides-for-anti-aging">anti-aging</a> benefits (joint health, overall tissue repair), injectable delivery reaches the whole body. Need help with dosing math? Use our free <a href="/articles/peptide-dosing-calculator-reconstitution-math">Peptide Reconstitution Calculator</a>.</p>
+</div>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects and Safety</h2>
+
+<p>GHK-Cu has an excellent safety profile as a naturally occurring human peptide. Side effects are rare and typically mild.</p>
+
+<h3>Side Effects by Route</h3>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>Side Effect</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td><strong>Topical</strong></td><td>Mild skin irritation</td><td class="g">Rare</td></tr>
+<tr><td><strong>Topical</strong></td><td>Slight tingling</td><td class="g">Usually transient</td></tr>
+<tr><td><strong>Injectable</strong></td><td>Injection site redness/swelling</td><td class="y">Mild, transient</td></tr>
+</tbody>
+</table>
+
+<h3>Cancer Considerations</h3>
+
+<p>The theoretical concern about angiogenesis (promoting blood vessel growth that could feed tumors) exists with any pro-angiogenic compound. However, the gene expression data actually shows GHK-Cu <strong>downregulating many cancer-related genes</strong>.</p>
+
+<div class="d-r">
+  <div class="s">Important Safety Note</div>
+  <p>If you have an active malignancy, discuss GHK-Cu with your oncologist before use. The relationship between GHK-Cu and cancer biology is complex, and caution is warranted in this population.</p>
+</div>
+
+<!-- ========== WHO MIGHT BENEFIT ========== -->
+<hr class="sep">
+<h2>Who Might Benefit from GHK-Cu</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--plum);">Anti-Aging Seekers</h4>
+    <p>Anyone looking to improve skin firmness, reduce fine lines, and boost collagen without the irritation of retinoids.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Wound Recovery</h4>
+    <p>Post-surgical patients or those with slow-healing wounds may benefit from GHK-Cu's tissue repair acceleration.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Hair Thinning</h4>
+    <p>Those experiencing early-stage hair thinning who want to add a peptide-based approach alongside standard treatments.</p>
+  </div>
+</div>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Stacking with Other Compounds</h2>
+
+<p>GHK-Cu pairs well with several other peptides and compounds depending on your goals.</p>
+
+<table class="tbl">
+<thead><tr><th>Stack Partner</th><th>Goal</th><th>Compatibility</th></tr></thead>
+<tbody>
+<tr><td><strong><a href="/articles/bpc-157-complete-guide">BPC-157</a></strong></td><td>Accelerated healing</td><td class="g">Excellent synergy</td></tr>
+<tr><td><strong>Retinol (topical)</strong></td><td>Anti-aging</td><td class="g">Different mechanisms, no conflict</td></tr>
+<tr><td><strong>Vitamin C serum</strong></td><td>Collagen + antioxidant</td><td class="g">Complementary pathways</td></tr>
+<tr><td><strong>Minoxidil</strong></td><td>Hair growth</td><td class="g">Different targets</td></tr>
+<tr><td><strong><a href="/articles/thymosin-beta-4-complete-guide">TB-500</a></strong></td><td>Tissue repair</td><td class="g">Synergistic wound healing</td></tr>
+</tbody>
+</table>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Does GHK-Cu really work for wrinkles?</summary>
+    <div class="fa">Yes. Multiple controlled clinical studies show measurable improvements in fine lines, skin firmness, and skin thickness. Effect size is comparable to retinoids like tretinoin, but with far less irritation.</div>
+  </details>
+  <details>
+    <summary>Can I use GHK-Cu with retinol?</summary>
+    <div class="fa">You can. They work through different mechanisms with no known negative interaction. Many people alternate them (retinol at night, GHK-Cu in the morning) or use them on different days.</div>
+  </details>
+  <details>
+    <summary>How long until I see results?</summary>
+    <div class="fa">For skin improvements, expect initial changes around 4 weeks with peak results at 8&ndash;12 weeks. Hair growth takes 3&ndash;6 months. Wound healing effects can appear within days to weeks.</div>
+  </details>
+  <details>
+    <summary>Is injectable GHK-Cu better than topical?</summary>
+    <div class="fa">For skin-specific goals, <a href="/articles/diy-ghk-cu-copper-peptide-cream">topical is sufficient</a> and better studied. For systemic benefits like joint health or overall anti-aging, injections deliver the peptide to the whole body. It depends entirely on what you're trying to achieve.</div>
+  </details>
+  <details>
+    <summary>Can GHK-Cu regrow hair?</summary>
+    <div class="fa">The evidence is promising but not conclusive. Animal studies show effects comparable to minoxidil. It's reasonable to try as part of a broader hair protocol, but don't expect it to reverse advanced hair loss on its own.</div>
+  </details>
+  <details>
+    <summary>Is GHK-Cu safe for long-term use?</summary>
+    <div class="fa">Topically, yes. Decades of use in skincare products supports long-term safety. For injectable use, long-term data is more limited, though the peptide's natural occurrence in human plasma is reassuring.</div>
+  </details>
+  <details>
+    <summary>Where can I buy GHK-Cu?</summary>
+    <div class="fa">Topical formulations are widely available from brands like The Ordinary, NIOD, and specialty peptide skincare lines. Injectable and nasal forms are sourced from peptide suppliers with third-party testing.</div>
+  </details>
+  <details>
+    <summary>Does GHK-Cu increase collagen permanently?</summary>
+    <div class="fa">Collagen stimulation lasts as long as you're using GHK-Cu. If you stop, production returns to baseline over time. Consistent use is needed for sustained benefits, similar to how exercise maintains muscle.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>GHK-Cu is one of the best-studied peptides in the anti-aging and regenerative space. Its breadth of effects (skin rejuvenation, wound healing, hair growth, gene modulation) is remarkable for such a small molecule. The safety profile is excellent, and topical formulations are widely accessible.</p>
+</div>
+
+<p>For skin concerns, topical GHK-Cu is a well-supported, low-risk addition to any skincare routine. The clinical data puts it on par with retinoids for collagen and wrinkle reduction, without the irritation that drives many people away from prescription retinoids.</p>
+
+<p>For broader anti-aging goals, injectable use shows promise but needs more clinical data. The gene expression research is fascinating and suggests effects that go well beyond cosmetic improvements.</p>
+
+<p>If you're building a science-backed skincare or anti-aging protocol, GHK-Cu belongs on your shortlist.</p>
+
+<!-- ========== DISCLAIMER ========== -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not substitute for professional medical consultation, diagnosis, or treatment. Always consult a qualified healthcare provider before starting any peptide protocol. GHK-Cu is not FDA-approved as a drug. Individual results vary.
+</div>
+
+<!-- ========== REFERENCES ========== -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Pickart L. The human tri-peptide GHK and tissue remodeling. <em>J Biomater Sci Polym Ed.</em> 2008;19(8):969&ndash;988. <a href="https://pubmed.ncbi.nlm.nih.gov/18789600/">PubMed</a><br>
+Campbell JD, McDonough JE, Zeskind JE, et al. A gene expression signature of emphysema-related lung destruction and its reversal by the tripeptide GHK. <em>Genome Med.</em> 2012;4(10):67. <a href="https://pubmed.ncbi.nlm.nih.gov/23019195/">PubMed</a><br>
+Leyden JJ, Stephens TJ, Finkey MB, et al. Skin care benefits of copper peptide containing facial cream. <em>American Academy of Dermatology 60th Annual Meeting.</em> 2002. <a href="https://pubmed.ncbi.nlm.nih.gov/12196747/">PubMed</a><br>
+Finkley MB, Appa Y, Bhandarkar S. Copper peptide and skin. <em>Cosmetic Dermatology.</em> 2005. <a href="https://pubmed.ncbi.nlm.nih.gov/16029674/">PubMed</a><br>
+Pyo HK, Yoo HG, Won CH, et al. The effect of tripeptide-copper complex on human hair growth in vitro. <em>Arch Pharm Res.</em> 2007;30(7):834&ndash;839. <a href="https://pubmed.ncbi.nlm.nih.gov/17569567/">PubMed</a><br>
+Mulder GD, Patt LM, Sanders L, et al. Enhanced healing of ulcers in patients with diabetes by topical treatment with glycyl-L-histidyl-L-lysine copper. <em>Wound Repair Regen.</em> 1994;2(4):259&ndash;269. <a href="https://pubmed.ncbi.nlm.nih.gov/7507147/">PubMed</a><br>
+</p>
+
+<!-- ========== RELATED READING ========== -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/best-peptides-for-anti-aging">Best Peptides for Anti-Aging</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ghk-cu-skin-hair-guide">GHK-Cu Skin and Hair Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/diy-ghk-cu-copper-peptide-cream">DIY GHK-Cu Cream</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/best-peptides-for-anti-aging" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Anti-Aging</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/ghk-cu-skin-hair-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Skin and Hair Guide</a>
+            <a href="/articles/diy-ghk-cu-copper-peptide-cream" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">DIY GHK-Cu Copper Peptide Cream</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
