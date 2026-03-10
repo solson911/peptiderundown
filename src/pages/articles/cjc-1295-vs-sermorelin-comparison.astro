@@ -1,0 +1,551 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "CJC-1295 vs Sermorelin: Comparing Growth Hormone Peptides",
+  description: "CJC-1295 and Sermorelin both stimulate natural growth hormone release, but differ in half-life, dosing frequency, cost, and physiological effects. A side-by-side breakdown.",
+  image: "/images/articles/cjc-1295-vs-sermorelin-comparison.webp",
+  date: "2026-02-17",
+  category: "Comparisons",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Comparison &middot; GHRH Analogs &middot; Growth Hormone</div>
+  <h1>CJC-1295 vs Sermorelin: Comparing Growth Hormone Peptides</h1>
+  <p class="sub">Both stimulate your pituitary to produce more growth hormone. One lasts a week, the other 20 minutes. Here is how they actually differ in dosing, results, cost, and who should consider each.</p>
+  <div class="pills">
+    <span class="pill">GHRH &middot; Pituitary Stimulation</span>
+    <span class="pill">Fat Loss &middot; Recovery</span>
+    <span class="pill">Body Composition &middot; Sleep</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">~8 days</div><div class="l">CJC-1295 DAC<br>Half-Life</div></div>
+  <div class="sb"><div class="v c2">~15 min</div><div class="l">Sermorelin<br>Half-Life</div></div>
+  <div class="sb"><div class="v c3">1&ndash;2x</div><div class="l">CJC-1295 Weekly<br>Injections</div></div>
+  <div class="sb"><div class="v c4">Daily</div><div class="l">Sermorelin<br>Injections</div></div>
+</div>
+
+<p>Growth hormone peptides have become some of the most talked-about compounds in the anti-aging and performance space. CJC-1295 and <a href="/articles/sermorelin-growth-hormone-guide">Sermorelin</a> sit at the center of that conversation because they both do the same fundamental thing: tell your pituitary gland to release more growth hormone.</p>
+
+<p>But how they do it, how long they last, and what the experience actually feels like are very different. Picking the wrong one for your goals, schedule, or tolerance for injections can mean months of suboptimal results. This guide breaks down everything you need to know to make that call.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>A side-by-side comparison of CJC-1295 (both DAC and non-DAC forms) and Sermorelin covering mechanisms, dosing, efficacy, side effects, cost, and practical use cases. This is <strong>not a recommendation to use either peptide</strong>. Both require medical supervision. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== CJC-1295 OVERVIEW ========== -->
+<hr class="sep">
+<h2>What Is CJC-1295?</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>CJC-1295 (GHRH Analog)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Synthetic growth hormone-releasing hormone analog &nbsp;|&nbsp; <strong>Forms:</strong> With DAC (Drug Affinity Complex) and without DAC (Mod GRF 1-29) &nbsp;|&nbsp; <strong>Half-Life:</strong> ~8 days (DAC), ~30 min (no DAC) &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Research peptide; not FDA-approved &nbsp;|&nbsp; <strong>Primary Actions:</strong> GH release, IGF-1 elevation, body recomposition</p>
+</div>
+
+<p>CJC-1295 is a lab-engineered peptide built from the natural growth hormone-releasing hormone (GHRH) backbone. Its molecular structure contains modifications that enhance stability and receptor binding far beyond what the body's native GHRH can achieve.</p>
+
+<p>The peptide exists in two distinct forms, and the difference between them matters more than most people realize.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">CJC-1295 with DAC</h4>
+    <p><strong>Drug Affinity Complex</strong> binds the peptide to albumin in the bloodstream, creating a slow-release reservoir. This extends the half-life to roughly 8 days. Growth hormone stays elevated continuously rather than pulsing. Requires only 1&ndash;2 injections per week.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">CJC-1295 without DAC (Mod GRF 1-29)</h4>
+    <p><strong>No albumin binding.</strong> Acts more like a souped-up version of natural GHRH. Half-life of about 30 minutes. Creates a sharp GH pulse that more closely mimics natural release patterns. Requires daily injections, often paired with a GHRP like <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a>.</p>
+  </div>
+</div>
+
+<p>For a complete breakdown of the DAC version, see our <a href="/articles/cjc-1295-dac-guide">CJC-1295 DAC guide</a>.</p>
+
+<!-- ========== SERMORELIN OVERVIEW ========== -->
+<hr class="sep">
+<h2>What Is Sermorelin?</h2>
+
+<div class="cd ct">
+  <div class="tg">Compound Profile</div>
+  <h3>Sermorelin Acetate (GHRH 1-29)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Type:</strong> Truncated GHRH fragment (amino acids 1&ndash;29) &nbsp;|&nbsp; <strong>Brand Name:</strong> Geref &nbsp;|&nbsp; <strong>Half-Life:</strong> 10&ndash;20 minutes &nbsp;|&nbsp; <strong>Route:</strong> Subcutaneous injection &nbsp;|&nbsp; <strong>FDA Status:</strong> Approved as diagnostic tool (1997); off-label for anti-aging &nbsp;|&nbsp; <strong>Primary Actions:</strong> Pulsatile GH release, anti-aging support, sleep improvement</p>
+</div>
+
+<p>Sermorelin acetate is the shortest fully functional fragment of natural GHRH. It contains amino acids 1 through 29 of the 44-amino acid natural hormone. This truncated version stimulates growth hormone release while avoiding potential immunogenic properties of the full molecule.</p>
+
+<p>Its FDA approval came in 1997 as a diagnostic tool for assessing pituitary function in children with growth disorders. While not FDA-approved for anti-aging, many functional medicine practitioners prescribe it off-label for age-related hormone decline. For the full story, see our <a href="/articles/sermorelin-growth-hormone-guide">Sermorelin guide</a>.</p>
+
+<div class="d-t">
+  <div class="s">Why Sermorelin Appeals to Clinicians</div>
+  <p>Sermorelin's key advantage is its precise mimicry of natural GHRH signals. It supports the body's intrinsic pulsatile rhythm of growth hormone release rather than creating a continuous elevation. Many physicians consider this pattern safer for long-term use because it preserves the body's natural feedback loops.</p>
+</div>
+
+<!-- ========== MECHANISM DIAGRAM ========== -->
+<hr class="sep">
+<h2>How They Work: Mechanism Comparison</h2>
+
+<p>Both peptides bind to the same receptor (GHRH-R) on the pituitary gland. The difference is in what happens after binding: duration, release pattern, and downstream signaling.</p>
+
+<div class="svg-box">
+  <div class="st">CJC-1295 vs Sermorelin: Mechanism of Action</div>
+  <div class="ss">Same receptor, different pharmacokinetics</div>
+  <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+    <!-- CJC-1295 DAC -->
+    <rect x="15" y="10" width="210" height="240" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="120" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">CJC-1295 (DAC)</text>
+    <text x="120" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">SUSTAINED RELEASE</text>
+    <line x1="35" y1="65" x2="205" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="120" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Binds albumin via DAC</text>
+    <text x="120" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="120" y="119" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Slow peptide release</text>
+    <text x="120" y="136" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">over ~8 days</text>
+    <text x="120" y="153" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">&#8595;</text>
+    <text x="120" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">Sustained GH + IGF-1</text>
+    <text x="120" y="187" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362">elevation (plateau)</text>
+    <line x1="35" y1="200" x2="205" y2="200" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="120" y="222" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">RESULT</text>
+    <text x="120" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">High, continuous IGF-1</text>
+
+    <!-- Sermorelin -->
+    <rect x="245" y="10" width="210" height="240" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="350" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">Sermorelin</text>
+    <text x="350" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">PULSATILE RELEASE</text>
+    <line x1="265" y1="65" x2="435" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="350" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Binds GHRH receptor</text>
+    <text x="350" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="350" y="119" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Rapid GH pulse</text>
+    <text x="350" y="136" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">within 10&ndash;20 min</text>
+    <text x="350" y="153" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">&#8595;</text>
+    <text x="350" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">Mimics natural</text>
+    <text x="350" y="187" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E">pulsatile GH rhythm</text>
+    <line x1="265" y1="200" x2="435" y2="200" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="350" y="222" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">RESULT</text>
+    <text x="350" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Moderate, natural IGF-1</text>
+
+    <!-- Shared Pathway -->
+    <rect x="475" y="10" width="210" height="240" rx="12" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="580" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#B48118">Shared Pathway</text>
+    <text x="580" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" letter-spacing="1" font-weight="600">DOWNSTREAM EFFECTS</text>
+    <line x1="495" y1="65" x2="665" y2="65" stroke="#B48118" stroke-opacity=".2"/>
+    <text x="580" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">GHRH-R activation</text>
+    <text x="580" y="102" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="580" y="119" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Pituitary releases GH</text>
+    <text x="580" y="136" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="580" y="153" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Liver converts to IGF-1</text>
+    <text x="580" y="170" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">&#8595;</text>
+    <text x="580" y="187" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">Fat loss, muscle, skin,</text>
+    <text x="580" y="204" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#5A4010">sleep, recovery</text>
+    <line x1="495" y1="220" x2="665" y2="220" stroke="#B48118" stroke-opacity=".15"/>
+    <text x="580" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B48118" font-weight="600">SAME TARGET, DIFFERENT PATTERN</text>
+  </svg>
+</div>
+
+<p>The key takeaway is that CJC-1295 DAC keeps GH and IGF-1 elevated around the clock. Sermorelin produces a sharp spike that fades within an hour, closely resembling what a healthy 25-year-old's pituitary does naturally while sleeping.</p>
+
+<p>Neither approach is inherently better. Sustained elevation produces stronger body composition changes. Pulsatile release preserves the body's natural feedback rhythms. The right choice depends on your goals and risk tolerance.</p>
+
+<h3>Why Release Pattern Matters</h3>
+
+<p>Your pituitary doesn't release growth hormone at a steady rate. It fires in bursts, primarily during deep sleep and after intense exercise. Sermorelin mimics this pattern because it clears the body fast enough for GH levels to return to baseline between doses.</p>
+
+<p>CJC-1295 DAC overrides that natural rhythm. Some researchers believe continuous GH elevation could desensitize the GH receptor over time or disrupt the body's feedback loops. Others argue the sustained exposure simply produces stronger anabolic and lipolytic effects. The honest answer is that long-term comparative data doesn't exist yet.</p>
+
+<p>What we do know is that both approaches raise IGF-1 levels measurably. A blood test at the 4-week mark will tell you more about your individual response than any amount of theoretical debate.</p>
+
+<!-- ========== HEAD TO HEAD ========== -->
+<hr class="sep">
+<h2>Head-to-Head Comparison</h2>
+
+<table class="tbl">
+<thead><tr><th>Feature</th><th>CJC-1295 (DAC)</th><th>CJC-1295 (No DAC)</th><th>Sermorelin</th></tr></thead>
+<tbody>
+<tr><td><strong>Half-life</strong></td><td class="g">~8 days</td><td class="y">~30 minutes</td><td class="y">10&ndash;20 minutes</td></tr>
+<tr><td><strong>Dosing frequency</strong></td><td class="g">1&ndash;2x/week</td><td class="y">Daily (1&ndash;3x)</td><td class="y">Daily</td></tr>
+<tr><td><strong>GH release pattern</strong></td><td class="y">Sustained plateau</td><td class="g">Pulsatile</td><td class="g">Pulsatile (most natural)</td></tr>
+<tr><td><strong>IGF-1 elevation</strong></td><td class="g">High</td><td class="y">Moderate</td><td class="y">Moderate</td></tr>
+<tr><td><strong>FDA history</strong></td><td class="r">Research peptide</td><td class="r">Research peptide</td><td class="g">Approved diagnostic tool</td></tr>
+<tr><td><strong>Monthly cost</strong></td><td class="r">$$$$</td><td class="y">$$$</td><td class="g">$$</td></tr>
+<tr><td><strong>Common stacking</strong></td><td>Standalone or with GHRP</td><td>Usually with Ipamorelin</td><td>With Ipamorelin or GHRP-6</td></tr>
+<tr><td><strong>Water retention risk</strong></td><td class="r">Higher</td><td class="y">Moderate</td><td class="g">Lower</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Important Nuance</div>
+  <p>Many sources lump CJC-1295 DAC and non-DAC together, but they behave like different peptides. <strong>CJC-1295 without DAC (Mod GRF 1-29) actually behaves more like Sermorelin</strong> than like CJC-1295 DAC. If pulsatile GH release matters to you, both the non-DAC version and Sermorelin achieve it. The real comparison is DAC vs. non-DAC/Sermorelin in terms of release pattern.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing Protocols</h2>
+
+<div class="d-r">
+  <div class="s">Important</div>
+  <p>These are research-based protocols, not medical prescriptions. <strong>Always work with a qualified healthcare provider</strong> before starting any peptide regimen. Start with the lowest effective dose and titrate up based on response and bloodwork.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Typical Dose</th><th>Frequency</th><th>Timing</th></tr></thead>
+<tbody>
+<tr><td><strong>CJC-1295 DAC</strong></td><td>2 mg per injection</td><td>1&ndash;2x per week</td><td>Any time (sustained release)</td></tr>
+<tr><td><strong>CJC-1295 No DAC</strong></td><td>100&ndash;300 mcg per injection</td><td>1&ndash;3x daily</td><td>Pre-bed, post-workout, morning</td></tr>
+<tr><td><strong>Sermorelin</strong></td><td>200&ndash;500 mcg per injection</td><td>Once daily</td><td>Before bed (aligns with natural GH pulse)</td></tr>
+</tbody>
+</table>
+
+<h3>Timing Considerations</h3>
+
+<p>Sermorelin works best when injected 30 minutes before sleep on an empty stomach. Growth hormone naturally surges during deep sleep, and Sermorelin amplifies that wave. Taking it with food in your stomach blunts the response because insulin and GH are antagonistic signals.</p>
+
+<p>CJC-1295 DAC is more flexible on timing since it creates a sustained reservoir. That said, most users still inject in the evening. The non-DAC version follows the same pre-bed or post-workout timing logic as Sermorelin. For <a href="/articles/how-to-reconstitute-peptides">reconstitution instructions</a> and <a href="/articles/how-to-inject-peptides-subcutaneously">injection technique</a>, see our separate guides.</p>
+
+<!-- ========== RESULTS ========== -->
+<hr class="sep">
+<h2>What Results to Expect</h2>
+
+<p>Both peptides target the same downstream outcomes. The timeline and intensity differ based on the peptide's pharmacokinetics and your individual response.</p>
+
+<table class="tbl">
+<thead><tr><th>Benefit</th><th>CJC-1295 DAC</th><th>Sermorelin</th><th>Timeline</th></tr></thead>
+<tbody>
+<tr><td><strong>Improved sleep</strong></td><td class="g">Strong</td><td class="g">Strong</td><td>1&ndash;2 weeks</td></tr>
+<tr><td><strong>Fat loss</strong></td><td class="g">Significant</td><td class="y">Moderate</td><td>4&ndash;8 weeks</td></tr>
+<tr><td><strong>Muscle recovery</strong></td><td class="g">Notable</td><td class="y">Moderate</td><td>2&ndash;4 weeks</td></tr>
+<tr><td><strong>Skin elasticity</strong></td><td class="y">Gradual</td><td class="y">Gradual</td><td>2&ndash;3 months</td></tr>
+<tr><td><strong>Lean muscle growth</strong></td><td class="g">More pronounced</td><td class="y">Moderate</td><td>3&ndash;6 months</td></tr>
+<tr><td><strong>Joint comfort</strong></td><td class="y">Mild</td><td class="y">Mild</td><td>4&ndash;8 weeks</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Setting Realistic Expectations</div>
+  <p>Neither peptide is synthetic HGH. They coax your own pituitary to work harder, which means your results are capped by your pituitary's capacity. Older adults with age-related pituitary decline will see meaningful improvements but shouldn't expect the results of direct GH injection. Both peptides shine brightest when combined with consistent training, adequate sleep, and <a href="/articles/peptide-bloodwork-guide">regular bloodwork monitoring</a>.</p>
+</div>
+
+<!-- ========== WHO SHOULD CHOOSE WHICH ========== -->
+<hr class="sep">
+<h2>Who Should Choose Which?</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Choose CJC-1295 DAC If You...</h4>
+    <p><strong>Want maximum convenience.</strong> Weekly injections fit busy schedules. <strong>Prioritize body recomposition.</strong> Higher sustained IGF-1 drives stronger fat loss and muscle gains. <strong>Don't mind stronger side effects.</strong> Water retention and numbness are more common. <strong>Can afford the premium.</strong> Per-month cost is significantly higher.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Choose Sermorelin If You...</h4>
+    <p><strong>Prefer physiological patterns.</strong> Pulsatile release preserves natural rhythms. <strong>Want a gentler approach.</strong> Fewer and milder side effects overall. <strong>Are cost-conscious.</strong> Lower per-unit cost adds up to real savings monthly. <strong>Have FDA approval preference.</strong> Its diagnostic approval gives it a longer safety track record.</p>
+  </div>
+</div>
+
+<div class="cd cp">
+  <div class="tg">The Middle Ground</div>
+  <h3>CJC-1295 Without DAC (Mod GRF 1-29)</h3>
+  <p style="font-size:14px;margin-bottom:0;">If you want stronger potency than Sermorelin but prefer pulsatile release over sustained elevation, the non-DAC version sits between the two. It's nearly always paired with <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> for a synergistic GHRH + GHRP stack. This combination is one of the most popular protocols in the peptide space. See our <a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157">CJC-1295/Ipamorelin stack guide</a> for full details.</p>
+</div>
+
+<!-- ========== SIDE EFFECTS ========== -->
+<hr class="sep">
+<h2>Side Effects Comparison</h2>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>CJC-1295 (DAC)</th><th>CJC-1295 (No DAC)</th><th>Sermorelin</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection site reaction</strong></td><td class="y">Moderate</td><td class="y">Mild</td><td class="g">Mild</td></tr>
+<tr><td><strong>Water retention</strong></td><td class="r">Common</td><td class="y">Occasional</td><td class="g">Uncommon</td></tr>
+<tr><td><strong>Numbness/tingling</strong></td><td class="y">Occasional</td><td class="g">Rare</td><td class="g">Rare</td></tr>
+<tr><td><strong>Headache</strong></td><td class="y">Occasional</td><td class="y">Occasional</td><td class="y">Occasional</td></tr>
+<tr><td><strong>Increased appetite</strong></td><td class="y">Common</td><td class="y">Moderate</td><td class="g">Mild</td></tr>
+<tr><td><strong>Flushing</strong></td><td class="y">Occasional</td><td class="g">Rare</td><td class="y">Occasional</td></tr>
+<tr><td><strong>Joint stiffness</strong></td><td class="y">Moderate (at higher doses)</td><td class="g">Rare</td><td class="g">Very rare</td></tr>
+</tbody>
+</table>
+
+<p>CJC-1295 DAC's side effects are more pronounced because growth hormone stays elevated continuously. Your body doesn't get the natural troughs between pulses that allow excess fluid to clear and tissues to normalize. Sermorelin's brief action window means side effects tend to be milder and shorter-lived.</p>
+
+<p>Most side effects from either peptide diminish within the first two weeks as the body adapts. If they persist, dose reduction usually resolves them. For a broader overview, see our <a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a>.</p>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Stacking Options</h2>
+
+<p>Both peptides are commonly combined with other compounds to amplify results or address complementary goals.</p>
+
+<table class="tbl">
+<thead><tr><th>Stack</th><th>Why It Works</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>CJC-1295 (no DAC) + <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a></strong></td><td>GHRH + GHRP synergy; amplified GH pulse</td><td class="g">Most popular GH peptide stack overall</td></tr>
+<tr><td><strong>Sermorelin + Ipamorelin</strong></td><td>Gentle GHRH + clean GHRP; pulsatile pattern</td><td class="g">Anti-aging, sleep, body composition</td></tr>
+<tr><td><strong>CJC-1295 DAC + <a href="/articles/bpc-157-complete-guide">BPC-157</a></strong></td><td>GH elevation + tissue repair peptide</td><td class="y">Injury recovery, joint health</td></tr>
+<tr><td><strong>Sermorelin + <a href="/articles/tesamorelin-fda-approved-gh-peptide-guide">Tesamorelin</a></strong></td><td>Two GHRH analogs for enhanced GH output</td><td class="y">Stubborn visceral fat reduction</td></tr>
+<tr><td><strong>Either + <a href="/articles/mk-677-ibutamoren-complete-guide">MK-677</a></strong></td><td>Oral GH secretagogue; convenience</td><td class="y">For those wanting to reduce injection frequency</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Stacking Caution</div>
+  <p>Don't combine CJC-1295 DAC with Sermorelin. Both target the GHRH receptor, so you'd be doubling the signal without complementary benefit. Stack a GHRH analog (either one) with a GHRP instead. See our <a href="/articles/peptide-stacking-guide">peptide stacking guide</a> for broader principles.</p>
+</div>
+
+<!-- ========== COST ========== -->
+<hr class="sep">
+<h2>Cost and Practical Considerations</h2>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--blue);">CJC-1295 DAC</h4>
+    <p><strong>Per-vial cost:</strong> Higher. <strong>Monthly spend:</strong> $150&ndash;300+. <strong>Convenience:</strong> Best (1&ndash;2 injections/week). <strong>Storage:</strong> Reconstituted vials, refrigerated. Insurance coverage is extremely rare.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">CJC-1295 No DAC</h4>
+    <p><strong>Per-vial cost:</strong> Moderate. <strong>Monthly spend:</strong> $100&ndash;200. <strong>Convenience:</strong> Daily injections. <strong>Storage:</strong> Same refrigeration requirements. Often purchased alongside Ipamorelin.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Sermorelin</h4>
+    <p><strong>Per-vial cost:</strong> Lowest. <strong>Monthly spend:</strong> $80&ndash;150. <strong>Convenience:</strong> Daily injections. <strong>Storage:</strong> Standard peptide storage. More likely available through compounding pharmacies with a prescription.</p>
+  </div>
+</div>
+
+<p>The true cost comparison isn't just per-vial price. Factor in injection supplies, bacteriostatic water, bloodwork, and medical supervision. Sermorelin's lower per-unit cost gets offset somewhat by daily dosing, but it still comes out cheaper monthly for most people.</p>
+
+<p>For guidance on evaluating peptide vendors, see our <a href="/articles/peptide-vendor-red-flags">vendor red flags guide</a> and <a href="/articles/how-to-read-peptide-coa">how to read a peptide COA</a>.</p>
+
+<!-- ========== BLOODWORK ========== -->
+<hr class="sep">
+<h2>Monitoring and Bloodwork</h2>
+
+<p>Regardless of which peptide you choose, regular bloodwork is non-negotiable. Growth hormone therapy without monitoring is flying blind.</p>
+
+<table class="tbl">
+<thead><tr><th>Biomarker</th><th>Why It Matters</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td><strong>IGF-1</strong></td><td>Best proxy for GH activity; target range matters</td><td>Baseline, 4 weeks, then quarterly</td></tr>
+<tr><td><strong>Fasting glucose / HbA1c</strong></td><td>GH can impair insulin sensitivity</td><td>Baseline, then quarterly</td></tr>
+<tr><td><strong>Thyroid panel (TSH, free T3/T4)</strong></td><td>GH can increase T4-to-T3 conversion</td><td>Baseline, then every 3&ndash;6 months</td></tr>
+<tr><td><strong>Comprehensive metabolic panel</strong></td><td>Liver and kidney function baseline</td><td>Baseline, then every 6 months</td></tr>
+</tbody>
+</table>
+
+<p>If IGF-1 climbs above the upper reference range, reduce your dose. Chronically elevated IGF-1 carries potential risks including insulin resistance and cellular proliferation concerns. The goal is optimization, not maximization. For complete guidance, see our <a href="/articles/peptide-bloodwork-guide">peptide bloodwork guide</a>.</p>
+
+<div class="d-p">
+  <div class="s">CJC-1295 DAC and IGF-1 Timing</div>
+  <p>Because CJC-1295 DAC creates sustained GH elevation, your IGF-1 blood draw timing matters less than with Sermorelin. With Sermorelin, IGF-1 levels can fluctuate more during the day, so draw blood in the morning fasted for the most consistent comparison between tests.</p>
+</div>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can these peptides replace synthetic HGH?</summary>
+    <div class="fa">They offer an alternative but are not direct replacements. GH peptides stimulate your own pituitary, which means results are limited by your gland's capacity. Synthetic HGH bypasses the pituitary entirely and delivers a fixed dose of growth hormone. For people with severe GH deficiency, direct replacement may be necessary. For age-related decline, peptides often produce meaningful results with a better safety profile.</div>
+  </details>
+  <details>
+    <summary>Which is better for fat loss specifically?</summary>
+    <div class="fa">CJC-1295 DAC generally produces stronger lipolytic effects because it maintains higher sustained IGF-1 levels. However, Sermorelin still promotes fat loss through pulsatile GH release, and some users prefer its more gradual approach. For aggressive fat loss goals, consider pairing either peptide with <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> or <a href="/articles/tesamorelin-fda-approved-gh-peptide-guide">Tesamorelin</a> rather than just choosing between these two.</div>
+  </details>
+  <details>
+    <summary>How long should I run a cycle?</summary>
+    <div class="fa">Most protocols run 3&ndash;6 months, followed by 1&ndash;2 months off. Some clinicians prescribe Sermorelin continuously at low doses for anti-aging. Cycling helps maintain pituitary sensitivity and allows you to reassess with bloodwork. See our <a href="/articles/peptide-cycling-guide">peptide cycling guide</a> for specific protocols.</div>
+  </details>
+  <details>
+    <summary>Can I switch from one to the other?</summary>
+    <div class="fa">Yes. Many users start with Sermorelin for its gentler profile and lower cost, then switch to CJC-1295 if they want stronger results or fewer injections. No washout period is strictly necessary, but a 1&ndash;2 week break between peptides lets you establish a clean baseline for comparison.</div>
+  </details>
+  <details>
+    <summary>Do I need post-cycle therapy?</summary>
+    <div class="fa">Unlike anabolic steroids, GH peptides don't suppress your hypothalamic-pituitary axis in a way that requires formal PCT. Your natural GH production rebounds relatively quickly after stopping. Some users notice a temporary dip in energy and recovery during the first week off, but this normalizes without intervention.</div>
+  </details>
+  <details>
+    <summary>Which has better research backing?</summary>
+    <div class="fa">Sermorelin has more published clinical data due to its FDA-approved diagnostic use and longer history. CJC-1295 research comes primarily from the peptide therapy community and limited clinical studies. That said, both peptides have well-understood mechanisms. Sermorelin holds a clear edge in terms of formal clinical evidence.</div>
+  </details>
+  <details>
+    <summary>Can women use these peptides?</summary>
+    <div class="fa">Yes. Neither peptide interacts with sex hormones. Both are used by women for anti-aging, body composition, and recovery. Dosing guidelines are generally the same. Avoid use during pregnancy or breastfeeding due to insufficient safety data. See our <a href="/articles/peptides-for-women-guide">peptides for women guide</a> for more detail.</div>
+  </details>
+  <details>
+    <summary>Will these show up on a drug test?</summary>
+    <div class="fa">Standard employment drug panels do not test for peptides. However, WADA (World Anti-Doping Agency) tests can detect both compounds. Athletes subject to anti-doping testing should not use either peptide. See our <a href="/articles/peptides-for-athletes-guide">peptides for athletes guide</a> for specifics on tested vs. untested contexts.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>CJC-1295 DAC delivers stronger, sustained GH elevation with the convenience of weekly dosing, but at higher cost and with more side effects. Sermorelin produces gentler, more physiological GH pulses at lower cost with fewer side effects. CJC-1295 without DAC (Mod GRF 1-29) sits between them and is most commonly stacked with Ipamorelin for the best of both worlds.</p>
+</div>
+
+<p>There is no universally "better" peptide here. The right choice depends on your goals, budget, injection tolerance, and how your body responds. Start with bloodwork, pick the peptide that matches your priorities, and reassess at the 8&ndash;12 week mark with follow-up labs.</p>
+
+<p>If you're new to GH peptides entirely, Sermorelin is the safer starting point. It's gentler, cheaper, and has a longer clinical track record. If you've already run Sermorelin and want stronger results or fewer needles, CJC-1295 DAC is the logical next step.</p>
+
+<p>And if you want the pulsatile pattern of Sermorelin with more potency, CJC-1295 without DAC paired with <a href="/articles/ipamorelin-complete-guide">Ipamorelin</a> is the most popular compromise. That stack has become the default GH peptide protocol for good reason: it hits hard, clears fast, and preserves the body's natural rhythms.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and does not recommend the use of CJC-1295, Sermorelin, or any other peptide. Sermorelin is FDA-approved as a diagnostic tool only. CJC-1295 is not FDA-approved. Consult a qualified healthcare provider before considering any peptide regimen. Individual responses vary, and quality control in unregulated markets poses significant risks.
+</div>
+
+<!-- Related -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/sermorelin-growth-hormone-guide">Sermorelin Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/cjc-1295-dac-guide">CJC-1295 DAC Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ipamorelin-complete-guide">Ipamorelin Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157">CJC-1295/Ipamorelin/BPC-157 Stack</a> &nbsp;&middot;&nbsp;
+<a href="/articles/tesamorelin-fda-approved-gh-peptide-guide">Tesamorelin Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/sermorelin-growth-hormone-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Sermorelin Complete Guide</a>
+            <a href="/articles/cjc-1295-dac-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">CJC-1295 DAC Guide</a>
+            <a href="/articles/ipamorelin-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Ipamorelin Complete Guide</a>
+            <a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">CJC/Ipamorelin/BPC Stack</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

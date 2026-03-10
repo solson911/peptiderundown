@@ -1,0 +1,586 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "BPC-157 vs GHK-Cu: Which Healing Peptide Fits Your Goal?",
+  description: "Head-to-head comparison of BPC-157 and GHK-Cu for tissue repair, gut health, skin regeneration, and joint recovery. Mechanisms, dosing, safety, and how to choose based on your goals.",
+  image: "/images/articles/bpc-157-vs-ghk-cu.webp",
+  date: "2026-02-15",
+  category: "Comparisons",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Comparison &middot; Healing Peptides &middot; Tissue Repair</div>
+  <h1>BPC-157 vs GHK-Cu: Which Healing Peptide Fits Your Goal?</h1>
+  <p class="sub">Two peptides that get grouped under "repair" but work through different mechanisms and target different tissues. Here is what matters when choosing between them.</p>
+  <div class="pills">
+    <span class="pill">BPC-157 &middot; Gut &amp; Tendon</span>
+    <span class="pill">GHK-Cu &middot; Skin &amp; Collagen</span>
+    <span class="pill">Head-to-Head Comparison</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">15</div><div class="l">Amino Acids<br>in BPC-157</div></div>
+  <div class="sb"><div class="v c2">3+Cu</div><div class="l">Tripeptide + Copper<br>in GHK-Cu</div></div>
+  <div class="sb"><div class="v c3">Gut</div><div class="l">BPC-157's Primary<br>Research Focus</div></div>
+  <div class="sb"><div class="v c4">Skin</div><div class="l">GHK-Cu's Primary<br>Research Focus</div></div>
+</div>
+
+<p>BPC-157 and GHK-Cu both appear in conversations about healing and recovery, but they are not interchangeable. They come from different sources, act through different pathways, and shine in completely different use cases.</p>
+
+<p>This comparison breaks down the research behind each peptide so you can think clearly about which one (or both) might be relevant to your goals. If you are making decisions that affect your health, involve a licensed healthcare provider.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This is an educational comparison of BPC-157 and GHK-Cu covering mechanisms, best use cases, dosing, administration, safety, and stacking considerations. It is <strong>not a recommendation to use either compound</strong>. Neither is FDA-approved for self-treatment. Consult a qualified healthcare provider before considering any peptide regimen.</p>
+</div>
+
+<!-- ========== QUICK TAKE ========== -->
+<hr class="sep">
+<h2>Quick Take: What Each Peptide Does Best</h2>
+
+<p>The simplest way to think about this comparison: BPC-157 is most often discussed for internal tissue repair, especially in the gut and connective tissue. GHK-Cu is most often discussed for external tissue quality, especially skin, hair, and wound appearance.</p>
+
+<table class="tbl">
+<thead><tr><th>Goal Area</th><th>BPC-157</th><th>GHK-Cu</th></tr></thead>
+<tbody>
+<tr><td><strong>Gut lining and GI comfort</strong></td><td class="g">Primary focus in preclinical work</td><td class="r">Not a primary target</td></tr>
+<tr><td><strong>Tendon and ligament recovery</strong></td><td class="g">Commonly discussed in animal injury models</td><td class="y">Secondary, via collagen themes</td></tr>
+<tr><td><strong>Skin texture and wrinkles</strong></td><td class="y">Indirect at best</td><td class="g">Strong topical and cosmetic evidence</td></tr>
+<tr><td><strong>Scars and wound appearance</strong></td><td class="y">Some discussion in models</td><td class="g">Commonly discussed</td></tr>
+<tr><td><strong>Hair support</strong></td><td class="r">Not a focus</td><td class="g">Commonly discussed</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Bottom Line on Goal Matching</div>
+  <p>If your main concern is gut comfort or tendon-like tissue recovery, <a href="/articles/bpc-157-complete-guide">BPC-157</a> is usually where people start. If your goal is skin quality, scar appearance, or hair support, <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a> is the more common first pick.</p>
+</div>
+
+<!-- ========== COMPOUND PROFILES ========== -->
+<hr class="sep">
+<h2>What Are These Peptides?</h2>
+
+<div class="g2">
+  <div class="cd cb">
+    <div class="tg">Compound Profile</div>
+    <h3>BPC-157 (Body Protection Compound)</h3>
+    <p style="font-size:14px;margin-bottom:0;"><strong>Size:</strong> 15 amino acids &nbsp;|&nbsp; <strong>Origin:</strong> Derived from a gastric juice protein &nbsp;|&nbsp; <strong>Common routes:</strong> Subcutaneous, oral &nbsp;|&nbsp; <strong>Evidence base:</strong> Mostly preclinical + limited human data &nbsp;|&nbsp; <strong>FDA status:</strong> Not approved</p>
+  </div>
+  <div class="cd ct">
+    <div class="tg">Compound Profile</div>
+    <h3>GHK-Cu (Copper Peptide Complex)</h3>
+    <p style="font-size:14px;margin-bottom:0;"><strong>Size:</strong> Tripeptide + copper ion &nbsp;|&nbsp; <strong>Origin:</strong> Naturally occurring, declines with age &nbsp;|&nbsp; <strong>Common routes:</strong> Topical, subcutaneous &nbsp;|&nbsp; <strong>Evidence base:</strong> Preclinical + some human cosmetic data &nbsp;|&nbsp; <strong>FDA status:</strong> Not approved as a drug</p>
+  </div>
+</div>
+
+<p>BPC-157 stands for "Body Protection Compound-157." It is a short synthetic peptide originally described as being derived from a protective protein found in gastric juice. Most people encounter it as a research compound discussed for gut barrier support, tendon injury models, and inflammatory signaling changes in animal work.</p>
+
+<p>GHK-Cu is a copper-binding complex formed by the tripeptide GHK (glycyl-L-histidyl-L-lysine) plus a copper ion. GHK occurs naturally in the body, and its levels drop as you age. It is commonly discussed for skin elasticity, collagen support, wound and scar appearance, and hair follicle signaling.</p>
+
+<!-- ========== MECHANISMS ========== -->
+<hr class="sep">
+<h2>Mechanisms Compared</h2>
+
+<p>Online discussions tend to oversimplify these mechanisms. The most useful way to compare is by the "job" each peptide seems to do in different tissues.</p>
+
+<div class="svg-box">
+  <div class="st">BPC-157 vs GHK-Cu: Mechanism Pathways</div>
+  <div class="ss">Growth-factor signaling &middot; Copper delivery &middot; Collagen remodeling &middot; Gut protection</div>
+  <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg">
+    <!-- BPC-157 -->
+    <rect x="15" y="10" width="330" height="220" rx="12" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="180" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#2956A6">BPC-157</text>
+    <text x="180" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" letter-spacing="1" font-weight="600">GROWTH-FACTOR &#38; VASCULAR SIGNALING</text>
+    <line x1="35" y1="65" x2="325" y2="65" stroke="#2956A6" stroke-opacity=".2"/>
+    <text x="100" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="600">VEGF / NO Pathway</text>
+    <text x="100" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">Angiogenesis signals</text>
+    <text x="100" y="123" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">Blood vessel formation</text>
+    <text x="100" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">Tissue oxygen supply</text>
+    <text x="260" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="600">GI Protective</text>
+    <text x="260" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">Gut barrier support</text>
+    <text x="260" y="123" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">Inflammatory balance</text>
+    <text x="260" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#1E3362">Mucosal healing</text>
+    <line x1="35" y1="160" x2="325" y2="160" stroke="#2956A6" stroke-opacity=".15"/>
+    <text x="180" y="182" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2956A6" font-weight="600">KEY OUTCOME</text>
+    <text x="180" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#1E3362" font-weight="500">Connective tissue repair &#38; gut protection</text>
+
+    <!-- GHK-Cu -->
+    <rect x="360" y="10" width="325" height="220" rx="12" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="522" y="38" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#187A62">GHK-Cu</text>
+    <text x="522" y="55" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" letter-spacing="1" font-weight="600">COPPER DELIVERY &#38; COLLAGEN REMODELING</text>
+    <line x1="380" y1="65" x2="665" y2="65" stroke="#187A62" stroke-opacity=".2"/>
+    <text x="440" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="600">Enzyme Cofactor</text>
+    <text x="440" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">Lysyl oxidase activation</text>
+    <text x="440" y="123" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">Collagen cross-linking</text>
+    <text x="440" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">Elastin support</text>
+    <text x="605" y="90" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="600">Remodeling</text>
+    <text x="605" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">Wound contraction</text>
+    <text x="605" y="123" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">Scar remodeling</text>
+    <text x="605" y="138" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#14503E">Hair follicle signaling</text>
+    <line x1="380" y1="160" x2="665" y2="160" stroke="#187A62" stroke-opacity=".15"/>
+    <text x="522" y="182" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#187A62" font-weight="600">KEY OUTCOME</text>
+    <text x="522" y="200" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10.5" fill="#14503E" font-weight="500">Skin quality, wound healing &#38; hair support</text>
+  </svg>
+</div>
+
+<h3>BPC-157: Growth-Factor and Vascular Signaling</h3>
+
+<p>BPC-157 is commonly described as influencing growth-factor signaling, angiogenesis-related pathways, and inflammatory balance in animal models. This is often cited as the reason it may support recovery from tendon and ligament stress.</p>
+
+<p>The most consistent findings in preclinical work center on faster healing signals and improved tissue organization at injury sites. For the full mechanism breakdown, see our <a href="/articles/bpc-157-complete-guide">BPC-157 complete guide</a>.</p>
+
+<h3>GHK-Cu: Copper Delivery and Collagen Remodeling</h3>
+
+<p>GHK-Cu is often framed as a way to deliver copper in a biologically accessible form. Copper is a cofactor for enzymes involved in collagen and elastin cross-linking, and it also plays a role in antioxidant enzyme systems.</p>
+
+<p>This peptide stands out for topical use cases. It is one of the most commonly referenced copper peptides in skin-focused research and formulations. See our <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu guide</a> for a deeper look.</p>
+
+<table class="tbl">
+<thead><tr><th>Mechanism Theme</th><th>BPC-157</th><th>GHK-Cu</th></tr></thead>
+<tbody>
+<tr><td><strong>Tissue repair signaling</strong></td><td class="g">Primary (internal tissues)</td><td class="g">Primary (skin and external)</td></tr>
+<tr><td><strong>Collagen and elastin remodeling</strong></td><td class="y">Secondary</td><td class="g">Central concept</td></tr>
+<tr><td><strong>Gut barrier support</strong></td><td class="g">Primary focus area</td><td class="r">Not a focus</td></tr>
+<tr><td><strong>Copper-dependent enzyme support</strong></td><td class="r">Not relevant</td><td class="g">Central concept</td></tr>
+<tr><td><strong>Angiogenesis themes</strong></td><td class="g">Commonly discussed</td><td class="y">Minor role</td></tr>
+</tbody>
+</table>
+
+<!-- ========== USE CASES ========== -->
+<hr class="sep">
+<h2>Best Use Cases: How to Choose Based on Your Goal</h2>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">Gut Health</h4>
+    <p><strong>Winner: BPC-157.</strong> It appears frequently in GI models and stomach-lining protection research. GHK-Cu is not typically discussed for gut applications. See <a href="/articles/best-peptides-for-gut-health">best peptides for gut health</a>.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Tendon and Joint Comfort</h4>
+    <p><strong>Winner: BPC-157.</strong> The tendon and ligament injury model research aligns more directly to this goal. Not proven in humans, but the conversation is more focused here. See <a href="/articles/best-peptides-for-joint-health">best peptides for joints</a>.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Skin Quality and Wrinkles</h4>
+    <p><strong>Winner: GHK-Cu.</strong> Topical delivery is common and much of the available research is skin-first. BPC-157 has only indirect relevance here. See <a href="/articles/best-peptides-for-skin-and-hair">best peptides for skin</a>.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Hair Support</h4>
+    <p><strong>Winner: GHK-Cu.</strong> It is used in many hair products and is often discussed for follicle support and scalp health. BPC-157 has no meaningful hair-specific data. See <a href="/articles/best-peptides-for-hair-growth">best peptides for hair</a>.</p>
+  </div>
+</div>
+
+<div class="d">
+  <div class="s">General Recovery and Wound Healing</div>
+  <p>For general wound healing, both peptides have some relevance but through different angles. BPC-157 is discussed more for deep tissue and internal recovery. GHK-Cu is discussed more for surface-level wound appearance and scar quality. The <a href="/articles/wolverine-stack-bpc-157-tb-500-ghk-cu">Wolverine Stack guide</a> covers combining both with TB-500 for broader recovery goals.</p>
+</div>
+
+<!-- ========== ADMINISTRATION ========== -->
+<hr class="sep">
+<h2>Administration Routes and Practical Differences</h2>
+
+<p>How you take these peptides matters. Delivery method changes the experience and the types of outcomes people discuss.</p>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>BPC-157</th><th>GHK-Cu</th><th>Practical Note</th></tr></thead>
+<tbody>
+<tr><td><strong>Subcutaneous</strong></td><td class="g">Commonly discussed</td><td class="y">Used by some</td><td>Sterility and dosing accuracy matter</td></tr>
+<tr><td><strong>Oral</strong></td><td class="y">Sometimes, for gut goals</td><td class="r">Less common</td><td>Oral peptide stability is always a question</td></tr>
+<tr><td><strong>Topical</strong></td><td class="r">Not common</td><td class="g">Very common</td><td>Best route for skin and scalp targets</td></tr>
+<tr><td><strong>Intranasal</strong></td><td class="r">Not typical</td><td class="r">Rare</td><td>Neither peptide is typically used this way</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Route Matters More Than You Think</div>
+  <p>If you want skin-first outcomes, topical GHK-Cu is the simplest starting point people discuss. For gut-first outcomes, BPC-157 conversations center on oral or subcutaneous approaches. Route selection affects convenience, cost, and how consistently you can stick with a protocol. For injection basics, see our <a href="/articles/how-to-inject-peptides-subcutaneously">injection guide</a>.</p>
+</div>
+
+<!-- ========== DOSING ========== -->
+<hr class="sep">
+<h2>Dosing: What Research Discussions Commonly Mention</h2>
+
+<div class="d-r">
+  <div class="s">Important</div>
+  <p>These are informational summaries, <strong>not medical prescriptions</strong>. Dosing practices online vary widely and may not reflect controlled clinical data. Always work with a qualified healthcare provider.</p>
+</div>
+
+<h3>BPC-157 Dosing Themes</h3>
+
+<p>People often discuss microgram dosing, sometimes split once or twice daily. Some prefer injection near the area of concern, while others go with general subcutaneous injection for broader effects.</p>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>Common Range</th><th>Frequency</th><th>Associated Goal</th></tr></thead>
+<tbody>
+<tr><td><strong>Subcutaneous</strong></td><td>250 to 500 mcg</td><td>Daily, sometimes split</td><td>Connective tissue and general recovery</td></tr>
+<tr><td><strong>Oral</strong></td><td>500 to 1,000 mcg</td><td>Daily</td><td>Gut-focused goals</td></tr>
+</tbody>
+</table>
+
+<h3>GHK-Cu Dosing Themes</h3>
+
+<p>For GHK-Cu, topical concentration and consistency are the main focus points. Injectable discussions use milligram dosing, which surprises people who are used to microgram peptides.</p>
+
+<table class="tbl">
+<thead><tr><th>Route</th><th>Common Range</th><th>Frequency</th><th>Associated Goal</th></tr></thead>
+<tbody>
+<tr><td><strong>Topical</strong></td><td>0.1% to 0.5%</td><td>Daily</td><td>Skin and scalp</td></tr>
+<tr><td><strong>Subcutaneous</strong></td><td>1 to 2 mg</td><td>Daily or several times weekly</td><td>Broader collagen support</td></tr>
+</tbody>
+</table>
+
+<p>For reconstitution details, see our <a href="/articles/how-to-reconstitute-peptides">reconstitution guide</a> and <a href="/articles/peptide-dosing-calculator-reconstitution-math">dosing calculator</a>.</p>
+
+<!-- ========== CYCLING ========== -->
+<hr class="sep">
+<h2>Cycling and Duration</h2>
+
+<p>Neither peptide has well-established cycling protocols from clinical trials. What exists comes from community discussion and general peptide cycling principles.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">BPC-157 Cycling</h4>
+    <p>Most discussions describe 4 to 8 week cycles followed by a break of similar length. Some people use it for shorter bursts around acute injury or GI flare-ups. Continuous long-term use has limited safety data.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">GHK-Cu Cycling</h4>
+    <p>Topical GHK-Cu is often used continuously without cycling, similar to how you would use a skincare product. Injectable GHK-Cu discussions more commonly include cycling, with 4 to 6 weeks on and a comparable break.</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Cycle Type</th><th>BPC-157</th><th>GHK-Cu</th></tr></thead>
+<tbody>
+<tr><td><strong>Typical on period</strong></td><td>4 to 8 weeks</td><td>Topical: ongoing. Injectable: 4 to 6 weeks</td></tr>
+<tr><td><strong>Typical off period</strong></td><td>4 to 8 weeks</td><td>Topical: none. Injectable: 4 to 6 weeks</td></tr>
+<tr><td><strong>Acute use</strong></td><td class="g">Common for injury recovery</td><td class="y">Less common</td></tr>
+<tr><td><strong>Chronic use</strong></td><td class="y">Limited data on long-term safety</td><td class="g">Topical appears well-tolerated long-term</td></tr>
+</tbody>
+</table>
+
+<p>For broader cycling strategies across different peptide categories, see our <a href="/articles/peptide-cycling-guide">peptide cycling guide</a>.</p>
+
+<!-- ========== EVIDENCE QUALITY ========== -->
+<hr class="sep">
+<h2>Evidence Quality: What We Actually Know</h2>
+
+<p>Both peptides suffer from the same fundamental issue: most of the evidence is preclinical. That said, the quality and type of evidence differ between them in ways worth understanding.</p>
+
+<div class="cd cb">
+  <div class="tg">Evidence Assessment</div>
+  <h3>BPC-157 Evidence Base</h3>
+  <p style="font-size:14px;margin-bottom:0;">The majority of BPC-157 research consists of animal studies, mostly rodent models of injury, ulceration, and inflammation. There are hundreds of these studies, and the results are remarkably consistent: faster healing, better tissue organization, reduced inflammation. What is missing is large-scale human clinical trial data. A few small human studies and case observations exist, but they do not meet the standard most Western regulators require.</p>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Evidence Assessment</div>
+  <h3>GHK-Cu Evidence Base</h3>
+  <p style="font-size:14px;margin-bottom:0;">GHK-Cu has a somewhat different evidence profile. Preclinical data supports its role in wound healing, collagen synthesis, and hair follicle signaling. It also has some human data in cosmetic contexts, particularly for topical skin applications. Several commercial skincare products contain GHK-Cu, and that cosmetic use has generated a small body of real-world tolerability data. Injectable use has far less documentation.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Evidence Category</th><th>BPC-157</th><th>GHK-Cu</th></tr></thead>
+<tbody>
+<tr><td><strong>Animal study volume</strong></td><td class="g">Extensive (hundreds of studies)</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Human clinical trials</strong></td><td class="r">Very limited</td><td class="y">Limited (mostly cosmetic)</td></tr>
+<tr><td><strong>Real-world use data</strong></td><td class="y">Anecdotal community reports</td><td class="g">Topical cosmetic use is widespread</td></tr>
+<tr><td><strong>Mechanism clarity</strong></td><td class="g">Well-characterized in animal models</td><td class="g">Well-characterized</td></tr>
+<tr><td><strong>Long-term safety data</strong></td><td class="r">Minimal</td><td class="y">Better for topical, minimal for injectable</td></tr>
+</tbody>
+</table>
+
+<div class="d-a">
+  <div class="s">Keep Perspective</div>
+  <p>Neither peptide has the level of evidence that would satisfy an FDA approval process. The preclinical data is interesting and consistent for both, but "interesting preclinical data" is not the same as "proven to work in humans." Marketing often blurs this distinction. Read our <a href="/articles/peptide-myths-debunked">peptide myths guide</a> for more on separating signal from noise.</p>
+</div>
+
+<!-- ========== SAFETY ========== -->
+<hr class="sep">
+<h2>Safety, Side Effects, and Who Should Be Cautious</h2>
+
+<p>Neither peptide is an FDA-approved medication for self-treatment. The safest approach is treating these as research topics and involving a clinician if you are considering any real-world use.</p>
+
+<div class="g2">
+  <div class="cd ca">
+    <div class="tg">Safety Profile</div>
+    <h3>BPC-157 Considerations</h3>
+    <p style="font-size:14px;margin-bottom:0;"><strong>Limited human safety data.</strong> Injection-site irritation or infection risk if technique is poor. Theoretical concerns whenever angiogenesis pathways are discussed. Anyone with a cancer history or concerns about growth signaling should talk to a clinician first.</p>
+  </div>
+  <div class="cd cr">
+    <div class="tg">Safety Profile</div>
+    <h3>GHK-Cu Considerations</h3>
+    <p style="font-size:14px;margin-bottom:0;"><strong>Topical irritation is the most common complaint.</strong> Copper-related concerns in people with copper metabolism disorders like Wilson's disease. Injectable approaches carry typical injection risks. Anyone with a copper-related condition should speak with a clinician.</p>
+  </div>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Safety Item</th><th>BPC-157</th><th>GHK-Cu</th></tr></thead>
+<tbody>
+<tr><td><strong>Injection-site issues</strong></td><td class="y">Possible</td><td class="y">Possible</td></tr>
+<tr><td><strong>Skin irritation</strong></td><td class="g">Uncommon</td><td class="y">More common (topical)</td></tr>
+<tr><td><strong>Lab monitoring relevance</strong></td><td class="y">Case-dependent</td><td class="y">Case-dependent</td></tr>
+<tr><td><strong>Special caution</strong></td><td class="r">Cancer history, growth signaling</td><td class="r">Copper metabolism disorders</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Most Preventable Risks</div>
+  <p>The biggest risks are practical ones: poor sourcing, non-sterile technique, and skipping medical guidance. For monitoring advice, see our <a href="/articles/peptide-bloodwork-guide">bloodwork guide</a>. For recognizing bad vendors, see our <a href="/articles/peptide-vendor-red-flags">vendor red flags guide</a>.</p>
+</div>
+
+<!-- ========== COST AND CONVENIENCE ========== -->
+<hr class="sep">
+<h2>Cost and Convenience</h2>
+
+<p>Prices vary by supplier, testing standards, and format. The practical differences between these two peptides are worth thinking about before you start.</p>
+
+<table class="tbl">
+<thead><tr><th>Factor</th><th>BPC-157</th><th>GHK-Cu</th></tr></thead>
+<tbody>
+<tr><td><strong>Ease of use</strong></td><td class="y">Requires injection or oral capsules</td><td class="g">Topical is very simple</td></tr>
+<tr><td><strong>Consistency</strong></td><td class="y">Injection compliance can drop off</td><td class="g">Topical is easy to maintain daily</td></tr>
+<tr><td><strong>Cost range</strong></td><td class="y">Moderate (varies by source)</td><td class="y">Moderate (varies by format)</td></tr>
+<tr><td><strong>Storage requirements</strong></td><td class="y">Refrigeration after reconstitution</td><td class="g">Topical is shelf-stable</td></tr>
+</tbody>
+</table>
+
+<p>If convenience is a top priority and your goals are skin-focused, topical GHK-Cu is hard to beat. For gut or injury-recovery goals, BPC-157 requires more setup but addresses a set of outcomes that GHK-Cu simply does not. For storage best practices, see our <a href="/articles/how-to-store-peptides">peptide storage guide</a>.</p>
+
+<!-- ========== STACKING ========== -->
+<hr class="sep">
+<h2>Can You Stack BPC-157 and GHK-Cu?</h2>
+
+<p>People often stack them because the targets are different. One common approach is using BPC-157 for gut or injury-recovery goals while using GHK-Cu topically for skin or scalp support at the same time.</p>
+
+<div class="cd cp">
+  <div class="tg">Stacking Consideration</div>
+  <h3>When Stacking Makes Sense</h3>
+  <p style="font-size:14px;margin-bottom:0;">Stacking works best when the goals do not overlap too much. "Gut support" plus "topical skin support" is a natural pairing because BPC-157 and GHK-Cu operate in different tissue compartments through different mechanisms. Adding a third peptide like <a href="/articles/tb-500-complete-guide">TB-500</a> creates the popular <a href="/articles/wolverine-stack-bpc-157-tb-500-ghk-cu">Wolverine Stack</a> for comprehensive recovery coverage.</p>
+</div>
+
+<table class="tbl">
+<thead><tr><th>Stack Approach</th><th>Peptides</th><th>Goal</th></tr></thead>
+<tbody>
+<tr><td><strong>Gut + Skin</strong></td><td>BPC-157 (oral) + GHK-Cu (topical)</td><td class="g">Different compartments, low interaction risk</td></tr>
+<tr><td><strong>Injury + Skin</strong></td><td>BPC-157 (subQ) + GHK-Cu (topical)</td><td class="g">Connective tissue + surface healing</td></tr>
+<tr><td><strong>Wolverine Stack</strong></td><td>BPC-157 + TB-500 + GHK-Cu</td><td class="y">Comprehensive recovery (more complexity)</td></tr>
+<tr><td><strong>Glow Stack</strong></td><td>GHK-Cu + BPC-157 + Epithalon</td><td class="y">Skin + longevity (see <a href="/articles/glow-stack-ghk-cu-bpc-157-epithalon">glow stack guide</a>)</td></tr>
+</tbody>
+</table>
+
+<p>If you are thinking about combining compounds, read our <a href="/articles/peptide-stacking-guide">peptide stacking guide</a> and involve a healthcare provider. Stacks increase complexity, which makes it easier to miss side effects or misattribute what is actually helping.</p>
+
+<!-- ========== FAQ ========== -->
+<hr class="sep">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Which peptide works faster?</summary>
+    <div class="fa">It depends on the goal. Topical GHK-Cu changes are usually gradual and easier to notice over weeks. BPC-157 discussions around acute injury comfort often describe changes sooner, but human evidence is limited for both compounds.</div>
+  </details>
+  <details>
+    <summary>Does either peptide break a fast?</summary>
+    <div class="fa">Injectable peptides generally contain negligible calories. Fasting rules vary by person and by goal. If fasting is medically important for you, discuss it with your healthcare provider. See our <a href="/articles/peptides-and-fasting-guide">peptides and fasting guide</a> for more detail.</div>
+  </details>
+  <details>
+    <summary>Which is better for joint pain?</summary>
+    <div class="fa">BPC-157 is more directly associated with tendon and ligament repair models in preclinical research. GHK-Cu is more associated with collagen remodeling and skin, making it less targeted for joint concerns. See our <a href="/articles/best-peptides-for-joint-health">joint health peptides guide</a>.</div>
+  </details>
+  <details>
+    <summary>Which is better for gut health?</summary>
+    <div class="fa">BPC-157 is the first choice people discuss for gut lining and GI comfort. GHK-Cu is not commonly discussed as a gut peptide. For a broader look, read <a href="/articles/best-peptides-for-gut-health">best peptides for gut health</a>.</div>
+  </details>
+  <details>
+    <summary>Can GHK-Cu cause copper toxicity?</summary>
+    <div class="fa">At typical topical use levels, this is not a common concern. Higher systemic dosing or underlying copper metabolism issues change the picture. Anyone with a copper-related condition should speak with a clinician before using copper peptides.</div>
+  </details>
+  <details>
+    <summary>What should I monitor if considering either peptide?</summary>
+    <div class="fa">Start with basics: symptom tracking, product quality documentation, and a discussion with a healthcare provider about whether labs like CBC, CMP, and iron or copper markers make sense for your situation. See our <a href="/articles/peptide-bloodwork-guide">bloodwork guide</a>.</div>
+  </details>
+  <details>
+    <summary>Can I use both at the same time?</summary>
+    <div class="fa">Many people do, especially when the goals are complementary. BPC-157 for internal tissue goals and GHK-Cu topically for skin or scalp is a common pairing. Stacking increases complexity, so involve a healthcare provider and track your results carefully.</div>
+  </details>
+  <details>
+    <summary>Are either of these peptides FDA-approved?</summary>
+    <div class="fa">No. Neither BPC-157 nor GHK-Cu is FDA-approved for any medical use. They are available as research chemicals. GHK-Cu appears in some cosmetic products, but that is different from pharmaceutical approval. See our <a href="/articles/are-peptides-legal-fda-regulations-2026">peptide legality guide</a> for details.</div>
+  </details>
+</div>
+
+<!-- ========== BOTTOM LINE ========== -->
+<hr class="sep">
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>If you want gut-first and injury-recovery themes, <a href="/articles/bpc-157-complete-guide">BPC-157</a> is usually the more relevant starting point. If you want skin, scar, or hair support, <a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu</a> is usually the better match, especially in topical form. They are not interchangeable, but they can complement each other well when goals are distinct.</p>
+</div>
+
+<p>Both peptides sit in a space where strong marketing often outruns strong human evidence. Keep expectations realistic, prioritize safety, and consult a healthcare provider before using any research compounds.</p>
+
+<p>For related comparisons, see <a href="/articles/bpc-157-vs-tb-500-comparison">BPC-157 vs TB-500</a>. For broader peptide education, start with our <a href="/articles/what-are-peptides-beginners-guide">beginner's guide to peptides</a>.</p>
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and does not recommend the use of BPC-157, GHK-Cu, or any other peptide. Neither compound is FDA-approved for medical use. Consult a qualified healthcare provider before considering any peptide regimen. Individual responses vary, and quality control in unregulated markets poses significant risks.
+</div>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Copper Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/tb-500-complete-guide">TB-500 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/wolverine-stack-bpc-157-tb-500-ghk-cu">Wolverine Stack Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-skin-and-hair">Best Peptides for Skin and Hair</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Copper Peptide Guide</a>
+            <a href="/articles/bpc-157-vs-tb-500-comparison" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 vs TB-500 Comparison</a>
+            <a href="/articles/wolverine-stack-bpc-157-tb-500-ghk-cu" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Wolverine Stack Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

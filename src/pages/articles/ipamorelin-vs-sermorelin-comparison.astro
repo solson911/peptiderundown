@@ -1,0 +1,561 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Ipamorelin vs Sermorelin: Comparing Growth Hormone Secretagogues",
+  description: "Ipamorelin and sermorelin both stimulate natural growth hormone release, but through entirely different receptor pathways. Mechanisms, dosing, side effects, research findings, and which one fits your goals.",
+  image: "/images/articles/ipamorelin-vs-sermorelin.webp",
+  date: "2026-02-17",
+  category: "Comparisons",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Comparison &middot; GH Secretagogues &middot; GHRP vs GHRH</div>
+  <h1>Ipamorelin vs Sermorelin: Comparing Growth Hormone Secretagogues</h1>
+  <p class="sub">Two peptides that both trigger natural growth hormone release, but through completely different receptor systems. One mimics ghrelin. The other mimics GHRH. Here is how they compare on mechanism, dosing, side effects, and real-world results.</p>
+  <div class="pills">
+    <span class="pill">Ipamorelin &middot; GHRP</span>
+    <span class="pill">Sermorelin &middot; GHRH Analog</span>
+    <span class="pill">Body Composition &middot; Recovery</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">~711</div><div class="l">Ipamorelin<br>MW (Da)</div></div>
+  <div class="sb"><div class="v c2">~3,357</div><div class="l">Sermorelin<br>MW (Da)</div></div>
+  <div class="sb"><div class="v c3">2</div><div class="l">Distinct Receptor<br>Pathways</div></div>
+  <div class="sb"><div class="v c4">GHS-R1a</div><div class="l">Ipamorelin<br>Primary Target</div></div>
+</div>
+
+<p>Ipamorelin and sermorelin sit at the center of the growth hormone peptide conversation, and for good reason. Both stimulate your pituitary gland to produce more GH naturally, which is a fundamentally different approach than injecting synthetic growth hormone directly.</p>
+
+<p>But they get there through completely different doors. Ipamorelin knocks on the ghrelin receptor. Sermorelin knocks on the GHRH receptor. That distinction shapes everything from how fast they work to what side effects you might experience.</p>
+
+<div class="d d-a">
+  <div class="s">Important</div>
+  <p>Both peptides require medical supervision. Consult a qualified healthcare provider before starting any <a href="/articles/what-are-peptides-beginners-guide">peptide protocol</a>. They can evaluate your health status and determine if GH secretagogues are appropriate for your situation.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Ipamorelin Profile -->
+<h2>Ipamorelin: The Selective GHRP</h2>
+
+<p>Ipamorelin is a synthetic pentapeptide, just five amino acids long. It falls into the growth hormone-releasing peptide (GHRP) class, meaning it mimics ghrelin to trigger GH release from the pituitary.</p>
+
+<p>What makes it stand out from other GHRPs is selectivity. Unlike <a href="/articles/hexarelin-complete-guide">hexarelin</a> or GHRP-6, ipamorelin does not significantly spike cortisol or prolactin. That targeted action is why it became the most popular entry-level GH peptide.</p>
+
+<div class="cd cb">
+  <div class="tg">Ipamorelin Profile</div>
+  <h3>Key Characteristics</h3>
+  <p><strong>Classification:</strong> Synthetic pentapeptide, growth hormone-releasing peptide (GHRP)</p>
+  <p><strong>Molecular weight:</strong> Approximately 711 Da</p>
+  <p><strong>Primary target:</strong> GHS-R1a (ghrelin receptor) on pituitary somatotrophs</p>
+  <p><strong>GH release pattern:</strong> Rapid pulse peaking in 30-60 minutes</p>
+  <p><strong>Regulatory status:</strong> Research compound, not FDA-approved for therapeutic use</p>
+</div>
+
+<p>The selectivity story is the real selling point. When researchers compared ipamorelin head-to-head with GHRP-2 and GHRP-6, ipamorelin produced equivalent GH output with minimal impact on other hormone axes. Your cortisol stays steady. Your prolactin stays steady. You just get the GH pulse.</p>
+
+<hr class="sep">
+
+<!-- Sermorelin Profile -->
+<h2>Sermorelin: The GHRH Analog</h2>
+
+<p>Sermorelin is a 29-amino acid peptide that replicates the first 29 residues of your body's own growth hormone-releasing hormone. It was originally developed in the 1980s as a diagnostic tool for GH deficiency, and it actually held FDA approval for that purpose.</p>
+
+<p>Its approach is more physiological than ipamorelin's. Instead of mimicking a hunger signal, sermorelin amplifies the same signaling pathway your hypothalamus already uses to tell the pituitary to release GH.</p>
+
+<div class="cd ct">
+  <div class="tg">Sermorelin Profile</div>
+  <h3>Key Characteristics</h3>
+  <p><strong>Classification:</strong> 29-amino acid synthetic GHRH analog</p>
+  <p><strong>Molecular weight:</strong> Approximately 3,357 Da</p>
+  <p><strong>Primary target:</strong> GHRH receptor on pituitary somatotrophs</p>
+  <p><strong>GH release pattern:</strong> Gradual, sustained elevation over 1-2 hours</p>
+  <p><strong>Regulatory status:</strong> Previously FDA-approved for diagnostic use (discontinued commercially)</p>
+</div>
+
+<p>The clinical pedigree matters here. <a href="/articles/sermorelin-growth-hormone-guide">Sermorelin</a> went through actual FDA trials in the 1990s. Researchers generated real safety and efficacy data in deficient populations, which gives it a more established evidence base than most research peptides.</p>
+
+<hr class="sep">
+
+<!-- Mechanism Comparison -->
+<h2>How They Work: Two Different Doors to the Same Room</h2>
+
+<p>This is where the comparison gets interesting. Both peptides end up in the same place (more GH from your pituitary), but the pathways could not be more different.</p>
+
+<div class="svg-box">
+  <div class="st">GH Secretagogue Mechanism Comparison</div>
+  <div class="ss">Two receptor pathways converging on pituitary GH release</div>
+  <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="20" width="160" height="50" rx="8" fill="#E8EEF9" stroke="#2956A6" stroke-width="1.5"/>
+    <text x="90" y="50" text-anchor="middle" font-size="13" font-weight="600" fill="#2956A6">Ipamorelin</text>
+    <rect x="10" y="150" width="160" height="50" rx="8" fill="#E4F5EF" stroke="#187A62" stroke-width="1.5"/>
+    <text x="90" y="180" text-anchor="middle" font-size="13" font-weight="600" fill="#187A62">Sermorelin</text>
+    <rect x="230" y="20" width="160" height="50" rx="8" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="310" y="42" text-anchor="middle" font-size="11" fill="#B48118">GHS-R1a</text>
+    <text x="310" y="58" text-anchor="middle" font-size="10" fill="#86869A">Ghrelin Receptor</text>
+    <rect x="230" y="150" width="160" height="50" rx="8" fill="#FFF7E5" stroke="#B48118" stroke-width="1.5"/>
+    <text x="310" y="172" text-anchor="middle" font-size="11" fill="#B48118">GHRH-R</text>
+    <text x="310" y="188" text-anchor="middle" font-size="10" fill="#86869A">GHRH Receptor</text>
+    <rect x="460" y="75" width="180" height="70" rx="10" fill="#F3ECF8" stroke="#6E3B8A" stroke-width="1.5"/>
+    <text x="550" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#6E3B8A">Pituitary Gland</text>
+    <text x="550" y="118" text-anchor="middle" font-size="11" fill="#86869A">Somatotroph Cells</text>
+    <text x="550" y="135" text-anchor="middle" font-size="13" font-weight="700" fill="#6E3B8A">GH Release</text>
+    <line x1="170" y1="45" x2="230" y2="45" stroke="#2956A6" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="170" y1="175" x2="230" y2="175" stroke="#187A62" stroke-width="1.5" marker-end="url(#arr2)"/>
+    <line x1="390" y1="45" x2="460" y2="95" stroke="#B48118" stroke-width="1.5" marker-end="url(#arr3)"/>
+    <line x1="390" y1="175" x2="460" y2="125" stroke="#B48118" stroke-width="1.5" marker-end="url(#arr3)"/>
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#2956A6"/></marker>
+      <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#187A62"/></marker>
+      <marker id="arr3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6Z" fill="#B48118"/></marker>
+    </defs>
+  </svg>
+</div>
+
+<h3>Ipamorelin's Pathway</h3>
+
+<p>Ipamorelin binds the ghrelin receptor (GHS-R1a) on pituitary somatotroph cells. This is the same receptor that natural ghrelin activates when your stomach is empty. The binding triggers a rapid GH pulse that peaks within 30-60 minutes and clears within 2-3 hours.</p>
+
+<p>Interestingly, ipamorelin produces almost no hunger signal despite hitting the ghrelin receptor. That is one of its unique properties compared to GHRP-6, which can make you ravenously hungry.</p>
+
+<h3>Sermorelin's Pathway</h3>
+
+<p>Sermorelin binds the GHRH receptor, the same target your hypothalamus uses for natural GH regulation. This produces a more gradual elevation that peaks around 60-120 minutes and can persist for 4-6 hours.</p>
+
+<p>The sustained release pattern more closely mirrors your body's natural GH pulsatility. That is why some clinicians consider it the more "physiological" option of the two.</p>
+
+<table class="tbl">
+  <thead><tr><th>Characteristic</th><th>Ipamorelin</th><th>Sermorelin</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Receptor target</strong></td><td>GHS-R1a (ghrelin)</td><td>GHRH-R</td></tr>
+    <tr><td><strong>Onset of action</strong></td><td><span class="g">15-30 min</span></td><td><span class="y">30-60 min</span></td></tr>
+    <tr><td><strong>Peak GH levels</strong></td><td>30-60 min</td><td>60-120 min</td></tr>
+    <tr><td><strong>Duration of effect</strong></td><td>2-3 hours</td><td>4-6 hours</td></tr>
+    <tr><td><strong>Hunger stimulation</strong></td><td><span class="g">Minimal</span></td><td><span class="y">Moderate</span></td></tr>
+    <tr><td><strong>Cortisol impact</strong></td><td><span class="g">Negligible</span></td><td><span class="g">Minimal</span></td></tr>
+    <tr><td><strong>Prolactin impact</strong></td><td><span class="g">Negligible</span></td><td><span class="g">Minimal</span></td></tr>
+  </tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Side Effects -->
+<h2>Side Effect Profiles</h2>
+
+<p>Both peptides are generally well-tolerated, which is part of their appeal compared to direct GH injections. But they do differ in their side effect signatures.</p>
+
+<p>Ipamorelin's selectivity gives it a cleaner profile overall. Sermorelin's broader mechanism means slightly more potential for off-target effects, though most are mild and transient.</p>
+
+<table class="tbl">
+  <thead><tr><th>Side Effect</th><th>Ipamorelin</th><th>Sermorelin</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Injection site reactions</strong></td><td><span class="y">Common</span></td><td><span class="y">Common</span></td></tr>
+    <tr><td><strong>Headache</strong></td><td><span class="y">Occasional</span></td><td><span class="y">Occasional</span></td></tr>
+    <tr><td><strong>Flushing or warmth</strong></td><td><span class="y">Occasional</span></td><td><span class="y">Occasional</span></td></tr>
+    <tr><td><strong>Increased hunger</strong></td><td><span class="g">Rare</span></td><td><span class="y">Common</span></td></tr>
+    <tr><td><strong>Joint discomfort</strong></td><td><span class="g">Rare</span></td><td><span class="y">Occasional</span></td></tr>
+    <tr><td><strong>Water retention</strong></td><td><span class="g">Minimal</span></td><td><span class="y">Moderate</span></td></tr>
+    <tr><td><strong>Carpal tunnel symptoms</strong></td><td><span class="g">Very rare</span></td><td><span class="g">Rare</span></td></tr>
+  </tbody>
+</table>
+
+<div class="d d-r">
+  <div class="s">Safety Note</div>
+  <p>Certain conditions may contraindicate GH secretagogue use, including active cancer, uncontrolled diabetes, and pituitary disorders. Always discuss your full medical history with a provider. Review our <a href="/articles/peptide-side-effects-what-to-know">peptide side effects guide</a> for broader context.</p>
+</div>
+
+<p>Most side effects resolve within the first few weeks as the body adjusts. Proper <a href="/articles/how-to-inject-peptides-subcutaneously">injection technique</a> and rotating sites minimizes local reactions significantly.</p>
+
+<hr class="sep">
+
+<!-- Dosing -->
+<h2>Dosing Protocols</h2>
+
+<p>Dosing differs substantially between these two peptides, both in amount and in timing strategy. This reflects their different pharmacokinetics and receptor dynamics.</p>
+
+<div class="g2">
+  <div class="cd cb">
+    <div class="tg">Ipamorelin Dosing</div>
+    <h3>Typical Protocol</h3>
+    <p><strong>Daily dose:</strong> 200-300 mcg</p>
+    <p><strong>Frequency:</strong> 1-2 times daily</p>
+    <p><strong>Timing:</strong> Bedtime and/or post-exercise</p>
+    <p><strong>Cycle length:</strong> 8-12 weeks</p>
+    <p><strong>Break period:</strong> 4-6 weeks between cycles</p>
+  </div>
+  <div class="cd ct">
+    <div class="tg">Sermorelin Dosing</div>
+    <h3>Typical Protocol</h3>
+    <p><strong>Daily dose:</strong> 100-300 mcg</p>
+    <p><strong>Frequency:</strong> Once daily</p>
+    <p><strong>Timing:</strong> Before bedtime (aligns with natural GH pulse)</p>
+    <p><strong>Cycle length:</strong> 3-6 months</p>
+    <p><strong>Break period:</strong> 1-2 months between cycles</p>
+  </div>
+</div>
+
+<p>Ipamorelin's shorter action window makes split dosing practical. Many users take one dose post-workout to support recovery, then a second dose at bedtime to sync with the natural nocturnal GH surge.</p>
+
+<p>Sermorelin's sustained release makes once-daily dosing sufficient for most people. Bedtime administration capitalizes on your body's existing GH rhythm, which peaks during deep sleep.</p>
+
+<div class="d d-t">
+  <div class="s">Dosing Principle</div>
+  <p>More is not better with GH peptides. Excessive doses can desensitize receptors over time, actually reducing your response. Start low, titrate slowly, and follow your provider's recommendations. See our <a href="/articles/peptide-cycling-guide">cycling guide</a> for more on preventing receptor downregulation.</p>
+</div>
+
+<p>Both peptides require <a href="/articles/how-to-reconstitute-peptides">reconstitution</a> before use. Use bacteriostatic water, inject slowly along the vial wall, and <a href="/articles/how-to-store-peptides">store reconstituted vials</a> at 36-46 degrees F. Use within 30 days of mixing.</p>
+
+<hr class="sep">
+
+<!-- Research -->
+<h2>What the Research Actually Shows</h2>
+
+<p>Neither peptide has the massive clinical trial portfolio of something like <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a>. But both have meaningful research behind them, with sermorelin holding the edge due to its FDA trial history.</p>
+
+<h3>Ipamorelin Research Highlights</h3>
+
+<p>A 12-week study in healthy older adults showed approximately 20% increases in IGF-1 levels with ipamorelin administration. Participants reported improvements in body composition without significant adverse effects.</p>
+
+<p>Animal studies suggest ipamorelin may support collagen synthesis, which could benefit <a href="/articles/best-peptides-for-joint-health">joint health</a> and skin integrity. Human data on these secondary benefits remains preliminary.</p>
+
+<h3>Sermorelin Research Highlights</h3>
+
+<p>Clinical data from sermorelin's FDA approval phase demonstrated clear efficacy in GH-deficient patients. Subjects achieved normalized growth hormone levels with consistent dosing over 6-12 month periods.</p>
+
+<p>Multiple studies indicate sermorelin may enhance <a href="/articles/best-peptides-for-sleep">sleep quality</a>, particularly deep-wave sleep duration. This aligns with its bedtime dosing recommendation and could be a meaningful secondary benefit for recovery-focused users.</p>
+
+<table class="tbl">
+  <thead><tr><th>Research Area</th><th>Ipamorelin</th><th>Sermorelin</th></tr></thead>
+  <tbody>
+    <tr><td><strong>IGF-1 elevation</strong></td><td><span class="y">~20% increase</span></td><td><span class="g">~30-50% increase</span></td></tr>
+    <tr><td><strong>Body composition</strong></td><td><span class="y">Moderate improvement</span></td><td><span class="g">Significant improvement</span></td></tr>
+    <tr><td><strong>Sleep quality</strong></td><td>Minor effect</td><td><span class="g">Notable improvement</span></td></tr>
+    <tr><td><strong>Long-term safety data</strong></td><td><span class="r">Limited</span></td><td><span class="g">Extensive (diagnostic use era)</span></td></tr>
+    <tr><td><strong>Anti-aging research</strong></td><td><span class="y">Emerging</span></td><td><span class="y">Established but limited</span></td></tr>
+  </tbody>
+</table>
+
+<div class="d">
+  <div class="s">Research Context</div>
+  <p>Most peptide studies involve small sample sizes or animal models. Larger, placebo-controlled human trials would provide stronger evidence for the various proposed applications of both compounds.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Cost -->
+<h2>Cost and Accessibility</h2>
+
+<p>Price and sourcing differ meaningfully between these two peptides. Sermorelin typically costs more due to its larger molecular size and more complex synthesis, plus it is more commonly sourced through compounding pharmacies rather than research suppliers.</p>
+
+<table class="tbl">
+  <thead><tr><th>Factor</th><th>Ipamorelin</th><th>Sermorelin</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Monthly cost range</strong></td><td><span class="g">$50-$100</span></td><td><span class="y">$100-$200</span></td></tr>
+    <tr><td><strong>Primary source</strong></td><td>Research suppliers</td><td>Compounding pharmacies</td></tr>
+    <tr><td><strong>Prescription typically required</strong></td><td><span class="y">Sometimes</span></td><td><span class="r">Usually</span></td></tr>
+    <tr><td><strong>Preparation</strong></td><td>Reconstitution needed</td><td>Reconstitution needed</td></tr>
+  </tbody>
+</table>
+
+<p>Quality varies enormously between suppliers. Pharmaceutical-grade peptides cost more, but purity and consistency matter for both safety and results. Always request third-party <a href="/articles/how-to-read-peptide-coa">certificates of analysis</a> and watch for <a href="/articles/peptide-vendor-red-flags">vendor red flags</a>.</p>
+
+<div class="d d-p">
+  <div class="s">Insurance Note</div>
+  <p>Most insurance plans do not cover GH secretagogue peptides. Sermorelin prescribed through a licensed clinic may occasionally qualify for partial reimbursement, but this is uncommon. Budget for out-of-pocket costs when planning a protocol.</p>
+</div>
+
+<hr class="sep">
+
+<!-- Timing and Practical Use -->
+<h2>Practical Timing Strategies</h2>
+
+<p>When you take these peptides matters almost as much as which one you choose. Both are sensitive to food intake, particularly carbohydrates and fats, which can blunt the GH response by raising insulin.</p>
+
+<div class="cd ca">
+  <div class="tg">Timing Rules</div>
+  <h3>Maximizing Your GH Response</h3>
+  <p><strong>Pre-dose fasting:</strong> Avoid food for at least 2 hours before injection. Carbs and fats are the worst offenders for blunting the GH pulse.</p>
+  <p><strong>Post-dose window:</strong> Wait 30-45 minutes after injecting before eating. This gives the GH pulse time to peak without insulin interference.</p>
+  <p><strong>Bedtime advantage:</strong> Both peptides pair well with bedtime dosing since you are naturally fasted during sleep and your pituitary releases its largest GH pulse in the first 90 minutes of deep sleep.</p>
+</div>
+
+<p>For athletes using ipamorelin post-workout, the timing gets tricky. You want the GH pulse for recovery, but you also need post-workout nutrition. The compromise most practitioners recommend: inject immediately after training, wait 30 minutes, then eat your recovery meal.</p>
+
+<p>Sermorelin users have it simpler. One injection 30 minutes before bed, with your last meal finished at least 2 hours prior. This creates the ideal hormonal environment for overnight recovery and repair.</p>
+
+<hr class="sep">
+
+<!-- Stacking -->
+<h2>Combination Protocols</h2>
+
+<p>Here is where things get particularly interesting. Because ipamorelin and sermorelin hit different receptors, some practitioners recommend using both together. The idea is that hitting both the ghrelin and GHRH pathways simultaneously could produce synergistic GH output.</p>
+
+<div class="cd cp">
+  <div class="tg">Combination Approach</div>
+  <h3>Ipamorelin + Sermorelin Stack</h3>
+  <p>The <a href="/articles/peptide-stacking-guide">stacking concept</a> is straightforward. Sermorelin primes the GHRH receptor pathway while ipamorelin simultaneously activates the ghrelin receptor. Some clinical data suggests the combined GH output exceeds what either peptide produces alone.</p>
+  <p>The <a href="/articles/tesamorelin-ipamorelin-stack-guide">tesamorelin-ipamorelin stack</a> follows a similar dual-pathway logic, substituting <a href="/articles/tesamorelin-fda-approved-gh-peptide-guide">tesamorelin</a> (another GHRH analog) for sermorelin.</p>
+</div>
+
+<p>Combination dosing typically uses lower amounts of each peptide than you would in a standalone protocol. This reduces the risk of receptor desensitization while potentially amplifying the total GH response.</p>
+
+<hr class="sep">
+
+<!-- Decision Framework -->
+<h2>Choosing Between Them</h2>
+
+<p>The right choice depends on your goals, tolerance for side effects, budget, and how you respond to each compound. Neither is universally "better." They are different tools.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Choose Ipamorelin If</h4>
+    <p>You want targeted GH pulses with minimal side effects, prefer split dosing around workouts, or are new to GH peptides and want the cleanest entry point.</p>
+  </div>
+  <div class="mc">
+    <h4>Choose Sermorelin If</h4>
+    <p>You want sustained, physiological GH elevation, prefer once-daily dosing simplicity, or have a diagnosed GH deficiency with clinical oversight.</p>
+  </div>
+  <div class="mc">
+    <h4>Consider Both If</h4>
+    <p>You are experienced with peptides, want to target both GH pathways simultaneously, and have medical supervision for a combination protocol.</p>
+  </div>
+</div>
+
+<table class="tbl">
+  <thead><tr><th>Goal</th><th>Recommended</th><th>Reasoning</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Post-workout recovery</strong></td><td><span class="g">Ipamorelin</span></td><td>Rapid pulse aligns with recovery window</td></tr>
+    <tr><td><strong>Anti-aging foundation</strong></td><td><span class="g">Sermorelin</span></td><td>Sustained release mimics natural patterns</td></tr>
+    <tr><td><strong>Minimal side effects</strong></td><td><span class="g">Ipamorelin</span></td><td>Higher selectivity, fewer off-target effects</td></tr>
+    <tr><td><strong>Sleep improvement</strong></td><td><span class="g">Sermorelin</span></td><td>Stronger research for deep-wave sleep</td></tr>
+    <tr><td><strong>Budget-conscious</strong></td><td><span class="g">Ipamorelin</span></td><td>Lower monthly cost, wider sourcing</td></tr>
+    <tr><td><strong>Maximum GH output</strong></td><td><span class="g">Both combined</span></td><td>Dual-pathway synergy potential</td></tr>
+  </tbody>
+</table>
+
+<hr class="sep">
+
+<!-- Bloodwork -->
+<h2>Monitoring and Bloodwork</h2>
+
+<p>Regardless of which peptide you choose, <a href="/articles/peptide-bloodwork-guide">regular bloodwork</a> is non-negotiable. You need baseline values before starting and follow-up panels to track your response and watch for any safety signals.</p>
+
+<div class="sr">
+  <div class="sb"><div class="v c1">IGF-1</div><div class="l">Primary Marker<br>for GH Activity</div></div>
+  <div class="sb"><div class="v c2">Fasting<br>Glucose</div><div class="l">GH Can Affect<br>Insulin Sensitivity</div></div>
+  <div class="sb"><div class="v c3">CBC</div><div class="l">General Health<br>Monitoring</div></div>
+  <div class="sb"><div class="v c4">Cortisol</div><div class="l">Rule Out<br>Adrenal Impact</div></div>
+</div>
+
+<p>Test IGF-1 at baseline, then again at 6-8 weeks. If levels are rising appropriately without exceeding age-adjusted reference ranges, your protocol is likely dialed in. If IGF-1 is not budging, your peptide quality, dose, or timing may need adjustment.</p>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Which peptide causes more water retention?</summary>
+    <div class="fa"><p>Sermorelin tends to cause slightly more fluid retention, especially in the first few weeks. This usually resolves on its own. Staying hydrated and keeping sodium intake moderate helps manage it.</p></div>
+  </details>
+  <details>
+    <summary>Can these peptides replace prescription growth hormone?</summary>
+    <div class="fa"><p>No. They stimulate your own natural GH production rather than replacing it. The effect is more moderate than direct HGH injections. Many practitioners consider them a middle ground between doing nothing and full hormone replacement therapy.</p></div>
+  </details>
+  <details>
+    <summary>How long until I notice results?</summary>
+    <div class="fa"><p>Most users report initial changes around 4-6 weeks, primarily in sleep quality and recovery. Full body composition benefits often take 3-6 months to become visible. Patience and consistency matter more than dose escalation.</p></div>
+  </details>
+  <details>
+    <summary>Should I cycle these peptides?</summary>
+    <div class="fa"><p>Yes. Cycling prevents receptor desensitization. Typical ipamorelin cycles run 8-12 weeks on, 4-6 weeks off. Sermorelin cycles often extend to 3-6 months followed by 1-2 month breaks. See the <a href="/articles/peptide-cycling-guide">peptide cycling guide</a> for detailed protocols.</p></div>
+  </details>
+  <details>
+    <summary>Can GH peptides suppress natural production after stopping?</summary>
+    <div class="fa"><p>Temporary reductions sometimes occur but typically resolve within a few weeks. Natural production usually rebounds on its own. Tapering your dose rather than stopping abruptly may ease this transition.</p></div>
+  </details>
+  <details>
+    <summary>Do I need blood work before starting?</summary>
+    <div class="fa"><p>Absolutely. Baseline IGF-1 testing provides a critical reference point. Follow-up panels at 6-8 weeks help monitor your response and flag any safety concerns early. A full hormone panel gives your provider the complete picture.</p></div>
+  </details>
+  <details>
+    <summary>Can I take these with other peptides?</summary>
+    <div class="fa"><p>Many people stack GH secretagogues with recovery peptides like <a href="/articles/bpc-157-complete-guide">BPC-157</a> or <a href="/articles/tb-500-complete-guide">TB-500</a>. However, combining multiple GH-stimulating compounds requires careful medical oversight to avoid excessive IGF-1 elevation.</p></div>
+  </details>
+  <details>
+    <summary>Does fasting affect these peptides?</summary>
+    <div class="fa"><p>GH peptides work best on an empty stomach. Food, particularly carbohydrates, can blunt the GH response. Most protocols recommend dosing at least 30-60 minutes away from meals. Our <a href="/articles/peptides-and-fasting-guide">fasting and peptides guide</a> covers timing strategies in detail.</p></div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- Disclaimer -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational purposes only and does not constitute medical advice. Ipamorelin and sermorelin are research compounds and/or prescription medications that require proper medical supervision. Never self-prescribe GH secretagogues. Consult a qualified healthcare provider before starting any peptide protocol, especially if you have existing health conditions or take other medications.
+</div>
+
+<!-- Cross-links -->
+<h2>Continue Reading</h2>
+
+<p style="font-size:14px;line-height:2.2;">
+<a href="/articles/ipamorelin-complete-guide">Ipamorelin Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/sermorelin-growth-hormone-guide">Sermorelin Growth Hormone Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/tesamorelin-ipamorelin-stack-guide">Tesamorelin + Ipamorelin Stack</a> &nbsp;&middot;&nbsp;
+<a href="/articles/performance-stack-cjc1295-ipamorelin-bpc157">Performance Stack: CJC-1295 + Ipamorelin + BPC-157</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-muscle-growth">Best Peptides for Muscle Growth</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-anti-aging">Best Peptides for Anti-Aging</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-stacking-guide">Peptide Stacking Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/what-are-peptides-beginners-guide">Beginner's Guide to Peptides</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/ipamorelin-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Ipamorelin Complete Guide</a>
+            <a href="/articles/sermorelin-growth-hormone-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Sermorelin Growth Hormone Guide</a>
+            <a href="/articles/tesamorelin-ipamorelin-stack-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Tesamorelin + Ipamorelin Stack</a>
+            <a href="/articles/best-peptides-for-muscle-growth" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Muscle Growth</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
