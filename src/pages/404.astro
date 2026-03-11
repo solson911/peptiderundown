@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Page Not Found" description="The page you're looking for doesn't exist.">
+  <section class="bg-gradient-to-br from-surface-dark via-primary-dark to-surface-dark py-24">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <p class="text-6xl font-extrabold text-white/20 mb-4">404</p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Page Not Found</h1>
+      <p class="text-lg text-gray-300 mb-8">The page you're looking for doesn't exist or may have been moved.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/" class="px-6 py-3 text-sm font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">
+          Go Home
+        </a>
+        <a href="/articles" class="px-6 py-3 text-sm font-bold bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors">
+          Browse All Guides
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-surface py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-xl font-bold text-text mb-6 text-center">Popular Guides</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="/articles/what-are-peptides-beginners-guide" class="block bg-white rounded-xl border border-gray-200 p-4 hover:-translate-y-0.5 transition-all shadow-sm">
+          <p class="font-bold text-text text-sm">What Are Peptides?</p>
+          <p class="text-xs text-text-muted mt-1">The complete beginner's introduction</p>
+        </a>
+        <a href="/articles/bpc-157-complete-guide" class="block bg-white rounded-xl border border-gray-200 p-4 hover:-translate-y-0.5 transition-all shadow-sm">
+          <p class="font-bold text-text text-sm">BPC-157 Complete Guide</p>
+          <p class="text-xs text-text-muted mt-1">The body protection compound explained</p>
+        </a>
+        <a href="/articles/semaglutide-weight-loss-guide" class="block bg-white rounded-xl border border-gray-200 p-4 hover:-translate-y-0.5 transition-all shadow-sm">
+          <p class="font-bold text-text text-sm">Semaglutide Weight Loss Guide</p>
+          <p class="text-xs text-text-muted mt-1">GLP-1 agonist deep dive</p>
+        </a>
+        <a href="/articles/how-to-reconstitute-peptides" class="block bg-white rounded-xl border border-gray-200 p-4 hover:-translate-y-0.5 transition-all shadow-sm">
+          <p class="font-bold text-text text-sm">How to Reconstitute Peptides</p>
+          <p class="text-xs text-text-muted mt-1">Step-by-step mixing guide</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

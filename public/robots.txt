@@ -16,6 +16,7 @@ Allow: /
 # Sitemaps for SEO optimization
 Sitemap: https://peptiderundown.com/sitemap-index.xml
 Sitemap: https://peptiderundown.com/image-sitemap.xml
+Sitemap: https://peptiderundown.com/rss.xml
 
 # Cache directive for crawlers
 Crawl-delay: 1

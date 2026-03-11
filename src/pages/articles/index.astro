@@ -70,7 +70,7 @@ const categories = [...new Set(posts.map(p => p.frontmatter.category).filter(Boo
                  class="article-card group block bg-white rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 border border-gray-100">
                 {post.frontmatter.image && (
                   <div class="h-44 overflow-hidden">
-                    <img src={post.frontmatter.image} alt={post.frontmatter.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    <img src={post.frontmatter.image} alt={post.frontmatter.title} width="768" height="512" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   </div>
                 )}
                 <div class="p-5">

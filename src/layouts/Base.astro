@@ -47,12 +47,35 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="canonical" href={computedCanonical} />
+  <link rel="alternate" type="application/rss+xml" title="PeptideRundown" href={origin + "/rss.xml"} />
   <meta property="og:site_name" content="PeptideRundown" />
   <meta property="og:type" content={ogType} />
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={computedCanonical} />
   <meta property="og:image" content={absoluteOgImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={absoluteOgImage} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "PeptideRundown",
+    url: origin + "/",
+    description: "Independent, science-based peptide education. Every article is cited with peer-reviewed research.",
+    publisher: {
+      "@type": "Organization",
+      name: "PeptideRundown",
+      url: origin + "/",
+      logo: { "@type": "ImageObject", url: origin + "/images/logo.png" }
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: origin + "/articles/?q={search_term_string}" },
+      "query-input": "required name=search_term_string"
+    }
+  })} />
   <title>{fullTitle}</title>
 </head>
 <body class="bg-surface text-text font-sans antialiased">
