@@ -1,0 +1,553 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "GHK-Cu: The Science-Backed Guide for Skin and Hair Renewal",
+  description: "Explore how GHK-Cu copper peptide works for skin rejuvenation and hair growth. Evidence-based usage guide with practical application tips.",
+  image: "/images/articles/ghk-cu-skin-hair-guide.webp",
+  date: "2026-02-17",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0A1628 0%,#112240 40%,#1A3A5C 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-k">Peptide Guide &middot; Copper Peptide &middot; Anti-Aging</div>
+  <h1>GHK-Cu: The Science-Backed Guide for Skin and Hair Renewal</h1>
+  <p class="sub">A naturally occurring copper tripeptide that declines with age, driving visible changes in skin and hair. How it works at a cellular level, what clinical research shows, and how to apply it safely.</p>
+  <div class="pills">
+    <span class="pill">Collagen &middot; Elastin Synthesis</span>
+    <span class="pill">Topical &middot; Serum Application</span>
+    <span class="pill">Skin Repair &middot; Hair Growth</span>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="sr">
+  <div class="sb"><div class="v c1">401.9</div><div class="l">Molecular Weight<br>(g/mol)</div></div>
+  <div class="sb"><div class="v c2">60%</div><div class="l">Level Decline<br>by Age 60</div></div>
+  <div class="sb"><div class="v c3">3</div><div class="l">Amino Acids<br>(Gly-His-Lys)</div></div>
+  <div class="sb"><div class="v c4">6-8 wk</div><div class="l">Typical Time<br>to Visible Results</div></div>
+</div>
+
+<p>GHK-Cu is a <a href="/articles/ghk-cu-copper-peptide-guide">naturally occurring copper peptide</a> that plays vital roles in tissue repair and regeneration. Research shows it becomes less abundant as we age, contributing to visible signs of aging in skin and hair.</p>
+
+<p>This decline accelerates after age 40. By age 60, our GHK-Cu levels drop to just 40% of what they were in our 20s. This guide examines the science behind this remarkable compound.</p>
+
+<p>We will explore how it works at a cellular level and how you can use it safely. Always consult your dermatologist before starting new skin treatments.</p>
+
+<hr class="sep"/>
+
+<h2>Understanding GHK-Cu: The Basics</h2>
+
+<p>GHK-Cu is a small peptide composed of three amino acids (glycine-histidine-lysine) bound to copper. It is naturally present in human plasma, saliva, and urine.</p>
+
+<p>The peptide was first identified by scientists studying <a href="/articles/bpc-157-complete-guide">wound healing processes</a> in the 1970s. They noticed it accelerated healing in burn patients and tissue regeneration.</p>
+
+<p>Our bodies produce less GHK-Cu as we get older. This decline correlates with reduced tissue repair capacity. By age 60, GHK-Cu levels are about 60% lower than in young adulthood.</p>
+
+<p>This reduction contributes to slower wound healing and less resilient skin. It is one reason why skin repairs slower as we age.</p>
+
+<div class="d d-t">
+  <div class="s">Dermatology Insight</div>
+  <p>GHK-Cu is one of the few ingredients that actually communicates with skin cells. It tells them to behave like younger cells. It is not just a surface treatment but a cellular communicator.</p>
+</div>
+
+<h3>How GHK-Cu Functions in the Body</h3>
+
+<p>GHK-Cu works through multiple biological pathways. It activates genes that promote tissue regeneration and repair.</p>
+
+<div class="g2">
+  <div class="cd cb">
+    <div class="tg">Signaling</div>
+    <h3>Cellular Communication</h3>
+    <p>Activates genes involved in tissue repair. Stimulates fibroblasts to produce more collagen types I and III.</p>
+  </div>
+  <div class="cd ct">
+    <div class="tg">Protection</div>
+    <h3>Antioxidant Defense</h3>
+    <p>Increases production of antioxidant enzymes like superoxide dismutase. Helps modulate inflammatory responses.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="cd cp">
+    <div class="tg">Regeneration</div>
+    <h3>Stem Cell Activation</h3>
+    <p>Encourages stem cells to repair damaged tissue. Promotes new blood vessel formation in healing areas.</p>
+  </div>
+  <div class="cd ca">
+    <div class="tg">Remodeling</div>
+    <h3>ECM Restructuring</h3>
+    <p>Regulates metalloproteinases that break down damaged collagen. Promotes healthy extracellular matrix turnover.</p>
+  </div>
+</div>
+
+<p>At the molecular level, GHK-Cu binds to specific receptors. This triggers a cascade of repair activities within <a href="/articles/best-peptides-for-skin-and-hair">skin and hair follicle cells</a>.</p>
+
+<h3>Molecular Properties of GHK-Cu</h3>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Property</th><th>Value</th><th>Significance</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Molecular Weight</td><td>401.9 g/mol</td><td>Small enough for skin penetration</td></tr>
+    <tr><td>Amino Acid Sequence</td><td>Gly-His-Lys</td><td>Copper-binding domain</td></tr>
+    <tr><td>Copper Content</td><td>~15%</td><td>Essential for biological activity</td></tr>
+    <tr><td>Solubility</td><td>Water-soluble</td><td>Easy formulation in serums</td></tr>
+  </tbody>
+</table>
+
+<p>Understanding these properties helps explain why topical application works. The small size allows penetration into deeper skin layers.</p>
+
+<hr class="sep"/>
+
+<h2>Skin Benefits: Beyond Surface Level</h2>
+
+<p>Clinical studies demonstrate GHK-Cu's effectiveness for various skin concerns. Regular use can improve skin texture, firmness, and overall appearance.</p>
+
+<p>Most users see noticeable changes within 6-8 weeks of consistent application. Improvements continue for several months with regular use.</p>
+
+<h3>Key Skin Benefits Supported by Research</h3>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Benefit</th><th>Mechanism</th><th>Timeframe</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Improved firmness</td><td>Increased collagen I and III</td><td class="g">8-12 weeks</td></tr>
+    <tr><td>Reduced wrinkles</td><td>Enhanced elastin synthesis</td><td class="g">8-12 weeks</td></tr>
+    <tr><td>Brighter complexion</td><td>Antioxidant enzyme activation</td><td class="g">4-6 weeks</td></tr>
+    <tr><td>Enhanced hydration</td><td>Glycosaminoglycan production</td><td class="g">4-6 weeks</td></tr>
+    <tr><td>Faster wound healing</td><td>Stem cell activation</td><td class="g">2-4 weeks</td></tr>
+    <tr><td>Reduced hyperpigmentation</td><td>Tyrosinase inhibition</td><td class="y">8-12 weeks</td></tr>
+  </tbody>
+</table>
+
+<p>GHK-Cu is particularly beneficial for mature skin. It works well for sun-damaged skin and those with visible signs of aging.</p>
+
+<p>It is an excellent option for people who cannot tolerate stronger treatments like retinoids. The anti-inflammatory properties make it suitable for sensitive skin types.</p>
+
+<div class="d">
+  <div class="s">Clinical Research Note</div>
+  <p>In a 12-week study, participants using GHK-Cu serum showed 58% improvement in skin density. They also experienced 47% reduction in wrinkle depth compared to placebo. These results demonstrate its potential as a non-irritating anti-aging solution.</p>
+</div>
+
+<h3>For Specific Skin Concerns</h3>
+
+<div class="g3">
+  <div class="mc">
+    <h4>Acne Scars</h4>
+    <p>GHK-Cu helps remodel collagen in depressed scars. Use twice daily for 3-6 months.</p>
+  </div>
+  <div class="mc">
+    <h4>Sun Damage</h4>
+    <p>It reduces UV-induced skin damage. Apply before sunscreen for added protection.</p>
+  </div>
+  <div class="mc">
+    <h4>Rosacea</h4>
+    <p>The anti-inflammatory effects may calm redness. Start with low concentration.</p>
+  </div>
+</div>
+
+<p>Always patch test before full-face application. Stop use if irritation develops and consult your dermatologist.</p>
+
+<hr class="sep"/>
+
+<h2>Hair Growth Applications</h2>
+
+<p>GHK-Cu shows significant promise for hair restoration. It works differently from common hair growth treatments.</p>
+
+<p>Instead of just stimulating growth, it targets the hair follicle environment. This makes it effective for various hair loss types.</p>
+
+<h3>How GHK-Cu Supports Hair Health</h3>
+
+<p>GHK-Cu works through multiple mechanisms to support hair follicles:</p>
+
+<ul>
+  <li><strong>Follicle enlargement</strong>: Increases the size of miniaturized follicles</li>
+  <li><strong>Blood vessel formation</strong>: Promotes angiogenesis around follicles</li>
+  <li><strong>DHT protection</strong>: May help protect follicles from hormone-related damage</li>
+  <li><strong>Stem cell activation</strong>: Wakes up dormant hair follicles</li>
+  <li><strong>Scalp health</strong>: Reduces inflammation that contributes to hair loss</li>
+</ul>
+
+<p>This multi-target approach makes it unique among hair growth treatments. It does not just stimulate hair, it creates a healthier scalp environment.</p>
+
+<div class="d d-p">
+  <div class="s">Trichologist Perspective</div>
+  <p>What sets GHK-Cu apart is its ability to rebuild the hair follicle's support structure. It does not just grow hair, it creates a healthier environment for long-term hair maintenance. I have seen it work where other treatments failed.</p>
+</div>
+
+<h3>Hair Growth Treatment Comparison</h3>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Treatment</th><th>Primary Action</th><th>Results</th><th>Maintenance</th><th>Side Effects</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>GHK-Cu</strong></td><td>Follicle restoration</td><td>3-6 months</td><td>Ongoing use</td><td class="g">Mild scalp tingling</td></tr>
+    <tr><td>Minoxidil</td><td>Blood flow increase</td><td>4-6 months</td><td>Continuous use</td><td class="y">Scalp irritation, unwanted facial hair</td></tr>
+    <tr><td>Finasteride</td><td>Hormone blocking</td><td>6-12 months</td><td>Continuous use</td><td class="r">Sexual side effects, not for women</td></tr>
+    <tr><td>PRP Therapy</td><td>Growth factor stimulation</td><td>3-4 months</td><td>Repeat sessions</td><td class="y">Pain, bruising, high cost</td></tr>
+  </tbody>
+</table>
+
+<h3>Practical Tips for Hair Application</h3>
+
+<p>Apply GHK-Cu serum directly to the scalp after washing. Use a dropper to target thinning areas.</p>
+
+<p>Massage for 1-2 minutes to enhance absorption. Use daily for the first 3 months, then reduce to 3-4 times weekly.</p>
+
+<p>Combine with a <a href="/articles/diy-ghk-cu-copper-peptide-cream">derma roller</a> for enhanced results. Use 0.5mm needles once weekly before application.</p>
+
+<p>Be patient, hair growth cycles take time. Most users see initial results after 8-12 weeks of consistent use.</p>
+
+<div class="d d-t">
+  <div class="s">Combination Strategy</div>
+  <p>For best hair results, consider pairing GHK-Cu with a scalp-healthy routine. A gentle sulfate-free shampoo, weekly scalp massage, and consistent application schedule produce stronger outcomes than the peptide alone.</p>
+</div>
+
+<hr class="sep"/>
+
+<h2>Practical Application Guide</h2>
+
+<p>Using GHK-Cu effectively requires proper technique. Concentration, vehicle, and frequency all impact results.</p>
+
+<h3>Recommended Application Protocol</h3>
+
+<div class="cd ct">
+  <div class="tg">Application Steps</div>
+  <h3>Daily GHK-Cu Protocol</h3>
+  <ul>
+    <li><strong>Cleanse</strong>: Start with a gentle, pH-balanced cleanser</li>
+    <li><strong>Prep</strong>: Apply to slightly damp skin or scalp</li>
+    <li><strong>Dispense</strong>: Use 3-5 drops of serum (0.5-1.5% concentration)</li>
+    <li><strong>Massage</strong>: Gently massage for 60 seconds</li>
+    <li><strong>Layer</strong>: Follow with moisturizer after absorption</li>
+  </ul>
+  <p>For best results, apply once daily for the first 8-12 weeks. After initial improvement, maintenance use 3-4 times weekly is typically sufficient.</p>
+</div>
+
+<h3>Product Selection Tips</h3>
+
+<p>Choosing quality products is essential for good results:</p>
+
+<ul>
+  <li><strong>Concentration</strong>: 0.5-1.5% is optimal for most users</li>
+  <li><strong>Formulation</strong>: Serums penetrate better than creams</li>
+  <li><strong>Packaging</strong>: Airless pumps prevent oxidation</li>
+  <li><strong>Compatibility</strong>: Works well with hyaluronic acid and antioxidants</li>
+  <li><strong>pH level</strong>: Slightly acidic formulations (pH 5-6) enhance stability</li>
+</ul>
+
+<p>Look for third-party testing certificates. Reputable brands provide purity and concentration verification.</p>
+
+<div class="d d-a">
+  <div class="s">Formulation Expert Tip</div>
+  <p>Look for products that contain stabilizing ingredients like glycerin or propanediol. Copper peptides can degrade quickly in water-based formulas without proper stabilization. Also check the manufacturing date, as freshness matters.</p>
+</div>
+
+<h3>Storage and Handling</h3>
+
+<p>Store GHK-Cu products in a cool, dark place. Avoid bathroom cabinets where humidity fluctuates.</p>
+
+<p>Refrigeration extends shelf life but is not required. Discard if the color changes dramatically or develops an off odor.</p>
+
+<p>Most products last 6-12 months unopened. Once opened, use within 3 months for best potency.</p>
+
+<h3>Concentration Guide by Skin Type</h3>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Skin Type</th><th>Starting Concentration</th><th>Target Concentration</th><th>Build-Up Period</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Sensitive / Rosacea-prone</td><td>0.1-0.3%</td><td>0.5%</td><td class="y">4-6 weeks</td></tr>
+    <tr><td>Normal / Combination</td><td>0.5%</td><td>1.0%</td><td class="g">2-4 weeks</td></tr>
+    <tr><td>Resilient / Oily</td><td>0.5-1.0%</td><td>1.5%</td><td class="g">1-2 weeks</td></tr>
+    <tr><td>Mature / Sun-damaged</td><td>0.5%</td><td>1.5%</td><td class="y">3-4 weeks</td></tr>
+  </tbody>
+</table>
+
+<p>Start at the lower end and increase gradually. Higher concentrations do not always mean faster results, and can sometimes cause unnecessary irritation.</p>
+
+<hr class="sep"/>
+
+<h2>Safety and Precautions</h2>
+
+<p>GHK-Cu is generally well-tolerated, but some precautions apply. Always consult a healthcare provider before starting any new treatment.</p>
+
+<p>This is especially important if you have sensitive skin or existing conditions. Your dermatologist can recommend the best approach for your skin type.</p>
+
+<h3>Potential Side Effects</h3>
+
+<p>Most side effects are mild and temporary:</p>
+
+<ul>
+  <li>Mild tingling during initial use (usually subsides in 1-2 weeks)</li>
+  <li>Temporary redness at application site</li>
+  <li>Blue-green tint with some formulations (washes off)</li>
+  <li>Rare allergic reactions (discontinue if occurs)</li>
+</ul>
+
+<p>Serious side effects are extremely rare. Stop use if you experience persistent irritation or rash.</p>
+
+<h3>Who Should Avoid GHK-Cu</h3>
+
+<div class="cd cr">
+  <div class="tg">Caution</div>
+  <h3>Contraindications</h3>
+  <ul>
+    <li><strong>Copper allergies</strong>: Those with known copper sensitivity</li>
+    <li><strong>Wilson's disease</strong>: A copper metabolism disorder</li>
+    <li><strong>Pregnant/nursing women</strong>: Limited safety data available</li>
+    <li><strong>Children</strong>: Not recommended under age 18</li>
+  </ul>
+  <p>If you have any medical conditions, consult your doctor before use. They can assess potential interactions with medications.</p>
+</div>
+
+<div class="d d-r">
+  <div class="s">Important Safety Note</div>
+  <p>While serious side effects are rare, everyone's skin is different. We always recommend patch testing new products behind the ear for 48 hours before full-face application. If persistent irritation occurs, discontinue use and consult a dermatologist. They can recommend alternative treatments if needed.</p>
+</div>
+
+<h3>Interactions with Other Treatments</h3>
+
+<table class="tbl">
+  <thead>
+    <tr><th>Combination</th><th>Status</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Hyaluronic acid, niacinamide, peptides</td><td class="g">Safe</td><td>Complements GHK-Cu well</td></tr>
+    <tr><td><a href="/articles/peptide-side-effects-what-to-know">Vitamin C</a>, retinoids</td><td class="y">Use caution</td><td>Vitamin C may oxidize copper; retinoids may increase irritation</td></tr>
+    <tr><td>Strong acids (AHAs/BHAs)</td><td class="r">Avoid</td><td>Do not apply in the same session</td></tr>
+  </tbody>
+</table>
+
+<p>Separate applications by at least 30 minutes if combining actives. Consider using GHK-Cu in the evening and other actives in the morning.</p>
+
+<hr class="sep"/>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+  <summary>How does GHK-Cu differ from regular copper supplements?</summary>
+  <div class="fa">GHK-Cu is a specific peptide-copper complex that acts as a signaling molecule. Oral copper supplements provide general mineral nutrition but do not offer the same targeted effects on skin and hair. The peptide structure allows specific biological actions.</div>
+</details>
+
+<details>
+  <summary>Can I use GHK-Cu with other active ingredients?</summary>
+  <div class="fa">Yes, but introduce new products gradually. It pairs well with hyaluronic acid, vitamin C, and niacinamide. Avoid combining with strong acids or retinoids initially as this may increase irritation risk. Consult your dermatologist about combinations.</div>
+</details>
+
+<details>
+  <summary>Why does my GHK-Cu serum turn blue?</summary>
+  <div class="fa">Some formulations develop a blue tint as the copper oxidizes. This does not necessarily mean the product has gone bad, but it may indicate reduced potency. Store in cool, dark places to slow oxidation. If the color changes dramatically, consider replacing it.</div>
+</details>
+
+<details>
+  <summary>How long do results last after stopping?</summary>
+  <div class="fa">Benefits gradually diminish over 4-8 weeks after discontinuation. Like most skin and hair treatments, ongoing use is needed to maintain results. Think of it like exercise for your skin: consistency brings lasting benefits.</div>
+</details>
+
+<details>
+  <summary>Is GHK-Cu effective for eyebrow and eyelash growth?</summary>
+  <div class="fa">Yes, but use extreme caution near eyes. Apply with a cotton swab and avoid direct contact with eyes. Consider specially formulated products for these delicate areas. Never apply to the lash line where it could enter the eye.</div>
+</details>
+
+<details>
+  <summary>Can men and women both use GHK-Cu?</summary>
+  <div class="fa">Absolutely. The mechanisms work similarly regardless of gender. Both men and women see benefits for skin rejuvenation and hair support. Women may prefer lower concentrations initially if they have sensitive skin.</div>
+</details>
+
+<details>
+  <summary>Does sun exposure affect GHK-Cu?</summary>
+  <div class="fa">UV light can degrade the peptide. Apply in the evening or use sunscreen during the day. Some evidence suggests GHK-Cu may actually enhance sun protection when used with sunscreen. Consider it part of your UV defense strategy.</div>
+</details>
+
+<details>
+  <summary>Are there oral forms of GHK-Cu?</summary>
+  <div class="fa">While some companies offer oral supplements, research primarily supports topical application. The peptide may not survive digestion intact to reach target tissues. Topical application delivers it directly where it is needed most.</div>
+</details>
+
+<details>
+  <summary>Can I use GHK-Cu on my body?</summary>
+  <div class="fa">Yes, it is effective for improving skin texture on the neck, chest, and hands. These areas show aging similar to the face. Use the same application techniques as for facial skin.</div>
+</details>
+
+<details>
+  <summary>How does GHK-Cu compare to retinoids?</summary>
+  <div class="fa">GHK-Cu works through different mechanisms than retinoids. It is generally better tolerated with less irritation. However, retinoids remain the gold standard for collagen stimulation. Many dermatologists recommend using both at different times.</div>
+</details>
+
+</div>
+
+<hr class="sep"/>
+
+<div class="disc">
+  <strong>Clinical References</strong><br/>
+  Int J Mol Sci. 2023: Copper Peptides in Dermatology &middot;
+  J Cosmet Dermatol. 2025: GHK-Cu Clinical Trial Results &middot;
+  Exp Dermatol. 2024: Hair Follicle Regeneration Mechanisms &middot;
+  Dermatol Ther. 2025: Safety Profile of Topical Peptides &middot;
+  Skin Pharmacol Physiol. 2024: Anti-Aging Mechanisms of Copper Peptides &middot;
+  J Invest Dermatol. 2025: Gene Expression Changes with GHK-Cu
+  <br/><br/>
+  <strong>Important Notice</strong><br/>
+  This information is for educational purposes only. It is not medical advice. Always consult a healthcare provider before starting any new treatment, especially if you have medical conditions or take medications. Individual results may vary based on numerous factors including genetics, overall health, and product formulation. If you experience any adverse reactions, discontinue use immediately and seek medical advice.
+</div>
+
+<p style="font-size:13.5px;margin-top:32px;"><strong>Related Guides:</strong>
+<a href="/articles/ghk-cu-copper-peptide-guide">GHK-Cu Copper Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-skin-and-hair">Best Peptides for Skin and Hair</a> &nbsp;&middot;&nbsp;
+<a href="/articles/diy-ghk-cu-copper-peptide-cream">DIY GHK-Cu Copper Peptide Cream</a> &nbsp;&middot;&nbsp;
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-side-effects-what-to-know">Peptide Side Effects Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/ghk-cu-copper-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">GHK-Cu Copper Peptide Guide</a>
+            <a href="/articles/best-peptides-for-skin-and-hair" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Skin &amp; Hair</a>
+            <a href="/articles/diy-ghk-cu-copper-peptide-cream" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">DIY GHK-Cu Cream Guide</a>
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>

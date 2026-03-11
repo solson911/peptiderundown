@@ -2,9 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import PageSidebar from '../../components/PageSidebar.astro';
 
-const mdPosts = await Astro.glob('./*.md');
 const astroPosts = (await Astro.glob('./*.astro')).filter(p => p.frontmatter && p.url !== '/articles/');
-const allPosts = [...mdPosts, ...astroPosts];
+const allPosts = [...astroPosts];
 
 // Dedupe by URL (prevents double listings if two files resolve to the same route)
 const dedupedByUrl = Object.values(allPosts.reduce((acc, p) => {
