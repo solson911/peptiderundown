@@ -18,7 +18,7 @@ const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { y
 
 const origin = Astro.url.origin;
 const path = Astro.url.pathname;
-const normalizedPath = (path !== '/' && path.endsWith('/')) ? path.slice(0, -1) : path;
+const normalizedPath = (path === '/') ? path : (path.endsWith('/') ? path : path + '/');
 const canonicalUrl = origin + normalizedPath;
 const ogImage = frontmatter.image || '/images/logo.png';
 
