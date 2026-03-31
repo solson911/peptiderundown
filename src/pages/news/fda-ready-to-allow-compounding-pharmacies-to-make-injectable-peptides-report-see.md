@@ -8,7 +8,7 @@ date: 2026-03-31
 category: News
 source: Seeking Alpha
 sourceUrl: "https://seekingalpha.com/news/4570865-fda-ready-allow-compounding-pharmacies-make-injectable-peptides"
-tags: "[\"fda\"]"
+tags: ["fda"]
 ---
 The FDA appears ready to greenlight compounding pharmacies for injectable peptide production, according to a new report from Seeking Alpha. This potential regulatory shift could dramatically reshape how Americans access popular peptides like semaglutide, tirzepatide, and other compounds that have faced ongoing supply challenges.
 
