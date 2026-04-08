@@ -11,9 +11,6 @@ source: "pharmacytimes.com"
 sourceUrl: "https://www.pharmacytimes.com/view/apha2026-glp-1-therapies-are-rewriting-the-rules-of-metabolic-disease"
 ---
 
-![APhA 2026: GLP-1 Therapies Are Rewriting the Rules of Metabolic Disease](/images/news/apha2026-glp-1-therapies-are-rewriting-the-rules-of-metabolic-disease-pharmacy-t.webp)
-
-## Lead
 
 GLP-1 receptor agonists have been a dominant story in metabolic medicine for the last few years, but the picture presented at the American Pharmacists Association 2026 annual meeting suggests the story is still just getting started. Emily Eddy, PharmD, took the stage at APhA 2026 to walk through what incretin therapy looks like now and where the evidence is pointing next. The short version: the pipeline is bigger, the clinical applications are broader, and pharmacists are going to be central to managing all of it.
 

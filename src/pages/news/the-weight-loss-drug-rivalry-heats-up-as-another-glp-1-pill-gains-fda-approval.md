@@ -11,8 +11,6 @@ source: "scientificamerican.com"
 sourceUrl: "https://www.scientificamerican.com/article/how-eli-lillys-new-glp-1-pill-stacks-up-against-wegovy-and-other-weight-loss/"
 ---
 
-## Lead
-
 ![The Weight-Loss Drug Rivalry Heats Up as Another GLP-1 Pill Gains FDA Approval](/images/news/the-weight-loss-drug-rivalry-heats-up-as-another-glp-1-pill-gains-fda-approval.webp)
 
 The FDA has approved a second oral GLP-1 medication for weight loss, a drug called Foundayo that delivered an average of 27 pounds lost over 72 weeks in clinical trials. The approval marks a meaningful shift in how patients can access this class of drugs, which until recently was synonymous with weekly injections.

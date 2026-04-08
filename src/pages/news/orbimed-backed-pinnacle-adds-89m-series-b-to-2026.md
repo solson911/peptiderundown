@@ -11,8 +11,6 @@ source: "Fierce Biotech"
 sourceUrl: "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYmJUWUJmRkMwT2hOS0MzVTJnNllvQUFNZkJhdG12dXlHSmRZTDJnQVNRWVhReFQwNjJoX2V5SEJnNXM1QVhKa29JenlRSEtBWC1lU3hTTW85N3ZiWjNxWDNvanhZZGtLaGU3Q2JUdVhRMHlsRnd0UGVEWnFKUXFSMTZOODlmYVJGY1o2OW4yZkdMamUwRWxxOHFDNHVaendhdEpwVUtZa0xfSVU?oc=5"
 ---
 
-## Lead
-
 Pinnacle, a biotech company backed by healthcare-focused investment firm OrbiMed, has closed an $89 million Series B financing round. The capital is earmarked to advance the company's pipeline of oral peptide therapeutics, according to reporting from Fierce Biotech. The raise signals continued investor confidence in the oral peptide space at a time when the category is drawing serious attention across the industry.
 
 ## Details

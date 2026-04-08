@@ -11,9 +11,6 @@ source: "pharmacytimes.com"
 sourceUrl: "https://www.pharmacytimes.com/view/retatrutide-delivers-significant-a1c-reduction-weight-loss-in-phase-3-type-2-diabetes-trial"
 ---
 
-![Retatrutide Phase 3 trial results showing A1C reduction and weight loss in type 2 diabetes](/images/news/retatrutide-delivers-significant-a1c-reduction-weight-loss-in-phase-3-type-2-dia.webp)
-
-## Lead
 
 Eli Lilly has released Phase 3 trial data showing that retatrutide produced significant reductions in blood sugar and body weight in adults with type 2 diabetes. The drug met its primary endpoint of superior A1C reduction compared to placebo at 40 weeks, along with clearing all key secondary endpoints. The results add to a growing body of evidence that triple hormone receptor agonists may push outcomes further than the current generation of GLP-1 drugs.
 

@@ -11,9 +11,6 @@ source: "cen.acs.org"
 sourceUrl: "https://cen.acs.org/pharmaceuticals/amylin-weight-loss-drugs-compete/104/web/2026/04"
 ---
 
-![Can Amylin Weight-Loss Drugs Compete in a World of GLP-1s?](/images/news/can-amylin-weight-loss-drugs-compete-in-a-world-of-glp-1s.webp)
-
-## Lead
 
 GLP-1 receptor agonists like semaglutide and tirzepatide have become the dominant force in obesity treatment, but a separate class of weight-loss drugs built around the hormone amylin is quietly pushing for a seat at the table. The catch? Wall Street isn't buying it yet.
 

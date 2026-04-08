@@ -11,9 +11,6 @@ source: "kevinmd.com"
 sourceUrl: "https://kevinmd.com/2026/04/the-clinical-evidence-and-reality-of-peptide-therapy.html"
 ---
 
-![A Physician Makes the Case for Peptide Therapy — and Admits the Evidence Gaps](/images/news/the-clinical-evidence-and-reality-of-peptide-therapy.webp)
-
-## Lead
 
 A functional medicine physician published an unusually candid piece on KevinMD this week, laying out both their clinical case for using peptide therapy and the uncomfortable truth that the human trial data is thin. The piece focuses on compounds like BPC-157 and reflects a broader tension in the field: practitioners seeing what they describe as meaningful results in patients, while the formal research infrastructure has not yet caught up.
 

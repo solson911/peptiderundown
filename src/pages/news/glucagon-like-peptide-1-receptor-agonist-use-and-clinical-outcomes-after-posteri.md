@@ -11,9 +11,6 @@ source: "PubMed"
 sourceUrl: "https://pubmed.ncbi.nlm.nih.gov/41938705/"
 ---
 
-![GLP-1 Receptor Agonists Linked to Cervical Spinal Fusion Outcomes in New Cohort Study](/images/news/glucagon-like-peptide-1-receptor-agonist-use-and-clinical-outcomes-after-posteri.webp)
-
-## Lead
 
 A new large-cohort retrospective study published on PubMed is taking a closer look at how glucagon-like peptide-1 receptor agonists, commonly known as GLP-1RAs, affect patient outcomes following posterior cervical spinal fusion for degenerative conditions. While researchers have been gathering data on these drugs in the context of lumbar spine procedures, the cervical spine has remained a relative blind spot. This study aims to fill that gap.
 
