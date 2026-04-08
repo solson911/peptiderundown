@@ -44,6 +44,6 @@ More physician voices entering this conversation publicly, as this article repre
 
 ## Related Reading
 
-- [What Is BPC-157? A Plain-Language Guide](/articles/what-is-bpc-157/)
-- [How Peptide Research Works: From Animal Studies to Human Trials](/articles/peptide-research-explained/)
-- [Compounding Pharmacies and Peptides: What You Should Know](/articles/compounding-pharmacies-peptides/)
+- [What Is BPC-157? A Plain-Language Guide](/articles/bpc-157-complete-guide/)
+- [How Peptide Research Works: From Animal Studies to Human Trials](/articles/peptide-myths-debunked/)
+- [Compounding Pharmacies and Peptides: What You Should Know](/articles/peptide-legality-fda-rfk-guide/)

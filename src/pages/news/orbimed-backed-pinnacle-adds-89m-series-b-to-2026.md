@@ -46,5 +46,5 @@ OrbiMed will presumably be active in helping shape Pinnacle's strategy as the co
 ## Related Reading
 
 - [Peptide Delivery Forms: Injectable vs Nasal vs Oral vs Topical](/articles/peptide-delivery-forms-guide/)
-- [Structure Therapeutics Reports More Phase 2 Data for Oral GLP-1](/articles/structure-therapeutics-reports-more-phase-2-data-for-2026/)
+- [Structure Therapeutics Reports More Phase 2 Data for Oral GLP-1](/articles/peptide-legality-fda-rfk-guide/)
 - [Tesamorelin: The FDA-Approved Growth Hormone Peptide: Complete Guide](/articles/tesamorelin-fda-approved-gh-peptide-guide/)

@@ -44,6 +44,6 @@ The research also signals that spine surgery outcomes may be one of the next fro
 
 ## Related Reading
 
-- [What Are GLP-1 Receptor Agonists?](/articles/what-are-glp-1-receptor-agonists/)
-- [Semaglutide Overview: Uses, Dosing, and Research](/articles/semaglutide/)
-- [GLP-1 Peptides and Inflammation: What the Research Shows](/articles/glp-1-peptides-and-inflammation/)
+- [What Are GLP-1 Receptor Agonists?](/articles/what-are-peptides-beginners-guide/)
+- [Semaglutide Overview: Uses, Dosing, and Research](/articles/semaglutide-weight-loss-guide/)
+- [GLP-1 Peptides and Inflammation: What the Research Shows](/articles/semaglutide-vs-tirzepatide-comparison/)

@@ -60,4 +60,4 @@ The GLP-1 drug class just got its biggest shakeup since tirzepatide. A pill that
 ## Related Reading
 
 - [Peptide Delivery Forms: Injectable vs Nasal vs Oral vs Topical](/articles/peptide-delivery-forms-guide/)
-- [Structure Therapeutics Reports More Phase 2 Data for Oral GLP-1](/articles/structure-therapeutics-reports-more-phase-2-data-for-2026/)
+- [Structure Therapeutics Reports More Phase 2 Data for Oral GLP-1](/articles/semaglutide-weight-loss-guide/)

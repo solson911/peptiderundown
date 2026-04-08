@@ -44,6 +44,6 @@ No approval timeline has been announced yet.
 
 ## Related Reading
 
-- [How GLP-1 Peptides Work](/articles/how-glp-1-peptides-work/)
-- [Semaglutide vs Tirzepatide: What the Data Says](/articles/semaglutide-vs-tirzepatide/)
-- [What Is Tirzepatide and How Does It Work?](/articles/what-is-tirzepatide/)
+- [How GLP-1 Peptides Work](/articles/what-are-peptides-beginners-guide/)
+- [Semaglutide vs Tirzepatide: What the Data Says](/articles/semaglutide-vs-tirzepatide-comparison/)
+- [What Is Tirzepatide and How Does It Work?](/articles/tirzepatide-complete-guide/)

@@ -45,6 +45,6 @@ For anyone considering GLP-1 therapy, the practical advice from most clinicians 
 
 ## Related Reading
 
-- [What Are GLP-1 Receptor Agonists?](/articles/what-are-glp-1-receptor-agonists/)
-- [Semaglutide vs Tirzepatide: How They Compare](/articles/semaglutide-vs-tirzepatide/)
-- [Oral vs Injectable Peptides: What You Should Know](/articles/oral-vs-injectable-peptides/)
+- [What Are GLP-1 Receptor Agonists?](/articles/what-are-peptides-beginners-guide/)
+- [Semaglutide vs Tirzepatide: How They Compare](/articles/semaglutide-vs-tirzepatide-comparison/)
+- [Oral vs Injectable Peptides: What You Should Know](/articles/peptide-delivery-forms-guide/)

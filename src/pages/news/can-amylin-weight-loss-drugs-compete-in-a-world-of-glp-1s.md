@@ -46,6 +46,6 @@ Standalone programs still need more clinical evidence before the investment case
 
 ## Related Reading
 
-- [What Is Semaglutide and How Does It Work?](/articles/what-is-semaglutide/)
-- [GLP-1 Peptides Explained: Mechanisms, Uses, and Research](/articles/glp-1-peptides-explained/)
-- [Peptide Hormones and Metabolic Health: A Research Overview](/articles/peptide-hormones-metabolic-health/)
+- [What Is Semaglutide and How Does It Work?](/articles/semaglutide-weight-loss-guide/)
+- [GLP-1 Peptides Explained: Mechanisms, Uses, and Research](/articles/what-are-peptides-beginners-guide/)
+- [Peptide Hormones and Metabolic Health: A Research Overview](/articles/retatrutide-complete-guide/)

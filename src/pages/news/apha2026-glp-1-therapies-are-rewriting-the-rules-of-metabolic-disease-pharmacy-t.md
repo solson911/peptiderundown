@@ -42,6 +42,6 @@ Pharmacy practice guidelines may also need updating as the approved indications 
 
 ## Related Reading
 
-- [What Are GLP-1 Receptor Agonists?](/articles/what-are-glp-1-receptor-agonists/)
-- [Semaglutide Guide: Uses, Dosing, and What the Research Shows](/articles/semaglutide-guide/)
-- [Tirzepatide vs Semaglutide: What the Evidence Says](/articles/tirzepatide-vs-semaglutide/)
+- [What Are GLP-1 Receptor Agonists?](/articles/what-are-peptides-beginners-guide/)
+- [Semaglutide Guide: Uses, Dosing, and What the Research Shows](/articles/semaglutide-weight-loss-guide/)
+- [Tirzepatide vs Semaglutide: What the Evidence Says](/articles/semaglutide-vs-tirzepatide-comparison/)
