@@ -28,7 +28,13 @@ If you ever find yourself typing prose, HTML, CSS, or frontmatter into a file un
    - `{{SECTIONS}}` — bullet list of major sections to cover
    - `{{CROSSLINKS}}` — bullet list of related articles to link to (slugs from `src/pages/articles/`)
 
-3. **Invoke Claude Code via the CLI** with the filled dispatch as the prompt. The Claude Code CLI must be running in a working directory at the **peptiderundown site repo root** (the directory containing this `AGENTS.md`). Claude Code will:
+3. **Hand the dispatch to Claude Code via the wrapper.** Save the filled dispatch to a temp file (e.g. `/tmp/dispatch-{slug}.txt`), then run **exactly one command** from the site repo root:
+
+   ```
+   tools/dispatch-writer.sh /tmp/dispatch-{slug}.txt
+   ```
+
+   That wrapper spawns Claude Code (Opus 4.6) as a one-shot ACP session via `acpx claude exec`. Do NOT try to invoke `acpx`, `claude`, `python3`, or `git` yourself, and do NOT chain this command with `&&`. One call, no chaining. The wrapper rejects any dispatch that still contains `{{VARS}}`. Inside the ACP session, Claude Code will:
    - Read `docs/pipeline/ASTRO-ARTICLE-TEMPLATE.md` and a reference article
    - Write `src/pages/articles/{slug}.astro`
    - Generate the hero image via `tools/gen-image.py`
@@ -40,7 +46,9 @@ If you ever find yourself typing prose, HTML, CSS, or frontmatter into a file un
 4. **Watch for completion.** Parse Claude Code's final message:
    - **Success signal:** Claude Code reports a verified live URL AND `pre-deploy.sh` exited 0. Mark the run successful.
    - **Retry signal:** Claude Code reports a recoverable error (image content-filter rejection, transient network issue, single CSS class typo). Re-invoke Claude Code ONCE with the same dispatch plus a one-line note about what failed.
-   - **Abort signal:** `pre-deploy.sh` failed twice in a row, OR Claude Code reports it cannot resolve the issue, OR Opus is unavailable. Log the failure to `~/.openclaw/workspace/memory/YYYY-MM-DD.md` and stop. Do NOT push. Do NOT fall back to a weaker model. Do NOT write the article yourself.
+   - **Abort signal:** `pre-deploy.sh` failed twice in a row, OR Claude Code reports it cannot resolve the issue, OR Opus is unavailable, OR the wrapper itself fails (ACP denial, sandbox rejection, missing acpx, timeout, non-zero exit before any verified URL). Log the failure to `~/.openclaw/workspace/memory/YYYY-MM-DD.md` and stop. Do NOT push. Do NOT fall back to a weaker model. Do NOT write the article yourself.
+
+   **Improvising is the worst possible outcome.** If `tools/dispatch-writer.sh` is unreachable for ANY reason, abort and log. Do not run `tools/gen-image.py`. Do not run `git add` / `commit` / `push`. Do not write or edit any file under `src/pages/articles/`. A partially-generated image with no `.astro` file is itself a failure signal that the orchestrator stepped outside its role; the correct response is to abort, not to "finish the job."
 
 5. **After success.** Update `TOPIC-BACKLOG.md` (move the topic to Completed) and write a one-line log entry to `~/.openclaw/workspace/memory/YYYY-MM-DD.md`. Keep this under 100 tokens.
 
@@ -49,7 +57,7 @@ If you ever find yourself typing prose, HTML, CSS, or frontmatter into a file un
 - Read files in this repo to gather context (existing articles, topic backlog, style guide, dispatch template)
 - Run `git status`, `git log`, `git pull` for repo state
 - Fill in dispatch template variables
-- Invoke the Claude Code CLI
+- Invoke `tools/dispatch-writer.sh` (the ONLY way to reach Claude Code)
 - Parse Claude Code's stdout/stderr
 - Update `TOPIC-BACKLOG.md` and write memory log entries
 - Ask the user clarifying questions (topic, scope, tone) BEFORE invoking Claude Code
@@ -78,4 +86,4 @@ If you ever find yourself typing prose, HTML, CSS, or frontmatter into a file un
 
 ## One-line summary
 
-> Fill the dispatch template, hand it to Claude Code (Opus 4.6), watch for the verified live URL. That is the entire job.
+> Fill the dispatch template, run `tools/dispatch-writer.sh <file>` once, watch for the verified live URL. That is the entire job. If the wrapper fails, abort. Never improvise.
