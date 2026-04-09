@@ -1,0 +1,484 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Peptides for Immune Support: Thymosin Alpha-1, LL-37, Selank, and More",
+  description: "An evidence-based guide to immune-modulating peptides including Thymosin Alpha-1, LL-37, Selank, and TB4. Mechanisms, dosing, stacking, and research-backed protocols.",
+  image: "/images/articles/immune-support-peptides.webp",
+  date: "2026-04-08",
+  category: "Peptide Guides",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#13314A 40%,#1E5A4A 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:580px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<div class="hero">
+  <div class="hero-k">Peptide Guides &middot; Immune Modulation</div>
+  <h1>Peptides for Immune Support: Thymosin Alpha-1, LL-37, Selank, and More</h1>
+  <p class="sub">Evidence-based mechanisms, dosing, and stacking for the most-studied immune-modulating peptides in clinical and research use today.</p>
+  <div class="pills">
+    <span class="pill">Thymosin Alpha-1</span>
+    <span class="pill">LL-37</span>
+    <span class="pill">Selank</span>
+    <span class="pill">TB4</span>
+  </div>
+</div>
+
+<div class="sr">
+  <div class="sb"><div class="v c1">30+</div><div class="l">Countries Approving<br>TA1 (Zadaxin)</div></div>
+  <div class="sb"><div class="v c2">70%</div><div class="l">Of Immune Tissue<br>In The Gut</div></div>
+  <div class="sb"><div class="v c3">4&ndash;12</div><div class="l">Week Cycles<br>Most Protocols</div></div>
+  <div class="sb"><div class="v c4">4</div><div class="l">Core Peptides<br>Covered Here</div></div>
+</div>
+
+<p>The immune system isn't a switch you flip on or off. It's a layered network that has to recognize threats, mount a response, and then back down before it starts chewing through healthy tissue. That balancing act is where peptides have quietly become some of the most interesting tools in the research world.</p>
+
+<p>Unlike antibiotics, which kill bacteria directly, or vaccines, which train your body to recognize a specific pathogen, immune-modulating peptides work upstream. They nudge the system itself, telling T-cells when to wake up, calming runaway inflammation, or strengthening the physical barriers that keep invaders out in the first place.</p>
+
+<p>This guide walks through the most researched immune peptides available today: Thymosin Alpha-1, LL-37, Selank, and Thymosin Beta-4, plus a few emerging options worth watching. We'll cover how each one works, what the clinical data says, typical dosing ranges, and how researchers combine them.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>Educational content on research-stage and clinically-used immune peptides. None of this is medical advice. Talk to a qualified healthcare provider before starting any peptide protocol, especially if you have an autoimmune condition, are on immunosuppressants, or are being treated for cancer.</p>
+</div>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Immune peptides don't replace vaccines or antibiotics. They modulate the system that makes those tools work in the first place.</p>
+</div>
+
+<hr class="sep">
+
+<h2>Why Peptides for Immune Modulation?</h2>
+
+<p>Your immune system runs on signaling molecules. Cytokines, chemokines, and small peptides are constantly telling cells what to do, where to go, and when to stop. When that signaling gets noisy, whether from chronic inflammation, autoimmune flares, or stubborn infections, the whole system drifts out of tune.</p>
+
+<p>Peptides fit naturally into this conversation because they're already the language the body uses. A synthetic version of Thymosin Alpha-1 looks identical to the molecule your thymus makes. LL-37 is a human cathelicidin. Your cells recognize these compounds instantly, which is part of why side effect profiles tend to be gentler than small-molecule drugs.</p>
+
+<p>There's also the gut angle. Roughly 70% of immune tissue lives in and around the intestinal lining, which is why the <a href="/articles/peptides-for-gut-health-guide">peptides for gut health guide</a> overlaps heavily with this topic. A leaky or inflamed gut creates constant low-grade immune activation, and fixing that often changes how the rest of the system behaves.</p>
+
+<p>Peptides aren't magic. They won't fix a terrible diet, chronic sleep deprivation, or untreated infections on their own. But for people who've already cleaned up the basics and still can't get their immune system to settle, they offer a level of precision that's hard to match with supplements or over-the-counter options.</p>
+
+<h3>The Four Mechanisms at a Glance</h3>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--blue);">T-Cell Maturation</h4>
+    <p>TA1 binds Toll-like receptors on dendritic cells, pushing naive T-cells toward maturation and restoring counts in lymphopenic patients.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Direct Antimicrobial</h4>
+    <p>LL-37 punches holes in bacterial membranes, neutralizes endotoxin, and works against bacteria, some viruses, fungi, and biofilms.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Macrophage Priming</h4>
+    <p>Selank inherits the tuftsin backbone, activating macrophages and enhancing phagocytosis while also crossing the blood-brain barrier.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Inflammation Resolution</h4>
+    <p>TB4 regulates actin and resolution pathways, calming excess inflammation and promoting regulatory T-cell activity.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<h2>Thymosin Alpha-1 (TA1)</h2>
+
+<div class="cd cb">
+  <div class="tg">Compound Profile</div>
+  <h3>Thymosin Alpha-1</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Class:</strong> 28-amino-acid thymic peptide. <strong>Mechanism:</strong> TLR9/TLR2 agonist on dendritic cells, drives T-cell maturation, boosts NK activity. <strong>Approved use:</strong> Chronic hepatitis B and C in 30+ countries (brand name Zadaxin). <strong>Strongest evidence:</strong> Sepsis, severe viral infection, cancer immunotherapy adjunct.</p>
+</div>
+
+<p>Thymosin Alpha-1 is a 28-amino-acid peptide originally isolated from the thymus gland in the 1970s. The thymus is where T-cells mature, and TA1 is one of the signaling molecules it releases to orchestrate that process. As we age, the thymus shrinks and TA1 production drops, which partly explains why older adults have weaker responses to vaccines and new infections.</p>
+
+<p>The mechanism is well characterized. TA1 binds to Toll-like receptors (mainly TLR9 and TLR2) on dendritic cells and activates downstream pathways that push naive T-cells toward maturation. It boosts Th1 responses, improves natural killer cell activity, and helps restore balance in people whose immune systems are either underactive or stuck in a chronic inflammatory loop.</p>
+
+<p>Clinically, TA1 has been studied for an unusually wide range of conditions. It's approved in over 30 countries under the brand name Zadaxin for chronic hepatitis B and C, and it's been investigated as an adjunct in cancer immunotherapy, sepsis, and severe viral infections. A <a href="https://pubmed.ncbi.nlm.nih.gov/32722317/">2020 study on COVID-19 patients</a> found that TA1 reduced mortality in severe cases, likely by restoring T-cell counts in lymphopenic patients.</p>
+
+<h3>TA1 Dosing and Protocols</h3>
+
+<p>Research dosing typically ranges from 1.6 mg to 3.2 mg subcutaneously, given one to three times per week. Some chronic infection protocols push higher frequencies during acute phases, then taper. Cycles often run 4 to 12 weeks depending on the goal, with longer protocols for chronic viral conditions.</p>
+
+<p>TA1 has one of the cleaner safety profiles in the peptide space. Most reported side effects are mild injection-site reactions. It doesn't cause the overstimulation you sometimes see with broader immune boosters, which is why clinicians comfortable with peptide therapy often reach for it first.</p>
+
+<table class="tbl">
+<thead><tr><th>Use Case</th><th>Typical Dose</th><th>Frequency</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>General immune support</strong></td><td>1.6 mg</td><td>2x/week</td><td class="g">4&ndash;8 weeks</td></tr>
+<tr><td><strong>Chronic viral infection</strong></td><td>1.6&ndash;3.2 mg</td><td>2&ndash;3x/week</td><td class="y">8&ndash;12+ weeks</td></tr>
+<tr><td><strong>Cancer adjunct (research)</strong></td><td>1.6&ndash;6.4 mg</td><td>Varies</td><td class="r">Ongoing</td></tr>
+<tr><td><strong>Post-illness recovery</strong></td><td>1.6 mg</td><td>2x/week</td><td class="g">4 weeks</td></tr>
+</tbody>
+</table>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>TA1 is one of the only immune peptides with decades of human clinical trial data behind it, including approved use for hepatitis in multiple countries.</p>
+</div>
+
+<hr class="sep">
+
+<h2>LL-37 (Cathelicidin)</h2>
+
+<div class="cd ct">
+  <div class="tg">Compound Profile</div>
+  <h3>LL-37 (Human Cathelicidin)</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Class:</strong> 37-amino-acid antimicrobial peptide cleaved from hCAP18. <strong>Mechanism:</strong> Membrane disruption, LPS neutralization, immune cell recruitment, angiogenesis. <strong>Activity:</strong> Bacteria, some viruses, fungi, biofilms. <strong>Watch out for:</strong> U-shaped dose response, mast cell activation at high doses.</p>
+</div>
+
+<p>LL-37 is the only human cathelicidin, a 37-amino-acid antimicrobial peptide cleaved from a larger precursor called hCAP18. Your skin, lungs, gut lining, and neutrophils all produce it as a first line of defense. When a pathogen breaches a barrier, LL-37 is often one of the first molecules to show up.</p>
+
+<p>What makes LL-37 interesting is how many jobs it does at once. It punches holes in bacterial membranes, neutralizes lipopolysaccharide (the endotoxin from gram-negative bacteria that drives sepsis), recruits immune cells to infection sites, and speeds up wound healing by encouraging new blood vessel formation. It's active against bacteria, some viruses, fungi, and even biofilms that resist conventional antibiotics.</p>
+
+<p>Research has connected low LL-37 levels to recurrent infections, chronic wounds that won't close, and conditions like atopic dermatitis. Vitamin D is a direct upstream regulator, one reason vitamin D deficiency tracks so closely with infection susceptibility. A <a href="https://pubmed.ncbi.nlm.nih.gov/32849599/">review in Frontiers in Immunology</a> covers the antimicrobial and immunomodulatory roles in detail.</p>
+
+<h3>Practical Considerations for LL-37</h3>
+
+<p>LL-37 is trickier to work with than TA1. It's less stable, more expensive to produce, and higher doses can actually trigger inflammation rather than calm it because of its effect on mast cells. That U-shaped response curve is important: more isn't better.</p>
+
+<p>Researchers typically use it at 100 to 500 micrograms subcutaneously, often cycled in short bursts rather than continuous administration. It's sometimes combined with <a href="/articles/bpc-157-complete-guide">BPC-157</a> for wound healing protocols, since the two work on different but complementary pathways. LL-37 handles the antimicrobial and immune signaling side while BPC-157 supports tissue repair and blood vessel formation.</p>
+
+<div class="d-a">
+  <div class="s">Caution</div>
+  <p>People dealing with rosacea or certain autoimmune skin conditions should be cautious with LL-37. Those conditions sometimes involve already-elevated cathelicidin activity, and adding more can worsen flares. This is exactly the kind of nuance worth running past a knowledgeable clinician before experimenting.</p>
+</div>
+
+<hr class="sep">
+
+<h2>Selank</h2>
+
+<div class="cd cp">
+  <div class="tg">Compound Profile</div>
+  <h3>Selank</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Class:</strong> Synthetic heptapeptide based on a tuftsin fragment with a stabilizing tail. <strong>Origin:</strong> Russia, used clinically for generalized anxiety disorder. <strong>Dual action:</strong> Macrophage activation (immune) plus GABA/serotonin modulation (CNS). <strong>Route:</strong> Almost always nasal spray.</p>
+</div>
+
+<p>Selank is a synthetic heptapeptide developed in Russia, based on a fragment of the immunoglobulin tuftsin with a stabilizing tail added. It's best known as an anxiolytic, and Russian researchers use it clinically for generalized anxiety disorder, but its immune effects are what put it on this list.</p>
+
+<p>The tuftsin backbone is the clue. Tuftsin is a natural peptide that activates macrophages and enhances phagocytosis, the process by which immune cells engulf and destroy pathogens. Selank inherits those properties while also crossing the blood-brain barrier to modulate GABA and serotonin signaling. It's a rare example of a peptide that works on both the nervous and immune systems simultaneously, which fits into the broader neuroimmune story we cover in the <a href="/articles/semax-complete-guide">Semax complete guide</a>.</p>
+
+<p>Russian clinical studies, including work published in Eksperimental'naia i Klinicheskaia Farmakologiia, have shown Selank increases interleukin-6 and interferon gamma in ways that suggest enhanced antiviral activity. Some protocols have tested it for influenza prevention during cold season with reportedly positive results, though most of this research hasn't been replicated in Western trials.</p>
+
+<h3>How Selank Is Used</h3>
+
+<p>Selank is almost always administered as a nasal spray, which is convenient and avoids injections entirely. Typical research doses range from 250 to 900 micrograms per day, split across two or three applications. Users often report subtle mood lift and better stress tolerance within days, with immune effects being harder to feel directly.</p>
+
+<table class="tbl">
+<thead><tr><th>Application</th><th>Dose Range</th><th>Route</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Anxiety/stress</strong></td><td>250&ndash;900 mcg/day</td><td>Nasal</td><td class="g">Effects often within 1&ndash;3 days</td></tr>
+<tr><td><strong>Immune support</strong></td><td>300&ndash;600 mcg/day</td><td>Nasal</td><td class="y">Often cycled 10&ndash;14 days</td></tr>
+<tr><td><strong>Cognitive support</strong></td><td>250&ndash;500 mcg/day</td><td>Nasal</td><td class="g">Synergistic with Semax</td></tr>
+</tbody>
+</table>
+
+<p>The fact that Selank doesn't cause dependence or withdrawal, unlike benzodiazepines used for similar anxiety indications, is a big part of its appeal. The immune benefits feel like a bonus rather than the main event for most people who try it.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Selank is one of the few peptides that works on the immune and nervous systems at the same time, making it genuinely unusual in the research peptide world.</p>
+</div>
+
+<hr class="sep">
+
+<h2>Thymosin Beta-4 (TB4)</h2>
+
+<div class="cd ca">
+  <div class="tg">Compound Profile</div>
+  <h3>Thymosin Beta-4</h3>
+  <p style="font-size:14px;margin-bottom:0;"><strong>Class:</strong> 43-amino-acid peptide found in nearly every cell type. <strong>Primary role:</strong> Actin regulation, tissue repair, inflammation resolution. <strong>Synthetic fragment:</strong> TB-500 (active region, easier to manufacture). <strong>Strongest evidence:</strong> Corneal injury, dry eye, cardiac protection (animal models).</p>
+</div>
+
+<p>Thymosin Beta-4 shares a name with TA1 but is a completely different molecule. It's a 43-amino-acid peptide found in nearly every cell type in the body, with particularly high concentrations in platelets and wound fluid. Its primary job is regulating actin, the protein that gives cells their structural skeleton, which is why it shows up wherever tissue is being built, repaired, or reorganized.</p>
+
+<p>On the immune side, TB4 is more of a balancer than a stimulator. It reduces excess inflammation, promotes regulatory T-cell activity, and helps resolve injury responses before they become chronic. The famous fragment TB-500 is a synthetic version of the active region that's easier and cheaper to produce.</p>
+
+<p>Clinical research has focused heavily on tissue repair applications. There's ongoing work using TB4 eye drops for dry eye disease and corneal injuries, with <a href="https://pubmed.ncbi.nlm.nih.gov/28991605/">published trials</a> showing meaningful improvements in healing time. Cardiac applications are also being studied, since TB4 appears to protect heart tissue after ischemic damage and may even encourage a limited form of cardiac regeneration in animal models.</p>
+
+<h3>TB4 and Immune Balance</h3>
+
+<p>The immune angle with TB4 is less about fighting infection and more about preventing collateral damage. Chronic inflammation is one of the biggest drivers of age-related disease, and peptides that help resolve inflammation without suppressing the acute response are genuinely valuable.</p>
+
+<p>Research doses typically sit around 2 to 2.5 mg injected subcutaneously two to three times per week during loading phases, then tapered to once weekly for maintenance. Loading cycles usually run four to six weeks, followed by a break or a lower maintenance dose. TB4 stacks well with BPC-157 for injury recovery protocols, and the combination has become popular in athletic and regenerative medicine circles.</p>
+
+<p>Side effects are rare and usually limited to mild lethargy during the first few days of loading, which most people attribute to the body redirecting resources toward repair processes. That's anecdotal, but consistent enough across user reports to mention.</p>
+
+<hr class="sep">
+
+<h2>Emerging Options Worth Watching</h2>
+
+<p>A few newer peptides are starting to show up in immune research even though they're earlier in their timeline. The space is moving quickly, and what looks experimental today often has solid data within a few years.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--plum);">Epitalon</h4>
+    <p>Originally studied for melatonin and telomerase effects. Preliminary data suggests it restores pineal function that indirectly supports immune rhythms.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">KPV</h4>
+    <p>Tripeptide fragment of alpha-MSH with strong anti-inflammatory effects. Being studied for inflammatory bowel disease and chronic gut inflammation.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">VIP</h4>
+    <p>Vasoactive Intestinal Peptide regulates both innate and adaptive immunity. Researchers are looking at it for chronic inflammatory conditions and long COVID.</p>
+  </div>
+</div>
+
+<p>None of these have the clinical depth of TA1 or the mechanistic clarity of LL-37 yet. Availability is also limited and quality varies enormously by supplier, so they're worth tracking but not yet first-line choices for most protocols.</p>
+
+<hr class="sep">
+
+<h2>Stacks and Protocols</h2>
+
+<p>Most experienced users don't run immune peptides in isolation. Combinations tend to target different layers of the system at once, which produces more balanced results than hammering one pathway.</p>
+
+<p>A common autumn and winter protocol pairs TA1 with Selank. TA1 handles the deeper T-cell work while Selank provides daily immune priming through the nasal route plus stress support during a busy season. This combo is popular with people who get hit hard by respiratory infections every year.</p>
+
+<p>For post-injury or post-illness recovery, TB4 combined with BPC-157 is the standard stack. It addresses tissue repair and inflammation resolution simultaneously. Adding LL-37 in short bursts can help if there's an infectious component, like a wound that's not healing cleanly.</p>
+
+<table class="tbl">
+<thead><tr><th>Goal</th><th>Primary</th><th>Support</th><th>Cycle</th></tr></thead>
+<tbody>
+<tr><td><strong>Seasonal immune support</strong></td><td>TA1</td><td>Selank</td><td class="g">6&ndash;8 weeks</td></tr>
+<tr><td><strong>Chronic infection</strong></td><td>TA1</td><td>LL-37 (pulsed)</td><td class="y">8&ndash;12 weeks</td></tr>
+<tr><td><strong>Injury recovery</strong></td><td>TB4</td><td>BPC-157</td><td class="g">4&ndash;6 weeks</td></tr>
+<tr><td><strong>Gut-immune axis</strong></td><td>TA1</td><td>BPC-157</td><td class="g">8 weeks</td></tr>
+<tr><td><strong>Neuroimmune support</strong></td><td>Selank</td><td>Semax</td><td class="y">Ongoing, cycled</td></tr>
+</tbody>
+</table>
+
+<p>Cycling matters. Continuous use of any immune peptide without breaks can blunt its effects over time as receptors downregulate. Most protocols build in at least a week or two off between cycles, and longer breaks for peptides like LL-37 that have stricter dose-response curves.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Stacking immune peptides with gut-focused ones like BPC-157 often produces better results than either approach alone, because the gut lining is such a major immune interface.</p>
+</div>
+
+<hr class="sep">
+
+<h2>Safety and Sourcing</h2>
+
+<p>This is the part people skip, and it's the part that matters most. The legal status of research peptides varies by country, and quality varies enormously by supplier. Peptides sold for research purposes aren't subject to the same manufacturing standards as pharmaceuticals, which means purity, dosing accuracy, and even identity can be inconsistent.</p>
+
+<p>Reputable suppliers provide third-party testing data, typically HPLC and mass spectrometry results, for every batch. If a vendor can't or won't show you that, that's your answer. Pricing that's dramatically lower than competitors is usually a sign of underdosed or contaminated product.</p>
+
+<p>On the clinical side, a growing number of licensed providers offer peptide therapy through compounding pharmacies in jurisdictions where that's allowed. This route costs more but removes most of the guesswork around quality. For anything beyond short-term experimentation, the pharmacy route is worth the premium.</p>
+
+<div class="d-r">
+  <div class="s">Important Safety Note</div>
+  <p>Talk to a healthcare provider who actually understands peptide therapy before starting any protocol, especially if you have autoimmune conditions, are on immunosuppressants, or are being treated for cancer. Immune peptides can interact meaningfully with those situations, and not always in obvious ways. A clinician who knows the space can help you avoid combinations that look fine on paper but cause trouble in practice.</p>
+</div>
+
+<hr class="sep">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>Are immune peptides safer than traditional immune boosters?</summary>
+<div class="fa">Generally yes, but "safer" depends heavily on the specific peptide and how it's used. Peptides like TA1 have decades of clinical data showing mild side effect profiles, while something like LL-37 has a narrower therapeutic window where too much can backfire. Compared to broad immune stimulants like certain herbal extracts, peptides tend to work more precisely, which reduces the risk of triggering autoimmune flares in susceptible people. Still, safer doesn't mean risk-free, and individual responses vary.</div>
+</details>
+
+<details>
+<summary>Can I use immune peptides if I have an autoimmune condition?</summary>
+<div class="fa">This is exactly the situation where you should work with a knowledgeable clinician rather than self-experimenting. Some peptides, like TA1, actually help rebalance autoimmune activity in certain conditions, while others might worsen flare-ups by ramping up T-cell activity at the wrong time. TB4 and its anti-inflammatory properties tend to be better tolerated in autoimmune contexts than more stimulatory peptides. The specifics matter a lot, so generic advice here would do more harm than good.</div>
+</details>
+
+<details>
+<summary>How quickly do immune peptides work?</summary>
+<div class="fa">It depends on what you're measuring. Selank users often notice mood and stress effects within a few days, while TA1's deeper immune restructuring usually takes four to six weeks before measurable changes show up in bloodwork. LL-37 works acutely in antimicrobial situations but its longer-term effects on barrier function take longer. If you're expecting to feel immediate changes like you might with a stimulant, peptides aren't going to match that experience.</div>
+</details>
+
+<details>
+<summary>Do immune peptides replace vaccines?</summary>
+<div class="fa">No, and nothing in the current research suggests they should. Vaccines work by teaching your adaptive immune system to recognize specific pathogens in advance, which is a completely different mechanism from immune peptide modulation. Some peptides like TA1 have actually been studied as vaccine adjuvants, meaning they make vaccines work better rather than replacing them. Treat peptides as a complement to standard preventive care, not a substitute.</div>
+</details>
+
+<details>
+<summary>Can peptides help with long COVID or post-viral fatigue?</summary>
+<div class="fa">Early clinical work and practitioner reports suggest some promise here, particularly with TA1 and TB4 combinations, but the evidence base is still thin. Long COVID likely involves multiple mechanisms including persistent inflammation, immune dysregulation, and possibly viral reservoirs, so a single peptide isn't going to be a fix. People working in this space typically use layered protocols targeting inflammation, mitochondrial function, and immune rebalancing together, often over months rather than weeks.</div>
+</details>
+
+<details>
+<summary>What's the difference between TA1 and TB4?</summary>
+<div class="fa">They share the "thymosin" name for historical reasons but are genuinely different molecules with different jobs. TA1 is a 28-amino-acid peptide that primarily activates T-cells and strengthens adaptive immunity, making it a first choice for infection and immune weakness. TB4 is 43 amino acids long and focuses on tissue repair, inflammation resolution, and cellular regeneration. You'll sometimes see them used together when both immune stimulation and tissue healing are needed, since their mechanisms don't overlap much.</div>
+</details>
+
+</div>
+
+<hr class="sep">
+
+<h2>Bringing It Together</h2>
+
+<p>Immune peptides aren't a replacement for the basics. Sleep, nutrition, stress management, and treating underlying infections still matter more than any injection protocol. But for people who've handled the fundamentals and still want to fine-tune a system that isn't responding the way it should, the tools here are some of the most interesting options available.</p>
+
+<p>TA1 remains the gold standard for general immune support with the strongest clinical backing. LL-37 offers something unique in its antimicrobial and wound-healing effects, as long as you respect its dose response. Selank bridges the mind-body gap in a way few other peptides do. TB4 brings balance and repair to the picture, especially alongside peptides like BPC-157.</p>
+
+<div class="d-t">
+  <div class="s">Bottom Line</div>
+  <p>Whatever direction you go, work with someone who knows the space. Source carefully, cycle intelligently, and pay attention to how your body actually responds rather than chasing protocols you read online. The peptide field is moving fast, and the people getting the best results are usually the ones who treat it like the nuanced work it actually is.</p>
+</div>
+
+<div class="disc">
+<strong>Medical Disclaimer</strong><br>
+This article is for educational and informational purposes only and is not medical advice. Peptides discussed here are research compounds in many jurisdictions and are not approved for the uses described. Always consult a qualified healthcare provider before starting any peptide protocol, especially if you have an autoimmune condition, are pregnant or nursing, or are taking other medications. The authors do not endorse self-administration of unregulated substances.
+</div>
+
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Liu Y, Pan Y, Hu Z, et al. Thymosin Alpha-1 reduces the mortality of severe COVID-19 by restoration of lymphocytopenia and reversion of exhausted T cells. <em>Clin Infect Dis.</em> 2020;71(16):2150&ndash;2157. <a href="https://pubmed.ncbi.nlm.nih.gov/32722317/">PubMed</a><br>
+Sancho-Vaello E, Gil-Carton D, Francois P, et al. The structure of the antimicrobial human cathelicidin LL-37 shows oligomerization and channel formation in the presence of membrane mimics. <em>Front Immunol.</em> 2020;11:1995. <a href="https://pubmed.ncbi.nlm.nih.gov/32849599/">PubMed</a><br>
+Sosne G, Kleinman HK. Primary mechanisms of thymosin beta-4 repair activity in dry eye disorders and other tissue injuries. <em>Invest Ophthalmol Vis Sci.</em> 2015;56(9):5110&ndash;5117. <a href="https://pubmed.ncbi.nlm.nih.gov/28991605/">PubMed</a>
+</p>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/bpc-157-complete-guide">BPC-157 Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptides-for-gut-health-guide">Peptides for Gut Health</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semax-complete-guide">Semax Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/thymosin-alpha-1">Thymosin Alpha-1 Profile</a> &nbsp;&middot;&nbsp;
+<a href="/articles/thymosin-beta-4">Thymosin Beta-4 Profile</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/thymosin-alpha-1" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Thymosin Alpha-1 Profile</a>
+            <a href="/articles/thymosin-beta-4" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Thymosin Beta-4 Profile</a>
+            <a href="/articles/semax-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semax Complete Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
