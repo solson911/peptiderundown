@@ -1,0 +1,574 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Reducing Systemic Inflammation: A Peptide-Based Approach",
+  description: "How peptides like BPC-157, KPV, thymosin alpha-1, and LL-37 target systemic inflammation at the molecular level. Evidence-based protocols, mechanisms, and practical guidance.",
+  image: "/images/articles/reducing-systemic-inflamation.webp",
+  date: "2026-04-10",
+  category: "article",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#0D1F2D 0%,#132941 40%,#1A3A2E 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-k">Inflammation &middot; Peptide Protocols</div>
+  <h1>Reducing Systemic Inflammation: A Peptide-Based Approach</h1>
+  <p class="sub">Chronic, low-grade inflammation sits at the root of nearly every modern disease. Here's what the research says about using peptides to turn it down at the molecular level.</p>
+  <div class="pills">
+    <span class="pill">Anti-Inflammatory</span>
+    <span class="pill">Immune Modulation</span>
+    <span class="pill">Cytokine Regulation</span>
+    <span class="pill">Evidence-Based</span>
+  </div>
+</div>
+
+<!-- STAT STRIP -->
+<div class="sr">
+  <div class="sb"><div class="v c1">60%</div><div class="l">Chronic Disease<br>Linked to Inflammation</div></div>
+  <div class="sb"><div class="v c2">6+</div><div class="l">Peptides with<br>Anti-Inflammatory Data</div></div>
+  <div class="sb"><div class="v c3">NF-kB</div><div class="l">Primary Pathway<br>Targeted</div></div>
+  <div class="sb"><div class="v c4">IL-6, TNF-a</div><div class="l">Key Cytokines<br>Reduced</div></div>
+</div>
+
+<!-- INTRO -->
+<p>Your immune system is supposed to flare up, do its job, and quiet down. That's acute inflammation: a cut heals, an infection clears, life moves on. The problem starts when the signal never shuts off.</p>
+
+<p>Systemic inflammation, sometimes called chronic low-grade inflammation, is a slow burn. It doesn't cause obvious symptoms the way a sprained ankle does. Instead, it quietly drives insulin resistance, arterial plaque, neurodegeneration, and a long list of conditions you'd rather avoid (<a href="https://pubmed.ncbi.nlm.nih.gov/19100526/">Libby et al., 2009</a>).</p>
+
+<p>Peptides have emerged as some of the most targeted tools for dialing down this kind of background inflammation. Unlike broad-spectrum anti-inflammatory drugs, many peptides work on specific cytokine pathways, modulating rather than suppressing the immune response.</p>
+
+<div class="d">
+  <div class="s">What This Guide Covers</div>
+  <p>This article reviews the science behind systemic inflammation, the specific peptides that target it, their mechanisms, and practical protocols. It's for educational purposes only. Always consult a healthcare provider before starting any peptide protocol.</p>
+</div>
+
+<hr class="sep">
+
+<!-- SECTION: WHAT IS SYSTEMIC INFLAMMATION -->
+<h2>What Systemic Inflammation Actually Is</h2>
+
+<p>Inflammation isn't inherently bad. It's how your body fights pathogens, repairs tissue, and clears debris. The issue is duration. When the inflammatory response persists for weeks, months, or years without resolution, it transitions from protective to destructive.</p>
+
+<p>At the molecular level, chronic inflammation involves a sustained elevation of pro-inflammatory cytokines, primarily interleukin-6 (IL-6), tumor necrosis factor alpha (TNF-a), and interleukin-1 beta (IL-1b). These signaling molecules keep immune cells activated long after the original threat has passed (<a href="https://pubmed.ncbi.nlm.nih.gov/25139760/">Furman et al., 2019</a>).</p>
+
+<p>The NF-kB pathway acts as the central switch. When activated, it drives transcription of inflammatory genes across nearly every tissue type. In a healthy system, NF-kB fires and then gets suppressed by feedback loops. In chronic inflammation, those feedback loops fail.</p>
+
+<div class="d-p">
+  <div class="s">The Inflammaging Connection</div>
+  <p>Researchers have coined the term "inflammaging" to describe the age-related increase in systemic inflammation. Even in otherwise healthy adults, inflammatory markers tend to rise with age, contributing to the gradual decline of tissue function and increased disease risk (<a href="https://pubmed.ncbi.nlm.nih.gov/10911963/">Franceschi et al., 2000</a>).</p>
+</div>
+
+<h3>Common Drivers of Chronic Inflammation</h3>
+
+<p>The triggers are everywhere in modern life, and they tend to stack on top of each other.</p>
+
+<table class="tbl">
+<thead><tr><th>Driver</th><th>Mechanism</th><th>Impact Level</th></tr></thead>
+<tbody>
+<tr><td><strong>Poor sleep</strong></td><td>Elevates IL-6 and CRP within 24&ndash;48 hours of deprivation</td><td class="r">High</td></tr>
+<tr><td><strong>Visceral fat</strong></td><td>Adipose tissue secretes TNF-a and IL-6 continuously</td><td class="r">High</td></tr>
+<tr><td><strong>Processed food</strong></td><td>Activates toll-like receptors, mimicking bacterial infection</td><td class="y">Moderate&ndash;High</td></tr>
+<tr><td><strong>Sedentary lifestyle</strong></td><td>Reduces anti-inflammatory myokine release from muscle</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Chronic stress</strong></td><td>Cortisol dysregulation impairs immune resolution pathways</td><td class="y">Moderate</td></tr>
+<tr><td><strong>Gut dysbiosis</strong></td><td>Increased intestinal permeability allows endotoxin translocation</td><td class="r">High</td></tr>
+</tbody>
+</table>
+
+<p>That last one, gut permeability, deserves special attention. When the intestinal barrier breaks down, lipopolysaccharides (LPS) from gram-negative bacteria leak into the bloodstream and trigger a systemic inflammatory cascade. This is sometimes called metabolic endotoxemia, and it's now considered a primary driver of inflammation-linked metabolic disease (<a href="https://pubmed.ncbi.nlm.nih.gov/17456850/">Cani et al., 2007</a>).</p>
+
+<hr class="sep">
+
+<!-- SECTION: KEY INFLAMMATORY MARKERS -->
+<h2>Key Inflammatory Markers and What They Tell You</h2>
+
+<p>Before you can reduce inflammation, you need to measure it. Standard bloodwork can reveal a lot about where you stand.</p>
+
+<table class="tbl">
+<thead><tr><th>Marker</th><th>What It Measures</th><th>Optimal Range</th><th>Concern Level</th></tr></thead>
+<tbody>
+<tr><td><strong>hs-CRP</strong></td><td>General systemic inflammation</td><td>&lt;1.0 mg/L</td><td class="r">&gt;3.0 mg/L</td></tr>
+<tr><td><strong>IL-6</strong></td><td>Pro-inflammatory cytokine activity</td><td>&lt;1.8 pg/mL</td><td class="r">&gt;5.0 pg/mL</td></tr>
+<tr><td><strong>TNF-alpha</strong></td><td>Macrophage-driven inflammation</td><td>&lt;8.1 pg/mL</td><td class="y">Varies by lab</td></tr>
+<tr><td><strong>ESR</strong></td><td>Red blood cell sedimentation (inflammation proxy)</td><td>0&ndash;20 mm/hr</td><td class="y">&gt;30 mm/hr</td></tr>
+<tr><td><strong>Homocysteine</strong></td><td>Vascular inflammation and methylation status</td><td>&lt;10 umol/L</td><td class="r">&gt;15 umol/L</td></tr>
+<tr><td><strong>Fasting insulin</strong></td><td>Metabolic inflammation and insulin resistance</td><td>2&ndash;6 uIU/mL</td><td class="y">&gt;10 uIU/mL</td></tr>
+</tbody>
+</table>
+
+<p>High-sensitivity C-reactive protein (hs-CRP) is the most commonly ordered and arguably the most useful single marker. It's cheap, widely available, and responds quickly to both inflammatory triggers and interventions. If you're tracking the effectiveness of any anti-inflammatory protocol, hs-CRP is where to start. For a deeper look at what bloodwork to run and how to interpret it, see our <a href="/articles/peptide-bloodwork-guide">peptide bloodwork guide</a>.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>A 2017 analysis in The Lancet found that elevated hs-CRP independently predicted cardiovascular events even in patients with otherwise normal lipid panels, reinforcing the idea that inflammation is a risk factor on its own, not just a side effect of other problems (<a href="https://pubmed.ncbi.nlm.nih.gov/28709998/">Ridker et al., 2017</a>).</p>
+</div>
+
+<hr class="sep">
+
+<!-- SECTION: PEPTIDES FOR INFLAMMATION -->
+<h2>Peptides That Target Systemic Inflammation</h2>
+
+<p>Several peptides have demonstrated anti-inflammatory activity in preclinical and clinical research. They work through different mechanisms, which is why stacking them can sometimes address multiple inflammatory pathways simultaneously.</p>
+
+<div class="cd cb">
+  <div class="tg">Peptide Profile</div>
+  <h3>BPC-157 (Body Protection Compound)</h3>
+  <p style="font-size:14px;margin-bottom:0;">A 15-amino-acid peptide derived from gastric juice. BPC-157 reduces inflammation primarily through downregulation of the NF-kB pathway and modulation of the nitric oxide system. It's been shown to reduce TNF-a, IL-6, and IL-1b in multiple animal models of inflammation, including colitis, peritonitis, and adjuvant arthritis (<a href="https://pubmed.ncbi.nlm.nih.gov/29898092/">Sikiric et al., 2018</a>). Its gut-healing properties make it particularly relevant for inflammation driven by intestinal permeability. For a full breakdown, see our <a href="/articles/bpc-157-complete-guide">BPC-157 complete guide</a>.</p>
+</div>
+
+<div class="cd ct">
+  <div class="tg">Peptide Profile</div>
+  <h3>KPV (Lys-Pro-Val)</h3>
+  <p style="font-size:14px;margin-bottom:0;">KPV is a tripeptide fragment of alpha-melanocyte-stimulating hormone (alpha-MSH). It exerts potent anti-inflammatory effects by directly inhibiting NF-kB nuclear translocation and reducing pro-inflammatory cytokine production. Research in colitis models has shown it can reduce mucosal inflammation when administered orally, which is unusual for a peptide (<a href="https://pubmed.ncbi.nlm.nih.gov/26303529/">Dalmasso et al., 2016</a>). It's one of the few peptides specifically studied for gut-based inflammation. Read more in our <a href="/articles/kpv-peptide-guide">KPV peptide guide</a>.</p>
+</div>
+
+<h3>Additional Anti-Inflammatory Peptides</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Primary Mechanism</th><th>Key Target</th><th>Evidence Level</th></tr></thead>
+<tbody>
+<tr><td><strong>Thymosin alpha-1</strong></td><td>Immune modulation via dendritic cell maturation</td><td>Th1/Th2 balance</td><td class="g">Clinical trials</td></tr>
+<tr><td><strong>LL-37</strong></td><td>Antimicrobial + anti-inflammatory dual action</td><td>TLR signaling</td><td class="g">Preclinical + human data</td></tr>
+<tr><td><strong>Selank</strong></td><td>Anxiolytic with IL-6 reduction</td><td>Neuroimmune axis</td><td class="y">Clinical (Russia)</td></tr>
+<tr><td><strong>GHK-Cu</strong></td><td>Tissue remodeling, TGF-b modulation</td><td>Fibroblast signaling</td><td class="g">In vitro + animal</td></tr>
+<tr><td><strong>MOTS-c</strong></td><td>Mitochondrial-derived, AMPK activation</td><td>Metabolic inflammation</td><td class="y">Preclinical</td></tr>
+<tr><td><strong>SS-31 (Elamipretide)</strong></td><td>Mitochondrial membrane stabilization</td><td>Oxidative stress</td><td class="g">Clinical trials</td></tr>
+</tbody>
+</table>
+
+<p>Thymosin alpha-1 stands out for its clinical track record. It's been approved in over 30 countries for hepatitis and used as an immune modulator in cancer treatment. Its ability to rebalance the Th1/Th2 ratio means it can calm overactive inflammatory responses without suppressing necessary immune function (<a href="https://pubmed.ncbi.nlm.nih.gov/24120413/">Romani et al., 2012</a>). Our <a href="/articles/thymosin-alpha-1-immune-guide">thymosin alpha-1 guide</a> covers this in detail.</p>
+
+<p>LL-37, a cathelicidin antimicrobial peptide, is interesting because it can both fight infection and resolve inflammation. It modulates toll-like receptor signaling, preventing the overactivation that drives chronic inflammatory states (<a href="https://pubmed.ncbi.nlm.nih.gov/23467002/">Kahlenberg and Kaplan, 2013</a>). See our <a href="/articles/ll-37-antimicrobial-peptide-guide">LL-37 guide</a> for more.</p>
+
+<div class="d-a">
+  <div class="s">Important Note</div>
+  <p>Peptides that modulate immune function should be approached with caution in people with autoimmune conditions. Upregulating certain immune pathways while trying to calm others can produce unpredictable results. Work with a knowledgeable physician if you have any autoimmune diagnosis.</p>
+</div>
+
+<hr class="sep">
+
+<!-- SECTION: MECHANISMS -->
+<h2>How Anti-Inflammatory Peptides Work</h2>
+
+<p>The peptides listed above don't all work the same way. Understanding their mechanisms helps explain why certain combinations may be more effective than individual compounds.</p>
+
+<h3>NF-kB Pathway Inhibition</h3>
+
+<p>NF-kB is a transcription factor that, when activated, moves into the cell nucleus and turns on genes for inflammatory cytokines, chemokines, and adhesion molecules. BPC-157 and KPV both inhibit this pathway, though through different upstream mechanisms.</p>
+
+<p>BPC-157 appears to work partly through the nitric oxide (NO) system, modulating both endothelial and inducible nitric oxide synthase (eNOS and iNOS). By keeping iNOS in check, it reduces the excessive NO production that fuels inflammatory cascades in tissues like the gut lining and joints (<a href="https://pubmed.ncbi.nlm.nih.gov/29898092/">Sikiric et al., 2018</a>).</p>
+
+<p>KPV takes a more direct route. It enters the cell and physically prevents NF-kB subunits from translocating to the nucleus. No nuclear translocation, no transcription of inflammatory genes. It's an elegant, targeted mechanism (<a href="https://pubmed.ncbi.nlm.nih.gov/26303529/">Dalmasso et al., 2016</a>).</p>
+
+<h3>Immune Rebalancing</h3>
+
+<p>Thymosin alpha-1 and LL-37 operate more at the level of immune cell behavior. Rather than blocking a single pathway, they shift the overall balance of the immune response.</p>
+
+<p>Thymosin alpha-1 promotes dendritic cell maturation and helps restore proper Th1/Th2 balance. In conditions where inflammation is driven by Th2 dominance (certain allergic and autoimmune patterns), this rebalancing can reduce inflammatory output without immunosuppression.</p>
+
+<p>LL-37 modulates how innate immune cells respond to danger signals. By dampening toll-like receptor overactivation, it can prevent the self-perpetuating cycle where immune activation generates more damage signals, which drive more immune activation.</p>
+
+<h3>Mitochondrial Protection</h3>
+
+<p>MOTS-c and SS-31 address inflammation from the energy production side. Dysfunctional mitochondria leak reactive oxygen species (ROS) that activate the NLRP3 inflammasome, one of the primary sensors that triggers IL-1b release.</p>
+
+<p>SS-31 stabilizes the inner mitochondrial membrane, specifically binding to cardiolipin, reducing electron leak and the ROS production that feeds inflammatory signaling. Clinical trials for heart failure and kidney disease have shown reductions in inflammatory markers alongside improvements in organ function (<a href="https://pubmed.ncbi.nlm.nih.gov/30786253/">Butler et al., 2020</a>). Our <a href="/articles/ss-31-elamipretide-mitochondrial-guide">SS-31 guide</a> has the full research breakdown.</p>
+
+<div class="d-t">
+  <div class="s">Research Highlight</div>
+  <p>MOTS-c activates AMPK, the same energy-sensing pathway triggered by exercise and fasting. AMPK activation directly inhibits NF-kB, creating a metabolic anti-inflammatory effect. This positions MOTS-c as potentially useful for metabolic inflammation associated with obesity and insulin resistance (<a href="https://pubmed.ncbi.nlm.nih.gov/25738459/">Lee et al., 2015</a>). Learn more in our <a href="/articles/mots-c-mitochondrial-peptide">MOTS-c guide</a>.</p>
+</div>
+
+<hr class="sep">
+
+<!-- SECTION: PROTOCOLS -->
+<h2>Practical Anti-Inflammatory Peptide Protocols</h2>
+
+<p>The following protocols are drawn from clinical literature and practitioner reports. They are not prescriptions. Dosing should always be discussed with a qualified healthcare provider who can adjust based on your bloodwork and health status.</p>
+
+<h3>Foundation Protocol: Gut-Driven Inflammation</h3>
+
+<p>If your inflammation is primarily gut-driven (elevated zonulin, positive lactulose/mannitol test, GI symptoms alongside high hs-CRP), this combination targets the source.</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Dose Range</th><th>Route</th><th>Frequency</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>250&ndash;500 mcg</td><td>Subcutaneous (abdominal) or oral</td><td>1&ndash;2x daily</td><td>4&ndash;8 weeks</td></tr>
+<tr><td><strong>KPV</strong></td><td>200&ndash;500 mcg</td><td>Oral or subcutaneous</td><td>1&ndash;2x daily</td><td>4&ndash;8 weeks</td></tr>
+</tbody>
+</table>
+
+<p>BPC-157 and KPV are complementary here. BPC-157 repairs the gut lining while KPV suppresses mucosal NF-kB activity. Together, they address both the structural damage and the inflammatory signaling. For guidance on combining peptides effectively, our <a href="/articles/peptide-stacking-guide">stacking guide</a> is a good resource.</p>
+
+<h3>Immune Modulation Protocol: Autoimmune-Adjacent Inflammation</h3>
+
+<p>For inflammation with an immune dysregulation component (elevated TNF-a, abnormal lymphocyte subsets, history of recurrent infections or autoimmune tendencies).</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Dose Range</th><th>Route</th><th>Frequency</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>Thymosin alpha-1</strong></td><td>1.6 mg</td><td>Subcutaneous</td><td>2&ndash;3x per week</td><td>8&ndash;12 weeks</td></tr>
+<tr><td><strong>LL-37</strong></td><td>50&ndash;100 mcg</td><td>Subcutaneous</td><td>Daily or every other day</td><td>4&ndash;6 weeks</td></tr>
+</tbody>
+</table>
+
+<h3>Metabolic Inflammation Protocol</h3>
+
+<p>For inflammation tied to metabolic dysfunction (elevated fasting insulin, high hs-CRP with abdominal adiposity, early insulin resistance markers).</p>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Dose Range</th><th>Route</th><th>Frequency</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>MOTS-c</strong></td><td>5&ndash;10 mg/week</td><td>Subcutaneous</td><td>3&ndash;5x per week</td><td>8&ndash;12 weeks</td></tr>
+<tr><td><strong>SS-31</strong></td><td>10&ndash;40 mg</td><td>Subcutaneous or IV</td><td>Daily</td><td>4&ndash;8 weeks</td></tr>
+</tbody>
+</table>
+
+<div class="d-r">
+  <div class="s">Safety Warning</div>
+  <p>These protocols are not interchangeable. An immune modulation protocol in someone without immune dysregulation can create problems, not solve them. Baseline bloodwork, including a full inflammatory panel and immune cell subsets, should guide protocol selection. Never self-prescribe peptide combinations without medical oversight.</p>
+</div>
+
+<hr class="sep">
+
+<!-- SECTION: LIFESTYLE SYNERGY -->
+<h2>Lifestyle Factors That Amplify Peptide Effects</h2>
+
+<p>Peptides work better when the basics are handled. You can't out-peptide a terrible diet, chronic sleep deprivation, or a sedentary lifestyle. Think of peptides as precision tools that work on top of a solid foundation.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Sleep</h4>
+    <p>7&ndash;9 hours per night. Even one night of sleep deprivation raises IL-6 by roughly 30%. Consistent sleep is the single most impactful anti-inflammatory behavior you can adopt.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--blue);">Movement</h4>
+    <p>Regular exercise releases anti-inflammatory myokines (IL-10, IL-1ra) from contracting muscle. 150+ minutes per week of moderate activity is the threshold for measurable inflammatory marker reduction.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--plum);">Nutrition</h4>
+    <p>A whole-food diet rich in omega-3 fatty acids, polyphenols, and fiber directly lowers CRP and IL-6. Processed seed oils and refined sugars do the opposite. This isn't marginal; it's foundational.</p>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--amber);">Stress Management</h4>
+    <p>Chronic psychological stress elevates cortisol, which initially suppresses inflammation but eventually leads to cortisol resistance and unchecked inflammatory signaling. Meditation, cold exposure, and time in nature all show measurable CRP reductions in clinical studies.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">Gut Health</h4>
+    <p>Prebiotic fiber, fermented foods, and avoiding unnecessary antibiotics support the gut barrier. A healthy microbiome produces short-chain fatty acids like butyrate that actively suppress intestinal inflammation. Our <a href="/articles/best-peptides-for-gut-health">gut health peptide guide</a> covers this intersection in depth.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<!-- SECTION: MONITORING -->
+<h2>Monitoring Your Progress</h2>
+
+<p>You can't manage what you don't measure. If you're running an anti-inflammatory peptide protocol, establish a baseline and recheck at regular intervals.</p>
+
+<h3>Recommended Testing Timeline</h3>
+
+<table class="tbl">
+<thead><tr><th>Timepoint</th><th>Tests to Run</th><th>What You're Looking For</th></tr></thead>
+<tbody>
+<tr><td><strong>Baseline (week 0)</strong></td><td>hs-CRP, IL-6, TNF-a, fasting insulin, CBC with differential</td><td>Establish starting values</td></tr>
+<tr><td><strong>Midpoint (week 4&ndash;6)</strong></td><td>hs-CRP, fasting insulin</td><td class="g">Directional improvement (hs-CRP trending down)</td></tr>
+<tr><td><strong>End of protocol</strong></td><td>Full panel repeat</td><td class="g">Significant reduction in inflammatory markers</td></tr>
+<tr><td><strong>Post-protocol (4 weeks after)</strong></td><td>hs-CRP, fasting insulin</td><td class="y">Sustained improvement vs. rebound</td></tr>
+</tbody>
+</table>
+
+<p>A clinically meaningful reduction in hs-CRP is generally considered a drop of 20% or more from baseline. Some practitioners report 40&ndash;60% reductions when peptide protocols are combined with lifestyle modifications.</p>
+
+<div class="d">
+  <div class="s">Practical Tip</div>
+  <p>hs-CRP can spike temporarily from acute illness, intense exercise, or poor sleep. Don't draw labs the morning after a hard training session or while you're fighting a cold. Aim for a calm, representative day to get accurate readings.</p>
+</div>
+
+<hr class="sep">
+
+<!-- SECTION: PEPTIDES VS CONVENTIONAL -->
+<h2>Peptides vs. Conventional Anti-Inflammatory Approaches</h2>
+
+<p>How do peptides compare to the tools most people already know about? Each approach has trade-offs.</p>
+
+<table class="tbl">
+<thead><tr><th>Approach</th><th>Mechanism</th><th>Pros</th><th>Cons</th></tr></thead>
+<tbody>
+<tr><td><strong>NSAIDs (ibuprofen, naproxen)</strong></td><td>COX-1/COX-2 inhibition</td><td>Fast, cheap, widely available</td><td class="r">GI damage, kidney risk, doesn't address root cause</td></tr>
+<tr><td><strong>Corticosteroids</strong></td><td>Broad immunosuppression</td><td>Powerful, effective for flares</td><td class="r">Bone loss, metabolic disruption, adrenal suppression</td></tr>
+<tr><td><strong>Biologics (TNF inhibitors)</strong></td><td>Targeted cytokine blockade</td><td>Highly specific, strong evidence</td><td class="y">Expensive, infection risk, requires monitoring</td></tr>
+<tr><td><strong>Omega-3 fatty acids</strong></td><td>SPM production (resolvins, protectins)</td><td>Safe, well-studied, accessible</td><td class="y">Effects are modest and slow</td></tr>
+<tr><td><strong>Anti-inflammatory peptides</strong></td><td>Pathway-specific modulation</td><td class="g">Targeted, generally well-tolerated, multi-pathway options</td><td class="y">Limited human trial data for some compounds, cost, access</td></tr>
+</tbody>
+</table>
+
+<p>Peptides sit in an interesting middle ground. They're more targeted than NSAIDs but more accessible than biologics. The biggest limitation remains the depth of human clinical data; most peptide anti-inflammatory research is preclinical, with thymosin alpha-1 and SS-31 being notable exceptions.</p>
+
+<div class="d-a">
+  <div class="s">Caution</div>
+  <p>Peptides should not be viewed as replacements for prescribed anti-inflammatory medications, especially in conditions like rheumatoid arthritis, inflammatory bowel disease, or lupus. They may complement conventional treatment in some cases, but that decision belongs to your physician.</p>
+</div>
+
+<hr class="sep">
+
+<!-- SECTION: SIDE EFFECTS -->
+<h2>Side Effects and Safety Considerations</h2>
+
+<p>Anti-inflammatory peptides are generally well-tolerated in the available research, but "generally well-tolerated" isn't the same as "risk-free."</p>
+
+<h3>Common and Uncommon Side Effects</h3>
+
+<table class="tbl">
+<thead><tr><th>Peptide</th><th>Common Side Effects</th><th>Rare/Theoretical Concerns</th></tr></thead>
+<tbody>
+<tr><td><strong>BPC-157</strong></td><td>Injection site irritation, mild nausea (oral)</td><td class="y">Theoretical tumor growth concerns (angiogenesis)</td></tr>
+<tr><td><strong>KPV</strong></td><td>Minimal reported side effects</td><td class="g">Limited long-term data</td></tr>
+<tr><td><strong>Thymosin alpha-1</strong></td><td>Injection site redness, mild fatigue</td><td class="g">Well-characterized safety profile</td></tr>
+<tr><td><strong>LL-37</strong></td><td>Injection site pain, temporary redness</td><td class="y">Dose-dependent cytotoxicity at high concentrations</td></tr>
+<tr><td><strong>MOTS-c</strong></td><td>Limited data; headache reported anecdotally</td><td class="y">Very limited human safety data</td></tr>
+<tr><td><strong>SS-31</strong></td><td>Injection site reactions</td><td class="g">Clinical trial safety data available</td></tr>
+</tbody>
+</table>
+
+<p>The biggest concern with BPC-157 in the context of inflammation is its angiogenic (blood vessel forming) properties. If inflammation is related to or coexists with any form of cancer, promoting angiogenesis is the last thing you want. This is a theoretical risk based on mechanism of action, not a documented adverse event, but it warrants serious caution. Our <a href="/articles/peptide-side-effects-what-to-know">side effects guide</a> covers this in more depth.</p>
+
+<div class="d-r">
+  <div class="s">Contraindication</div>
+  <p>Do not use angiogenic peptides (BPC-157, TB-500) if you have an active cancer diagnosis or are being monitored for suspicious growths. The theoretical risk of promoting tumor blood supply is not worth the anti-inflammatory benefit when safer alternatives exist.</p>
+</div>
+
+<hr class="sep">
+
+<!-- SECTION: CYCLING -->
+<h2>Cycling and Long-Term Use</h2>
+
+<p>Most anti-inflammatory peptide protocols are run in defined cycles rather than continuously. This is partly because long-term data is limited and partly because the goal is to reset inflammatory signaling, not suppress it indefinitely.</p>
+
+<p>A common pattern is 4&ndash;8 weeks on, followed by 4 weeks off, with bloodwork guiding whether to repeat. Some practitioners run thymosin alpha-1 for longer periods (12+ weeks) given its established safety profile, while newer compounds like MOTS-c tend to be used in shorter cycles.</p>
+
+<p>For detailed cycling strategies across different peptides, our <a href="/articles/peptide-cycling-guide">peptide cycling guide</a> provides protocol-specific timelines.</p>
+
+<hr class="sep">
+
+<!-- FAQ -->
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Can peptides replace anti-inflammatory medications like ibuprofen or prednisone?</summary>
+    <div class="fa">Not directly. NSAIDs and corticosteroids address acute inflammation quickly and have decades of clinical evidence behind them. Peptides work through different mechanisms and are generally better suited for chronic, low-grade inflammation that persists despite lifestyle interventions. If you're on prescribed anti-inflammatory medication, don't stop it in favor of peptides without discussing it with your doctor. They can sometimes be used alongside conventional treatment, but that's a clinical decision, not a self-directed one.</div>
+  </details>
+  <details>
+    <summary>Which peptide is best for gut-related inflammation?</summary>
+    <div class="fa">BPC-157 and KPV are the two most studied options for gut-specific inflammation. BPC-157 has a stronger evidence base for tissue repair (healing ulcers, fistulas, and damaged intestinal lining), while KPV is more specifically anti-inflammatory at the mucosal level. Many practitioners combine them for this reason. If your inflammation is clearly gut-driven, as suggested by GI symptoms and elevated markers, this combination is a reasonable starting point to discuss with your provider.</div>
+  </details>
+  <details>
+    <summary>How long does it take to see results from anti-inflammatory peptides?</summary>
+    <div class="fa">Most people report subjective improvements (reduced joint stiffness, better digestion, more energy) within 2&ndash;4 weeks. Objective changes in bloodwork typically become measurable around 4&ndash;6 weeks. Some compounds like thymosin alpha-1 may take the full 8&ndash;12 week course before immune rebalancing is reflected in lab values. Patience and consistent use matter more than dose escalation.</div>
+  </details>
+  <details>
+    <summary>Are anti-inflammatory peptides safe for long-term use?</summary>
+    <div class="fa">The honest answer is that we don't have enough long-term human data to say definitively for most of these compounds. Thymosin alpha-1 has the longest track record with clinical use spanning decades in some countries. For newer compounds like MOTS-c and KPV, long-term safety remains an open question. This is why cycling (defined on/off periods) is the standard approach, and why regular bloodwork monitoring is strongly recommended throughout any protocol.</div>
+  </details>
+  <details>
+    <summary>Can I take anti-inflammatory peptides if I have an autoimmune condition?</summary>
+    <div class="fa">This requires careful medical supervision. Some peptides, like thymosin alpha-1, can actually help rebalance immune function in certain autoimmune presentations. Others, particularly those that stimulate parts of the immune system, could theoretically worsen autoimmune flares. The answer depends entirely on which autoimmune condition you have, which peptides you're considering, and what your current immune markers look like. This is not a DIY situation.</div>
+  </details>
+  <details>
+    <summary>Do I need to inject these peptides, or are oral forms available?</summary>
+    <div class="fa">It depends on the peptide. BPC-157 has shown oral bioactivity in studies, and KPV appears to work orally as well, particularly for gut inflammation. Thymosin alpha-1 and LL-37 are typically administered subcutaneously for systemic effects. MOTS-c and SS-31 are also generally injected. If needles are a barrier, BPC-157 and KPV offer oral options, though bioavailability may be lower for systemic (non-gut) effects. Our <a href="/articles/peptide-delivery-forms-guide">delivery forms guide</a> compares the options in detail.</div>
+  </details>
+  <details>
+    <summary>What's the relationship between inflammation and aging?</summary>
+    <div class="fa">The relationship is so well-established that researchers gave it a name: inflammaging. As we age, the immune system becomes less efficient at resolving inflammatory responses, leading to a chronic low-grade elevation in inflammatory cytokines. This contributes to virtually every age-related disease, from cardiovascular disease to neurodegeneration to sarcopenia. Reducing systemic inflammation is considered one of the most impactful interventions for healthspan extension, which is why anti-inflammatory peptides have attracted attention in the longevity research community.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<!-- BOTTOM LINE -->
+<div class="d-t">
+  <div class="s">The Bottom Line</div>
+  <p>Systemic inflammation is a measurable, modifiable risk factor for nearly every chronic disease. Peptides like BPC-157, KPV, thymosin alpha-1, and SS-31 offer targeted, mechanism-specific approaches to reducing it. They're not magic, and they don't replace the fundamentals of sleep, nutrition, exercise, and stress management. But when used thoughtfully, with proper bloodwork monitoring and medical guidance, they represent some of the most precise anti-inflammatory tools currently available.</p>
+</div>
+
+<p>The science here is still evolving. New human trials are underway for several of these compounds, and our understanding of inflammatory pathways continues to deepen. What we know today is enough to act on carefully, but not enough to be dogmatic about. Stay curious, measure your markers, and work with a qualified provider who understands both the promise and the limitations of peptide-based approaches.</p>
+
+<!-- DISCLAIMER -->
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice and should not be used as a substitute for consultation with a qualified healthcare provider. Peptides discussed here may not be approved for human use in all jurisdictions. Always consult your physician before starting any new supplement or peptide protocol, especially if you have pre-existing health conditions or take prescription medications.
+</div>
+
+<!-- REFERENCES -->
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Libby P, et al. Inflammation in atherosclerosis: from pathophysiology to practice. <em>J Am Coll Cardiol.</em> 2009;54(23):2129&ndash;2138. <a href="https://pubmed.ncbi.nlm.nih.gov/19100526/">PubMed</a><br>
+Furman D, et al. Chronic inflammation in the etiology of disease across the life span. <em>Nat Med.</em> 2019;25(12):1822&ndash;1832. <a href="https://pubmed.ncbi.nlm.nih.gov/25139760/">PubMed</a><br>
+Franceschi C, et al. Inflamm-aging: An evolutionary perspective on immunosenescence. <em>Ann N Y Acad Sci.</em> 2000;908:244&ndash;254. <a href="https://pubmed.ncbi.nlm.nih.gov/10911963/">PubMed</a><br>
+Cani PD, et al. Metabolic endotoxemia initiates obesity and insulin resistance. <em>Diabetes.</em> 2007;56(7):1761&ndash;1772. <a href="https://pubmed.ncbi.nlm.nih.gov/17456850/">PubMed</a><br>
+Ridker PM, et al. Antiinflammatory therapy with canakinumab for atherosclerotic disease. <em>N Engl J Med.</em> 2017;377(12):1119&ndash;1131. <a href="https://pubmed.ncbi.nlm.nih.gov/28709998/">PubMed</a><br>
+Sikiric P, et al. Brain-gut axis and pentadecapeptide BPC 157. <em>Curr Neuropharmacol.</em> 2018;16(8):1116&ndash;1143. <a href="https://pubmed.ncbi.nlm.nih.gov/29898092/">PubMed</a><br>
+Dalmasso G, et al. PepT1-mediated tripeptide KPV uptake reduces intestinal inflammation. <em>Gastroenterology.</em> 2008;134(1):166&ndash;178. <a href="https://pubmed.ncbi.nlm.nih.gov/26303529/">PubMed</a><br>
+Romani L, et al. Thymosin alpha 1: an endogenous regulator of inflammation, immunity, and tolerance. <em>Ann N Y Acad Sci.</em> 2012;1270:45&ndash;51. <a href="https://pubmed.ncbi.nlm.nih.gov/24120413/">PubMed</a><br>
+Kahlenberg JM, Kaplan MJ. Little peptide, big effects: the role of LL-37 in inflammation and autoimmune disease. <em>J Immunol.</em> 2013;191(10):4895&ndash;4901. <a href="https://pubmed.ncbi.nlm.nih.gov/23467002/">PubMed</a><br>
+Lee C, et al. The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance. <em>Cell Metab.</em> 2015;21(3):443&ndash;454. <a href="https://pubmed.ncbi.nlm.nih.gov/25738459/">PubMed</a><br>
+Butler J, et al. Effects of elamipretide on left ventricular function in patients with heart failure with reduced ejection fraction. <em>J Card Fail.</em> 2020;26(5):429&ndash;437. <a href="https://pubmed.ncbi.nlm.nih.gov/30786253/">PubMed</a><br>
+</p>
+
+<!-- RELATED READING -->
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/bpc-157-complete-guide">BPC-157: A Complete Evidence-Based Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/kpv-peptide-guide">KPV Peptide Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/thymosin-alpha-1-immune-guide">Thymosin Alpha-1 Immune Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-stacking-guide">Peptide Stacking Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/peptide-bloodwork-guide">Peptide Bloodwork Guide</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/bpc-157-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">BPC-157 Complete Guide</a>
+            <a href="/articles/kpv-peptide-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">KPV Peptide Guide</a>
+            <a href="/articles/thymosin-alpha-1-immune-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Thymosin Alpha-1 Immune Guide</a>
+            <a href="/articles/peptide-stacking-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Peptide Stacking Guide</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
