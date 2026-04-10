@@ -203,8 +203,9 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
     async function loadPagefind() {
       if (!pagefind) {
         try {
-          // @ts-ignore
-          pagefind = await import('/pagefind/pagefind.js');
+          // @ts-ignore — pagefind is a build artifact, not available in dev
+          const pfUrl = '/pagefind/' + 'pagefind.js';
+          pagefind = await import(/* @vite-ignore */ pfUrl);
           await pagefind.init();
         } catch (e) {
           console.warn('Pagefind not available (run build first)', e);
