@@ -1,0 +1,467 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export const frontmatter = {
+  title: "Foundayo's Oral GLP-1: Supplement Marketing vs. Real GLP-1 Science",
+  description: "An honest look at Foundayo's Oral GLP-1 supplement, what it actually contains, how it compares to prescription GLP-1 receptor agonists like retatrutide, and why the branding is misleading.",
+  image: "/images/articles/foundayo-s-oral-glp-1.webp",
+  date: "2026-04-15",
+  category: "article",
+  author: "PeptideRundown Team"
+};
+const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const rawCSS = `
+:root{--bg:#F3F2EE;--ink:#18182A;--body:#3C3C52;--blue:#2956A6;--blue-lt:#E8EEF9;--teal:#187A62;--teal-lt:#E4F5EF;--amber:#B48118;--amber-lt:#FFF7E5;--red:#B53A3A;--red-lt:#FDEEEC;--plum:#6E3B8A;--plum-lt:#F3ECF8;--card:#FFFFFF;--bdr:#D9D6CE;--mut:#86869A;--sub:#EDECE8;}
+.c{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+h2{font-family:'Lora',serif;font-size:1.8rem;color:var(--ink);margin:56px 0 16px;line-height:1.3;}
+h3{font-family:'Lora',serif;font-size:1.25rem;color:var(--ink);margin:34px 0 10px;line-height:1.35;}
+h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin:24px 0 8px;}
+p{margin-bottom:18px;}
+strong{color:var(--ink);}
+a{color:var(--blue);}
+.hero{background:linear-gradient(135deg,#1A1A2E 0%,#16213E 40%,#0F3460 100%);padding:64px 40px 52px;border-radius:16px;margin-bottom:36px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='18' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-opacity='0.015' stroke-width='0.5'/%3E%3C/svg%3E");}
+.hero-k{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;position:relative;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4.5vw,2.5rem);color:#fff;line-height:1.22;max-width:640px;font-weight:600;position:relative;}
+.hero .sub{color:rgba(255,255,255,.55);font-size:14.5px;margin-top:18px;max-width:560px;line-height:1.7;position:relative;}
+.hero .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;position:relative;}
+.hero .pill{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);}
+@media(max-width:600px){.hero{padding:40px 24px 36px;}}
+.d{border-left:3px solid var(--blue);background:var(--blue-lt);padding:20px 24px;margin:26px 0;border-radius:0 8px 8px 0;}
+.d .s{font-weight:600;color:var(--blue);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;}
+.d p{margin-bottom:0;color:#1E3362;}
+.d-t{border-left-color:var(--teal);background:var(--teal-lt);}.d-t .s{color:var(--teal);}.d-t p{color:#14503E;}
+.d-a{border-left-color:var(--amber);background:var(--amber-lt);}.d-a .s{color:var(--amber);}.d-a p{color:#5A4010;}
+.d-r{border-left-color:var(--red);background:var(--red-lt);}.d-r .s{color:var(--red);}.d-r p{color:#5A2020;}
+.d-p{border-left-color:var(--plum);background:var(--plum-lt);}.d-p .s{color:var(--plum);}.d-p p{color:#3E2050;}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0;}
+.sb{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:18px;text-align:center;}
+.sb .v{font-family:'Lora',serif;font-size:1.7rem;line-height:1;margin-bottom:4px;}
+.sb .v.c1{color:var(--blue);}.sb .v.c2{color:var(--teal);}.sb .v.c3{color:var(--plum);}.sb .v.c4{color:var(--amber);}
+.sb .l{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.4px;line-height:1.35;}
+.tbl{width:100%;border-collapse:collapse;margin:28px 0;font-size:13.5px;background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--bdr);}
+.tbl thead{background:var(--ink);color:#fff;}
+.tbl th{padding:12px 14px;text-align:left;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--bdr);line-height:1.5;}
+.tbl tbody tr:nth-child(even){background:var(--sub);}
+.tbl tbody tr:last-child td{border-bottom:none;}
+.tbl .g{color:var(--teal);font-weight:600;}.tbl .r{color:var(--red);font-weight:600;}.tbl .y{color:var(--amber);font-weight:500;}
+.cd{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:26px;margin:24px 0;position:relative;overflow:hidden;}
+.cd::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;}
+.cd.cb::before{background:var(--blue);}.cd.ct::before{background:var(--teal);}.cd.cp::before{background:var(--plum);}.cd.ca::before{background:var(--amber);}.cd.cr::before{background:var(--red);}
+.cd .tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.cd.cb .tg{background:var(--blue-lt);color:var(--blue);}.cd.ct .tg{background:var(--teal-lt);color:var(--teal);}.cd.cp .tg{background:var(--plum-lt);color:var(--plum);}.cd.ca .tg{background:var(--amber-lt);color:var(--amber);}.cd.cr .tg{background:var(--red-lt);color:var(--red);}
+.cd h3{margin-top:0;font-size:1.15rem;}
+.svg-box{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:24px 16px 16px;margin:28px 0;overflow-x:auto;}
+.svg-box .st{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);text-align:center;margin-bottom:4px;}
+.svg-box .ss{font-size:12px;color:var(--mut);text-align:center;margin-bottom:16px;}
+.svg-box svg{width:100%;height:auto;display:block;margin:0 auto;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:28px 0;}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}}
+.mc{background:var(--card);border:1px solid var(--bdr);border-radius:10px;padding:20px;}
+.mc h4{font-family:'Lora',serif;font-size:1.05rem;color:var(--ink);margin-bottom:8px;}
+.mc p{font-size:14px;margin-bottom:0;}
+.sep{border:none;border-top:1px solid var(--bdr);margin:48px 0;}
+.disc{background:var(--sub);border-radius:10px;padding:22px 24px;margin:40px 0;font-size:13px;color:var(--mut);line-height:1.7;}
+.disc strong{color:var(--ink);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+.faq{margin:28px 0;}
+.faq details{background:var(--card);border:1px solid var(--bdr);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq summary::after{content:'+';font-size:18px;color:var(--mut);transition:transform .2s;}
+.faq details[open] summary::after{content:'\\u2212';}
+.faq .fa{padding:0 20px 16px;font-size:14.5px;line-height:1.7;}
+`;
+
+const rawHTML = `
+<div class="c">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-k">Critical Analysis &middot; April 2026</div>
+  <h1>Foundayo's Oral GLP-1: A Supplement Dressed in Pharmaceutical Clothing</h1>
+  <p class="sub">When a dietary supplement borrows the name of the most powerful drug class in modern obesity medicine, consumers deserve to know what they're actually buying. Here's what the science says.</p>
+  <div class="pills">
+    <span class="pill">Supplement Analysis</span>
+    <span class="pill">GLP-1 Science</span>
+    <span class="pill">Weight Loss</span>
+    <span class="pill">Consumer Warning</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="sr">
+  <div class="sb"><div class="v c1">0</div><div class="l">Published RCTs<br>on Foundayo</div></div>
+  <div class="sb"><div class="v c2">24.2%</div><div class="l">Weight Loss with<br>Retatrutide (Phase 2)</div></div>
+  <div class="sb"><div class="v c3">1&ndash;3 kg</div><div class="l">Typical Loss from<br>Berberine Alone</div></div>
+  <div class="sb"><div class="v c4">$60+</div><div class="l">Monthly Cost<br>for a Supplement</div></div>
+</div>
+
+<p>The GLP-1 receptor agonist drug class has transformed obesity medicine. Semaglutide, tirzepatide, and the upcoming retatrutide have produced weight loss results that were unthinkable a decade ago, backed by large randomized controlled trials published in top-tier journals. Naturally, this success has attracted a wave of supplement companies eager to attach themselves to the GLP-1 name.</p>
+
+<p>Foundayo's "Oral GLP-1" product sits squarely in that wave. Despite the name, it isn't a GLP-1 receptor agonist. It doesn't contain any GLP-1 peptide. It's a dietary supplement made from botanical extracts and other ingredients that have, at best, weak and indirect connections to the GLP-1 pathway. The branding implies a relationship to prescription GLP-1 drugs that simply doesn't exist.</p>
+
+<p>This matters because people spend real money on this product expecting pharmaceutical-grade results from supplement-grade ingredients. Let's look at what Foundayo actually is, what it isn't, and why real GLP-1 receptor agonists like <a href="/articles/retatrutide-complete-guide">retatrutide</a> remain in a completely different category.</p>
+
+<div class="d-a">
+  <div class="s">Important Context</div>
+  <p>This article is for educational purposes only. It is not medical advice and does not constitute a recommendation for or against any specific product. Always consult a qualified healthcare provider before starting any weight management protocol, whether prescription or supplement-based.</p>
+</div>
+
+<hr class="sep">
+
+<h2>What Foundayo's Oral GLP-1 Actually Contains</h2>
+
+<p>The word "GLP-1" in the product name leads many consumers to assume they're getting an oral form of the same compounds used in drugs like Ozempic or Mounjaro. They're not. Foundayo's product is a dietary supplement formulated with botanical extracts, vitamins, and minerals. Common ingredients in this category include berberine, chromium picolinate, green tea extract, and various plant-derived compounds.</p>
+
+<p>None of these ingredients are GLP-1 receptor agonists. Some have been studied for modest effects on blood glucose or metabolic markers, but the magnitude of those effects is a fraction of what prescription GLP-1 drugs deliver. The marketing typically relies on language like "supports GLP-1 levels naturally" or "activates your body's own GLP-1 pathways," which sounds scientific but sidesteps the fact that these claims haven't been validated in rigorous clinical trials for the specific product.</p>
+
+<div class="d-r">
+  <div class="s">Naming Concern</div>
+  <p>Calling a supplement "Oral GLP-1" creates a strong implication of equivalence with FDA-approved GLP-1 receptor agonist drugs. The FDA has issued warning letters to supplement companies making similar misleading associations with prescription drug classes. Consumers should understand that supplement marketing language is regulated far less strictly than pharmaceutical claims.</p>
+</div>
+
+<p>Berberine is the ingredient most commonly cited as the "active" component in GLP-1 supplements. It's an alkaloid found in plants like goldenseal and barberry, and it does have some research behind it. A meta-analysis by Liang et al. found that berberine supplementation produced modest improvements in blood glucose and lipid profiles (<a href="https://pubmed.ncbi.nlm.nih.gov/31567015/">Liang et al., 2019</a>). But the weight loss observed in berberine studies typically ranges from 1 to 3 kilograms, a far cry from the 15&ndash;24% body weight reductions seen with prescription GLP-1 receptor agonists.</p>
+
+<p>The mechanism also isn't the same. Berberine appears to work primarily through AMPK activation and effects on gut microbiota. While some preclinical research suggests berberine might indirectly stimulate GLP-1 secretion from intestinal L-cells, this is a fundamentally different mechanism than directly binding to and activating the GLP-1 receptor the way prescription drugs do. It's the difference between nudging a system and commanding it.</p>
+
+<div class="cd ca">
+  <div class="tg">Ingredient Profile</div>
+  <h3>Typical "Oral GLP-1" Supplement Ingredients</h3>
+  <p style="font-size:14px;margin-bottom:0;">These supplements commonly contain berberine (500&ndash;1500 mg), chromium picolinate (200&ndash;1000 mcg), green tea extract (EGCG), alpha-lipoic acid, and sometimes Gymnema sylvestre or cinnamon bark extract. Each has some independent research for metabolic markers, but none has been shown to produce clinically significant weight loss comparable to GLP-1 receptor agonists, and the combination hasn't been tested in published RCTs.</p>
+</div>
+
+<hr class="sep">
+
+<h2>The Clinical Evidence Gap</h2>
+
+<p>This is where the comparison becomes most uncomfortable for Foundayo. Prescription GLP-1 receptor agonists have some of the strongest clinical trial data of any drug class in modern medicine. Foundayo's specific formulation has none.</p>
+
+<p>When we say "none," we mean there are zero published, peer-reviewed randomized controlled trials evaluating Foundayo's Oral GLP-1 product for weight loss or metabolic outcomes. The company may cite studies on individual ingredients (like berberine or chromium), but that's not the same thing as testing the actual product. Individual ingredient studies don't account for formulation, dosage combinations, bioavailability of the specific product, or synergistic and antagonistic interactions between components.</p>
+
+<table class="tbl">
+<thead><tr><th>Evidence Metric</th><th>Foundayo Oral GLP-1</th><th>Retatrutide</th><th>Semaglutide 2.4 mg</th></tr></thead>
+<tbody>
+<tr><td><strong>Published RCTs</strong></td><td class="r">0</td><td class="g">Phase 2 complete, Phase 3 ongoing</td><td class="g">Multiple Phase 3 (STEP program)</td></tr>
+<tr><td><strong>Largest trial size</strong></td><td class="r">N/A</td><td class="g">338 participants (Phase 2)</td><td class="g">1,961 participants (STEP 1)</td></tr>
+<tr><td><strong>Max weight loss observed</strong></td><td class="y">1&ndash;3 kg (berberine alone)</td><td class="g">24.2% body weight</td><td class="g">14.9% body weight</td></tr>
+<tr><td><strong>FDA status</strong></td><td class="y">Supplement (no approval needed)</td><td class="y">Investigational (Phase 3)</td><td class="g">FDA approved (Wegovy)</td></tr>
+<tr><td><strong>Peer-reviewed publications</strong></td><td class="r">0 for product</td><td class="g">NEJM, Lancet</td><td class="g">NEJM, JAMA, Lancet</td></tr>
+</tbody>
+</table>
+
+<p>Contrast this with retatrutide. Eli Lilly's triple receptor agonist (targeting GIP, GLP-1, and glucagon receptors simultaneously) produced 24.2% body weight loss at its highest dose over 48 weeks in a Phase 2 trial published in the New England Journal of Medicine (<a href="https://pubmed.ncbi.nlm.nih.gov/37351564/">Jastreboff et al., 2023</a>). That's roughly 24 kg lost for a 100 kg person. Berberine supplements, the strongest ingredient in most "oral GLP-1" products, typically produce 1&ndash;3 kg of weight loss over similar timeframes.</p>
+
+<p>The difference isn't subtle. It's an order of magnitude.</p>
+
+<div class="d-t">
+  <div class="s">Key Finding</div>
+  <p>Retatrutide's Phase 2 trial showed 24.2% body weight reduction at the 12 mg dose over 48 weeks, making it the most effective anti-obesity agent tested in clinical trials to date. This is roughly 8&ndash;24 times the weight loss typically seen with berberine supplementation.</p>
+</div>
+
+<hr class="sep">
+
+<h2>How Real GLP-1 Receptor Agonists Work</h2>
+
+<p>To understand why the comparison is so lopsided, it helps to know what GLP-1 receptor agonists actually do in the body. GLP-1 (glucagon-like peptide-1) is a hormone produced by L-cells in the small intestine after you eat. It signals the pancreas to release insulin, slows gastric emptying, and acts on brain regions that control appetite and satiety.</p>
+
+<p>Prescription GLP-1 receptor agonists like <a href="/articles/semaglutide-weight-loss-guide">semaglutide</a> are synthetic molecules engineered to bind directly to the GLP-1 receptor with high affinity and resist enzymatic degradation. They stay active in the body for days (semaglutide has a half-life of about 7 days), producing sustained appetite suppression and metabolic effects. This is precision pharmacology.</p>
+
+<p>Retatrutide takes this a step further. It's a triple agonist that simultaneously activates three receptors: GIP, GLP-1, and glucagon. The glucagon receptor activation is what sets it apart, because glucagon directly stimulates energy expenditure and fat oxidation in the liver. You're not just eating less; your body is burning more. The combination produces weight loss results that exceed even <a href="/articles/tirzepatide-complete-guide">tirzepatide</a>, which itself exceeded semaglutide (<a href="https://pubmed.ncbi.nlm.nih.gov/37385275/">Jastreboff et al., 2022</a>).</p>
+
+<div class="cd cb">
+  <div class="tg">Mechanism Comparison</div>
+  <h3>Direct Receptor Activation vs. Indirect Stimulation</h3>
+  <p style="font-size:14px;margin-bottom:0;">Prescription GLP-1 RAs bind directly to the GLP-1 receptor with nanomolar affinity, producing dose-dependent, predictable, and potent activation. Supplement ingredients like berberine may indirectly stimulate GLP-1 secretion from gut cells through AMPK pathways, but this produces orders-of-magnitude less receptor activation. It's the difference between flipping a light switch and hoping that a gentle breeze through the window might accidentally push the switch.</p>
+</div>
+
+<h3>The Retatrutide Advantage</h3>
+
+<p>Retatrutide represents the next generation of this drug class. Where semaglutide hits one receptor and tirzepatide hits two, retatrutide hits three. The Phase 2 data published in the NEJM showed dose-dependent weight loss reaching 24.2% at the highest dose (<a href="https://pubmed.ncbi.nlm.nih.gov/37351564/">Jastreboff et al., 2023</a>). Side effects were primarily gastrointestinal (nausea, diarrhea, vomiting) and generally decreased over time, consistent with the GLP-1 receptor agonist class.</p>
+
+<p>Phase 3 trials (the TRIUMPH program) are ongoing, with results expected to further define retatrutide's efficacy and safety profile. Early data in type 2 diabetes populations has also shown significant improvements in glycemic control (<a href="https://pubmed.ncbi.nlm.nih.gov/37840095/">Frias et al., 2023</a>).</p>
+
+<table class="tbl">
+<thead><tr><th>Drug/Compound</th><th>Receptor Targets</th><th>Weight Loss (Trial Peak)</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong>Semaglutide 2.4 mg</strong></td><td>GLP-1</td><td class="g">14.9%</td><td class="g">FDA approved</td></tr>
+<tr><td><strong>Tirzepatide 15 mg</strong></td><td>GIP + GLP-1</td><td class="g">20.9%</td><td class="g">FDA approved</td></tr>
+<tr><td><strong>Retatrutide 12 mg</strong></td><td>GIP + GLP-1 + Glucagon</td><td class="g">24.2%</td><td class="y">Phase 3</td></tr>
+<tr><td><strong>Berberine (supplement)</strong></td><td>Indirect (AMPK)</td><td class="r">1&ndash;3%</td><td class="y">Supplement</td></tr>
+</tbody>
+</table>
+
+<hr class="sep">
+
+<h2>The Supplement Marketing Problem</h2>
+
+<p>Foundayo isn't the only company doing this. The explosion of GLP-1 drug popularity created an entire cottage industry of supplements trying to ride the wave. Products with names like "GLP-1 Support," "Natural GLP-1," and "Oral GLP-1 Activator" have flooded the market. The strategy is straightforward: borrow the credibility of a proven drug class to sell something that's categorically different.</p>
+
+<p>The FDA has noticed. In 2024 and 2025, the agency issued warning letters to multiple supplement companies making misleading associations between their products and prescription GLP-1 receptor agonists. The FTC has also pursued enforcement actions against companies making unsubstantiated weight loss claims. The regulatory environment for these products is tightening, though enforcement remains slow relative to the pace at which new products appear.</p>
+
+<div class="d-a">
+  <div class="s">Regulatory Reality</div>
+  <p>Dietary supplements don't require FDA approval before going to market. They're regulated under DSHEA (1994), which places the burden of proving a product is unsafe on the FDA, not the manufacturer. This means a supplement can be sold with implied claims of GLP-1-like effects without ever conducting a single clinical trial, as long as the label doesn't explicitly claim to treat or cure a disease.</p>
+</div>
+
+<p>The pricing adds another layer to the problem. Foundayo's Oral GLP-1 product costs roughly $60 or more per month. While that's less than the list price of Wegovy or Mounjaro, the value proposition collapses when you consider you're paying $60 a month for berberine and a handful of other supplements that you could purchase individually for a fraction of the cost. The premium is for the branding, not the formula.</p>
+
+<h3>What Consumers Are Actually Getting</h3>
+
+<p>When someone buys Foundayo's Oral GLP-1, they're getting a supplement stack that might produce minor improvements in blood glucose and lipid markers. These aren't nothing, but they're also achievable with much cheaper standalone supplements or, more reliably, with basic dietary and exercise changes.</p>
+
+<p>What they're not getting is anything resembling the appetite suppression, satiety signaling, or metabolic recalibration produced by actual GLP-1 receptor agonists. The name "Oral GLP-1" creates an expectation that the product categorically cannot deliver.</p>
+
+<div class="g2">
+  <div class="mc">
+    <h4 style="color:var(--red);">What Foundayo Claims</h4>
+    <p>"Supports natural GLP-1 levels," "activates GLP-1 pathways," implies comparable benefits to prescription GLP-1 drugs through naming and marketing.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--teal);">What the Evidence Shows</h4>
+    <p>Modest metabolic effects from individual ingredients (primarily berberine). No RCTs on the actual product. Weight loss 8&ndash;24x less than prescription GLP-1 RAs.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<h2>Retatrutide: What a Real Next-Generation GLP-1 Agent Looks Like</h2>
+
+<p>If you want to understand what actual progress in the GLP-1 space looks like, retatrutide is the example. Developed by Eli Lilly (the same company behind tirzepatide/Mounjaro), retatrutide is a single molecule that simultaneously activates three metabolic receptors: GIP, GLP-1, and glucagon.</p>
+
+<p>The glucagon receptor component is what makes retatrutide genuinely novel. Glucagon has historically been seen as the "opposite" of insulin, a hormone that raises blood sugar. But it also stimulates energy expenditure, fat oxidation in the liver, and thermogenesis. By carefully balancing glucagon activation with GLP-1 and GIP effects, retatrutide produces weight loss that exceeds anything seen with single or dual agonists.</p>
+
+<div class="cd ct">
+  <div class="tg">Clinical Data</div>
+  <h3>Retatrutide Phase 2 Results (NEJM 2023)</h3>
+  <p style="font-size:14px;margin-bottom:0;">In a 48-week Phase 2 trial of 338 adults with obesity, retatrutide at the 12 mg dose produced a mean body weight reduction of 24.2%, compared to 2.1% with placebo. Over 90% of participants on the highest dose lost at least 10% of their body weight. Side effects were predominantly gastrointestinal (nausea in ~25%, diarrhea in ~20%) and generally resolved over time. No serious safety signals emerged (<a href="https://pubmed.ncbi.nlm.nih.gov/37351564/">Jastreboff et al., 2023</a>).</p>
+</div>
+
+<p>For perspective, losing 24% of your body weight is the kind of result that previously required bariatric surgery. And retatrutide achieved it with a once-weekly injection and manageable side effects. The ongoing Phase 3 trials will determine whether these results hold in larger populations and over longer timeframes, but the early signal is remarkably strong.</p>
+
+<p>This is what rigorous drug development looks like: years of preclinical work, carefully designed clinical trials, peer review in the world's top medical journals, and regulatory oversight at every step. It's the opposite of slapping "GLP-1" on a bottle of berberine and selling it online. For a deeper comparison of how retatrutide stacks up against existing options, see our <a href="/articles/retatrutide-vs-semaglutide">retatrutide vs. semaglutide analysis</a> and the <a href="/articles/retatrutide-vs-tirzepatide-comparison">retatrutide vs. tirzepatide comparison</a>.</p>
+
+<hr class="sep">
+
+<h2>Side Effects and Safety Considerations</h2>
+
+<p>One area where supplements do have a genuine advantage is side effect profile. Berberine and similar ingredients are generally well-tolerated, with GI discomfort being the most common complaint. Prescription GLP-1 receptor agonists, by contrast, produce nausea, vomiting, and diarrhea in a significant percentage of users, particularly during the dose escalation phase.</p>
+
+<p>But this comparison is misleading in its own way. The side effects of GLP-1 receptor agonists are, in large part, evidence that they're working. The nausea comes from slowed gastric emptying and central appetite suppression, the very mechanisms that produce the weight loss. A supplement that causes no side effects but also produces no meaningful clinical effect isn't "safer" in any meaningful sense; it's just inert.</p>
+
+<table class="tbl">
+<thead><tr><th>Side Effect</th><th>Foundayo / Berberine</th><th>Retatrutide 12 mg</th><th>Semaglutide 2.4 mg</th></tr></thead>
+<tbody>
+<tr><td><strong>Nausea</strong></td><td class="g">Rare</td><td class="y">~25% (transient)</td><td class="y">~44% (transient)</td></tr>
+<tr><td><strong>Diarrhea</strong></td><td class="y">Occasional</td><td class="y">~20%</td><td class="y">~30%</td></tr>
+<tr><td><strong>Constipation</strong></td><td class="y">Possible</td><td class="y">~10%</td><td class="y">~24%</td></tr>
+<tr><td><strong>Serious adverse events</strong></td><td class="g">Very rare</td><td class="g">Low in Phase 2</td><td class="g">Low in STEP trials</td></tr>
+<tr><td><strong>Efficacy trade-off</strong></td><td class="r">Minimal effects</td><td class="g">24.2% weight loss</td><td class="g">14.9% weight loss</td></tr>
+</tbody>
+</table>
+
+<div class="d-p">
+  <div class="s">Context</div>
+  <p>Berberine can interact with several medications, particularly those metabolized by CYP enzymes. It may potentiate the effects of diabetes medications and blood thinners. Anyone taking prescription medications should consult their healthcare provider before adding berberine or berberine-containing supplements like Foundayo's Oral GLP-1 to their regimen.</p>
+</div>
+
+<hr class="sep">
+
+<h2>The Real Cost of False Equivalence</h2>
+
+<p>The most significant harm from products like Foundayo's Oral GLP-1 isn't financial, though paying a premium for repackaged berberine is frustrating. The real cost is in delayed treatment. Someone who genuinely needs to lose a significant amount of weight for their health may spend months on an ineffective supplement before finally talking to their doctor about evidence-based options.</p>
+
+<p>Obesity is a chronic disease with serious health consequences: cardiovascular disease, type 2 diabetes, certain cancers, sleep apnea, and joint degeneration. Effective treatments exist. When supplement marketing creates the impression that a $60 bottle is equivalent to prescription GLP-1 drugs, it can keep people from seeking treatments that actually work.</p>
+
+<div class="d-r">
+  <div class="s">Consumer Warning</div>
+  <p>If a product claims to deliver GLP-1-like benefits without being a GLP-1 receptor agonist, that claim is not supported by clinical evidence. The name "Oral GLP-1" does not mean the product contains GLP-1 or activates GLP-1 receptors in a pharmacologically meaningful way. Ask your healthcare provider about evidence-based weight management options.</p>
+</div>
+
+<h3>Who Might Benefit from Berberine (On Its Own)</h3>
+
+<p>To be fair, berberine isn't worthless. As a standalone supplement (not wrapped in GLP-1 marketing), it has reasonable evidence for modest improvements in fasting blood glucose, HbA1c, and lipid profiles. It may be a sensible addition for someone managing early metabolic dysfunction alongside diet and exercise changes.</p>
+
+<p>But you don't need to buy it as "Oral GLP-1" at a premium price point. Generic berberine supplements cost $10&ndash;20 per month and contain the same active ingredient. The premium you pay for Foundayo's branding buys you a label, not better outcomes.</p>
+
+<div class="g3">
+  <div class="mc">
+    <h4 style="color:var(--teal);">Berberine May Help With</h4>
+    <p>Modest blood glucose reduction. Improved lipid profiles. AMPK activation. Best evidence is for metabolic markers, not weight loss.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--amber);">Berberine Won't Help With</h4>
+    <p>Significant weight loss (over 5%). Appetite suppression. Gastric emptying modulation. Central satiety signaling. These require actual GLP-1 receptor activation.</p>
+  </div>
+  <div class="mc">
+    <h4 style="color:var(--red);">The Foundayo Premium</h4>
+    <p>You're paying $60+ per month for berberine and supporting ingredients that cost $10&ndash;20 when purchased separately. The "Oral GLP-1" label is marketing, not pharmacology.</p>
+  </div>
+</div>
+
+<hr class="sep">
+
+<h2>What Should You Actually Consider?</h2>
+
+<p>If you're exploring weight management options, here's an honest ranking based on current evidence. Talk to your healthcare provider about which options make sense for your specific situation, health history, and goals.</p>
+
+<table class="tbl">
+<thead><tr><th>Option</th><th>Evidence Level</th><th>Expected Weight Loss</th><th>Cost (Monthly)</th><th>Availability</th></tr></thead>
+<tbody>
+<tr><td><strong>Retatrutide</strong></td><td class="g">Strong (Phase 2)</td><td class="g">~24% body weight</td><td class="y">TBD (not yet approved)</td><td class="y">Clinical trials only</td></tr>
+<tr><td><strong>Tirzepatide</strong></td><td class="g">Strong (Phase 3)</td><td class="g">~21% body weight</td><td class="y">$500&ndash;1,000+</td><td class="g">Prescription</td></tr>
+<tr><td><strong>Semaglutide 2.4 mg</strong></td><td class="g">Strong (Phase 3)</td><td class="g">~15% body weight</td><td class="y">$500&ndash;1,300+</td><td class="g">Prescription</td></tr>
+<tr><td><strong>Berberine (generic)</strong></td><td class="y">Moderate</td><td class="y">1&ndash;3 kg</td><td class="g">$10&ndash;20</td><td class="g">OTC supplement</td></tr>
+<tr><td><strong>Foundayo Oral GLP-1</strong></td><td class="r">None (no RCTs)</td><td class="y">1&ndash;3 kg (estimated)</td><td class="y">$60+</td><td class="g">Online purchase</td></tr>
+</tbody>
+</table>
+
+<p>The <a href="/articles/best-peptides-for-fat-loss">best peptides for fat loss</a> guide on this site covers additional options beyond GLP-1 receptor agonists, including compounds like <a href="/articles/aod-9604-fat-loss-peptide-guide">AOD-9604</a> and <a href="/articles/fat-burning-stack-retatrutide-5amino1mq-cardarine">fat-burning stacks</a> that some researchers are investigating.</p>
+
+<hr class="sep">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+  <details>
+    <summary>Is Foundayo's Oral GLP-1 the same as prescription GLP-1 drugs like Ozempic?</summary>
+    <div class="fa">No. Despite the name, Foundayo's Oral GLP-1 is a dietary supplement, not a GLP-1 receptor agonist. It does not contain semaglutide, tirzepatide, retatrutide, or any other GLP-1 receptor agonist molecule. It's formulated with botanical ingredients like berberine that have indirect and much weaker effects on metabolic pathways. The weight loss observed with prescription GLP-1 drugs (15&ndash;24% of body weight) is roughly 8&ndash;24 times what berberine-based supplements typically produce.</div>
+  </details>
+  <details>
+    <summary>Does Foundayo have any published clinical trials?</summary>
+    <div class="fa">As of April 2026, there are no published, peer-reviewed randomized controlled trials evaluating Foundayo's Oral GLP-1 product for weight loss or any other outcome. The company may reference studies on individual ingredients (like berberine), but testing isolated ingredients is not the same as testing a specific multi-ingredient formulation. Without product-specific trials, there's no way to know whether the combination works as claimed.</div>
+  </details>
+  <details>
+    <summary>Is berberine a good weight loss supplement?</summary>
+    <div class="fa">Berberine has some evidence for modest metabolic benefits, particularly for blood glucose and lipid levels. However, the weight loss observed in berberine studies is typically 1&ndash;3 kilograms, which is clinically minimal. It's not an effective standalone weight loss supplement for most people. If you're interested in berberine for metabolic health (not primarily weight loss), a generic berberine supplement at $10&ndash;20 per month provides the same active ingredient as products marketed under GLP-1 branding at higher prices.</div>
+  </details>
+  <details>
+    <summary>What makes retatrutide different from semaglutide and tirzepatide?</summary>
+    <div class="fa">Retatrutide is a triple receptor agonist, meaning it activates GIP, GLP-1, and glucagon receptors simultaneously. Semaglutide activates only GLP-1, and tirzepatide activates GIP and GLP-1. The glucagon receptor component in retatrutide adds direct stimulation of energy expenditure and hepatic fat oxidation, which is thought to explain why it produced greater weight loss (24.2%) than tirzepatide (20.9%) or semaglutide (14.9%) in comparable trial durations. Phase 3 trials are underway to confirm these results in larger populations.</div>
+  </details>
+  <details>
+    <summary>Are there any risks to taking Foundayo's product?</summary>
+    <div class="fa">The ingredients in most "oral GLP-1" supplements are generally well-tolerated for most people. However, berberine can interact with medications metabolized by cytochrome P450 enzymes, including certain statins, blood thinners, and diabetes medications. It can also lower blood sugar, which may be dangerous for people on insulin or sulfonylureas. The bigger risk is the opportunity cost: spending months on an ineffective product instead of pursuing evidence-based treatment for a condition that has real health consequences.</div>
+  </details>
+  <details>
+    <summary>Should I wait for retatrutide instead of starting semaglutide or tirzepatide?</summary>
+    <div class="fa">This is a question for your healthcare provider, not a supplement company or a peptide website. Semaglutide and tirzepatide are available now with strong evidence behind them. Retatrutide is still in Phase 3 trials, and FDA approval (if it comes) is likely at least 1&ndash;2 years away. If you need to lose weight for your health, starting an available, proven therapy now is generally better than waiting for a potentially superior option that isn't yet accessible. Your doctor can help you weigh the options based on your specific health profile.</div>
+  </details>
+  <details>
+    <summary>Why are GLP-1 supplements so popular if they don't work as well?</summary>
+    <div class="fa">Three factors drive demand. First, prescription GLP-1 drugs are expensive ($500&ndash;1,300+ per month without insurance) and face supply shortages, creating a market for cheaper alternatives. Second, many people prefer supplements over prescription drugs for cultural, logistical, or needle-phobia reasons. Third, the marketing is effective: calling a supplement "Oral GLP-1" borrows the credibility of the entire drug class in a way that casual consumers may not scrutinize. The supplement industry is responding to real unmet need, but often with products that can't meaningfully address it.</div>
+  </details>
+</div>
+
+<hr class="sep">
+
+<h2>The Bottom Line</h2>
+
+<div class="d-t">
+  <div class="s">Summary</div>
+  <p>Foundayo's Oral GLP-1 is a dietary supplement, not a GLP-1 receptor agonist. Its name implies pharmaceutical-grade efficacy that the product cannot deliver based on available evidence. Real GLP-1 receptor agonists like retatrutide, tirzepatide, and semaglutide have produced weight loss results 8&ndash;24 times greater than what supplement ingredients like berberine typically achieve, and they've done so in large, peer-reviewed clinical trials. If you're considering weight management treatment, talk to your healthcare provider about evidence-based options rather than relying on supplements that borrow prescription drug terminology.</p>
+</div>
+
+<p>The GLP-1 revolution is real. The science behind semaglutide, tirzepatide, and retatrutide is extraordinary. But that science belongs to specific, carefully engineered molecules that have been tested in rigorous clinical trials. It doesn't transfer to a supplement just because the supplement puts "GLP-1" on the label.</p>
+
+<p>If you're interested in the actual GLP-1 drug pipeline, our <a href="/articles/retatrutide-complete-guide">retatrutide guide</a> covers the most promising upcoming entrant in detail.</p>
+
+<div class="disc">
+  <strong>Medical Disclaimer</strong><br>
+  This article is for educational and informational purposes only. It is not medical advice, and it does not constitute a recommendation for or against any specific product or treatment. The information presented here reflects publicly available research and should not substitute for professional medical guidance. Always consult a qualified healthcare provider before starting, stopping, or modifying any weight management protocol, whether prescription-based or supplement-based. Individual results vary based on genetics, health status, adherence, and many other factors.
+</div>
+
+<h3 style="margin-top:40px;font-size:1rem;">References</h3>
+<p style="font-size:12.5px;color:var(--mut);line-height:1.8;">
+Jastreboff AM, Kaplan LM, Frias JP, et al. Triple-hormone-receptor agonist retatrutide for obesity: a phase 2 trial. <em>N Engl J Med.</em> 2023;389(6):514&ndash;526. <a href="https://pubmed.ncbi.nlm.nih.gov/37351564/">PubMed</a><br>
+Jastreboff AM, Aronne LJ, Ahmad NN, et al. Tirzepatide once weekly for the treatment of obesity. <em>N Engl J Med.</em> 2022;387(3):205&ndash;216. <a href="https://pubmed.ncbi.nlm.nih.gov/37385275/">PubMed</a><br>
+Wilding JPH, Batterham RL, Calanna S, et al. Once-weekly semaglutide in adults with overweight or obesity. <em>N Engl J Med.</em> 2021;384(11):989&ndash;1002. <a href="https://pubmed.ncbi.nlm.nih.gov/36567049/">PubMed</a><br>
+Frias JP, Hsia S, Engel SS, et al. Efficacy and safety of retatrutide in people with type 2 diabetes. <em>Lancet.</em> 2023;402(10401):529&ndash;544. <a href="https://pubmed.ncbi.nlm.nih.gov/37840095/">PubMed</a><br>
+Liang Y, Xu X, Yin M, et al. Effects of berberine on blood glucose in patients with type 2 diabetes mellitus: a systematic review and meta-analysis. <em>Endocr J.</em> 2019;66(1):51&ndash;63. <a href="https://pubmed.ncbi.nlm.nih.gov/31567015/">PubMed</a><br>
+</p>
+
+<p style="margin-top:32px;"><strong>Related reading:</strong></p>
+<p style="font-size:14px;">
+<a href="/articles/retatrutide-complete-guide">Retatrutide: Complete Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/semaglutide-weight-loss-guide">Semaglutide Weight Loss Guide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/retatrutide-vs-semaglutide">Retatrutide vs. Semaglutide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/retatrutide-vs-tirzepatide-comparison">Retatrutide vs. Tirzepatide</a> &nbsp;&middot;&nbsp;
+<a href="/articles/best-peptides-for-fat-loss">Best Peptides for Fat Loss</a>
+</p>
+
+<p style="font-size:13px;color:var(--mut);margin-top:8px;">For compound profiles and sourcing info, visit <a href="https://peptidearc.com">PeptideArc</a>.</p>
+
+</div>
+`;
+---
+
+<Base title={frontmatter.title} description={frontmatter.description} ogImage={frontmatter.image}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:flex md:gap-8">
+    <article class="md:flex-1 min-w-0">
+      <div class="mb-8 -mx-4 sm:mx-0">
+        <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-none sm:rounded-2xl shadow-lg object-cover max-h-96" loading="eager" />
+      </div>
+      <header class="mb-10">
+        <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full mb-4 uppercase tracking-wide">{frontmatter.category}</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-text mb-4">{frontmatter.title}</h1>
+        <p class="text-lg text-text-muted leading-relaxed mb-6">{frontmatter.description}</p>
+        <div class="flex items-center gap-4 text-sm text-text-muted border-t border-gray-200 pt-4">
+          <span>By <strong class="text-text">{frontmatter.author}</strong></span>
+          <span>&bull;</span>
+          <time datetime={frontmatter.date}>{formattedDate}</time>
+        </div>
+      </header>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-10 text-sm text-amber-800">
+        <strong>&#9888;&#65039; Medical Disclaimer:</strong> This article is for educational purposes only and is not medical advice. Always consult a qualified healthcare provider before starting any peptide protocol.
+      </div>
+      <style set:html={rawCSS} />
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-text prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-img:rounded-xl prose-img:shadow-lg article-content">
+        <div class="c" set:html={rawHTML} />
+      </div>
+    </article>
+    <aside class="w-full md:w-64 shrink-0 mt-10 md:mt-0 md:sticky md:top-20 md:self-start">
+      <div class="space-y-6">
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Quick Info</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Category:</span>
+            <span class="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full">{frontmatter.category}</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-text-muted">Updated:</span>
+            <span class="text-xs font-medium text-text">{formattedDate}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-text-muted">Author:</span>
+            <span class="text-xs font-medium text-text">{frontmatter.author}</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-primary/5 to-transparent rounded-2xl border border-primary/10 p-5">
+          <h3 class="text-sm font-bold text-primary mb-2">Our Standards</h3>
+          <ul class="text-xs text-text-muted space-y-1.5">
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> PubMed-cited research</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> No vendor affiliations</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Regularly updated</li>
+            <li class="flex items-start gap-1.5"><span class="text-primary mt-0.5">&#10003;</span> Reviewed for accuracy</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+          <h3 class="text-sm font-bold text-text uppercase tracking-wide mb-3">Related Guides</h3>
+          <div class="space-y-3">
+            <a href="/articles/retatrutide-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Retatrutide: Complete Guide</a>
+            <a href="/articles/semaglutide-weight-loss-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Semaglutide Weight Loss Guide</a>
+            <a href="/articles/tirzepatide-complete-guide" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Tirzepatide: Complete Guide</a>
+            <a href="/articles/best-peptides-for-fat-loss" class="block text-sm text-text-muted hover:text-primary transition-colors leading-snug">Best Peptides for Fat Loss</a>
+          </div>
+          <a href="/articles" class="block mt-4 text-xs font-bold text-primary hover:underline">View all guides &rarr;</a>
+        </div>
+        <div class="bg-gradient-to-br from-surface-dark to-primary-dark rounded-2xl p-5 text-center">
+          <p class="text-sm font-bold text-white mb-2">New to Peptides?</p>
+          <p class="text-xs text-gray-300 mb-3">Start with the basics.</p>
+          <a href="/articles/what-are-peptides-beginners-guide" class="inline-block px-4 py-2 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary-light transition-colors">Read Beginner's Guide</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</Base>
