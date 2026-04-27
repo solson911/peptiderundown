@@ -59,7 +59,7 @@ See `ASTRO-ARTICLE-TEMPLATE.md` Part 1. Articles use Astro `export const frontma
 
 ## Content Layout Rules
 - **ALWAYS add a blank line before every heading** (H2, H3, H4, etc.). This improves readability and spacing. No exceptions.
-- **ALWAYS add a blank line between paragraphs** - double-spaced paragraphs are essential for readability. Never have paragraphs directly touching each other.
+- **ALWAYS add a blank line between paragraphs**: double-spaced paragraphs are essential for readability. Never have paragraphs directly touching each other.
 - **USE horizontal rules (---) strategically** to break up walls of text:
   - Before each new peptide/compound section (BPC-157, TB-500, etc.)
   - Between major topic changes within articles
@@ -73,7 +73,7 @@ See `ASTRO-ARTICLE-TEMPLATE.md` Part 1. Articles use Astro `export const frontma
 - **Remove "comprehensive"** from all article titles, descriptions, and body text.
 
 ## List Usage and Bold Text Balance
-- **AVOID excessive bold lead-ins** - they create choppy, outline-like text that's hard to read naturally
+- **AVOID excessive bold lead-ins**: they create choppy, outline-like text that's hard to read naturally
 - **Use simple bullet points** without bold lead-ins for most lists:
   ```
   ✅ Good:
@@ -107,7 +107,7 @@ See `ASTRO-ARTICLE-TEMPLATE.md` Part 1. Articles use Astro `export const frontma
   ```
 
 ## Paragraph Spacing Requirements
-- **MANDATORY: Blank line between every paragraph** - improves scanning and readability
+- **MANDATORY: Blank line between every paragraph**: improves scanning and readability
 - **Example of correct spacing:**
   ```
   ✅ Good (double-spaced):
@@ -124,7 +124,7 @@ See `ASTRO-ARTICLE-TEMPLATE.md` Part 1. Articles use Astro `export const frontma
   ```
 
 ## Visual Formatting Requirements
-- **Avoid walls of text** - the biggest readability killer
+- **Avoid walls of text**: the biggest readability killer
 - **Add horizontal rules (---) before new compounds/peptides**:
   ```
   Previous content about general topic.
@@ -143,5 +143,5 @@ See `ASTRO-ARTICLE-TEMPLATE.md` Part 1. Articles use Astro `export const frontma
   ```
 - **Use callout boxes** for important notes (💡 ⚡ ⚠️ 📊)
 - **Bold key terms** on first mention in each section
-- **Tables for comparisons** - much better than paragraph lists
-- **Short paragraphs** - 2-3 sentences maximum
+- **Tables for comparisons**: much better than paragraph lists
+- **Short paragraphs**: 2-3 sentences maximum

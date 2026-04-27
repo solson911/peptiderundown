@@ -8,7 +8,9 @@ Do NOT summarize what you're going to write. WRITE the article and SAVE it immed
 
 You write for PeptideRundown.com, a peptide education and authority site.
 
-> **Note on the calling agent:** This dispatch is sent to you by an openclaw orchestrator (which may be running grok-fast or another lightweight model). The orchestrator is NOT permitted to write article content; that responsibility is yours alone. You execute every step in this dispatch end-to-end (read templates, write `.astro`, generate image, run pre-deploy gate, commit, push, verify). The orchestrator only watches for your completion.
+> **Note on the calling agent:** This dispatch is sent to you by an openclaw orchestrator (which may be running grok-fast or another lightweight model). The orchestrator is NOT permitted to write article content; that responsibility is yours alone. You execute every step in this dispatch end-to-end (read templates, write `.astro`, generate image, run the pre-deploy build gate). The orchestrator only watches for your completion.
+>
+> **You do NOT commit, push, or verify deployment.** The article-writer service owns all git operations and runs them when the user clicks Publish in the board UI. Your job ends once the file is written, the hero image is generated, and `pre-deploy.sh` passes. Do not run `git add`, `git commit`, `git push`, or `verify-deploy.sh` — doing so will cause the subsequent publish to fail with "nothing to commit".
 
 ## OUTPUT FORMAT (CANONICAL — DO NOT DEVIATE)
 
@@ -86,7 +88,7 @@ Followed by the full `rawCSS` block (copy verbatim from ASTRO-ARTICLE-TEMPLATE.m
 **CRITICAL**: Save to EXACTLY this path (`.astro` extension, NOT `.md`):
 src/pages/articles/{{SLUG}}.astro
 
-## DEPLOYMENT VERIFICATION (MANDATORY)
+## BUILD GATE (MANDATORY)
 
 **Working directory:** All commands below assume your current working directory is the **peptiderundown site repo root** (the directory containing `package.json`, `src/`, `public/`, `tools/`, `docs/`). `cd` there as your first action if you are not already there.
 
@@ -98,15 +100,9 @@ After saving the article file, follow these steps **in order**. Each numbered st
    - On failure, retry with an alternate abstract prompt. Do NOT proceed to step 2 until the image file exists.
 2. Verify the image exists on disk: `ls public/images/articles/{{SLUG}}.webp`
 3. Run the pre-deploy gate (image check + Astro build): `bash tools/pre-deploy.sh {{SLUG}}`
-   - This runs `check-article-images.sh` AND `npm run build`. It is the single hard gate before commit.
-   - If this exits non-zero, STOP. Do not commit. Read the error, fix the article (syntax error, missing image, broken template literal, missing CSS class, etc.), and re-run the gate until it passes.
-4. (Already in the site repo root from your initial `cd`.)
-5. `git add src/pages/articles/{{SLUG}}.astro public/images/articles/{{SLUG}}.webp` (separate call)
-6. `git commit -m "Add {{TITLE}}"` (separate call)
-7. `git push` (separate call)
-8. Wait 60 seconds for deployment
-9. Run verification: `bash tools/verify-deploy.sh {{SLUG}}`
-10. Report ACTUAL verification results (not assumed success)
+   - This runs `check-article-images.sh` AND `npm run build`. It is the single hard gate before the article is handed off to the article-writer service.
+   - If this exits non-zero, STOP. Read the error, fix the article (syntax error, missing image, broken template literal, missing CSS class, etc.), and re-run the gate until it passes.
+4. **STOP.** Do NOT run `git add`, `git commit`, `git push`, or `verify-deploy.sh`. Report completion to the orchestrator. The article-writer service handles git operations on Publish, and automatically verifies the deployed URL ~45 seconds after push (result is written to the article record as `publish.deployVerification`). Any manual git commits here will leave a "nothing to commit" state that breaks the subsequent publish flow.
 
 ## QUALITY TARGETS
 
