@@ -2,7 +2,12 @@
 import Base from '../../layouts/Base.astro';
 import PageSidebar from '../../components/PageSidebar.astro';
 
-const astroPosts = (await Astro.glob('./*.astro')).filter(p => p.frontmatter && p.url !== '/articles/');
+const astroPosts = Object.entries(import.meta.glob('./*.astro', { eager: true }))
+  .map(([path, post]) => ({
+    ...post,
+    url: post.url || `/articles/${path.replace('./', '').replace(/\.astro$/, '')}/`,
+  }))
+  .filter(p => p.frontmatter && p.url !== '/articles/index/');
 const allPosts = [...astroPosts];
 
 // Dedupe by URL (prevents double listings if two files resolve to the same route)

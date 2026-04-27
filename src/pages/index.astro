@@ -77,7 +77,7 @@ const compounds = [
   { title: "Methylene Blue", href: "/articles/methylene-blue-guide", category: "Mitochondrial", image: "/images/articles/methylene-blue.webp" },
 ];
 
-const latestNews = (await Astro.glob('./news/*.md'))
+const latestNews = Object.values(import.meta.glob('./news/*.md', { eager: true }))
   .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
   .slice(0, 3);
 ---
