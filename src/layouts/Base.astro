@@ -8,6 +8,7 @@ interface Props {
   canonicalUrl?: string;
   ogImage?: string;
   ogType?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -15,7 +16,8 @@ const {
   description = 'Your science-based peptide guide. Independent, evidence-backed peptide education without the sales pitch.',
   canonicalUrl,
   ogImage = '/images/og-default.webp',
-  ogType = 'website'
+  ogType = 'website',
+  noindex = false
 } = Astro.props;
 
 const origin = Astro.url.origin;
@@ -24,6 +26,57 @@ const normalizedPath = (path === '/') ? path : (path.endsWith('/') ? path : path
 const computedCanonical = canonicalUrl || (origin + normalizedPath);
 const fullTitle = `${title} | PeptideRundown`;
 const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage);
+const isGuideArticle = normalizedPath.startsWith('/articles/') && normalizedPath !== '/articles/';
+const baseJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "PeptideRundown",
+  url: origin + "/",
+  description: "Independent, science-based peptide education. Every article is cited with peer-reviewed research.",
+  publisher: {
+    "@type": "Organization",
+    name: "PeptideRundown",
+    url: origin + "/",
+    logo: { "@type": "ImageObject", url: origin + "/images/logo.png" }
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: origin + "/articles/?q={search_term_string}" },
+    "query-input": "required name=search_term_string"
+  }
+};
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "PeptideRundown",
+  url: origin + "/",
+  logo: origin + "/images/logo.png",
+  description: "Independent peptide education, research explainers, and regulatory news."
+};
+const guideArticleJsonLd = isGuideArticle ? {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  image: [absoluteOgImage],
+  author: [{ "@type": "Organization", name: "PeptideRundown Team" }],
+  publisher: {
+    "@type": "Organization",
+    name: "PeptideRundown",
+    logo: { "@type": "ImageObject", url: origin + "/images/logo.png" }
+  },
+  mainEntityOfPage: { "@type": "WebPage", "@id": computedCanonical }
+} : null;
+const guideBreadcrumbJsonLd = isGuideArticle ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: origin + "/" },
+    { "@type": "ListItem", position: 2, name: "Guides", item: origin + "/articles/" },
+    { "@type": "ListItem", position: 3, name: title, item: computedCanonical }
+  ]
+} : null;
+const jsonLd = [baseJsonLd, organizationJsonLd, guideArticleJsonLd, guideBreadcrumbJsonLd].filter(Boolean);
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -31,6 +84,7 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -58,24 +112,7 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={absoluteOgImage} />
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "PeptideRundown",
-    url: origin + "/",
-    description: "Independent, science-based peptide education. Every article is cited with peer-reviewed research.",
-    publisher: {
-      "@type": "Organization",
-      name: "PeptideRundown",
-      url: origin + "/",
-      logo: { "@type": "ImageObject", url: origin + "/images/logo.png" }
-    },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: { "@type": "EntryPoint", urlTemplate: origin + "/articles/?q={search_term_string}" },
-      "query-input": "required name=search_term_string"
-    }
-  })} />
+  {jsonLd.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}
   <title>{fullTitle}</title>
 </head>
 <body class="bg-surface text-text font-sans antialiased">
@@ -84,7 +121,7 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="/" class="flex items-center gap-2 group">
-          <img src="/images/logo.png" alt="PeptideRundown" class="h-28 w-auto" />
+          <img src="/images/logo.png" alt="PeptideRundown" class="h-10 w-auto" />
         </a>
         <div class="hidden md:flex items-center gap-6">
           <a href="/articles" class="text-sm font-medium text-text-muted hover:text-primary transition-colors">All Guides</a>
@@ -96,7 +133,7 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
         <!-- Mobile: search + menu button -->
         <div class="md:hidden flex items-center gap-1">
           <Search />
-          <button id="mobile-menu-btn" class="p-2 text-text-muted hover:text-primary transition-colors">
+          <button id="mobile-menu-btn" type="button" class="p-2 text-text-muted hover:text-primary transition-colors" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -124,7 +161,7 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid md:grid-cols-4 gap-8">
         <div class="md:col-span-2">
-          <img src="/images/logo.png" alt="PeptideRundown" class="h-24 w-auto scale-[1.4] origin-top-left" />
+          <img src="/images/logo.png" alt="PeptideRundown" class="h-14 w-auto" />
           <p class="mt-3 text-sm leading-relaxed max-w-md">Independent, science-based peptide education. Every article is cited with peer-reviewed research. No vendor affiliations. No bro-science. Just evidence.</p>
         </div>
         <div>
@@ -141,6 +178,10 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
           <ul class="space-y-2.5 text-sm">
             <li><a href="https://peptidearc.com" target="_blank" rel="noopener" class="hover:text-primary-light transition-colors">PeptideArc Database ↗</a></li>
             <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener" class="hover:text-primary-light transition-colors">PubMed ↗</a></li>
+            <li><a href="/about/" class="hover:text-primary-light transition-colors">About</a></li>
+            <li><a href="/contact/" class="hover:text-primary-light transition-colors">Contact</a></li>
+            <li><a href="/disclosure/" class="hover:text-primary-light transition-colors">Disclosure</a></li>
+            <li><a href="/privacy/" class="hover:text-primary-light transition-colors">Privacy</a></li>
           </ul>
         </div>
       </div>
@@ -184,8 +225,11 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
 
   <script>
     // Mobile menu
-    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', (event) => {
+      const button = event.currentTarget as HTMLButtonElement;
+      const menu = document.getElementById('mobile-menu');
+      menu?.classList.toggle('hidden');
+      button.setAttribute('aria-expanded', String(!menu?.classList.contains('hidden')));
     });
 
     // Search
@@ -272,7 +316,7 @@ const absoluteOgImage = ogImage.startsWith('http') ? ogImage : (origin + ogImage
     }
 
     // Wire up all search trigger buttons (desktop + mobile share the same modal)
-    document.querySelectorAll('#search-trigger').forEach(btn => {
+    document.querySelectorAll('[data-search-trigger]').forEach(btn => {
       btn.addEventListener('click', openModal);
     });
     closeBtn.addEventListener('click', closeModal);
